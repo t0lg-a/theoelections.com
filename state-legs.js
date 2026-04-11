@@ -137,8 +137,9 @@
   // preventing absurdly wide chamber tails. A 20-pt NATIONAL swing would
   // be once-in-a-century; real waves are 5–8 pts. Most margin uncertainty
   // is district-specific (candidate quality, local issues, turnout).
-  const NAT_SIGMA  = 6;
-  const IDIO_SIGMA = 19;
+  const NAT_SIGMA  = 3;    // correlated national swing component
+  const IDIO_SIGMA = 11.6; // independent per-district component
+                           // Combined marginal stdev = sqrt(9 + 134.56) = 12.0
   const MC_SIMS    = 5000;
 
   function gaussian(){
@@ -686,17 +687,8 @@
     const s = byState[stateAbbr];
     p.classList.add('show');
     p.querySelector('.sldlPanelTitle').textContent = stateAbbr;
-    const o = chamberOdds(stateAbbr);
-
-    // Header shows MC EXPECTED seats, not the strict threshold count.
-    // At nowcast D+6.77, GA's baseline-threshold count is D 89 / R 91, but
-    // the MC expectation is ~96/84 because narrow-R districts flip in
-    // roughly half the sims. Showing E[D] here keeps the "D X | R Y" line
-    // consistent with the majority probability in the cells below.
-    const eD = (o && !o.notUp) ? Math.round(o.eDemSeats) : s.totalD;
-    const eR = (o && !o.notUp) ? (o.total - Math.round(o.eDemSeats)) : s.totalR;
-    p.querySelector('[data-seats-d]').textContent = eD;
-    p.querySelector('[data-seats-r]').textContent = eR;
+    p.querySelector('[data-seats-d]').textContent = s.totalD;
+    p.querySelector('[data-seats-r]').textContent = s.totalR;
     const bar = p.querySelector('[data-rating-bar]');
     const labels = p.querySelector('[data-rating-labels]');
     let barHTML = '', lblHTML = '';
@@ -720,8 +712,8 @@
         const pct = v => (v*100).toFixed(v>0.995||v<0.005 ? 1 : 0) + '%';
         const upLbl = o.up < o.total ? ` · ${o.up}/${o.total} up` : '';
         oddsEl.innerHTML = `
-          <div class="cell"><div class="lbl">D Maj</div><div class="val d">${pct(o.pDmaj)}</div></div>
           <div class="cell"><div class="lbl">D Super</div><div class="val d">${pct(o.pDsup)}</div></div>
+          <div class="cell"><div class="lbl">D Maj</div><div class="val d">${pct(o.pDmaj)}</div></div>
           <div class="cell"><div class="lbl">R Maj</div><div class="val r">${pct(o.pRmaj)}</div></div>
           <div class="cell"><div class="lbl">R Super</div><div class="val r">${pct(o.pRsup)}</div></div>`;
       }
