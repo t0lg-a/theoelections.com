@@ -6,6 +6,7 @@
 (function(){
   const PAGE_ID = 'stateLegsPage';
   const TOPOJSON_URL = './sldl_national.topojson';
+  const LEAN_CSV_URL = './national_district_results.csv';
   const PREFERRED_OBJECT = 'districts';
 
   const RATINGS = [
@@ -382,13 +383,21 @@
     svg.style.height = '';
 
     const feats = currentZoom === 'us' ? features : (byState[currentZoom] ? byState[currentZoom].features : []);
-    // Filter AK/HI at the national view (rendered separately if needed).
-    const conusFeats = currentZoom === 'us'
+    // Filter (1) AK/HI at the national view and (2) any feature with a
+    // globe-sized bbox. 16 districts in this topojson have inside-out polygon
+    // winding (CO-59, GA-134/150, ID-29, MD-3, MA, PA, TN, VA, WA, WI, WY…),
+    // so d3.geoBounds returns [[-180,-90],[180,90]]. fitExtent then scales the
+    // projection to the whole globe and every real district collapses to a dot
+    // while the broken ones render as giant red rectangles covering everything.
+    const isSane = f => {
+      const b = d3.geoBounds(f);
+      return isFinite(b[0][0]) && (b[1][0]-b[0][0]) < 30 && (b[1][1]-b[0][1]) < 30;
+    };
+    const conusFeats = (currentZoom === 'us'
       ? feats.filter(f => { const fp = f.properties?.STATEFP; return fp !== '02' && fp !== '15'; })
-      : feats;
+      : feats
+    ).filter(isSane);
     const fc = { type:'FeatureCollection', features: conusFeats };
-    // geoMercator: no composite clip boundaries, no conic singularities.
-    // Slightly stretched at high latitudes but correct everywhere we care about.
     const projection = d3.geoMercator().fitExtent([[18,18],[W-18,H-18]], fc);
     const path = d3.geoPath(projection);
 
@@ -437,6 +446,46 @@
       if (!objName) throw new Error('no topojson objects');
       const fc = topojson.feature(topo, topo.objects[objName]);
       features = fc.features || [];
+
+      // Fetch the lean CSV and join by GEOID. CSV schema:
+      //   GEOID,dem,rep,total,state,baseline_source,dem_pct,margin
+      try {
+        const csvRes = await fetch(LEAN_CSV_URL, { cache:'no-store' });
+        if (!csvRes.ok) throw new Error('lean csv ' + csvRes.status);
+        const text = await csvRes.text();
+        const lines = text.split(/\r?\n/).filter(Boolean);
+        const headers = lines[0].split(',');
+        const iGeoid = headers.indexOf('GEOID');
+        const iDem   = headers.indexOf('dem_pct');
+        const iMar   = headers.indexOf('margin');
+        const iSrc   = headers.indexOf('baseline_source');
+        const leanByGeoid = {};
+        for (let i = 1; i < lines.length; i++){
+          const c = lines[i].split(',');
+          const geoid = c[iGeoid];
+          if (!geoid) continue;
+          leanByGeoid[geoid] = {
+            dem_pct:  parseFloat(c[iDem]),
+            margin:   parseFloat(c[iMar]),
+            baseline: c[iSrc] || null,
+          };
+        }
+        let matched = 0;
+        for (const f of features){
+          const p = f.properties; if (!p) continue;
+          const lean = leanByGeoid[p.GEOID];
+          if (lean){
+            p.dem_pct  = lean.dem_pct;
+            p.margin   = lean.margin;
+            p.baseline = lean.baseline;
+            matched++;
+          }
+        }
+        console.log(`[state-legs] joined lean data: ${matched}/${features.length} districts`);
+      } catch (e){
+        console.error('[state-legs] lean csv load failed', e);
+      }
+
       attachRatios();
       applyProjection();
       populateStateSelect();
