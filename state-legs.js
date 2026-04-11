@@ -37,27 +37,53 @@
     '2016-20_comp': { D: 51.5, R: 48.5 },  // ≈ D+3
   };
 
+  // Build a per-district { D, R } ratio pair — the district's baseline share
+  // divided by the baseline GB share, separately for each party. Mirrors
+  // forecast.js getHouseModel, where DATA.house.ratios[did] = { D, R }.
+  // Your topojson stores dem_pct + margin only, so we derive rep_pct from
+  // the identity margin = dem - rep  =>  rep = dem - margin (exact, not approx).
   function buildRatio(props){
-    const demBase = props.dem_pct;
-    const margin  = props.margin;
-    if (demBase == null || margin == null || !isFinite(demBase) || !isFinite(margin)) return null;
-    const repBase = demBase - margin;
-    const gbBase  = BASELINE_GB[props.baseline] || { D: 50, R: 50 };
+    const demRaw = props.dem_pct;
+    const marginPts = props.margin;
+    if (demRaw == null || marginPts == null || !isFinite(demRaw) || !isFinite(marginPts)) return null;
+
+    // dem_pct is stored as a 0–1 decimal in this topojson; margin is in points.
+    // Normalize both to the same 0–100 "percent" scale.
+    const demPct = (Math.abs(demRaw) <= 1.5) ? demRaw * 100 : demRaw;
+    const repPct = demPct - marginPts;   // D - R = margin  =>  R = D - margin
+
+    // Baseline generic ballot the topojson was built against.
+    const gbBase = BASELINE_GB[props.baseline] || { D: 50, R: 50 };
     if (gbBase.D <= 0 || gbBase.R <= 0) return null;
-    return { D: demBase / gbBase.D, R: repBase / gbBase.R };
+
+    // Two independent ratios — one per party. Both used at projection time.
+    const ratioD = demPct / gbBase.D;
+    const ratioR = repPct / gbBase.R;
+
+    // Cache derived values on the props so you can inspect them in devtools.
+    props._demPct = demPct;
+    props._repPct = repPct;
+
+    return { D: ratioD, R: ratioR };
   }
 
-  // Mirrors forecast.js getHouseModel(): cdD = ratio.D*gb.D, cdR = ratio.R*gb.R, renorm, D-R.
+  // Mirrors forecast.js getHouseModel() exactly:
+  //   cdD = ratio.D * gb.D   (D's baseline lean × current D gen-ballot share)
+  //   cdR = ratio.R * gb.R   (R's baseline lean × current R gen-ballot share)
+  //   renormalize so cdD + cdR = 100, then margin = D - R
+  // BOTH sides of the ratio are used on every projection.
   function projectMarginFromRatio(ratio, gbOverride){
     if (!ratio) return null;
     const m = gbOverride != null ? gbOverride
             : (gbCurrent != null && isFinite(gbCurrent)) ? gbCurrent : 0;
     const gbNow = { D: 50 + m/2, R: 50 - m/2 };
-    const cdD = ratio.D * gbNow.D;
-    const cdR = ratio.R * gbNow.R;
+    const cdD = ratio.D * gbNow.D;   // uses ratio.D
+    const cdR = ratio.R * gbNow.R;   // uses ratio.R
     const s   = cdD + cdR;
     if (s <= 0) return null;
-    return (100 * cdD / s) - (100 * cdR / s);
+    const projD = 100 * cdD / s;
+    const projR = 100 * cdR / s;
+    return projD - projR;
   }
 
   function attachRatios(){
@@ -356,18 +382,14 @@
     svg.style.height = '';
 
     const feats = currentZoom === 'us' ? features : (byState[currentZoom] ? byState[currentZoom].features : []);
-    // geoAlbersUsa is a composite projection — polygon rings that brush its
-    // internal clip boundaries break into giant rectangles. Use plain geoAlbers
-    // (CONUS only) and filter out AK (02) / HI (15).
+    // Filter AK/HI at the national view (rendered separately if needed).
     const conusFeats = currentZoom === 'us'
       ? feats.filter(f => { const fp = f.properties?.STATEFP; return fp !== '02' && fp !== '15'; })
       : feats;
     const fc = { type:'FeatureCollection', features: conusFeats };
-    const projection = d3.geoAlbers()
-      .rotate([96, 0])
-      .center([-0.6, 38.7])
-      .parallels([29.5, 45.5])
-      .fitExtent([[18,18],[W-18,H-18]], fc);
+    // geoMercator: no composite clip boundaries, no conic singularities.
+    // Slightly stretched at high latitudes but correct everywhere we care about.
+    const projection = d3.geoMercator().fitExtent([[18,18],[W-18,H-18]], fc);
     const path = d3.geoPath(projection);
 
     const sel = d3.select(svg);
