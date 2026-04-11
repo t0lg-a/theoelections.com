@@ -355,7 +355,9 @@
   const zoomSelect = () => root() && root().querySelector('[data-sldl-zoom-select]');
   const usBtn      = () => root() && root().querySelector('[data-sldl-zoom="us"]');
   const panelEl    = () => root() && root().querySelector('.sldlStatePanel');
+  // Card lives in the LEFT column (sldl). Map lives in the RIGHT column (sldu).
   const stageEl    = () => root() && root().querySelector('.modeCol[data-mode="sldl"] .mapStage');
+  const mapStageEl = () => root() && root().querySelector('.modeCol[data-mode="sldu"] .mapStage');
 
   function hideOldTooltips(){
     const s = root() && root().querySelector('[data-sldl-sticky]');
@@ -410,7 +412,12 @@
     style.textContent = `
       #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .mapStage{position:relative;}
-      #stateLegsPage .sldlStatePanel{position:absolute;top:10px;left:10px;width:260px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 14px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:5;display:none;pointer-events:none;}
+      #stateLegsPage .sldlStatePanel{
+        position:relative;width:100%;
+        background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));
+        border-radius:6px;padding:14px 18px;font-size:11px;line-height:1.4;font-weight:600;
+        box-shadow:none;display:none;pointer-events:auto;
+      }
       #stateLegsPage .sldlStatePanel.show{display:block;}
       #stateLegsPage .sldlStatePanel .sldlModeToggle,
       #stateLegsPage .sldlStatePanel .sldlModeToggle button{pointer-events:auto;}

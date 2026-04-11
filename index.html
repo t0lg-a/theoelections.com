@@ -3587,7 +3587,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
 <div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures">
 
-  <!-- State House -->
+  <!-- State House — card/info panel only (no map here) -->
   <section class="modeCol" data-mode="sldl">
     <section class="card topCard">
       <div class="panelHeaderRow">
@@ -3598,45 +3598,37 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       </div>
     </section>
 
+    <section class="card mapCard" aria-label="State House info">
+      <div class="mapGrid">
+        <div class="mapStage" style="position:relative;min-height:280px;">
+          <!-- card injected here by state-legs.js -->
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- State Senate column — repurposed to hold the map -->
+  <section class="modeCol" data-mode="sldu">
+    <section class="card topCard">
+      <div class="panelHeaderRow">
+        <div class="panelTitleWrap">
+          <div class="panelTitle">State House Map</div>
+          <div class="panelSub">District baselines</div>
+        </div>
+      </div>
+    </section>
     <section class="card mapCard" aria-label="State House map">
       <div class="mapGrid">
         <div class="mapStage" style="position:relative;">
           <svg class="mapSvg" data-sldl-map aria-label="State House districts"></svg>
-          <div class="sldlStickyPanel" data-sldl-sticky aria-live="polite"></div>
-          <div class="sldlCursorTip" data-sldl-cursor role="tooltip"></div>
         </div>
       </div>
     </section>
-
     <div class="mapControlBar" data-sldl-controls>
       <button class="zoomBtn active" data-sldl-zoom="us">US</button>
       <select class="zoomSelect" data-sldl-zoom-select>
         <option value="">State…</option>
       </select>
-    </div>
-  </section>
-
-  <!-- State Senate (placeholder) -->
-  <section class="modeCol" data-mode="sldu">
-    <section class="card topCard">
-      <div class="panelHeaderRow">
-        <div class="panelTitleWrap">
-          <div class="panelTitle">State Senate</div>
-          <div class="panelSub">Upper chambers</div>
-        </div>
-      </div>
-    </section>
-    <section class="card mapCard" aria-label="State Senate — coming soon">
-      <div class="mapGrid">
-        <div class="mapStage" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;min-height:280px;">
-          <div style="font-size:24px;line-height:1;color:var(--line,rgba(0,0,0,0.2));font-weight:800;">—</div>
-          <div style="text-align:center;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Coming soon</div>
-          <div style="text-align:center;color:var(--muted);font-size:9px;font-weight:500;max-width:200px;line-height:1.4;">Upper chamber district baselines are not yet available in this build.</div>
-        </div>
-      </div>
-    </section>
-    <div class="mapControlBar" style="opacity:0.4;pointer-events:none;">
-      <button class="zoomBtn" disabled>—</button>
     </div>
   </section>
 
