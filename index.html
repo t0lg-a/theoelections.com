@@ -3635,6 +3635,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div>
 
 <style>
+  /* State Legs: narrow card column + wide map column.
+     Overrides the default 3-equal-columns .triGrid at desktop. */
+  @media (min-width: 980px){
+    #stateLegsPage.triGrid{
+      grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+    }
+  }
   #stateLegsPage .sldlStickyPanel{
     position:absolute; top:8px; right:8px;
     background:var(--panel, #fff);
