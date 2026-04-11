@@ -137,9 +137,10 @@
   // preventing absurdly wide chamber tails. A 20-pt NATIONAL swing would
   // be once-in-a-century; real waves are 5–8 pts. Most margin uncertainty
   // is district-specific (candidate quality, local issues, turnout).
-  const NAT_SIGMA  = 3;    // correlated national swing component
-  const IDIO_SIGMA = 11.6; // independent per-district component
-                           // Combined marginal stdev = sqrt(9 + 134.56) = 12.0
+  const NAT_SIGMA  = 12;  // correlated national/state swing — dominant
+                          // because state-leg races within a state move
+                          // together with shared fundamentals and media
+  const IDIO_SIGMA = 8;   // independent per-district deviation
   const MC_SIMS    = 5000;
 
   function gaussian(){
