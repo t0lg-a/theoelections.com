@@ -3583,6 +3583,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
 </div>
 
+</div>
+
 <div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures">
 
   <!-- State House -->
@@ -3626,13 +3628,16 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </section>
     <section class="card mapCard" aria-label="State Senate — coming soon">
       <div class="mapGrid">
-        <div class="mapStage" style="display:flex;align-items:center;justify-content:center;min-height:280px;">
-          <div style="text-align:center;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;">
-            Not yet available
-          </div>
+        <div class="mapStage" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;min-height:280px;">
+          <div style="font-size:24px;line-height:1;color:var(--line,rgba(0,0,0,0.2));font-weight:800;">—</div>
+          <div style="text-align:center;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Coming soon</div>
+          <div style="text-align:center;color:var(--muted);font-size:9px;font-weight:500;max-width:200px;line-height:1.4;">Upper chamber district baselines are not yet available in this build.</div>
         </div>
       </div>
     </section>
+    <div class="mapControlBar" style="opacity:0.4;pointer-events:none;">
+      <button class="zoomBtn" disabled>—</button>
+    </div>
   </section>
 
 </div>
@@ -3671,8 +3676,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
 </div>
 
-  </div>
-
   <div id="tip" role="dialog" aria-label="State details tooltip"></div>
 
   <div id="simTip" class="simTip" aria-hidden="true"></div>
@@ -3682,7 +3685,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="polls.js?v=25"></script>
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
-<script src="state-legs.js?v=1"></script>
+<script src="state-legs.js?v=5"></script>
 
 
 <script>

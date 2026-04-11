@@ -31,6 +31,48 @@
   let loaded = false, loading = false;
   let features = null, byState = null;
   let currentZoom = 'us';
+  let gbHistory = null;        // array of { date: Date, margin: number (D-R pts) }
+  let gbCurrent = null;        // most recent gen ballot margin (pts)
+
+  // --- Generic ballot history (for sparklines) ---------------------
+  async function loadGbHistory(){
+    if (gbHistory) return;
+    try {
+      const res = await fetch('json/polls.json', { cache:'no-store' });
+      if (!res.ok) throw new Error('gb ' + res.status);
+      const j = await res.json();
+      const gb = Array.isArray(j.genericBallot) ? j.genericBallot : [];
+      const polls = gb.map(p => {
+        const ds = p.end_date || p.start_date || p.created_at;
+        if (!ds) return null;
+        const m = String(ds).match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (!m) return null;
+        const d = new Date(+m[1], +m[2]-1, +m[3]);
+        const getNum = (o, keys) => {
+          for (const k of keys){
+            if (o[k] != null && isFinite(+o[k])) return +o[k];
+          }
+          return NaN;
+        };
+        const dem = getNum(p, ['dem','democrat','democrats','democratic']);
+        const rep = getNum(p, ['rep','republican','republicans','gop']);
+        if (!isFinite(dem) || !isFinite(rep)) return null;
+        return { date: d, margin: dem - rep };
+      }).filter(Boolean).sort((a,b) => a.date - b.date);
+      if (!polls.length) return;
+      // Smooth: rolling 14-poll average to get a clean trajectory
+      const W = 14;
+      const series = [];
+      for (let i = 0; i < polls.length; i++){
+        const lo = Math.max(0, i - W + 1);
+        const slice = polls.slice(lo, i + 1);
+        const avg = slice.reduce((s,p)=>s+p.margin,0) / slice.length;
+        series.push({ date: polls[i].date, margin: avg });
+      }
+      gbHistory = series;
+      gbCurrent = series[series.length - 1].margin;
+    } catch(e){ console.warn('[state-legs] gb history unavailable', e); }
+  }
 
   const root       = () => document.getElementById(PAGE_ID);
   const svgEl      = () => root() && root().querySelector('svg[data-sldl-map]');
@@ -73,7 +115,7 @@
     const style = document.createElement('style');
     style.id = 'sldlPanelStyles';
     style.textContent = `
-      #stateLegsPage .sldlStatePanel{position:absolute;top:8px;left:8px;width:220px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 12px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.08);pointer-events:none;z-index:3;display:none;}
+      #stateLegsPage .sldlStatePanel{position:absolute;top:8px;left:8px;width:240px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 12px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.08);pointer-events:none;z-index:3;display:none;}
       #stateLegsPage .sldlStatePanel.show{display:block;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:6px;}
       #stateLegsPage .sldlPanelTitle{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;}
@@ -100,14 +142,16 @@
       #stateLegsPage .dstRating{display:inline-block;padding:2px 7px;border-radius:3px;color:#fff;font-weight:800;font-size:9px;letter-spacing:0.03em;text-transform:uppercase;}
       #stateLegsPage .dstRating.light{color:#1f2937;}
       #stateLegsPage .dstWpSection{margin-top:6px;}
-      #stateLegsPage .dstWpLabel{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:3px;}
-      #stateLegsPage .dstWpBar{display:flex;height:8px;border-radius:2px;overflow:hidden;border:1px solid var(--line,rgba(0,0,0,0.1));}
-      #stateLegsPage .dstWpFill.d{background:var(--blue,#2563eb);}
-      #stateLegsPage .dstWpFill.r{background:var(--red,#dc2626);}
-      #stateLegsPage .dstWpLabels{display:flex;justify-content:space-between;margin-top:3px;font-size:10px;font-weight:800;font-variant-numeric:tabular-nums;}
-      #stateLegsPage .dstWpLabels .d{color:var(--blue,#2563eb);}
-      #stateLegsPage .dstWpLabels .r{color:var(--red,#dc2626);}
+      #stateLegsPage .dstWpHeader{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;}
+      #stateLegsPage .dstWpLabel{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;}
+      #stateLegsPage .dstWpNums{font-size:10px;font-weight:800;font-variant-numeric:tabular-nums;}
+      #stateLegsPage .dstWpNums .d{color:var(--blue,#2563eb);}
+      #stateLegsPage .dstWpNums .r{color:var(--red,#dc2626);margin-left:5px;}
+      #stateLegsPage .dstSpark{width:100%;height:32px;display:block;border:1px solid var(--line,rgba(0,0,0,0.08));border-radius:2px;}
       #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path{cursor:pointer;}
+      @media (max-width: 979px){
+        #stateLegsPage .sldlStatePanel{position:relative;top:0;left:0;width:auto;margin:8px;box-shadow:none;}
+      }
     `;
     document.head.appendChild(style);
   }
@@ -188,6 +232,47 @@
     return normalCDF(margin / WIN_PROB_SD);
   }
 
+  // Build SVG path for win-probability sparkline over gen-ballot history.
+  // district.margin represents the district's projected margin at the
+  // current gen ballot. ratio = district.margin - gbCurrent is fixed.
+  // For each historical day: district_margin(t) = gbHistory[t] + ratio
+  // → win prob via normal CDF.
+  function buildSparkline(districtMargin){
+    if (!gbHistory || gbHistory.length < 2 || districtMargin == null || gbCurrent == null) return '';
+    const ratio = districtMargin - gbCurrent;
+    const pts = gbHistory.map(p => ({
+      t: p.date.getTime(),
+      y: normalCDF((p.margin + ratio) / WIN_PROB_SD) // 0..1, prob D
+    }));
+    const W = 196, H = 32;
+    const tMin = pts[0].t, tMax = pts[pts.length-1].t;
+    const span = Math.max(1, tMax - tMin);
+    const xOf = t => ((t - tMin) / span) * W;
+    const yOf = y => H - (y * H);
+    // Dem area path (under line)
+    let demArea = `M 0 ${H} `;
+    let line = '';
+    pts.forEach((p, i) => {
+      const x = xOf(p.t), y = yOf(p.y);
+      demArea += `L ${x.toFixed(1)} ${y.toFixed(1)} `;
+      line += (i === 0 ? 'M' : 'L') + ` ${x.toFixed(1)} ${y.toFixed(1)} `;
+    });
+    demArea += `L ${W} ${H} Z`;
+    // 50% reference line
+    const mid = yOf(0.5);
+    const cs = getComputedStyle(document.documentElement);
+    const blueC = (cs.getPropertyValue('--blue')||'#2563eb').trim();
+    const redC  = (cs.getPropertyValue('--red') ||'#dc2626').trim();
+    return `
+      <svg class="dstSpark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+        <rect x="0" y="0" width="${W}" height="${H}" fill="${redC}" opacity="0.08"/>
+        <rect x="0" y="0" width="${W}" height="${mid}" fill="${blueC}" opacity="0.10"/>
+        <path d="${demArea}" fill="${blueC}" opacity="0.35"/>
+        <line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#9ca3af" stroke-width="0.5" stroke-dasharray="2,2"/>
+        <path d="${line}" fill="none" stroke="${blueC}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>`;
+  }
+
   function renderPanelDistrict(props){
     const p = panelEl(); if (!p || !p.classList.contains('show')) return;
     const dst = p.querySelector('[data-district]'); if (!dst) return;
@@ -196,18 +281,16 @@
     const wpD = winProbD(props.margin);
     const wpDPct = wpD != null ? Math.round(wpD * 100) : null;
     const wpRPct = wpDPct != null ? (100 - wpDPct) : null;
-    const wpBar = wpD != null
-      ? `<div class="dstWpBar"><div class="dstWpFill d" style="width:${wpDPct}%"></div><div class="dstWpFill r" style="width:${wpRPct}%"></div></div>
-         <div class="dstWpLabels"><span class="d">D ${wpDPct}%</span><span class="r">R ${wpRPct}%</span></div>`
-      : '';
+    const spark = buildSparkline(props.margin);
+    const wpBlock = wpD != null
+      ? `<div class="dstWpHeader"><span class="dstWpLabel">Win Probability</span><span class="dstWpNums"><span class="d">D ${wpDPct}%</span> <span class="r">R ${wpRPct}%</span></span></div>
+         ${spark}`
+      : '<div class="dstWpLabel" style="color:var(--muted);">No baseline data</div>';
     dst.innerHTML = `
       <div class="dstName">${props.NAMELSAD || 'District'}</div>
       <div class="dstRow"><span>Rating</span><span>${r ? `<span class="dstRating ${r.light?'light':''}" style="background:${r.color};">${r.label}</span>` : '—'}</span></div>
       <div class="dstRow"><span>Margin</span><span class="v ${marginClass}">${fmtMargin(props.margin)}</span></div>
-      <div class="dstWpSection">
-        <div class="dstWpLabel">Win Probability</div>
-        ${wpBar}
-      </div>
+      <div class="dstWpSection">${wpBlock}</div>
       <div class="dstRow" style="margin-top:4px;"><span>Baseline</span><span class="v" style="font-size:9px;">${baselineLabel(props.baseline)}</span></div>`;
   }
 
@@ -235,6 +318,15 @@
 
     const sel = d3.select(svg);
     sel.selectAll('path').remove();
+    // Click on background returns to US view
+    sel.on('click', function(ev){
+      if (ev.target.tagName !== 'path' && currentZoom !== 'us'){
+        currentZoom = 'us';
+        const zs = zoomSelect(); if (zs) zs.value = '';
+        const ub = usBtn(); if (ub) ub.classList.add('active');
+        render();
+      }
+    });
     sel.selectAll('path')
       .data(feats, d => d.properties.GEOID)
       .join('path')
@@ -273,6 +365,7 @@
       populateStateSelect();
       hideOldTooltips();
       injectPanel();
+      await loadGbHistory();
       loaded = true;
       requestAnimationFrame(() => requestAnimationFrame(render));
     } catch(e){ console.error('[state-legs] load failed', e); }
@@ -305,7 +398,9 @@
     const page = btn.dataset.page;
     const r = root(); if (!r) return;
     if (page === 'state-legs'){
-      r.style.display = 'grid';
+      // Mirror host switcher: use '' to revert to .triGrid CSS default.
+      // This matches how ratingsPage / pollsPage / etc. are shown.
+      r.style.display = '';
       load();
       if (loaded) requestAnimationFrame(() => requestAnimationFrame(render));
     } else {
