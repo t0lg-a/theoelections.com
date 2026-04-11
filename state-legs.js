@@ -391,7 +391,19 @@
     `;
     document.head.appendChild(style);
 
-    // Fixed info panel BELOW the map — doesn't overlap, doesn't follow cursor.
+    // Cursor-following tooltip — lives on body so it can escape the map box.
+    if (!document.getElementById('sldlCursorTip')){
+      const tip = document.createElement('div');
+      tip.id = 'sldlCursorTip';
+      tip.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;display:none;'
+        + 'background:var(--panel,#fff);border:1px solid rgba(0,0,0,0.12);'
+        + 'border-radius:6px;padding:8px 10px;font-size:11px;line-height:1.4;'
+        + 'font-weight:600;color:var(--ink,#111);box-shadow:0 4px 16px rgba(0,0,0,0.12);'
+        + 'min-width:180px;max-width:240px;';
+      document.body.appendChild(tip);
+    }
+
+    // Fixed info panel BELOW the map — holds mode toggle + chamber odds only.
     const stageForPanel = stageEl();
     if (stageForPanel && !stageForPanel.querySelector('.sldlInfoPanel')){
       const wrap = document.createElement('div');
@@ -404,7 +416,6 @@
           </div>
           <div class="sldlChamberOdds" data-chamber-odds>Hover or click a state</div>
         </div>
-        <div class="sldlDistrictInfo" data-district-info>Hover a district for details</div>
       `;
       stageForPanel.appendChild(wrap);
 
@@ -426,13 +437,9 @@
         #stateLegsPage .sldlModeToggle button.active{background:var(--ink,#111);color:#fff;}
         #stateLegsPage .sldlChamberOdds{font-size:11px;font-weight:700;color:var(--muted,#6b7280);}
         #stateLegsPage .sldlChamberOdds .pct{color:var(--ink,#111);font-variant-numeric:tabular-nums;}
-        #stateLegsPage .sldlDistrictInfo{padding-top:6px;border-top:1px solid rgba(0,0,0,0.06);min-height:38px;}
-        #stateLegsPage .sldlDistrictInfo .dName{font-weight:800;font-size:12px;margin-bottom:3px;}
-        #stateLegsPage .sldlDistrictInfo .dRow{display:flex;gap:10px;align-items:center;font-size:11px;}
       `;
       document.head.appendChild(tStyle);
 
-      // Mode toggle — switches between continuous Model fill and Ratings buckets.
       wrap.querySelectorAll('[data-mode-toggle] button').forEach(b => {
         b.addEventListener('click', () => {
           fillMode = b.getAttribute('data-mode');
@@ -443,12 +450,47 @@
     }
   }
 
-  let fillMode = 'model';  // 'model' = continuous fill, 'ratings' = bucket colors
+  let fillMode = 'model';
 
   function ratingFillFor(m){
     const r = rateDistrict(m);
     return r ? r.color : '#d0d0d0';
   }
+
+  // Cursor tooltip helpers.
+  const tipEl = () => document.getElementById('sldlCursorTip');
+  function showTip(props, ev){
+    const el = tipEl(); if (!el) return;
+    const m = mOf(props);
+    const r = rateDistrict(m);
+    const fm = fmtMargin(m);
+    const wpD = Math.round(winProbD(m) * 100);
+    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue,#2563eb)' : 'var(--red,#dc2626)');
+    el.innerHTML = `
+      <div style="font-weight:800;font-size:12px;margin-bottom:4px;">
+        ${props.state_abbr} · ${props.NAMELSAD || 'District'}
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+        ${r ? `<span style="display:inline-block;padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'#1f2937':'#fff'};font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;">${r.label}</span>` : ''}
+        <span style="font-weight:800;color:${mColor};">${fm}</span>
+      </div>
+      <div style="font-size:9px;color:var(--muted);font-weight:600;">
+        Win prob · D ${wpD}% · R ${100-wpD}%
+      </div>`;
+    el.style.display = 'block';
+    moveTip(ev);
+  }
+  function moveTip(ev){
+    const el = tipEl(); if (!el || el.style.display === 'none') return;
+    const pad = 14;
+    let x = ev.clientX + pad, y = ev.clientY + pad;
+    const rect = el.getBoundingClientRect();
+    if (x + rect.width  > window.innerWidth)  x = ev.clientX - rect.width  - pad;
+    if (y + rect.height > window.innerHeight) y = ev.clientY - rect.height - pad;
+    el.style.left = x + 'px';
+    el.style.top  = y + 'px';
+  }
+  function hideTip(){ const el = tipEl(); if (el) el.style.display = 'none'; }
   const NOT_UP_2026_STATES = new Set(['LA','MS','NJ','VA','NE']);
 
   function fillFor(m, props){
@@ -457,26 +499,6 @@
     return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
   }
 
-  function showDistrictInfo(props){
-    const el = document.querySelector('#stateLegsPage [data-district-info]');
-    if (!el) return;
-    const m = mOf(props);
-    const r = rateDistrict(m);
-    const wpD = Math.round(winProbD(m) * 100);
-    const fm = fmtMargin(m);
-    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue,#2563eb)' : 'var(--red,#dc2626)');
-    el.innerHTML = `
-      <div class="dName">${props.state_abbr} · ${props.NAMELSAD || 'District'}</div>
-      <div class="dRow">
-        ${r ? `<span style="padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'#1f2937':'#fff'};font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;">${r.label}</span>` : ''}
-        <span style="font-weight:800;color:${mColor};">${fm}</span>
-        <span style="color:var(--muted);font-size:10px;">Win prob: D ${wpD}% · R ${100-wpD}%</span>
-      </div>`;
-  }
-  function clearDistrictInfo(){
-    const el = document.querySelector('#stateLegsPage [data-district-info]');
-    if (el) el.innerHTML = 'Hover a district for details';
-  }
   function showChamberOdds(stateAbbr){
     const el = document.querySelector('#stateLegsPage [data-chamber-odds]');
     if (!el) return;
@@ -699,12 +721,13 @@
         .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
       .on('mouseenter', function(ev, d){
         d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2);
-        showDistrictInfo(d.properties);
+        showTip(d.properties, ev);
         if (currentZoom === 'us') showChamberOdds(d.properties.state_abbr);
       })
+      .on('mousemove', function(ev){ moveTip(ev); })
       .on('mouseleave', function(){
         d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8);
-        clearDistrictInfo();
+        hideTip();
       })
       .on('click', function(ev, d){
         ev.stopPropagation();
