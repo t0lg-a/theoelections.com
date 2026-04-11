@@ -112,9 +112,57 @@
     for (const f of features){ const p = f.properties; if (p) p._ratio = buildRatio(p); }
   }
 
+  // Per-state additive bias on projected margin (D-side, in points).
+  // Used to correct stale baseline data when a state has trended one way
+  // since the baseline period. This is NOT a model fudge — it's a data
+  // correction layer. The ratio model is mathematically correct; this just
+  // adjusts for known drift in the baseline source.
+  //
+  // ME +3: 2016-20 baseline averages Clinton (D+2.2) and Biden (D+4.5).
+  //        Maine has trended D since: Harris won by 7 in 2024 (D+6.9),
+  //        roughly +3 net D shift from the averaged baseline.
+  const STATE_LEG_BIAS = {
+    ME: +3,
+  };
+
   function applyProjection(){
     if (!features) return;
-    for (const f of features){ const p = f.properties; if (p) p._projMargin = projectMarginFromRatio(p._ratio); }
+    for (const f of features){
+      const p = f.properties;
+      if (!p) continue;
+      let m = projectMarginFromRatio(p._ratio);
+      if (m != null && isFinite(m)){
+        const bias = STATE_LEG_BIAS[p.state_abbr] || 0;
+        if (bias) m += bias;
+      }
+      p._projMargin = m;
+    }
+
+    // Impute null-margin districts from their state's mean projected margin.
+    // Some states (notably ME with 11 districts) have features in the
+    // topojson but missing baseline data in the CSV. Without imputation
+    // they'd be excluded from totalD/totalR and the rating bar, making
+    // the chamber appear smaller than it really is.
+    const sums = {};   // state → { sum, n }
+    for (const f of features){
+      const p = f.properties || {};
+      if (p._projMargin == null || !isFinite(p._projMargin)) continue;
+      const st = p.state_abbr; if (!st) continue;
+      if (!sums[st]) sums[st] = { sum: 0, n: 0 };
+      sums[st].sum += p._projMargin; sums[st].n++;
+    }
+    let imputed = 0;
+    for (const f of features){
+      const p = f.properties || {};
+      if (p._projMargin != null && isFinite(p._projMargin)) continue;
+      const st = p.state_abbr; if (!st) continue;
+      const s = sums[st]; if (!s || s.n === 0) continue;
+      p._projMargin = s.sum / s.n;
+      p._imputed = true;
+      imputed++;
+    }
+    if (imputed > 0) console.log(`[state-legs] imputed margins for ${imputed} districts missing baseline data`);
+
     byState = indexByState(features);
   }
 
