@@ -2682,6 +2682,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <button class="pageTab" data-page="polls">Polls</button>
   <button class="pageTab" data-page="swingometer">Swingometer</button>
   <button class="pageTab" data-page="past-elections">Past Elections</button>
+  <button class="pageTab" data-page="state-legs">State Legs</button>
   <button class="pageTab" data-page="methodology">Methodology</button>
 </nav>
 <button class="lookToggle" id="lookToggle" title="Toggle riso / legacy look">%</button>
@@ -3585,6 +3586,90 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   </div>
 
+<div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures">
+
+  <!-- State House -->
+  <section class="modeCol" data-mode="sldl">
+    <section class="card topCard">
+      <div class="panelHeaderRow">
+        <div class="panelTitleWrap">
+          <div class="panelTitle">State House</div>
+          <div class="panelSub">Lower chambers — district baselines</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card mapCard" aria-label="State House map">
+      <div class="mapGrid">
+        <div class="mapStage" style="position:relative;">
+          <svg class="mapSvg" data-sldl-map aria-label="State House districts"></svg>
+          <div class="sldlStickyPanel" data-sldl-sticky aria-live="polite"></div>
+          <div class="sldlCursorTip" data-sldl-cursor role="tooltip"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mapControlBar" data-sldl-controls>
+      <button class="zoomBtn active" data-sldl-zoom="us">US</button>
+      <select class="zoomSelect" data-sldl-zoom-select>
+        <option value="">State…</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- State Senate (placeholder) -->
+  <section class="modeCol" data-mode="sldu">
+    <section class="card topCard">
+      <div class="panelHeaderRow">
+        <div class="panelTitleWrap">
+          <div class="panelTitle">State Senate</div>
+          <div class="panelSub">Upper chambers</div>
+        </div>
+      </div>
+    </section>
+    <section class="card mapCard" aria-label="State Senate — coming soon">
+      <div class="mapGrid">
+        <div class="mapStage" style="display:flex;align-items:center;justify-content:center;min-height:280px;">
+          <div style="text-align:center;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;">
+            Not yet available
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</div>
+
+<style>
+  #stateLegsPage .sldlStickyPanel{
+    position:absolute; top:8px; right:8px;
+    background:var(--panel, #fff);
+    border:1px solid var(--line, rgba(0,0,0,0.1));
+    border-radius:6px; padding:8px 10px;
+    font-size:10px; line-height:1.4; font-weight:600;
+    min-width:140px; pointer-events:none;
+    box-shadow:0 1px 3px rgba(0,0,0,0.06);
+    z-index:2;
+  }
+  #stateLegsPage .sldlStickyPanel .stHead{ font-size:11px; font-weight:800; margin-bottom:4px; color:var(--ink); letter-spacing:0.02em; }
+  #stateLegsPage .sldlStickyPanel .stRow{ display:flex; justify-content:space-between; gap:8px; color:var(--muted); }
+  #stateLegsPage .sldlStickyPanel .stRow .v{ color:var(--ink); font-variant-numeric:tabular-nums; }
+  #stateLegsPage .sldlStickyPanel .stRow.d .v{ color:var(--blue); }
+  #stateLegsPage .sldlStickyPanel .stRow.r .v{ color:var(--red); }
+  #stateLegsPage .sldlCursorTip{
+    position:absolute; pointer-events:none; display:none;
+    background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.1));
+    border-radius:4px; padding:4px 6px; font-size:10px; font-weight:600;
+    box-shadow:0 1px 3px rgba(0,0,0,0.08); white-space:nowrap; z-index:3;
+  }
+  #stateLegsPage .sldlCursorTip .cName{ color:var(--ink); }
+  #stateLegsPage .sldlCursorTip .cMargin.d{ color:var(--blue); }
+  #stateLegsPage .sldlCursorTip .cMargin.r{ color:var(--red); }
+  #stateLegsPage .sldlCursorTip .cBase{ color:var(--muted); font-weight:500; font-size:9px; margin-top:1px; }
+  #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path{ stroke:rgba(255,255,255,0.35); stroke-width:0.3; cursor:pointer; }
+  #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path:hover{ stroke:var(--ink); stroke-width:0.8; }
+</style>
+
   <div id="tip" role="dialog" aria-label="State details tooltip"></div>
 
   <div id="simTip" class="simTip" aria-hidden="true"></div>
@@ -3594,6 +3679,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="polls.js?v=25"></script>
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
+<script src="state-legs.js?v=1"></script>
 
 
 <script>
