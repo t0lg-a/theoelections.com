@@ -236,6 +236,16 @@
   // polls fetch is async — DATA.house.gb is null until aggregation finishes.
   function readForecastGb(){
     try {
+      // Prefer the NOWCAST gb (raw latest polls) over forecast-adjusted gb.
+      // forecast.js stores it as a top-level `let _savedNowcastGb`.
+      try {
+        // eslint-disable-next-line no-undef
+        if (typeof _savedNowcastGb !== 'undefined' && _savedNowcastGb
+            && isFinite(_savedNowcastGb.D) && isFinite(_savedNowcastGb.R)) {
+          return { margin: _savedNowcastGb.D - _savedNowcastGb.R, gb: _savedNowcastGb, src: 'nowcast' };
+        }
+      } catch(_) {}
+      // Fallback: DATA.house.gb (whatever mode forecast is in).
       // eslint-disable-next-line no-undef
       if (typeof DATA === 'undefined') return { err: 'no-binding' };
       // eslint-disable-next-line no-undef
@@ -244,7 +254,7 @@
       const gb = D.house.gb;
       if (!gb) return { err: 'gb-null' };
       if (!isFinite(gb.D) || !isFinite(gb.R)) return { err: 'gb-nan' };
-      return { margin: gb.D - gb.R, gb };
+      return { margin: gb.D - gb.R, gb, src: 'house.gb' };
     } catch(e) {
       return { err: 'throw:' + e.message };
     }
@@ -397,7 +407,10 @@
     style.textContent = `
       #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .mapStage{position:relative;}
-      #stateLegsPage .sldlStatePanel{position:relative;margin-top:10px;width:auto;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 14px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.04);z-index:3;display:none;}
+      #stateLegsPage .sldlStatePanel{position:absolute;top:10px;left:10px;width:260px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 14px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:5;display:none;pointer-events:none;}
+      #stateLegsPage .sldlStatePanel.show{display:block;}
+      #stateLegsPage .sldlStatePanel .sldlModeToggle,
+      #stateLegsPage .sldlStatePanel .sldlModeToggle button{pointer-events:auto;}
       #stateLegsPage .sldlStatePanel.show{display:block;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
       #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid rgba(0,0,0,0.15);border-radius:4px;overflow:hidden;pointer-events:auto;}
@@ -842,9 +855,6 @@
     sel.call(zoom);
     // Reset zoom on every re-render
     sel.call(zoom.transform, d3.zoomIdentity);
-
-    // The old in-map panel is retired in favor of the cursor tooltip.
-    const p = panelEl(); if (p) p.classList.remove('show');
   }
 
   async function load(){
@@ -909,14 +919,19 @@
           const iG = hdr.indexOf('GEOID');
           const iH = hdr.indexOf('h_share');
           if (iG >= 0 && iH >= 0){
-            let n = 0;
+            let n = 0, skipped = 0;
             for (let i = 1; i < lines.length; i++){
               const c = lines[i].split(',');
               const geoid = c[iG];
               const h = parseFloat(c[iH]);
-              if (geoid && isFinite(h)){ SLDL_HISPANIC_SHARE[geoid] = h; n++; }
+              if (geoid && isFinite(h)){
+                // Match forecast.js CD behavior: only 50%+ Hispanic districts
+                // get the adjustment. Below that, treat as h_share = 0.
+                if (h >= 0.5){ SLDL_HISPANIC_SHARE[geoid] = h; n++; }
+                else skipped++;
+              }
             }
-            console.log(`[state-legs] joined Hispanic share: ${n} districts`);
+            console.log(`[state-legs] Hispanic share: ${n} districts ≥50% (${skipped} below threshold, ignored)`);
           }
         } else {
           console.log('[state-legs] no Hispanic CSV (adjustment disabled)');
