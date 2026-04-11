@@ -215,6 +215,11 @@
     const svg = svgEl(); if (!svg || !features) return;
     const stage = svg.parentElement;
     const rect = stage ? stage.getBoundingClientRect() : { width:600, height:280 };
+    // If stage isn't laid out yet, retry on next frame
+    if (!rect.width || !rect.height) {
+      requestAnimationFrame(render);
+      return;
+    }
     const w = Math.max(1, Math.min(1200, rect.width  || 600));
     const h = Math.max(1, Math.min(600,  rect.height || 280));
     svg.setAttribute('width', w); svg.setAttribute('height', h);
