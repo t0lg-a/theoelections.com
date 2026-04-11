@@ -2107,16 +2107,32 @@ async function zoomToStateCounties(modeKey, usps, stateFips){
   const stateModel = getStateModel(modeKey, usps, IND_CACHE[modeKey]);
   const stateMargin = stateModel ? marginRD(stateModel.combinedPair) : NaN;
 
-  // Zoom to state bounds — offset to right side to leave room for tooltip on left
+  // Zoom to state bounds. In normal layout we offset right to leave room
+  // for the tooltip on the left of the narrow map. In fullscreen mode the
+  // map is much wider and the tooltip is absolute-positioned with a fixed
+  // 380px width, so we can center the state more naturally.
+  const isFullscreen = !!(document.getElementById('triGrid')
+    && document.getElementById('triGrid').getAttribute('data-fullscreen'));
   const countyCollection = { type:"FeatureCollection", features: counties };
   const [[x0,y0],[x1,y1]] = d3.geoPath(m.projection).bounds(countyCollection);
   const bw = x1 - x0, bh = y1 - y0;
   if (bw < 1 || bh < 1) return;
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   const pad = 1.15;
-  const k = Math.min(m.width * 0.66 / (bw * pad), m.height / (bh * pad));
-  const tx = m.width * 0.78 - cx * k;
-  const ty = m.height / 2 - cy * k;
+
+  let k, tx, ty;
+  if (isFullscreen){
+    // Fullscreen: state fills ~72% of width, centered at 58% horizontally
+    // (slightly right of middle, leaving ~42% on the left for the tooltip).
+    k = Math.min(m.width * 0.72 / (bw * pad), m.height * 0.88 / (bh * pad));
+    tx = m.width * 0.58 - cx * k;
+    ty = m.height / 2 - cy * k;
+  } else {
+    // Normal layout: state fills 66% of width, pinned to right 78% (original)
+    k = Math.min(m.width * 0.66 / (bw * pad), m.height / (bh * pad));
+    tx = m.width * 0.78 - cx * k;
+    ty = m.height / 2 - cy * k;
+  }
 
   m.gRoot.transition().duration(600)
     .attr("transform", `translate(${tx},${ty}) scale(${k})`);
