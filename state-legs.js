@@ -30,6 +30,48 @@
 
   let loaded = false, loading = false;
   let features = null, byState = null;
+
+  // Generic ballot assumed by each baseline when the topojson was built.
+  const BASELINE_GB = {
+    '2024_pres':    { D: 48.3, R: 49.8 },  // Trump +1.5
+    '2016-20_comp': { D: 51.5, R: 48.5 },  // ≈ D+3
+  };
+
+  function buildRatio(props){
+    const demBase = props.dem_pct;
+    const margin  = props.margin;
+    if (demBase == null || margin == null || !isFinite(demBase) || !isFinite(margin)) return null;
+    const repBase = demBase - margin;
+    const gbBase  = BASELINE_GB[props.baseline] || { D: 50, R: 50 };
+    if (gbBase.D <= 0 || gbBase.R <= 0) return null;
+    return { D: demBase / gbBase.D, R: repBase / gbBase.R };
+  }
+
+  // Mirrors forecast.js getHouseModel(): cdD = ratio.D*gb.D, cdR = ratio.R*gb.R, renorm, D-R.
+  function projectMarginFromRatio(ratio, gbOverride){
+    if (!ratio) return null;
+    const m = gbOverride != null ? gbOverride
+            : (gbCurrent != null && isFinite(gbCurrent)) ? gbCurrent : 0;
+    const gbNow = { D: 50 + m/2, R: 50 - m/2 };
+    const cdD = ratio.D * gbNow.D;
+    const cdR = ratio.R * gbNow.R;
+    const s   = cdD + cdR;
+    if (s <= 0) return null;
+    return (100 * cdD / s) - (100 * cdR / s);
+  }
+
+  function attachRatios(){
+    if (!features) return;
+    for (const f of features){ const p = f.properties; if (p) p._ratio = buildRatio(p); }
+  }
+
+  function applyProjection(){
+    if (!features) return;
+    for (const f of features){ const p = f.properties; if (p) p._projMargin = projectMarginFromRatio(p._ratio); }
+    byState = indexByState(features);
+  }
+
+  function mOf(p){ return (p && p._projMargin != null) ? p._projMargin : (p ? p.margin : null); }
   let currentZoom = 'us';
   let gbHistory = null;        // array of { date: Date, margin: number (D-R pts) }
   let gbCurrent = null;        // most recent gen ballot margin (pts)
@@ -71,6 +113,11 @@
       }
       gbHistory = series;
       gbCurrent = series[series.length - 1].margin;
+      if (features){
+        applyProjection();
+        if (svgEl()) render();
+        if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
+      }
     } catch(e){ console.warn('[state-legs] gb history unavailable', e); }
   }
 
@@ -165,7 +212,7 @@
       if (!map[st]) map[st] = { features:[], totalD:0, totalR:0, total:0, ratings:{} };
       const s = map[st];
       s.features.push(f); s.total++;
-      const m = p.margin;
+      const m = (p._projMargin != null) ? p._projMargin : p.margin;
       if (m != null && isFinite(m)){
         if (m > 0) s.totalD++; else if (m < 0) s.totalR++;
         const r = rateDistrict(m);
@@ -238,13 +285,12 @@
   // current gen ballot. ratio = district.margin - gbCurrent is fixed.
   // For each historical day: district_margin(t) = gbHistory[t] + ratio
   // → win prob via normal CDF.
-  function buildSparkline(districtMargin){
-    if (!gbHistory || gbHistory.length < 2 || districtMargin == null || gbCurrent == null) return '';
-    const ratio = districtMargin - gbCurrent;
-    const pts = gbHistory.map(p => ({
-      t: p.date.getTime(),
-      y: normalCDF((p.margin + ratio) / WIN_PROB_SD) // 0..1, prob D
-    }));
+  function buildSparkline(ratio){
+    if (!gbHistory || gbHistory.length < 2 || !ratio || gbCurrent == null) return '';
+    const pts = gbHistory.map(p => {
+      const dm = projectMarginFromRatio(ratio, p.margin);
+      return { t: p.date.getTime(), y: (dm != null) ? normalCDF(dm / WIN_PROB_SD) : 0.5 };
+    });
     const W = 196, H = 32;
     const tMin = pts[0].t, tMax = pts[pts.length-1].t;
     const span = Math.max(1, tMax - tMin);
@@ -277,12 +323,13 @@
   function renderPanelDistrict(props){
     const p = panelEl(); if (!p || !p.classList.contains('show')) return;
     const dst = p.querySelector('[data-district]'); if (!dst) return;
-    const r = rateDistrict(props.margin);
-    const marginClass = props.margin == null ? '' : (props.margin >= 0 ? 'd' : 'r');
-    const wpD = winProbD(props.margin);
+    const mProj = mOf(props);
+    const r = rateDistrict(mProj);
+    const marginClass = mProj == null ? '' : (mProj >= 0 ? 'd' : 'r');
+    const wpD = winProbD(mProj);
     const wpDPct = wpD != null ? Math.round(wpD * 100) : null;
     const wpRPct = wpDPct != null ? (100 - wpDPct) : null;
-    const spark = buildSparkline(props.margin);
+    const spark = buildSparkline(props._ratio);
     const wpBlock = wpD != null
       ? `<div class="dstWpHeader"><span class="dstWpLabel">Win Probability</span><span class="dstWpNums"><span class="d">D ${wpDPct}%</span> <span class="r">R ${wpRPct}%</span></span></div>
          ${spark}`
@@ -290,9 +337,9 @@
     dst.innerHTML = `
       <div class="dstName">${props.NAMELSAD || 'District'}</div>
       <div class="dstRow"><span>Rating</span><span>${r ? `<span class="dstRating ${r.light?'light':''}" style="background:${r.color};">${r.label}</span>` : '—'}</span></div>
-      <div class="dstRow"><span>Margin</span><span class="v ${marginClass}">${fmtMargin(props.margin)}</span></div>
+      <div class="dstRow"><span>Margin</span><span class="v ${marginClass}">${fmtMargin(mProj)}</span></div>
       <div class="dstWpSection">${wpBlock}</div>
-      <div class="dstRow" style="margin-top:4px;"><span>Baseline</span><span class="v" style="font-size:9px;">${baselineLabel(props.baseline)}</span></div>`;
+      <div class="dstRow" style="margin-top:4px;"><span>Baseline</span><span class="v" style="font-size:9px;">${baselineLabel(props.baseline)} ${fmtMargin(props.margin)}</span></div>`;
   }
 
   function render(){
@@ -309,8 +356,18 @@
     svg.style.height = '';
 
     const feats = currentZoom === 'us' ? features : (byState[currentZoom] ? byState[currentZoom].features : []);
-    const fc = { type:'FeatureCollection', features: feats };
-    const projection = d3.geoAlbersUsa().fitExtent([[18,18],[W-18,H-18]], fc);
+    // geoAlbersUsa is a composite projection — polygon rings that brush its
+    // internal clip boundaries break into giant rectangles. Use plain geoAlbers
+    // (CONUS only) and filter out AK (02) / HI (15).
+    const conusFeats = currentZoom === 'us'
+      ? feats.filter(f => { const fp = f.properties?.STATEFP; return fp !== '02' && fp !== '15'; })
+      : feats;
+    const fc = { type:'FeatureCollection', features: conusFeats };
+    const projection = d3.geoAlbers()
+      .rotate([96, 0])
+      .center([-0.6, 38.7])
+      .parallels([29.5, 45.5])
+      .fitExtent([[18,18],[W-18,H-18]], fc);
     const path = d3.geoPath(projection);
 
     const sel = d3.select(svg);
@@ -327,7 +384,7 @@
       .data(feats, d => d.properties.GEOID)
       .join('path')
         .attr('d', path)
-        .attr('fill', d => marginColor(d.properties.margin))
+        .attr('fill', d => marginColor(mOf(d.properties)))
         .attr('stroke','rgba(255,255,255,0.4)')
         .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
       .on('mouseenter', function(){ d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2); })
@@ -358,7 +415,8 @@
       if (!objName) throw new Error('no topojson objects');
       const fc = topojson.feature(topo, topo.objects[objName]);
       features = fc.features || [];
-      byState = indexByState(features);
+      attachRatios();
+      applyProjection();
       populateStateSelect();
       hideOldTooltips();
       injectPanel();
