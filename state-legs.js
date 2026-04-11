@@ -99,43 +99,171 @@
   }
 
   function mOf(p){ return (p && p._projMargin != null) ? p._projMargin : (p ? p.margin : null); }
+
+  // --- Win probability + majority odds (mirrors forecast.js) -----------
+  const PROB_ERROR_SD_PTS = 7;  // same as forecast.js
+  function _nCDF(z){  // standard normal CDF
+    const t = 1 / (1 + 0.2316419 * Math.abs(z));
+    const d = 0.3989423 * Math.exp(-z*z/2);
+    const p = d * t * (0.3193815 + t*(-0.3565638 + t*(1.781478 + t*(-1.821256 + t*1.330274))));
+    return z > 0 ? 1 - p : p;
+  }
+  function winProbD(margin){
+    if (margin == null || !isFinite(margin)) return 0.5;
+    return _nCDF(margin / PROB_ERROR_SD_PTS);
+  }
+
+  // Chamber sizes + thresholds. Supermajority defaults to 2/3 where a single
+  // rule doesn't apply. Verify these against your state's actual rules if you
+  // want exact constitutional supermajority lines per state.
+  const CHAMBER = {
+    AL:105, AK:40, AZ:60, AR:100, CA:80, CO:65, CT:151, DE:41, FL:120, GA:180,
+    HI:51, ID:70, IL:118, IN:100, IA:100, KS:125, KY:100, LA:105, ME:151, MD:141,
+    MA:160, MI:110, MN:134, MS:122, MO:163, MT:100, NE:0, NV:42, NH:400, NJ:80,
+    NM:70, NY:150, NC:120, ND:94, OH:99, OK:101, OR:60, PA:203, RI:75, SC:124,
+    SD:70, TN:99, TX:150, UT:75, VT:150, VA:100, WA:98, WV:100, WI:99, WY:62,
+  };
+
+  // 2026 state house election schedule. Values are number of seats up in 2026.
+  // - Odd-year states (LA, MS, NJ, VA) are NOT up in 2026 → 0.
+  // - ND is staggered, 51/94 each cycle → 51.
+  // - NE is unicameral, no lower house → 0.
+  // - States absent from this map default to CHAMBER[st] (all seats up).
+  const SEATS_UP_2026 = {
+    LA: 0, MS: 0, NJ: 0, VA: 0,
+    NE: 0,
+    ND: 51,
+    // NH, VT, etc. elect full chamber every 2 years → default.
+  };
+  function seatsUp2026(st){
+    return SEATS_UP_2026[st] != null ? SEATS_UP_2026[st] : (CHAMBER[st] || 0);
+  }
+
+  // Exact Poisson-binomial distribution from per-district D win probs.
+  function poissonBinomial(pDemArr){
+    let dist = new Array(pDemArr.length + 1).fill(0);
+    dist[0] = 1;
+    for (let i = 0; i < pDemArr.length; i++){
+      const p = Math.max(0, Math.min(1, pDemArr[i]));
+      const nxt = new Array(pDemArr.length + 1).fill(0);
+      for (let k = 0; k <= i; k++){
+        nxt[k]     += dist[k] * (1 - p);
+        nxt[k + 1] += dist[k] * p;
+      }
+      dist = nxt;
+    }
+    return dist;  // dist[k] = P(D wins exactly k seats)
+  }
+
+  // For a given state: return probabilities of D majority, D supermajority,
+  // R majority, R supermajority, plus expected D seat count.
+  function chamberOdds(stateAbbr){
+    const s = byState && byState[stateAbbr];
+    if (!s || !s.features?.length) return null;
+    const total = CHAMBER[stateAbbr] || s.features.length;
+    const up = seatsUp2026(stateAbbr);
+    if (up <= 0) return { total, up:0, notUp:true };
+
+    // For staggered states we don't know WHICH specific districts are up, so
+    // we sample the highest-variance (closest to 50/50) seats first as an
+    // approximation — those are the ones whose outcome matters most anyway,
+    // and in practice staggered chambers rotate through all districts across
+    // cycles. If `up === total`, this is just every district.
+    const sortedByCompetitiveness = s.features
+      .map(f => ({ f, m: mOf(f.properties) }))
+      .sort((a,b) => Math.abs(a.m ?? 999) - Math.abs(b.m ?? 999));
+    const upFeats = sortedByCompetitiveness.slice(0, up).map(x => x.f);
+
+    const majLine   = Math.floor(total/2) + 1;
+    const superLine = Math.ceil(total * 2 / 3);
+    const pDem = [];
+    for (const f of upFeats){
+      const m = mOf(f.properties);
+      pDem.push(m == null ? 0.5 : winProbD(m));
+    }
+    // Locked seats (not up this cycle) — treat as fixed at current lean.
+    // This is a rough proxy: baseline margin > 0 → D hold, else R hold.
+    let lockedD = 0;
+    for (const it of sortedByCompetitiveness.slice(up)){
+      const m = mOf(it.f.properties);
+      if (m != null && m > 0) lockedD++;
+    }
+
+    const dist = poissonBinomial(pDem);  // dist[k] = P(D wins k of the UP seats)
+    let pDmaj = 0, pDsup = 0, eD = lockedD;
+    for (let k = 0; k < dist.length; k++){
+      const totalD = k + lockedD;
+      if (totalD >= majLine)   pDmaj += dist[k];
+      if (totalD >= superLine) pDsup += dist[k];
+      eD += k * dist[k];
+    }
+    const pRmaj = Math.max(0, 1 - pDmaj);
+    let pRsup = 0;
+    for (let k = 0; k < dist.length; k++){
+      const totalD = k + lockedD;
+      if ((total - totalD) >= superLine) pRsup += dist[k];
+    }
+    return { total, up, notUp:false, majLine, superLine, pDmaj, pDsup, pRmaj, pRsup, eDemSeats: eD, lockedD };
+  }
   let currentZoom = 'us';
   let gbHistory = null;        // array of { date: Date, margin: number (D-R pts) }
   let gbCurrent = null;        // most recent gen ballot margin (pts)
 
-  // --- Generic ballot: read from forecast.js's DATA.house.gb ----------
-  // forecast.js loads as a classic script and declares `const DATA` at the
-  // top level. Since both files share the same script realm, we can read
-  // it directly by name. We poll because forecast's polls fetch is async.
+  // --- Generic ballot: read from forecast.js's DATA.house.gb ---------
+  // forecast.js declares `const DATA = {...}` at classic-script top level.
+  // That binding is shared across classic scripts in the same document, so
+  // we can reference `DATA` directly from here. We poll because forecast's
+  // polls fetch is async — DATA.house.gb is null until aggregation finishes.
   function readForecastGb(){
     try {
       // eslint-disable-next-line no-undef
-      const gb = (typeof DATA !== 'undefined') && DATA && DATA.house && DATA.house.gb;
-      if (gb && isFinite(gb.D) && isFinite(gb.R)) return gb.D - gb.R; // D-R margin pts
-    } catch(_) {}
-    return null;
+      if (typeof DATA === 'undefined') return { err: 'no-binding' };
+      // eslint-disable-next-line no-undef
+      const D = DATA;
+      if (!D || !D.house) return { err: 'no-house' };
+      const gb = D.house.gb;
+      if (!gb) return { err: 'gb-null' };
+      if (!isFinite(gb.D) || !isFinite(gb.R)) return { err: 'gb-nan' };
+      return { margin: gb.D - gb.R, gb };
+    } catch(e) {
+      return { err: 'throw:' + e.message };
+    }
   }
+  let _lastErr = null;
   function syncGbFromForecast(){
-    const m = readForecastGb();
-    if (m != null && m !== gbCurrent){
-      gbCurrent = m;
+    const r = readForecastGb();
+    if (r.err){
+      if (r.err !== _lastErr){
+        console.log(`[state-legs] gb not ready (${r.err})`);
+        _lastErr = r.err;
+      }
+      return false;
+    }
+    _lastErr = null;
+    if (r.margin !== gbCurrent){
+      const prev = gbCurrent;
+      gbCurrent = r.margin;
+      console.log(`[state-legs] gb synced from forecast: ${prev==null?'(initial)':prev.toFixed(2)} → ${r.margin.toFixed(2)}  (raw gb D=${r.gb.D.toFixed(2)} R=${r.gb.R.toFixed(2)})`);
       if (features){
         applyProjection();
         if (svgEl()) render();
-        if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
       }
-      return true;
     }
-    return false;
+    return true;
   }
   function startGbWatcher(){
-    if (syncGbFromForecast()) { /* got it on first tick */ }
-    // Poll for up to 30s in case forecast.js polls load slowly, then every 15s
-    // for updates. Cheap — just 2 property reads per tick.
+    syncGbFromForecast();
+    // Poll fast for 60s, then slow forever.
     let tries = 0;
     const fast = setInterval(() => {
       tries++;
-      if (syncGbFromForecast() || tries > 60) clearInterval(fast);
+      if (syncGbFromForecast()){
+        clearInterval(fast);
+      } else if (tries > 120){
+        clearInterval(fast);
+        console.warn(`[state-legs] gave up waiting for forecast DATA.house.gb after 60s (last err: ${_lastErr}) — falling back to gbCurrent=0`);
+        if (gbCurrent == null){ gbCurrent = 0; applyProjection(); if (svgEl()) render(); }
+      }
     }, 500);
     setInterval(syncGbFromForecast, 15000);
   }
@@ -262,6 +390,116 @@
       }
     `;
     document.head.appendChild(style);
+
+    // Fixed info panel BELOW the map — doesn't overlap, doesn't follow cursor.
+    const stageForPanel = stageEl();
+    if (stageForPanel && !stageForPanel.querySelector('.sldlInfoPanel')){
+      const wrap = document.createElement('div');
+      wrap.className = 'sldlInfoPanel';
+      wrap.innerHTML = `
+        <div class="sldlInfoHeader">
+          <div class="sldlModeToggle" data-mode-toggle>
+            <button type="button" data-mode="model"   class="active">Model</button>
+            <button type="button" data-mode="ratings">Ratings</button>
+          </div>
+          <div class="sldlChamberOdds" data-chamber-odds>Hover or click a state</div>
+        </div>
+        <div class="sldlDistrictInfo" data-district-info>Hover a district for details</div>
+      `;
+      stageForPanel.appendChild(wrap);
+
+      const tStyle = document.createElement('style');
+      tStyle.textContent = `
+        #stateLegsPage .sldlInfoPanel{
+          display:flex;flex-direction:column;gap:8px;
+          margin-top:10px;padding:10px 14px;
+          background:var(--panel,#fff);border:1px solid rgba(0,0,0,0.1);
+          border-radius:6px;font-size:11px;line-height:1.4;font-weight:600;
+          color:var(--ink,#111);
+        }
+        #stateLegsPage .sldlInfoHeader{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+        #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid rgba(0,0,0,0.15);border-radius:4px;overflow:hidden;}
+        #stateLegsPage .sldlModeToggle button{
+          padding:4px 10px;background:transparent;border:none;cursor:pointer;
+          font-size:10px;font-weight:700;color:var(--muted,#6b7280);letter-spacing:0.03em;text-transform:uppercase;
+        }
+        #stateLegsPage .sldlModeToggle button.active{background:var(--ink,#111);color:#fff;}
+        #stateLegsPage .sldlChamberOdds{font-size:11px;font-weight:700;color:var(--muted,#6b7280);}
+        #stateLegsPage .sldlChamberOdds .pct{color:var(--ink,#111);font-variant-numeric:tabular-nums;}
+        #stateLegsPage .sldlDistrictInfo{padding-top:6px;border-top:1px solid rgba(0,0,0,0.06);min-height:38px;}
+        #stateLegsPage .sldlDistrictInfo .dName{font-weight:800;font-size:12px;margin-bottom:3px;}
+        #stateLegsPage .sldlDistrictInfo .dRow{display:flex;gap:10px;align-items:center;font-size:11px;}
+      `;
+      document.head.appendChild(tStyle);
+
+      // Mode toggle — switches between continuous Model fill and Ratings buckets.
+      wrap.querySelectorAll('[data-mode-toggle] button').forEach(b => {
+        b.addEventListener('click', () => {
+          fillMode = b.getAttribute('data-mode');
+          wrap.querySelectorAll('[data-mode-toggle] button').forEach(x => x.classList.toggle('active', x===b));
+          render();
+        });
+      });
+    }
+  }
+
+  let fillMode = 'model';  // 'model' = continuous fill, 'ratings' = bucket colors
+
+  function ratingFillFor(m){
+    const r = rateDistrict(m);
+    return r ? r.color : '#d0d0d0';
+  }
+  const NOT_UP_2026_STATES = new Set(['LA','MS','NJ','VA','NE']);
+
+  function fillFor(m, props){
+    if (props && NOT_UP_2026_STATES.has(props.state_abbr)) return '#e5e7eb';
+    if (m == null || !isFinite(m)) return '#d0d0d0';
+    return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
+  }
+
+  function showDistrictInfo(props){
+    const el = document.querySelector('#stateLegsPage [data-district-info]');
+    if (!el) return;
+    const m = mOf(props);
+    const r = rateDistrict(m);
+    const wpD = Math.round(winProbD(m) * 100);
+    const fm = fmtMargin(m);
+    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue,#2563eb)' : 'var(--red,#dc2626)');
+    el.innerHTML = `
+      <div class="dName">${props.state_abbr} · ${props.NAMELSAD || 'District'}</div>
+      <div class="dRow">
+        ${r ? `<span style="padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'#1f2937':'#fff'};font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;">${r.label}</span>` : ''}
+        <span style="font-weight:800;color:${mColor};">${fm}</span>
+        <span style="color:var(--muted);font-size:10px;">Win prob: D ${wpD}% · R ${100-wpD}%</span>
+      </div>`;
+  }
+  function clearDistrictInfo(){
+    const el = document.querySelector('#stateLegsPage [data-district-info]');
+    if (el) el.innerHTML = 'Hover a district for details';
+  }
+  function showChamberOdds(stateAbbr){
+    const el = document.querySelector('#stateLegsPage [data-chamber-odds]');
+    if (!el) return;
+    if (!stateAbbr){ el.innerHTML = 'US view · hover a state or click to zoom'; return; }
+    const o = chamberOdds(stateAbbr);
+    if (!o){ el.innerHTML = `${stateAbbr}: no data`; return; }
+    if (o.notUp){
+      el.innerHTML = `<span style="font-weight:800;color:var(--ink,#111);">${stateAbbr}</span> <span style="color:var(--muted);">· not up in 2026 (${stateAbbr==='NE'?'unicameral':'odd-year state'})</span>`;
+      return;
+    }
+    const pct = v => (v*100).toFixed(v>0.995||v<0.005 ? 1 : 0) + '%';
+    const stagLabel = o.up < o.total ? ` · ${o.up}/${o.total} up` : ` · ${o.total} seats`;
+    el.innerHTML = `
+      <span style="font-weight:800;color:var(--ink,#111);">${stateAbbr}${stagLabel} · E[D]=${o.eDemSeats.toFixed(0)}</span>
+      &nbsp;·&nbsp;
+      D majority <span class="pct">${pct(o.pDmaj)}</span>
+      &nbsp;·&nbsp;
+      D supermaj <span class="pct">${pct(o.pDsup)}</span>
+      &nbsp;·&nbsp;
+      R majority <span class="pct">${pct(o.pRmaj)}</span>
+      &nbsp;·&nbsp;
+      R supermaj <span class="pct">${pct(o.pRsup)}</span>
+    `;
   }
 
   function indexByState(feats){
@@ -295,6 +533,8 @@
   function mix(a,b,k){ const pa=a.match(/\w\w/g).map(h=>parseInt(h,16)); const pb=b.match(/\w\w/g).map(h=>parseInt(h,16)); return '#'+pa.map((v,i)=>Math.round(v+(pb[i]-v)*k).toString(16).padStart(2,'0')).join(''); }
   function marginColor(m){
     if (m==null||!isFinite(m)) return '#d0d0d0';
+    // Tossup (±2.5) gets the forecast.js yellow directly.
+    if (Math.abs(m) <= 2.5) return '#fbbf24';
     const cs=getComputedStyle(document.documentElement);
     const blue=hex(cs.getPropertyValue('--blue')||'#2563eb');
     const red =hex(cs.getPropertyValue('--red') ||'#dc2626');
@@ -435,7 +675,12 @@
     const path = d3.geoPath(projection);
 
     const sel = d3.select(svg);
+    sel.selectAll('g.sldlZoomLayer').remove();
     sel.selectAll('path').remove();
+
+    // All paths go in a zoomable <g>. d3.zoom applies a transform to it.
+    const zoomLayer = sel.append('g').attr('class','sldlZoomLayer');
+
     sel.on('click', function(ev){
       if (ev.target.tagName !== 'path' && currentZoom !== 'us'){
         currentZoom = 'us';
@@ -444,28 +689,50 @@
         render();
       }
     });
-    sel.selectAll('path')
+
+    zoomLayer.selectAll('path')
       .data(conusFeats, d => d.properties.GEOID)
       .join('path')
         .attr('d', path)
-        .attr('fill', d => marginColor(mOf(d.properties)))
+        .attr('fill', d => fillFor(mOf(d.properties), d.properties))
         .attr('stroke','rgba(255,255,255,0.4)')
         .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
-      .on('mouseenter', function(){ d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2); })
-      .on('mouseleave', function(){ d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8); })
-      .on('mousemove', function(ev, d){ renderPanelDistrict(d.properties); })
+      .on('mouseenter', function(ev, d){
+        d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2);
+        showDistrictInfo(d.properties);
+        if (currentZoom === 'us') showChamberOdds(d.properties.state_abbr);
+      })
+      .on('mouseleave', function(){
+        d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8);
+        clearDistrictInfo();
+      })
       .on('click', function(ev, d){
         ev.stopPropagation();
         const st = d.properties.state_abbr; if (!st) return;
         currentZoom = st;
         const zs = zoomSelect(); if (zs) zs.value = st;
         const ub = usBtn(); if (ub) ub.classList.remove('active');
-        renderPanelForState(st);
         render();
       });
 
-    if (currentZoom === 'us') { const p = panelEl(); if (p) p.classList.remove('show'); }
-    else renderPanelForState(currentZoom);
+    // Show chamber odds at the top of the info panel based on zoom level.
+    showChamberOdds(currentZoom === 'us' ? null : currentZoom);
+
+    // d3.zoom — wheel/pinch to zoom, drag to pan. Scale 1–24x.
+    const zoom = d3.zoom()
+      .scaleExtent([1, 24])
+      .translateExtent([[0,0],[W,H]])
+      .on('zoom', (ev) => {
+        zoomLayer.attr('transform', ev.transform);
+        zoomLayer.selectAll('path')
+          .attr('stroke-width', (currentZoom==='us'?0.5:0.8) / ev.transform.k);
+      });
+    sel.call(zoom);
+    // Reset zoom on every re-render
+    sel.call(zoom.transform, d3.zoomIdentity);
+
+    // The old in-map panel is retired in favor of the cursor tooltip.
+    const p = panelEl(); if (p) p.classList.remove('show');
   }
 
   async function load(){
