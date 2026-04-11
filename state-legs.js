@@ -173,19 +173,20 @@
     SD:70, TN:99, TX:150, UT:75, VT:150, VA:100, WA:98, WV:100, WI:99, WY:62,
   };
 
-  // 2026 state house election schedule. Values are number of seats up in 2026.
-  // - Odd-year states (LA, MS, NJ, VA) are NOT up in 2026 → 0.
-  // - ND is staggered, 51/94 each cycle → 51.
-  // - NE is unicameral, no lower house → 0.
-  // - States absent from this map default to CHAMBER[st] (all seats up).
-  const SEATS_UP_2026 = {
+  // 2026 state house election schedule, as a FRACTION of features up.
+  // - Odd-year states (LA, MS, NJ, VA) and NE unicameral → 0 (not up)
+  // - ND is staggered, half each cycle → 0.5
+  // - Everyone else → 1.0 (all features up)
+  const SEATS_UP_FRAC_2026 = {
     LA: 0, MS: 0, NJ: 0, VA: 0,
     NE: 0,
-    ND: 51,
-    // NH, VT, etc. elect full chamber every 2 years → default.
+    ND: 0.5,
   };
-  function seatsUp2026(st){
-    return SEATS_UP_2026[st] != null ? SEATS_UP_2026[st] : (CHAMBER[st] || 0);
+  function seatsUp2026(st, featureCount){
+    const frac = SEATS_UP_FRAC_2026[st];
+    if (frac === 0) return 0;
+    if (typeof frac === 'number') return Math.round(featureCount * frac);
+    return featureCount;  // default: all up
   }
 
   // Exact Poisson-binomial distribution from per-district D win probs.
@@ -209,8 +210,14 @@
   function chamberOdds(stateAbbr){
     const s = byState && byState[stateAbbr];
     if (!s || !s.features?.length) return null;
-    const total = CHAMBER[stateAbbr] || s.features.length;
-    const up = seatsUp2026(stateAbbr);
+    // Use feature count as the seat total. For states with multi-member
+    // districts (AZ/NJ/ND/SD/NH etc.), each topojson feature represents
+    // one district that elects a whole party ticket together — that's the
+    // right unit for our MC. Using CHAMBER[state] (real member count)
+    // causes P(Dmaj)=0 when features < members because majority line
+    // becomes mathematically unreachable.
+    const total = s.features.length;
+    const up = seatsUp2026(stateAbbr, total);
     if (up <= 0) return { total, up:0, notUp:true };
 
     // Pick the `up` most competitive seats (proxy for which are on the
@@ -1102,10 +1109,11 @@
 
     const out = {
       state: stateAbbr,
-      chamber_total: CHAMBER[stateAbbr],
+      chamber_total_members_real: CHAMBER[stateAbbr],
       chamber_features_in_topojson: s.features.length,
       features_with_null_margin: nullCount,
-      seats_up_2026: SEATS_UP_2026[stateAbbr] ?? 'default (all)',
+      seats_up_2026_feature_count: seatsUp2026(stateAbbr, s.features.length),
+      seats_up_2026_fraction: SEATS_UP_FRAC_2026[stateAbbr] ?? 'default (1.0)',
       gbCurrent_in_state_legs: gbCurrent,
       DATA_house_gb: forecastGb,
       _savedNowcastGb: forecastNowcastGb,
