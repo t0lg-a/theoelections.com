@@ -120,8 +120,11 @@
 
   function mOf(p){ return (p && p._projMargin != null) ? p._projMargin : (p ? p.margin : null); }
 
-  // --- Win probability + majority odds (mirrors forecast.js) -----------
-  const PROB_ERROR_SD_PTS = 7;  // same as forecast.js
+  // --- Win probability + majority odds (mirrors forecast.js structure) ---
+  // Sigma is LARGER than forecast.js's 7 (CD-level). State legislative races
+  // have weaker candidate info, sparser polling, and more idiosyncratic
+  // outcomes, so margin uncertainty is ~20 pts instead of ~7.
+  const PROB_ERROR_SD_PTS = 20;
   function _nCDF(z){  // standard normal CDF
     const t = 1 / (1 + 0.2316419 * Math.abs(z));
     const d = 0.3989423 * Math.exp(-z*z/2);
@@ -844,18 +847,31 @@
     }
 
     // d3.zoom — wheel/pinch to zoom, drag to pan. Scale 1–24x.
+    // Detach any previous zoom behavior first, then re-attach fresh one.
+    sel.on('.zoom', null);
     const zoom = d3.zoom()
       .scaleExtent([1, 24])
-      .translateExtent([[0,0],[W,H]])
+      .translateExtent([[-50,-50],[W+50,H+50]])
       .on('zoom', (ev) => {
+        _currentZoomTransform = ev.transform;
         zoomLayer.attr('transform', ev.transform);
         zoomLayer.selectAll('path')
           .attr('stroke-width', (currentZoom==='us'?0.5:0.8) / ev.transform.k);
       });
     sel.call(zoom);
-    // Reset zoom on every re-render
-    sel.call(zoom.transform, d3.zoomIdentity);
+    // Only reset zoom when the view MODE changes (US ↔ state).
+    // Preserve existing pan/zoom across data-update re-renders.
+    if (_lastZoomMode !== currentZoom){
+      _lastZoomMode = currentZoom;
+      _currentZoomTransform = d3.zoomIdentity;
+      sel.call(zoom.transform, d3.zoomIdentity);
+    } else if (_currentZoomTransform && _currentZoomTransform !== d3.zoomIdentity){
+      // Re-apply saved transform to the fresh zoom behavior
+      sel.call(zoom.transform, _currentZoomTransform);
+    }
   }
+  let _lastZoomMode = null;
+  let _currentZoomTransform = null;
 
   async function load(){
     if (loaded || loading) return;
