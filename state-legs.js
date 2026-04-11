@@ -120,20 +120,38 @@
 
   function mOf(p){ return (p && p._projMargin != null) ? p._projMargin : (p ? p.margin : null); }
 
-  // --- Win probability + majority odds (mirrors forecast.js structure) ---
-  // Sigma is LARGER than forecast.js's 7 (CD-level). State legislative races
-  // have weaker candidate info, sparser polling, and more idiosyncratic
-  // outcomes, so margin uncertainty is ~20 pts instead of ~7.
-  const PROB_ERROR_SD_PTS = 20;
-  function _nCDF(z){  // standard normal CDF
+  // --- Monte Carlo majority odds with correlated national swing -------
+  // Each simulation: draw ONE national swing ~ N(0, NAT_SIGMA²) that shifts
+  // every district's margin by the same amount, then add small independent
+  // district noise ~ N(0, IDIO_SIGMA²), then count seats.
+  //
+  // This is the right model because district outcomes are highly correlated
+  // — a wave moves every district together. Independent-district math
+  // (Poisson-binomial) underestimates tails dramatically in close chambers
+  // and produces absurd 3%/97% splits when truth is closer to 20%/80%.
+  const NAT_SIGMA  = 20;  // national swing stdev in margin points
+  const IDIO_SIGMA = 5;   // district-specific idiosyncratic noise
+  const MC_SIMS    = 5000;
+
+  function gaussian(){
+    // Box-Muller
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+  }
+
+  function winProbD(margin){
+    // Kept for per-district display in the tooltip. Uses NAT_SIGMA so the
+    // single-district display matches what the MC would average to.
+    if (margin == null || !isFinite(margin)) return 0.5;
+    return _nCDF(margin / NAT_SIGMA);
+  }
+  function _nCDF(z){
     const t = 1 / (1 + 0.2316419 * Math.abs(z));
     const d = 0.3989423 * Math.exp(-z*z/2);
     const p = d * t * (0.3193815 + t*(-0.3565638 + t*(1.781478 + t*(-1.821256 + t*1.330274))));
     return z > 0 ? 1 - p : p;
-  }
-  function winProbD(margin){
-    if (margin == null || !isFinite(margin)) return 0.5;
-    return _nCDF(margin / PROB_ERROR_SD_PTS);
   }
 
   // Chamber sizes + thresholds. Supermajority defaults to 2/3 where a single
@@ -187,46 +205,52 @@
     const up = seatsUp2026(stateAbbr);
     if (up <= 0) return { total, up:0, notUp:true };
 
-    // For staggered states we don't know WHICH specific districts are up, so
-    // we sample the highest-variance (closest to 50/50) seats first as an
-    // approximation — those are the ones whose outcome matters most anyway,
-    // and in practice staggered chambers rotate through all districts across
-    // cycles. If `up === total`, this is just every district.
-    const sortedByCompetitiveness = s.features
+    // Pick the `up` most competitive seats (proxy for which are on the
+    // ballot this cycle in staggered chambers). Lock the rest at current lean.
+    const items = s.features
       .map(f => ({ f, m: mOf(f.properties) }))
       .sort((a,b) => Math.abs(a.m ?? 999) - Math.abs(b.m ?? 999));
-    const upFeats = sortedByCompetitiveness.slice(0, up).map(x => x.f);
+    const upItems = items.slice(0, up);
+    const lockedItems = items.slice(up);
+    let lockedD = 0;
+    for (const it of lockedItems){
+      if (it.m != null && it.m > 0) lockedD++;
+    }
 
     const majLine   = Math.floor(total/2) + 1;
     const superLine = Math.ceil(total * 2 / 3);
-    const pDem = [];
-    for (const f of upFeats){
-      const m = mOf(f.properties);
-      pDem.push(m == null ? 0.5 : winProbD(m));
-    }
-    // Locked seats (not up this cycle) — treat as fixed at current lean.
-    // This is a rough proxy: baseline margin > 0 → D hold, else R hold.
-    let lockedD = 0;
-    for (const it of sortedByCompetitiveness.slice(up)){
-      const m = mOf(it.f.properties);
-      if (m != null && m > 0) lockedD++;
-    }
+    // For D-perspective thresholds, we need D seats >= line.
+    // For R, we need total - dSeats >= line, i.e. dSeats <= total - line.
+    const rMajCap   = total - majLine;
+    const rSuperCap = total - superLine;
 
-    const dist = poissonBinomial(pDem);  // dist[k] = P(D wins k of the UP seats)
-    let pDmaj = 0, pDsup = 0, eD = lockedD;
-    for (let k = 0; k < dist.length; k++){
-      const totalD = k + lockedD;
-      if (totalD >= majLine)   pDmaj += dist[k];
-      if (totalD >= superLine) pDsup += dist[k];
-      eD += k * dist[k];
+    // Pre-extract margins for speed in the hot loop
+    const margins = upItems.map(it => it.m);
+    let pDmaj = 0, pDsup = 0, pRmaj = 0, pRsup = 0, seatSum = 0;
+    for (let sim = 0; sim < MC_SIMS; sim++){
+      const natSwing = gaussian() * NAT_SIGMA;
+      let dSeats = lockedD;
+      for (let i = 0; i < margins.length; i++){
+        const mBase = margins[i];
+        if (mBase == null) { if (Math.random() < 0.5) dSeats++; continue; }
+        const mSim = mBase + natSwing + gaussian() * IDIO_SIGMA;
+        if (mSim > 0) dSeats++;
+      }
+      seatSum += dSeats;
+      if (dSeats >= majLine)   pDmaj++;
+      if (dSeats >= superLine) pDsup++;
+      if (dSeats <= rMajCap)   pRmaj++;
+      if (dSeats <= rSuperCap) pRsup++;
     }
-    const pRmaj = Math.max(0, 1 - pDmaj);
-    let pRsup = 0;
-    for (let k = 0; k < dist.length; k++){
-      const totalD = k + lockedD;
-      if ((total - totalD) >= superLine) pRsup += dist[k];
-    }
-    return { total, up, notUp:false, majLine, superLine, pDmaj, pDsup, pRmaj, pRsup, eDemSeats: eD, lockedD };
+    return {
+      total, up, notUp:false, majLine, superLine,
+      pDmaj: pDmaj / MC_SIMS,
+      pDsup: pDsup / MC_SIMS,
+      pRmaj: pRmaj / MC_SIMS,
+      pRsup: pRsup / MC_SIMS,
+      eDemSeats: seatSum / MC_SIMS,
+      lockedD,
+    };
   }
   let currentZoom = 'us';
   let gbHistory = null;        // array of { date: Date, margin: number (D-R pts) }
