@@ -793,12 +793,15 @@
 
   function render(){
     const svg = svgEl(); if (!svg || !features) return;
-    // Use a fixed internal coordinate space like the Congress map does.
-    // CSS (.mapSvg height:280px width:100%) handles actual display size;
-    // preserveAspectRatio scales the fixed viewBox into the CSS box.
-    const W = 960, H = 600;
+    // Internal coordinate space. Bumped to 2880x1800 (3x the display size)
+    // so d3.geoPath has enough sub-pixel precision to stay crisp when
+    // users zoom in 10–24x. Browser scales the viewBox down to CSS size via
+    // preserveAspectRatio, so on-screen size is unchanged but the underlying
+    // path data has 3x the integer resolution to round against.
+    const W = 2880, H = 1800;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+    svg.setAttribute('shape-rendering','geometricPrecision');
     svg.removeAttribute('width');
     svg.removeAttribute('height');
     svg.style.width = '';
@@ -820,7 +823,7 @@
       : feats
     ).filter(isSane);
     const fc = { type:'FeatureCollection', features: conusFeats };
-    const projection = d3.geoMercator().fitExtent([[18,18],[W-18,H-18]], fc);
+    const projection = d3.geoMercator().fitExtent([[54,54],[W-54,H-54]], fc);
     const path = d3.geoPath(projection);
 
     const sel = d3.select(svg);
@@ -845,9 +848,9 @@
         .attr('d', path)
         .attr('fill', d => fillFor(mOf(d.properties), d.properties))
         .attr('stroke','rgba(255,255,255,0.4)')
-        .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
+        .attr('stroke-width', currentZoom === 'us' ? 1.5 : 2.4)
       .on('mouseenter', function(ev, d){
-        d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2);
+        d3.select(this).attr('stroke','#1f2937').attr('stroke-width',3.6);
         const st = d.properties.state_abbr;
         // At US level, hovering a district shows that state's card with district details.
         // At state zoom, card already shown — just update district row.
@@ -855,7 +858,7 @@
         renderPanelDistrict(d.properties);
       })
       .on('mouseleave', function(){
-        d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8);
+        d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?1.5:2.4);
       })
       .on('click', function(ev, d){
         ev.stopPropagation();
@@ -890,12 +893,12 @@
     sel.on('.zoom', null);
     const zoom = d3.zoom()
       .scaleExtent([1, 24])
-      .translateExtent([[-50,-50],[W+50,H+50]])
+      .translateExtent([[-150,-150],[W+150,H+150]])
       .on('zoom', (ev) => {
         _currentZoomTransform = ev.transform;
         zoomLayer.attr('transform', ev.transform);
         zoomLayer.selectAll('path')
-          .attr('stroke-width', (currentZoom==='us'?0.5:0.8) / ev.transform.k);
+          .attr('stroke-width', (currentZoom==='us'?1.5:2.4) / ev.transform.k);
       });
     sel.call(zoom);
     // Only reset zoom when the view MODE changes (US ↔ state).
@@ -1066,6 +1069,61 @@
     }
     r.style.display = 'none';
   }
+
+  // --- Debug helper: window.sldlDebug('GA') dumps everything needed to
+  //     diagnose chamber odds bugs. Paste the output back to Claude.
+  window.sldlDebug = function(stateAbbr){
+    if (!stateAbbr) stateAbbr = 'GA';
+    if (!byState || !byState[stateAbbr]){
+      return { error: 'no state ' + stateAbbr, available: byState ? Object.keys(byState).sort() : null };
+    }
+    const s = byState[stateAbbr];
+    const margins = s.features.map(f => f.properties._projMargin).filter(x => x != null).sort((a,b)=>a-b);
+    const nullCount = s.features.length - margins.length;
+    const odds = chamberOdds(stateAbbr);
+
+    // Forecast-side globals
+    let forecastGb = null, forecastNowcastGb = null, hispanicGb = null;
+    try { forecastGb = DATA?.house?.gb; } catch(_){}
+    try { forecastNowcastGb = (typeof _savedNowcastGb !== 'undefined') ? _savedNowcastGb : null; } catch(_){}
+    try { hispanicGb = (typeof HISPANIC_GB !== 'undefined') ? HISPANIC_GB : null; } catch(_){}
+
+    // Histogram of projected margins for diagnosis
+    const buckets = { 'D>20':0, 'D10-20':0, 'D2.5-10':0, 'TOSS':0, 'R2.5-10':0, 'R10-20':0, 'R>20':0 };
+    for (const m of margins){
+      if (m > 20)      buckets['D>20']++;
+      else if (m > 10) buckets['D10-20']++;
+      else if (m > 2.5) buckets['D2.5-10']++;
+      else if (m >= -2.5) buckets['TOSS']++;
+      else if (m >= -10) buckets['R2.5-10']++;
+      else if (m >= -20) buckets['R10-20']++;
+      else              buckets['R>20']++;
+    }
+
+    const out = {
+      state: stateAbbr,
+      chamber_total: CHAMBER[stateAbbr],
+      chamber_features_in_topojson: s.features.length,
+      features_with_null_margin: nullCount,
+      seats_up_2026: SEATS_UP_2026[stateAbbr] ?? 'default (all)',
+      gbCurrent_in_state_legs: gbCurrent,
+      DATA_house_gb: forecastGb,
+      _savedNowcastGb: forecastNowcastGb,
+      HISPANIC_GB: hispanicGb,
+      NAT_SIGMA, IDIO_SIGMA, MC_SIMS,
+      odds,
+      mean_margin: margins.length ? (margins.reduce((a,b)=>a+b,0) / margins.length).toFixed(2) : null,
+      median_margin: margins.length ? margins[Math.floor(margins.length/2)].toFixed(2) : null,
+      min_margin: margins[0]?.toFixed(2),
+      max_margin: margins[margins.length-1]?.toFixed(2),
+      bucket_counts: buckets,
+      totalD_from_indexByState: s.totalD,
+      totalR_from_indexByState: s.totalR,
+    };
+    console.log('=== sldlDebug('+stateAbbr+') ===');
+    console.log(JSON.stringify(out, null, 2));
+    return out;
+  };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
