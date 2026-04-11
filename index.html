@@ -3670,6 +3670,20 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   #stateLegsPage .sldlCursorTip .cBase{ color:var(--muted); font-weight:500; font-size:9px; margin-top:1px; }
   #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path{ stroke:rgba(255,255,255,0.35); stroke-width:0.3; cursor:pointer; }
   #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path:hover{ stroke:var(--ink); stroke-width:0.8; }
+  @media (min-width: 980px){
+    #stateLegsPage.triGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  }
+  /* Make the map substantially larger — lots of room on this page */
+  #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg{ height: 480px !important; }
+  #stateLegsPage .modeCol[data-mode="sldu"] .mapStage{ min-height: 480px !important; }
+  /* Data-missing banner when margin is null everywhere */
+  #stateLegsPage .sldlDataBanner{
+    position:absolute; bottom:8px; left:50%; transform:translateX(-50%);
+    background:rgba(245,197,66,0.12); border:1px solid rgba(245,197,66,0.5);
+    color:#92400e; padding:6px 12px; border-radius:4px;
+    font-size:10px; font-weight:700; letter-spacing:0.03em; text-transform:uppercase;
+    pointer-events:none; z-index:4;
+  }
 </style>
 
 </div>
@@ -3683,7 +3697,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="polls.js?v=25"></script>
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
-<script src="state-legs.js?v=6"></script>
+<script src="state-legs.js?v=7"></script>
 
 
 <script>

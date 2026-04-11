@@ -362,6 +362,17 @@
       populateStateSelect();
       hideOldTooltips();
       injectPanel();
+      // Detect missing partisan data — helpful diagnostic
+      const hasAnyMargin = features.some(f => f.properties && f.properties.margin != null && isFinite(f.properties.margin));
+      if (!hasAnyMargin) {
+        const stage = stageEl();
+        if (stage && !stage.querySelector('.sldlDataBanner')) {
+          const b = document.createElement('div');
+          b.className = 'sldlDataBanner';
+          b.textContent = 'No partisan data loaded — upload sldl_national.topojson with margin/dem_pct/baseline properties';
+          stage.appendChild(b);
+        }
+      }
       await loadGbHistory();
       loaded = true;
       requestAnimationFrame(() => requestAnimationFrame(render));
@@ -395,18 +406,8 @@
     const page = btn.dataset.page;
     const r = root(); if (!r) return;
     if (page === 'state-legs'){
-      // Belt and suspenders: clear inline style attr entirely,
-      // set display:grid via inline style, and add a class.
-      r.removeAttribute('style');
       r.style.display = 'grid';
       r.classList.add('sldl-active');
-      // Also make sure host switcher's hiding of our element didn't stick
-      setTimeout(() => {
-        const rr = root();
-        if (rr && getComputedStyle(rr).display === 'none') {
-          rr.style.setProperty('display', 'grid', 'important');
-        }
-      }, 0);
       load();
       if (loaded) requestAnimationFrame(() => requestAnimationFrame(render));
     } else {
