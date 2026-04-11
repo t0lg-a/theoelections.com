@@ -129,8 +129,16 @@
   // — a wave moves every district together. Independent-district math
   // (Poisson-binomial) underestimates tails dramatically in close chambers
   // and produces absurd 3%/97% splits when truth is closer to 20%/80%.
-  const NAT_SIGMA  = 20;  // national swing stdev in margin points
-  const IDIO_SIGMA = 5;   // district-specific idiosyncratic noise
+  // Variance budget: per-district marginal stdev ≈ 20 pts, split into
+  //   national  (correlated across all districts) ~ 6 pts
+  //   idiosyncratic (independent per district)    ~ 19 pts
+  // Var(dist) = 6² + 19² = 36 + 361 = 397  →  stdev ≈ 19.9
+  // This keeps single-district uncertainty at ~20 (what you want) while
+  // preventing absurdly wide chamber tails. A 20-pt NATIONAL swing would
+  // be once-in-a-century; real waves are 5–8 pts. Most margin uncertainty
+  // is district-specific (candidate quality, local issues, turnout).
+  const NAT_SIGMA  = 6;
+  const IDIO_SIGMA = 19;
   const MC_SIMS    = 5000;
 
   function gaussian(){
