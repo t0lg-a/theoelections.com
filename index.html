@@ -3844,7 +3844,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="polls.js?v=25"></script>
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
-<script src="state-legs.js?v=7"></script>
+<script src="state-legs.js?v=8"></script>
 
 
 <script>
@@ -3872,123 +3872,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       themeBtn.textContent = next === 'dark' ? '☾' : '☀';
     });
 
-    // --- National county view for fullscreen mode ---
-    // Uses globals from forecast.js: ALL_COUNTY_GEO, COUNTY_RATIOS, MAP,
-    // getStateModel, interpColor, fipsToUsps, loadAllCountyGeo, IND_CACHE, DATA.
-    async function showNationalCounties(modeKey){
-      try {
-        if (typeof MAP === 'undefined' || !MAP[modeKey]) { console.warn('[fs] MAP missing for', modeKey); return; }
-        const m = MAP[modeKey];
-        if (!m || !m.gRoot || !m.projection) { console.warn('[fs] gRoot/projection missing'); return; }
-        if (typeof loadAllCountyGeo !== 'function') { console.warn('[fs] loadAllCountyGeo missing'); return; }
-
-        const allGeo = await loadAllCountyGeo();
-        if (!allGeo || !allGeo.features) { console.warn('[fs] no county geo'); return; }
-        console.log('[fs] rendering', allGeo.features.length, 'counties for', modeKey);
-
-        // Debug: log first feature structure so we can see where FIPS lives
-        if (allGeo.features[0]) {
-          const f0 = allGeo.features[0];
-          console.log('[fs] county sample', { id: f0.id, props: f0.properties });
-        }
-
-        m.gRoot.selectAll('.countyG[data-national="1"]').remove();
-
-        // Re-fit the projection to the CURRENT SVG size. The existing
-        // projection was frozen when the map first rendered at the small
-        // pre-fullscreen dimensions — after the CSS resizes the mapCard,
-        // paths computed from the old projection are tiny and offset.
-        try {
-          const svgNode = m.svg && m.svg.node && m.svg.node();
-          if (svgNode){
-            const rect = svgNode.getBoundingClientRect();
-            if (rect.width > 50 && rect.height > 50){
-              m.width = rect.width; m.height = rect.height;
-              m.projection.fitExtent(
-                [[14,14],[rect.width-14, rect.height-14]],
-                {type:'FeatureCollection', features: allGeo.features}
-              );
-              // Redraw the state-level layer at the new projection so the
-              // dimmed state outlines align with the counties.
-              m.gRoot.selectAll('path.state').attr('d', d3.geoPath(m.projection));
-              console.log('[fs] refit projection to', rect.width.toFixed(0), 'x', rect.height.toFixed(0));
-            }
-          }
-        } catch(e){ console.warn('[fs] refit failed', e); }
-
-        const countyG = m.gRoot.append('g').attr('class','countyG').attr('data-national','1');
-        const pathGen = d3.geoPath(m.projection);
-
-        // Try every common FIPS path; return first one that looks valid.
-        function getStateFips(d){
-          const p = d.properties || {};
-          const candidates = [
-            d.id,
-            p.GEOID, p.geoid, p.GEOID10, p.GEOID20,
-            p.STATEFP, p.STATE, p.state_fips, p.statefp,
-            p.CNTYIDFP, p.FIPS, p.fips
-          ];
-          for (const c of candidates){
-            if (c == null) continue;
-            const s = String(c).padStart(5,'0');
-            const st = s.slice(0,2);
-            if (/^\d{2}$/.test(st) && st !== '00') return st;
-          }
-          return '';
-        }
-
-        let missed = 0;
-        countyG.selectAll('path')
-          .data(allGeo.features)
-          .join('path')
-            .attr('d', pathGen)
-            .attr('fill', (d) => {
-              const stFips = getStateFips(d);
-              const usps = stFips ? fipsToUsps(stFips) : '';
-              if (!usps) { missed++; return '#e5e7eb'; }
-
-              const name = (d.properties?.NAME || d.properties?.name || d.properties?.COUNTY || '').toUpperCase();
-              const cd = (typeof COUNTY_RATIOS !== 'undefined' && COUNTY_RATIOS) ? COUNTY_RATIOS[usps]?.counties?.[name] : null;
-
-              let stD = 50, stR = 50;
-              try {
-                const stModel = getStateModel(modeKey, usps, (typeof IND_CACHE !== 'undefined' ? IND_CACHE[modeKey] : null));
-                if (stModel) { stD = stModel.combinedPair.D; stR = stModel.combinedPair.R; }
-                else if (typeof DATA !== 'undefined') {
-                  stD = DATA[modeKey]?.gb?.D || 50;
-                  stR = DATA[modeKey]?.gb?.R || 50;
-                }
-              } catch(_){}
-
-              if (cd){
-                const rawD = stD * cd.dRatio, rawR = stR * cd.rRatio;
-                const s = rawD + rawR;
-                if (s > 0) return interpColor(100 * rawR / s - 100 * rawD / s);
-              }
-              return interpColor(stR - stD);
-            })
-            .attr('stroke', 'white')
-            .attr('stroke-width', 0.2)
-            .attr('vector-effect', 'non-scaling-stroke')
-            .style('pointer-events', 'none');
-
-        if (missed > 0) console.warn(`[fs] ${missed} counties had no resolvable state FIPS`);
-
-        // Dim state-level boundaries so counties show through
-        m.gRoot.selectAll('.state').style('opacity', 0.25);
-      } catch(e) {
-        console.warn('[fs] national county view failed', e);
-      }
-    }
-    function hideNationalCounties(modeKey){
-      try {
-        if (typeof MAP === 'undefined' || !MAP[modeKey]) return;
-        const m = MAP[modeKey];
-        if (!m || !m.gRoot) return;
-        m.gRoot.selectAll('.countyG[data-national="1"]').remove();
-        m.gRoot.selectAll('.state').style('opacity', null);
-      } catch(e) {}
-    }
 
     // --- Fullscreen mode toggle for Model tab ---
     var triGrid = document.getElementById('triGrid');
@@ -4000,22 +3883,14 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         if (!col) return;
         var mode = col.getAttribute('data-mode');
         var current = triGrid.getAttribute('data-fullscreen');
-
-        // If exiting or switching, clean up the currently-shown county layer first.
-        if (current) hideNationalCounties(current);
-
         if (current === mode){
           triGrid.removeAttribute('data-fullscreen');
         } else {
           triGrid.setAttribute('data-fullscreen', mode);
-          // Wait a tick for layout to settle, then render counties into the
-          // now-resized focused map. Also fire resize so map code repositions.
-          window.dispatchEvent(new Event('resize'));
-          setTimeout(function(){
-            window.dispatchEvent(new Event('resize'));
-            showNationalCounties(mode);
-          }, 120);
         }
+        // Force a resize so any charts listening to window size repaint
+        window.dispatchEvent(new Event('resize'));
+        setTimeout(function(){ window.dispatchEvent(new Event('resize')); }, 120);
       });
     }
   })();

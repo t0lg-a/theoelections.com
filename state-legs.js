@@ -686,8 +686,17 @@
     const s = byState[stateAbbr];
     p.classList.add('show');
     p.querySelector('.sldlPanelTitle').textContent = stateAbbr;
-    p.querySelector('[data-seats-d]').textContent = s.totalD;
-    p.querySelector('[data-seats-r]').textContent = s.totalR;
+    const o = chamberOdds(stateAbbr);
+
+    // Header shows MC EXPECTED seats, not the strict threshold count.
+    // At nowcast D+6.77, GA's baseline-threshold count is D 89 / R 91, but
+    // the MC expectation is ~96/84 because narrow-R districts flip in
+    // roughly half the sims. Showing E[D] here keeps the "D X | R Y" line
+    // consistent with the majority probability in the cells below.
+    const eD = (o && !o.notUp) ? Math.round(o.eDemSeats) : s.totalD;
+    const eR = (o && !o.notUp) ? (o.total - Math.round(o.eDemSeats)) : s.totalR;
+    p.querySelector('[data-seats-d]').textContent = eD;
+    p.querySelector('[data-seats-r]').textContent = eR;
     const bar = p.querySelector('[data-rating-bar]');
     const labels = p.querySelector('[data-rating-labels]');
     let barHTML = '', lblHTML = '';
