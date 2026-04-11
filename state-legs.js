@@ -7,6 +7,24 @@
   const PAGE_ID = 'stateLegsPage';
   const TOPOJSON_URL = './sldl_national.topojson';
   const LEAN_CSV_URL = './national_district_results.csv';
+  const HISPANIC_CSV_URL = './sldl_hispanic_share.csv';
+
+  // Populated from sldl_hispanic_share.csv on load (GEOID → Hispanic share 0–1).
+  // Empty until the file is present — adjustment is a no-op in that case.
+  const SLDL_HISPANIC_SHARE = {};
+
+  // Read HISPANIC_GB and HISPANIC_BASELINE from forecast.js's script scope.
+  // Both are `const` declared at the top level of forecast.js, so they're
+  // visible here by name as long as forecast.js loads first. Fall back to
+  // safe defaults if forecast hasn't populated them yet.
+  function getHispanicBaseline(){
+    try { if (typeof HISPANIC_BASELINE !== 'undefined' && HISPANIC_BASELINE) return HISPANIC_BASELINE; } catch(_){}
+    return { D: 53.06, R: 46.94 };  // same as forecast.js normalizePair(52, 46)
+  }
+  function getHispanicGb(){
+    try { if (typeof HISPANIC_GB !== 'undefined' && HISPANIC_GB) return HISPANIC_GB; } catch(_){}
+    return null;
+  }
   const PREFERRED_OBJECT = 'districts';
 
   // Match forecast.js: VIS = { show:12.5, likely:7.5, lean:2.5 }
@@ -38,33 +56,35 @@
     '2016-20_comp': { D: 51.5, R: 48.5 },  // ≈ D+3
   };
 
-  // Build a per-district { D, R } ratio pair — the district's baseline share
-  // divided by the baseline GB share, separately for each party. Mirrors
-  // forecast.js getHouseModel, where DATA.house.ratios[did] = { D, R }.
-  // Your topojson stores dem_pct + margin only, so we derive rep_pct from
-  // the identity margin = dem - rep  =>  rep = dem - margin (exact, not approx).
   function buildRatio(props){
     const demRaw = props.dem_pct;
     const marginPts = props.margin;
     if (demRaw == null || marginPts == null || !isFinite(demRaw) || !isFinite(marginPts)) return null;
-
-    // dem_pct is stored as a 0–1 decimal in this topojson; margin is in points.
-    // Normalize both to the same 0–100 "percent" scale.
     const demPct = (Math.abs(demRaw) <= 1.5) ? demRaw * 100 : demRaw;
-    const repPct = demPct - marginPts;   // D - R = margin  =>  R = D - margin
-
-    // Baseline generic ballot the topojson was built against.
+    const repPct = demPct - marginPts;
     const gbBase = BASELINE_GB[props.baseline] || { D: 50, R: 50 };
     if (gbBase.D <= 0 || gbBase.R <= 0) return null;
 
-    // Two independent ratios — one per party. Both used at projection time.
-    const ratioD = demPct / gbBase.D;
-    const ratioR = repPct / gbBase.R;
+    let ratioD = demPct / gbBase.D;
+    let ratioR = repPct / gbBase.R;
 
-    // Cache derived values on the props so you can inspect them in devtools.
+    // --- Hispanic swing adjustment (mirrors forecast.js getHouseModel) ---
+    // If we have (a) this district's Hispanic share and (b) a current
+    // Hispanic-subsample GB from forecast, shift the ratio by share × swing,
+    // dampened by 0.75 (same factor forecast uses for CDs).
+    const hShare = SLDL_HISPANIC_SHARE[props.GEOID] || 0;
+    const hGb = getHispanicGb();
+    if (hShare > 0 && hGb){
+      const hBase = getHispanicBaseline();
+      const swingD = (hGb.D - hBase.D) / hBase.D;
+      const swingR = (hGb.R - hBase.R) / hBase.R;
+      ratioD = ratioD * (1 + hShare * 0.75 * swingD);
+      ratioR = ratioR * (1 + hShare * 0.75 * swingR);
+    }
+
     props._demPct = demPct;
     props._repPct = repPct;
-
+    props._hShare = hShare;
     return { D: ratioD, R: ratioR };
   }
 
@@ -240,17 +260,25 @@
       return false;
     }
     _lastErr = null;
-    if (r.margin !== gbCurrent){
+    const hGb = getHispanicGb();
+    const hKey = hGb ? `${hGb.D.toFixed(2)}/${hGb.R.toFixed(2)}` : 'none';
+    const hChanged = hKey !== _lastHGbKey;
+    if (r.margin !== gbCurrent || hChanged){
       const prev = gbCurrent;
       gbCurrent = r.margin;
-      console.log(`[state-legs] gb synced from forecast: ${prev==null?'(initial)':prev.toFixed(2)} → ${r.margin.toFixed(2)}  (raw gb D=${r.gb.D.toFixed(2)} R=${r.gb.R.toFixed(2)})`);
+      _lastHGbKey = hKey;
+      if (prev !== r.margin) console.log(`[state-legs] gb synced: ${prev==null?'(initial)':prev.toFixed(2)} → ${r.margin.toFixed(2)}`);
+      if (hChanged) console.log(`[state-legs] Hispanic gb changed: ${hKey}`);
       if (features){
+        attachRatios();          // rebuild ratios with current HISPANIC_GB applied
         applyProjection();
         if (svgEl()) render();
+        if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
       }
     }
     return true;
   }
+  let _lastHGbKey = 'none';
   function startGbWatcher(){
     syncGbFromForecast();
     // Poll fast for 60s, then slow forever.
@@ -330,8 +358,14 @@
     div.className = 'sldlStatePanel';
     div.innerHTML = `
       <div class="sldlPanelHeader">
-        <div class="sldlPanelTitle">—</div>
-        <div class="sldlPanelSub">State House</div>
+        <div>
+          <div class="sldlPanelTitle">—</div>
+          <div class="sldlPanelSub">State House</div>
+        </div>
+        <div class="sldlModeToggle" data-mode-toggle>
+          <button type="button" data-mode="model" class="active">Model</button>
+          <button type="button" data-mode="ratings">Ratings</button>
+        </div>
       </div>
       <div class="sldlSeatLine">
         <span class="dSide">D <b data-seats-d>—</b></span>
@@ -340,19 +374,42 @@
       </div>
       <div class="sldlRatingBar" data-rating-bar></div>
       <div class="sldlRatingLabels" data-rating-labels></div>
+      <div class="sldlOddsRow" data-odds-row></div>
       <div class="sldlPanelDivider"></div>
       <div class="sldlPanelDistrict" data-district>
         <div class="dstPlaceholder">Hover a district</div>
       </div>`;
     stage.appendChild(div);
 
+    // Mode toggle wiring — inside card so it doesn't block map interactions.
+    div.querySelectorAll('[data-mode-toggle] button').forEach(b => {
+      b.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        fillMode = b.getAttribute('data-mode');
+        div.querySelectorAll('[data-mode-toggle] button').forEach(x => x.classList.toggle('active', x===b));
+        render();
+      });
+    });
+
     if (document.getElementById('sldlPanelStyles')) return;
     const style = document.createElement('style');
     style.id = 'sldlPanelStyles';
     style.textContent = `
       #stateLegsPage.sldl-active{display:grid !important;}
-      #stateLegsPage .sldlStatePanel{position:absolute;top:8px;left:8px;width:240px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 12px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.08);pointer-events:none;z-index:3;display:none;}
+      #stateLegsPage .mapStage{position:relative;}
+      #stateLegsPage .sldlStatePanel{position:relative;margin-top:10px;width:auto;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 14px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.04);z-index:3;display:none;}
       #stateLegsPage .sldlStatePanel.show{display:block;}
+      #stateLegsPage .sldlPanelHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
+      #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid rgba(0,0,0,0.15);border-radius:4px;overflow:hidden;pointer-events:auto;}
+      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-size:9px;font-weight:800;color:var(--muted,#6b7280);letter-spacing:0.04em;text-transform:uppercase;}
+      #stateLegsPage .sldlModeToggle button.active{background:var(--ink,#111);color:#fff;}
+      #stateLegsPage .sldlOddsRow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-top:10px;}
+      #stateLegsPage .sldlOddsRow .cell{background:rgba(0,0,0,0.03);border-radius:4px;padding:5px 6px;text-align:center;}
+      #stateLegsPage .sldlOddsRow .lbl{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:1px;}
+      #stateLegsPage .sldlOddsRow .val{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;}
+      #stateLegsPage .sldlOddsRow .val.d{color:var(--blue,#2563eb);}
+      #stateLegsPage .sldlOddsRow .val.r{color:var(--red,#dc2626);}
+      #stateLegsPage .sldlOddsNone{font-size:10px;color:var(--muted);text-align:center;padding:6px 0;font-style:italic;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:6px;}
       #stateLegsPage .sldlPanelTitle{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;}
       #stateLegsPage .sldlPanelSub{font-size:9px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;}
@@ -385,9 +442,6 @@
       #stateLegsPage .dstWpNums .r{color:var(--red,#dc2626);margin-left:5px;}
       #stateLegsPage .dstSpark{width:100%;height:32px;display:block;border:1px solid var(--line,rgba(0,0,0,0.08));border-radius:2px;}
       #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path{cursor:pointer;}
-      @media (max-width: 979px){
-        #stateLegsPage .sldlStatePanel{position:relative;top:0;left:0;width:auto;margin:8px;box-shadow:none;}
-      }
     `;
     document.head.appendChild(style);
 
@@ -403,9 +457,9 @@
       document.body.appendChild(tip);
     }
 
-    // Fixed info panel BELOW the map — holds mode toggle + chamber odds only.
-    const stageForPanel = stageEl();
-    if (stageForPanel && !stageForPanel.querySelector('.sldlInfoPanel')){
+    // Fixed info panel BELOW the map — DISABLED, replaced by sldlStatePanel card.
+    const stageForPanel = null;
+    if (false && stageForPanel && !stageForPanel.querySelector('.sldlInfoPanel')){
       const wrap = document.createElement('div');
       wrap.className = 'sldlInfoPanel';
       wrap.innerHTML = `
@@ -583,6 +637,25 @@
     }
     bar.innerHTML = barHTML;
     labels.innerHTML = lblHTML;
+
+    // Odds row — majority/supermajority for both parties via Poisson-binomial.
+    const oddsEl = p.querySelector('[data-odds-row]');
+    if (oddsEl){
+      const o = chamberOdds(stateAbbr);
+      if (!o) { oddsEl.innerHTML = ''; }
+      else if (o.notUp) {
+        oddsEl.innerHTML = `<div class="sldlOddsNone" style="grid-column:1/-1;">Not up in 2026 · ${stateAbbr==='NE'?'unicameral':'odd-year state'}</div>`;
+      } else {
+        const pct = v => (v*100).toFixed(v>0.995||v<0.005 ? 1 : 0) + '%';
+        const upLbl = o.up < o.total ? ` · ${o.up}/${o.total} up` : '';
+        oddsEl.innerHTML = `
+          <div class="cell"><div class="lbl">D Maj</div><div class="val d">${pct(o.pDmaj)}</div></div>
+          <div class="cell"><div class="lbl">D Super</div><div class="val d">${pct(o.pDsup)}</div></div>
+          <div class="cell"><div class="lbl">R Maj</div><div class="val r">${pct(o.pRmaj)}</div></div>
+          <div class="cell"><div class="lbl">R Super</div><div class="val r">${pct(o.pRsup)}</div></div>`;
+      }
+    }
+
     const dst = p.querySelector('[data-district]');
     dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
   }
@@ -660,8 +733,7 @@
       <div class="dstName">${props.NAMELSAD || 'District'}</div>
       <div class="dstRow"><span>Rating</span><span>${r ? `<span class="dstRating ${r.light?'light':''}" style="background:${r.color};">${r.label}</span>` : '—'}</span></div>
       <div class="dstRow"><span>Margin</span><span class="v ${marginClass}">${fmtMargin(mProj)}</span></div>
-      <div class="dstWpSection">${wpBlock}</div>
-      <div class="dstRow" style="margin-top:4px;"><span>Baseline</span><span class="v" style="font-size:9px;">${baselineLabel(props.baseline)} ${fmtMargin(props.margin)}</span></div>`;
+      <div class="dstWpSection">${wpBlock}</div>`;
   }
 
   function render(){
@@ -721,13 +793,14 @@
         .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
       .on('mouseenter', function(ev, d){
         d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2);
-        showTip(d.properties, ev);
-        if (currentZoom === 'us') showChamberOdds(d.properties.state_abbr);
+        const st = d.properties.state_abbr;
+        // At US level, hovering a district shows that state's card with district details.
+        // At state zoom, card already shown — just update district row.
+        if (currentZoom === 'us' && st) renderPanelForState(st);
+        renderPanelDistrict(d.properties);
       })
-      .on('mousemove', function(ev){ moveTip(ev); })
       .on('mouseleave', function(){
         d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8);
-        hideTip();
       })
       .on('click', function(ev, d){
         ev.stopPropagation();
@@ -738,8 +811,24 @@
         render();
       });
 
-    // Show chamber odds at the top of the info panel based on zoom level.
-    showChamberOdds(currentZoom === 'us' ? null : currentZoom);
+    // At US zoom, show a prompt card; at state zoom, show that state.
+    if (currentZoom === 'us') {
+      const p = panelEl();
+      if (p){
+        p.classList.add('show');
+        p.querySelector('.sldlPanelTitle').textContent = 'US';
+        p.querySelector('[data-seats-d]').textContent = '—';
+        p.querySelector('[data-seats-r]').textContent = '—';
+        const bar = p.querySelector('[data-rating-bar]'); if (bar) bar.innerHTML = '';
+        const lbl = p.querySelector('[data-rating-labels]'); if (lbl) lbl.innerHTML = '';
+        const odds = p.querySelector('[data-odds-row]');
+        if (odds) odds.innerHTML = '<div class="sldlOddsNone" style="grid-column:1/-1;">Hover a state for majority odds</div>';
+        const dst = p.querySelector('[data-district]');
+        if (dst) dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
+      }
+    } else {
+      renderPanelForState(currentZoom);
+    }
 
     // d3.zoom — wheel/pinch to zoom, drag to pan. Scale 1–24x.
     const zoom = d3.zoom()
@@ -807,6 +896,33 @@
         console.log(`[state-legs] joined lean data: ${matched}/${features.length} districts`);
       } catch (e){
         console.error('[state-legs] lean csv load failed', e);
+      }
+
+      // Optional: fetch Hispanic share per SLDL. If missing, adjustment is a no-op.
+      // CSV schema: GEOID,hispanic,total,h_share
+      try {
+        const hRes = await fetch(HISPANIC_CSV_URL, { cache:'no-store' });
+        if (hRes.ok){
+          const text = await hRes.text();
+          const lines = text.split(/\r?\n/).filter(Boolean);
+          const hdr = lines[0].split(',');
+          const iG = hdr.indexOf('GEOID');
+          const iH = hdr.indexOf('h_share');
+          if (iG >= 0 && iH >= 0){
+            let n = 0;
+            for (let i = 1; i < lines.length; i++){
+              const c = lines[i].split(',');
+              const geoid = c[iG];
+              const h = parseFloat(c[iH]);
+              if (geoid && isFinite(h)){ SLDL_HISPANIC_SHARE[geoid] = h; n++; }
+            }
+            console.log(`[state-legs] joined Hispanic share: ${n} districts`);
+          }
+        } else {
+          console.log('[state-legs] no Hispanic CSV (adjustment disabled)');
+        }
+      } catch (e){
+        console.log('[state-legs] Hispanic CSV not available (adjustment disabled)');
       }
 
       attachRatios();
