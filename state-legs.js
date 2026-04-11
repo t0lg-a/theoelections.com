@@ -237,11 +237,33 @@
     window.addEventListener('resize', () => { if (loaded) render(); });
   }
 
-  // --- Activation (lazy-load on first tab switch) ------------------
-  function maybeActivate(){
+  // --- Activation & page visibility management --------------------
+  // Host tab switcher (in ratings.js) hardcodes 6 pages and doesn't
+  // know about stateLegsPage. We add a second listener on .pageTabs
+  // that runs AFTER the host's (listeners fire in registration order)
+  // and handles stateLegsPage show/hide. This lets the host do its
+  // normal hide-everything pass, then we show/hide our page on top.
+
+  function handleTabClick(ev){
+    const btn = ev.target.closest('.pageTab');
+    if (!btn) return;
+    const page = btn.dataset.page;
     const r = root();
     if (!r) return;
-    if (r.style.display !== 'none') load();
+
+    if (page === 'state-legs'){
+      // Host switcher already hid every other page. Show ours.
+      r.style.display = '';
+      // Host switcher set active=false on all tabs (it only re-activates
+      // buttons it recognizes via the same class loop — wait, it DOES
+      // re-add 'active' to the clicked btn. So the button class is fine.)
+      // But host switcher also hid #triGrid which is correct.
+      load();
+      if (loaded) setTimeout(render, 0);
+    } else {
+      // Any other tab — make sure our page is hidden
+      r.style.display = 'none';
+    }
   }
 
   function init(){
@@ -249,15 +271,12 @@
     if (!r) return;
     wireControls();
 
-    // Hook the tab button directly — works regardless of host switcher
-    document.querySelectorAll('.pageTab[data-page="state-legs"]').forEach(b =>
-      b.addEventListener('click', () => setTimeout(maybeActivate, 0)));
+    // Attach AFTER host switcher's listener (this file loads after ratings.js)
+    const nav = document.querySelector('.pageTabs');
+    if (nav) nav.addEventListener('click', handleTabClick);
 
-    // Also observe display changes — covers switchers that toggle style
-    new MutationObserver(maybeActivate)
-      .observe(r, { attributes:true, attributeFilter:['style'] });
-
-    maybeActivate();
+    // Default state: hidden (host switcher defaults to model page)
+    r.style.display = 'none';
   }
 
   if (document.readyState === 'loading')
