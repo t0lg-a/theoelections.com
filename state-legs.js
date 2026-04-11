@@ -9,24 +9,24 @@
   const LEAN_CSV_URL = './national_district_results.csv';
   const PREFERRED_OBJECT = 'districts';
 
+  // Match forecast.js: VIS = { show:12.5, likely:7.5, lean:2.5 }
+  // Colors mirror classifyColorAttr() in forecast.js exactly.
   const RATINGS = [
     { key:'SD', label:'Safe D', color:'#1e40af', light:false },
-    { key:'LD', label:'Lkly D', color:'#4a7ce0', light:false },
-    { key:'TD', label:'Lean D', color:'#8eb4f2', light:true  },
-    { key:'TU', label:'Toss',   color:'#f5c542', light:true  },
-    { key:'TR', label:'Lean R', color:'#f29a9a', light:true  },
-    { key:'LR', label:'Lkly R', color:'#e05555', light:false },
+    { key:'LD', label:'Lkly D', color:'#3b82f6', light:false },
+    { key:'TD', label:'Lean D', color:'#93c5fd', light:true  },
+    { key:'TU', label:'Toss',   color:'#fbbf24', light:true  },
+    { key:'TR', label:'Lean R', color:'#fca5a5', light:true  },
+    { key:'LR', label:'Lkly R', color:'#ef4444', light:false },
     { key:'SR', label:'Safe R', color:'#991b1b', light:false },
   ];
   function rateDistrict(m){
     if (m == null || !isFinite(m)) return null;
-    if (m >  15) return RATINGS[0];
-    if (m >   5) return RATINGS[1];
-    if (m >   1) return RATINGS[2];
-    if (m >= -1) return RATINGS[3];
-    if (m >= -5) return RATINGS[4];
-    if (m >= -15)return RATINGS[5];
-    return RATINGS[6];
+    const a = Math.abs(m);
+    if (a <= 2.5)  return RATINGS[3];                  // Tossup
+    if (a <= 7.5)  return m > 0 ? RATINGS[2] : RATINGS[4]; // Lean
+    if (a <= 12.5) return m > 0 ? RATINGS[1] : RATINGS[5]; // Likely
+    return m > 0 ? RATINGS[0] : RATINGS[6];            // Safe
   }
 
   let loaded = false, loading = false;
@@ -103,7 +103,44 @@
   let gbHistory = null;        // array of { date: Date, margin: number (D-R pts) }
   let gbCurrent = null;        // most recent gen ballot margin (pts)
 
-  // --- Generic ballot history (for sparklines) ---------------------
+  // --- Generic ballot: read from forecast.js's DATA.house.gb ----------
+  // forecast.js loads as a classic script and declares `const DATA` at the
+  // top level. Since both files share the same script realm, we can read
+  // it directly by name. We poll because forecast's polls fetch is async.
+  function readForecastGb(){
+    try {
+      // eslint-disable-next-line no-undef
+      const gb = (typeof DATA !== 'undefined') && DATA && DATA.house && DATA.house.gb;
+      if (gb && isFinite(gb.D) && isFinite(gb.R)) return gb.D - gb.R; // D-R margin pts
+    } catch(_) {}
+    return null;
+  }
+  function syncGbFromForecast(){
+    const m = readForecastGb();
+    if (m != null && m !== gbCurrent){
+      gbCurrent = m;
+      if (features){
+        applyProjection();
+        if (svgEl()) render();
+        if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
+      }
+      return true;
+    }
+    return false;
+  }
+  function startGbWatcher(){
+    if (syncGbFromForecast()) { /* got it on first tick */ }
+    // Poll for up to 30s in case forecast.js polls load slowly, then every 15s
+    // for updates. Cheap — just 2 property reads per tick.
+    let tries = 0;
+    const fast = setInterval(() => {
+      tries++;
+      if (syncGbFromForecast() || tries > 60) clearInterval(fast);
+    }, 500);
+    setInterval(syncGbFromForecast, 15000);
+  }
+
+  // --- Generic ballot history (for sparklines only) -------------------
   async function loadGbHistory(){
     if (gbHistory) return;
     try {
@@ -139,12 +176,8 @@
         series.push({ date: polls[i].date, margin: avg });
       }
       gbHistory = series;
-      gbCurrent = series[series.length - 1].margin;
-      if (features){
-        applyProjection();
-        if (svgEl()) render();
-        if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
-      }
+      // NOTE: do NOT set gbCurrent here — that now comes from forecast.js's
+      // DATA.house.gb via syncGbFromForecast() for consistency.
     } catch(e){ console.warn('[state-legs] gb history unavailable', e); }
   }
 
@@ -503,6 +536,7 @@
         }
       }
       await loadGbHistory();
+      startGbWatcher();
       loaded = true;
       requestAnimationFrame(() => requestAnimationFrame(render));
     } catch(e){ console.error('[state-legs] load failed', e); }
