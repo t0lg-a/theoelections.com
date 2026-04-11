@@ -1502,6 +1502,95 @@
       .quadGrid{ flex:none; }
       .modeCol{ overflow-y:visible; overflow-x:visible; }
     }
+    /* --- Fullscreen button + layout --- */
+    .fsBtn{
+      appearance:none; background:transparent; border:1px solid var(--line,rgba(0,0,0,0.15));
+      border-radius:4px; cursor:pointer; padding:3px 8px;
+      font-size:14px; line-height:1; color:var(--muted,#6b7280);
+      margin-right:6px; transition:background .15s, color .15s;
+    }
+    .fsBtn:hover{ background:var(--ink,#111); color:#fff; }
+    #triGrid[data-fullscreen] .fsBtn{ opacity:0.4; }
+    #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .fsBtn,
+    #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .fsBtn,
+    #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .fsBtn{
+      opacity:1; background:var(--ink,#111); color:#fff; border-color:var(--ink,#111);
+    }
+
+    /* --- Fullscreen layout: narrow left sidebar + wide right map --- */
+    @media (min-width: 980px){
+      #triGrid[data-fullscreen]{
+        position:relative;
+        grid-template-columns: 300px minmax(0, 1fr) !important;
+        grid-template-rows: auto !important;
+      }
+      /* All three modeCols stack in column 1 */
+      #triGrid[data-fullscreen] .modeCol{
+        grid-column: 1 !important;
+        max-width: 300px;
+        min-width: 0;
+      }
+      /* Hide non-focused oddsCard (prob-over-time chart) */
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="governor"] .oddsCard,
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="house"]    .oddsCard,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="senate"]   .oddsCard,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="house"]    .oddsCard,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="senate"]   .oddsCard,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="governor"] .oddsCard{
+        display: none !important;
+      }
+      /* Hide non-focused maps entirely */
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="governor"] .mapCard,
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="governor"] .mapControlBar,
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="house"]    .mapCard,
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="house"]    .mapControlBar,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="senate"]   .mapCard,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="senate"]   .mapControlBar,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="house"]    .mapCard,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="house"]    .mapControlBar,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="senate"]   .mapCard,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="senate"]   .mapControlBar,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="governor"] .mapCard,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="governor"] .mapControlBar{
+        display: none !important;
+      }
+      /* Focused mode's mapCard: pulled out of flow, pinned to right side */
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .mapCard,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .mapCard,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .mapCard{
+        position: absolute !important;
+        top: 0;
+        left: 312px;   /* 300 column + 12 gap */
+        right: 0;
+        bottom: 44px;  /* leave room for mapControlBar */
+        margin: 0 !important;
+        z-index: 2;
+      }
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .mapControlBar,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .mapControlBar,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .mapControlBar{
+        position: absolute !important;
+        left: 312px;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+      /* Let the absolute-positioned map SVG fill its new container */
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .mapCard .mapStage,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .mapCard .mapStage,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .mapCard .mapStage{
+        height: 100%;
+      }
+      #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .mapCard svg.mapSvg,
+      #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .mapCard svg.mapSvg,
+      #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .mapCard svg.mapSvg{
+        height: 100% !important;
+        width: 100%;
+        display: block;
+        min-height: 520px;
+      }
+    }
+
     .modeHeader{
       display:flex;
       align-items:flex-end;
@@ -2711,6 +2800,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="panelTitle">Senate</div>
           <div class="panelSub">Class II - 2026</div>
         </div>
+        <button type="button" class="fsBtn" data-fs-toggle title="Fullscreen this mode" aria-label="Fullscreen this mode">⛶</button>
         <div class="pillRow" aria-label="National baseline">
           <div class="metricPill blue" aria-label="Dem baseline">
             <span class="dot" aria-hidden="true"></span>
@@ -2777,6 +2867,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="panelTitle">Gubernatorial</div>
           <div class="panelSub">Gubernatorial - 2026</div>
         </div>
+        <button type="button" class="fsBtn" data-fs-toggle title="Fullscreen this mode" aria-label="Fullscreen this mode">⛶</button>
         <div class="pillRow" aria-label="National baseline">
           <div class="metricPill blue" aria-label="Dem baseline">
             <span class="dot" aria-hidden="true"></span>
@@ -2843,6 +2934,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="panelTitle">Congress</div>
           <div class="panelSub">120th Congress - 2026</div>
         </div>
+        <button type="button" class="fsBtn" data-fs-toggle title="Fullscreen this mode" aria-label="Fullscreen this mode">⛶</button>
         <div class="pillRow" aria-label="National baseline">
           <div class="metricPill blue" aria-label="Dem baseline">
             <span class="dot" aria-hidden="true"></span>
@@ -3746,6 +3838,28 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       localStorage.setItem('theo-theme', next);
       themeBtn.textContent = next === 'dark' ? '☾' : '☀';
     });
+
+    // --- Fullscreen mode toggle for Model tab ---
+    // Click ⛶ on a modeCol's header → focus that mode (hides maps everywhere,
+    // shows only that column's prob-over-time chart). Click again to exit.
+    var triGrid = document.getElementById('triGrid');
+    if (triGrid){
+      triGrid.addEventListener('click', function(ev){
+        var btn = ev.target.closest('[data-fs-toggle]');
+        if (!btn) return;
+        var col = btn.closest('.modeCol');
+        if (!col) return;
+        var mode = col.getAttribute('data-mode');
+        var current = triGrid.getAttribute('data-fullscreen');
+        if (current === mode){
+          triGrid.removeAttribute('data-fullscreen');
+        } else {
+          triGrid.setAttribute('data-fullscreen', mode);
+        }
+        // Force a resize event so any charts listening to window size repaint
+        window.dispatchEvent(new Event('resize'));
+      });
+    }
   })();
 </script>
 </body>
