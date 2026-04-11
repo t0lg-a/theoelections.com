@@ -115,6 +115,7 @@
     const style = document.createElement('style');
     style.id = 'sldlPanelStyles';
     style.textContent = `
+      #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .sldlStatePanel{position:absolute;top:8px;left:8px;width:240px;background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));border-radius:6px;padding:10px 12px;font-size:10px;line-height:1.35;font-weight:600;box-shadow:0 2px 6px rgba(0,0,0,0.08);pointer-events:none;z-index:3;display:none;}
       #stateLegsPage .sldlStatePanel.show{display:block;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:6px;}
@@ -296,29 +297,24 @@
 
   function render(){
     const svg = svgEl(); if (!svg || !features) return;
-    const stage = svg.parentElement;
-    const rect = stage ? stage.getBoundingClientRect() : { width:600, height:280 };
-    // If stage isn't laid out yet, retry on next frame
-    if (!rect.width || !rect.height) {
-      requestAnimationFrame(render);
-      return;
-    }
-    const w = Math.max(1, Math.min(1200, rect.width  || 600));
-    const h = Math.max(1, Math.min(600,  rect.height || 280));
-    svg.setAttribute('width', w); svg.setAttribute('height', h);
-    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    // Use a fixed internal coordinate space like the Congress map does.
+    // CSS (.mapSvg height:280px width:100%) handles actual display size;
+    // preserveAspectRatio scales the fixed viewBox into the CSS box.
+    const W = 960, H = 600;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
-    svg.style.width = w+'px'; svg.style.height = h+'px';
-    svg.style.maxWidth='100%'; svg.style.maxHeight='100%';
+    svg.removeAttribute('width');
+    svg.removeAttribute('height');
+    svg.style.width = '';
+    svg.style.height = '';
 
     const feats = currentZoom === 'us' ? features : (byState[currentZoom] ? byState[currentZoom].features : []);
     const fc = { type:'FeatureCollection', features: feats };
-    const projection = d3.geoAlbersUsa().fitSize([w,h], fc);
+    const projection = d3.geoAlbersUsa().fitExtent([[18,18],[W-18,H-18]], fc);
     const path = d3.geoPath(projection);
 
     const sel = d3.select(svg);
     sel.selectAll('path').remove();
-    // Click on background returns to US view
     sel.on('click', function(ev){
       if (ev.target.tagName !== 'path' && currentZoom !== 'us'){
         currentZoom = 'us';
@@ -333,11 +329,12 @@
         .attr('d', path)
         .attr('fill', d => marginColor(d.properties.margin))
         .attr('stroke','rgba(255,255,255,0.4)')
-        .attr('stroke-width', currentZoom === 'us' ? 0.3 : 0.5)
-      .on('mouseenter', function(){ d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1); })
-      .on('mouseleave', function(){ d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.3:0.5); })
+        .attr('stroke-width', currentZoom === 'us' ? 0.5 : 0.8)
+      .on('mouseenter', function(){ d3.select(this).attr('stroke','#1f2937').attr('stroke-width',1.2); })
+      .on('mouseleave', function(){ d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?0.5:0.8); })
       .on('mousemove', function(ev, d){ renderPanelDistrict(d.properties); })
       .on('click', function(ev, d){
+        ev.stopPropagation();
         const st = d.properties.state_abbr; if (!st) return;
         currentZoom = st;
         const zs = zoomSelect(); if (zs) zs.value = st;
@@ -398,12 +395,22 @@
     const page = btn.dataset.page;
     const r = root(); if (!r) return;
     if (page === 'state-legs'){
-      // Mirror host switcher: use '' to revert to .triGrid CSS default.
-      // This matches how ratingsPage / pollsPage / etc. are shown.
-      r.style.display = '';
+      // Belt and suspenders: clear inline style attr entirely,
+      // set display:grid via inline style, and add a class.
+      r.removeAttribute('style');
+      r.style.display = 'grid';
+      r.classList.add('sldl-active');
+      // Also make sure host switcher's hiding of our element didn't stick
+      setTimeout(() => {
+        const rr = root();
+        if (rr && getComputedStyle(rr).display === 'none') {
+          rr.style.setProperty('display', 'grid', 'important');
+        }
+      }, 0);
       load();
       if (loaded) requestAnimationFrame(() => requestAnimationFrame(render));
     } else {
+      r.classList.remove('sldl-active');
       r.style.display = 'none';
     }
   }
@@ -412,7 +419,11 @@
     const r = root(); if (!r) return;
     wireControls();
     const nav = document.querySelector('.pageTabs');
-    if (nav) nav.addEventListener('click', handleTabClick);
+    // Attach in capture AND bubble phase so we run regardless of host switcher order
+    if (nav) {
+      nav.addEventListener('click', handleTabClick);
+      nav.addEventListener('click', handleTabClick, true);
+    }
     r.style.display = 'none';
   }
 
