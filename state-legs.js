@@ -403,7 +403,7 @@
       }
     });
     sel.selectAll('path')
-      .data(feats, d => d.properties.GEOID)
+      .data(conusFeats, d => d.properties.GEOID)
       .join('path')
         .attr('d', path)
         .attr('fill', d => marginColor(mOf(d.properties)))
