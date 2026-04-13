@@ -1,4 +1,4 @@
-name: Daily Data Fetch & Odds
+name: "Daily Data Fetch & Odds"
 
 on:
   schedule:
