@@ -2314,34 +2314,30 @@
       max-width:1080px;
       margin:0 auto;
     }
-    .projHeader{
+    .projHeader,
+    .projTopBar{
       padding:6px 4px 18px;
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
     }
     .projTitle{
       font-size:26px;
       font-weight:900;
       letter-spacing:-0.03em;
       color:var(--text-ink);
-      margin:0 0 4px;
-    }
-    .projSub{
-      font-size:13px;
-      color:var(--text-muted);
-      font-weight:500;
       margin:0;
     }
-    .projCount{
+    /* Stacked sections inside the Projects page */
+    .projSection{ margin-bottom:28px; }
+    .projSection:last-child{ margin-bottom:0; }
+    .projSectionLabel{
       font-family:var(--mono);
       font-size:11px;
       font-weight:800;
-      color:var(--text-muted);
-      letter-spacing:0.06em;
+      color:var(--text-ink);
+      letter-spacing:0.1em;
       text-transform:uppercase;
+      padding:0 0 10px;
+      margin:0 0 14px;
+      border-bottom:1px solid var(--text-ink);
     }
     .projGrid{
       display:grid;
@@ -3851,15 +3847,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <div class="projPage" id="projectsPage" style="display:none">
 <div class="projInner">
 
-  <div class="projHeader">
-    <div>
-      <h1 class="projTitle">Projects</h1>
-      <p class="projSub">Side projects, data journalism, and one-off election analysis</p>
-    </div>
-    <div class="projCount">3 projects</div>
+  <div class="projTopBar">
+    <h1 class="projTitle">Projects</h1>
   </div>
 
-  <div class="projGrid">
+  <section class="projSection">
+    <div class="projSectionLabel">Projects</div>
+    <div class="projGrid">
 
     <a class="projCard" href="fundraising-comparison.html">
       <div class="projCardKicker red">Texas Senate '26</div>
@@ -3894,7 +3888,70 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       </div>
     </a>
 
-  </div>
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">CA gov model</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">Lindsey Graham approval</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">International polling averages</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">Texas trends</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">VoteHub publishment</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">American shift</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">Texas voter turnout dashboard</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">Texas income to swing, 2020 and 2024</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    </div>
+  </section>
+
+  <section class="projSection">
+    <div class="projSectionLabel">Election Coverage</div>
+    <div class="projGrid">
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">GA 14 jungle primary</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">GA 14 runoff</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    <a class="projCard" href="#">
+      <h2 class="projCardTitle">Wisconsin Supreme Court election turnout and model</h2>
+      <div class="projCardMeta"><span class="projCardOpen">Open</span></div>
+    </a>
+
+    </div>
+  </section>
 
 </div>
 </div>
@@ -4060,6 +4117,40 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       localStorage.setItem('theo-theme', next);
       themeBtn.textContent = next === 'dark' ? '☾' : '☀';
     });
+
+
+    // --- Projects tab handler ---
+    // Projects page just shows/hides on top-tab click. Both sections inside
+    // (#projectsPage) are always visible together. Past Elections is its own
+    // top tab and is not touched here.
+    (function(){
+      var nav = document.querySelector('.pageTabs');
+      var projectsPage = document.getElementById('projectsPage');
+      if (!nav || !projectsPage) return;
+
+      var allMainPageIds = [
+        'triGrid','ratingsPage','pollsPage','swingometerPage',
+        'pastElectionsPage','stateLegsPage','methodologyPage','projectsPage'
+      ];
+
+      nav.addEventListener('click', function(ev){
+        var btn = ev.target.closest('[data-page]');
+        if (!btn) return;
+        var page = btn.getAttribute('data-page');
+        setTimeout(function(){
+          if (page === 'projects'){
+            allMainPageIds.forEach(function(id){
+              if (id === 'projectsPage') return;
+              var el = document.getElementById(id);
+              if (el) el.style.display = 'none';
+            });
+            projectsPage.style.display = 'block';
+          } else {
+            projectsPage.style.display = 'none';
+          }
+        }, 0);
+      });
+    })();
 
 
     // --- Fullscreen mode toggle for Model tab ---
