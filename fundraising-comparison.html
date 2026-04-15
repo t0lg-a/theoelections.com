@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talarico vs. the field — Texas Senate '26 fundraising</title>
+  <meta name="description" content="Cumulative inflation-adjusted fundraising for four Texas Democratic statewide challengers, by months to general election.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:        #111111;
+      --paper:      #fafaf7;
+      --muted:      #6b7280;
+      --c-blue:     #1e40af;
+      --c-red:      #b91c1c;
+      --c-green:    #047857;
+      --c-amber:    #b45309;
+      --mono:       ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans:       'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    body {
+      background-image:
+        radial-gradient(circle at 10% 10%, #eef2ff, transparent 40%),
+        radial-gradient(circle at 90% 20%, #fff1f2, transparent 40%);
+      background-attachment: fixed;
+      padding: 24px 16px 40px;
+    }
+    .wrap {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .topbar a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+    .topbar a:hover { color: var(--c-blue); border-bottom-color: var(--c-blue); }
+
+    .card {
+      background: var(--paper);
+      border: 1.5px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      padding: 22px 24px 20px;
+    }
+    .kicker {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--c-red);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 6px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--ink);
+      margin: 12px 0 4px;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .sub {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      opacity: 0.7;
+      margin: 0 0 14px;
+      line-height: 1.4;
+    }
+    .legend {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .legend .item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend .swatch {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--ink);
+      flex-shrink: 0;
+    }
+    .legend .lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .chart-frame {
+      border: 1.5px solid var(--ink);
+      padding: 8px 6px 6px 0;
+      background: var(--paper);
+      position: relative;
+    }
+    svg.chart {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: var(--sans);
+      touch-action: pan-y;
+    }
+    .gridline { stroke: var(--ink); stroke-opacity: 0.08; }
+    .axis line { stroke: var(--ink); stroke-width: 1.5; }
+    .axis text {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      fill: var(--ink);
+    }
+    .axis-label {
+      font-size: 9px;
+      font-weight: 800;
+      fill: var(--ink);
+      letter-spacing: 0.1em;
+    }
+    .hover-guide {
+      stroke: var(--ink);
+      stroke-width: 1;
+      stroke-dasharray: 3 3;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .hover-dot {
+      stroke: var(--ink);
+      stroke-width: 1.5;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .tip {
+      position: absolute;
+      background: var(--paper);
+      border: 1.5px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      padding: 10px 14px;
+      font-family: var(--sans);
+      font-size: 12px;
+      min-width: 200px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .1s ease;
+      z-index: 10;
+    }
+    .tip-head {
+      font-weight: 800;
+      font-size: 10px;
+      color: var(--ink);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 4px;
+    }
+    .tip-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 3px;
+    }
+    .tip-name { font-weight: 700; }
+    .tip-val {
+      font-family: var(--mono);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+    .source {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+    @media (max-width: 540px) {
+      body { padding: 16px 12px 30px; }
+      .card { padding: 16px 14px; }
+      h1 { font-size: 19px; }
+      .legend { gap: 10px; }
+      .legend .lbl { font-size: 10px; letter-spacing: 0.02em; }
+      .axis text { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <span>Theo Elections · Projects</span>
+      <a href="index.html">← Back to forecast</a>
+    </div>
+
+    <div class="card">
+
+      <div class="kicker">Texas Statewide ● Four Democratic challengers, real dollars</div>
+
+      <h1>Talarico is leading the pack — for now</h1>
+      <p class="sub">Cumulative fundraising in inflation-adjusted 2026 dollars, $m, by months to general election</p>
+
+      <div class="legend">
+        <div class="item"><div class="swatch" style="background:#047857"></div><div class="lbl">O'Rourke '18 Sen</div></div>
+        <div class="item"><div class="swatch" style="background:#b45309"></div><div class="lbl">O'Rourke '22 Gov</div></div>
+        <div class="item"><div class="swatch" style="background:#1e40af"></div><div class="lbl">Allred '24 Sen</div></div>
+        <div class="item"><div class="swatch" style="background:#b91c1c"></div><div class="lbl">Talarico '26 Sen</div></div>
+      </div>
+
+      <div class="chart-frame" id="chartFrame">
+        <svg class="chart" id="chart" viewBox="0 0 700 400" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tip" id="tip"></div>
+      </div>
+
+      <div class="source">
+        Source: FEC, Texas Ethics Commission, Texas Tribune, OpenSecrets, BLS · Cycle-midpoint deflation · Beto '22 Gov ran Nov 2021 – Nov 2022
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+const INK = "#111111", PAPER = "#fafaf7";
+
+const COLORS = {
+  beto:     "#047857",
+  betogov:  "#b45309",
+  allred:   "#1e40af",
+  talarico: "#b91c1c",
+};
+const NAMES = {
+  beto:     "O'Rourke '18 Sen",
+  betogov:  "O'Rourke '22 Gov",
+  allred:   "Allred '24 Sen",
+  talarico: "Talarico '26 Sen",
+};
+// Display order in tooltip — matches JSX
+const ORDER = ["beto", "betogov", "allred", "talarico"];
+
+// All values in 2026 dollars (cycle-midpoint CPI adjustment).
+// Multipliers: Beto'18 ≈ 1.35 | Beto'22 Gov ≈ 1.14 | Allred'24 ≈ 1.07 | Talarico'26 ≈ 1.00.
+const data = [
+  { label: "18", allred: 0,    talarico: null, beto: 0.7,   betogov: null },
+  { label: "17", allred: 4.6,  talarico: null, beto: 1.8,   betogov: null },
+  { label: "16", allred: 9.2,  talarico: null, beto: 2.7,   betogov: null },
+  { label: "15", allred: 10.9, talarico: null, beto: 3.6,   betogov: null },
+  { label: "14", allred: 12.5, talarico: 0,    beto: 4.6,   betogov: null },
+  { label: "13", allred: 14.2, talarico: 6.2,  beto: 5.4,   betogov: null },
+  { label: "12", allred: 16.1, talarico: 8.5,  beto: 6.5,   betogov: 0    },
+  { label: "11", allred: 17.9, talarico: 10.7, beto: 7.7,   betogov: 4.1  },
+  { label: "10", allred: 19.7, talarico: 13.0, beto: 8.8,   betogov: 8.2  },
+  { label: "9",  allred: 23.1, talarico: 20.7, beto: 11.7,  betogov: 15.0 },
+  { label: "8",  allred: 26.5, talarico: 30.0, beto: 14.9,  betogov: 21.3 },
+  { label: "7",  allred: 30.0, talarico: 40.0, beto: 17.8,  betogov: 27.6 },
+  { label: "6",  allred: 33.5, talarico: null, beto: 22.5,  betogov: 34.0 },
+  { label: "5",  allred: 37.1, talarico: null, beto: 27.1,  betogov: 40.2 },
+  { label: "4",  allred: 40.7, talarico: null, beto: 31.9,  betogov: 46.5 },
+  { label: "3",  allred: 51.4, talarico: null, beto: 49.0,  betogov: 56.1 },
+  { label: "2",  allred: 62.1, talarico: null, beto: 66.2,  betogov: 65.7 },
+  { label: "1",  allred: 72.8, talarico: null, beto: 83.3,  betogov: 75.2 },
+  { label: "E",  allred: 96.5, talarico: null, beto: 108.4, betogov: 88.9 },
+];
+
+// Layout (viewBox coords)
+const W = 700, H = 400;
+const M = { top: 14, right: 20, bottom: 38, left: 50 };
+const innerW = W - M.left - M.right;
+const innerH = H - M.top - M.bottom;
+
+const yMax = 110;
+const yTicks = [0, 25, 50, 75, 100];
+
+const x = i => M.left + (innerW * i) / (data.length - 1);
+const y = v => M.top + innerH - (innerH * v) / yMax;
+
+const svg = document.getElementById("chart");
+const NS = "http://www.w3.org/2000/svg";
+const $ = (tag, attrs = {}) => {
+  const el = document.createElementNS(NS, tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]);
+  return el;
+};
+
+// Horizontal gridlines
+yTicks.forEach(t => {
+  const yy = y(t);
+  svg.appendChild($("line", {
+    class: "gridline",
+    x1: M.left, x2: W - M.right,
+    y1: yy, y2: yy,
+  }));
+});
+
+// Y axis
+const yAxis = $("g", { class: "axis" });
+yAxis.appendChild($("line", { x1: M.left, x2: M.left, y1: M.top, y2: H - M.bottom }));
+yTicks.forEach(t => {
+  const yy = y(t);
+  yAxis.appendChild($("line", { x1: M.left - 4, x2: M.left, y1: yy, y2: yy }));
+  const label = $("text", {
+    x: M.left - 8,
+    y: yy + 4,
+    "text-anchor": "end",
+  });
+  label.textContent = "$" + t;
+  yAxis.appendChild(label);
+});
+svg.appendChild(yAxis);
+
+// X axis
+const xAxis = $("g", { class: "axis" });
+xAxis.appendChild($("line", { x1: M.left, x2: W - M.right, y1: H - M.bottom, y2: H - M.bottom }));
+data.forEach((d, i) => {
+  const xx = x(i);
+  xAxis.appendChild($("line", { x1: xx, x2: xx, y1: H - M.bottom, y2: H - M.bottom + 4 }));
+  const label = $("text", {
+    x: xx,
+    y: H - M.bottom + 16,
+    "text-anchor": "middle",
+  });
+  label.textContent = d.label;
+  xAxis.appendChild(label);
+});
+const xAxisLabel = $("text", {
+  class: "axis-label",
+  x: M.left + innerW / 2,
+  y: H - 6,
+  "text-anchor": "middle",
+});
+xAxisLabel.textContent = "← MONTHS TO GENERAL ELECTION";
+xAxis.appendChild(xAxisLabel);
+svg.appendChild(xAxis);
+
+// Lines + dots per series — connectNulls = false (break path on null)
+ORDER.forEach(key => {
+  const color = COLORS[key];
+  let pathParts = [];
+  let started = false;
+  data.forEach((d, i) => {
+    const v = d[key];
+    if (v == null) { started = false; return; }
+    pathParts.push((started ? "L" : "M") + x(i) + "," + y(v));
+    started = true;
+  });
+  if (pathParts.length) {
+    svg.appendChild($("path", {
+      d: pathParts.join(" "),
+      stroke: color,
+      "stroke-width": 3,
+      fill: "none",
+      "stroke-linejoin": "round",
+      "stroke-linecap": "round",
+    }));
+  }
+  data.forEach((d, i) => {
+    const v = d[key];
+    if (v == null) return;
+    svg.appendChild($("circle", {
+      cx: x(i),
+      cy: y(v),
+      r: 3,
+      fill: PAPER,
+      stroke: color,
+      "stroke-width": 2,
+    }));
+  });
+});
+
+// Hover guide
+const guide = $("line", {
+  class: "hover-guide",
+  x1: 0, x2: 0,
+  y1: M.top, y2: H - M.bottom,
+});
+svg.appendChild(guide);
+
+// Hover active dots (one per series, hidden until hover)
+const hoverDots = {};
+ORDER.forEach(key => {
+  const dot = $("circle", {
+    class: "hover-dot",
+    cx: 0, cy: 0, r: 5,
+    fill: COLORS[key],
+  });
+  svg.appendChild(dot);
+  hoverDots[key] = dot;
+});
+
+// Hit area sits on top to capture pointer
+const hitArea = $("rect", {
+  x: M.left, y: M.top,
+  width: innerW, height: innerH,
+  fill: "transparent",
+  style: "cursor: crosshair",
+});
+svg.appendChild(hitArea);
+
+const tip = document.getElementById("tip");
+const frame = document.getElementById("chartFrame");
+
+const fmt = v => "$" + v.toFixed(1) + "m";
+
+function showTip(idx) {
+  const d = data[idx];
+  const xx = x(idx);
+  guide.setAttribute("x1", xx);
+  guide.setAttribute("x2", xx);
+  guide.style.opacity = 1;
+
+  // Position active dots only for present series
+  ORDER.forEach(key => {
+    const v = d[key];
+    const dot = hoverDots[key];
+    if (v == null) {
+      dot.style.opacity = 0;
+    } else {
+      dot.setAttribute("cx", xx);
+      dot.setAttribute("cy", y(v));
+      dot.style.opacity = 1;
+    }
+  });
+
+  const head = d.label === "E" ? "Election day" : `${d.label} mo. out`;
+  const rows = ORDER
+    .filter(k => d[k] != null)
+    .map(k => `<div class="tip-row"><span class="tip-name" style="color:${COLORS[k]}">${NAMES[k]}</span><span class="tip-val">${fmt(d[k])}</span></div>`)
+    .join("");
+  tip.innerHTML = `<div class="tip-head">${head}</div>${rows}`;
+
+  // Position tip relative to the frame, using SVG-to-DOM scaling
+  const rect = svg.getBoundingClientRect();
+  const frameRect = frame.getBoundingClientRect();
+  const scaleX = rect.width / W;
+  const scaleY = rect.height / H;
+
+  // Make the tip visible first so we can measure it
+  tip.style.opacity = 1;
+  const tipW = tip.offsetWidth;
+  const tipH = tip.offsetHeight;
+
+  const pxX = (rect.left - frameRect.left) + xx * scaleX;
+  const pxY = (rect.top  - frameRect.top)  + M.top * scaleY;
+
+  let leftPos = pxX + 14;
+  if (leftPos + tipW > frameRect.width - 8) leftPos = pxX - tipW - 14;
+  if (leftPos < 8) leftPos = 8;
+
+  let topPos = pxY + 4;
+  const maxTop = frameRect.height - tipH - 8;
+  if (topPos > maxTop) topPos = maxTop;
+  if (topPos < 8) topPos = 8;
+
+  tip.style.left = leftPos + "px";
+  tip.style.top  = topPos + "px";
+}
+
+function hideTip() {
+  tip.style.opacity = 0;
+  guide.style.opacity = 0;
+  ORDER.forEach(k => { hoverDots[k].style.opacity = 0; });
+}
+
+function nearestIndex(clientX) {
+  const rect = svg.getBoundingClientRect();
+  const scaleX = rect.width / W;
+  const svgX = (clientX - rect.left) / scaleX;
+  let bestI = 0, bestDist = Infinity;
+  for (let i = 0; i < data.length; i++) {
+    const d = Math.abs(x(i) - svgX);
+    if (d < bestDist) { bestDist = d; bestI = i; }
+  }
+  return bestI;
+}
+
+svg.addEventListener("mousemove", (e) => showTip(nearestIndex(e.clientX)));
+svg.addEventListener("mouseleave", hideTip);
+
+svg.addEventListener("touchstart", (e) => {
+  if (!e.touches.length) return;
+  showTip(nearestIndex(e.touches[0].clientX));
+}, { passive: true });
+svg.addEventListener("touchmove", (e) => {
+  if (!e.touches.length) return;
+  showTip(nearestIndex(e.touches[0].clientX));
+}, { passive: true });
+svg.addEventListener("touchend", hideTip);
+</script>
+</body>
+</html>

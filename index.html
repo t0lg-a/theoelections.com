@@ -2303,6 +2303,143 @@
       vertical-align:middle;
     }
 
+    /* ─── PROJECTS PAGE ─── */
+    .projPage{
+      flex:1;
+      min-height:0;
+      overflow-y:auto;
+      padding-bottom:40px;
+    }
+    .projInner{
+      max-width:1080px;
+      margin:0 auto;
+    }
+    .projHeader{
+      padding:6px 4px 18px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .projTitle{
+      font-size:26px;
+      font-weight:900;
+      letter-spacing:-0.03em;
+      color:var(--text-ink);
+      margin:0 0 4px;
+    }
+    .projSub{
+      font-size:13px;
+      color:var(--text-muted);
+      font-weight:500;
+      margin:0;
+    }
+    .projCount{
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:800;
+      color:var(--text-muted);
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+    }
+    .projGrid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+    }
+    .projCard{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:22px 24px;
+      background:var(--card-bg);
+      border:1px solid var(--card-border);
+      box-shadow:var(--card-shadow);
+      border-radius:var(--radius-lg);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      text-decoration:none;
+      color:inherit;
+      transition:transform .15s ease, box-shadow .15s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .projCard:hover{
+      transform:translate(-2px, -2px);
+      box-shadow:var(--card-shadow-hover);
+    }
+    .projCardKicker{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      color:var(--blue);
+    }
+    .projCardKicker.red{ color:var(--red); }
+    .projCardKicker.purple{ color:var(--purple, #4f46e5); }
+    .projCardTitle{
+      font-size:18px;
+      font-weight:900;
+      letter-spacing:-0.02em;
+      color:var(--text-ink);
+      margin:0;
+      line-height:1.2;
+    }
+    .projCardDesc{
+      font-size:13px;
+      line-height:1.55;
+      color:var(--text-dim);
+      margin:0;
+      flex:1;
+    }
+    .projCardMeta{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      color:var(--text-faint);
+      padding-top:8px;
+      border-top:1px solid var(--line);
+      margin-top:4px;
+    }
+    .projCardOpen{
+      margin-left:auto;
+      color:var(--text-ink);
+      font-weight:800;
+    }
+    .projCardOpen::after{
+      content:" →";
+      transition:transform .15s ease;
+      display:inline-block;
+    }
+    .projCard:hover .projCardOpen::after{ transform:translateX(3px); }
+
+    /* Riso treatment for project cards (default) */
+    html[data-look="riso"] .projCard{
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+      background:var(--card-bg) !important;
+      border:1px solid var(--card-border) !important;
+      box-shadow:var(--card-shadow) !important;
+      border-radius:0 !important;
+    }
+    html[data-look="riso"] .projCard:hover{
+      box-shadow:6px 6px 0 0 var(--text-ink) !important;
+    }
+
+    @media (max-width: 760px){
+      .projGrid{ grid-template-columns:1fr; gap:14px; }
+      .projTitle{ font-size:22px; }
+      .projCard{ padding:18px 18px; }
+      .projCardTitle{ font-size:16px; }
+    }
+
 /* ═══════════════════════════════════════════════
    THEO RISO + DARK MODE OVERRIDES
    Toggles via [data-look="riso"] (default) / [data-look="legacy"]
@@ -2805,6 +2942,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <button class="pageTab" data-page="swingometer">Swingometer</button>
   <button class="pageTab" data-page="past-elections">Past Elections</button>
   <button class="pageTab" data-page="state-legs">State Legs</button>
+  <button class="pageTab" data-page="projects">Projects</button>
   <button class="pageTab" data-page="methodology">Methodology</button>
 </nav>
 <button class="lookToggle" id="lookToggle" title="Toggle riso / legacy look">%</button>
@@ -3708,6 +3846,57 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
 </div>
 
+</div>
+
+<div class="projPage" id="projectsPage" style="display:none">
+<div class="projInner">
+
+  <div class="projHeader">
+    <div>
+      <h1 class="projTitle">Projects</h1>
+      <p class="projSub">Side projects, data journalism, and one-off election analysis</p>
+    </div>
+    <div class="projCount">3 projects</div>
+  </div>
+
+  <div class="projGrid">
+
+    <a class="projCard" href="fundraising-comparison.html">
+      <div class="projCardKicker red">Texas Senate '26</div>
+      <h2 class="projCardTitle">Talarico vs. the field: Texas Democratic fundraising</h2>
+      <p class="projCardDesc">Cumulative inflation-adjusted fundraising for four recent Texas Democratic statewide challengers, charted by months to general election. Talarico's seven-month haul versus Beto '18, Beto '22 governor, and Allred '24.</p>
+      <div class="projCardMeta">
+        <span>Chart</span>
+        <span>FEC · TEC</span>
+        <span class="projCardOpen">Open</span>
+      </div>
+    </a>
+
+    <a class="projCard" href="primary_turnout_combined.html">
+      <div class="projCardKicker">National analysis</div>
+      <h2 class="projCardTitle">Primary turnout as a general election signal</h2>
+      <p class="projCardDesc">State-by-state primary-to-general vote ratios for Democrats and Republicans, 2000–2026. Tests whether the primary enthusiasm gap predicts the national environment in November.</p>
+      <div class="projCardMeta">
+        <span>Interactive</span>
+        <span>FEC · State SOS</span>
+        <span class="projCardOpen">Open</span>
+      </div>
+    </a>
+
+    <a class="projCard" href="nationalization-2.html">
+      <div class="projCardKicker purple">Midterm races</div>
+      <h2 class="projCardTitle">Nationalization indicator for 2026</h2>
+      <p class="projCardDesc">A district-level measure of how closely individual Senate, House, and gubernatorial races are tracking the national environment. Filter by chamber, sort by deviation, and see who's running ahead or behind their baseline.</p>
+      <div class="projCardMeta">
+        <span>Interactive</span>
+        <span>2026 forecast model</span>
+        <span class="projCardOpen">Open</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
 </div>
 
 <div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures">
