@@ -1,71 +1,89 @@
 /* ============================================================
-   state-legs.js — State Legislatures page  (v9, dual-chamber)
+   state-legs.js — State Legislatures page  (v10)
 
-   Click district → zoom to state. Left panel shows state seat
-   standing (rating buckets) + hovered district info. Chamber
-   toggle in the panel header swaps between State House (SLDL)
-   and State Senate (SLDU) datasets.
+   Three view modes via a top-level toolbar styled like the
+   Forecast/Nowcast toggle:
+     • House  — single big map of state-house districts (SLDL)
+     • Senate — single big map of state-senate districts (SLDU)
+     • Split  — both chambers shown together, each in its own
+                panel + map (independently zoomable)
 
-   Senate data requires sldu_with_data.topojson at the site
-   root — same flat-properties shape as sldl_national.topojson
-   but produced by build_sldu.py (baseline/margin/dem_pct
-   already embedded, so no separate lean-CSV fetch).
+   Senate-only enhancements:
+     • Not-up states are grayed on the map.
+     • "Not up" state panels show the CURRENT pre-2026 chamber
+       composition (D/R count) rather than baseline projections.
+     • Locked seats (those not up this cycle in staggered states)
+       use real current-holder counts from CURRENT_SENATE_COMP_2025
+       when computing majority odds — so D seats that aren't on
+       the ballot are counted as D in the MC, not re-projected.
+     • Hispanic-share adjustment reads sldu_hispanic_share.csv.
+
+   Multi-member district notice: AZ / NJ / ND / SD / NH (house)
+   and VT (senate) have TIGER features that represent districts
+   electing >1 legislator. The MC treats each district as a
+   party-ticket and feature count = seat count, which is the
+   correct modeling unit. A small note appears in the panel for
+   these states so viewers aren't confused by "30 seats" in an
+   Arizona house panel that holds 60 representatives.
    ============================================================ */
 (function(){
   const PAGE_ID = 'stateLegsPage';
 
   // --- Chamber config ---------------------------------------
-  // Both chambers share the rendering pipeline. Everything that
-  // differs (URLs, labels, seat totals, stagger fractions,
-  // hispanic adjustment source) lives in one place here.
-  //
-  // SLDL paths match the existing working setup (separate lean
-  // CSV). SLDU uses the self-contained format from build_sldu.py
-  // where margin/dem_pct/baseline live on the geometry properties
-  // directly — no separate CSV join needed.
   const CHAMBERS = {
     sldl: {
       key: 'sldl',
       label: 'State House',
+      short: 'House',
       sub:   'Lower chambers — district baselines',
       mapLabel: 'State House map',
       topoUrl:     './sldl_national.topojson',
-      leanCsvUrl:  './national_district_results.csv',  // separate join
+      leanCsvUrl:  './national_district_results.csv',
       hispCsvUrl:  './sldl_hispanic_share.csv',
-      topoObject:  'districts',                        // prefer this key
+      topoObject:  'districts',
     },
     sldu: {
       key: 'sldu',
       label: 'State Senate',
+      short: 'Senate',
       sub:   'Upper chambers — district baselines',
       mapLabel: 'State Senate map',
       topoUrl:     './sldu_with_data.topojson',
-      leanCsvUrl:  null,                               // embedded
-      hispCsvUrl:  './sldu_hispanic_share.csv',        // optional
-      topoObject:  'data',                             // from build_sldu.py
+      leanCsvUrl:  null,       // data embedded on properties
+      hispCsvUrl:  './sldu_hispanic_share.csv',
+      topoObject:  'data',
     },
   };
-  let currentChamber = 'sldl';
-  const CH = () => CHAMBERS[currentChamber];
 
-  // Per-chamber hispanic-share dict. SLDU adjustment is a no-op
-  // until sldu_hispanic_share.csv is produced — same behavior as
-  // SLDL was before its CSV existed.
+  // --- View state --------------------------------------------
+  // view: 'sldl' | 'sldu' | 'split'
+  // currentChamber: the "primary" chamber being operated on. In
+  //   single-map mode it's the chamber being shown. In split mode
+  //   it's the chamber we most recently rendered/handled.
+  let view = 'sldl';
+  let currentChamber = 'sldl';
+  const CH = (ch) => CHAMBERS[ch || currentChamber];
+
+  // Per-chamber view state — zoom target + d3.zoom transform.
+  // In single-map mode only the active chamber's zoom matters.
+  // In split mode each chamber has independent zoom/pan.
+  const viewState = {
+    sldl: { zoom:'us', transform:null, lastZoomKey:null },
+    sldu: { zoom:'us', transform:null, lastZoomKey:null },
+  };
+
+  // --- Hispanic share, per-chamber ---------------------------
   const HISPANIC_SHARE = { sldl: {}, sldu: {} };
   const SLDL_HISPANIC_SHARE = HISPANIC_SHARE.sldl;  // back-compat alias
 
-  // Per-chamber load state + cached features/index. Switching
-  // chambers after both are loaded is O(render).
+  // --- Per-chamber load state ---------------------------------
   const CHAMBER_STATE = {
     sldl: { loaded:false, loading:false, features:null, byState:null },
     sldu: { loaded:false, loading:false, features:null, byState:null },
   };
-  const CS = () => CHAMBER_STATE[currentChamber];
+  const CS = (ch) => CHAMBER_STATE[ch || currentChamber];
 
-  // Read HISPANIC_GB and HISPANIC_BASELINE from forecast.js's
-  // script scope. Both are `const` declared at the top level of
-  // forecast.js, so they're visible here by name as long as
-  // forecast.js loads first. Fall back to safe defaults.
+  // --- Forecast integration ----------------------------------
   function getHispanicBaseline(){
     try { if (typeof HISPANIC_BASELINE !== 'undefined' && HISPANIC_BASELINE) return HISPANIC_BASELINE; } catch(_){}
     return { D: 53.06, R: 46.94 };
@@ -75,7 +93,7 @@
     return null;
   }
 
-  // Match forecast.js: VIS = { show:12.5, likely:7.5, lean:2.5 }
+  // --- Ratings + margin coloring ------------------------------
   const RATINGS = [
     { key:'SD', label:'Safe D', color:'#1e40af', light:false },
     { key:'LD', label:'Lkly D', color:'#3b82f6', light:false },
@@ -97,11 +115,11 @@
   const BASELINE_GB = {
     '2024_pres':    { D: 48.3, R: 49.8 },
     '2016-20_comp': { D: 51.5, R: 48.5 },
-    '2020-24_comp': { D: 49.7, R: 49.0 },  // rough Biden+Harris avg
-    '2020_pres':    { D: 51.3, R: 46.8 },  // Biden margin +4.5
+    '2020-24_comp': { D: 49.7, R: 49.0 },
+    '2020_pres':    { D: 51.3, R: 46.8 },
   };
 
-  function buildRatio(props){
+  function buildRatio(props, chamber){
     const demRaw = props.dem_pct;
     const marginPts = props.margin;
     if (demRaw == null || marginPts == null || !isFinite(demRaw) || !isFinite(marginPts)) return null;
@@ -113,10 +131,8 @@
     let ratioD = demPct / gbBase.D;
     let ratioR = repPct / gbBase.R;
 
-    // Hispanic swing adjustment — mirrors forecast.js getHouseModel.
-    // Uses the per-chamber hispanic-share dict. SLDU starts empty so
-    // the adjustment is a no-op until we produce that CSV.
-    const hShare = HISPANIC_SHARE[currentChamber][props.GEOID] || 0;
+    // Hispanic swing adjustment (mirrors forecast.js getHouseModel)
+    const hShare = HISPANIC_SHARE[chamber][props.GEOID] || 0;
     const hGb = getHispanicGb();
     if (hShare > 0 && hGb){
       const hBase = getHispanicBaseline();
@@ -146,24 +162,17 @@
     return projD - projR;
   }
 
-  function attachRatios(){
-    const feats = CS().features; if (!feats) return;
-    for (const f of feats){ const p = f.properties; if (p) p._ratio = buildRatio(p); }
+  function attachRatios(chamber){
+    const feats = CS(chamber).features; if (!feats) return;
+    for (const f of feats){ const p = f.properties; if (p) p._ratio = buildRatio(p, chamber); }
   }
 
-  // Per-state additive D-margin bias to correct stale baseline drift.
-  // NOT a model fudge — a data correction for known baseline drift.
-  // Applies to both chambers because the baseline source is the
-  // same underlying precinct data.
-  const STATE_LEG_BIAS = {
-    ME: +3,
-  };
+  const STATE_LEG_BIAS = { ME: +3 };
 
-  function applyProjection(){
-    const feats = CS().features; if (!feats) return;
+  function applyProjection(chamber){
+    const feats = CS(chamber).features; if (!feats) return;
     for (const f of feats){
-      const p = f.properties;
-      if (!p) continue;
+      const p = f.properties; if (!p) continue;
       let m = projectMarginFromRatio(p._ratio);
       if (m != null && isFinite(m)){
         const bias = STATE_LEG_BIAS[p.state_abbr] || 0;
@@ -172,9 +181,7 @@
       p._projMargin = m;
     }
 
-    // Impute null-margin districts from their state's mean projected
-    // margin (same rationale as before — some districts lack baseline
-    // data and would otherwise be dropped from chamber totals).
+    // Impute null-margin districts from state's mean (for ME-style gaps)
     const sums = {};
     for (const f of feats){
       const p = f.properties || {};
@@ -193,15 +200,13 @@
       p._imputed = true;
       imputed++;
     }
-    if (imputed > 0) console.log(`[state-legs/${currentChamber}] imputed margins for ${imputed} districts`);
-
-    CS().byState = indexByState(feats);
+    if (imputed > 0) console.log(`[state-legs/${chamber}] imputed margins for ${imputed} districts`);
+    CS(chamber).byState = indexByState(feats);
   }
 
   function mOf(p){ return (p && p._projMargin != null) ? p._projMargin : (p ? p.margin : null); }
 
-  // --- Monte Carlo majority odds ------------------------------
-  // Same variance budget as before, same rationale — see v8 notes.
+  // --- Monte Carlo ------------------------------------------
   const NAT_SIGMA  = 20;
   const IDIO_SIGMA = 16;
   const MC_SIMS    = 50000;
@@ -213,20 +218,18 @@
     return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
   }
 
-  function winProbD(margin){
-    if (margin == null || !isFinite(margin)) return 0.5;
-    return _nCDF(margin / NAT_SIGMA);
-  }
   function _nCDF(z){
     const t = 1 / (1 + 0.2316419 * Math.abs(z));
     const d = 0.3989423 * Math.exp(-z*z/2);
     const p = d * t * (0.3193815 + t*(-0.3565638 + t*(1.781478 + t*(-1.821256 + t*1.330274))));
     return z > 0 ? 1 - p : p;
   }
+  function winProbD(margin){
+    if (margin == null || !isFinite(margin)) return 0.5;
+    return _nCDF(margin / NAT_SIGMA);
+  }
 
-  // ----- Chamber-size + 2026 stagger tables ------------------
-  //
-  // SLDL (state house) — as before:
+  // --- Chamber size + 2026 stagger + current comp -----------
   const CHAMBER_SLDL = {
     AL:105, AK:40, AZ:60, AR:100, CA:80, CO:65, CT:151, DE:41, FL:120, GA:180,
     HI:51, ID:70, IL:118, IN:100, IA:100, KS:125, KY:100, LA:105, ME:151, MD:141,
@@ -240,24 +243,8 @@
     ND: 0.5,
   };
 
-  // SLDU (state senate) — source: Wikipedia 2026 state legislative
-  // elections summary table, cross-checked against the 270toWin
-  // 2026 state senate map. Seat counts are the chamber size, not
-  // seats up. Stagger fractions computed from (seats up)/(seat total)
-  // per the same table:
-  //
-  //   100% up (whole chamber on ballot): AL, AZ, CT, GA, ID, ME, MD,
-  //     MA, MI, NH, NY, NC, RI, SD, VT
-  //   ~50% up (staggered 4-year):  AK (10/20), CA (20/40),
-  //     CO (18/35), DE (11/21), FL (20/40), HI (13/25), IN (25/50),
-  //     IA (25/50), KY (19/38), MO (17/34), MT (25/50), NV (11/21),
-  //     OH (17/33), OK (24/48), OR (15/30), PA (25/50), TN (17/33),
-  //     TX (16/31), UT (15/29), WA (24/49), WV (17/34), WI (17/33),
-  //     WY (16/31), ND (24/47)
-  //   66% up (2-4-4 system): IL (39/59)
-  //   0% up (odd-year senates):   LA, MS, NJ, VA
-  //   0% up (presidential-year senates): KS, NM, SC
-  //   N/A (unicameral): NE
+  // SLDU (state senate) — sourced from Wikipedia 2026 state legislative
+  // elections summary table, cross-checked against 270toWin 2026.
   const CHAMBER_SLDU = {
     AL:35,  AK:20,  AZ:30,  AR:35,  CA:40,  CO:35,  CT:36,  DE:21,  FL:40,  GA:56,
     HI:25,  ID:35,  IL:59,  IN:50,  IA:50,  KS:40,  KY:38,  LA:39,  ME:35,  MD:47,
@@ -266,68 +253,115 @@
     SD:35,  TN:33,  TX:31,  UT:29,  VT:30,  VA:40,  WA:49,  WV:34,  WI:33,  WY:31,
   };
   const SEATS_UP_FRAC_2026_SLDU = {
-    // whole-chamber states: leave undefined → default 1.0
-    // fractional states (fraction up in 2026):
+    // staggered: (up)/(total)
     AK: 10/20,  CA: 20/40,  CO: 18/35,  DE: 11/21,  FL: 20/40,
     HI: 13/25,  IL: 39/59,  IN: 25/50,  IA: 25/50,  KY: 19/38,
     MO: 17/34,  MT: 25/50,  NV: 11/21,  ND: 24/47,  OH: 17/33,
     OK: 24/48,  OR: 15/30,  PA: 25/50,  TN: 17/33,  TX: 16/31,
     UT: 15/29,  WA: 24/49,  WV: 17/34,  WI: 17/33,  WY: 16/31,
-    // not-up-in-2026:
+    // not up in 2026
     LA: 0,  MS: 0,  NJ: 0,  VA: 0,
     KS: 0,  NM: 0,  SC: 0,
     NE: 0,
   };
 
-  const CHAMBER = () => currentChamber === 'sldu' ? CHAMBER_SLDU : CHAMBER_SLDL;
-  const SEATS_UP_FRAC_2026 = () => currentChamber === 'sldu' ? SEATS_UP_FRAC_2026_SLDU : SEATS_UP_FRAC_2026_SLDL;
+  // Pre-2026 state senate composition — source: Wikipedia 2026 state
+  // legislative elections "Before" columns. Independents/coalition
+  // members are assigned to their caucus:
+  //   AK: 9D + 5R + 6 coalition Rs  → 9D / 11R
+  //   FL: 28R + 10D + 1 I (Pizzo, caucuses D) + 1 vacancy → 11D / 28R
+  //   ME: 20D + 14R + 1 I (Bennett, retiring) → treat I as R → 20D / 15R
+  //   UT: 22R + 6D + 1 Forward (conservative caucus) → 6D / 23R
+  //   VT: 16D + 13R + 1 Progressive (caucuses D) → 17D / 13R
+  //
+  // Used as real current-holder locks for not-up seats so chamber odds
+  // reflect actual D/R ownership rather than baseline inference.
+  const CURRENT_SENATE_COMP_2025 = {
+    AL:{D:8,  R:27}, AK:{D:9,  R:11}, AZ:{D:13, R:17}, AR:{D:6,  R:29},
+    CA:{D:30, R:10}, CO:{D:23, R:12}, CT:{D:25, R:11}, DE:{D:15, R:6 },
+    FL:{D:11, R:28}, GA:{D:23, R:33}, HI:{D:22, R:3 }, ID:{D:6,  R:29},
+    IL:{D:40, R:19}, IN:{D:10, R:40}, IA:{D:17, R:33}, KS:{D:9,  R:31},
+    KY:{D:7,  R:31}, LA:{D:12, R:27}, ME:{D:20, R:15}, MD:{D:34, R:13},
+    MA:{D:36, R:4 }, MI:{D:19, R:18}, MN:{D:34, R:33}, MS:{D:16, R:36},
+    MO:{D:10, R:24}, MT:{D:18, R:32}, NE:{D:0,  R:0 }, NV:{D:13, R:8 },
+    NH:{D:8,  R:16}, NJ:{D:25, R:15}, NM:{D:26, R:16}, NY:{D:41, R:22},
+    NC:{D:20, R:30}, ND:{D:5,  R:42}, OH:{D:9,  R:24}, OK:{D:8,  R:40},
+    OR:{D:18, R:12}, PA:{D:22, R:28}, RI:{D:34, R:4 }, SC:{D:12, R:34},
+    SD:{D:3,  R:32}, TN:{D:6,  R:27}, TX:{D:12, R:19}, UT:{D:6,  R:23},
+    VT:{D:17, R:13}, VA:{D:21, R:19}, WA:{D:30, R:19}, WV:{D:2,  R:32},
+    WI:{D:15, R:18}, WY:{D:2,  R:29},
+  };
 
-  // Mirror NOT_UP_2026_STATES per chamber for the gray fill logic.
-  const NOT_UP_SET = () => {
-    const frac = SEATS_UP_FRAC_2026();
+  // Multi-member states: each TIGER feature represents a district that
+  // elects >1 legislator. Displayed with a note in the panel.
+  const MULTIMEMBER_SLDL = new Set(['AZ','NJ','ND','SD','NH']);
+  const MULTIMEMBER_SLDU = new Set(['VT']);
+
+  const CHAMBER_SIZE = (ch) => (ch || currentChamber) === 'sldu' ? CHAMBER_SLDU : CHAMBER_SLDL;
+  const SEATS_UP_FRAC_2026 = (ch) => (ch || currentChamber) === 'sldu' ? SEATS_UP_FRAC_2026_SLDU : SEATS_UP_FRAC_2026_SLDL;
+  const MULTIMEMBER_SET = (ch) => (ch || currentChamber) === 'sldu' ? MULTIMEMBER_SLDU : MULTIMEMBER_SLDL;
+
+  const NOT_UP_SET = (ch) => {
+    const frac = SEATS_UP_FRAC_2026(ch);
     const s = new Set();
     for (const k in frac) if (frac[k] === 0) s.add(k);
     return s;
   };
 
-  function seatsUp2026(st, featureCount){
-    const frac = SEATS_UP_FRAC_2026()[st];
+  function seatsUp2026(chamber, st, featureCount){
+    const frac = SEATS_UP_FRAC_2026(chamber)[st];
     if (frac === 0) return 0;
     if (typeof frac === 'number') return Math.round(featureCount * frac);
     return featureCount;
   }
 
-  function poissonBinomial(pDemArr){
-    let dist = new Array(pDemArr.length + 1).fill(0);
-    dist[0] = 1;
-    for (let i = 0; i < pDemArr.length; i++){
-      const p = Math.max(0, Math.min(1, pDemArr[i]));
-      const nxt = new Array(pDemArr.length + 1).fill(0);
-      for (let k = 0; k <= i; k++){
-        nxt[k]     += dist[k] * (1 - p);
-        nxt[k + 1] += dist[k] * p;
-      }
-      dist = nxt;
-    }
-    return dist;
-  }
-
-  function chamberOdds(stateAbbr){
-    const bs = CS().byState;
+  function chamberOdds(chamber, stateAbbr){
+    const bs = CS(chamber).byState;
     const s = bs && bs[stateAbbr];
     if (!s || !s.features?.length) return null;
     const total = s.features.length;
-    const up = seatsUp2026(stateAbbr, total);
-    if (up <= 0) return { total, up:0, notUp:true };
+    const up = seatsUp2026(chamber, stateAbbr, total);
 
+    // Not up this cycle — report current composition for senate,
+    // or a generic notUp for house.
+    if (up <= 0) {
+      const cur = (chamber === 'sldu') ? CURRENT_SENATE_COMP_2025[stateAbbr] : null;
+      if (cur){
+        const majLine = Math.floor(total/2) + 1;
+        const superLine = Math.ceil(total*2/3);
+        return {
+          total, up:0, notUp:true,
+          lockedD: cur.D, lockedR: cur.R,
+          pDmaj: cur.D >= majLine ? 1 : 0,
+          pDsup: cur.D >= superLine ? 1 : 0,
+          pRmaj: cur.R >= majLine ? 1 : 0,
+          pRsup: cur.R >= superLine ? 1 : 0,
+          eDemSeats: cur.D,
+        };
+      }
+      return { total, up:0, notUp:true };
+    }
+
+    // Partition into up + locked, sorted by competitiveness.
     const items = s.features
       .map(f => ({ f, m: mOf(f.properties) }))
       .sort((a,b) => Math.abs(a.m ?? 999) - Math.abs(b.m ?? 999));
     const upItems = items.slice(0, up);
     const lockedItems = items.slice(up);
-    let lockedD = 0;
-    for (const it of lockedItems){
-      if (it.m != null && it.m > 0) lockedD++;
+
+    // For SLDU: use real current holders to back into a locked D count
+    // that honors the chamber's true composition. Gap between baseline-
+    // projected total D and actual current D is absorbed into locked seats.
+    let lockedD;
+    if (chamber === 'sldu' && CURRENT_SENATE_COMP_2025[stateAbbr]){
+      const cur = CURRENT_SENATE_COMP_2025[stateAbbr];
+      const upD_baseline = upItems.filter(it => it.m != null && it.m > 0).length;
+      lockedD = Math.max(0, Math.min(lockedItems.length, cur.D - upD_baseline));
+    } else {
+      lockedD = 0;
+      for (const it of lockedItems){
+        if (it.m != null && it.m > 0) lockedD++;
+      }
     }
 
     const majLine   = Math.floor(total/2) + 1;
@@ -363,7 +397,6 @@
     };
   }
 
-  let currentZoom = 'us';
   let gbHistory = null;
   let gbCurrent = null;
 
@@ -383,18 +416,13 @@
       if (!gb) return { err: 'gb-null' };
       if (!isFinite(gb.D) || !isFinite(gb.R)) return { err: 'gb-nan' };
       return { margin: gb.D - gb.R, gb, src: 'house.gb' };
-    } catch(e) {
-      return { err: 'throw:' + e.message };
-    }
+    } catch(e) { return { err: 'throw:' + e.message }; }
   }
-  let _lastErr = null;
+  let _lastErr = null, _lastHGbKey = 'none';
   function syncGbFromForecast(){
     const r = readForecastGb();
     if (r.err){
-      if (r.err !== _lastErr){
-        console.log(`[state-legs] gb not ready (${r.err})`);
-        _lastErr = r.err;
-      }
+      if (r.err !== _lastErr){ console.log(`[state-legs] gb not ready (${r.err})`); _lastErr = r.err; }
       return false;
     }
     _lastErr = null;
@@ -407,31 +435,29 @@
       _lastHGbKey = hKey;
       if (prev !== r.margin) console.log(`[state-legs] gb synced: ${prev==null?'(initial)':prev.toFixed(2)} → ${r.margin.toFixed(2)}`);
       if (hChanged) console.log(`[state-legs] Hispanic gb changed: ${hKey}`);
-      // Recompute ratios + projections for BOTH loaded chambers, but
-      // only re-render the active one.
       for (const ch of ['sldl','sldu']){
         if (!CHAMBER_STATE[ch].features) continue;
-        const prevChamber = currentChamber;
-        currentChamber = ch;
-        try { attachRatios(); applyProjection(); } finally { currentChamber = prevChamber; }
+        attachRatios(ch);
+        applyProjection(ch);
       }
-      if (svgEl()) render();
-      if (currentZoom && currentZoom !== 'us') renderPanelForState(currentZoom);
+      rerenderActive();
     }
     return true;
   }
-  let _lastHGbKey = 'none';
   function startGbWatcher(){
     syncGbFromForecast();
     let tries = 0;
     const fast = setInterval(() => {
       tries++;
-      if (syncGbFromForecast()){
+      if (syncGbFromForecast()) clearInterval(fast);
+      else if (tries > 120){
         clearInterval(fast);
-      } else if (tries > 120){
-        clearInterval(fast);
-        console.warn(`[state-legs] gave up waiting for forecast DATA.house.gb after 60s (last err: ${_lastErr}) — falling back to gbCurrent=0`);
-        if (gbCurrent == null){ gbCurrent = 0; applyProjection(); if (svgEl()) render(); }
+        console.warn(`[state-legs] gave up waiting for DATA.house.gb (last err: ${_lastErr})`);
+        if (gbCurrent == null){
+          gbCurrent = 0;
+          for (const ch of ['sldl','sldu']) if (CHAMBER_STATE[ch].features) applyProjection(ch);
+          rerenderActive();
+        }
       }
     }, 500);
     setInterval(syncGbFromForecast, 15000);
@@ -472,62 +498,44 @@
     } catch(e){ console.warn('[state-legs] gb history unavailable', e); }
   }
 
-  const root       = () => document.getElementById(PAGE_ID);
-  const svgEl      = () => root() && root().querySelector('svg[data-sldl-map]');
-  const zoomSelect = () => root() && root().querySelector('[data-sldl-zoom-select]');
-  const usBtn      = () => root() && root().querySelector('[data-sldl-zoom="us"]');
-  const panelEl    = () => root() && root().querySelector('.sldlStatePanel');
-  const stageEl    = () => root() && root().querySelector('.modeCol[data-mode="sldl"] .mapStage');
-  const mapStageEl = () => root() && root().querySelector('.modeCol[data-mode="sldu"] .mapStage');
+  const root = () => document.getElementById(PAGE_ID);
 
-  function hideOldTooltips(){
-    const s = root() && root().querySelector('[data-sldl-sticky]');
-    const c = root() && root().querySelector('[data-sldl-cursor]');
-    if (s) s.style.display = 'none';
-    if (c) c.style.display = 'none';
+  // Accessors — pick single-mode original DOM or split-mode injected DOM
+  const singleSvgEl   = () => root() && root().querySelector('svg[data-sldl-map]');
+  const singlePanelEl = () => root() && root().querySelector('.modeCol[data-mode="sldl"]:not([data-split]) .sldlStatePanel');
+  const zoomSelect    = () => root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom-select]');
+  const usBtn         = () => root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom="us"]');
+  const stageEl       = () => root() && root().querySelector('.modeCol[data-mode="sldl"]:not([data-split]) .mapStage');
+
+  const splitSvgEl      = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] svg[data-split-map]`);
+  const splitPanelEl    = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] .sldlStatePanel`);
+  const splitZoomSelect = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] [data-sldl-zoom-select]`);
+  const splitUsBtn      = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] [data-sldl-zoom="us"]`);
+
+  function svgForChamber(ch){
+    return view === 'split' ? splitSvgEl(ch) : (ch === currentChamber ? singleSvgEl() : null);
+  }
+  function panelForChamber(ch){
+    return view === 'split' ? splitPanelEl(ch) : (ch === currentChamber ? singlePanelEl() : null);
   }
 
-  // Update the static DOM labels (top-card titles, map aria) when
-  // the chamber changes. These are driven by data-* hooks that the
-  // HTML patch added so we don't need to re-template.
-  function refreshChamberLabels(){
-    const r = root(); if (!r) return;
-    const ch = CH();
-    r.querySelectorAll('[data-sldl-left-title]').forEach(el => el.textContent = ch.label);
-    r.querySelectorAll('[data-sldl-left-sub]').forEach(el => el.textContent = ch.sub);
-    r.querySelectorAll('[data-sldl-right-title]').forEach(el => el.textContent = ch.label + ' Map');
-    const svg = svgEl();
-    if (svg) svg.setAttribute('aria-label', ch.label + ' districts');
-    const mapCard = r.querySelector('.modeCol[data-mode="sldu"] .mapCard');
-    if (mapCard) mapCard.setAttribute('aria-label', ch.mapLabel);
-    // Panel subtitle inside the card, set at injectPanel-time
-    const p = panelEl();
-    if (p){ const sub = p.querySelector('.sldlPanelSub'); if (sub) sub.textContent = ch.label; }
-  }
-
-  function injectPanel(){
-    const stage = stageEl();
-    if (!stage || stage.querySelector('.sldlStatePanel')) return;
+  // --- Panel + styles injection ------------------------------
+  function ensurePanel(container){
+    if (!container || container.querySelector('.sldlStatePanel')) return;
     const div = document.createElement('div');
     div.className = 'sldlStatePanel';
     div.innerHTML = `
       <div class="sldlPanelHeader">
         <div>
           <div class="sldlPanelTitle">—</div>
-          <div class="sldlPanelSub">${CH().label}</div>
+          <div class="sldlPanelSub">—</div>
         </div>
-        <div class="sldlModeToggle sldlChamberToggle" data-chamber-toggle>
-          <button type="button" data-ch="sldl" class="active">House</button>
-          <button type="button" data-ch="sldu">Senate</button>
-        </div>
-      </div>
-      <div class="sldlPanelHeader" style="margin-top:-2px;">
-        <div></div>
         <div class="sldlModeToggle" data-mode-toggle>
           <button type="button" data-mode="model" class="active">Model</button>
           <button type="button" data-mode="ratings">Ratings</button>
         </div>
       </div>
+      <div class="sldlMmNote" data-mm-note style="display:none;"></div>
       <div class="sldlSeatLine">
         <span class="dSide">D <b data-seats-d>—</b></span>
         <span class="sep">|</span>
@@ -540,48 +548,21 @@
       <div class="sldlPanelDistrict" data-district>
         <div class="dstPlaceholder">Hover a district</div>
       </div>`;
-    stage.appendChild(div);
-
-    // Fill-mode (Model vs Ratings) — unchanged.
+    container.appendChild(div);
     div.querySelectorAll('[data-mode-toggle] button').forEach(b => {
       b.addEventListener('click', (ev) => {
         ev.stopPropagation();
         fillMode = b.getAttribute('data-mode');
-        div.querySelectorAll('[data-mode-toggle] button').forEach(x => x.classList.toggle('active', x===b));
-        render();
+        // Mirror the toggle to ALL panels (so mode is consistent across split)
+        document.querySelectorAll('#stateLegsPage [data-mode-toggle] button').forEach(x => {
+          x.classList.toggle('active', x.getAttribute('data-mode') === fillMode);
+        });
+        rerenderActive();
       });
     });
+  }
 
-    // Chamber toggle — swaps SLDL ↔ SLDU. Lazy-loads SLDU on first click.
-    div.querySelectorAll('[data-chamber-toggle] button').forEach(b => {
-      b.addEventListener('click', async (ev) => {
-        ev.stopPropagation();
-        const ch = b.getAttribute('data-ch');
-        if (ch === currentChamber) return;
-        div.querySelectorAll('[data-chamber-toggle] button').forEach(x => x.classList.toggle('active', x===b));
-        currentChamber = ch;
-        refreshChamberLabels();
-        // Zoom stays where it was — feels right when swapping chambers for the same state.
-        await load();
-        render();
-        // Refresh panel for current zoom with new chamber's data
-        if (currentZoom === 'us') {
-          const p = panelEl();
-          if (p){
-            p.querySelector('.sldlPanelTitle').textContent = 'US';
-            p.querySelector('[data-seats-d]').textContent = '—';
-            p.querySelector('[data-seats-r]').textContent = '—';
-            const bar = p.querySelector('[data-rating-bar]'); if (bar) bar.innerHTML = '';
-            const lbl = p.querySelector('[data-rating-labels]'); if (lbl) lbl.innerHTML = '';
-            const odds = p.querySelector('[data-odds-row]');
-            if (odds) odds.innerHTML = '<div class="sldlOddsNone" style="grid-column:1/-1;">Hover a state for majority odds</div>';
-          }
-        } else {
-          renderPanelForState(currentZoom);
-        }
-      });
-    });
-
+  function injectStyles(){
     if (document.getElementById('sldlPanelStyles')) return;
     const style = document.createElement('style');
     style.id = 'sldlPanelStyles';
@@ -593,6 +574,7 @@
         background:var(--panel,#fff);border:1px solid var(--line,rgba(0,0,0,0.12));
         border-radius:6px;padding:14px 18px;font-size:11px;line-height:1.4;font-weight:600;
         box-shadow:none;display:none;pointer-events:auto;
+        box-sizing:border-box;
       }
       #stateLegsPage .sldlStatePanel.show{display:block;}
       #stateLegsPage .sldlStatePanel .sldlModeToggle,
@@ -601,7 +583,12 @@
       #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid rgba(0,0,0,0.15);border-radius:4px;overflow:hidden;pointer-events:auto;}
       #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-size:9px;font-weight:800;color:var(--muted,#6b7280);letter-spacing:0.04em;text-transform:uppercase;}
       #stateLegsPage .sldlModeToggle button.active{background:var(--ink,#111);color:#fff;}
-      #stateLegsPage .sldlChamberToggle button{padding:3px 10px;}
+      #stateLegsPage .sldlMmNote{
+        display:none;font-size:9px;font-weight:700;color:var(--muted,#6b7280);
+        background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.35);
+        border-radius:3px;padding:4px 6px;margin:4px 0 8px;letter-spacing:0.01em;
+      }
+      #stateLegsPage .sldlMmNote.show{display:block;}
       #stateLegsPage .sldlOddsRow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-top:10px;}
       #stateLegsPage .sldlOddsRow .cell{background:rgba(0,0,0,0.03);border-radius:4px;padding:5px 6px;text-align:center;}
       #stateLegsPage .sldlOddsRow .lbl{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:1px;}
@@ -639,20 +626,246 @@
       #stateLegsPage .dstWpNums .d{color:var(--blue,#2563eb);}
       #stateLegsPage .dstWpNums .r{color:var(--red,#dc2626);margin-left:5px;}
       #stateLegsPage .dstSpark{width:100%;height:32px;display:block;border:1px solid var(--line,rgba(0,0,0,0.08));border-radius:2px;}
-      #stateLegsPage .modeCol[data-mode="sldl"] .mapSvg path{cursor:pointer;}
+      #stateLegsPage .modeCol .mapSvg path{cursor:pointer;}
+      #stateLegsPage .sldlDataBanner{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:rgba(220,38,38,0.95);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;border-radius:4px;max-width:80%;text-align:center;z-index:10;}
+
+      /* ----- v10: top toolbar (House / Senate / Split) ------ */
+      #sldlViewToolbar{
+        grid-column: 1 / -1;
+        display:flex; align-items:center; justify-content:center;
+        gap:12px; margin-bottom:12px;
+      }
+      /* Inherits .forecastToggle / .fcBtn base styles from index.html */
+
+      /* ----- v10: split view layout ------------------------- */
+      #stateLegsPage.view-split .modeCol:not([data-split]){ display:none !important; }
+      #stateLegsPage.view-split .splitRowsWrap{ display:grid !important; }
+      #stateLegsPage .splitRowsWrap{ display:none; grid-column:1/-1; gap:16px; }
+
+      @media (min-width: 980px){
+        #stateLegsPage .splitRow{
+          display:grid; grid-template-columns: 290px minmax(0, 1fr);
+          gap:14px;
+        }
+      }
+      @media (max-width: 979px){
+        #stateLegsPage .splitRow{ display:flex; flex-direction:column; gap:10px; }
+      }
+      #stateLegsPage .splitRow .splitPanelCol{ min-width:0; max-width:290px; }
+      #stateLegsPage .splitRow .splitMapCol{ min-width:0; display:flex; flex-direction:column; gap:6px; }
+      #stateLegsPage .splitRow .splitChamberLabel{
+        font-size:10px; font-weight:800; color:var(--muted);
+        text-transform:uppercase; letter-spacing:0.06em;
+        padding:0 2px;
+      }
+      #stateLegsPage .splitRow .splitMapFrame{
+        background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.12));
+        border-radius:6px; padding:6px; position:relative;
+      }
+      html[data-look="riso"] #stateLegsPage .splitRow .splitMapFrame{
+        border:1px solid var(--text-ink) !important;
+        box-shadow: 4px 4px 0 0 var(--text-ink) !important;
+        border-radius:0 !important;
+      }
+      #stateLegsPage .splitRow svg[data-split-map]{
+        width:100%; height:380px; display:block;
+      }
+      #stateLegsPage .splitRow .panelStage{ position:relative; }
+
+      /* Split-mode control bar matches primary */
+      #stateLegsPage .splitRow .mapControlBar{
+        display:flex; align-items:center; gap:8px;
+        background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.12));
+        border-radius:6px; padding:6px 10px; font-size:11px;
+      }
+      html[data-look="riso"] #stateLegsPage .splitRow .mapControlBar{
+        border:1px solid var(--text-ink) !important;
+        box-shadow: 2px 2px 0 0 var(--text-ink) !important;
+        border-radius:0 !important;
+      }
+      #stateLegsPage .splitRow .mapControlBar .zoomBtn{
+        appearance:none;border:1px solid var(--line,rgba(0,0,0,0.15));
+        background:transparent;padding:3px 10px;font-size:10px;font-weight:700;
+        cursor:pointer;border-radius:3px;color:var(--muted);
+      }
+      #stateLegsPage .splitRow .mapControlBar .zoomBtn.active{
+        background:var(--ink,#111);color:#fff;border-color:var(--ink,#111);
+      }
+      #stateLegsPage .splitRow .mapControlBar .zoomSelect{
+        appearance:none;border:1px solid var(--line,rgba(0,0,0,0.15));
+        background:transparent;padding:3px 8px;font-size:10px;font-weight:700;
+        border-radius:3px;color:var(--ink);
+      }
     `;
     document.head.appendChild(style);
+
+    if (!document.getElementById('sldlCursorTip')){
+      const tip = document.createElement('div');
+      tip.id = 'sldlCursorTip';
+      tip.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;display:none;'
+        + 'background:var(--panel,#fff);border:1px solid rgba(0,0,0,0.12);'
+        + 'border-radius:6px;padding:8px 10px;font-size:11px;line-height:1.4;'
+        + 'font-weight:600;color:var(--ink,#111);box-shadow:0 4px 16px rgba(0,0,0,0.12);'
+        + 'min-width:180px;max-width:240px;';
+      document.body.appendChild(tip);
+    }
+  }
+
+  function hideOldTooltips(){
+    const r = root(); if (!r) return;
+    const s = r.querySelector('[data-sldl-sticky]'); if (s) s.style.display = 'none';
+    const c = r.querySelector('[data-sldl-cursor]'); if (c) c.style.display = 'none';
+  }
+
+  // --- Top toolbar (House / Senate / Split) ------------------
+  function injectToolbar(){
+    const r = root(); if (!r) return;
+    if (r.querySelector('#sldlViewToolbar')) return;
+    const bar = document.createElement('div');
+    bar.id = 'sldlViewToolbar';
+    bar.innerHTML = `
+      <div class="forecastToggle" role="tablist" aria-label="State legislature view">
+        <button class="fcBtn active" data-view="sldl" type="button">House</button>
+        <button class="fcBtn"        data-view="sldu" type="button">Senate</button>
+        <button class="fcBtn"        data-view="split" type="button">Split</button>
+      </div>`;
+    r.insertBefore(bar, r.firstChild);
+    bar.addEventListener('click', async (ev) => {
+      const btn = ev.target.closest('[data-view]');
+      if (!btn) return;
+      const next = btn.getAttribute('data-view');
+      if (next === view) return;
+      bar.querySelectorAll('[data-view]').forEach(x => x.classList.toggle('active', x===btn));
+      await setView(next);
+    });
+  }
+
+  // --- Split-view DOM ---------------------------------------
+  function ensureSplitRows(){
+    const r = root(); if (!r) return;
+    if (r.querySelector('.splitRowsWrap')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'splitRowsWrap';
+    for (const ch of ['sldl','sldu']){
+      const row = document.createElement('section');
+      row.className = 'splitRow';
+      row.setAttribute('data-chamber', ch);
+      row.setAttribute('data-split', '1');
+      row.innerHTML = `
+        <div class="splitPanelCol">
+          <div class="splitChamberLabel">${CHAMBERS[ch].label}</div>
+          <div class="mapStage panelStage" data-split="1"></div>
+        </div>
+        <div class="splitMapCol">
+          <div class="splitChamberLabel">${CHAMBERS[ch].label} · Map</div>
+          <div class="splitMapFrame">
+            <svg data-split-map="${ch}" aria-label="${CHAMBERS[ch].label} districts"></svg>
+          </div>
+          <div class="mapControlBar" data-split="1">
+            <button class="zoomBtn active" data-sldl-zoom="us" type="button">US</button>
+            <select class="zoomSelect" data-sldl-zoom-select>
+              <option value="">State…</option>
+            </select>
+          </div>
+        </div>`;
+      wrap.appendChild(row);
+      ensurePanel(row.querySelector('.panelStage'));
+      // Zoom controls scoped to this row's chamber
+      const capturedCh = ch;
+      row.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('[data-sldl-zoom]');
+        if (!btn) return;
+        viewState[capturedCh].zoom = btn.getAttribute('data-sldl-zoom');
+        row.querySelectorAll('[data-sldl-zoom]').forEach(b => b.classList.toggle('active', b===btn));
+        const sel = row.querySelector('[data-sldl-zoom-select]');
+        if (sel) sel.value = '';
+        renderChamber(capturedCh);
+      });
+      const sel = row.querySelector('[data-sldl-zoom-select]');
+      if (sel) sel.addEventListener('change', () => {
+        if (!sel.value) return;
+        viewState[capturedCh].zoom = sel.value;
+        const ub = row.querySelector('[data-sldl-zoom="us"]'); if (ub) ub.classList.remove('active');
+        renderChamber(capturedCh);
+      });
+    }
+    r.appendChild(wrap);
+  }
+
+  function setCardTitles(){
+    const r = root(); if (!r) return;
+    const ch = CH();
+    r.querySelectorAll('[data-sldl-left-title]').forEach(el => el.textContent = ch.label);
+    r.querySelectorAll('[data-sldl-left-sub]').forEach(el => el.textContent = ch.sub);
+    r.querySelectorAll('[data-sldl-right-title]').forEach(el => el.textContent = ch.label + ' Map');
+    const svg = singleSvgEl();
+    if (svg) svg.setAttribute('aria-label', ch.label + ' districts');
+    const mapCard = r.querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard');
+    if (mapCard) mapCard.setAttribute('aria-label', ch.mapLabel);
+  }
+
+  // --- View switcher -----------------------------------------
+  async function setView(next){
+    view = next;
+    const r = root(); if (!r) return;
+    r.classList.toggle('view-split', view === 'split');
+
+    if (view === 'sldl' || view === 'sldu'){
+      currentChamber = view;
+      setCardTitles();
+      await ensureChamberLoaded(view);
+      // Update zoom dropdown for new chamber
+      populateStateSelectForPanel(zoomSelect(), CS(view).byState);
+      renderChamber(view);
+    } else if (view === 'split'){
+      ensureSplitRows();
+      await Promise.all(['sldl','sldu'].map(ensureChamberLoaded));
+      populateStateSelectForPanel(splitZoomSelect('sldl'), CS('sldl').byState);
+      populateStateSelectForPanel(splitZoomSelect('sldu'), CS('sldu').byState);
+      renderChamber('sldl');
+      renderChamber('sldu');
+    }
+  }
+
+  async function ensureChamberLoaded(ch){
+    const st = CHAMBER_STATE[ch];
+    if (st.loaded) return;
+    if (st.loading){
+      while (st.loading) await new Promise(r => setTimeout(r, 50));
+      return;
+    }
+    await loadChamber(ch);
+  }
+
+  // --- Rating/margin helpers --------------------------------
+  function fmtMargin(m){ if (m==null||!isFinite(m)) return '—'; return (m>=0?'D+':'R+')+Math.abs(m).toFixed(1); }
+  function baselineLabel(b){
+    if(!b) return '—';
+    if (b==='2024_pres')    return '2024 pres';
+    if (b==='2020-24_comp') return '2020–24 comp.';
+    if (b==='2016-20_comp') return '2016–20 comp.';
+    if (b==='2020_pres')    return '2020 pres';
+    return b;
+  }
+  function hex(c){ if(!c) return '#888'; c=c.trim(); if(c.startsWith('#')) return c.length===4?'#'+[...c.slice(1)].map(x=>x+x).join(''):c; const m=c.match(/(\d+)[,\s]+(\d+)[,\s]+(\d+)/); return m?'#'+[m[1],m[2],m[3]].map(v=>(+v).toString(16).padStart(2,'0')).join(''):'#888'; }
+  function mix(a,b,k){ const pa=a.match(/\w\w/g).map(h=>parseInt(h,16)); const pb=b.match(/\w\w/g).map(h=>parseInt(h,16)); return '#'+pa.map((v,i)=>Math.round(v+(pb[i]-v)*k).toString(16).padStart(2,'0')).join(''); }
+  function marginColor(m){
+    if (m==null||!isFinite(m)) return '#d0d0d0';
+    if (Math.abs(m) <= 2.5) return '#fbbf24';
+    const cs=getComputedStyle(document.documentElement);
+    const blue=hex(cs.getPropertyValue('--blue')||'#2563eb');
+    const red =hex(cs.getPropertyValue('--red') ||'#dc2626');
+    const t=Math.max(-1,Math.min(1,m/40));
+    return t>=0?mix('#f4f4f4',blue,t):mix('#f4f4f4',red,-t);
   }
 
   let fillMode = 'model';
-
-  function ratingFillFor(m){
-    const r = rateDistrict(m);
-    return r ? r.color : '#d0d0d0';
-  }
-
-  function fillFor(m, props){
-    if (props && NOT_UP_SET().has(props.state_abbr)) return '#e5e7eb';
+  function ratingFillFor(m){ const r = rateDistrict(m); return r ? r.color : '#d0d0d0'; }
+  function fillForChamber(chamber, m, props){
+    if (props){
+      const notUp = NOT_UP_SET(chamber);
+      if (notUp.has(props.state_abbr)) return '#e5e7eb';
+    }
     if (m == null || !isFinite(m)) return '#d0d0d0';
     return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
   }
@@ -675,83 +888,50 @@
     return map;
   }
 
-  function populateStateSelect(){
-    const sel = zoomSelect(); if (!sel) return;
-    const bs = CS().byState; if (!bs) return;
-    const states = Object.keys(bs).sort();
-    const current = sel.value;
-    sel.innerHTML = '<option value="">State…</option>' + states.map(s=>`<option value="${s}">${s}</option>`).join('');
-    // Restore selection if the new chamber also has this state (it will).
-    if (current && states.includes(current)) sel.value = current;
+  function populateStateSelectForPanel(selectEl, byState){
+    if (!selectEl || !byState) return;
+    const states = Object.keys(byState).sort();
+    const current = selectEl.value;
+    selectEl.innerHTML = '<option value="">State…</option>' + states.map(s=>`<option value="${s}">${s}</option>`).join('');
+    if (current && states.includes(current)) selectEl.value = current;
   }
 
-  function fmtMargin(m){ if (m==null||!isFinite(m)) return '—'; return (m>=0?'D+':'R+')+Math.abs(m).toFixed(1); }
-  function baselineLabel(b){
-    if(!b) return '—';
-    if (b==='2024_pres')    return '2024 pres';
-    if (b==='2020-24_comp') return '2020–24 comp.';
-    if (b==='2016-20_comp') return '2016–20 comp.';
-    if (b==='2020_pres')    return '2020 pres';
-    return b;
+  // --- Cursor tooltip ---------------------------------------
+  const tipEl = () => document.getElementById('sldlCursorTip');
+  function showTip(props, ev){
+    const el = tipEl(); if (!el) return;
+    const m = mOf(props);
+    const r = rateDistrict(m);
+    const fm = fmtMargin(m);
+    const wpD = Math.round(winProbD(m) * 100);
+    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue,#2563eb)' : 'var(--red,#dc2626)');
+    el.innerHTML = `
+      <div style="font-weight:800;font-size:12px;margin-bottom:4px;">
+        ${props.state_abbr} · ${props.NAMELSAD || 'District'}
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+        ${r ? `<span style="display:inline-block;padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'#1f2937':'#fff'};font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;">${r.label}</span>` : ''}
+        <span style="font-weight:800;color:${mColor};">${fm}</span>
+      </div>
+      <div style="font-size:9px;color:var(--muted);font-weight:600;">
+        Win prob · D ${wpD}% · R ${100-wpD}%
+      </div>`;
+    el.style.display = 'block';
+    moveTip(ev);
   }
-
-  function hex(c){ if(!c) return '#888'; c=c.trim(); if(c.startsWith('#')) return c.length===4?'#'+[...c.slice(1)].map(x=>x+x).join(''):c; const m=c.match(/(\d+)[,\s]+(\d+)[,\s]+(\d+)/); return m?'#'+[m[1],m[2],m[3]].map(v=>(+v).toString(16).padStart(2,'0')).join(''):'#888'; }
-  function mix(a,b,k){ const pa=a.match(/\w\w/g).map(h=>parseInt(h,16)); const pb=b.match(/\w\w/g).map(h=>parseInt(h,16)); return '#'+pa.map((v,i)=>Math.round(v+(pb[i]-v)*k).toString(16).padStart(2,'0')).join(''); }
-  function marginColor(m){
-    if (m==null||!isFinite(m)) return '#d0d0d0';
-    if (Math.abs(m) <= 2.5) return '#fbbf24';
-    const cs=getComputedStyle(document.documentElement);
-    const blue=hex(cs.getPropertyValue('--blue')||'#2563eb');
-    const red =hex(cs.getPropertyValue('--red') ||'#dc2626');
-    const t=Math.max(-1,Math.min(1,m/40));
-    return t>=0?mix('#f4f4f4',blue,t):mix('#f4f4f4',red,-t);
+  function moveTip(ev){
+    const el = tipEl(); if (!el || el.style.display === 'none') return;
+    const pad = 14;
+    let x = ev.clientX + pad, y = ev.clientY + pad;
+    const rect = el.getBoundingClientRect();
+    if (x + rect.width  > window.innerWidth)  x = ev.clientX - rect.width  - pad;
+    if (y + rect.height > window.innerHeight) y = ev.clientY - rect.height - pad;
+    el.style.left = x + 'px';
+    el.style.top  = y + 'px';
   }
+  function hideTip(){ const el = tipEl(); if (el) el.style.display = 'none'; }
 
-  function renderPanelForState(stateAbbr){
-    const p = panelEl(); if (!p) return;
-    const bs = CS().byState;
-    if (!stateAbbr || !bs || !bs[stateAbbr]){ p.classList.remove('show'); return; }
-    const s = bs[stateAbbr];
-    p.classList.add('show');
-    p.querySelector('.sldlPanelTitle').textContent = stateAbbr;
-    const sub = p.querySelector('.sldlPanelSub'); if (sub) sub.textContent = CH().label;
-    p.querySelector('[data-seats-d]').textContent = s.totalD;
-    p.querySelector('[data-seats-r]').textContent = s.totalR;
-    const bar = p.querySelector('[data-rating-bar]');
-    const labels = p.querySelector('[data-rating-labels]');
-    let barHTML = '', lblHTML = '';
-    for (const r of RATINGS){
-      const n = s.ratings[r.key] || 0;
-      if (n === 0) continue;
-      barHTML += `<div class="seg ${r.light?'light':''}" style="flex:${n};background:${r.color};" title="${r.label}: ${n}">${n}</div>`;
-      lblHTML += `<div class="lbl" style="flex:${n};">${r.label}</div>`;
-    }
-    bar.innerHTML = barHTML;
-    labels.innerHTML = lblHTML;
-
-    const oddsEl = p.querySelector('[data-odds-row]');
-    if (oddsEl){
-      const o = chamberOdds(stateAbbr);
-      if (!o) { oddsEl.innerHTML = ''; }
-      else if (o.notUp) {
-        const why = stateAbbr === 'NE' ? 'unicameral'
-                  : (currentChamber === 'sldu' && ['KS','NM','SC'].includes(stateAbbr)) ? 'presidential-year senate'
-                  : 'odd-year state';
-        oddsEl.innerHTML = `<div class="sldlOddsNone" style="grid-column:1/-1;">Not up in 2026 · ${why}</div>`;
-      } else {
-        const pct = v => (v*100).toFixed(v>0.995||v<0.005 ? 1 : 0) + '%';
-        oddsEl.innerHTML = `
-          <div class="cell"><div class="lbl">D Super</div><div class="val d">${pct(o.pDsup)}</div></div>
-          <div class="cell"><div class="lbl">D Maj</div><div class="val d">${pct(o.pDmaj)}</div></div>
-          <div class="cell"><div class="lbl">R Maj</div><div class="val r">${pct(o.pRmaj)}</div></div>
-          <div class="cell"><div class="lbl">R Super</div><div class="val r">${pct(o.pRsup)}</div></div>`;
-      }
-    }
-
-    const dst = p.querySelector('[data-district]');
-    dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
-  }
-
+  // --- Panel rendering --------------------------------------
   function normalCDF(z){
     const t = 1 / (1 + 0.2316419 * Math.abs(z));
     const d = 0.3989422804 * Math.exp(-z*z/2);
@@ -775,8 +955,7 @@
     const span = Math.max(1, tMax - tMin);
     const xOf = t => ((t - tMin) / span) * W;
     const yOf = y => H - (y * H);
-    let demArea = `M 0 ${H} `;
-    let line = '';
+    let demArea = `M 0 ${H} `, line = '';
     pts.forEach((p, i) => {
       const x = xOf(p.t), y = yOf(p.y);
       demArea += `L ${x.toFixed(1)} ${y.toFixed(1)} `;
@@ -797,8 +976,81 @@
       </svg>`;
   }
 
-  function renderPanelDistrict(props){
-    const p = panelEl(); if (!p || !p.classList.contains('show')) return;
+  function renderPanelForState(chamber, stateAbbr){
+    const p = panelForChamber(chamber); if (!p) return;
+    const bs = CS(chamber).byState;
+    if (!stateAbbr || !bs || !bs[stateAbbr]){ p.classList.remove('show'); return; }
+    const s = bs[stateAbbr];
+    p.classList.add('show');
+    p.querySelector('.sldlPanelTitle').textContent = stateAbbr;
+    const sub = p.querySelector('.sldlPanelSub'); if (sub) sub.textContent = CHAMBERS[chamber].label;
+
+    // Multi-member note (AZ/NJ/ND/SD/NH house; VT senate)
+    const mmNote = p.querySelector('[data-mm-note]');
+    if (mmNote){
+      if (MULTIMEMBER_SET(chamber).has(stateAbbr)){
+        const totalSeats = CHAMBER_SIZE(chamber)[stateAbbr] || s.features.length;
+        mmNote.classList.add('show');
+        mmNote.textContent = `Multi-member districts — ${s.features.length} districts elect ${totalSeats} legislators.`;
+      } else {
+        mmNote.classList.remove('show');
+      }
+    }
+
+    const o = chamberOdds(chamber, stateAbbr);
+
+    // Seat line: baseline projection for up states, current composition for not-up
+    if (chamber === 'sldu' && o && o.notUp && o.lockedD != null){
+      p.querySelector('[data-seats-d]').textContent = o.lockedD;
+      p.querySelector('[data-seats-r]').textContent = o.lockedR;
+    } else {
+      p.querySelector('[data-seats-d]').textContent = s.totalD;
+      p.querySelector('[data-seats-r]').textContent = s.totalR;
+    }
+
+    const bar = p.querySelector('[data-rating-bar]');
+    const labels = p.querySelector('[data-rating-labels]');
+    let barHTML = '', lblHTML = '';
+    for (const r of RATINGS){
+      const n = s.ratings[r.key] || 0;
+      if (n === 0) continue;
+      barHTML += `<div class="seg ${r.light?'light':''}" style="flex:${n};background:${r.color};" title="${r.label}: ${n}">${n}</div>`;
+      lblHTML += `<div class="lbl" style="flex:${n};">${r.label}</div>`;
+    }
+    bar.innerHTML = barHTML;
+    labels.innerHTML = lblHTML;
+
+    const oddsEl = p.querySelector('[data-odds-row]');
+    if (oddsEl){
+      if (!o) { oddsEl.innerHTML = ''; }
+      else if (o.notUp){
+        const why = stateAbbr === 'NE' ? 'unicameral'
+                  : (chamber === 'sldu' && ['KS','NM','SC'].includes(stateAbbr)) ? 'presidential-year senate'
+                  : 'odd-year state';
+        if (chamber === 'sldu' && o.lockedD != null){
+          oddsEl.innerHTML = `
+            <div class="cell" style="grid-column:1/3;"><div class="lbl">Current D</div><div class="val d">${o.lockedD}</div></div>
+            <div class="cell" style="grid-column:3/5;"><div class="lbl">Current R</div><div class="val r">${o.lockedR}</div></div>
+            <div class="sldlOddsNone" style="grid-column:1/-1;margin-top:2px;">Not up in 2026 · ${why}</div>`;
+        } else {
+          oddsEl.innerHTML = `<div class="sldlOddsNone" style="grid-column:1/-1;">Not up in 2026 · ${why}</div>`;
+        }
+      } else {
+        const pct = v => (v*100).toFixed(v>0.995||v<0.005 ? 1 : 0) + '%';
+        oddsEl.innerHTML = `
+          <div class="cell"><div class="lbl">D Super</div><div class="val d">${pct(o.pDsup)}</div></div>
+          <div class="cell"><div class="lbl">D Maj</div><div class="val d">${pct(o.pDmaj)}</div></div>
+          <div class="cell"><div class="lbl">R Maj</div><div class="val r">${pct(o.pRmaj)}</div></div>
+          <div class="cell"><div class="lbl">R Super</div><div class="val r">${pct(o.pRsup)}</div></div>`;
+      }
+    }
+
+    const dst = p.querySelector('[data-district]');
+    dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
+  }
+
+  function renderPanelDistrict(chamber, props){
+    const p = panelForChamber(chamber); if (!p || !p.classList.contains('show')) return;
     const dst = p.querySelector('[data-district]'); if (!dst) return;
     const mProj = mOf(props);
     const r = rateDistrict(mProj);
@@ -807,10 +1059,13 @@
     const wpDPct = wpD != null ? Math.round(wpD * 100) : null;
     const wpRPct = wpDPct != null ? (100 - wpDPct) : null;
     const spark = buildSparkline(props._ratio);
-    const wpBlock = wpD != null
-      ? `<div class="dstWpHeader"><span class="dstWpLabel">Win Probability</span><span class="dstWpNums"><span class="d">D ${wpDPct}%</span> <span class="r">R ${wpRPct}%</span></span></div>
-         ${spark}`
-      : '<div class="dstWpLabel" style="color:var(--muted);">No baseline data</div>';
+    const notUp = NOT_UP_SET(chamber).has(props.state_abbr);
+    const wpBlock = notUp
+      ? '<div class="dstWpLabel" style="color:var(--muted);">Seat not up in 2026</div>'
+      : (wpD != null
+          ? `<div class="dstWpHeader"><span class="dstWpLabel">Win Probability</span><span class="dstWpNums"><span class="d">D ${wpDPct}%</span> <span class="r">R ${wpRPct}%</span></span></div>
+             ${spark}`
+          : '<div class="dstWpLabel" style="color:var(--muted);">No baseline data</div>');
     dst.innerHTML = `
       <div class="dstName">${props.NAMELSAD || 'District'}</div>
       <div class="dstRow"><span>Rating</span><span>${r ? `<span class="dstRating ${r.light?'light':''}" style="background:${r.color};">${r.label}</span>` : '—'}</span></div>
@@ -819,27 +1074,45 @@
       <div class="dstWpSection">${wpBlock}</div>`;
   }
 
-  function render(){
-    const svg = svgEl(); if (!svg) return;
-    const features = CS().features; if (!features) return;
+  function resetPanelToUS(chamber){
+    const p = panelForChamber(chamber); if (!p) return;
+    p.classList.add('show');
+    p.querySelector('.sldlPanelTitle').textContent = 'US';
+    const sub = p.querySelector('.sldlPanelSub'); if (sub) sub.textContent = CHAMBERS[chamber].label;
+    p.querySelector('[data-seats-d]').textContent = '—';
+    p.querySelector('[data-seats-r]').textContent = '—';
+    const bar = p.querySelector('[data-rating-bar]'); if (bar) bar.innerHTML = '';
+    const lbl = p.querySelector('[data-rating-labels]'); if (lbl) lbl.innerHTML = '';
+    const odds = p.querySelector('[data-odds-row]');
+    if (odds) odds.innerHTML = '<div class="sldlOddsNone" style="grid-column:1/-1;">Hover a state for majority odds</div>';
+    const dst = p.querySelector('[data-district]');
+    if (dst) dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
+    const mm = p.querySelector('[data-mm-note]'); if (mm) mm.classList.remove('show');
+  }
+
+  // --- Map rendering ----------------------------------------
+  function renderChamber(chamber){
+    const svg = svgForChamber(chamber);
+    if (!svg) return;
+    const features = CS(chamber).features;
+    if (!features) return;
+
     const W = 2880, H = 1800;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.setAttribute('shape-rendering','geometricPrecision');
     svg.removeAttribute('width');
     svg.removeAttribute('height');
-    svg.style.width = '';
-    svg.style.height = '';
 
-    const byState = CS().byState;
-    const feats = currentZoom === 'us' ? features : (byState && byState[currentZoom] ? byState[currentZoom].features : []);
-    // Same sanity filter as before — drop features with inside-out
-    // winding that make d3.geoBounds return the whole globe.
+    const vs = viewState[chamber];
+    const byState = CS(chamber).byState;
+    const feats = vs.zoom === 'us' ? features : (byState && byState[vs.zoom] ? byState[vs.zoom].features : []);
+
     const isSane = f => {
       const b = d3.geoBounds(f);
       return isFinite(b[0][0]) && (b[1][0]-b[0][0]) < 30 && (b[1][1]-b[0][1]) < 30;
     };
-    const conusFeats = (currentZoom === 'us'
+    const conusFeats = (vs.zoom === 'us'
       ? feats.filter(f => { const fp = f.properties?.STATEFP || f.properties?.GEOID?.slice(0,2); return fp !== '02' && fp !== '15'; })
       : feats
     ).filter(isSane);
@@ -850,102 +1123,112 @@
     const sel = d3.select(svg);
     sel.selectAll('g.sldlZoomLayer').remove();
     sel.selectAll('path').remove();
-
     const zoomLayer = sel.append('g').attr('class','sldlZoomLayer');
 
-    sel.on('click', function(ev){
-      if (ev.target.tagName !== 'path' && currentZoom !== 'us'){
-        currentZoom = 'us';
-        const zs = zoomSelect(); if (zs) zs.value = '';
-        const ub = usBtn(); if (ub) ub.classList.add('active');
-        render();
+    sel.on('click.reset', function(ev){
+      if (ev.target.tagName !== 'path' && vs.zoom !== 'us'){
+        vs.zoom = 'us';
+        if (view === 'split'){
+          const zs = splitZoomSelect(chamber); if (zs) zs.value = '';
+          const ub = splitUsBtn(chamber); if (ub) ub.classList.add('active');
+        } else {
+          const zs = zoomSelect(); if (zs) zs.value = '';
+          const ub = usBtn(); if (ub) ub.classList.add('active');
+        }
+        renderChamber(chamber);
       }
     });
+
+    const strokeBase = vs.zoom === 'us' ? 1.5 : 2.4;
 
     zoomLayer.selectAll('path')
       .data(conusFeats, d => d.properties.GEOID)
       .join('path')
         .attr('d', path)
-        .attr('fill', d => fillFor(mOf(d.properties), d.properties))
+        .attr('fill', d => fillForChamber(chamber, mOf(d.properties), d.properties))
         .attr('stroke','rgba(255,255,255,0.4)')
-        .attr('stroke-width', currentZoom === 'us' ? 1.5 : 2.4)
+        .attr('stroke-width', strokeBase)
       .on('mouseenter', function(ev, d){
-        d3.select(this).attr('stroke','#1f2937').attr('stroke-width',3.6);
+        d3.select(this).attr('stroke','#1f2937').attr('stroke-width', strokeBase * 2.4);
         const st = d.properties.state_abbr;
-        if (currentZoom === 'us' && st) renderPanelForState(st);
-        renderPanelDistrict(d.properties);
+        if (vs.zoom === 'us' && st) renderPanelForState(chamber, st);
+        renderPanelDistrict(chamber, d.properties);
+        showTip(d.properties, ev);
       })
+      .on('mousemove', function(ev){ moveTip(ev); })
       .on('mouseleave', function(){
-        d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', currentZoom==='us'?1.5:2.4);
+        d3.select(this).attr('stroke','rgba(255,255,255,0.4)').attr('stroke-width', strokeBase);
+        hideTip();
       })
       .on('click', function(ev, d){
         ev.stopPropagation();
         const st = d.properties.state_abbr; if (!st) return;
-        currentZoom = st;
-        const zs = zoomSelect(); if (zs) zs.value = st;
-        const ub = usBtn(); if (ub) ub.classList.remove('active');
-        render();
+        vs.zoom = st;
+        if (view === 'split'){
+          const zs = splitZoomSelect(chamber); if (zs) zs.value = st;
+          const ub = splitUsBtn(chamber); if (ub) ub.classList.remove('active');
+        } else {
+          const zs = zoomSelect(); if (zs) zs.value = st;
+          const ub = usBtn(); if (ub) ub.classList.remove('active');
+        }
+        renderChamber(chamber);
       });
 
-    if (currentZoom === 'us') {
-      const p = panelEl();
-      if (p){
-        p.classList.add('show');
-        p.querySelector('.sldlPanelTitle').textContent = 'US';
-        const sub = p.querySelector('.sldlPanelSub'); if (sub) sub.textContent = CH().label;
-        p.querySelector('[data-seats-d]').textContent = '—';
-        p.querySelector('[data-seats-r]').textContent = '—';
-        const bar = p.querySelector('[data-rating-bar]'); if (bar) bar.innerHTML = '';
-        const lbl = p.querySelector('[data-rating-labels]'); if (lbl) lbl.innerHTML = '';
-        const odds = p.querySelector('[data-odds-row]');
-        if (odds) odds.innerHTML = '<div class="sldlOddsNone" style="grid-column:1/-1;">Hover a state for majority odds</div>';
-        const dst = p.querySelector('[data-district]');
-        if (dst) dst.innerHTML = '<div class="dstPlaceholder">Hover a district</div>';
-      }
-    } else {
-      renderPanelForState(currentZoom);
-    }
+    if (vs.zoom === 'us') resetPanelToUS(chamber);
+    else renderPanelForState(chamber, vs.zoom);
 
     sel.on('.zoom', null);
     const zoom = d3.zoom()
       .scaleExtent([1, 24])
       .translateExtent([[-150,-150],[W+150,H+150]])
       .on('zoom', (ev) => {
-        _currentZoomTransform = ev.transform;
+        vs.transform = ev.transform;
         zoomLayer.attr('transform', ev.transform);
-        zoomLayer.selectAll('path')
-          .attr('stroke-width', (currentZoom==='us'?1.5:2.4) / ev.transform.k);
+        zoomLayer.selectAll('path').attr('stroke-width', strokeBase / ev.transform.k);
       });
     sel.call(zoom);
-    // Reset zoom when chamber OR view mode changes. Preserve otherwise.
-    const zoomKey = currentChamber + '/' + currentZoom;
-    if (_lastZoomKey !== zoomKey){
-      _lastZoomKey = zoomKey;
-      _currentZoomTransform = d3.zoomIdentity;
+    const zoomKey = view + '/' + chamber + '/' + vs.zoom;
+    if (vs.lastZoomKey !== zoomKey){
+      vs.lastZoomKey = zoomKey;
+      vs.transform = d3.zoomIdentity;
       sel.call(zoom.transform, d3.zoomIdentity);
-    } else if (_currentZoomTransform && _currentZoomTransform !== d3.zoomIdentity){
-      sel.call(zoom.transform, _currentZoomTransform);
+    } else if (vs.transform && vs.transform !== d3.zoomIdentity){
+      sel.call(zoom.transform, vs.transform);
     }
   }
-  let _lastZoomKey = null;
-  let _currentZoomTransform = null;
 
-  async function load(){
-    const state = CS();
+  function rerenderActive(){
+    if (view === 'split'){
+      renderChamber('sldl');
+      renderChamber('sldu');
+    } else {
+      renderChamber(view);
+    }
+  }
+
+  // --- Data loading (per chamber) ----------------------------
+  async function loadChamber(chamber){
+    const state = CHAMBER_STATE[chamber];
     if (state.loaded || state.loading) return;
     state.loading = true;
-    const ch = CH();
+    const ch = CHAMBERS[chamber];
     try {
       const res = await fetch(ch.topoUrl);
-      if (!res.ok) throw new Error(`fetch ${ch.topoUrl}: ${res.status}`);
-      const topo = await res.json();
+      if (!res.ok) throw new Error(`fetch ${ch.topoUrl}: HTTP ${res.status}`);
+      const rawText = await res.text();
+      const trimmed = rawText.trimStart();
+      if (!trimmed.startsWith('{')){
+        const preview = rawText.slice(0, 120).replace(/\s+/g, ' ');
+        throw new Error(`${ch.topoUrl} did not return JSON (got: "${preview}…"). Is the file deployed at the site root?`);
+      }
+      let topo;
+      try { topo = JSON.parse(rawText); }
+      catch(pe){ throw new Error(`${ch.topoUrl} is not valid JSON: ${pe.message}`); }
       const objName = (topo.objects && topo.objects[ch.topoObject]) ? ch.topoObject : Object.keys(topo.objects||{})[0];
-      if (!objName) throw new Error('no topojson objects');
+      if (!objName) throw new Error(`${ch.topoUrl} has no topojson objects`);
       const fc = topojson.feature(topo, topo.objects[objName]);
       state.features = fc.features || [];
 
-      // SLDL: separate lean CSV → join by GEOID.
-      // SLDU: properties already carry margin/dem_pct/baseline.
       if (ch.leanCsvUrl){
         try {
           const csvRes = await fetch(ch.leanCsvUrl, { cache:'no-store' });
@@ -960,8 +1243,7 @@
           const leanByGeoid = {};
           for (let i = 1; i < lines.length; i++){
             const c = lines[i].split(',');
-            const geoid = c[iGeoid];
-            if (!geoid) continue;
+            const geoid = c[iGeoid]; if (!geoid) continue;
             leanByGeoid[geoid] = {
               dem_pct:  parseFloat(c[iDem]),
               margin:   parseFloat(c[iMar]),
@@ -972,26 +1254,16 @@
           for (const f of state.features){
             const p = f.properties; if (!p) continue;
             const lean = leanByGeoid[p.GEOID];
-            if (lean){
-              p.dem_pct  = lean.dem_pct;
-              p.margin   = lean.margin;
-              p.baseline = lean.baseline;
-              matched++;
-            }
+            if (lean){ p.dem_pct = lean.dem_pct; p.margin = lean.margin; p.baseline = lean.baseline; matched++; }
           }
-          console.log(`[state-legs/${ch.key}] joined lean data: ${matched}/${state.features.length} districts`);
-        } catch (e){
-          console.error(`[state-legs/${ch.key}] lean csv load failed`, e);
-        }
+          console.log(`[state-legs/${chamber}] joined lean data: ${matched}/${state.features.length} districts`);
+        } catch (e){ console.error(`[state-legs/${chamber}] lean csv load failed`, e); }
       } else {
-        // SLDU: sanity-check that properties actually have what we need.
         const hasAny = state.features.some(f => f.properties && f.properties.margin != null);
-        const n = state.features.length;
-        if (!hasAny) console.warn(`[state-legs/${ch.key}] no margin data on topojson properties — build_sldu.py output may be broken`);
-        else console.log(`[state-legs/${ch.key}] embedded properties: ${n} districts`);
+        console.log(`[state-legs/${chamber}] embedded properties: ${state.features.length} districts${hasAny?'':' (no margin data found!)'}`);
       }
 
-      // Hispanic CSV — optional for both chambers. Silent no-op if absent.
+      // Hispanic CSV (optional — silent no-op if missing)
       if (ch.hispCsvUrl){
         try {
           const hRes = await fetch(ch.hispCsvUrl, { cache:'no-store' });
@@ -1002,88 +1274,91 @@
             const iG = hdr.indexOf('GEOID');
             const iH = hdr.indexOf('h_share');
             if (iG >= 0 && iH >= 0){
-              const dict = HISPANIC_SHARE[ch.key];
+              const dict = HISPANIC_SHARE[chamber];
               let kept = 0, skipped = 0;
               for (let i = 1; i < lines.length; i++){
                 const c = lines[i].split(',');
                 const geoid = c[iG];
                 const h = parseFloat(c[iH]);
                 if (geoid && isFinite(h)){
-                  if (h >= 0.5){ dict[geoid] = h; kept++; }
-                  else skipped++;
+                  if (h >= 0.5){ dict[geoid] = h; kept++; } else skipped++;
                 }
               }
-              console.log(`[state-legs/${ch.key}] Hispanic share: ${kept} districts ≥50% (${skipped} below threshold, ignored)`);
+              console.log(`[state-legs/${chamber}] Hispanic share: ${kept} districts ≥50% (${skipped} below threshold, ignored)`);
             }
           } else {
-            console.log(`[state-legs/${ch.key}] no Hispanic CSV (adjustment disabled)`);
+            console.log(`[state-legs/${chamber}] no Hispanic CSV at ${ch.hispCsvUrl} (adjustment disabled)`);
           }
-        } catch (e){
-          console.log(`[state-legs/${ch.key}] Hispanic CSV not available (adjustment disabled)`);
-        }
+        } catch (e){ console.log(`[state-legs/${chamber}] Hispanic CSV not available (adjustment disabled)`); }
       }
 
-      attachRatios();
-      applyProjection();
-      populateStateSelect();
+      attachRatios(chamber);
+      applyProjection(chamber);
       hideOldTooltips();
-      injectPanel();
-      refreshChamberLabels();
 
       const hasAnyMargin = state.features.some(f => f.properties && f.properties.margin != null && isFinite(f.properties.margin));
-      if (!hasAnyMargin) {
-        const stage = stageEl();
-        if (stage && !stage.querySelector('.sldlDataBanner')) {
+      if (!hasAnyMargin){
+        const stage = view === 'split'
+          ? splitSvgEl(chamber)?.closest('.splitMapFrame')
+          : (root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard'));
+        if (stage && !stage.querySelector('.sldlDataBanner')){
           const b = document.createElement('div');
           b.className = 'sldlDataBanner';
-          b.textContent = `No partisan data loaded — upload ${ch.topoUrl.replace('./','')} with margin/dem_pct/baseline`;
+          b.textContent = `No partisan data in ${ch.topoUrl.replace('./','')}`;
           stage.appendChild(b);
         }
       }
 
       state.loaded = true;
     } catch(e){
-      console.error(`[state-legs/${ch.key}] load failed`, e);
-      const stage = stageEl();
-      if (stage && !stage.querySelector('.sldlDataBanner')) {
+      console.error(`[state-legs/${chamber}] load failed`, e);
+      const stage = view === 'split'
+        ? splitSvgEl(chamber)?.closest('.splitMapFrame')
+        : (root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard'));
+      if (stage && !stage.querySelector('.sldlDataBanner')){
         const b = document.createElement('div');
         b.className = 'sldlDataBanner';
-        b.textContent = `Failed to load ${ch.topoUrl.replace('./','')} — check that the file exists at the site root`;
+        b.textContent = `Failed to load ${ch.topoUrl.replace('./','')} — ${e.message}`;
         stage.appendChild(b);
       }
-    }
-    finally { state.loading = false; }
+    } finally { state.loading = false; }
 
-    // gb history + watcher are chamber-agnostic; start once.
-    if (!_gbStarted){
-      _gbStarted = true;
-      await loadGbHistory();
-      startGbWatcher();
-    }
+    if (!_gbStarted){ _gbStarted = true; await loadGbHistory(); startGbWatcher(); }
   }
   let _gbStarted = false;
 
-  function wireControls(){
+  // --- Wiring (single-map zoom controls) ---------------------
+  function wireSingleModeControls(){
     const r = root(); if (!r) return;
     r.addEventListener('click', (ev) => {
-      const btn = ev.target.closest('[data-sldl-zoom]');
+      if (view === 'split') return;
+      const btn = ev.target.closest('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom]');
       if (!btn) return;
-      currentZoom = btn.getAttribute('data-sldl-zoom');
-      r.querySelectorAll('[data-sldl-zoom]').forEach(b => b.classList.toggle('active', b===btn));
+      viewState[currentChamber].zoom = btn.getAttribute('data-sldl-zoom');
+      r.querySelectorAll('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom]')
+        .forEach(b => b.classList.toggle('active', b===btn));
       const sel = zoomSelect(); if (sel) sel.value = '';
-      render();
+      renderChamber(currentChamber);
     });
-    const sel = zoomSelect();
-    if (sel) sel.addEventListener('change', () => {
-      if (!sel.value) return;
-      currentZoom = sel.value;
-      const ub = usBtn(); if (ub) ub.classList.remove('active');
-      render();
-    });
-    window.addEventListener('resize', () => { if (CS().loaded) render(); });
+    const setupSelect = () => {
+      const sel = zoomSelect(); if (!sel || sel._wired) return;
+      sel._wired = true;
+      sel.addEventListener('change', () => {
+        if (view === 'split') return;
+        if (!sel.value) return;
+        viewState[currentChamber].zoom = sel.value;
+        const ub = usBtn(); if (ub) ub.classList.remove('active');
+        renderChamber(currentChamber);
+      });
+    };
+    setupSelect();
+    requestAnimationFrame(setupSelect);
+
+    window.addEventListener('resize', () => rerenderActive());
   }
 
-  function handleTabClick(ev){
+  // --- Page tab entry ----------------------------------------
+  async function handleTabClick(ev){
     const btn = ev.target.closest('.pageTab');
     if (!btn) return;
     const page = btn.dataset.page;
@@ -1091,9 +1366,17 @@
     if (page === 'state-legs'){
       r.style.display = 'grid';
       r.classList.add('sldl-active');
-      load().then(() => {
-        if (CS().loaded) requestAnimationFrame(() => requestAnimationFrame(render));
-      });
+      if (view === 'split'){
+        ensureSplitRows();
+        await Promise.all(['sldl','sldu'].map(ensureChamberLoaded));
+        populateStateSelectForPanel(splitZoomSelect('sldl'), CS('sldl').byState);
+        populateStateSelectForPanel(splitZoomSelect('sldu'), CS('sldu').byState);
+        renderChamber('sldl'); renderChamber('sldu');
+      } else {
+        await ensureChamberLoaded(view);
+        populateStateSelectForPanel(zoomSelect(), CS(view).byState);
+        renderChamber(view);
+      }
     } else {
       r.classList.remove('sldl-active');
       r.style.display = 'none';
@@ -1102,7 +1385,13 @@
 
   function init(){
     const r = root(); if (!r) return;
-    wireControls();
+    injectStyles();
+    injectToolbar();
+    const st = stageEl();
+    if (st) ensurePanel(st);
+    setCardTitles();
+    wireSingleModeControls();
+
     const nav = document.querySelector('.pageTabs');
     if (nav) {
       nav.addEventListener('click', handleTabClick);
@@ -1111,54 +1400,30 @@
     r.style.display = 'none';
   }
 
-  // Debug helper — dual-chamber aware
+  // Debug helper
   window.sldlDebug = function(stateAbbr){
     if (!stateAbbr) stateAbbr = 'GA';
-    const bs = CS().byState;
-    if (!bs || !bs[stateAbbr]){
-      return { error: 'no state ' + stateAbbr + ' in ' + currentChamber, available: bs ? Object.keys(bs).sort() : null };
+    const chambersToTry = view === 'split' ? ['sldl','sldu'] : [currentChamber];
+    const out = { view, currentChamber, chambers_inspected: chambersToTry, gbCurrent };
+    for (const ch of chambersToTry){
+      const bs = CS(ch).byState;
+      if (!bs || !bs[stateAbbr]){ out[ch] = { error: 'no state ' + stateAbbr }; continue; }
+      const s = bs[stateAbbr];
+      const margins = s.features.map(f => f.properties._projMargin).filter(x => x != null).sort((a,b)=>a-b);
+      out[ch] = {
+        chamber_size: CHAMBER_SIZE(ch)[stateAbbr],
+        features: s.features.length,
+        null_margins: s.features.length - margins.length,
+        seats_up_2026: seatsUp2026(ch, stateAbbr, s.features.length),
+        current_senate_comp: ch==='sldu' ? CURRENT_SENATE_COMP_2025[stateAbbr] : null,
+        odds: chamberOdds(ch, stateAbbr),
+        mean_margin: margins.length ? +(margins.reduce((a,b)=>a+b,0)/margins.length).toFixed(2) : null,
+        median_margin: margins.length ? +margins[Math.floor(margins.length/2)].toFixed(2) : null,
+        totalD: s.totalD, totalR: s.totalR,
+        multi_member: MULTIMEMBER_SET(ch).has(stateAbbr),
+      };
     }
-    const s = bs[stateAbbr];
-    const margins = s.features.map(f => f.properties._projMargin).filter(x => x != null).sort((a,b)=>a-b);
-    const nullCount = s.features.length - margins.length;
-    const odds = chamberOdds(stateAbbr);
-    let forecastGb = null, forecastNowcastGb = null, hispanicGb = null;
-    try { forecastGb = DATA?.house?.gb; } catch(_){}
-    try { forecastNowcastGb = (typeof _savedNowcastGb !== 'undefined') ? _savedNowcastGb : null; } catch(_){}
-    try { hispanicGb = (typeof HISPANIC_GB !== 'undefined') ? HISPANIC_GB : null; } catch(_){}
-    const buckets = { 'D>20':0, 'D10-20':0, 'D2.5-10':0, 'TOSS':0, 'R2.5-10':0, 'R10-20':0, 'R>20':0 };
-    for (const m of margins){
-      if (m > 20)      buckets['D>20']++;
-      else if (m > 10) buckets['D10-20']++;
-      else if (m > 2.5) buckets['D2.5-10']++;
-      else if (m >= -2.5) buckets['TOSS']++;
-      else if (m >= -10) buckets['R2.5-10']++;
-      else if (m >= -20) buckets['R10-20']++;
-      else              buckets['R>20']++;
-    }
-    const out = {
-      chamber: currentChamber,
-      state: stateAbbr,
-      chamber_total_members_real: CHAMBER()[stateAbbr],
-      chamber_features_in_topojson: s.features.length,
-      features_with_null_margin: nullCount,
-      seats_up_2026_feature_count: seatsUp2026(stateAbbr, s.features.length),
-      seats_up_2026_fraction: SEATS_UP_FRAC_2026()[stateAbbr] ?? 'default (1.0)',
-      gbCurrent_in_state_legs: gbCurrent,
-      DATA_house_gb: forecastGb,
-      _savedNowcastGb: forecastNowcastGb,
-      HISPANIC_GB: hispanicGb,
-      NAT_SIGMA, IDIO_SIGMA, MC_SIMS,
-      odds,
-      mean_margin: margins.length ? (margins.reduce((a,b)=>a+b,0) / margins.length).toFixed(2) : null,
-      median_margin: margins.length ? margins[Math.floor(margins.length/2)].toFixed(2) : null,
-      min_margin: margins[0]?.toFixed(2),
-      max_margin: margins[margins.length-1]?.toFixed(2),
-      bucket_counts: buckets,
-      totalD_from_indexByState: s.totalD,
-      totalR_from_indexByState: s.totalR,
-    };
-    console.log(`=== sldlDebug(${stateAbbr}) · ${currentChamber} ===`);
+    console.log(`=== sldlDebug(${stateAbbr}) ===`);
     console.log(JSON.stringify(out, null, 2));
     return out;
   };
