@@ -3958,13 +3958,15 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
 <div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures">
 
-  <!-- State House — card/info panel only (no map here) -->
+  <!-- State House / State Senate — card/info panel only (no map here).
+       Titles carry data-sldl-left-* hooks so state-legs.js can rewrite
+       them when the user toggles between chambers. -->
   <section class="modeCol" data-mode="sldl">
     <section class="card topCard">
       <div class="panelHeaderRow">
         <div class="panelTitleWrap">
-          <div class="panelTitle">State House</div>
-          <div class="panelSub">Lower chambers — district baselines</div>
+          <div class="panelTitle" data-sldl-left-title>State House</div>
+          <div class="panelSub" data-sldl-left-sub>Lower chambers — district baselines</div>
         </div>
       </div>
     </section>
@@ -3978,12 +3980,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </section>
   </section>
 
-  <!-- State Senate column — repurposed to hold the map -->
+  <!-- Map column — labeled by chamber via data-sldl-right-title.
+       state-legs.js rewrites the title text when the chamber toggle flips. -->
   <section class="modeCol" data-mode="sldu">
     <section class="card topCard">
       <div class="panelHeaderRow">
         <div class="panelTitleWrap">
-          <div class="panelTitle">State House Map</div>
+          <div class="panelTitle" data-sldl-right-title>State House Map</div>
           <div class="panelSub">District baselines</div>
         </div>
       </div>
@@ -4090,7 +4093,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="polls.js?v=25"></script>
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
-<script src="state-legs.js?v=8"></script>
+<script src="state-legs.js?v=9"></script>
 
 
 <script>
