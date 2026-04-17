@@ -24,7 +24,12 @@ const LABEL_OVERRIDES = {
   }
 };
 
-/* ---------- Seat rules per year ---------- */
+/* ---------- Seat rules per year ----------
+   For senate:   baseD/baseR = non-up D/R seats going INTO that election
+   For governor: baseD/baseR = non-up gubernatorial seats
+   For house:    always baseD=baseR=0 (all 435 up every cycle)
+   For president: always 538 EV, 270 threshold
+*/
 const SEAT_RULES = {
   2025: {
     senate:   { total:1, majorityLine:1, baseD:0, baseR:0 },
@@ -36,18 +41,114 @@ const SEAT_RULES = {
     senate:    { total:100, majorityLine:50,  baseD:28, baseR:39 },
     governor:  { total:50,  majorityLine:26,  baseD:20, baseR:19 },
     house:     { total:435, majorityLine:218, baseR:0,  baseD:0  }
+  },
+  2022: {
+    senate:    { total:100, majorityLine:50, baseD:36, baseR:29 },
+    governor:  { total:50,  majorityLine:26, baseD:6,  baseR:8  },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0  }
+  },
+  2020: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:35, baseR:30 },
+    governor:  { total:50,  majorityLine:26, baseD:15, baseR:24 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2018: {
+    senate:    { total:100, majorityLine:50, baseD:24, baseR:42 },
+    governor:  { total:50,  majorityLine:26, baseD:7,  baseR:7  },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2016: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:36, baseR:30 },
+    governor:  { total:50,  majorityLine:26, baseD:13, baseR:26 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2014: {
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:34 },
+    governor:  { total:50,  majorityLine:26, baseD:4,  baseR:10 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2012: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:37 },
+    governor:  { total:50,  majorityLine:26, baseD:18, baseR:21 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2010: {
+    senate:    { total:100, majorityLine:50, baseD:38, baseR:25 },
+    governor:  { total:50,  majorityLine:26, baseD:7,  baseR:7  },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2008: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:35 },
+    governor:  { total:50,  majorityLine:26, baseD:19, baseR:20 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2006: {
+    senate:    { total:100, majorityLine:50, baseD:29, baseR:38 },
+    governor:  { total:50,  majorityLine:26, baseD:4,  baseR:10 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2004: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:29, baseR:37 },
+    governor:  { total:50,  majorityLine:26, baseD:21, baseR:18 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2002: {
+    senate:    { total:100, majorityLine:50, baseD:34, baseR:32 },
+    governor:  { total:50,  majorityLine:26, baseD:6,  baseR:8  },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
+  },
+  2000: {
+    president: { total:538, majorityLine:270, baseD:0, baseR:0 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:36 },
+    governor:  { total:50,  majorityLine:26, baseD:20, baseR:19 },
+    house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   }
 };
 
-/* ---------- Electoral votes per state (2024 apportionment) ---------- */
-const EV = {
+/* ---------- Electoral votes per apportionment period ---------- */
+// 2024-present (2020 Census): total 538
+const EV_2024 = {
   AL:9,AK:3,AZ:11,AR:6,CA:54,CO:10,CT:7,DE:3,DC:3,FL:30,GA:16,HI:4,ID:4,IL:19,
   IN:11,IA:6,KS:6,KY:8,LA:8,ME:4,MD:10,MA:11,MI:15,MN:10,MS:6,MO:10,MT:4,NE:5,
   NV:6,NH:4,NJ:14,NM:5,NY:28,NC:16,ND:3,OH:17,OK:7,OR:8,PA:19,RI:4,SC:9,SD:3,
   TN:11,TX:40,UT:6,VT:3,VA:13,WA:12,WV:4,WI:10,WY:3
 };
+// 2012–2020 (2010 Census)
+const EV_2012 = {
+  AL:9,AK:3,AZ:11,AR:6,CA:55,CO:9,CT:7,DE:3,DC:3,FL:29,GA:16,HI:4,ID:4,IL:20,
+  IN:11,IA:6,KS:6,KY:8,LA:8,ME:4,MD:10,MA:11,MI:16,MN:10,MS:6,MO:10,MT:3,NE:5,
+  NV:6,NH:4,NJ:14,NM:5,NY:29,NC:15,ND:3,OH:18,OK:7,OR:7,PA:20,RI:4,SC:9,SD:3,
+  TN:11,TX:38,UT:6,VT:3,VA:13,WA:12,WV:5,WI:10,WY:3
+};
+// 2004–2008 (2000 Census)
+const EV_2004 = {
+  AL:9,AK:3,AZ:10,AR:6,CA:55,CO:9,CT:7,DE:3,DC:3,FL:27,GA:15,HI:4,ID:4,IL:21,
+  IN:11,IA:7,KS:6,KY:8,LA:9,ME:4,MD:10,MA:12,MI:17,MN:10,MS:6,MO:11,MT:3,NE:5,
+  NV:5,NH:4,NJ:15,NM:5,NY:31,NC:15,ND:3,OH:20,OK:7,OR:7,PA:21,RI:4,SC:8,SD:3,
+  TN:11,TX:34,UT:5,VT:3,VA:13,WA:11,WV:5,WI:10,WY:3
+};
+// 2000 (1990 Census)
+const EV_2000 = {
+  AL:9,AK:3,AZ:8,AR:6,CA:54,CO:8,CT:8,DE:3,DC:3,FL:25,GA:13,HI:4,ID:4,IL:22,
+  IN:12,IA:7,KS:6,KY:8,LA:9,ME:4,MD:10,MA:12,MI:18,MN:10,MS:7,MO:11,MT:3,NE:5,
+  NV:4,NH:4,NJ:15,NM:5,NY:33,NC:14,ND:3,OH:21,OK:8,OR:7,PA:23,RI:4,SC:8,SD:3,
+  TN:11,TX:32,UT:5,VT:3,VA:13,WA:11,WV:5,WI:11,WY:3
+};
+function evForYear(y){
+  if (y >= 2024) return EV_2024;
+  if (y >= 2012) return EV_2012;
+  if (y >= 2004) return EV_2004;
+  return EV_2000;
+}
+// Keep default EV pointing to current for legacy callers
+const EV = EV_2024;
 
-/* ---------- States that had races in 2024 (filter for senate/governor) ---------- */
+/* ---------- States that had races in each cycle (filter for senate/governor) ---------- */
 const RACES = {
   2025: {
     president: new Set(),  // none
@@ -56,9 +157,63 @@ const RACES = {
     house:    new Set(["CA"])
   },
   2024: {
-  president: null, // all states
-  senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NJ","NM","NY","ND","OH","PA","RI","TN","TX","UT","VT","VA","WA","WV","WI","WY"]),
-  governor: new Set(["DE","IN","MO","MT","NC","NH","ND","UT","VT","WA","WV"]),
+    president: null, // all states
+    senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NJ","NM","NY","ND","OH","PA","RI","TN","TX","UT","VT","VA","WA","WV","WI","WY"]),
+    governor: new Set(["DE","IN","MO","MT","NC","NH","ND","UT","VT","WA","WV"]),
+  },
+  2022: {
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2020: {
+    president: null,
+    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
+  },
+  2018: {
+    senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2016: {
+    president: null,
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
+  },
+  2014: {
+    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2012: {
+    president: null,
+    senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
+  },
+  2010: {
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2008: {
+    president: null,
+    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
+  },
+  2006: {
+    senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2004: {
+    president: null,
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
+  },
+  2002: {
+    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
+  },
+  2000: {
+    president: null,
+    senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
+    governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
 };
 
@@ -536,9 +691,7 @@ function initYearSelector(){
     const btn = document.createElement("button");
     btn.className = "yearBtn" + (y === pastYear ? " active" : "");
     btn.textContent = y;
-    if (y !== 2024 && y !== 2025) btn.classList.add("disabled");
     btn.addEventListener("click", () => {
-      if (y !== 2024 && y !== 2025) return;
       pastYear = y;
       wrap.querySelectorAll(".yearBtn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
@@ -571,16 +724,30 @@ async function renderPastYear(year){
   const rules = SEAT_RULES[year] || {};
   const raceFilters = RACES[year] || {};
 
+  // Determine year type
+  const isPresYear = (year % 4 === 0) && (year >= 2000);
+  const isOffYear = !!LABEL_OVERRIDES[year];  // 2025-style single-race year
+  // Midterm = regular year but not pres year (2002, 2006, 2010, etc.) — hide president column
+  const isMidterm = !isPresYear && !isOffYear;
+
   // Adjust grid for years with fewer columns
   const pageEl = document.getElementById("pastElectionsPage");
   if (pageEl){
-    const nCols = LABEL_OVERRIDES[year] ? 3 : 4;
+    let nCols = 4;
+    if (isOffYear) nCols = 3;     // off-year: hides president
+    else if (isMidterm) nCols = 3; // midterm: hides president
     pageEl.style.gridTemplateColumns = `repeat(${nCols}, minmax(0, 1fr))`;
   }
 
   for (const mode of PAST_MODES){
     const ui = PAST_UI[mode];
     if (!ui) continue;
+
+    // Hide president column for midterms
+    if (isMidterm && mode === "president"){
+      ui.col.style.display = "none";
+      continue;
+    }
 
     // --- Label overrides & column visibility for off-years ---
     const overrides = LABEL_OVERRIDES[year];
@@ -606,8 +773,22 @@ async function renderPastYear(year){
     } else {
       // Restore defaults for multi-state years
       ui.col.style.display = "";
+      const presNumbers = { 2000:54, 2004:55, 2008:56, 2012:57, 2016:58, 2020:59, 2024:60 };
+      const senClassMap = {
+        2000:"Class I - 2000", 2002:"Class II - 2002", 2004:"Class III - 2004",
+        2006:"Class I - 2006", 2008:"Class II - 2008", 2010:"Class III - 2010",
+        2012:"Class I - 2012", 2014:"Class II - 2014", 2016:"Class III - 2016",
+        2018:"Class I - 2018", 2020:"Class II - 2020", 2022:"Class III - 2022",
+        2024:"Class I & III - 2024"
+      };
+      const congNum = { 2000:107, 2002:108, 2004:109, 2006:110, 2008:111, 2010:112, 2012:113, 2014:114, 2016:115, 2018:116, 2020:117, 2022:118, 2024:119 };
       const defaults = { president:"President", senate:"Senate", governor:"Governor", house:"House" };
-      const defaultSubs = { president:"59th Presidential Election", senate:"Class I & III - 2024", governor:"Gubernatorial - 2024", house:"119th Congress - 2024" };
+      const defaultSubs = {
+        president: presNumbers[year] ? `${presNumbers[year]}th Presidential Election` : "Presidential Election",
+        senate:    senClassMap[year] || `Senate - ${year}`,
+        governor:  `Gubernatorial - ${year}`,
+        house:     congNum[year] ? `${congNum[year]}th Congress - ${year}` : `U.S. House - ${year}`
+      };
       const titleEl = ui.col.querySelector(".panelTitle");
       const subEl = ui.col.querySelector(".panelSub");
       const oddsTitle = ui.col.querySelector(".oddsTitle");
@@ -639,11 +820,12 @@ async function renderPastYear(year){
     const pDems = [];
     const weights = [];
 
+    const evTable = evForYear(year);
     for (const st of contested){
       const model = getStateModelPast(year, mode, st);
       if (!model) continue;
       const m = model.mFinal;
-      const w = (mode === "president") ? (EV[st] || 1) : 1;
+      const w = (mode === "president") ? (evTable[st] || 1) : 1;
 
       // Binary seat call (same as forecast.js)
       if (!isFinite(m)) continue;
