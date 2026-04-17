@@ -429,11 +429,21 @@ function computePastTimeSeries(year, mode, st){
       normalizePair(pollPair.D / ratio.D, pollPair.R / ratio.R), ratio
     );
 
+    // Circuit breaker (mirrors getStateModelPast): if national indicator implies >=70% for either side
+    // in this state, polls dominate (fundamentals get drowned out by national-shift extrapolation)
+    let wGb = WEIGHTS.gb, wPolls = WEIGHTS.polls, wInd = WEIGHTS.ind;
+    if (indPair){
+      const indMax = Math.max(indPair.D, indPair.R);
+      if (indMax >= 70){
+        wPolls = 80; wGb = 15; wInd = 5;
+      }
+    }
+
     // Combine
     const combined = weightedCombine([
-      { pair: gbPair, w: WEIGHTS.gb },
-      { pair: pollPair, w: WEIGHTS.polls },
-      { pair: indPair, w: WEIGHTS.ind },
+      { pair: gbPair, w: wGb },
+      { pair: pollPair, w: pollPair ? wPolls : 0 },
+      { pair: indPair, w: indPair ? wInd : 0 },
     ]);
     const mFinal = marginRD(combined.pair);
     const wp = winProbFromMargin(mFinal);
