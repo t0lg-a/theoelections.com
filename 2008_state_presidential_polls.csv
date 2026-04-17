@@ -1,0 +1,1311 @@
+mode,state,date,dem,rep,sigma,pollster
+president,AK,2008-09-09,33.0,64.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AK,2008-09-10,39.0,55.0,4.08,American Research Group
+president,AK,2008-09-19,37.0,55.0,4.08,Fairleigh Dickinson University
+president,AK,2008-10-06,40.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AK,2008-10-05,38.0,55.0,4.47,Alaska Survey Research
+president,AK,2008-10-18,42.0,53.0,4.47,Alaska Survey Research
+president,AK,2008-10-28,41.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AK,2008-10-26,37.0,56.0,4.52,Dittman Research
+president,AK,2008-10-25,38.0,55.0,5,YouGov
+president,AK,2008-11-02,44.6,48.3,5,Hays Research Group
+president,AK,2008-11-02,43.0,55.0,4.08,American Research Group
+president,AL,2008-09-06,35.0,55.0,4.06,Capital Survey Research Center
+president,AL,2008-09-15,36.0,58.0,4.08,American Research Group
+president,AL,2008-09-12,25.0,52.0,4.96,University of South Alabama Polling Group
+president,AL,2008-09-16,34.0,64.0,3.91,SurveyUSA
+president,AL,2008-09-22,39.0,60.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AL,2008-10-04,35.0,55.0,4.25,Capital Survey Research Center
+president,AL,2008-10-08,35.0,62.0,3.79,SurveyUSA
+president,AL,2008-10-15,34.0,54.0,4.06,Capital Survey Research Center
+president,AL,2008-10-27,36.0,61.0,3.92,SurveyUSA
+president,AL,2008-10-25,39.0,57.0,4.7,YouGov
+president,AR,2008-09-22,42.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AR,2008-09-21,41.0,53.0,4.08,American Research Group
+president,AR,2008-10-11,36.0,51.0,3.76,University of Arkansas Department of Political Science
+president,AR,2008-10-27,44.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AR,2008-10-30,44.0,51.0,4.08,American Research Group
+president,AR,2008-10-25,41.0,53.0,4.51,YouGov
+president,AZ,2008-09-13,39.0,56.0,4.08,American Research Group
+president,AZ,2008-09-27,38.0,45.0,3.2,Arizona State University Morrison Institute for Public Policy
+president,AZ,2008-09-29,38.0,59.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2008-10-18,42.0,44.0,4.95,Zimmerman & Associates/Marketing Intelligence
+president,AZ,2008-10-23,44.0,48.0,4.08,Grove Insight
+president,AZ,2008-10-26,46.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2008-10-25,44.0,46.0,3.13,Arizona State University Morrison Institute for Public Policy
+president,AZ,2008-10-22,41.0,49.0,4.08,Northern Arizona University Social Research Laboratory
+president,AZ,2008-10-27,44.0,48.0,4.0,Mason-Dixon Polling & Strategy
+president,AZ,2008-10-25,43.0,49.0,3.52,Big Village
+president,AZ,2008-10-29,46.0,50.0,4.08,American Research Group
+president,AZ,2008-10-25,46.0,50.0,3.83,YouGov
+president,CA,2008-09-09,52.0,36.0,3.47,Field Research Corp. (Field Poll)
+president,CA,2008-09-13,50.0,40.0,2.94,Public Policy Institute of California
+president,CA,2008-09-19,53.0,39.0,4.08,American Research Group
+president,CA,2008-09-22,56.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CA,2008-09-23,53.0,43.0,3.89,SurveyUSA
+president,CA,2008-10-04,55.0,39.0,3.86,SurveyUSA
+president,CA,2008-10-09,56.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CA,2008-10-15,59.0,35.0,4.03,SurveyUSA
+president,CA,2008-10-16,56.0,33.0,2.9,Public Policy Institute of California
+president,CA,2008-10-25,61.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CA,2008-10-23,55.0,33.0,3.22,Field Research Corp. (Field Poll)
+president,CA,2008-10-30,60.0,36.0,3.96,SurveyUSA
+president,CA,2008-10-25,55.0,40.0,3.16,YouGov
+president,CO,2008-09-07,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-09-08,47.0,46.0,3.05,Public Policy Polling
+president,CO,2008-09-10,49.0,46.0,4.47,InsiderAdvantage
+president,CO,2008-09-11,46.0,48.0,3.48,Zogby Analytics
+president,CO,2008-09-12,44.0,46.0,4.08,American Research Group
+president,CO,2008-09-14,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-09-13,45.0,44.0,4.99,FTI Consulting
+president,CO,2008-09-17,51.0,41.0,4.44,InsiderAdvantage
+president,CO,2008-09-20,51.0,44.0,3.04,Public Policy Polling
+president,CO,2008-09-18,49.0,45.0,2.66,Quinnipiac University
+president,CO,2008-09-23,50.0,41.0,4.45,InsiderAdvantage
+president,CO,2008-09-23,50.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-09-22,49.0,45.0,3.55,Big Village
+president,CO,2008-09-21,44.0,43.0,4.47,Ciruli Associates
+president,CO,2008-09-24,45.0,48.0,4.08,American Research Group
+president,CO,2008-09-28,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-09-30,44.0,44.0,4.0,Mason-Dixon Polling & Strategy
+president,CO,2008-10-05,51.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-10-06,51.0,45.0,4.54,InsiderAdvantage
+president,CO,2008-10-05,52.0,43.0,3.17,Quinnipiac University
+president,CO,2008-10-09,52.0,42.0,2.74,Public Policy Polling
+president,CO,2008-10-10,52.0,43.0,3.03,Quinnipiac University
+president,CO,2008-10-12,47.0,43.0,4.71,Suffolk University
+president,CO,2008-10-11,48.0,47.0,3.19,Zogby Analytics
+president,CO,2008-10-13,50.0,43.0,3.62,Big Village
+president,CO,2008-10-16,52.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-10-19,51.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-10-20,51.0,46.0,4.17,InsiderAdvantage
+president,CO,2008-10-19,48.0,48.0,3.24,Zogby Analytics
+president,CO,2008-10-22,52.0,40.0,4.47,Public Opinion Strategies
+president,CO,2008-10-22,52.0,40.0,4.47,Public Opinion Strategies
+president,CO,2008-10-26,50.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,CO,2008-10-26,53.0,45.0,3.97,InsiderAdvantage
+president,CO,2008-10-24,50.0,41.0,4.0,GfK Group
+president,CO,2008-10-25,48.0,44.0,4.94,FTI Consulting
+president,CO,2008-10-27,51.0,45.0,3.83,Marist College
+president,CO,2008-10-25,50.0,43.0,3.59,Big Village
+president,CO,2008-10-28,49.0,44.0,4.0,Mason-Dixon Polling & Strategy
+president,CO,2008-10-29,52.0,45.0,4.08,American Research Group
+president,CO,2008-10-29,54.0,44.0,2.22,Public Policy Polling
+president,CO,2008-10-25,55.0,40.0,3.82,YouGov
+president,CO,2008-11-02,51.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,CT,2008-09-16,53.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CT,2008-09-18,54.0,39.0,4.08,American Research Group
+president,CT,2008-09-24,54.0,38.0,3.82,SurveyUSA
+president,CT,2008-10-14,56.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CT,2008-10-20,56.0,31.0,4.46,University of Connecticut
+president,CT,2008-10-25,58.0,37.0,3.77,YouGov
+president,DC,2008-09-12,82.0,13.0,4.08,American Research Group
+president,DC,2008-10-25,81.0,15.0,5,YouGov
+president,DE,2008-09-13,55.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,DE,2008-09-14,51.0,40.0,4.08,American Research Group
+president,DE,2008-09-19,56.0,36.0,4.08,Fairleigh Dickinson University
+president,DE,2008-09-22,57.0,37.0,3.77,SurveyUSA
+president,DE,2008-10-07,56.0,38.0,4.83,West Chester University
+president,DE,2008-10-10,56.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,DE,2008-10-27,63.0,33.0,3.9,SurveyUSA
+president,DE,2008-10-25,59.0,37.0,5,YouGov
+president,FL,2008-09-07,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-09-06,45.0,50.0,3.21,Public Policy Polling
+president,FL,2008-09-07,43.0,50.0,3.11,Quinnipiac University
+president,FL,2008-09-10,42.0,50.0,4.42,InsiderAdvantage
+president,FL,2008-09-11,42.0,52.0,3.17,Zogby Analytics
+president,FL,2008-09-14,44.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-09-13,44.0,44.0,4.99,FTI Consulting
+president,FL,2008-09-15,48.0,44.0,3.32,Big Village
+president,FL,2008-09-16,45.0,51.0,3.76,SurveyUSA
+president,FL,2008-09-16,46.0,46.0,4.08,American Research Group
+president,FL,2008-09-16,45.0,47.0,3.54,SEA Polling & Strategic Design
+president,FL,2008-09-17,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,FL,2008-09-21,46.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-09-24,47.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-09-24,47.0,46.0,4.08,American Research Group
+president,FL,2008-09-24,49.0,43.0,2.93,Quinnipiac University
+president,FL,2008-09-28,47.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-09-27,49.0,46.0,3.26,Public Policy Polling
+president,FL,2008-09-27,47.0,48.0,4.09,SurveyUSA
+president,FL,2008-09-28,51.0,43.0,3.46,Quinnipiac University
+president,FL,2008-09-30,49.0,46.0,4.34,InsiderAdvantage
+president,FL,2008-09-29,51.0,43.0,3.6,Big Village
+president,FL,2008-09-29,46.0,42.0,4.08,Suffolk University
+president,FL,2008-09-30,42.0,45.0,4.02,"Fabrizio, Lee & Associates"
+president,FL,2008-10-05,52.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-10-05,48.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,FL,2008-10-08,50.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-10-12,51.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-10-13,48.0,44.0,4.04,InsiderAdvantage
+president,FL,2008-10-12,47.0,42.0,2.74,Datamar Analytics
+president,FL,2008-10-11,48.0,47.0,2.85,Zogby Analytics
+president,FL,2008-10-13,49.0,46.0,3.62,Big Village
+president,FL,2008-10-12,47.0,43.0,3.78,EMC Research
+president,FL,2008-10-16,47.0,49.0,4.25,SurveyUSA
+president,FL,2008-10-19,48.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-10-18,48.0,47.0,2.94,Public Policy Polling
+president,FL,2008-10-19,49.0,45.0,2.83,Zogby Analytics
+president,FL,2008-10-18,49.0,44.0,2.64,Quinnipiac University
+president,FL,2008-10-20,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,FL,2008-10-22,48.0,47.0,4.22,InsiderAdvantage
+president,FL,2008-10-21,49.0,42.0,3.54,SEA Polling & Strategic Design
+president,FL,2008-10-26,51.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-10-25,49.0,44.0,3.98,Datamar Analytics
+president,FL,2008-10-25,47.0,47.0,4.08,Zogby Analytics
+president,FL,2008-10-25,49.0,44.0,4.08,Suffolk University
+president,FL,2008-10-25,47.2,46.9,3.76,Zogby Analytics
+president,FL,2008-10-24,45.0,43.0,4.08,GfK Group
+president,FL,2008-10-24,47.0,45.0,2.64,Quinnipiac University
+president,FL,2008-10-26,45.0,41.0,4.08,"Fabrizio, Lee & Associates"
+president,FL,2008-10-26,49.0,40.0,3.96,Los Angeles Times
+president,FL,2008-10-25,45.0,44.0,4.95,FTI Consulting
+president,FL,2008-10-25,50.0,45.0,3.66,Big Village
+president,FL,2008-10-28,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,FL,2008-10-29,47.0,47.0,3.17,Datamar Analytics
+president,FL,2008-10-30,50.0,46.0,4.08,American Research Group
+president,FL,2008-10-31,47.5,46.2,4.08,Zogby Analytics
+president,FL,2008-10-25,49.0,47.0,3.16,YouGov
+president,FL,2008-11-02,49.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2008-11-01,47.0,48.0,3.9,Datamar Analytics
+president,FL,2008-11-01,50.0,48.0,2.41,Public Policy Polling
+president,FL,2008-10-30,47.0,45.0,2.37,Quinnipiac University
+president,FL,2008-11-02,49.0,48.0,3.84,Zogby Analytics
+president,FL,2008-11-02,50.0,47.0,3.8,SurveyUSA
+president,GA,2008-09-10,38.0,56.0,4.45,InsiderAdvantage
+president,GA,2008-09-10,35.0,56.0,3.54,Public Opinion Strategies
+president,GA,2008-09-16,43.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,GA,2008-09-15,41.0,57.0,3.82,SurveyUSA
+president,GA,2008-09-17,43.0,51.0,4.46,InsiderAdvantage
+president,GA,2008-09-20,39.0,57.0,4.08,American Research Group
+president,GA,2008-09-28,44.0,52.0,3.84,SurveyUSA
+president,GA,2008-09-30,44.0,50.0,4.22,InsiderAdvantage
+president,GA,2008-10-07,45.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,GA,2008-10-09,46.0,49.0,4.34,InsiderAdvantage
+president,GA,2008-10-11,43.0,51.0,4.28,SurveyUSA
+president,GA,2008-10-13,45.0,51.0,3.73,Big Village
+president,GA,2008-10-18,44.0,46.0,4.08,GQR
+president,GA,2008-10-22,46.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,GA,2008-10-23,48.0,47.0,4.03,InsiderAdvantage
+president,GA,2008-10-22,43.0,49.0,4.0,Mason-Dixon Polling & Strategy
+president,GA,2008-10-27,47.0,48.0,3.96,InsiderAdvantage
+president,GA,2008-10-25,46.0,50.0,3.81,Big Village
+president,GA,2008-10-30,47.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,GA,2008-10-25,47.0,50.0,3.31,YouGov
+president,GA,2008-11-02,47.0,48.0,4.42,InsiderAdvantage
+president,GA,2008-11-01,48.0,50.0,2.83,Public Policy Polling
+president,GA,2008-11-01,45.0,52.0,3.83,SurveyUSA
+president,HI,2008-09-09,63.0,32.0,4.08,American Research Group
+president,HI,2008-09-23,68.0,27.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,HI,2008-10-25,56.0,34.0,5,YouGov
+president,IA,2008-09-09,52.0,40.0,4.03,Selzer & Co.
+president,IA,2008-09-16,45.0,45.0,3.94,Big Ten
+president,IA,2008-09-17,54.0,43.0,3.77,SurveyUSA
+president,IA,2008-09-19,51.0,44.0,4.08,American Research Group
+president,IA,2008-09-20,51.0,41.0,4.63,Marist College
+president,IA,2008-09-25,51.0,43.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,IA,2008-10-08,54.0,41.0,3.8,SurveyUSA
+president,IA,2008-10-21,52.0,39.0,4.13,Big Ten
+president,IA,2008-10-23,52.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IA,2008-10-22,51.0,40.0,4.0,Mason-Dixon Polling & Strategy
+president,IA,2008-10-23,52.0,42.0,3.94,Marist College
+president,IA,2008-10-28,55.0,40.0,3.9,SurveyUSA
+president,IA,2008-10-30,54.0,37.0,3.5,Selzer & Co.
+president,IA,2008-10-25,52.0,41.0,3.55,YouGov
+president,ID,2008-09-09,29.0,68.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ID,2008-09-09,25.0,68.0,4.08,American Research Group
+president,ID,2008-10-21,32.0,55.0,4.46,Harstad Strategic Research
+president,ID,2008-10-25,36.0,59.0,5,YouGov
+president,IL,2008-09-15,51.0,45.0,4.08,American Research Group
+president,IL,2008-09-17,56.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IL,2008-09-16,53.0,37.0,3.99,Big Ten
+president,IL,2008-10-13,56.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IL,2008-10-17,56.0,32.0,4.47,Market Shares Corp.
+president,IL,2008-10-21,61.0,32.0,4.13,Big Ten
+president,IL,2008-11-01,60.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IL,2008-10-25,58.0,39.0,3.57,YouGov
+president,IN,2008-09-15,44.0,47.0,4.08,American Research Group
+president,IN,2008-09-15,43.0,48.0,3.35,Big Village
+president,IN,2008-09-15,47.0,44.0,4.08,Selzer & Co.
+president,IN,2008-09-16,43.0,47.0,4.04,Big Ten
+president,IN,2008-09-17,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IN,2008-09-28,45.0,48.0,3.82,SurveyUSA
+president,IN,2008-10-05,46.0,48.0,3.87,Big Village
+president,IN,2008-10-07,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IN,2008-10-11,44.0,49.0,4.71,Zogby Analytics
+president,IN,2008-10-18,48.0,46.0,2.66,Public Policy Polling
+president,IN,2008-10-19,42.0,53.0,4.6,Zogby Analytics
+president,IN,2008-10-21,49.0,45.0,3.98,SurveyUSA
+president,IN,2008-10-21,51.0,42.0,4.13,Big Ten
+president,IN,2008-10-23,45.0,47.0,4.08,Howey Politics/DePauw University
+president,IN,2008-10-25,44.0,50.0,4.08,Zogby Analytics
+president,IN,2008-10-27,46.0,45.0,4.06,Selzer & Co.
+president,IN,2008-10-28,46.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IN,2008-10-29,47.0,47.0,3.33,SurveyUSA
+president,IN,2008-10-30,48.0,48.0,4.08,American Research Group
+president,IN,2008-10-25,45.0,53.0,3.55,YouGov
+president,IN,2008-11-01,49.0,48.0,1.95,Public Policy Polling
+president,IN,2008-11-01,43.9,49.1,4.07,Zogby Analytics
+president,IN,2008-11-02,45.0,50.0,4.13,Zogby Analytics
+president,KS,2008-09-09,31.0,63.0,4.08,American Research Group
+president,KS,2008-09-18,38.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,KS,2008-09-21,41.0,53.0,3.87,SurveyUSA
+president,KS,2008-10-05,38.0,51.0,4.47,Public Opinion Strategies
+president,KS,2008-10-13,41.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,KS,2008-10-21,41.0,53.0,4.04,SurveyUSA
+president,KS,2008-10-27,37.0,58.0,4.0,SurveyUSA
+president,KS,2008-10-25,41.0,52.0,4.48,YouGov
+president,KY,2008-09-10,37.0,57.0,4.08,American Research Group
+president,KY,2008-09-21,38.0,57.0,3.86,SurveyUSA
+president,KY,2008-09-24,41.0,53.0,3.73,Mason-Dixon Polling & Strategy
+president,KY,2008-09-30,42.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,KY,2008-10-19,41.0,54.0,4.32,SurveyUSA
+president,KY,2008-10-21,44.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,KY,2008-10-29,43.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,KY,2008-10-28,42.0,51.0,3.5,Mason-Dixon Polling & Strategy
+president,KY,2008-10-31,40.0,56.0,4.03,SurveyUSA
+president,KY,2008-10-25,41.0,53.0,4.54,YouGov
+president,LA,2008-09-11,43.0,50.0,4.08,American Research Group
+president,LA,2008-09-25,40.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,LA,2008-10-21,41.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,LA,2008-10-22,38.3,50.6,4.46,Southeastern Louisiana University Social Science Research Center
+president,LA,2008-10-25,40.0,43.0,4.47,Ed Renwick/Loyola University New Orleans
+president,LA,2008-10-25,45.0,52.0,4.79,YouGov
+president,MA,2008-09-21,55.0,39.0,4.08,American Research Group
+president,MA,2008-09-23,58.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MA,2008-09-22,55.0,39.0,3.84,SurveyUSA
+president,MA,2008-10-13,62.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MA,2008-10-13,59.0,35.0,4.0,SurveyUSA
+president,MA,2008-10-21,53.0,34.0,5,Suffolk University
+president,MA,2008-10-27,56.0,39.0,3.9,SurveyUSA
+president,MA,2008-10-25,57.0,39.0,3.77,YouGov
+president,MD,2008-09-18,54.0,39.0,4.08,American Research Group
+president,MD,2008-09-20,60.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MD,2008-10-25,60.0,35.0,3.76,YouGov
+president,ME,2008-09-09,51.0,41.0,4.08,American Research Group
+president,ME,2008-09-17,50.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ME,2008-09-22,49.0,44.0,3.85,SurveyUSA
+president,ME,2008-10-02,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ME,2008-10-01,52.0,35.0,4.08,Mellman Group
+president,ME,2008-10-15,51.0,39.0,5,Pan Atlantic Research
+president,ME,2008-10-18,56.0,35.0,4.75,Digital Research
+president,ME,2008-10-19,54.0,39.0,3.95,SurveyUSA
+president,ME,2008-10-19,52.0,33.0,4.85,Market Decisions Research
+president,ME,2008-10-30,58.0,38.0,3.85,SurveyUSA
+president,ME,2008-11-01,56.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ME,2008-10-25,51.0,42.0,4.54,YouGov
+president,MI,2008-09-06,47.0,46.0,2.95,Public Policy Polling
+president,MI,2008-09-08,45.0,42.0,3.22,Big Village
+president,MI,2008-09-10,44.0,45.0,4.46,InsiderAdvantage
+president,MI,2008-09-10,51.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,MI,2008-09-11,49.0,43.0,3.67,Zogby Analytics
+president,MI,2008-09-16,52.0,43.0,4.09,Marist College
+president,MI,2008-09-16,48.0,44.0,3.99,Big Ten
+president,MI,2008-09-16,43.0,42.0,4.08,EPIC-MRA
+president,MI,2008-09-18,48.0,46.0,4.08,American Research Group
+president,MI,2008-09-17,43.0,46.0,4.08,Marketing Resource Group (MRG)
+president,MI,2008-09-21,51.0,44.0,4.47,Beacon Research/Shaw & Co. Research
+president,MI,2008-09-18,48.0,44.0,2.71,Quinnipiac University
+president,MI,2008-09-21,48.0,38.0,5,EPIC-MRA
+president,MI,2008-09-20,47.0,39.0,4.96,FTI Consulting
+president,MI,2008-09-22,49.0,43.0,3.64,Big Village
+president,MI,2008-09-20,46.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,MI,2008-09-23,51.0,38.0,4.08,Selzer & Co.
+president,MI,2008-09-23,49.0,42.0,3.63,GQR
+president,MI,2008-09-30,51.0,41.0,3.7,Public Policy Polling
+president,MI,2008-10-03,44.0,39.0,4.08,Rossman Group
+president,MI,2008-10-07,56.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MI,2008-10-05,55.0,37.0,2.99,Quinnipiac University
+president,MI,2008-10-10,54.0,38.0,3.1,Quinnipiac University
+president,MI,2008-10-21,58.0,36.0,4.22,Big Ten
+president,MI,2008-10-21,51.0,37.0,5,EPIC-MRA
+president,MI,2008-10-28,53.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MI,2008-10-27,50.0,38.0,4.08,EPIC-MRA
+president,MI,2008-10-29,55.0,42.0,2.55,Public Policy Polling
+president,MI,2008-10-28,54.0,40.0,4.08,Mitchell Research & Communications
+president,MI,2008-10-30,53.0,37.0,4.03,Selzer & Co.
+president,MI,2008-10-25,55.0,42.0,3.21,YouGov
+president,MI,2008-11-03,54.0,38.0,5,Mitchell Research & Communications
+president,MN,2008-09-10,49.0,47.0,3.69,SurveyUSA
+president,MN,2008-09-11,45.0,45.0,3.01,Princeton Survey Research Associates International
+president,MN,2008-09-16,47.0,45.0,4.05,Big Ten
+president,MN,2008-09-18,52.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MN,2008-09-19,48.0,47.0,4.08,American Research Group
+president,MN,2008-09-18,47.0,45.0,2.77,Quinnipiac University
+president,MN,2008-09-29,53.0,41.0,3.43,Big Village
+president,MN,2008-09-30,46.0,47.0,3.71,SurveyUSA
+president,MN,2008-09-30,47.0,43.0,5,University of Minnesota Hubert H. Humphrey School of Public Affairs
+president,MN,2008-10-01,55.0,37.0,3.04,Princeton Survey Research Associates International
+president,MN,2008-10-04,54.0,40.0,4.89,University of Minnesota Hubert H. Humphrey School of Public Affairs
+president,MN,2008-10-07,52.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MN,2008-10-06,47.0,46.0,4.08,American Research Group
+president,MN,2008-10-05,51.0,43.0,3.05,Quinnipiac University
+president,MN,2008-10-10,51.0,40.0,3.13,Quinnipiac University
+president,MN,2008-10-16,52.0,41.0,3.09,Princeton Survey Research Associates International
+president,MN,2008-10-17,50.0,44.0,3.91,SurveyUSA
+president,MN,2008-10-18,50.0,40.0,4.99,FTI Consulting
+president,MN,2008-10-22,56.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MN,2008-10-21,57.0,38.0,4.14,Big Ten
+president,MN,2008-10-18,42.0,37.0,4.43,St. Cloud State University
+president,MN,2008-10-28,55.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MN,2008-10-27,48.0,40.0,4.0,Mason-Dixon Polling & Strategy
+president,MN,2008-10-26,56.0,37.0,4.71,University of Minnesota Hubert H. Humphrey School of Public Affairs
+president,MN,2008-10-29,57.0,41.0,3.09,Public Policy Polling
+president,MN,2008-10-30,53.0,42.0,3.27,Princeton Survey Research Associates International
+president,MN,2008-10-31,49.0,46.0,3.87,SurveyUSA
+president,MN,2008-10-25,51.0,45.0,3.78,YouGov
+president,MO,2008-09-08,44.0,48.0,3.26,Big Village
+president,MO,2008-09-11,46.0,51.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-09-11,42.0,49.0,4.07,Zogby Analytics
+president,MO,2008-09-13,45.0,50.0,4.08,American Research Group
+president,MO,2008-09-23,46.0,48.0,3.77,SurveyUSA
+president,MO,2008-09-29,47.0,46.0,3.67,Big Village
+president,MO,2008-10-05,50.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-10-05,46.0,49.0,4.08,American Research Group
+president,MO,2008-10-12,50.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-10-11,48.0,46.0,3.15,Public Policy Polling
+president,MO,2008-10-11,51.0,43.0,4.28,SurveyUSA
+president,MO,2008-10-11,50.0,44.0,3.8,Zogby Analytics
+president,MO,2008-10-13,46.0,47.0,3.62,Big Village
+president,MO,2008-10-15,52.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-10-19,49.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-10-18,44.0,45.0,4.08,Suffolk University
+president,MO,2008-10-19,48.0,48.0,3.73,Zogby Analytics
+president,MO,2008-10-22,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,MO,2008-10-26,48.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-10-25,48.0,48.0,3.86,SurveyUSA
+president,MO,2008-10-25,48.2,45.7,4.08,Zogby Analytics
+president,MO,2008-10-25,46.0,48.0,3.48,Big Village
+president,MO,2008-10-29,47.0,50.0,3.5,InsiderAdvantage
+president,MO,2008-10-28,46.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,MO,2008-10-29,48.0,48.0,4.08,American Research Group
+president,MO,2008-10-25,47.0,49.0,3.82,YouGov
+president,MO,2008-11-02,49.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,MO,2008-11-01,49.0,49.0,2.73,Public Policy Polling
+president,MO,2008-11-01,47.4,45.7,4.08,Zogby Analytics
+president,MO,2008-11-01,48.0,48.0,3.85,SurveyUSA
+president,MO,2008-11-02,49.0,49.0,4.13,Zogby Analytics
+president,MS,2008-09-15,39.0,55.0,4.08,American Research Group
+president,MS,2008-09-30,44.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MS,2008-10-17,33.0,46.0,4.97,University of South Alabama Polling Group
+president,MS,2008-10-27,45.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MS,2008-10-25,42.0,55.0,4.9,YouGov
+president,MT,2008-09-08,42.0,53.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,MT,2008-09-08,47.0,49.0,4.08,American Research Group
+president,MT,2008-09-22,40.0,49.0,3.68,Big Village
+president,MT,2008-10-01,44.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MT,2008-10-07,45.0,50.0,4.08,American Research Group
+president,MT,2008-10-18,44.0,40.0,4.98,Montana State University Billings
+president,MT,2008-10-24,44.0,48.0,4.0,Mason-Dixon Polling & Strategy
+president,MT,2008-10-29,46.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MT,2008-10-29,46.0,49.0,4.08,American Research Group
+president,MT,2008-10-25,44.0,54.0,5,YouGov
+president,MT,2008-11-01,48.0,47.0,1.91,Public Policy Polling
+president,NC,2008-09-06,46.0,49.0,4.07,Garin-Hart-Yang Research Group
+president,NC,2008-09-07,38.0,58.0,3.86,SurveyUSA
+president,NC,2008-09-09,44.0,48.0,4.0,Public Policy Polling
+president,NC,2008-09-08,44.0,47.0,4.08,The Tyson Group
+president,NC,2008-09-11,48.0,47.0,3.97,Zogby Analytics
+president,NC,2008-09-15,35.0,41.0,4.93,Elon University
+president,NC,2008-09-15,45.0,46.0,3.31,Big Village
+president,NC,2008-09-15,41.0,52.0,4.08,American Research Group
+president,NC,2008-09-18,47.0,50.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-09-18,46.0,46.0,3.07,Public Policy Polling
+president,NC,2008-09-19,45.0,45.0,4.08,The Tyson Group
+president,NC,2008-09-23,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-09-28,47.0,45.0,3.1,Public Policy Polling
+president,NC,2008-09-28,46.0,49.0,4.08,American Research Group
+president,NC,2008-09-30,50.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-04,50.0,44.0,2.88,Public Policy Polling
+president,NC,2008-10-05,46.0,49.0,4.03,SurveyUSA
+president,NC,2008-10-05,49.0,49.0,3.87,Big Village
+president,NC,2008-10-06,46.0,48.0,4.47,Marshall Marketing
+president,NC,2008-10-08,49.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-07,48.0,43.0,4.08,The Tyson Group
+president,NC,2008-10-12,48.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-11,49.0,46.0,2.89,Public Policy Polling
+president,NC,2008-10-13,48.0,46.0,4.59,InsiderAdvantage
+president,NC,2008-10-11,50.0,46.0,3.47,Zogby Analytics
+president,NC,2008-10-19,51.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-19,49.0,48.0,3.79,InsiderAdvantage
+president,NC,2008-10-18,51.0,44.0,2.89,Public Policy Polling
+president,NC,2008-10-08,45.0,44.0,3.67,Winthrop University Center for Public Opinion & Policy Research
+president,NC,2008-10-19,48.0,45.0,4.08,The Tyson Group
+president,NC,2008-10-19,47.0,47.0,3.99,SurveyUSA
+president,NC,2008-10-19,50.0,47.0,3.3,Zogby Analytics
+president,NC,2008-10-20,48.0,46.0,4.47,Marshall Marketing
+president,NC,2008-10-20,51.0,46.0,3.94,Big Village
+president,NC,2008-10-23,48.0,50.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-24,47.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,NC,2008-10-26,48.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-25,49.0,48.0,3.1,Public Policy Polling
+president,NC,2008-10-25,50.0,46.0,4.08,Zogby Analytics
+president,NC,2008-10-24,48.0,46.0,4.08,GfK Group
+president,NC,2008-10-25,47.0,43.0,4.99,FTI Consulting
+president,NC,2008-10-25,52.0,46.0,3.87,Big Village
+president,NC,2008-10-29,48.0,48.0,3.95,InsiderAdvantage
+president,NC,2008-10-29,50.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-10-28,46.0,49.0,4.0,Mason-Dixon Polling & Strategy
+president,NC,2008-10-28,47.0,46.0,4.08,The Tyson Group
+president,NC,2008-10-29,45.0,38.0,3.54,Elon University
+president,NC,2008-10-25,51.0,47.0,3.24,YouGov
+president,NC,2008-11-02,49.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,NC,2008-11-01,50.0,49.0,2.18,Public Policy Polling
+president,NC,2008-11-01,47.7,49.3,4.08,Zogby Analytics
+president,NC,2008-11-01,48.0,49.0,3.83,SurveyUSA
+president,NC,2008-11-02,49.0,48.0,4.08,American Research Group
+president,NC,2008-11-02,49.0,50.0,4.13,Zogby Analytics
+president,ND,2008-09-08,41.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ND,2008-09-16,43.0,52.0,4.08,American Research Group
+president,ND,2008-10-07,45.0,43.0,4.06,Minnesota State University Moorhead Public Affairs Institute
+president,ND,2008-10-13,44.0,41.0,4.45,DFM Research
+president,ND,2008-10-25,43.0,50.0,5,YouGov
+president,NE,2008-09-14,34.0,60.0,4.08,American Research Group
+president,NE,2008-09-30,37.0,56.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NE,2008-10-25,38.0,57.0,4.96,YouGov
+president,NH,2008-09-08,48.0,43.0,3.34,Big Village
+president,NH,2008-09-11,43.0,49.0,4.81,Zogby Analytics
+president,NH,2008-09-14,45.0,48.0,4.08,American Research Group
+president,NH,2008-09-19,51.0,45.0,4.07,Marist College
+president,NH,2008-09-18,45.0,47.0,4.59,University of New Hampshire Survey Center
+president,NH,2008-09-20,44.0,43.0,4.98,FTI Consulting
+president,NH,2008-09-23,47.0,49.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NH,2008-09-22,46.0,45.0,4.08,Suffolk University
+president,NH,2008-09-27,49.0,37.0,3.49,Saint Anselm College Survey Center
+president,NH,2008-10-01,53.0,43.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NH,2008-10-04,53.0,40.0,3.93,SurveyUSA
+president,NH,2008-10-05,51.0,43.0,3.51,Big Village
+president,NH,2008-10-07,52.0,43.0,4.08,American Research Group
+president,NH,2008-10-11,48.0,43.0,4.69,Zogby Analytics
+president,NH,2008-10-18,50.0,41.0,4.47,Public Opinion Strategies
+president,NH,2008-10-19,47.0,46.0,4.63,Zogby Analytics
+president,NH,2008-10-21,48.0,44.0,4.36,Public Opinion Strategies
+president,NH,2008-10-20,54.0,39.0,3.71,University of New Hampshire Survey Center
+president,NH,2008-10-23,50.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NH,2008-10-22,50.0,45.0,3.91,Marist College
+president,NH,2008-10-24,50.0,39.0,4.0,Mason-Dixon Polling & Strategy
+president,NH,2008-10-25,55.0,39.0,3.8,University of New Hampshire Survey Center
+president,NH,2008-10-24,55.0,37.0,4.08,GfK Group
+president,NH,2008-10-28,55.0,39.0,3.8,University of New Hampshire Survey Center
+president,NH,2008-10-28,53.0,40.0,4.08,Suffolk University
+president,NH,2008-10-30,51.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NH,2008-10-29,53.0,42.0,3.83,SurveyUSA
+president,NH,2008-10-29,56.0,41.0,4.08,American Research Group
+president,NH,2008-10-25,54.0,40.0,4.4,YouGov
+president,NH,2008-11-01,53.0,42.0,3.51,University of New Hampshire Survey Center
+president,NJ,2008-09-07,48.0,45.0,4.14,Marist College
+president,NJ,2008-09-06,47.0,41.0,3.39,Fairleigh Dickinson University
+president,NJ,2008-09-13,49.0,41.0,4.12,Monmouth University Polling Institute
+president,NJ,2008-09-12,48.0,45.0,2.9,Quinnipiac University
+president,NJ,2008-09-16,55.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NJ,2008-09-20,51.0,42.0,4.08,American Research Group
+president,NJ,2008-09-27,52.0,42.0,4.05,SurveyUSA
+president,NJ,2008-10-02,50.0,37.0,3.56,Fairleigh Dickinson University
+president,NJ,2008-10-07,50.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NJ,2008-10-11,55.0,40.0,4.26,SurveyUSA
+president,NJ,2008-10-17,55.0,38.0,3.72,Monmouth University Polling Institute
+president,NJ,2008-10-18,59.0,36.0,2.91,Quinnipiac University
+president,NJ,2008-10-20,56.0,39.0,3.99,Marist College
+president,NJ,2008-10-26,53.0,35.0,3.43,Fairleigh Dickinson University
+president,NJ,2008-10-29,52.0,42.0,3.98,SurveyUSA
+president,NJ,2008-10-30,55.0,34.0,3.53,Monmouth University Polling Institute
+president,NJ,2008-10-25,55.0,40.0,3.59,YouGov
+president,NJ,2008-11-02,57.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NM,2008-09-08,47.0,49.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NM,2008-09-11,46.0,44.0,4.58,Zogby Analytics
+president,NM,2008-09-13,49.0,42.0,4.99,FTI Consulting
+president,NM,2008-09-15,51.0,44.0,4.08,American Research Group
+president,NM,2008-09-15,52.0,44.0,3.86,SurveyUSA
+president,NM,2008-09-18,53.0,42.0,3.11,Public Policy Polling
+president,NM,2008-09-29,52.0,44.0,3.79,SurveyUSA
+president,NM,2008-10-01,49.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NM,2008-10-01,45.0,40.0,3.9,Research & Polling Inc.
+president,NM,2008-10-13,55.0,42.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NM,2008-10-12,52.0,45.0,4.2,SurveyUSA
+president,NM,2008-10-11,51.0,44.0,4.34,Zogby Analytics
+president,NM,2008-10-19,46.0,46.0,4.33,Zogby Analytics
+president,NM,2008-10-28,54.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NM,2008-10-29,51.0,43.0,3.16,Research & Polling Inc.
+president,NM,2008-10-29,58.0,41.0,2.55,Public Policy Polling
+president,NM,2008-10-30,52.0,45.0,3.88,SurveyUSA
+president,NM,2008-10-25,53.0,43.0,4.68,YouGov
+president,NV,2008-09-10,45.0,46.0,4.39,InsiderAdvantage
+president,NV,2008-09-11,46.0,49.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NV,2008-09-11,43.0,50.0,4.18,Zogby Analytics
+president,NV,2008-09-13,46.0,49.0,4.08,American Research Group
+president,NV,2008-09-16,47.0,45.0,4.08,Grove Insight
+president,NV,2008-09-19,45.0,46.0,4.08,Suffolk University
+president,NV,2008-09-28,47.0,49.0,4.08,American Research Group
+president,NV,2008-09-30,48.0,47.0,4.78,InsiderAdvantage
+president,NV,2008-09-29,49.0,44.0,3.82,Big Village
+president,NV,2008-10-02,51.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NV,2008-10-06,49.0,47.0,4.62,InsiderAdvantage
+president,NV,2008-10-08,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,NV,2008-10-10,47.0,44.0,4.08,Magellan Strategies
+president,NV,2008-10-13,49.0,46.0,4.45,InsiderAdvantage
+president,NV,2008-10-11,48.0,47.0,3.9,Zogby Analytics
+president,NV,2008-10-16,50.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NV,2008-10-19,47.0,47.0,3.81,InsiderAdvantage
+president,NV,2008-10-19,44.0,52.0,3.86,Zogby Analytics
+president,NV,2008-10-20,49.0,43.0,3.78,Big Village
+president,NV,2008-10-25,48.0,44.0,4.08,Zogby Analytics
+president,NV,2008-10-24,52.0,40.0,3.99,GfK Group
+president,NV,2008-10-27,50.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,NV,2008-10-25,50.0,40.0,4.71,Suffolk University
+president,NV,2008-10-25,50.0,43.0,3.82,Big Village
+president,NV,2008-10-28,47.0,43.0,4.0,Mason-Dixon Polling & Strategy
+president,NV,2008-10-25,51.0,46.0,4.5,YouGov
+president,NV,2008-11-01,51.0,47.0,2.84,Public Policy Polling
+president,NV,2008-11-01,50.7,42.9,4.08,Zogby Analytics
+president,NV,2008-11-02,52.0,47.0,4.08,American Research Group
+president,NV,2008-11-02,53.0,42.0,4.13,Zogby Analytics
+president,NY,2008-09-09,46.0,41.0,4.0,Siena College
+president,NY,2008-09-15,55.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NY,2008-09-15,55.0,38.0,4.08,American Research Group
+president,NY,2008-09-23,57.0,38.0,3.87,SurveyUSA
+president,NY,2008-09-29,58.0,36.0,3.98,Siena College
+president,NY,2008-10-11,64.0,31.0,4.26,SurveyUSA
+president,NY,2008-10-14,57.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NY,2008-10-20,62.0,31.0,3.72,Siena College
+president,NY,2008-10-21,65.0,29.0,4.36,Marist College
+president,NY,2008-10-27,62.0,33.0,3.97,SurveyUSA
+president,NY,2008-10-25,58.0,38.0,3.18,YouGov
+president,OH,2008-09-07,44.0,51.0,4.08,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-09-07,49.0,44.0,2.7,Quinnipiac University
+president,OH,2008-09-10,47.0,48.0,4.46,InsiderAdvantage
+president,OH,2008-09-07,44.0,48.0,3.59,University of Cincinnati (Ohio Poll)
+president,OH,2008-09-11,44.0,50.0,3.44,Zogby Analytics
+president,OH,2008-09-12,44.0,50.0,4.08,American Research Group
+president,OH,2008-09-12,42.0,46.0,4.08,Suffolk University
+president,OH,2008-09-14,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-09-13,44.0,48.0,3.05,Public Policy Polling
+president,OH,2008-09-13,45.0,49.0,3.8,SurveyUSA
+president,OH,2008-09-13,41.0,42.0,5,FTI Consulting
+president,OH,2008-09-13,47.0,45.0,4.21,Marist College
+president,OH,2008-09-15,46.0,44.0,3.31,Big Village
+president,OH,2008-09-14,42.0,48.0,3.39,University of Cincinnati (Ohio Poll)
+president,OH,2008-09-16,46.0,45.0,4.02,Big Ten
+president,OH,2008-09-21,46.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-09-22,46.0,46.0,4.28,InsiderAdvantage
+president,OH,2008-09-23,46.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-09-24,49.0,42.0,2.88,Quinnipiac University
+president,OH,2008-09-28,47.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-09-29,47.0,45.0,4.42,InsiderAdvantage
+president,OH,2008-09-28,48.0,49.0,3.8,SurveyUSA
+president,OH,2008-09-28,50.0,42.0,3.48,Quinnipiac University
+president,OH,2008-09-30,49.0,43.0,4.08,GQR
+president,OH,2008-09-28,49.0,42.0,2.1,Columbus Dispatch
+president,OH,2008-10-05,47.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-10-04,49.0,43.0,2.84,Public Policy Polling
+president,OH,2008-10-04,51.0,45.0,3.6,ABC News/The Washington Post
+president,OH,2008-10-05,48.0,45.0,3.65,Big Village
+president,OH,2008-10-06,48.0,45.0,4.08,American Research Group
+president,OH,2008-10-07,49.0,45.0,3.6,Marist College
+president,OH,2008-10-06,46.0,48.0,3.44,University of Cincinnati (Ohio Poll)
+president,OH,2008-10-09,49.0,44.0,4.43,InsiderAdvantage
+president,OH,2008-10-12,49.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-10-12,50.0,45.0,4.17,SurveyUSA
+president,OH,2008-10-11,45.0,50.0,3.13,Zogby Analytics
+president,OH,2008-10-14,49.0,49.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-10-16,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,OH,2008-10-19,47.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-10-18,51.0,42.0,4.08,Suffolk University
+president,OH,2008-10-19,47.0,49.0,3.18,Zogby Analytics
+president,OH,2008-10-20,49.0,44.0,3.68,Big Village
+president,OH,2008-10-18,52.0,38.0,2.71,Quinnipiac University
+president,OH,2008-10-22,52.0,42.0,4.95,InsiderAdvantage
+president,OH,2008-10-21,53.0,41.0,4.21,Big Ten
+president,OH,2008-10-20,49.0,46.0,3.36,University of Cincinnati (Ohio Poll)
+president,OH,2008-10-22,51.0,44.0,3.17,Public Policy Polling
+president,OH,2008-10-18,57.0,41.0,4.05,Ohio University
+president,OH,2008-10-26,49.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-10-25,48.0,45.0,3.89,Marist College
+president,OH,2008-10-25,50.0,45.0,4.08,Zogby Analytics
+president,OH,2008-10-24,48.0,41.0,4.06,GfK Group
+president,OH,2008-10-24,51.0,42.0,2.65,Quinnipiac University
+president,OH,2008-10-26,49.0,45.0,3.93,SurveyUSA
+president,OH,2008-10-26,44.0,39.0,3.94,Los Angeles Times
+president,OH,2008-10-25,48.0,41.0,4.98,FTI Consulting
+president,OH,2008-10-25,50.0,43.0,3.58,Big Village
+president,OH,2008-10-28,45.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,OH,2008-10-26,52.0,46.0,2.15,Columbus Dispatch
+president,OH,2008-10-25,51.0,45.0,3.18,YouGov
+president,OH,2008-11-02,49.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,OH,2008-11-01,50.0,48.0,2.88,Public Policy Polling
+president,OH,2008-11-01,50.2,43.9,4.07,Zogby Analytics
+president,OH,2008-11-01,48.0,46.0,3.89,SurveyUSA
+president,OH,2008-10-31,52.0,46.0,2.86,University of Cincinnati (Ohio Poll)
+president,OH,2008-10-30,50.0,43.0,2.52,Quinnipiac University
+president,OH,2008-11-02,49.0,47.0,3.82,Zogby Analytics
+president,OK,2008-09-07,30.0,66.0,3.34,SoonerPoll.com
+president,OK,2008-09-06,32.0,65.0,3.92,SurveyUSA
+president,OK,2008-09-11,32.0,63.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OK,2008-09-14,27.0,69.0,3.41,SoonerPoll.com
+president,OK,2008-09-17,34.0,61.0,4.08,American Research Group
+president,OK,2008-09-21,26.0,66.0,3.87,SoonerPoll.com
+president,OK,2008-09-27,27.0,68.0,3.33,SoonerPoll.com
+president,OK,2008-09-28,34.0,64.0,3.9,SurveyUSA
+president,OK,2008-10-04,29.0,66.0,3.53,SoonerPoll.com
+president,OK,2008-10-11,32.0,63.0,3.51,SoonerPoll.com
+president,OK,2008-10-18,35.0,59.0,4.22,SurveyUSA
+president,OK,2008-10-19,32.0,64.0,3.62,SoonerPoll.com
+president,OK,2008-10-25,35.0,62.0,3.73,SoonerPoll.com
+president,OK,2008-10-28,34.0,63.0,4.1,SurveyUSA
+president,OK,2008-10-25,39.0,58.0,4.51,YouGov
+president,OR,2008-09-08,46.0,39.0,4.08,Hoffman Research Group
+president,OR,2008-09-10,43.0,37.0,5,Moore Information Group
+president,OR,2008-09-13,50.0,40.0,4.47,DHM Research
+president,OR,2008-09-15,51.0,47.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,OR,2008-09-21,52.0,41.0,4.08,American Research Group
+president,OR,2008-09-22,52.0,41.0,3.76,SurveyUSA
+president,OR,2008-10-09,54.0,43.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,OR,2008-10-08,52.0,39.0,4.08,Grove Insight
+president,OR,2008-10-11,57.0,40.0,4.14,SurveyUSA
+president,OR,2008-10-14,54.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OR,2008-10-15,48.0,34.0,4.48,Riley Research Associates
+president,OR,2008-10-24,53.0,34.0,4.47,DHM Research
+president,OR,2008-10-25,57.0,38.0,3.86,SurveyUSA
+president,OR,2008-10-27,51.0,37.0,5,Moore Information Group
+president,OR,2008-10-30,54.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OR,2008-10-29,57.0,38.0,3.78,SurveyUSA
+president,OR,2008-10-29,57.0,42.0,2.65,Public Policy Polling
+president,OR,2008-10-25,54.0,43.0,3.79,YouGov
+president,PA,2008-09-07,47.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-09-07,48.0,45.0,3.16,Quinnipiac University
+president,PA,2008-09-11,44.0,49.0,3.78,Zogby Analytics
+president,PA,2008-09-14,47.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-09-13,49.0,44.0,4.32,Marist College
+president,PA,2008-09-16,45.0,45.0,4.06,Big Ten
+president,PA,2008-09-17,46.0,44.0,4.0,Mason-Dixon Polling & Strategy
+president,PA,2008-09-21,48.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-09-21,50.0,46.0,4.08,American Research Group
+president,PA,2008-09-20,43.0,41.0,4.96,FTI Consulting
+president,PA,2008-09-23,49.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-09-22,51.0,43.0,3.7,Big Village
+president,PA,2008-09-23,50.0,44.0,3.02,SurveyUSA
+president,PA,2008-09-24,49.0,43.0,2.96,Quinnipiac University
+president,PA,2008-09-26,49.0,42.0,4.15,Muhlenberg College Institute of Public Opinion
+president,PA,2008-09-28,50.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-09-25,48.0,43.0,3.61,Franklin & Marshall College Center for Opinion Research
+president,PA,2008-09-28,54.0,39.0,3.47,Quinnipiac University
+president,PA,2008-10-01,51.0,39.0,4.26,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-06,54.0,41.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-10-05,55.0,40.0,3.91,SurveyUSA
+president,PA,2008-10-06,51.0,38.0,4.08,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-07,53.0,41.0,3.63,Marist College
+president,PA,2008-10-11,51.0,38.0,4.15,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-12,55.0,40.0,4.4,SurveyUSA
+president,PA,2008-10-11,52.0,40.0,3.68,Zogby Analytics
+president,PA,2008-10-16,52.0,40.0,4.09,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-17,48.0,40.0,3.78,Susquehanna Polling & Research Inc.
+president,PA,2008-10-18,51.0,41.0,4.93,FTI Consulting
+president,PA,2008-10-18,53.0,40.0,2.65,Quinnipiac University
+president,PA,2008-10-21,53.0,41.0,4.02,SurveyUSA
+president,PA,2008-10-21,52.0,42.0,4.2,Big Ten
+president,PA,2008-10-21,52.0,40.0,4.06,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-26,51.0,42.0,4.12,InsiderAdvantage
+president,PA,2008-10-24,52.0,40.0,4.06,GfK Group
+president,PA,2008-10-24,53.0,41.0,2.71,Quinnipiac University
+president,PA,2008-10-23,53.0,40.0,3.76,Franklin & Marshall College Center for Opinion Research
+president,PA,2008-10-23,52.0,43.0,3.62,Temple University Institute for Survey Research
+president,PA,2008-10-27,53.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-10-26,55.0,41.0,3.75,Marist College
+president,PA,2008-10-26,53.0,42.0,4.05,Muhlenberg College Institute of Public Opinion
+president,PA,2008-10-27,47.0,43.0,4.0,Mason-Dixon Polling & Strategy
+president,PA,2008-10-25,53.0,41.0,3.61,Big Village
+president,PA,2008-10-30,51.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-10-30,51.0,45.0,4.08,American Research Group
+president,PA,2008-10-30,51.0,44.0,3.78,SurveyUSA
+president,PA,2008-11-01,52.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2008-10-25,51.0,44.0,3.15,YouGov
+president,PA,2008-10-31,52.0,46.0,4.03,Muhlenberg College Institute of Public Opinion
+president,PA,2008-11-01,53.0,45.0,2.56,Public Policy Polling
+president,PA,2008-11-01,53.7,40.0,4.08,Zogby Analytics
+president,PA,2008-10-30,52.0,42.0,2.59,Quinnipiac University
+president,PA,2008-11-02,51.0,41.0,3.83,Zogby Analytics
+president,PA,2008-11-02,52.0,43.0,3.9,SurveyUSA
+president,RI,2008-09-13,58.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,RI,2008-09-12,59.0,33.0,4.08,American Research Group
+president,RI,2008-09-15,47.0,34.0,3.92,Brown University A. Alfred Taubman Center for American Politics and Policy
+president,RI,2008-09-21,45.0,31.0,3.67,Quest Research Group
+president,RI,2008-10-25,58.0,37.0,5,YouGov
+president,SC,2008-09-16,37.0,59.0,4.08,American Research Group
+president,SC,2008-09-18,45.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,SC,2008-09-21,39.0,58.0,3.81,SurveyUSA
+president,SC,2008-10-12,41.0,55.0,4.22,SurveyUSA
+president,SC,2008-10-08,35.0,55.0,4.03,Winthrop University Center for Public Opinion & Policy Research
+president,SC,2008-10-20,43.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,SC,2008-10-27,42.0,53.0,5,Princeton Survey Research Associates International
+president,SC,2008-10-28,44.0,52.0,3.91,SurveyUSA
+president,SC,2008-10-25,44.0,52.0,3.71,YouGov
+president,SD,2008-09-09,37.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,SD,2008-09-20,39.0,55.0,4.08,American Research Group
+president,SD,2008-10-14,41.0,48.0,3.54,Mason-Dixon Polling & Strategy
+president,SD,2008-10-27,40.0,45.0,4.04,GQR
+president,SD,2008-10-30,44.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,SD,2008-10-25,43.0,52.0,5,YouGov
+president,TN,2008-09-18,36.0,59.0,4.08,American Research Group
+president,TN,2008-09-23,39.0,55.0,4.0,Mason-Dixon Polling & Strategy
+president,TN,2008-09-21,36.0,48.0,3.97,Middle Tennessee State University
+president,TN,2008-09-29,39.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,TN,2008-10-14,39.0,54.0,4.08,North Star Opinion Research
+president,TN,2008-10-16,42.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,TN,2008-10-25,44.0,53.0,3.91,YouGov
+president,TX,2008-09-15,36.0,57.0,4.08,American Research Group
+president,TX,2008-09-29,43.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,TX,2008-10-07,38.0,57.0,4.08,American Research Group
+president,TX,2008-10-21,44.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,TX,2008-10-19,40.0,51.0,4.26,YouGov
+president,TX,2008-10-25,43.0,54.0,3.21,YouGov
+president,UT,2008-09-10,32.0,64.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,UT,2008-09-10,24.0,62.0,4.08,Dan Jones & Associates
+president,UT,2008-09-12,29.0,65.0,4.08,American Research Group
+president,UT,2008-10-24,32.0,55.0,4.0,Mason-Dixon Polling & Strategy
+president,UT,2008-10-27,32.0,57.0,2.88,Dan Jones & Associates
+president,UT,2008-10-25,34.0,61.0,5,YouGov
+president,VA,2008-09-07,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-09-06,47.0,49.0,3.73,SurveyUSA
+president,VA,2008-09-08,43.0,49.0,3.3,Big Village
+president,VA,2008-09-11,44.0,50.0,3.81,Zogby Analytics
+president,VA,2008-09-14,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-09-13,48.0,46.0,3.03,Public Policy Polling
+president,VA,2008-09-13,50.0,46.0,3.7,SurveyUSA
+president,VA,2008-09-12,39.0,48.0,4.47,Christopher Newport University Wason Center for Civic Leadership
+president,VA,2008-09-13,41.0,48.0,4.94,FTI Consulting
+president,VA,2008-09-17,46.0,48.0,4.46,InsiderAdvantage
+president,VA,2008-09-19,46.0,48.0,4.08,American Research Group
+president,VA,2008-09-21,48.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-09-20,51.0,45.0,3.74,SurveyUSA
+president,VA,2008-09-20,49.0,46.0,3.79,ABC News/The Washington Post
+president,VA,2008-09-19,44.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,VA,2008-09-25,50.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-09-28,50.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-09-29,51.0,45.0,4.79,InsiderAdvantage
+president,VA,2008-09-28,46.0,49.0,4.08,American Research Group
+president,VA,2008-09-29,52.0,42.0,3.82,Big Village
+president,VA,2008-09-30,45.0,48.0,4.0,Mason-Dixon Polling & Strategy
+president,VA,2008-10-05,50.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-10-04,53.0,43.0,3.87,SurveyUSA
+president,VA,2008-10-04,51.0,39.0,4.08,Suffolk University
+president,VA,2008-10-06,51.0,43.0,3.3,Public Policy Polling
+president,VA,2008-10-12,50.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-10-11,52.0,44.0,3.39,Zogby Analytics
+president,VA,2008-10-13,49.0,43.0,4.47,Christopher Newport University Wason Center for Civic Leadership
+president,VA,2008-10-13,50.0,41.0,3.79,Big Village
+president,VA,2008-10-16,54.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-10-18,51.0,45.0,3.92,SurveyUSA
+president,VA,2008-10-08,45.0,44.0,3.88,Winthrop University Center for Public Opinion & Policy Research
+president,VA,2008-10-19,50.0,46.0,3.29,Zogby Analytics
+president,VA,2008-10-20,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,VA,2008-10-20,51.0,44.0,3.93,Big Village
+president,VA,2008-10-21,51.0,40.0,3.5,Virginia Commonwealth University L. Douglas Wilder School of Government and Public Affairs
+president,VA,2008-10-22,52.0,43.0,2.85,Public Policy Polling
+president,VA,2008-10-24,52.0,44.0,3.57,ABC News/The Washington Post
+president,VA,2008-10-26,51.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-10-25,52.0,43.0,3.86,SurveyUSA
+president,VA,2008-10-25,52.0,45.0,4.08,Zogby Analytics
+president,VA,2008-10-24,49.0,42.0,4.08,GfK Group
+president,VA,2008-10-23,48.0,39.0,4.04,Roanoke College Institute for Policy and Opinion Research
+president,VA,2008-10-26,51.0,47.0,3.86,Marist College
+president,VA,2008-10-25,48.0,44.0,4.98,FTI Consulting
+president,VA,2008-10-25,51.0,42.0,3.72,Big Village
+president,VA,2008-10-28,47.0,44.0,4.0,Mason-Dixon Polling & Strategy
+president,VA,2008-10-31,50.0,46.0,3.86,SurveyUSA
+president,VA,2008-10-25,52.0,45.0,3.6,YouGov
+president,VA,2008-11-02,51.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,VA,2008-11-01,52.0,46.0,2.53,Public Policy Polling
+president,VA,2008-11-01,50.7,44.6,4.07,Zogby Analytics
+president,VA,2008-11-02,51.0,47.0,4.08,American Research Group
+president,VA,2008-11-02,52.0,45.0,3.81,Zogby Analytics
+president,VT,2008-09-13,60.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VT,2008-09-20,56.0,38.0,4.08,American Research Group
+president,VT,2008-10-06,65.0,32.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VT,2008-10-25,62.0,32.0,5,YouGov
+president,WA,2008-09-06,49.0,45.0,3.9,SurveyUSA
+president,WA,2008-09-07,46.0,37.0,5,Elway Research
+president,WA,2008-09-10,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WA,2008-09-17,50.0,44.0,4.08,American Research Group
+president,WA,2008-09-21,54.0,43.0,3.83,SurveyUSA
+president,WA,2008-10-02,53.0,43.0,3.78,Scott Rasmussen (Rasmussen Reports)
+president,WA,2008-10-12,56.0,40.0,4.29,SurveyUSA
+president,WA,2008-10-18,55.0,36.0,4.97,Elway Research
+president,WA,2008-10-22,54.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WA,2008-10-22,55.0,34.0,4.08,University of Washington Center for Survey Research
+president,WA,2008-10-26,56.0,39.0,3.98,SurveyUSA
+president,WA,2008-10-29,51.0,39.0,5,University of Washington Center for Survey Research
+president,WA,2008-10-25,53.0,43.0,3.54,YouGov
+president,WA,2008-11-01,56.0,40.0,3.88,SurveyUSA
+president,WI,2008-09-13,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2008-09-15,49.0,45.0,3.24,Big Village
+president,WI,2008-09-16,45.0,44.0,4.03,Big Ten
+president,WI,2008-09-20,50.0,45.0,4.08,American Research Group
+president,WI,2008-09-18,49.0,42.0,2.76,Quinnipiac University
+president,WI,2008-10-06,54.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2008-10-05,52.0,42.0,3.86,SurveyUSA
+president,WI,2008-10-05,50.0,42.0,3.41,Big Village
+president,WI,2008-10-05,51.0,43.0,3.04,Quinnipiac University
+president,WI,2008-10-10,54.0,37.0,2.89,Quinnipiac University
+president,WI,2008-10-12,51.0,36.0,5,University of Wisconsin-Milwaukee Institute for Survey and Policy Research
+president,WI,2008-10-16,51.0,39.0,4.0,Mason-Dixon Polling & Strategy
+president,WI,2008-10-13,51.0,38.0,5,University of Wisconsin Survey Center
+president,WI,2008-10-18,51.0,43.0,3.95,SurveyUSA
+president,WI,2008-10-18,53.0,40.0,4.97,FTI Consulting
+president,WI,2008-10-21,53.0,41.0,4.14,Big Ten
+president,WI,2008-10-23,51.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2008-10-28,55.0,39.0,3.87,SurveyUSA
+president,WI,2008-10-25,52.0,42.0,5,University of Wisconsin Survey Center
+president,WI,2008-10-25,53.0,41.0,3.2,YouGov
+president,WV,2008-09-07,39.0,44.0,4.81,Mark Blankenship Enterprises
+president,WV,2008-09-15,45.0,49.0,4.08,American Research Group
+president,WV,2008-09-22,44.0,49.0,3.8,Big Village
+president,WV,2008-09-24,42.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WV,2008-10-06,50.0,42.0,4.08,American Research Group
+president,WV,2008-10-13,47.0,49.0,4.38,InsiderAdvantage
+president,WV,2008-10-14,41.0,42.0,4.08,Rainmaker Media Group
+president,WV,2008-10-16,41.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,WV,2008-10-16,42.0,50.0,2.86,Public Policy Polling
+president,WV,2008-10-20,43.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WV,2008-10-20,44.0,49.0,4.08,Orion Strategies
+president,WV,2008-10-20,41.0,53.0,3.85,Big Village
+president,WV,2008-10-25,40.0,50.0,4.08,Zogby Analytics
+president,WV,2008-10-29,42.0,55.0,2.17,Public Policy Polling
+president,WV,2008-10-25,43.0,52.0,4.98,YouGov
+president,WV,2008-11-02,42.0,53.0,4.08,American Research Group
+president,WY,2008-09-09,39.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WY,2008-09-10,28.0,66.0,4.08,American Research Group
+president,WY,2008-10-13,32.0,58.0,4.0,Mason-Dixon Polling & Strategy
+president,WY,2008-10-18,37.0,58.0,4.07,SurveyUSA
+president,WY,2008-10-25,29.0,67.0,5,YouGov
+governor,DE,2008-09-19,61.0,27.0,4.08,Fairleigh Dickinson University
+governor,DE,2008-09-22,64.0,29.0,3.77,SurveyUSA
+governor,DE,2008-10-07,61.1,29.8,4.83,West Chester University
+governor,DE,2008-10-10,62.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,DE,2008-10-27,62.0,27.0,3.9,SurveyUSA
+governor,IN,2008-09-15,42.0,46.0,4.08,Selzer & Co.
+governor,IN,2008-09-13,31.0,52.0,3.54,Bellwether Research & Consulting
+governor,IN,2008-09-17,40.0,56.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,IN,2008-09-28,37.0,53.0,3.82,SurveyUSA
+governor,IN,2008-09-29,32.0,54.0,4.08,Public Opinion Strategies
+governor,IN,2008-10-18,36.0,57.0,2.66,Public Policy Polling
+governor,IN,2008-10-21,35.0,54.0,3.98,SurveyUSA
+governor,IN,2008-10-23,30.0,61.0,4.08,Howey Politics/DePauw University
+governor,IN,2008-10-27,36.0,54.0,4.06,Selzer & Co.
+governor,IN,2008-10-29,38.0,55.0,3.33,SurveyUSA
+governor,IN,2008-11-01,37.0,60.0,1.95,Public Policy Polling
+governor,MO,2008-09-11,54.0,39.0,3.78,Scott Rasmussen (Rasmussen Reports)
+governor,MO,2008-09-23,54.0,37.0,3.77,SurveyUSA
+governor,MO,2008-10-11,52.0,39.0,3.15,Public Policy Polling
+governor,MO,2008-10-11,56.0,34.0,4.28,SurveyUSA
+governor,MO,2008-10-14,57.0,38.0,3.78,Scott Rasmussen (Rasmussen Reports)
+governor,MO,2008-10-25,55.0,38.0,3.86,SurveyUSA
+governor,MO,2008-11-01,57.9,38.4,2.73,Public Policy Polling
+governor,MO,2008-11-01,54.0,39.0,3.85,SurveyUSA
+governor,MT,2008-10-01,56.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,MT,2008-10-18,60.2,27.3,4.98,Montana State University Billings
+governor,MT,2008-11-01,62.0,36.0,1.91,Public Policy Polling
+governor,NH,2008-09-14,62.0,31.0,4.08,American Research Group
+governor,NH,2008-09-18,66.0,17.0,4.37,University of New Hampshire Survey Center
+governor,NH,2008-09-23,61.0,16.0,4.08,Suffolk University
+governor,NH,2008-09-27,73.0,7.0,3.49,Saint Anselm College Survey Center
+governor,NH,2008-10-04,67.0,24.0,3.93,SurveyUSA
+governor,NH,2008-10-07,65.0,26.0,4.08,American Research Group
+governor,NH,2008-10-20,67.0,17.0,3.71,University of New Hampshire Survey Center
+governor,NH,2008-10-25,68.0,18.0,3.79,University of New Hampshire Survey Center
+governor,NH,2008-10-24,73.0,17.0,4.08,GfK Group
+governor,NH,2008-10-28,69.0,18.0,4.02,University of New Hampshire Survey Center
+governor,NH,2008-10-28,67.0,15.0,4.08,Suffolk University
+governor,NH,2008-10-29,65.0,28.0,3.83,SurveyUSA
+governor,NH,2008-10-29,68.0,28.0,4.08,American Research Group
+governor,NH,2008-11-01,67.0,20.0,3.47,University of New Hampshire Survey Center
+governor,ND,2008-09-08,28.0,68.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,ND,2008-10-07,18.0,73.0,4.06,Minnesota State University Moorhead Public Affairs Institute
+governor,ND,2008-10-13,22.0,66.0,4.45,DFM Research
+governor,UT,2008-09-10,13.0,77.0,4.08,Dan Jones & Associates
+governor,UT,2008-10-24,17.0,73.0,5,Mason-Dixon Polling & Strategy
+governor,UT,2008-10-27,16.0,77.0,2.88,Dan Jones & Associates
+governor,VT,2008-10-06,39.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2008-09-06,47.0,48.0,3.9,SurveyUSA
+governor,WA,2008-09-07,48.0,44.0,5,Elway Research
+governor,WA,2008-09-10,46.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2008-09-21,50.0,48.0,3.83,SurveyUSA
+governor,WA,2008-10-02,48.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2008-10-12,48.0,47.0,4.29,SurveyUSA
+governor,WA,2008-10-18,51.0,39.0,4.97,Elway Research
+governor,WA,2008-10-22,50.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2008-10-22,51.0,45.0,4.08,University of Washington Center for Survey Research
+governor,WA,2008-10-26,50.0,48.0,3.98,SurveyUSA
+governor,WA,2008-10-29,50.0,48.0,5,University of Washington Center for Survey Research
+governor,WA,2008-11-01,52.0,46.0,3.88,SurveyUSA
+governor,WV,2008-10-20,71.0,21.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WV,2008-10-29,69.0,27.0,2.17,Public Policy Polling
+governor,NC,2008-09-06,46.0,40.0,4.07,Garin-Hart-Yang Research Group
+governor,NC,2008-09-07,41.0,49.0,3.86,SurveyUSA
+governor,NC,2008-09-09,41.0,40.0,4.0,Public Policy Polling
+governor,NC,2008-09-08,40.0,39.0,4.08,The Tyson Group
+governor,NC,2008-09-15,35.0,37.0,4.93,Elon University
+governor,NC,2008-09-18,44.0,43.0,3.07,Public Policy Polling
+governor,NC,2008-09-19,41.0,43.0,4.08,The Tyson Group
+governor,NC,2008-09-27,41.0,44.0,3.1,Public Policy Polling
+governor,NC,2008-09-30,46.0,50.0,3.78,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2008-10-04,46.0,43.0,2.88,Public Policy Polling
+governor,NC,2008-10-05,45.0,46.0,4.03,SurveyUSA
+governor,NC,2008-10-06,46.4,43.0,4.47,Marshall Marketing
+governor,NC,2008-10-07,41.0,43.0,4.08,The Tyson Group
+governor,NC,2008-10-11,45.0,44.0,2.89,Public Policy Polling
+governor,NC,2008-10-18,48.0,44.0,2.89,Public Policy Polling
+governor,NC,2008-10-19,43.0,43.0,4.08,The Tyson Group
+governor,NC,2008-10-19,43.0,46.0,3.99,SurveyUSA
+governor,NC,2008-10-20,44.2,43.8,4.47,Marshall Marketing
+governor,NC,2008-10-23,47.0,51.0,3.78,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2008-10-23,46.0,44.0,3.54,Mason-Dixon Polling & Strategy
+governor,NC,2008-10-25,47.0,44.0,3.1,Public Policy Polling
+governor,NC,2008-10-24,44.0,44.0,4.08,GfK Group
+governor,NC,2008-10-28,45.0,43.0,4.08,The Tyson Group
+governor,NC,2008-11-01,49.0,48.0,2.18,Public Policy Polling
+governor,NC,2008-11-01,48.0,47.0,3.83,SurveyUSA
+senate,AL,2008-09-16,31.0,66.0,3.91,SurveyUSA
+senate,AL,2008-09-22,30.0,59.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AL,2008-10-08,33.0,64.0,3.79,SurveyUSA
+senate,AL,2008-10-27,32.0,65.0,3.92,SurveyUSA
+senate,AL,2008-10-25,26.0,54.0,4.7,YouGov
+senate,AK,2008-09-09,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AK,2008-09-19,47.0,43.0,4.08,Fairleigh Dickinson University
+senate,AK,2008-09-21,48.0,46.0,4.47,Alaska Survey Research
+senate,AK,2008-10-06,48.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AK,2008-10-05,49.0,45.0,4.47,Alaska Survey Research
+senate,AK,2008-10-18,46.0,45.0,4.47,Alaska Survey Research
+senate,AK,2008-10-28,52.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AK,2008-10-25,44.0,42.0,5,YouGov
+senate,AK,2008-11-02,49.3,42.0,5,Hays Research Group
+senate,CO,2008-09-08,45.0,34.0,3.65,Harstad Strategic Research
+senate,CO,2008-09-13,41.0,38.0,4.99,FTI Consulting
+senate,CO,2008-09-20,48.0,40.0,3.04,Public Policy Polling
+senate,CO,2008-09-18,48.0,40.0,2.66,Quinnipiac University
+senate,CO,2008-09-23,46.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,CO,2008-09-21,45.0,38.0,4.47,Ciruli Associates
+senate,CO,2008-09-30,43.0,38.0,4.0,Mason-Dixon Polling & Strategy
+senate,CO,2008-10-05,48.0,43.0,3.17,Quinnipiac University
+senate,CO,2008-10-09,49.0,39.0,2.74,Public Policy Polling
+senate,CO,2008-10-10,54.0,40.0,3.03,Quinnipiac University
+senate,CO,2008-10-12,45.0,34.0,4.71,Suffolk University
+senate,CO,2008-10-13,52.0,40.0,4.06,Garin-Hart-Yang Research Group
+senate,CO,2008-10-16,51.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,CO,2008-10-15,43.0,38.0,4.08,Hill Research Consultants
+senate,CO,2008-10-22,51.0,38.0,4.47,Behavior Research Center (Rocky Mountain Poll)
+senate,CO,2008-10-22,51.0,38.0,4.47,Public Opinion Strategies
+senate,CO,2008-10-24,48.0,36.0,4.0,GfK Group
+senate,CO,2008-10-25,51.0,36.0,4.94,FTI Consulting
+senate,CO,2008-10-25,53.0,43.0,3.59,Big Village
+senate,CO,2008-10-28,47.0,43.0,4.0,Mason-Dixon Polling & Strategy
+senate,CO,2008-10-29,56.0,41.0,2.22,Public Policy Polling
+senate,CO,2008-10-25,51.0,36.0,3.82,YouGov
+senate,DE,2008-09-19,69.0,26.0,4.08,Fairleigh Dickinson University
+senate,DE,2008-09-22,64.0,32.0,3.77,SurveyUSA
+senate,DE,2008-10-07,65.0,29.0,4.83,West Chester University
+senate,DE,2008-10-27,66.0,32.0,3.9,SurveyUSA
+senate,DE,2008-10-25,58.0,31.0,5,YouGov
+senate,GA,2008-09-10,33.0,52.0,3.54,Public Opinion Strategies
+senate,GA,2008-09-16,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,GA,2008-09-15,36.0,53.0,3.82,SurveyUSA
+senate,GA,2008-09-26,34.0,37.0,4.08,Mellman Group
+senate,GA,2008-09-28,44.0,46.0,3.84,SurveyUSA
+senate,GA,2008-10-07,44.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,GA,2008-10-09,45.0,45.0,4.34,InsiderAdvantage
+senate,GA,2008-10-11,43.0,46.0,4.28,SurveyUSA
+senate,GA,2008-10-18,44.0,48.0,4.08,GQR
+senate,GA,2008-10-22,45.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,GA,2008-10-23,42.0,44.0,4.03,InsiderAdvantage
+senate,GA,2008-10-22,39.0,45.0,4.0,Mason-Dixon Polling & Strategy
+senate,GA,2008-10-27,44.0,46.0,3.96,InsiderAdvantage
+senate,GA,2008-10-25,44.0,53.0,3.81,Big Village
+senate,GA,2008-10-30,43.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,GA,2008-10-30,39.0,48.0,4.08,Public Opinion Strategies
+senate,GA,2008-10-25,37.0,43.0,3.31,YouGov
+senate,GA,2008-11-02,43.0,48.0,4.42,InsiderAdvantage
+senate,GA,2008-11-01,46.0,48.0,2.83,Public Policy Polling
+senate,GA,2008-11-01,44.0,48.0,3.83,SurveyUSA
+senate,GA,2008-11-18,46.0,50.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,GA,2008-11-23,47.0,50.0,4.37,InsiderAdvantage
+senate,GA,2008-11-22,46.0,52.0,3.39,Public Policy Polling
+senate,GA,2008-11-22,46.0,48.0,4.08,Mellman Group
+senate,GA,2008-11-30,46.0,50.0,3.67,InsiderAdvantage
+senate,GA,2008-11-29,46.0,53.0,2.8,Public Policy Polling
+senate,ID,2008-09-09,30.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,ID,2008-10-21,33.0,45.0,4.46,Harstad Strategic Research
+senate,ID,2008-10-25,31.0,56.0,5,YouGov
+senate,IL,2008-09-17,59.0,35.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,IL,2008-10-13,62.0,31.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,IL,2008-10-25,54.0,31.0,3.57,YouGov
+senate,IA,2008-09-09,53.0,34.0,4.03,Selzer & Co.
+senate,IA,2008-09-17,60.0,37.0,3.77,SurveyUSA
+senate,IA,2008-09-25,54.0,40.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,IA,2008-10-08,58.0,37.0,3.8,SurveyUSA
+senate,IA,2008-10-23,57.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,IA,2008-10-28,61.0,35.0,3.9,SurveyUSA
+senate,IA,2008-10-30,57.0,31.0,4.03,Selzer & Co.
+senate,IA,2008-10-25,56.0,36.0,3.55,YouGov
+senate,KS,2008-09-18,38.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,KS,2008-09-21,35.0,55.0,3.87,SurveyUSA
+senate,KS,2008-10-05,28.0,57.0,4.47,Public Opinion Strategies
+senate,KS,2008-10-13,36.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,KS,2008-10-12,28.0,56.0,4.47,Public Opinion Strategies
+senate,KS,2008-10-21,35.0,57.0,4.04,SurveyUSA
+senate,KS,2008-10-27,33.0,60.0,4.0,SurveyUSA
+senate,KS,2008-10-25,32.0,56.0,4.48,YouGov
+senate,KY,2008-09-08,35.0,52.0,3.33,Voter/Consumer Research
+senate,KY,2008-09-21,46.0,49.0,3.86,SurveyUSA
+senate,KY,2008-09-24,44.0,45.0,3.73,Mason-Dixon Polling & Strategy
+senate,KY,2008-09-30,42.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,KY,2008-10-06,45.0,48.0,4.47,Garin-Hart-Yang Research Group
+senate,KY,2008-10-07,38.0,47.0,3.54,Voter/Consumer Research
+senate,KY,2008-10-19,48.0,48.0,4.32,SurveyUSA
+senate,KY,2008-10-21,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,KY,2008-10-26,45.0,47.0,4.46,Garin-Hart-Yang Research Group
+senate,KY,2008-10-29,44.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,KY,2008-10-28,42.0,47.0,3.5,Mason-Dixon Polling & Strategy
+senate,KY,2008-10-31,45.0,53.0,4.03,SurveyUSA
+senate,KY,2008-10-25,42.0,49.0,4.54,YouGov
+senate,LA,2008-09-25,54.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,LA,2008-10-15,47.0,42.0,4.47,OnMessage Inc.
+senate,LA,2008-10-17,54.0,34.0,4.08,Mellman Group
+senate,LA,2008-10-21,53.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,LA,2008-10-22,53.0,34.0,4.46,Southeastern Louisiana University Social Science Research Center
+senate,LA,2008-10-25,49.0,34.0,4.47,Ed Renwick/Loyola University New Orleans
+senate,LA,2008-10-28,45.0,44.0,4.47,OnMessage Inc.
+senate,LA,2008-10-25,52.0,39.0,4.79,YouGov
+senate,ME,2008-09-17,42.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,ME,2008-09-22,39.0,55.0,3.85,SurveyUSA
+senate,ME,2008-10-02,43.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,ME,2008-10-01,41.0,49.0,4.08,Mellman Group
+senate,ME,2008-10-15,36.0,57.0,5,Pan Atlantic Research
+senate,ME,2008-10-18,42.0,54.0,4.75,Digital Research
+senate,ME,2008-10-19,43.0,54.0,3.95,SurveyUSA
+senate,ME,2008-10-19,37.0,54.0,4.85,Market Decisions Research
+senate,ME,2008-10-30,42.0,56.0,3.85,SurveyUSA
+senate,ME,2008-11-01,41.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,ME,2008-10-25,35.0,55.0,4.54,YouGov
+senate,MA,2008-09-23,65.0,30.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MA,2008-09-22,63.0,25.0,3.84,SurveyUSA
+senate,MA,2008-10-13,63.0,31.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MA,2008-10-13,59.0,29.0,4.0,SurveyUSA
+senate,MA,2008-10-21,56.0,19.0,5,Suffolk University
+senate,MA,2008-10-27,58.0,34.0,3.9,SurveyUSA
+senate,MA,2008-10-25,55.0,32.0,3.77,YouGov
+senate,MI,2008-09-06,51.0,36.0,2.95,Public Policy Polling
+senate,MI,2008-09-10,57.0,38.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2008-09-16,56.0,28.0,4.08,EPIC-MRA
+senate,MI,2008-09-20,56.0,22.0,4.96,FTI Consulting
+senate,MI,2008-09-30,50.0,32.0,3.7,Public Policy Polling
+senate,MI,2008-10-07,61.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2008-10-21,58.0,30.0,5,EPIC-MRA
+senate,MI,2008-10-27,54.0,36.0,4.08,EPIC-MRA
+senate,MI,2008-10-29,58.0,36.0,2.55,Public Policy Polling
+senate,MI,2008-10-30,53.0,32.0,4.03,Selzer & Co.
+senate,MI,2008-10-25,52.0,29.0,3.21,YouGov
+senate,MN,2008-09-10,40.0,41.0,3.69,SurveyUSA
+senate,MN,2008-09-11,37.0,41.0,3.01,Princeton Survey Research Associates International
+senate,MN,2008-09-18,47.0,48.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,MN,2008-09-18,42.0,49.0,2.77,Quinnipiac University
+senate,MN,2008-09-30,33.0,43.0,3.71,SurveyUSA
+senate,MN,2008-09-30,31.0,40.0,5,University of Minnesota Hubert H. Humphrey School of Public Affairs
+senate,MN,2008-09-30,38.0,36.0,4.08,Mellman Group
+senate,MN,2008-10-01,43.0,34.0,3.04,Princeton Survey Research Associates International
+senate,MN,2008-10-04,41.0,37.0,4.89,University of Minnesota Hubert H. Humphrey School of Public Affairs
+senate,MN,2008-10-07,43.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MN,2008-10-05,39.0,37.0,3.05,Quinnipiac University
+senate,MN,2008-10-10,38.0,36.0,3.13,Quinnipiac University
+senate,MN,2008-10-16,39.0,36.0,3.09,Princeton Survey Research Associates International
+senate,MN,2008-10-17,39.0,41.0,3.91,SurveyUSA
+senate,MN,2008-10-18,37.0,36.0,4.99,FTI Consulting
+senate,MN,2008-10-22,41.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MN,2008-10-21,40.0,34.0,4.14,Big Ten
+senate,MN,2008-10-18,27.0,36.0,4.43,St. Cloud State University
+senate,MN,2008-10-28,39.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MN,2008-10-27,36.0,42.0,4.0,Mason-Dixon Polling & Strategy
+senate,MN,2008-10-26,41.0,37.0,4.89,University of Minnesota Hubert H. Humphrey School of Public Affairs
+senate,MN,2008-10-29,45.0,40.0,3.09,Public Policy Polling
+senate,MN,2008-10-30,42.0,38.0,3.27,Princeton Survey Research Associates International
+senate,MN,2008-10-31,39.0,44.0,3.87,SurveyUSA
+senate,MN,2008-10-25,40.0,39.0,3.78,YouGov
+senate,MS,2008-10-25,28.0,56.0,4.9,YouGov
+senate,MT,2008-09-08,64.0,31.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,MT,2008-10-25,60.0,32.0,5,YouGov
+senate,MT,2008-11-01,71.0,26.0,1.91,Public Policy Polling
+senate,NE,2008-09-30,38.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NE,2008-10-25,34.0,53.0,4.96,YouGov
+senate,NH,2008-09-14,52.0,40.0,4.08,American Research Group
+senate,NH,2008-09-18,48.0,44.0,4.59,University of New Hampshire Survey Center
+senate,NH,2008-09-20,48.0,39.0,4.98,FTI Consulting
+senate,NH,2008-09-23,45.0,52.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NH,2008-09-22,41.0,40.0,4.08,Suffolk University
+senate,NH,2008-09-27,49.0,35.0,3.49,Saint Anselm College Survey Center
+senate,NH,2008-10-01,50.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NH,2008-10-04,48.0,40.0,3.93,SurveyUSA
+senate,NH,2008-10-07,51.0,42.0,4.08,American Research Group
+senate,NH,2008-10-18,47.0,41.0,4.47,Public Opinion Strategies
+senate,NH,2008-10-21,46.0,43.0,4.36,Public Opinion Strategies
+senate,NH,2008-10-20,49.0,36.0,3.71,University of New Hampshire Survey Center
+senate,NH,2008-10-23,52.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NH,2008-10-25,49.0,38.0,3.82,University of New Hampshire Survey Center
+senate,NH,2008-10-24,47.0,41.0,4.08,GfK Group
+senate,NH,2008-10-28,47.0,42.0,3.82,University of New Hampshire Survey Center
+senate,NH,2008-10-28,48.0,39.0,4.08,Suffolk University
+senate,NH,2008-10-30,52.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NH,2008-10-29,53.0,40.0,3.83,SurveyUSA
+senate,NH,2008-10-29,53.0,41.0,4.08,American Research Group
+senate,NH,2008-10-25,49.0,41.0,4.4,YouGov
+senate,NH,2008-11-01,48.0,42.0,3.5,University of New Hampshire Survey Center
+senate,NJ,2008-09-07,51.0,40.0,4.14,Marist College
+senate,NJ,2008-09-06,46.0,35.0,3.39,Fairleigh Dickinson University
+senate,NJ,2008-09-13,46.0,36.0,4.12,Monmouth University Polling Institute
+senate,NJ,2008-09-12,48.0,39.0,2.9,Quinnipiac University
+senate,NJ,2008-09-16,49.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NJ,2008-09-27,51.0,38.0,4.05,SurveyUSA
+senate,NJ,2008-10-02,50.0,34.0,3.56,Fairleigh Dickinson University
+senate,NJ,2008-10-07,51.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NJ,2008-10-11,51.0,38.0,4.26,SurveyUSA
+senate,NJ,2008-10-17,52.0,36.0,3.72,Monmouth University Polling Institute
+senate,NJ,2008-10-18,55.0,33.0,2.91,Quinnipiac University
+senate,NJ,2008-10-20,48.0,41.0,3.99,Marist College
+senate,NJ,2008-10-26,52.0,32.0,3.43,Fairleigh Dickinson University
+senate,NJ,2008-10-29,52.0,37.0,3.98,SurveyUSA
+senate,NJ,2008-10-30,50.0,31.0,3.53,Monmouth University Polling Institute
+senate,NJ,2008-10-25,48.0,34.0,3.59,YouGov
+senate,NM,2008-09-08,51.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2008-09-12,57.0,41.0,4.08,Grove Insight
+senate,NM,2008-09-15,56.0,41.0,3.86,SurveyUSA
+senate,NM,2008-09-18,57.0,37.0,3.11,Public Policy Polling
+senate,NM,2008-09-29,58.0,39.0,3.79,SurveyUSA
+senate,NM,2008-10-01,55.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2008-10-01,51.0,36.0,3.9,Research & Polling Inc.
+senate,NM,2008-10-13,57.0,37.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2008-10-12,58.0,40.0,4.2,SurveyUSA
+senate,NM,2008-10-28,56.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2008-10-29,53.0,39.0,3.16,Research & Polling Inc.
+senate,NM,2008-10-29,58.0,39.0,2.55,Public Policy Polling
+senate,NM,2008-10-30,56.0,42.0,3.88,SurveyUSA
+senate,NM,2008-10-25,54.0,33.0,4.68,YouGov
+senate,NC,2008-09-06,46.0,48.0,4.07,Garin-Hart-Yang Research Group
+senate,NC,2008-09-07,40.0,48.0,3.86,SurveyUSA
+senate,NC,2008-09-09,43.0,42.0,4.0,Public Policy Polling
+senate,NC,2008-09-15,35.0,35.0,4.93,Elon University
+senate,NC,2008-09-18,51.0,45.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NC,2008-09-18,46.0,41.0,3.07,Public Policy Polling
+senate,NC,2008-09-19,41.0,43.0,4.08,The Tyson Group
+senate,NC,2008-09-21,43.0,38.0,3.65,Impact Research
+senate,NC,2008-09-23,48.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NC,2008-09-28,46.0,38.0,3.1,Public Policy Polling
+senate,NC,2008-10-04,49.0,40.0,2.88,Public Policy Polling
+senate,NC,2008-10-05,43.0,44.0,4.03,SurveyUSA
+senate,NC,2008-10-06,43.6,43.0,4.47,Marshall Marketing
+senate,NC,2008-10-08,49.0,44.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NC,2008-10-07,45.0,42.0,4.08,The Tyson Group
+senate,NC,2008-10-07,44.0,39.0,3.65,Impact Research
+senate,NC,2008-10-11,46.0,44.0,2.89,Public Policy Polling
+senate,NC,2008-10-18,49.0,42.0,2.89,Public Policy Polling
+senate,NC,2008-10-19,44.0,41.0,4.08,The Tyson Group
+senate,NC,2008-10-19,46.0,45.0,3.99,SurveyUSA
+senate,NC,2008-10-20,44.0,43.4,4.47,Marshall Marketing
+senate,NC,2008-10-23,42.0,46.0,3.54,Mason-Dixon Polling & Strategy
+senate,NC,2008-10-25,48.0,45.0,3.1,Public Policy Polling
+senate,NC,2008-10-24,47.0,43.0,4.08,GfK Group
+senate,NC,2008-10-25,45.0,43.0,4.99,FTI Consulting
+senate,NC,2008-10-25,53.0,44.0,3.87,Big Village
+senate,NC,2008-10-29,52.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,NC,2008-10-28,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
+senate,NC,2008-10-28,45.0,43.0,4.08,The Tyson Group
+senate,NC,2008-10-29,44.0,37.0,3.54,Elon University
+senate,NC,2008-10-25,48.0,42.0,3.24,YouGov
+senate,NC,2008-11-01,51.0,44.0,2.18,Public Policy Polling
+senate,NC,2008-11-01,50.0,43.0,3.83,SurveyUSA
+senate,OK,2008-09-07,29.0,57.0,3.34,SoonerPoll.com
+senate,OK,2008-09-06,34.0,56.0,3.92,SurveyUSA
+senate,OK,2008-09-11,39.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OK,2008-09-14,30.0,57.0,3.41,SoonerPoll.com
+senate,OK,2008-09-21,33.0,55.0,3.87,SoonerPoll.com
+senate,OK,2008-09-27,36.0,56.0,3.33,SoonerPoll.com
+senate,OK,2008-09-28,37.0,53.0,3.9,SurveyUSA
+senate,OK,2008-10-04,40.0,53.0,3.53,SoonerPoll.com
+senate,OK,2008-10-11,40.0,53.0,3.51,SoonerPoll.com
+senate,OK,2008-10-18,39.0,51.0,4.22,SurveyUSA
+senate,OK,2008-10-19,40.0,53.0,3.62,SoonerPoll.com
+senate,OK,2008-10-25,41.0,51.0,3.73,SoonerPoll.com
+senate,OK,2008-10-25,38.0,54.0,4.47,Public Opinion Strategies
+senate,OK,2008-10-28,36.0,56.0,4.1,SurveyUSA
+senate,OK,2008-10-25,39.0,50.0,4.51,YouGov
+senate,OR,2008-09-08,43.0,41.0,3.77,Benenson Strategy Group
+senate,OR,2008-09-13,39.0,42.0,4.47,DHM Research
+senate,OR,2008-09-15,45.0,46.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,OR,2008-09-22,44.0,42.0,3.76,SurveyUSA
+senate,OR,2008-10-08,41.0,36.0,4.08,Grove Insight
+senate,OR,2008-10-11,46.0,41.0,4.14,SurveyUSA
+senate,OR,2008-10-14,47.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OR,2008-10-15,36.0,35.0,4.48,Riley Research Associates
+senate,OR,2008-10-24,45.0,40.0,4.47,DHM Research
+senate,OR,2008-10-25,49.0,42.0,3.86,SurveyUSA
+senate,OR,2008-10-27,41.0,45.0,5,Moore Information Group
+senate,OR,2008-10-30,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OR,2008-10-29,49.0,42.0,3.78,SurveyUSA
+senate,OR,2008-10-29,51.0,43.0,2.65,Public Policy Polling
+senate,OR,2008-10-25,44.0,43.0,3.79,YouGov
+senate,RI,2008-10-25,64.0,25.0,5,YouGov
+senate,SC,2008-09-18,41.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,SC,2008-09-21,40.0,54.0,3.81,SurveyUSA
+senate,SC,2008-10-12,40.0,56.0,4.22,SurveyUSA
+senate,SC,2008-10-28,39.0,58.0,3.91,SurveyUSA
+senate,SC,2008-10-25,31.0,47.0,3.71,YouGov
+senate,SD,2008-09-24,61.0,34.0,4.05,GQR
+senate,SD,2008-09-24,54.0,36.0,5,Moore Information Group
+senate,SD,2008-10-07,60.0,35.0,3.99,GQR
+senate,SD,2008-10-14,59.0,35.0,4.02,GQR
+senate,SD,2008-10-14,57.0,34.0,3.54,Mason-Dixon Polling & Strategy
+senate,SD,2008-10-22,62.0,32.0,4.07,GQR
+senate,SD,2008-10-25,60.0,35.0,5,YouGov
+senate,TN,2008-09-23,33.0,57.0,4.0,Mason-Dixon Polling & Strategy
+senate,TN,2008-09-21,26.0,50.0,3.97,Minnesota State University Moorhead Public Affairs Institute
+senate,TN,2008-09-29,32.0,56.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,TN,2008-10-14,27.0,64.0,4.08,North Star Opinion Research
+senate,TN,2008-10-16,34.0,62.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,TN,2008-10-25,30.0,53.0,3.91,YouGov
+senate,TX,2008-09-29,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,TX,2008-10-21,40.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,TX,2008-10-19,36.0,45.0,4.26,YouGov
+senate,TX,2008-10-25,35.0,47.0,3.21,YouGov
+senate,VA,2008-09-06,56.0,35.0,3.73,SurveyUSA
+senate,VA,2008-09-13,57.0,33.0,3.03,Public Policy Polling
+senate,VA,2008-09-13,57.0,34.0,3.7,SurveyUSA
+senate,VA,2008-09-12,54.0,30.0,4.47,Christopher Newport University Wason Center for Civic Leadership
+senate,VA,2008-09-20,57.0,34.0,3.74,SurveyUSA
+senate,VA,2008-09-20,61.0,31.0,3.79,ABC News/The Washington Post
+senate,VA,2008-09-19,61.0,28.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2008-09-25,60.0,34.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2008-09-30,57.0,31.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2008-10-04,61.0,31.0,3.87,SurveyUSA
+senate,VA,2008-10-06,58.0,31.0,3.3,Public Policy Polling
+senate,VA,2008-10-16,61.0,36.0,3.78,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2008-10-18,60.0,36.0,3.92,SurveyUSA
+senate,VA,2008-10-20,58.0,33.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2008-10-21,61.0,27.0,3.5,Virginia Commonwealth University L. Douglas Wilder School of Government and Public Affairs
+senate,VA,2008-10-22,60.0,32.0,2.85,Public Policy Polling
+senate,VA,2008-10-24,61.0,31.0,3.57,ABC News/The Washington Post
+senate,VA,2008-10-25,63.0,32.0,3.86,SurveyUSA
+senate,VA,2008-10-24,58.0,32.0,4.08,GfK Group
+senate,VA,2008-10-23,57.0,22.0,4.04,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2008-10-26,63.0,32.0,3.86,ABC News/The Washington Post
+senate,VA,2008-10-25,60.0,31.0,4.98,FTI Consulting
+senate,VA,2008-10-25,63.0,35.0,3.72,Big Village
+senate,VA,2008-10-29,62.0,31.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2008-10-31,59.0,35.0,3.86,SurveyUSA
+senate,VA,2008-10-25,58.0,33.0,3.6,YouGov
+senate,VA,2008-11-01,62.0,36.0,2.53,Public Policy Polling
+senate,WV,2008-09-24,61.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WV,2008-10-20,60.0,36.0,4.08,Orion Strategies
+senate,WV,2008-10-29,58.0,40.0,2.17,Public Policy Polling
+senate,WV,2008-10-25,55.0,37.0,4.98,YouGov
+senate,WY,2008-10-13,20.0,72.0,4.0,Mason-Dixon Polling & Strategy
+senate,WY,2008-10-25,25.0,68.0,5,YouGov
+senate,WY,2008-10-13,22.0,69.0,4.0,Mason-Dixon Polling & Strategy
+senate,WY,2008-10-25,29.0,63.0,5,YouGov
+president,N2,2008-10-14,44.0,48.0,5,Impact Research
+president,M1,2008-10-30,60.0,37.0,5,SurveyUSA
+president,M2,2008-10-30,55.0,39.0,5,SurveyUSA

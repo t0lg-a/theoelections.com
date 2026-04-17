@@ -1,0 +1,891 @@
+mode,state,date,dem,rep,sigma,pollster
+president,AK,2000-09-13,26.0,47.0,4.08,American Research Group
+president,AK,2000-11-03,31.0,54.0,3.64,Harris Insights & Analytics
+president,AL,2000-09-13,36.0,52.0,4.08,American Research Group
+president,AL,2000-09-17,43.0,48.0,4.43,Capital Survey Research Center
+president,AL,2000-10-18,33.0,53.0,4.96,University of South Alabama Polling Group
+president,AL,2000-10-19,37.0,55.0,4.15,Capital Survey Research Center
+president,AL,2000-11-01,28.0,48.0,4.76,University of South Alabama Polling Group
+president,AL,2000-11-02,38.0,55.0,4.0,Mason-Dixon Polling & Strategy
+president,AR,2000-09-08,40.0,42.0,5,Ethridge & Associates LLC
+president,AR,2000-09-13,43.0,44.0,4.08,American Research Group
+president,AR,2000-09-27,43.0,45.0,3.99,Mason-Dixon Polling & Strategy
+president,AR,2000-10-28,44.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,AR,2000-10-29,46.0,46.0,3.78,Opinion Research Associates
+president,AR,2000-10-31,44.0,47.0,5,Ethridge & Associates LLC
+president,AR,2000-11-02,45.0,47.0,2.54,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2000-09-16,46.0,36.0,5,Arizona State University Morrison Institute for Public Policy
+president,AZ,2000-09-13,46.0,46.0,3.27,Harris Insights & Analytics
+president,AZ,2000-09-16,40.0,49.0,5,Northern Arizona University Social Research Laboratory
+president,AZ,2000-09-13,39.0,43.0,4.08,American Research Group
+president,AZ,2000-09-27,43.0,50.0,4.47,SurveyUSA
+president,AZ,2000-10-05,42.0,45.0,3.76,Behavior Research Center (Rocky Mountain Poll)
+president,AZ,2000-10-21,37.0,49.0,4.05,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2000-10-21,39.0,49.0,3.76,Arizona State University Morrison Institute for Public Policy
+president,AZ,2000-10-29,42.0,52.0,4.43,SurveyUSA
+president,AZ,2000-10-30,39.0,49.0,4.81,Market Solutions Group
+president,AZ,2000-11-03,40.0,52.0,1.47,Harris Insights & Analytics
+president,CA,2000-09-07,49.0,36.0,3.54,FM3 Research
+president,CA,2000-09-08,48.0,39.0,3.02,Public Policy Institute of California
+president,CA,2000-09-13,50.0,41.0,1.38,Harris Insights & Analytics
+president,CA,2000-09-13,50.0,36.0,4.08,American Research Group
+president,CA,2000-09-26,52.0,39.0,4.47,SurveyUSA
+president,CA,2000-10-07,45.0,39.0,3.52,Zogby Analytics
+president,CA,2000-10-03,50.0,37.0,3.13,Field Research Corp. (Field Poll)
+president,CA,2000-10-10,48.0,40.0,4.47,SurveyUSA
+president,CA,2000-10-15,44.0,39.0,3.02,Public Policy Institute of California
+president,CA,2000-10-21,48.0,41.0,3.43,Los Angeles Times
+president,CA,2000-10-24,47.0,43.0,4.34,SurveyUSA
+president,CA,2000-10-29,44.0,41.0,2.55,Scott Rasmussen (Rasmussen Reports)
+president,CA,2000-10-29,47.0,40.0,3.18,Field Research Corp. (Field Poll)
+president,CA,2000-10-31,49.0,43.0,4.34,SurveyUSA
+president,CA,2000-11-02,48.0,40.0,4.08,Zogby Analytics
+president,CA,2000-11-03,46.0,41.0,3.29,Field Research Corp. (Field Poll)
+president,CA,2000-11-05,45.0,45.0,4.1,Zogby Analytics
+president,CA,2000-11-03,49.0,43.0,0.63,Harris Insights & Analytics
+president,CO,2000-09-13,43.0,47.0,3.77,Harris Insights & Analytics
+president,CO,2000-09-13,41.0,43.0,4.08,American Research Group
+president,CO,2000-09-27,35.0,44.0,4.47,Ciruli Associates
+president,CO,2000-10-01,33.0,45.0,4.51,"Drake Research & Strategy, Inc."
+president,CO,2000-10-23,39.0,52.0,4.47,SurveyUSA
+president,CO,2000-10-25,37.0,47.0,5,Ciruli Associates
+president,CO,2000-10-29,37.0,46.0,5,Ciruli Associates
+president,CO,2000-11-02,38.0,47.0,5,Ciruli Associates
+president,CO,2000-11-03,43.0,48.0,1.64,Harris Insights & Analytics
+president,CT,2000-09-15,52.0,33.0,3.26,Quinnipiac University
+president,CT,2000-09-13,53.0,37.0,3.3,Harris Insights & Analytics
+president,CT,2000-09-13,49.0,33.0,4.08,American Research Group
+president,CT,2000-09-28,48.0,32.0,4.73,University of Connecticut
+president,CT,2000-11-03,51.0,40.0,1.99,Harris Insights & Analytics
+president,DC,2000-09-13,73.0,14.0,4.08,American Research Group
+president,DE,2000-09-13,49.0,35.0,4.08,American Research Group
+president,DE,2000-09-23,50.0,40.0,5,University of Delaware Center for Political Communication
+president,DE,2000-10-04,45.0,43.0,3.97,Mason-Dixon Polling & Strategy
+president,DE,2000-10-09,53.0,40.0,4.47,SurveyUSA
+president,DE,2000-10-23,49.0,45.0,4.47,SurveyUSA
+president,DE,2000-10-30,44.0,43.0,3.59,Scott Rasmussen (Rasmussen Reports)
+president,DE,2000-10-31,42.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,FL,2000-09-10,43.0,45.0,3.53,Mason-Dixon Polling & Strategy
+president,FL,2000-09-09,44.0,42.0,4.05,Fleming & Associates
+president,FL,2000-09-09,41.0,41.0,4.45,University of Connecticut
+president,FL,2000-09-13,52.0,43.0,1.65,Harris Insights & Analytics
+president,FL,2000-09-13,43.0,40.0,4.08,American Research Group
+president,FL,2000-09-23,48.0,46.0,4.47,SurveyUSA
+president,FL,2000-10-04,42.0,46.0,4.08,Tarrance Group
+president,FL,2000-10-05,46.0,43.0,4.08,SEA Polling & Strategic Design
+president,FL,2000-10-06,44.0,47.0,3.52,Mason-Dixon Polling & Strategy
+president,FL,2000-10-14,45.0,48.0,4.47,SurveyUSA
+president,FL,2000-10-14,47.0,45.0,4.08,American Research Group
+president,FL,2000-10-17,43.0,44.0,4.08,McLaughlin & Associates
+president,FL,2000-10-20,41.0,46.0,4.06,Fleming & Associates
+president,FL,2000-10-23,48.0,43.0,4.41,CBS News/The New York Times
+president,FL,2000-10-22,49.0,45.0,4.08,American Research Group
+president,FL,2000-10-25,45.0,46.0,3.4,Scott Rasmussen (Rasmussen Reports)
+president,FL,2000-10-27,49.0,42.0,4.08,Zogby Analytics
+president,FL,2000-10-28,44.0,48.0,4.99,Los Angeles Times
+president,FL,2000-10-30,48.0,41.0,4.08,Zogby Analytics
+president,FL,2000-10-30,44.0,46.0,3.51,Mason-Dixon Polling & Strategy
+president,FL,2000-10-31,49.0,44.0,4.08,American Research Group
+president,FL,2000-11-01,50.0,45.0,4.47,SurveyUSA
+president,FL,2000-11-01,45.0,47.0,4.16,Scott Rasmussen (Rasmussen Reports)
+president,FL,2000-11-02,46.0,45.0,4.08,Zogby Analytics
+president,FL,2000-11-05,50.0,45.0,4.47,SurveyUSA
+president,FL,2000-11-05,48.0,46.0,4.11,Zogby Analytics
+president,FL,2000-11-03,49.0,46.0,0.77,Harris Insights & Analytics
+president,GA,2000-09-07,40.0,46.0,4.08,North Star Opinion Research
+president,GA,2000-09-13,47.0,48.0,2.68,Harris Insights & Analytics
+president,GA,2000-09-13,41.0,46.0,4.08,American Research Group
+president,GA,2000-10-01,36.0,52.0,4.39,Marketing Workshop
+president,GA,2000-10-06,41.0,47.0,4.47,Schapiro Group
+president,GA,2000-10-13,40.0,48.0,3.99,Mason-Dixon Polling & Strategy
+president,GA,2000-10-22,40.0,50.0,3.12,Scott Rasmussen (Rasmussen Reports)
+president,GA,2000-10-29,37.0,53.0,4.42,Marketing Workshop
+president,GA,2000-11-03,43.0,51.0,1.2,Harris Insights & Analytics
+president,HI,2000-09-13,57.0,29.0,4.08,American Research Group
+president,HI,2000-10-21,50.0,31.0,5,Ward Research
+president,HI,2000-11-03,53.0,38.0,4.12,Harris Insights & Analytics
+president,IA,2000-09-13,50.0,43.0,3.8,Harris Insights & Analytics
+president,IA,2000-09-13,45.0,38.0,4.08,American Research Group
+president,IA,2000-09-25,44.0,42.0,5,PSI
+president,IA,2000-10-29,46.0,46.0,4.47,SurveyUSA
+president,IA,2000-10-31,41.0,44.0,4.47,PSI
+president,IA,2000-11-02,42.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,IA,2000-11-01,44.0,42.0,3.52,Selzer & Co.
+president,IA,2000-11-03,50.0,44.0,2.01,Harris Insights & Analytics
+president,ID,2000-09-13,31.0,53.0,4.08,American Research Group
+president,ID,2000-10-21,24.0,62.0,3.35,Scott Rasmussen (Rasmussen Reports)
+president,ID,2000-10-25,30.0,56.0,3.97,Mason-Dixon Polling & Strategy
+president,ID,2000-11-03,27.0,65.0,3.32,Harris Insights & Analytics
+president,IL,2000-09-10,48.0,33.0,5,EPIC-MRA
+president,IL,2000-09-14,47.0,35.0,3.77,Market Shares Corp.
+president,IL,2000-09-13,52.0,41.0,2.54,Harris Insights & Analytics
+president,IL,2000-09-13,48.0,38.0,4.08,American Research Group
+president,IL,2000-09-20,47.0,42.0,4.0,Mason-Dixon Polling & Strategy
+president,IL,2000-10-08,45.0,37.0,3.33,Market Shares Corp.
+president,IL,2000-10-08,41.0,40.0,3.54,Victory Research
+president,IL,2000-10-13,46.0,41.0,4.01,Mason-Dixon Polling & Strategy
+president,IL,2000-10-16,45.0,43.0,4.08,KRC Research
+president,IL,2000-10-22,45.0,35.0,3.34,Market Shares Corp.
+president,IL,2000-10-23,44.0,40.0,3.37,Scott Rasmussen (Rasmussen Reports)
+president,IL,2000-10-25,42.0,45.0,4.08,Opinion Dynamics
+president,IL,2000-10-23,43.0,38.0,3.53,Richard Day Research
+president,IL,2000-10-27,48.0,41.0,4.08,Zogby Analytics
+president,IL,2000-10-27,46.0,39.0,4.08,Zogby Analytics
+president,IL,2000-10-29,46.0,43.0,4.0,Mason-Dixon Polling & Strategy
+president,IL,2000-10-30,46.0,42.0,4.08,Zogby Analytics
+president,IL,2000-11-02,49.0,40.0,4.08,Zogby Analytics
+president,IL,2000-11-05,50.0,43.0,4.14,Zogby Analytics
+president,IL,2000-11-03,51.0,45.0,1.06,Harris Insights & Analytics
+president,IN,2000-09-13,43.0,49.0,3.23,Harris Insights & Analytics
+president,IN,2000-09-13,39.0,48.0,4.08,American Research Group
+president,IN,2000-09-24,32.0,49.0,4.08,McLaughlin & Associates
+president,IN,2000-10-06,33.0,45.0,3.71,Indiana University Public Opinion Laboratory
+president,IN,2000-10-27,30.0,53.0,4.08,Market Shares Corp.
+president,IN,2000-10-30,33.0,52.0,3.72,Scott Rasmussen (Rasmussen Reports)
+president,IN,2000-11-01,32.0,60.0,4.47,SurveyUSA
+president,IN,2000-11-03,39.0,56.0,1.34,Harris Insights & Analytics
+president,KS,2000-09-13,38.0,55.0,3.83,Harris Insights & Analytics
+president,KS,2000-09-13,32.0,55.0,4.08,American Research Group
+president,KS,2000-11-03,38.0,55.0,1.98,Harris Insights & Analytics
+president,KY,2000-09-13,45.0,48.0,3.2,Harris Insights & Analytics
+president,KY,2000-09-13,45.0,39.0,4.08,American Research Group
+president,KY,2000-09-20,41.0,51.0,4.06,Magellan Strategies
+president,KY,2000-10-21,39.0,48.0,3.25,Scott Rasmussen (Rasmussen Reports)
+president,KY,2000-10-28,40.0,55.0,3.83,Magellan Strategies
+president,KY,2000-11-01,40.0,58.0,4.47,SurveyUSA
+president,KY,2000-11-02,41.0,51.0,4.0,Mason-Dixon Polling & Strategy
+president,KY,2000-11-03,42.0,54.0,1.74,Harris Insights & Analytics
+president,LA,2000-09-13,44.0,37.0,4.08,American Research Group
+president,LA,2000-09-18,38.0,44.0,4.08,Southern Media & Opinion Research
+president,LA,2000-10-19,41.0,48.0,3.69,Scott Rasmussen (Rasmussen Reports)
+president,LA,2000-10-21,39.0,52.0,4.0,Mason-Dixon Polling & Strategy
+president,LA,2000-10-19,35.0,48.0,4.66,University of New Orleans Survey Research Center
+president,LA,2000-10-21,38.0,46.0,3.89,Southeastern Louisiana University Social Science Research Center
+president,MA,2000-09-13,60.0,34.0,3.33,Harris Insights & Analytics
+president,MA,2000-09-13,57.0,26.0,4.08,American Research Group
+president,MA,2000-10-24,52.0,28.0,5,RKM Research and Communications Inc.
+president,MA,2000-10-25,54.0,28.0,5,KRC Research
+president,MA,2000-10-27,52.0,30.0,4.99,University of Massachusetts Department of Political Science
+president,MA,2000-11-03,58.0,32.0,1.39,Harris Insights & Analytics
+president,MD,2000-09-13,56.0,39.0,3.1,Harris Insights & Analytics
+president,MD,2000-09-13,53.0,34.0,4.08,American Research Group
+president,MD,2000-09-30,53.0,41.0,4.47,SurveyUSA
+president,MD,2000-10-07,49.0,38.0,4.01,Mason-Dixon Polling & Strategy
+president,MD,2000-10-21,52.0,41.0,4.47,SurveyUSA
+president,MD,2000-10-25,48.0,40.0,4.0,Mason-Dixon Polling & Strategy
+president,MD,2000-10-26,47.0,40.0,3.79,Scott Rasmussen (Rasmussen Reports)
+president,MD,2000-10-26,52.0,38.0,3.99,Gonzales Research & Marketing Strategies Inc.
+president,MD,2000-11-03,56.0,39.0,1.38,Harris Insights & Analytics
+president,ME,2000-09-10,46.0,35.0,4.89,RKM Research and Communications Inc.
+president,ME,2000-09-16,41.0,31.0,5,Myers Research & Strategic Services
+president,ME,2000-09-13,47.0,32.0,4.08,American Research Group
+president,ME,2000-10-14,37.0,42.0,4.98,Digital Research
+president,ME,2000-10-22,39.0,43.0,2.54,Scott Rasmussen (Rasmussen Reports)
+president,ME,2000-10-22,42.0,34.0,5,Myers Research & Strategic Services
+president,ME,2000-10-22,47.0,36.0,5,Pan Atlantic Research
+president,ME,2000-10-24,42.0,41.0,3.48,Market Decisions Research
+president,ME,2000-10-29,42.0,42.0,4.08,RKM Research and Communications Inc.
+president,ME,2000-11-03,50.0,42.0,2.59,Harris Insights & Analytics
+president,MI,2000-09-08,36.0,50.0,5,Ethridge & Associates LLC
+president,MI,2000-09-11,44.0,41.0,4.47,Marketing Resource Group (MRG)
+president,MI,2000-09-10,37.0,45.0,4.08,EPIC-MRA
+president,MI,2000-09-14,42.0,40.0,4.47,Market Shares Corp.
+president,MI,2000-09-13,52.0,42.0,2.62,Harris Insights & Analytics
+president,MI,2000-09-13,48.0,40.0,4.08,American Research Group
+president,MI,2000-09-24,52.0,40.0,4.08,SurveyUSA
+president,MI,2000-09-24,48.0,42.0,3.15,CBS News/The New York Times
+president,MI,2000-09-27,39.0,45.0,4.08,EPIC-MRA
+president,MI,2000-09-30,49.0,42.0,4.08,SurveyUSA
+president,MI,2000-10-11,42.0,45.0,4.08,EPIC-MRA
+president,MI,2000-10-11,41.0,42.0,4.47,Marketing Resource Group (MRG)
+president,MI,2000-10-11,42.0,43.0,4.15,Mitchell Research & Communications
+president,MI,2000-10-14,45.0,45.0,4.08,SurveyUSA
+president,MI,2000-10-18,43.0,43.0,4.0,Scott Rasmussen (Rasmussen Reports)
+president,MI,2000-10-18,43.0,43.0,4.08,EPIC-MRA
+president,MI,2000-10-21,47.0,46.0,4.08,SurveyUSA
+president,MI,2000-10-23,41.0,42.0,4.26,Hill Research Consultants
+president,MI,2000-10-22,46.0,43.0,4.08,American Research Group
+president,MI,2000-10-24,42.0,42.0,4.08,Mitchell Research & Communications
+president,MI,2000-10-24,42.0,44.0,4.08,EPIC-MRA
+president,MI,2000-10-25,43.0,40.0,4.08,Opinion Dynamics
+president,MI,2000-10-25,39.0,45.0,4.47,Marketing Resource Group (MRG)
+president,MI,2000-10-24,43.0,42.0,5,Lake Research Partners/The Tarrance Group
+president,MI,2000-10-27,46.0,45.0,4.07,Zogby Analytics
+president,MI,2000-10-28,49.0,45.0,4.08,SurveyUSA
+president,MI,2000-10-28,48.0,44.0,4.99,Los Angeles Times
+president,MI,2000-10-29,43.0,43.0,3.23,Scott Rasmussen (Rasmussen Reports)
+president,MI,2000-10-30,50.0,41.0,4.08,Zogby Analytics
+president,MI,2000-10-31,48.0,44.0,4.08,American Research Group
+president,MI,2000-11-01,46.0,41.0,3.54,Mitchell Research & Communications
+president,MI,2000-11-01,45.0,44.0,4.47,EPIC-MRA
+president,MI,2000-11-02,49.0,40.0,4.08,Zogby Analytics
+president,MI,2000-11-04,44.0,45.0,3.56,Scott Rasmussen (Rasmussen Reports)
+president,MI,2000-11-04,46.0,48.0,4.08,SurveyUSA
+president,MI,2000-11-05,51.0,45.0,4.11,Zogby Analytics
+president,MI,2000-11-03,50.0,45.0,1.07,Harris Insights & Analytics
+president,MN,2000-09-13,49.0,39.0,3.06,Harris Insights & Analytics
+president,MN,2000-09-13,46.0,38.0,4.08,American Research Group
+president,MN,2000-09-24,47.0,40.0,3.99,Mason-Dixon Polling & Strategy
+president,MN,2000-09-25,45.0,39.0,3.46,Minneapolis Star Tribune
+president,MN,2000-10-16,41.0,44.0,3.5,Minneapolis Star Tribune
+president,MN,2000-10-19,38.0,41.0,4.41,St. Cloud State University
+president,MN,2000-10-26,44.0,41.0,4.0,Mason-Dixon Polling & Strategy
+president,MN,2000-11-02,47.0,37.0,3.14,Minneapolis Star Tribune
+president,MN,2000-11-03,46.0,43.0,1.62,Harris Insights & Analytics
+president,MO,2000-09-12,40.0,40.0,4.47,North Star Opinion Research
+president,MO,2000-09-13,47.0,48.0,3.27,Harris Insights & Analytics
+president,MO,2000-09-13,43.0,40.0,4.08,American Research Group
+president,MO,2000-10-23,42.0,46.0,3.05,Scott Rasmussen (Rasmussen Reports)
+president,MO,2000-10-23,44.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,MO,2000-10-24,46.0,44.0,4.07,Zogby Analytics
+president,MO,2000-10-27,45.0,47.0,4.08,Zogby Analytics
+president,MO,2000-10-29,42.0,47.0,2.84,Scott Rasmussen (Rasmussen Reports)
+president,MO,2000-10-30,43.0,46.0,4.08,Zogby Analytics
+president,MO,2000-11-02,45.0,47.0,4.08,Zogby Analytics
+president,MO,2000-11-02,46.0,45.0,4.08,American Research Group
+president,MO,2000-11-05,47.0,48.0,4.09,Zogby Analytics
+president,MO,2000-11-03,46.0,49.0,1.31,Harris Insights & Analytics
+president,MS,2000-09-13,37.0,48.0,4.08,American Research Group
+president,MS,2000-10-31,33.0,55.0,5,Ethridge & Associates LLC
+president,MS,2000-11-02,41.0,52.0,4.0,Mason-Dixon Polling & Strategy
+president,MT,2000-09-13,35.0,51.0,4.08,American Research Group
+president,MT,2000-09-22,37.0,48.0,4.0,Mason-Dixon Polling & Strategy
+president,MT,2000-10-14,30.0,55.0,4.99,A&A Research
+president,MT,2000-10-19,28.0,56.0,3.21,Scott Rasmussen (Rasmussen Reports)
+president,MT,2000-10-21,33.0,51.0,4.98,Montana State University Billings
+president,MT,2000-10-23,37.0,49.0,3.99,Mason-Dixon Polling & Strategy
+president,NC,2000-09-15,42.0,47.0,4.02,Mason-Dixon Polling & Strategy
+president,NC,2000-09-13,45.0,50.0,2.78,Harris Insights & Analytics
+president,NC,2000-09-13,44.0,45.0,4.08,American Research Group
+president,NC,2000-10-07,40.0,55.0,4.47,SurveyUSA
+president,NC,2000-10-07,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,NC,2000-10-28,41.0,54.0,4.47,SurveyUSA
+president,NC,2000-10-29,41.0,48.0,4.0,Mason-Dixon Polling & Strategy
+president,NC,2000-11-01,40.0,50.0,2.93,Scott Rasmussen (Rasmussen Reports)
+president,NC,2000-11-04,39.0,56.0,4.47,SurveyUSA
+president,NC,2000-11-03,46.0,51.0,1.22,Harris Insights & Analytics
+president,ND,2000-09-13,35.0,53.0,4.08,American Research Group
+president,ND,2000-10-04,34.8,46.7,4.13,Minnesota State University Moorhead Public Affairs Institute
+president,ND,2000-10-21,34.0,49.0,2.82,Scott Rasmussen (Rasmussen Reports)
+president,NE,2000-09-13,32.0,53.0,4.08,American Research Group
+president,NE,2000-09-20,32.0,56.0,5,Moore Information Group
+president,NE,2000-09-26,34.0,51.0,3.76,RKM Research and Communications Inc.
+president,NE,2000-10-26,31.0,56.0,3.15,RKM Research and Communications Inc.
+president,NE,2000-11-03,38.0,57.0,2.6,Harris Insights & Analytics
+president,NH,2000-09-09,42.0,42.0,3.57,University of New Hampshire Survey Center
+president,NH,2000-09-19,41.0,46.0,4.08,American Research Group
+president,NH,2000-09-17,44.0,34.0,4.38,University of Connecticut
+president,NH,2000-10-03,44.0,38.0,4.0,Franklin Pierce University Marlin Fitzwater Center for Communication
+president,NH,2000-10-07,46.0,38.0,4.08,American Research Group
+president,NH,2000-10-09,43.0,39.0,3.76,University of New Hampshire Survey Center
+president,NH,2000-10-22,38.0,46.0,2.73,Scott Rasmussen (Rasmussen Reports)
+president,NH,2000-10-24,43.0,40.0,3.36,Franklin Pierce University Marlin Fitzwater Center for Communication
+president,NH,2000-10-30,43.0,42.0,4.53,RKM Research and Communications Inc.
+president,NH,2000-10-31,40.0,45.0,4.08,American Research Group
+president,NH,2000-11-02,38.0,48.0,4.08,American Research Group
+president,NH,2000-11-03,39.0,45.0,3.53,University of New Hampshire Survey Center
+president,NH,2000-11-03,47.0,45.0,2.67,Harris Insights & Analytics
+president,NJ,2000-09-10,47.0,34.0,3.86,Rutgers University Eagleton Center for Public Interest Polling
+president,NJ,2000-09-14,50.0,32.0,4.47,Market Shares Corp.
+president,NJ,2000-09-13,58.0,34.0,2.73,Harris Insights & Analytics
+president,NJ,2000-09-13,47.0,36.0,4.08,American Research Group
+president,NJ,2000-09-28,50.0,36.0,3.49,Quinnipiac University
+president,NJ,2000-10-11,50.0,42.0,4.47,SurveyUSA
+president,NJ,2000-10-13,45.0,31.0,4.43,Gannett New Jersey
+president,NJ,2000-10-14,46.0,38.0,3.76,Rutgers University Eagleton Center for Public Interest Polling
+president,NJ,2000-10-14,49.0,34.0,3.32,The New York Times
+president,NJ,2000-10-20,47.0,41.0,3.32,Quinnipiac University
+president,NJ,2000-10-24,49.0,45.0,4.47,SurveyUSA
+president,NJ,2000-10-25,47.0,35.0,4.81,Rutgers University Eagleton Center for Public Interest Polling
+president,NJ,2000-10-27,41.0,36.0,4.17,Gannett New Jersey
+president,NJ,2000-10-27,50.0,38.0,3.76,Quinnipiac University
+president,NJ,2000-10-30,45.0,39.0,4.1,Scott Rasmussen (Rasmussen Reports)
+president,NJ,2000-11-03,47.0,34.0,3.44,Gannett New Jersey
+president,NJ,2000-11-03,49.0,41.0,3.6,Quinnipiac University
+president,NJ,2000-11-05,46.0,40.0,3.96,Scott Rasmussen (Rasmussen Reports)
+president,NJ,2000-11-03,54.0,40.0,1.18,Harris Insights & Analytics
+president,NM,2000-09-10,42.0,43.0,4.25,Research & Polling Inc.
+president,NM,2000-09-13,46.0,43.0,4.06,Harris Insights & Analytics
+president,NM,2000-09-13,46.0,40.0,4.08,American Research Group
+president,NM,2000-09-27,42.0,42.0,4.08,New Mexico State University
+president,NM,2000-09-29,41.0,44.0,4.87,Mason-Dixon Polling & Strategy
+president,NM,2000-11-01,45.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,NM,2000-11-01,41.0,44.0,3.61,Research & Polling Inc.
+president,NM,2000-11-03,49.0,44.0,2.46,Harris Insights & Analytics
+president,NV,2000-09-11,42.0,46.0,3.99,Mason-Dixon Polling & Strategy
+president,NV,2000-09-13,49.0,44.0,4.32,Harris Insights & Analytics
+president,NV,2000-09-13,41.0,44.0,4.08,American Research Group
+president,NV,2000-09-20,44.0,43.0,4.08,Public Opinion Strategies
+president,NV,2000-09-24,48.0,43.0,4.47,SurveyUSA
+president,NV,2000-10-08,46.0,47.0,4.47,SurveyUSA
+president,NV,2000-10-23,37.0,49.0,3.5,Scott Rasmussen (Rasmussen Reports)
+president,NV,2000-10-27,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
+president,NV,2000-10-31,44.0,49.0,4.47,SurveyUSA
+president,NV,2000-11-03,45.0,48.0,2.33,Harris Insights & Analytics
+president,NY,2000-09-08,58.0,31.0,4.56,Marist College
+president,NY,2000-09-07,56.0,29.0,3.53,Quinnipiac University
+president,NY,2000-09-09,55.0,28.0,3.43,Blum & Weprin Associates
+president,NY,2000-09-12,51.0,30.0,3.76,Blum & Weprin Associates
+president,NY,2000-09-13,57.0,35.0,1.86,Harris Insights & Analytics
+president,NY,2000-09-19,58.0,33.0,4.56,Marist College
+president,NY,2000-09-13,55.0,30.0,4.08,American Research Group
+president,NY,2000-09-22,54.0,34.0,3.35,Quinnipiac University
+president,NY,2000-09-25,60.0,31.0,3.43,Princeton Survey Research Associates International
+president,NY,2000-09-27,56.0,35.0,4.47,SurveyUSA
+president,NY,2000-09-30,51.0,35.0,3.77,Zogby Analytics
+president,NY,2000-10-03,52.0,30.0,3.43,Blum & Weprin Associates
+president,NY,2000-10-08,51.0,39.0,4.47,SurveyUSA
+president,NY,2000-10-10,54.0,36.0,4.6,Marist College
+president,NY,2000-10-13,60.0,31.0,3.55,Princeton Survey Research Associates International
+president,NY,2000-10-22,48.0,37.0,3.58,Scott Rasmussen (Rasmussen Reports)
+president,NY,2000-10-23,54.0,39.0,4.47,SurveyUSA
+president,NY,2000-10-24,55.0,31.0,3.44,Blum & Weprin Associates
+president,NY,2000-10-27,50.0,36.0,3.78,Zogby Analytics
+president,NY,2000-10-27,55.0,35.0,3.39,CBS News/The New York Times
+president,NY,2000-10-29,50.0,36.0,4.4,Marist College
+president,NY,2000-10-27,54.0,33.0,3.76,Quinnipiac University
+president,NY,2000-10-30,51.0,36.0,3.78,Zogby Analytics
+president,NY,2000-10-30,51.0,38.0,3.44,Princeton Survey Research Associates International
+president,NY,2000-11-01,55.0,36.0,4.47,SurveyUSA
+president,NY,2000-11-02,52.0,38.0,3.78,Zogby Analytics
+president,NY,2000-11-01,55.0,31.0,3.37,Blum & Weprin Associates
+president,NY,2000-11-04,50.0,36.0,3.83,Scott Rasmussen (Rasmussen Reports)
+president,NY,2000-11-02,53.0,33.0,3.43,Blum & Weprin Associates
+president,NY,2000-11-04,55.0,37.0,4.15,Marist College
+president,NY,2000-11-03,55.0,34.0,3.2,Quinnipiac University
+president,NY,2000-11-05,56.0,37.0,3.81,Zogby Analytics
+president,NY,2000-11-03,53.0,38.0,0.86,Harris Insights & Analytics
+president,OH,2000-09-10,41.0,43.0,5,EPIC-MRA
+president,OH,2000-09-11,43.0,47.0,3.99,University of Cincinnati (Ohio Poll)
+president,OH,2000-09-14,42.0,40.0,4.47,Market Shares Corp.
+president,OH,2000-09-13,49.0,44.0,2.3,Harris Insights & Analytics
+president,OH,2000-09-13,44.0,46.0,4.08,American Research Group
+president,OH,2000-09-13,44.0,42.0,5,Ohio University
+president,OH,2000-09-26,43.0,48.0,2.01,Columbus Dispatch
+president,OH,2000-10-04,46.0,47.0,4.47,SurveyUSA
+president,OH,2000-10-18,41.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,OH,2000-10-12,45.0,43.0,3.11,Ohio University
+president,OH,2000-10-12,45.0,43.0,3.11,Ohio State University
+president,OH,2000-10-23,39.0,48.0,3.28,Scott Rasmussen (Rasmussen Reports)
+president,OH,2000-10-22,42.0,50.0,3.87,University of Cincinnati (Ohio Poll)
+president,OH,2000-10-27,43.0,49.0,4.08,Zogby Analytics
+president,OH,2000-10-30,40.0,48.0,4.08,Zogby Analytics
+president,OH,2000-11-01,40.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,OH,2000-11-01,43.0,50.0,4.47,SurveyUSA
+president,OH,2000-11-02,41.0,51.0,4.08,Zogby Analytics
+president,OH,2000-10-31,42.0,52.0,2.21,Columbus Dispatch
+president,OH,2000-11-03,43.0,53.0,2.8,University of Cincinnati (Ohio Poll)
+president,OH,2000-11-05,45.0,48.0,4.12,Zogby Analytics
+president,OH,2000-11-03,46.0,49.0,0.95,Harris Insights & Analytics
+president,OK,2000-09-13,38.0,57.0,3.18,Harris Insights & Analytics
+president,OK,2000-09-13,40.0,50.0,4.08,American Research Group
+president,OK,2000-09-26,40.0,51.0,4.47,Cole Hargrave Snodgrass & Associates
+president,OK,2000-09-27,33.0,51.0,3.65,Consumer Logic
+president,OK,2000-11-02,39.0,54.0,4.0,Mason-Dixon Polling & Strategy
+president,OK,2000-11-03,37.0,59.0,1.77,Harris Insights & Analytics
+president,OR,2000-09-08,42.0,41.0,4.05,DHM Research
+president,OR,2000-09-13,46.0,41.0,3.37,Harris Insights & Analytics
+president,OR,2000-09-13,45.0,39.0,4.08,American Research Group
+president,OR,2000-09-27,46.0,47.0,4.47,SurveyUSA
+president,OR,2000-10-07,40.0,44.0,4.38,Riley Research Associates
+president,OR,2000-10-14,44.0,43.0,4.08,American Research Group
+president,OR,2000-10-21,38.0,43.0,2.72,Scott Rasmussen (Rasmussen Reports)
+president,OR,2000-10-22,41.0,45.0,4.08,American Research Group
+president,OR,2000-10-25,42.0,48.0,4.47,SurveyUSA
+president,OR,2000-10-29,42.0,50.0,4.47,SurveyUSA
+president,OR,2000-10-27,45.0,44.0,4.08,DHM Research
+president,OR,2000-11-03,49.0,42.0,1.72,Harris Insights & Analytics
+president,PA,2000-09-10,51.0,33.0,5,EPIC-MRA
+president,PA,2000-09-14,43.0,38.0,4.47,Market Shares Corp.
+president,PA,2000-09-13,51.0,42.0,2.37,Harris Insights & Analytics
+president,PA,2000-09-13,44.0,41.0,4.08,American Research Group
+president,PA,2000-09-27,45.0,41.0,4.0,Mason-Dixon Polling & Strategy
+president,PA,2000-09-30,49.0,37.0,4.26,Millersville University Center for Politics and Public Affairs
+president,PA,2000-10-02,51.0,45.0,3.54,SurveyUSA
+president,PA,2000-10-08,42.0,40.0,3.54,Public Opinion Strategies
+president,PA,2000-10-07,42.0,36.0,4.1,University of Connecticut
+president,PA,2000-10-14,46.0,45.0,4.08,American Research Group
+president,PA,2000-10-16,47.0,48.0,3.54,SurveyUSA
+president,PA,2000-10-17,42.0,42.0,3.71,Lincoln Institute
+president,PA,2000-10-18,42.0,43.0,3.1,Scott Rasmussen (Rasmussen Reports)
+president,PA,2000-10-21,44.0,33.0,3.76,West Chester University
+president,PA,2000-10-22,43.0,45.0,3.54,Public Opinion Strategies
+president,PA,2000-10-22,48.0,43.0,4.08,American Research Group
+president,PA,2000-10-25,42.0,39.0,4.08,Opinion Dynamics
+president,PA,2000-10-24,45.0,40.0,5,Lake Research Partners/The Tarrance Group
+president,PA,2000-10-26,40.0,47.0,4.08,Zogby Analytics
+president,PA,2000-10-28,45.0,47.0,4.88,Los Angeles Times
+president,PA,2000-10-28,42.0,43.0,4.26,Millersville University Center for Politics and Public Affairs
+president,PA,2000-10-29,46.0,42.0,4.08,Zogby Analytics
+president,PA,2000-10-29,42.0,45.0,3.22,Scott Rasmussen (Rasmussen Reports)
+president,PA,2000-10-30,47.0,48.0,3.54,SurveyUSA
+president,PA,2000-10-31,48.0,42.0,4.08,American Research Group
+president,PA,2000-11-01,43.0,42.0,4.08,Zogby Analytics
+president,PA,2000-11-01,48.0,45.0,4.0,Mason-Dixon Polling & Strategy
+president,PA,2000-11-01,47.0,43.0,3.11,Decision Forecasting
+president,PA,2000-11-01,48.01,48.0,3.54,SurveyUSA
+president,PA,2000-11-02,42.0,47.0,3.94,Scott Rasmussen (Rasmussen Reports)
+president,PA,2000-11-01,50.0,45.0,0.94,Harris Insights & Analytics
+president,PA,2000-11-04,50.0,42.0,4.08,Zogby Analytics
+president,PA,2000-11-05,43.0,47.0,3.03,Scott Rasmussen (Rasmussen Reports)
+president,RI,2000-09-13,54.0,31.0,4.08,American Research Group
+president,RI,2000-10-12,46.0,31.0,4.95,Fleming & Associates
+president,RI,2000-10-19,49.0,30.0,3.53,Scott Rasmussen (Rasmussen Reports)
+president,RI,2000-10-21,47.0,29.0,5,Brown University A. Alfred Taubman Center for American Politics and Policy
+president,RI,2000-10-29,57.0,31.0,4.47,SurveyUSA
+president,SC,2000-09-13,39.0,50.0,4.08,American Research Group
+president,SC,2000-09-29,39.0,52.0,4.0,Mason-Dixon Polling & Strategy
+president,SC,2000-10-22,41.0,54.0,4.47,SurveyUSA
+president,SC,2000-10-29,38.0,53.0,4.0,Mason-Dixon Polling & Strategy
+president,SD,2000-09-13,34.0,55.0,4.08,American Research Group
+president,SD,2000-10-23,33.0,51.0,4.45,Jim Meader (KELOLAND-TV)
+president,TN,2000-09-08,50.0,38.0,5,Ethridge & Associates LLC
+president,TN,2000-09-13,47.0,50.0,3.33,Harris Insights & Analytics
+president,TN,2000-09-13,50.0,39.0,4.08,American Research Group
+president,TN,2000-09-26,43.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,TN,2000-10-21,43.0,47.0,3.45,Scott Rasmussen (Rasmussen Reports)
+president,TN,2000-10-27,44.0,51.0,4.47,Zogby Analytics
+president,TN,2000-10-28,44.0,45.0,3.72,Scott Rasmussen (Rasmussen Reports)
+president,TN,2000-10-29,45.0,43.0,4.98,Multi-Quest International
+president,TN,2000-10-30,45.0,48.0,4.47,Zogby Analytics
+president,TN,2000-10-31,49.0,43.0,4.08,American Research Group
+president,TN,2000-10-31,44.0,47.0,4.26,Ethridge & Associates LLC
+president,TN,2000-11-02,46.0,46.0,4.47,Zogby Analytics
+president,TN,2000-11-02,45.0,49.0,4.0,Mason-Dixon Polling & Strategy
+president,TN,2000-11-05,45.0,52.0,4.52,Zogby Analytics
+president,TN,2000-11-03,47.0,49.0,1.39,Harris Insights & Analytics
+president,TX,2000-09-13,41.0,55.0,1.66,Harris Insights & Analytics
+president,TX,2000-09-13,30.0,58.0,4.08,American Research Group
+president,TX,2000-10-20,27.0,57.0,3.16,Scripps Howard
+president,TX,2000-11-02,30.0,64.0,4.0,Mason-Dixon Polling & Strategy
+president,TX,2000-11-03,27.0,57.0,3.54,Scripps Howard
+president,TX,2000-11-03,39.0,57.0,0.75,Harris Insights & Analytics
+president,UT,2000-09-13,29.0,57.0,4.08,American Research Group
+president,UT,2000-09-27,23.0,61.0,3.76,Scott Rasmussen (Rasmussen Reports)
+president,UT,2000-10-11,27.0,59.0,3.31,Dan Jones & Associates
+president,UT,2000-10-24,24.0,62.0,3.3,Scott Rasmussen (Rasmussen Reports)
+president,UT,2000-11-03,24.0,60.0,2.77,Valley Research
+president,UT,2000-11-03,25.0,65.0,2.47,Harris Insights & Analytics
+president,VA,2000-09-15,39.0,49.0,4.01,Mason-Dixon Polling & Strategy
+president,VA,2000-09-13,43.0,45.0,4.99,Roanoke College Institute for Policy and Opinion Research
+president,VA,2000-09-13,47.0,48.0,2.19,Harris Insights & Analytics
+president,VA,2000-09-13,38.0,47.0,4.08,American Research Group
+president,VA,2000-09-24,43.0,49.0,4.47,SurveyUSA
+president,VA,2000-10-01,39.0,53.0,4.47,SurveyUSA
+president,VA,2000-09-27,39.0,46.0,4.44,Richmond Times-Dispatch
+president,VA,2000-10-08,44.0,50.0,4.47,SurveyUSA
+president,VA,2000-10-15,45.0,49.0,4.47,SurveyUSA
+president,VA,2000-10-21,40.0,54.0,4.1,Virginia Commonwealth University L. Douglas Wilder School of Government and Public Affairs
+president,VA,2000-10-24,41.0,48.0,3.99,Mason-Dixon Polling & Strategy
+president,VA,2000-10-24,38.0,50.0,3.02,Scott Rasmussen (Rasmussen Reports)
+president,VA,2000-10-24,45.0,49.0,3.15,ABC News/The Washington Post
+president,VA,2000-10-29,43.0,52.0,4.47,SurveyUSA
+president,VA,2000-10-30,41.0,49.0,4.0,Mason-Dixon Polling & Strategy
+president,VA,2000-10-30,40.0,50.0,3.34,Scott Rasmussen (Rasmussen Reports)
+president,VA,2000-10-30,40.0,46.0,3.69,Richmond Times-Dispatch
+president,VA,2000-11-04,42.0,53.0,4.47,SurveyUSA
+president,VA,2000-11-03,45.0,51.0,1.16,Harris Insights & Analytics
+president,VT,2000-09-13,50.0,32.0,4.08,American Research Group
+president,VT,2000-10-18,47.0,38.0,3.99,Mason-Dixon Polling & Strategy
+president,VT,2000-10-26,45.0,39.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,WA,2000-09-11,45.0,41.0,4.47,EMC Research
+president,WA,2000-09-13,47.0,45.0,2.43,Harris Insights & Analytics
+president,WA,2000-09-13,45.0,37.0,4.08,American Research Group
+president,WA,2000-09-20,46.0,44.0,4.47,SurveyUSA
+president,WA,2000-09-23,44.0,37.0,5,Elway Research
+president,WA,2000-10-01,46.0,42.0,4.47,SurveyUSA
+president,WA,2000-10-15,44.0,44.0,4.47,SurveyUSA
+president,WA,2000-10-14,45.0,43.0,4.08,American Research Group
+president,WA,2000-10-19,46.0,37.0,5,Elway Research
+president,WA,2000-10-21,44.0,38.0,4.47,EMC Research
+president,WA,2000-10-27,46.0,43.0,4.47,Zogby Analytics
+president,WA,2000-10-30,45.0,43.0,4.47,Zogby Analytics
+president,WA,2000-10-31,46.0,44.0,4.47,SurveyUSA
+president,WA,2000-11-02,46.0,43.0,4.47,Zogby Analytics
+president,WA,2000-11-05,50.0,43.0,4.45,Zogby Analytics
+president,WA,2000-11-05,43.0,44.0,3.32,Scott Rasmussen (Rasmussen Reports)
+president,WA,2000-11-03,46.0,47.0,1.24,Harris Insights & Analytics
+president,WI,2000-09-13,49.0,45.0,2.7,Harris Insights & Analytics
+president,WI,2000-09-19,43.0,38.0,4.47,Market Shares Corp.
+president,WI,2000-09-13,43.0,39.0,4.08,American Research Group
+president,WI,2000-10-20,40.0,49.0,4.13,Harris Insights & Analytics
+president,WI,2000-10-21,46.0,39.0,4.92,St. Norbert College Strategic Research Institute
+president,WI,2000-10-24,43.0,42.0,5,Lake Research Partners/The Tarrance Group
+president,WI,2000-10-27,49.0,40.0,4.47,Zogby Analytics
+president,WI,2000-10-27,39.0,46.0,4.47,Market Shares Corp.
+president,WI,2000-10-30,45.0,42.0,4.47,Zogby Analytics
+president,WI,2000-11-02,45.0,46.0,4.47,Zogby Analytics
+president,WI,2000-11-04,39.0,44.0,5,Market Shares Corp.
+president,WI,2000-11-05,46.0,46.0,4.51,Zogby Analytics
+president,WI,2000-11-05,43.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
+president,WI,2000-11-03,47.0,47.0,1.39,Harris Insights & Analytics
+president,WV,2000-09-13,48.0,40.0,4.08,American Research Group
+president,WV,2000-09-22,37.0,39.0,4.72,West Virginia Research Center
+president,WV,2000-10-18,42.0,44.0,3.11,Scott Rasmussen (Rasmussen Reports)
+president,WV,2000-10-22,36.0,46.0,4.07,RMS Research
+president,WV,2000-10-17,39.0,49.0,3.94,Ohio State University
+president,WV,2000-10-25,39.0,41.0,4.32,West Virginia Research Center
+president,WV,2000-11-02,42.0,45.0,3.06,Scott Rasmussen (Rasmussen Reports)
+president,WV,2000-11-03,46.0,50.0,2.43,Harris Insights & Analytics
+president,WY,2000-09-16,32.0,57.0,4.93,Mason-Dixon Polling & Strategy
+president,WY,2000-09-13,28.0,60.0,4.08,American Research Group
+governor,DE,2000-10-04,46.0,38.0,4.0,Mason-Dixon Polling & Strategy
+governor,DE,2000-10-09,57.0,41.0,4.47,SurveyUSA
+governor,DE,2000-10-23,55.0,41.0,4.47,SurveyUSA
+governor,DE,2000-10-31,48.0,36.0,4.0,Mason-Dixon Polling & Strategy
+governor,IN,2000-09-24,48.0,34.0,4.08,McLaughlin & Associates
+governor,IN,2000-10-06,46.0,24.0,3.71,Indiana University Public Opinion Laboratory
+governor,IN,2000-10-27,49.0,33.0,4.08,Market Shares Corp.
+governor,IN,2000-10-30,52.0,38.0,3.72,Scott Rasmussen (Rasmussen Reports)
+governor,IN,2000-11-01,50.0,44.0,4.47,SurveyUSA
+governor,IN,2000-11-03,54.0,42.0,1.34,Harris Insights & Analytics
+governor,MO,2000-10-23,44.0,46.0,3.05,Scott Rasmussen (Rasmussen Reports)
+governor,MO,2000-10-23,45.0,43.0,4.0,Mason-Dixon Polling & Strategy
+governor,MO,2000-10-24,41.0,40.0,4.07,Zogby Analytics
+governor,MO,2000-10-27,43.0,41.0,4.08,Zogby Analytics
+governor,MO,2000-10-30,41.0,45.0,4.08,Zogby Analytics
+governor,MO,2000-11-02,43.0,42.0,4.08,Zogby Analytics
+governor,MO,2000-11-05,45.0,44.0,4.09,Zogby Analytics
+governor,MO,2000-11-03,47.0,49.0,1.31,Harris Insights & Analytics
+governor,MT,2000-09-22,41.0,43.0,3.99,Mason-Dixon Polling & Strategy
+governor,MT,2000-10-19,38.0,51.0,3.21,Scott Rasmussen (Rasmussen Reports)
+governor,MT,2000-10-21,45.0,42.0,4.98,Montana State University Billings
+governor,MT,2000-10-23,46.0,44.0,3.99,Mason-Dixon Polling & Strategy
+governor,NC,2000-10-07,47.0,42.0,4.47,SurveyUSA
+governor,NC,2000-10-07,50.0,37.0,4.0,Mason-Dixon Polling & Strategy
+governor,NC,2000-10-28,46.0,45.0,4.47,SurveyUSA
+governor,NC,2000-10-29,48.0,41.0,4.0,Mason-Dixon Polling & Strategy
+governor,NC,2000-11-01,45.0,43.0,2.93,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2000-11-04,47.0,46.0,4.47,SurveyUSA
+governor,NC,2000-11-03,53.0,43.0,1.22,Harris Insights & Analytics
+governor,ND,2000-10-04,48.0,42.0,4.13,Minnesota State University Moorhead Public Affairs Institute
+governor,ND,2000-10-21,44.0,50.0,2.82,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2000-09-09,49.0,36.0,3.53,University of New Hampshire Survey Center
+governor,NH,2000-09-19,46.0,44.0,4.08,American Research Group
+governor,NH,2000-10-03,45.0,34.0,3.36,Franklin Pierce University Marlin Fitzwater Center for Communication
+governor,NH,2000-10-07,50.0,36.0,4.08,American Research Group
+governor,NH,2000-10-09,49.0,30.0,3.53,University of New Hampshire Survey Center
+governor,NH,2000-10-22,45.0,40.0,2.73,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2000-10-24,51.0,30.0,3.36,Franklin Pierce University Marlin Fitzwater Center for Communication
+governor,NH,2000-11-01,43.0,44.0,4.08,American Research Group
+governor,NH,2000-11-03,43.0,37.0,3.53,University of New Hampshire Survey Center
+governor,NH,2000-11-03,48.0,40.0,2.68,Harris Insights & Analytics
+governor,UT,2000-09-11,36.0,52.0,3.31,Dan Jones & Associates
+governor,UT,2000-09-27,36.0,55.0,3.76,Scott Rasmussen (Rasmussen Reports)
+governor,UT,2000-10-11,37.0,52.0,3.31,Dan Jones & Associates
+governor,UT,2000-10-24,37.0,55.0,3.3,Scott Rasmussen (Rasmussen Reports)
+governor,UT,2000-11-03,41.0,55.0,2.47,Harris Insights & Analytics
+governor,VT,2000-10-19,48.0,39.0,3.99,Mason-Dixon Polling & Strategy
+governor,VT,2000-10-26,46.0,39.0,3.16,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2000-09-19,57.0,31.0,5,Elway Research
+governor,WA,2000-09-20,57.0,39.0,4.47,SurveyUSA
+governor,WA,2000-10-01,59.0,37.0,4.47,SurveyUSA
+governor,WA,2000-10-19,56.0,31.0,5,Elway Research
+governor,WA,2000-10-21,56.0,32.0,4.47,EMC Research
+governor,WA,2000-10-31,55.0,40.0,4.47,SurveyUSA
+governor,WA,2000-11-03,56.0,43.0,1.24,Harris Insights & Analytics
+governor,WV,2000-09-20,36.0,39.0,4.72,West Virginia Research Center
+governor,WV,2000-10-18,47.0,41.0,3.11,Scott Rasmussen (Rasmussen Reports)
+governor,WV,2000-11-02,48.0,43.0,3.06,Scott Rasmussen (Rasmussen Reports)
+governor,WV,2000-11-03,49.0,45.0,2.43,Harris Insights & Analytics
+senate,CA,2000-09-08,48.0,31.0,3.02,Public Policy Institute of California
+senate,CA,2000-09-13,48.0,38.0,1.38,Harris Insights & Analytics
+senate,CA,2000-10-03,54.0,34.0,3.84,Field Research Corp. (Field Poll)
+senate,CA,2000-10-15,49.0,36.0,3.84,Zogby Analytics
+senate,CA,2000-10-15,48.0,31.0,3.02,Public Policy Institute of California
+senate,CA,2000-10-21,60.0,35.0,3.43,Los Angeles Times
+senate,CA,2000-10-29,48.0,38.0,2.55,Scott Rasmussen (Rasmussen Reports)
+senate,CA,2000-10-29,52.0,32.0,3.33,Field Research Corp. (Field Poll)
+senate,CA,2000-10-31,53.0,41.0,4.34,SurveyUSA
+senate,CA,2000-11-03,52.0,40.0,0.63,Harris Insights & Analytics
+senate,CT,2000-09-15,72.0,19.0,3.26,Quinnipiac University
+senate,CT,2000-09-13,60.0,27.0,3.3,Harris Insights & Analytics
+senate,CT,2000-09-28,60.0,27.0,4.73,University of Connecticut
+senate,CT,2000-11-03,61.0,34.0,2.0,Harris Insights & Analytics
+senate,DE,2000-09-23,46.0,43.0,5,University of Delaware Center for Political Communication
+senate,DE,2000-10-04,43.0,46.0,4.0,Mason-Dixon Polling & Strategy
+senate,DE,2000-10-09,50.0,47.0,4.47,SurveyUSA
+senate,DE,2000-10-23,49.0,48.0,4.47,SurveyUSA
+senate,DE,2000-10-30,48.0,45.0,3.59,Scott Rasmussen (Rasmussen Reports)
+senate,DE,2000-10-31,44.0,44.0,4.0,Mason-Dixon Polling & Strategy
+senate,FL,2000-09-10,47.0,41.0,3.84,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2000-09-09,40.0,40.0,4.45,University of Connecticut
+senate,FL,2000-09-15,44.0,36.0,3.54,Mason-Dixon Polling & Strategy
+senate,FL,2000-09-20,46.0,40.0,3.84,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2000-09-23,42.0,41.0,4.47,SurveyUSA
+senate,FL,2000-10-05,45.0,34.0,4.08,SEA Polling & Strategic Design
+senate,FL,2000-10-06,44.0,37.0,3.54,Mason-Dixon Polling & Strategy
+senate,FL,2000-10-11,47.0,42.0,3.84,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2000-10-14,43.0,41.0,4.47,SurveyUSA
+senate,FL,2000-10-17,38.0,38.0,4.08,McLaughlin & Associates
+senate,FL,2000-10-20,43.0,40.0,4.06,Fleming & Associates
+senate,FL,2000-10-23,45.0,36.0,4.41,CBS News/The New York Times
+senate,FL,2000-10-25,47.0,43.0,3.4,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2000-10-27,46.0,36.0,4.08,Zogby Analytics
+senate,FL,2000-10-30,42.0,37.0,4.08,Zogby Analytics
+senate,FL,2000-10-30,45.0,40.0,3.51,Mason-Dixon Polling & Strategy
+senate,FL,2000-10-28,46.0,39.0,3.48,The Florida Poll
+senate,FL,2000-11-01,45.0,43.0,4.47,SurveyUSA
+senate,FL,2000-11-01,42.0,45.0,4.16,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2000-11-02,44.0,39.0,4.08,Zogby Analytics
+senate,FL,2000-11-05,49.0,42.0,4.47,SurveyUSA
+senate,FL,2000-11-05,49.0,47.0,4.11,Zogby Analytics
+senate,FL,2000-11-03,50.0,46.0,0.77,Harris Insights & Analytics
+senate,HI,2000-11-03,62.0,33.0,4.13,Harris Insights & Analytics
+senate,IN,2000-09-13,23.0,66.0,3.23,Harris Insights & Analytics
+senate,IN,2000-09-24,15.0,70.0,4.08,McLaughlin & Associates
+senate,IN,2000-10-06,9.0,57.0,3.71,Indiana University Public Opinion Laboratory
+senate,IN,2000-10-27,10.0,69.0,4.08,Market Shares Corp.
+senate,IN,2000-11-03,25.0,71.0,1.34,Harris Insights & Analytics
+senate,ME,2000-09-10,19.0,70.0,4.89,RKM Research and Communications Inc.
+senate,ME,2000-09-17,17.0,70.0,5,Pan Atlantic Research
+senate,ME,2000-10-14,16.0,72.0,4.98,Digital Research
+senate,ME,2000-10-22,27.0,66.0,2.54,Scott Rasmussen (Rasmussen Reports)
+senate,ME,2000-10-22,19.0,73.0,5,Pan Atlantic Research
+senate,ME,2000-10-24,15.0,60.0,3.48,Market Decisions Research
+senate,ME,2000-11-03,28.0,70.0,2.61,Harris Insights & Analytics
+senate,MD,2000-09-13,58.0,35.0,3.1,Harris Insights & Analytics
+senate,MD,2000-10-07,58.0,29.0,4.0,Mason-Dixon Polling & Strategy
+senate,MD,2000-10-25,59.0,30.0,4.0,Mason-Dixon Polling & Strategy
+senate,MD,2000-10-26,57.0,37.0,3.79,Scott Rasmussen (Rasmussen Reports)
+senate,MD,2000-10-26,63.0,30.0,3.99,Gonzales Research & Marketing Strategies Inc.
+senate,MD,2000-11-03,62.0,37.0,1.39,Harris Insights & Analytics
+senate,MA,2000-09-13,66.0,17.0,3.33,Harris Insights & Analytics
+senate,MA,2000-10-24,60.0,11.0,5,RKM Research and Communications Inc.
+senate,MA,2000-10-25,68.0,16.0,5,KRC Research
+senate,MA,2000-10-27,64.0,11.0,4.99,University of Massachusetts Department of Political Science
+senate,MA,2000-11-03,67.0,14.0,1.4,Harris Insights & Analytics
+senate,MI,2000-09-10,32.0,44.0,4.47,EPIC-MRA
+senate,MI,2000-09-15,33.0,45.0,4.47,Marketing Resource Group (MRG)
+senate,MI,2000-09-13,46.0,46.0,2.62,Harris Insights & Analytics
+senate,MI,2000-09-24,45.0,46.0,4.08,SurveyUSA
+senate,MI,2000-09-24,38.0,49.0,3.15,CBS News/The New York Times
+senate,MI,2000-09-27,34.0,43.0,4.47,EPIC-MRA
+senate,MI,2000-10-11,39.0,49.0,4.47,EPIC-MRA
+senate,MI,2000-10-11,36.0,50.0,4.47,Marketing Resource Group (MRG)
+senate,MI,2000-10-11,33.0,50.0,3.54,Mitchell Research & Communications
+senate,MI,2000-10-14,43.0,51.0,3.84,SurveyUSA
+senate,MI,2000-10-18,34.0,53.0,4.0,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2000-10-18,40.0,47.0,4.47,EPIC-MRA
+senate,MI,2000-10-24,36.0,39.0,3.54,Mitchell Research & Communications
+senate,MI,2000-10-24,41.0,41.0,4.47,EPIC-MRA
+senate,MI,2000-10-25,41.0,49.0,4.47,Marketing Resource Group (MRG)
+senate,MI,2000-10-27,44.0,42.0,4.08,Zogby Analytics
+senate,MI,2000-10-28,47.0,49.0,4.08,SurveyUSA
+senate,MI,2000-10-29,44.0,45.0,3.23,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2000-10-30,48.0,39.0,4.08,Zogby Analytics
+senate,MI,2000-10-30,38.0,40.0,3.54,Mitchell Research & Communications
+senate,MI,2000-11-01,38.0,41.0,3.54,Mitchell Research & Communications
+senate,MI,2000-11-01,42.0,47.0,4.47,EPIC-MRA
+senate,MI,2000-11-02,45.0,45.0,4.08,Zogby Analytics
+senate,MI,2000-11-04,42.0,48.0,3.56,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2000-11-04,44.0,50.0,4.08,SurveyUSA
+senate,MI,2000-11-05,51.0,47.0,4.11,Zogby Analytics
+senate,MI,2000-11-03,48.0,48.0,1.22,Harris Insights & Analytics
+senate,MN,2000-09-24,46.0,41.0,4.0,Mason-Dixon Polling & Strategy
+senate,MN,2000-09-25,49.0,35.0,3.33,Minneapolis Star Tribune
+senate,MN,2000-10-16,49.0,37.0,3.33,Minneapolis Star Tribune
+senate,MN,2000-10-19,48.0,33.0,4.41,St. Cloud State University
+senate,MN,2000-10-26,47.0,42.0,4.0,Mason-Dixon Polling & Strategy
+senate,MN,2000-11-01,44.0,43.0,4.71,Tarrance Group
+senate,MN,2000-11-02,46.0,37.0,3.33,Minneapolis Star Tribune
+senate,MN,2000-11-03,50.0,40.0,1.62,Harris Insights & Analytics
+senate,MO,2000-09-12,38.0,43.0,4.47,North Star Opinion Research
+senate,MO,2000-09-15,43.0,45.0,4.08,Zogby Analytics
+senate,MO,2000-09-13,46.0,46.0,3.27,Harris Insights & Analytics
+senate,MO,2000-10-23,46.0,49.0,3.05,Scott Rasmussen (Rasmussen Reports)
+senate,MO,2000-10-23,46.0,46.0,4.0,Mason-Dixon Polling & Strategy
+senate,MO,2000-10-24,47.0,45.0,4.07,Zogby Analytics
+senate,MO,2000-10-27,50.0,43.0,4.08,Zogby Analytics
+senate,MO,2000-10-29,48.0,46.0,2.84,Scott Rasmussen (Rasmussen Reports)
+senate,MO,2000-10-30,47.0,45.0,4.08,Zogby Analytics
+senate,MO,2000-11-02,48.0,45.0,4.08,Zogby Analytics
+senate,MO,2000-11-05,49.0,49.0,4.09,Zogby Analytics
+senate,MO,2000-11-03,49.0,49.0,1.31,Harris Insights & Analytics
+senate,MT,2000-09-22,39.0,48.0,4.0,Mason-Dixon Polling & Strategy
+senate,MT,2000-10-14,40.0,48.0,4.99,A&A Research
+senate,MT,2000-10-19,41.0,51.0,3.21,Scott Rasmussen (Rasmussen Reports)
+senate,MT,2000-10-21,43.0,41.0,4.98,Montana State University Billings
+senate,MT,2000-10-23,44.0,45.0,3.99,Mason-Dixon Polling & Strategy
+senate,NE,2000-09-13,53.0,33.0,3.84,RKM Research and Communications Inc.
+senate,NE,2000-09-20,44.0,45.0,5,Moore Information Group
+senate,NE,2000-10-11,41.0,43.0,4.71,Moore Information Group
+senate,NE,2000-10-26,49.0,37.0,3.15,RKM Research and Communications Inc.
+senate,NE,2000-11-03,53.0,46.0,2.6,Harris Insights & Analytics
+senate,NV,2000-09-15,39.0,50.0,4.0,Mason-Dixon Polling & Strategy
+senate,NV,2000-09-17,37.0,41.0,4.47,Mellman Group
+senate,NV,2000-09-24,42.0,49.0,4.47,SurveyUSA
+senate,NV,2000-10-08,42.0,49.0,4.47,SurveyUSA
+senate,NV,2000-10-23,37.0,54.0,3.5,Scott Rasmussen (Rasmussen Reports)
+senate,NV,2000-10-27,37.0,54.0,4.0,Mason-Dixon Polling & Strategy
+senate,NV,2000-10-31,39.0,55.0,4.47,SurveyUSA
+senate,NV,2000-11-03,43.0,52.0,2.34,Harris Insights & Analytics
+senate,NJ,2000-09-10,49.0,39.0,3.84,Rutgers University Eagleton Center for Public Interest Polling
+senate,NJ,2000-09-13,53.0,31.0,2.73,Harris Insights & Analytics
+senate,NJ,2000-09-28,48.0,34.0,3.49,Quinnipiac University
+senate,NJ,2000-10-11,50.0,42.0,4.47,SurveyUSA
+senate,NJ,2000-10-13,43.0,30.0,4.43,Gannett New Jersey
+senate,NJ,2000-10-14,50.0,39.0,3.84,Rutgers University Eagleton Center for Public Interest Polling
+senate,NJ,2000-10-14,45.0,33.0,3.54,The New York Times
+senate,NJ,2000-10-20,46.0,41.0,3.32,Quinnipiac University
+senate,NJ,2000-10-24,50.0,42.0,4.47,SurveyUSA
+senate,NJ,2000-10-25,49.0,39.0,4.81,Rutgers University Eagleton Center for Public Interest Polling
+senate,NJ,2000-10-27,39.0,35.0,4.17,Gannett New Jersey
+senate,NJ,2000-10-27,47.0,39.0,3.84,Quinnipiac University
+senate,NJ,2000-10-30,46.0,42.0,4.1,Scott Rasmussen (Rasmussen Reports)
+senate,NJ,2000-10-31,40.0,44.0,4.47,Tarrance Group
+senate,NJ,2000-11-03,41.0,36.0,3.44,Gannett New Jersey
+senate,NJ,2000-11-03,43.0,45.0,3.6,Quinnipiac University
+senate,NJ,2000-11-05,43.0,44.0,3.96,Scott Rasmussen (Rasmussen Reports)
+senate,NJ,2000-11-03,49.0,45.0,1.18,Harris Insights & Analytics
+senate,NM,2000-09-10,57.0,28.0,4.25,Research & Polling Inc.
+senate,NM,2000-09-15,59.0,31.0,4.85,Mason-Dixon Polling & Strategy
+senate,NM,2000-09-13,56.0,33.0,4.06,Harris Insights & Analytics
+senate,NM,2000-11-01,60.0,30.0,4.85,Mason-Dixon Polling & Strategy
+senate,NM,2000-11-03,61.0,35.0,2.46,Harris Insights & Analytics
+senate,NY,2000-09-08,47.0,45.0,3.84,Zogby Analytics
+senate,NY,2000-09-08,50.0,47.0,4.56,Marist College
+senate,NY,2000-09-07,49.0,44.0,3.53,Quinnipiac University
+senate,NY,2000-09-09,47.0,42.0,3.43,Blum & Weprin Associates
+senate,NY,2000-09-13,48.0,43.0,3.43,Blum & Weprin Associates
+senate,NY,2000-09-16,51.0,41.0,3.84,CBS News/The New York Times
+senate,NY,2000-09-19,50.0,48.0,4.56,Marist College
+senate,NY,2000-09-22,50.0,43.0,3.35,Quinnipiac University
+senate,NY,2000-09-25,42.0,41.0,3.43,Princeton Survey Research Associates International
+senate,NY,2000-09-27,49.0,46.0,4.47,SurveyUSA
+senate,NY,2000-09-30,48.0,44.0,3.77,Zogby Analytics
+senate,NY,2000-10-04,50.0,43.0,3.84,Quinnipiac University
+senate,NY,2000-10-03,48.0,43.0,3.43,Blum & Weprin Associates
+senate,NY,2000-10-08,47.0,47.0,4.47,SurveyUSA
+senate,NY,2000-10-10,50.0,45.0,4.6,Marist College
+senate,NY,2000-10-13,51.0,45.0,3.55,Princeton Survey Research Associates International
+senate,NY,2000-10-14,50.0,43.0,3.84,Quinnipiac University
+senate,NY,2000-10-18,42.0,43.0,4.45,Zogby Analytics
+senate,NY,2000-10-22,48.0,45.0,3.58,Scott Rasmussen (Rasmussen Reports)
+senate,NY,2000-10-23,51.0,45.0,4.47,SurveyUSA
+senate,NY,2000-10-24,50.0,43.0,3.43,Blum & Weprin Associates
+senate,NY,2000-10-27,45.0,46.0,3.78,Zogby Analytics
+senate,NY,2000-10-27,52.0,44.0,3.39,CBS News/The New York Times
+senate,NY,2000-10-29,50.0,46.0,4.4,Marist College
+senate,NY,2000-10-27,47.0,44.0,3.84,Quinnipiac University
+senate,NY,2000-10-30,45.0,47.0,3.78,Zogby Analytics
+senate,NY,2000-10-30,48.0,47.0,3.44,Princeton Survey Research Associates International
+senate,NY,2000-11-01,51.0,45.0,4.47,SurveyUSA
+senate,NY,2000-11-02,49.0,45.0,3.78,Zogby Analytics
+senate,NY,2000-11-01,47.0,40.0,3.37,Blum & Weprin Associates
+senate,NY,2000-11-04,48.0,40.0,3.83,Scott Rasmussen (Rasmussen Reports)
+senate,NY,2000-11-02,47.0,40.0,3.43,Blum & Weprin Associates
+senate,NY,2000-11-04,50.0,46.0,4.15,Marist College
+senate,NY,2000-11-03,51.0,39.0,3.2,Quinnipiac University
+senate,NY,2000-11-05,51.0,48.0,3.81,Zogby Analytics
+senate,NY,2000-11-03,51.0,46.0,0.86,Harris Insights & Analytics
+senate,ND,2000-10-04,65.0,24.0,4.13,Minnesota State University Moorhead Public Affairs Institute
+senate,ND,2000-10-21,57.0,34.0,2.82,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2000-09-10,27.0,48.0,5,EPIC-MRA
+senate,OH,2000-09-15,32.0,57.0,3.84,Columbus Dispatch
+senate,OH,2000-09-11,31.0,63.0,3.99,University of Cincinnati (Ohio Poll)
+senate,OH,2000-09-13,39.0,51.0,2.3,Harris Insights & Analytics
+senate,OH,2000-10-04,37.0,54.0,4.47,SurveyUSA
+senate,OH,2000-10-18,31.0,54.0,4.0,Mason-Dixon Polling & Strategy
+senate,OH,2000-10-12,36.0,50.0,3.11,Ohio State University
+senate,OH,2000-10-23,30.0,56.0,3.28,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2000-10-22,34.0,59.0,4.06,University of Cincinnati (Ohio Poll)
+senate,OH,2000-10-27,32.0,57.0,4.08,Zogby Analytics
+senate,OH,2000-10-30,27.0,60.0,4.08,Zogby Analytics
+senate,OH,2000-11-01,32.0,56.0,4.0,Mason-Dixon Polling & Strategy
+senate,OH,2000-11-01,37.0,56.0,4.47,SurveyUSA
+senate,OH,2000-11-02,29.0,61.0,4.08,Zogby Analytics
+senate,OH,2000-10-31,34.0,61.0,2.21,Columbus Dispatch
+senate,OH,2000-11-03,34.1,63.0,2.91,University of Cincinnati (Ohio Poll)
+senate,OH,2000-11-05,31.0,56.0,4.12,Zogby Analytics
+senate,OH,2000-11-03,36.0,59.0,0.96,Harris Insights & Analytics
+senate,PA,2000-09-10,37.0,41.0,5,EPIC-MRA
+senate,PA,2000-09-15,35.0,53.0,4.0,Mason-Dixon Polling & Strategy
+senate,PA,2000-09-13,40.0,50.0,2.37,Harris Insights & Analytics
+senate,PA,2000-09-27,35.0,53.0,3.84,Mason-Dixon Polling & Strategy
+senate,PA,2000-09-30,25.0,43.0,4.26,Millersville University Center for Politics and Public Affairs
+senate,PA,2000-10-06,32.0,51.0,4.04,University of Connecticut
+senate,PA,2000-10-17,38.0,49.0,3.71,Lincoln Institute
+senate,PA,2000-10-18,39.0,52.0,3.1,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2000-10-22,31.0,53.0,4.47,Public Opinion Strategies
+senate,PA,2000-10-27,33.0,54.0,4.08,Zogby Analytics
+senate,PA,2000-10-28,27.0,48.0,4.26,Millersville University Center for Politics and Public Affairs
+senate,PA,2000-10-29,36.0,54.0,3.22,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2000-10-30,34.0,51.0,4.08,Zogby Analytics
+senate,PA,2000-11-01,36.0,55.0,4.0,Mason-Dixon Polling & Strategy
+senate,PA,2000-11-01,34.0,55.0,3.11,Decision Forecasting
+senate,PA,2000-11-01,41.0,57.0,3.54,SurveyUSA
+senate,PA,2000-11-02,34.0,50.0,4.08,Zogby Analytics
+senate,PA,2000-11-02,36.0,56.0,3.94,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2000-11-01,38.0,55.0,3.84,Harris Insights & Analytics
+senate,PA,2000-11-05,34.0,52.0,4.11,Zogby Analytics
+senate,PA,2000-11-05,38.0,52.0,3.03,Scott Rasmussen (Rasmussen Reports)
+senate,RI,2000-10-12,34.0,50.0,4.95,Fleming & Associates
+senate,RI,2000-10-19,35.0,52.0,3.53,Scott Rasmussen (Rasmussen Reports)
+senate,RI,2000-10-21,28.0,52.0,5,Brown University A. Alfred Taubman Center for American Politics and Policy
+senate,RI,2000-10-29,33.0,59.0,4.47,SurveyUSA
+senate,TN,2000-09-15,23.0,62.0,4.0,Mason-Dixon Polling & Strategy
+senate,TN,2000-09-13,29.0,57.0,3.33,Harris Insights & Analytics
+senate,TN,2000-10-21,30.0,59.0,3.45,Scott Rasmussen (Rasmussen Reports)
+senate,TN,2000-10-27,27.0,61.0,4.47,Zogby Analytics
+senate,TN,2000-10-28,31.0,57.0,3.72,Scott Rasmussen (Rasmussen Reports)
+senate,TN,2000-10-30,29.0,58.0,4.47,Zogby Analytics
+senate,TN,2000-11-02,34.0,53.0,4.47,Zogby Analytics
+senate,TN,2000-11-02,30.0,62.0,4.0,Mason-Dixon Polling & Strategy
+senate,TN,2000-11-05,28.0,62.0,4.52,Zogby Analytics
+senate,TN,2000-11-03,35.0,62.0,1.39,Harris Insights & Analytics
+senate,TX,2000-09-13,32.0,58.0,1.66,Harris Insights & Analytics
+senate,TX,2000-11-01,23.0,55.0,3.44,Scripps Howard
+senate,TX,2000-11-03,31.0,63.0,0.75,Harris Insights & Analytics
+senate,UT,2000-09-15,26.0,59.0,3.84,Dan Jones & Associates
+senate,UT,2000-09-27,24.0,65.0,3.76,Scott Rasmussen (Rasmussen Reports)
+senate,UT,2000-10-11,24.0,64.0,3.31,Dan Jones & Associates
+senate,UT,2000-10-24,27.0,64.0,3.3,Scott Rasmussen (Rasmussen Reports)
+senate,UT,2000-11-03,32.0,64.0,2.47,Harris Insights & Analytics
+senate,VT,2000-10-18,23.0,66.0,3.99,Mason-Dixon Polling & Strategy
+senate,VT,2000-10-26,24.0,66.0,3.16,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2000-09-15,41.0,48.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2000-09-13,40.0,46.0,5,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2000-09-13,45.0,51.0,2.19,Harris Insights & Analytics
+senate,VA,2000-09-24,43.0,57.0,4.47,SurveyUSA
+senate,VA,2000-10-01,41.0,56.0,4.47,SurveyUSA
+senate,VA,2000-09-27,42.0,45.0,4.44,Richmond Times-Dispatch
+senate,VA,2000-10-08,47.0,51.0,4.47,SurveyUSA
+senate,VA,2000-10-15,48.0,51.0,4.47,SurveyUSA
+senate,VA,2000-10-21,39.0,54.0,4.1,Virginia Commonwealth University L. Douglas Wilder School of Government and Public Affairs
+senate,VA,2000-10-24,44.0,47.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2000-10-24,42.0,50.0,3.02,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2000-10-24,46.0,48.0,3.15,ABC News/The Washington Post
+senate,VA,2000-10-29,46.0,53.0,4.47,SurveyUSA
+senate,VA,2000-10-30,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
+senate,VA,2000-10-30,44.0,50.0,3.34,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2000-10-30,43.0,45.0,3.69,Richmond Times-Dispatch
+senate,VA,2000-11-04,44.0,54.0,4.47,SurveyUSA
+senate,VA,2000-11-03,47.0,52.0,1.16,Harris Insights & Analytics
+senate,WA,2000-09-15,43.0,44.0,5,Elway Research
+senate,WA,2000-09-17,46.0,41.0,3.54,Mellman Group
+senate,WA,2000-09-20,48.0,48.0,4.47,SurveyUSA
+senate,WA,2000-10-01,47.0,47.0,4.47,SurveyUSA
+senate,WA,2000-10-15,45.0,49.0,4.47,SurveyUSA
+senate,WA,2000-10-19,43.0,46.0,5,Elway Research
+senate,WA,2000-10-21,42.0,46.0,4.47,EMC Research
+senate,WA,2000-10-27,45.0,47.0,4.47,Zogby Analytics
+senate,WA,2000-10-30,46.0,47.0,4.47,Zogby Analytics
+senate,WA,2000-10-31,46.0,48.0,4.47,SurveyUSA
+senate,WA,2000-11-02,45.0,47.0,4.47,Zogby Analytics
+senate,WA,2000-11-05,52.0,47.0,4.45,Zogby Analytics
+senate,WA,2000-11-05,43.0,47.0,3.32,Scott Rasmussen (Rasmussen Reports)
+senate,WA,2000-11-03,47.0,49.0,1.24,Harris Insights & Analytics
+senate,WV,2000-10-18,75.0,14.0,3.11,Scott Rasmussen (Rasmussen Reports)
+senate,WV,2000-11-03,76.0,18.0,2.44,Harris Insights & Analytics
+senate,WI,2000-09-15,64.0,23.0,4.47,Market Shares Corp.
+senate,WI,2000-10-20,67.0,24.0,4.13,Harris Insights & Analytics
+senate,WI,2000-10-20,67.0,24.0,4.13,University of Wisconsin Survey Center
+senate,WI,2000-10-27,65.0,31.0,4.47,Zogby Analytics
+senate,WI,2000-10-27,60.0,27.0,4.47,Market Shares Corp.
+senate,WI,2000-10-30,60.0,33.0,4.47,Zogby Analytics
+senate,WI,2000-11-02,61.0,32.0,4.47,Zogby Analytics
+senate,WI,2000-11-05,61.0,32.0,4.51,Zogby Analytics
+senate,WI,2000-11-05,56.0,39.0,3.16,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2000-11-03,59.0,38.0,1.39,Harris Insights & Analytics
+senate,WY,2000-09-16,14.0,68.0,4.93,Mason-Dixon Polling & Strategy

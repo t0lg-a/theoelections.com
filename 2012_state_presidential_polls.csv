@@ -1,0 +1,1344 @@
+mode,state,date,dem,rep,sigma,pollster
+president,AR,2012-09-17,34.5,55.5,2.12,Hendrix College
+president,AR,2012-10-11,31.0,58.0,3.95,University of Arkansas Department of Political Science
+president,AZ,2012-09-08,44.0,53.0,3.17,Public Policy Polling
+president,AZ,2012-09-11,41.0,51.0,3.99,YouGov
+president,AZ,2012-09-17,45.0,48.0,4.08,Purple Strategies
+president,AZ,2012-09-25,42.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2012-09-25,42.0,46.0,4.47,Moore Information Group
+president,AZ,2012-10-02,41.0,52.0,4.1,Public Policy Polling
+president,AZ,2012-10-07,44.0,42.0,4.71,Behavior Research Center (Rocky Mountain Poll)
+president,AZ,2012-10-08,43.0,52.0,4.62,YouGov
+president,AZ,2012-10-21,44.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,AZ,2012-11-02,46.0,53.0,3.04,Public Policy Polling
+president,AZ,2012-11-02,44.0,52.0,3.77,YouGov
+president,CA,2012-09-10,57.0,35.0,4.37,SurveyUSA
+president,CA,2012-09-11,55.0,33.0,3.53,MFour Mobile Research
+president,CA,2012-09-11,56.0,39.0,2.71,YouGov
+president,CA,2012-09-13,53.0,39.0,3.17,Public Policy Institute of California
+president,CA,2012-09-12,58.0,34.0,3.35,Field Research Corp. (Field Poll)
+president,CA,2012-09-25,57.5,29.6,3.48,MFour Mobile Research
+president,CA,2012-10-08,53.0,39.0,4.31,SurveyUSA
+president,CA,2012-10-09,54.0,32.9,3.47,MFour Mobile Research
+president,CA,2012-10-08,58.0,39.0,2.92,YouGov
+president,CA,2012-10-13,53.0,38.0,4.44,Princeton Survey Research Associates International
+president,CA,2012-10-13,53.0,38.0,3.76,Princeton Survey Research Associates International
+president,CA,2012-10-18,54.0,40.0,2.64,Greenberg Quinlan Rosner/American Viewpoint
+president,CA,2012-10-18,53.0,41.0,3.17,Public Policy Institute of California
+president,CA,2012-10-25,55.9,33.0,2.17,MFour Mobile Research
+president,CA,2012-10-23,54.0,39.0,2.53,Field Research Corp. (Field Poll)
+president,CA,2012-11-02,55.0,40.0,2.52,YouGov
+president,CO,2012-09-10,49.0,44.0,4.46,Keating Research
+president,CO,2012-09-11,49.0,47.0,4.08,American Research Group
+president,CO,2012-09-11,45.0,44.0,4.03,SurveyUSA
+president,CO,2012-09-11,50.0,45.0,3.76,YouGov
+president,CO,2012-09-17,45.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2012-09-14,48.0,47.0,2.58,Quinnipiac University
+president,CO,2012-09-17,50.0,45.0,3.21,Marist College
+president,CO,2012-09-17,48.0,45.0,4.08,Purple Strategies
+president,CO,2012-09-21,50.2,45.5,3.62,Gravis Marketing
+president,CO,2012-09-22,49.0,43.0,3.26,Public Policy Polling
+president,CO,2012-09-26,49.3,45.5,2.8,We Ask America
+president,CO,2012-10-01,46.0,50.0,5,McLaughlin & Associates
+president,CO,2012-10-03,45.9,49.4,2.64,Gravis Marketing
+president,CO,2012-10-04,47.0,43.0,4.07,Selzer & Co.
+president,CO,2012-10-07,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2012-10-07,46.0,50.0,4.08,American Research Group
+president,CO,2012-10-06,47.0,48.0,2.82,Quinnipiac University
+president,CO,2012-10-09,45.0,46.0,4.04,SurveyUSA
+president,CO,2012-10-08,48.4,46.0,2.19,Gravis Marketing
+president,CO,2012-10-08,48.0,45.0,4.36,YouGov
+president,CO,2012-10-15,47.0,48.1,2.88,We Ask America
+president,CO,2012-10-15,47.0,44.0,4.47,Grove Insight
+president,CO,2012-10-17,49.0,44.0,3.16,Public Policy Polling
+president,CO,2012-10-21,46.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CO,2012-10-23,46.0,43.0,4.47,Grove Insight
+president,CO,2012-10-23,48.0,45.0,4.46,Keating Research
+president,CO,2012-10-23,48.0,48.0,2.98,Marist College
+president,CO,2012-10-24,49.0,46.0,3.33,Public Policy Polling
+president,CO,2012-10-24,47.0,46.0,4.08,Purple Strategies
+president,CO,2012-10-27,47.0,48.0,4.08,American Research Group
+president,CO,2012-10-29,47.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,CO,2012-10-28,48.0,45.0,4.47,Grove Insight
+president,CO,2012-10-30,50.1,46.7,2.83,We Ask America
+president,CO,2012-10-30,49.0,48.0,3.45,CallFire
+president,CO,2012-10-30,47.0,45.0,3.79,SurveyUSA
+president,CO,2012-10-28,48.0,47.0,3.62,Big Village
+president,CO,2012-10-31,50.0,46.0,3.48,Public Policy Polling
+president,CO,2012-11-01,46.0,46.0,3.08,Ipsos
+president,CO,2012-11-01,43.0,46.0,2.86,Ipsos
+president,CO,2012-11-02,48.0,47.0,3.65,YouGov
+president,CO,2012-11-03,52.0,46.0,3.02,Public Policy Polling
+president,CO,2012-11-03,50.0,46.0,4.07,Keating Research
+president,CO,2012-11-04,48.0,47.0,3.59,Ipsos
+president,CT,2012-09-11,53.0,40.0,3.97,YouGov
+president,CT,2012-09-13,53.0,32.0,4.44,University of Connecticut
+president,CT,2012-09-25,54.0,41.0,3.53,Public Policy Polling
+president,CT,2012-09-30,54.0,42.0,2.43,Quinnipiac University
+president,CT,2012-10-07,51.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CT,2012-10-08,53.0,39.0,4.8,YouGov
+president,CT,2012-10-09,53.0,38.0,4.26,Siena College
+president,CT,2012-10-15,53.0,44.0,3.14,Public Policy Polling
+president,CT,2012-10-13,51.0,37.0,4.17,University of Connecticut
+president,CT,2012-10-16,49.0,42.0,4.0,Mason-Dixon Polling & Strategy
+president,CT,2012-10-21,52.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,CT,2012-10-20,53.0,40.0,4.17,SurveyUSA
+president,CT,2012-10-21,55.0,41.0,2.66,Quinnipiac University
+president,CT,2012-11-01,55.0,42.0,2.86,Public Policy Polling
+president,CT,2012-11-02,54.0,39.0,3.34,YouGov
+president,DC,2012-10-13,88.0,8.0,2.86,Public Policy Polling
+president,FL,2012-09-08,48.0,44.0,4.1,SurveyUSA
+president,FL,2012-09-09,47.0,50.0,4.08,McLaughlin & Associates
+president,FL,2012-09-10,49.0,44.0,3.19,Marist College
+president,FL,2012-09-12,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2012-09-11,43.8,47.7,4.08,McLaughlin & Associates
+president,FL,2012-09-11,49.0,47.0,2.66,YouGov
+president,FL,2012-09-15,47.1,47.7,2.41,Gravis Marketing
+president,FL,2012-09-18,49.1,45.5,2.85,We Ask America
+president,FL,2012-09-17,49.0,44.0,3.47,Beacon Research/Shaw & Co. Research
+president,FL,2012-09-18,48.0,47.0,3.54,Mason-Dixon Polling & Strategy
+president,FL,2012-09-17,47.0,48.0,4.08,Purple Strategies
+president,FL,2012-09-21,50.0,45.0,4.08,American Research Group
+president,FL,2012-09-22,50.0,46.0,3.41,Public Policy Polling
+president,FL,2012-09-21,51.0,47.0,3.61,ABC News/The Washington Post
+president,FL,2012-09-24,49.0,46.0,4.3,InsiderAdvantage
+president,FL,2012-09-21,53.0,44.0,2.89,Quinnipiac University
+president,FL,2012-09-29,49.0,48.4,3.31,Gravis Marketing
+president,FL,2012-09-29,46.0,43.0,4.08,Suffolk University
+president,FL,2012-09-30,47.0,46.0,3.35,Marist College
+president,FL,2012-10-04,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,FL,2012-10-04,46.0,49.0,2.89,We Ask America
+president,FL,2012-10-04,49.0,49.0,3.07,Gravis Marketing
+president,FL,2012-10-05,43.0,47.0,4.07,Hill Research Consultants
+president,FL,2012-10-08,48.0,47.0,3.18,Marist College
+president,FL,2012-10-05,49.0,45.0,3.91,University of North Florida Public Opinion Research Lab
+president,FL,2012-10-09,44.0,51.0,3.54,Mason-Dixon Polling & Strategy
+president,FL,2012-10-11,47.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,FL,2012-10-10,46.0,49.0,4.08,American Research Group
+president,FL,2012-10-08,48.0,47.0,2.84,YouGov
+president,FL,2012-10-13,48.0,49.0,4.03,Gravis Marketing
+president,FL,2012-10-13,48.0,49.0,3.56,Public Policy Polling
+president,FL,2012-10-17,48.0,42.0,3.45,Zogby Analytics
+president,FL,2012-10-18,46.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,FL,2012-10-17,47.0,48.0,3.83,Big Village
+president,FL,2012-10-17,45.0,48.0,2.97,Beacon Research/Shaw & Co. Research
+president,FL,2012-10-17,47.0,46.0,4.08,SurveyUSA
+president,FL,2012-10-17,48.0,45.0,4.47,Grove Insight
+president,FL,2012-10-17,47.0,48.0,3.54,Public Policy Polling
+president,FL,2012-10-19,44.0,49.0,4.46,Angus Reid Global
+president,FL,2012-10-20,47.0,47.0,3.54,Mellman Group
+president,FL,2012-10-24,49.0,50.0,2.91,Gravis Marketing
+president,FL,2012-10-23,47.0,45.0,4.08,Grove Insight
+president,FL,2012-10-23,46.0,51.0,3.16,Susquehanna Polling & Research Inc.
+president,FL,2012-10-25,48.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,FL,2012-10-26,47.0,47.0,4.1,SurveyUSA
+president,FL,2012-10-26,49.0,47.0,3.54,Mellman Group
+president,FL,2012-10-27,49.0,48.0,3.82,Public Policy Polling
+president,FL,2012-10-27,48.0,48.0,3.6,Big Village
+president,FL,2012-10-25,50.0,45.0,3.05,Quinnipiac University
+president,FL,2012-10-29,48.0,50.0,3.16,Rasmussen Reports
+president,FL,2012-10-28,48.0,47.0,4.08,Grove Insight
+president,FL,2012-10-29,47.3,46.8,3.48,Zogby Analytics
+president,FL,2012-10-30,47.0,50.0,4.27,Gravis Marketing
+president,FL,2012-10-30,48.9,49.8,2.95,We Ask America
+president,FL,2012-10-31,49.0,47.0,2.54,Marist College
+president,FL,2012-10-31,45.0,51.0,3.54,Mason-Dixon Polling & Strategy
+president,FL,2012-11-01,48.0,46.0,3.19,Ipsos
+president,FL,2012-11-01,46.0,43.0,2.75,Ipsos
+president,FL,2012-11-01,47.0,45.0,4.08,Mellman Group
+president,FL,2012-11-02,49.0,49.0,4.36,Angus Reid Global
+president,FL,2012-11-02,47.0,48.0,2.48,YouGov
+president,FL,2012-11-04,47.0,52.0,4.78,InsiderAdvantage
+president,FL,2012-11-03,50.0,49.0,3.24,Public Policy Polling
+president,FL,2012-11-04,47.0,48.0,3.61,Ipsos
+president,FL,2012-11-04,46.9,47.2,3.38,Zogby Analytics
+president,FL,2012-11-04,49.0,49.0,3.07,Gravis Marketing
+president,GA,2012-09-11,44.0,51.0,3.13,YouGov
+president,GA,2012-09-17,35.0,56.0,4.55,InsiderAdvantage
+president,GA,2012-10-10,43.0,51.0,3.76,Abt Associates
+president,GA,2012-10-08,44.0,52.0,3.59,YouGov
+president,GA,2012-10-27,44.0,52.0,4.17,SurveyUSA
+president,GA,2012-10-31,46.0,52.0,2.76,20/20 Insight
+president,GA,2012-11-02,44.0,52.0,3.06,YouGov
+president,HI,2012-09-27,62.0,30.0,2.46,MRG Research
+president,HI,2012-10-26,61.0,34.0,2.87,MRG Research
+president,HI,2012-10-25,61.0,34.0,2.87,MRG Research
+president,IA,2012-09-11,48.0,43.0,3.78,YouGov
+president,IA,2012-09-17,50.0,42.0,3.34,Marist College
+president,IA,2012-09-19,44.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IA,2012-09-22,51.0,44.0,4.08,American Research Group
+president,IA,2012-09-24,46.0,47.0,4.47,Voter/Consumer Research
+president,IA,2012-09-25,51.0,44.0,3.64,Public Policy Polling
+president,IA,2012-09-25,49.0,45.0,3.92,Selzer & Co.
+president,IA,2012-09-26,47.5,43.7,2.8,We Ask America
+president,IA,2012-10-07,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IA,2012-10-08,50.0,46.0,4.28,YouGov
+president,IA,2012-10-13,48.0,48.0,4.08,American Research Group
+president,IA,2012-10-15,48.7,45.9,2.58,We Ask America
+president,IA,2012-10-16,51.0,43.0,2.97,Marist College
+president,IA,2012-10-18,49.0,48.0,3.89,Public Policy Polling
+president,IA,2012-10-18,48.0,49.0,3.39,Public Policy Polling
+president,IA,2012-10-21,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,IA,2012-10-24,50.0,46.0,4.4,Gravis Marketing
+president,IA,2012-10-23,49.0,47.0,3.81,Public Policy Polling
+president,IA,2012-10-22,44.4,45.2,5,University of Iowa Hawkeye Poll Cooperative
+president,IA,2012-10-28,50.0,44.0,2.96,Marist College
+president,IA,2012-10-30,48.8,47.3,2.92,We Ask America
+president,IA,2012-10-30,48.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,IA,2012-10-29,50.0,45.0,3.85,Public Policy Polling
+president,IA,2012-10-30,50.0,47.0,3.35,CallFire
+president,IA,2012-11-01,49.0,45.0,4.1,Gravis Marketing
+president,IA,2012-10-31,46.0,44.0,4.08,Mellman Group
+president,IA,2012-11-01,47.0,44.0,4.47,Grove Insight
+president,IA,2012-11-01,47.0,42.0,3.54,Selzer & Co.
+president,IA,2012-11-02,48.0,47.0,3.1,YouGov
+president,IA,2012-11-03,50.0,48.0,2.99,Public Policy Polling
+president,IA,2012-11-03,48.0,49.0,4.08,American Research Group
+president,ID,2012-10-09,27.0,63.0,4.0,Mason-Dixon Polling & Strategy
+president,IL,2012-09-07,47.1,33.8,2.82,Southern Illinois University Paul Simon Public Policy Institute
+president,IL,2012-09-11,59.0,36.0,3.03,YouGov
+president,IL,2012-10-06,55.0,36.0,3.78,Market Shares Corp.
+president,IL,2012-10-08,58.0,38.0,3.43,YouGov
+president,IL,2012-10-30,57.0,41.0,2.89,We Ask America
+president,IL,2012-11-02,57.0,38.0,2.98,YouGov
+president,IN,2012-09-11,41.0,47.0,3.54,Global Strategy Group
+president,IN,2012-09-11,45.0,50.0,3.9,YouGov
+president,IN,2012-09-21,40.0,52.0,3.54,Howey Politics/DePauw University
+president,IN,2012-10-03,39.0,55.0,4.08,McLaughlin & Associates
+president,IN,2012-10-10,41.0,54.0,4.08,Scott Rasmussen (Rasmussen Reports)
+president,IN,2012-10-08,41.0,53.0,4.49,YouGov
+president,IN,2012-10-24,41.0,55.0,4.08,McLaughlin & Associates
+president,IN,2012-10-29,39.0,57.0,4.08,McLaughlin & Associates
+president,IN,2012-10-29,41.0,51.0,3.54,Howey Politics/DePauw University
+president,IN,2012-11-01,43.0,52.0,4.08,Scott Rasmussen (Rasmussen Reports)
+president,IN,2012-10-31,41.0,54.0,4.08,McLaughlin & Associates
+president,IN,2012-11-02,44.0,51.0,3.61,YouGov
+president,KY,2012-09-12,39.0,53.0,4.06,SurveyUSA
+president,LA,2012-09-15,38.8,44.5,4.08,Southern Media & Opinion Research
+president,LA,2012-09-29,36.5,49.7,4.93,Zogby Analytics
+president,LA,2012-10-03,36.0,59.0,1.93,Magellan Strategies
+president,LA,2012-10-06,37.0,53.0,4.08,Clarus Research Group
+president,MA,2012-09-08,56.0,40.0,3.64,Kimball Political Consulting
+president,MA,2012-09-10,60.0,38.0,4.75,Western New England University Polling Institute
+president,MA,2012-09-11,55.0,39.0,3.48,YouGov
+president,MA,2012-09-15,57.0,39.0,3.38,Public Policy Polling
+president,MA,2012-09-15,64.0,31.0,4.08,Suffolk University
+president,MA,2012-09-16,59.0,31.0,4.44,MassINC Polling Group
+president,MA,2012-09-15,59.0,36.0,4.49,University of Massachusetts Lowell Center for Public Opinion
+president,MA,2012-09-24,55.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MA,2012-09-24,57.0,30.0,4.46,University of New Hampshire Survey Center
+president,MA,2012-09-27,60.0,32.0,4.45,MassINC Polling Group
+president,MA,2012-10-01,63.0,33.0,4.77,Western New England University Polling Institute
+president,MA,2012-10-06,52.0,36.0,4.47,MassINC Polling Group
+president,MA,2012-10-05,55.0,34.0,4.78,YouGov
+president,MA,2012-10-10,57.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MA,2012-10-10,55.0,41.0,3.08,Public Policy Polling
+president,MA,2012-10-08,55.0,36.0,3.87,YouGov
+president,MA,2012-10-15,57.0,39.0,3.76,Public Policy Polling
+president,MA,2012-10-20,55.0,39.0,3.62,Kimball Political Consulting
+president,MA,2012-10-21,56.0,36.0,4.4,MassINC Polling Group
+president,MA,2012-10-25,59.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MA,2012-10-27,63.0,31.0,4.08,Suffolk University
+president,MA,2012-10-26,52.0,38.0,4.14,University of New Hampshire Survey Center
+president,MA,2012-10-31,54.0,41.0,3.62,Kimball Political Consulting
+president,MA,2012-10-29,58.0,40.0,4.32,Western New England University Polling Institute
+president,MA,2012-11-01,57.0,42.0,3.03,Public Policy Polling
+president,MA,2012-11-02,57.0,37.0,3.51,YouGov
+president,MA,2012-11-02,57.0,37.0,3.54,University of Massachusetts Lowell Center for Public Opinion
+president,MD,2012-09-11,57.0,37.0,3.82,YouGov
+president,MD,2012-09-20,55.0,36.0,3.51,Gonzales Research & Marketing Strategies Inc.
+president,MD,2012-09-26,57.0,34.0,3.53,OpinionWorks
+president,MD,2012-10-08,58.0,37.0,4.48,YouGov
+president,MD,2012-10-13,60.0,36.0,3.44,ABC News/The Washington Post
+president,MD,2012-10-22,55.0,36.0,3.53,OpinionWorks
+president,MD,2012-11-02,59.0,37.0,3.77,YouGov
+president,ME,2012-09-14,52.0,36.0,4.02,Digital Research
+president,ME,2012-09-16,53.5,37.3,3.42,Maine People's Resource Center
+president,ME,2012-09-17,55.0,39.0,3.53,Public Policy Polling
+president,ME,2012-09-25,52.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,ME,2012-09-26,50.8,36.8,5,Pan Atlantic Research
+president,ME,2012-10-30,49.0,42.0,4.04,Digital Research
+president,ME,2012-11-01,55.0,42.0,2.47,Public Policy Polling
+president,ME,2012-11-02,53.3,42.2,3.32,Maine People's Resource Center
+president,MI,2012-09-10,47.0,37.0,4.08,EPIC-MRA
+president,MI,2012-09-12,45.49,43.65,2.94,Baydoun Consulting
+president,MI,2012-09-12,47.5,42.3,4.08,Marketing Resource Group (MRG)
+president,MI,2012-09-11,51.0,42.0,3.0,YouGov
+president,MI,2012-09-16,52.0,37.8,4.08,Glengariff Group
+president,MI,2012-09-16,52.0,44.0,3.64,Big Village
+president,MI,2012-09-18,51.0,42.0,2.05,Public Policy Polling
+president,MI,2012-09-20,54.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MI,2012-09-21,50.0,46.2,3.53,Gravis Marketing
+president,MI,2012-09-26,52.0,39.9,3.07,We Ask America
+president,MI,2012-10-05,49.3,45.85,2.99,Baydoun Consulting
+president,MI,2012-10-05,48.0,45.0,4.08,EPIC-MRA
+president,MI,2012-10-07,49.0,42.3,4.08,Glengariff Group
+president,MI,2012-10-07,46.0,44.4,2.99,Gravis Marketing
+president,MI,2012-10-09,44.2,40.5,4.08,Denno Research
+president,MI,2012-10-11,52.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MI,2012-10-08,52.0,42.0,3.34,YouGov
+president,MI,2012-10-17,52.0,46.0,3.54,EPIC-MRA
+president,MI,2012-10-19,49.0,40.0,4.26,Angus Reid Global
+president,MI,2012-10-22,46.92,46.56,2.99,Baydoun Consulting
+president,MI,2012-10-28,47.7,45.0,4.08,Glengariff Group
+president,MI,2012-10-28,48.0,42.0,4.08,EPIC-MRA
+president,MI,2012-10-30,53.0,45.0,4.47,Public Policy Polling
+president,MI,2012-11-01,52.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,MI,2012-10-31,48.0,41.0,4.47,Grove Insight
+president,MI,2012-11-02,46.24,46.86,2.29,Baydoun Consulting
+president,MI,2012-11-02,52.0,46.0,3.78,Public Policy Polling
+president,MI,2012-11-02,52.0,47.0,4.46,Angus Reid Global
+president,MI,2012-11-02,51.0,44.0,3.03,YouGov
+president,MI,2012-11-04,51.0,46.0,2.77,Mitchell Research & Communications
+president,MN,2012-09-08,50.0,40.0,4.26,SurveyUSA
+president,MN,2012-09-10,51.0,44.0,3.48,Public Policy Polling
+president,MN,2012-09-11,50.0,42.0,3.5,YouGov
+president,MN,2012-09-18,48.0,40.0,3.54,Mason-Dixon Polling & Strategy
+president,MN,2012-10-07,47.0,43.0,4.47,Public Opinion Strategies
+president,MN,2012-10-07,53.0,43.0,3.27,Public Policy Polling
+president,MN,2012-10-08,52.0,44.0,3.83,YouGov
+president,MN,2012-10-13,50.0,40.0,4.26,SurveyUSA
+president,MN,2012-10-21,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MN,2012-10-18,53.0,45.0,4.08,St. Cloud State University
+president,MN,2012-10-24,47.0,44.0,3.54,Mason-Dixon Polling & Strategy
+president,MN,2012-10-27,50.0,43.0,4.17,SurveyUSA
+president,MN,2012-10-30,45.0,46.0,4.47,Public Opinion Strategies
+president,MN,2012-10-31,53.0,44.0,3.6,Public Policy Polling
+president,MN,2012-11-02,53.0,45.0,2.93,Public Policy Polling
+president,MN,2012-11-02,52.0,41.0,4.24,SurveyUSA
+president,MN,2012-11-02,50.0,43.0,3.56,YouGov
+president,MO,2012-09-11,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MO,2012-09-10,37.6,57.2,3.43,Clout Research
+president,MO,2012-09-11,43.0,50.0,3.69,YouGov
+president,MO,2012-09-16,39.3,47.7,2.26,Gravis Marketing
+president,MO,2012-09-26,44.5,47.7,2.96,We Ask America
+president,MO,2012-09-30,40.0,50.0,3.85,Clout Research
+president,MO,2012-10-02,46.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MO,2012-10-02,45.0,51.0,3.78,Public Policy Polling
+president,MO,2012-10-08,42.0,52.0,4.28,YouGov
+president,MO,2012-10-12,41.0,55.0,3.16,Clout Research
+president,MO,2012-10-17,43.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MO,2012-10-20,46.0,52.0,4.15,Public Policy Polling
+president,MO,2012-10-24,41.0,54.0,4.0,Mason-Dixon Polling & Strategy
+president,MO,2012-10-30,42.2,53.8,2.87,We Ask America
+president,MO,2012-11-02,45.0,53.0,3.46,Public Policy Polling
+president,MO,2012-11-02,42.0,53.0,3.58,YouGov
+president,MO,2012-10-31,43.0,50.0,4.12,SurveyUSA
+president,MT,2012-09-10,43.0,46.0,3.9,Public Policy Polling
+president,MT,2012-09-18,42.0,51.0,4.0,Mason-Dixon Polling & Strategy
+president,MT,2012-09-25,44.0,48.0,4.08,Mellman Group
+president,MT,2012-09-29,34.5,49.0,4.58,Montana State University Billings
+president,MT,2012-10-09,40.0,50.0,3.68,Public Policy Polling
+president,MT,2012-10-14,45.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MT,2012-10-15,43.0,53.0,3.52,Public Policy Polling
+president,MT,2012-10-29,43.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,MT,2012-10-30,43.0,53.0,4.0,Mason-Dixon Polling & Strategy
+president,MT,2012-10-30,41.0,49.0,3.54,Mellman Group
+president,MT,2012-11-02,45.0,52.0,3.46,Public Policy Polling
+president,NC,2012-09-08,49.0,48.0,3.03,Public Policy Polling
+president,NC,2012-09-13,45.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2012-09-11,44.0,45.0,3.07,YouGov
+president,NC,2012-09-13,48.0,44.0,4.72,High Point University Survey Research Center
+president,NC,2012-09-18,47.0,43.0,4.08,National Research
+president,NC,2012-09-17,48.0,46.0,4.08,Purple Strategies
+president,NC,2012-09-24,48.0,46.0,3.11,Marist College
+president,NC,2012-09-29,46.0,50.0,4.08,American Research Group
+president,NC,2012-09-29,48.0,48.0,3.19,Public Policy Polling
+president,NC,2012-09-30,49.0,47.0,4.18,SurveyUSA
+president,NC,2012-10-02,47.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2012-10-01,49.0,40.0,5,High Point University Survey Research Center
+president,NC,2012-10-07,41.2,49.9,2.75,Gravis Marketing
+president,NC,2012-10-09,48.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2012-10-07,43.0,49.0,5,High Point University Survey Research Center
+president,NC,2012-10-08,48.0,49.0,3.51,YouGov
+president,NC,2012-10-12,45.0,49.0,4.08,The Tyson Group
+president,NC,2012-10-13,47.0,49.0,3.04,Public Policy Polling
+president,NC,2012-10-17,46.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2012-10-17,47.0,44.0,4.47,Grove Insight
+president,NC,2012-10-20,47.0,48.0,4.08,National Research
+president,NC,2012-10-24,45.0,53.0,2.41,Gravis Marketing
+president,NC,2012-10-23,47.0,44.0,4.47,Grove Insight
+president,NC,2012-10-25,46.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NC,2012-10-24,48.0,48.0,3.37,Public Policy Polling
+president,NC,2012-10-23,45.4,45.3,2.84,Elon University
+president,NC,2012-10-28,45.0,50.0,3.83,SurveyUSA
+president,NC,2012-10-26,45.0,46.0,4.98,High Point University Survey Research Center
+president,NC,2012-10-30,49.0,49.0,3.7,Public Policy Polling
+president,NC,2012-11-02,47.0,49.0,2.58,YouGov
+president,NC,2012-11-04,46.0,50.0,2.97,Gravis Marketing
+president,NC,2012-11-03,49.2,49.4,3.29,Public Policy Polling
+president,ND,2012-09-26,39.0,51.0,4.08,DFM Research
+president,ND,2012-10-04,40.0,54.0,4.0,Mason-Dixon Polling & Strategy
+president,ND,2012-10-17,40.0,54.0,4.08,Scott Rasmussen (Rasmussen Reports)
+president,ND,2012-10-27,40.0,54.0,4.0,Mason-Dixon Polling & Strategy
+president,NE,2012-09-19,39.0,53.0,3.9,Wiese Research Associates
+president,NE,2012-10-24,38.0,52.0,3.54,Wiese Research Associates
+president,NE,2012-10-24,38.0,56.0,4.08,Public Opinion Strategies
+president,NE,2012-10-28,39.0,61.0,2.93,Gravis Marketing
+president,NE,2012-11-01,41.0,54.0,2.91,We Ask America
+president,NH,2012-09-07,45.0,40.0,4.12,University of New Hampshire Survey Center
+president,NH,2012-09-11,48.0,42.0,5,YouGov
+president,NH,2012-09-16,48.0,46.0,4.23,American Research Group
+president,NH,2012-09-18,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NH,2012-09-17,52.0,45.0,4.08,GQR
+president,NH,2012-09-24,51.0,44.0,3.41,Public Policy Polling
+president,NH,2012-09-24,51.0,44.0,3.14,Marist College
+president,NH,2012-09-26,50.0,45.0,4.08,American Research Group
+president,NH,2012-09-29,54.0,39.0,4.12,University of New Hampshire Survey Center
+president,NH,2012-10-03,50.0,44.0,4.28,University of New Hampshire Survey Center
+president,NH,2012-10-09,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NH,2012-10-10,46.0,50.0,4.08,American Research Group
+president,NH,2012-10-13,47.0,47.0,4.47,Suffolk University
+president,NH,2012-10-15,50.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NH,2012-10-18,48.0,49.0,3.11,Public Policy Polling
+president,NH,2012-10-19,51.0,42.0,3.6,University of New Hampshire Survey Center
+president,NH,2012-10-21,47.0,49.0,4.08,American Research Group
+president,NH,2012-10-20,48.0,45.0,5,Lake Research Partners
+president,NH,2012-10-23,48.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NH,2012-10-24,47.0,44.0,4.47,Grove Insight
+president,NH,2012-10-24,49.0,46.0,4.18,New England College Polling Center
+president,NH,2012-10-27,49.0,47.0,3.38,Public Policy Polling
+president,NH,2012-10-26,47.0,42.0,5,Lake Research Partners
+president,NH,2012-10-28,49.0,47.0,3.14,Marist College
+president,NH,2012-10-30,49.5,44.4,3.14,New England College Polling Center
+president,NH,2012-11-01,50.0,49.0,4.49,Gravis Marketing
+president,NH,2012-11-01,48.0,48.0,4.46,University of New Hampshire Survey Center
+president,NH,2012-11-02,47.0,43.0,3.81,YouGov
+president,NH,2012-11-04,50.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,NH,2012-11-03,50.0,48.0,2.54,Public Policy Polling
+president,NH,2012-11-03,50.0,46.0,3.82,New England College Polling Center
+president,NH,2012-11-03,49.0,49.0,4.08,American Research Group
+president,NH,2012-11-03,50.0,46.0,3.57,University of New Hampshire Survey Center
+president,NJ,2012-09-11,51.0,37.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,NJ,2012-09-09,52.0,38.0,3.76,Fairleigh Dickinson University
+president,NJ,2012-09-11,52.0,40.0,3.1,YouGov
+president,NJ,2012-09-21,52.0,37.0,4.04,Monmouth University Polling Institute
+president,NJ,2012-09-29,56.0,39.0,3.94,Rutgers University Eagleton Center for Public Interest Polling
+president,NJ,2012-10-06,51.0,40.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,NJ,2012-10-08,54.0,41.0,3.6,YouGov
+president,NJ,2012-10-12,51.0,43.0,2.75,Quinnipiac University
+president,NJ,2012-10-12,48.4,41.4,3.57,Neighborhood Research and Media
+president,NJ,2012-10-17,54.0,40.0,4.16,SurveyUSA
+president,NJ,2012-10-15,53.0,38.0,3.51,Stockton University William J. Hughes Center for Public Policy
+president,NJ,2012-10-24,51.0,41.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,NJ,2012-11-02,53.0,41.0,3.18,YouGov
+president,NM,2012-09-08,53.0,42.0,2.99,Public Policy Polling
+president,NM,2012-09-11,51.0,43.0,5,YouGov
+president,NM,2012-09-19,52.0,43.0,1.79,Public Policy Polling
+president,NM,2012-09-27,51.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NM,2012-09-26,47.0,40.0,4.47,Public Opinion Strategies
+president,NM,2012-09-26,50.9,40.6,2.82,We Ask America
+president,NM,2012-10-08,54.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NM,2012-10-10,49.0,39.0,3.9,Research & Polling Inc.
+president,NM,2012-10-21,47.0,42.0,4.47,Public Opinion Strategies
+president,NM,2012-10-23,53.0,44.0,3.71,Public Policy Polling
+president,NM,2012-10-24,50.0,41.0,3.92,Research & Polling Inc.
+president,NM,2012-10-30,49.0,41.0,4.47,Public Opinion Strategies
+president,NM,2012-11-02,49.0,43.0,3.92,YouGov
+president,NV,2012-09-11,51.0,44.0,4.3,YouGov
+president,NV,2012-09-18,47.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NV,2012-09-16,47.0,44.0,3.67,Big Village
+president,NV,2012-09-19,46.0,46.0,4.47,Public Opinion Strategies
+president,NV,2012-09-19,52.0,43.0,4.47,Public Policy Polling
+president,NV,2012-09-22,51.0,44.0,4.08,American Research Group
+president,NV,2012-09-24,49.0,47.0,3.19,Marist College
+president,NV,2012-09-26,52.5,42.0,2.95,We Ask America
+president,NV,2012-10-03,48.9,47.8,3.15,Gravis Marketing
+president,NV,2012-10-08,47.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NV,2012-10-05,47.0,46.0,2.86,SurveyUSA
+president,NV,2012-10-08,46.0,49.0,3.33,Dane & Associates
+president,NV,2012-10-08,47.0,45.0,4.47,Suffolk University
+president,NV,2012-10-09,48.0,47.0,4.1,Public Policy Polling
+president,NV,2012-10-08,50.0,45.0,5,YouGov
+president,NV,2012-10-15,50.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NV,2012-10-13,48.0,45.0,3.52,SurveyUSA
+president,NV,2012-10-15,50.0,43.0,4.47,Grove Insight
+president,NV,2012-10-16,51.0,43.0,4.08,Mellman Group
+president,NV,2012-10-21,49.0,47.0,4.08,American Research Group
+president,NV,2012-10-23,50.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,NV,2012-10-24,50.0,49.0,3.24,Gravis Marketing
+president,NV,2012-10-23,50.0,47.0,3.1,Marist College
+president,NV,2012-10-23,49.0,47.0,3.97,Public Policy Polling
+president,NV,2012-10-24,50.0,46.0,3.32,CallFire
+president,NV,2012-10-27,49.0,43.0,4.47,Grove Insight
+president,NV,2012-10-26,50.0,46.0,2.87,SurveyUSA
+president,NV,2012-10-30,50.0,44.0,4.08,Mellman Group
+president,NV,2012-11-02,49.0,45.0,3.7,YouGov
+president,NV,2012-11-03,51.0,47.0,3.65,Public Policy Polling
+president,NY,2012-09-06,62.0,34.0,2.59,Quinnipiac University
+president,NY,2012-09-11,58.0,36.0,2.67,YouGov
+president,NY,2012-10-08,59.0,35.0,2.96,YouGov
+president,NY,2012-10-20,61.0,35.0,4.21,Marist College
+president,NY,2012-10-23,59.0,35.0,3.65,Siena College
+president,NY,2012-10-24,62.0,33.0,4.25,SurveyUSA
+president,NY,2012-11-02,59.0,36.0,2.64,YouGov
+president,OH,2012-09-07,47.27,43.19,2.54,Gravis Marketing
+president,OH,2012-09-08,50.0,45.0,3.05,Public Policy Polling
+president,OH,2012-09-10,50.0,43.0,3.2,Marist College
+president,OH,2012-09-12,47.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-09-11,48.0,47.0,4.08,American Research Group
+president,OH,2012-09-11,45.3,43.2,4.08,Zogby Analytics
+president,OH,2012-09-11,47.0,44.0,3.11,YouGov
+president,OH,2012-09-14,46.9,44.0,4.08,McLaughlin & Associates
+president,OH,2012-09-17,50.0,44.0,1.86,Public Policy Polling
+president,OH,2012-09-17,49.0,42.0,3.15,Beacon Research/Shaw & Co. Research
+president,OH,2012-09-15,51.0,46.0,3.41,University of Cincinnati (Ohio Poll)
+president,OH,2012-09-17,48.0,44.0,4.08,Purple Strategies
+president,OH,2012-09-21,45.2,44.3,4.1,Gravis Marketing
+president,OH,2012-09-21,52.0,44.0,3.63,ABC News/The Washington Post
+president,OH,2012-09-21,53.0,43.0,2.93,Quinnipiac University
+president,OH,2012-09-24,51.0,42.0,2.45,Columbus Dispatch
+president,OH,2012-09-29,49.0,45.0,3.34,Public Policy Polling
+president,OH,2012-10-01,50.0,43.0,3.16,Rasmussen Reports
+president,OH,2012-09-30,51.0,43.0,3.28,Marist College
+president,OH,2012-10-04,50.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-04,46.0,47.0,2.89,We Ask America
+president,OH,2012-10-04,47.3,48.0,3.05,Clout Research
+president,OH,2012-10-05,46.0,38.0,4.08,Mellman Group
+president,OH,2012-10-08,47.0,46.0,3.16,Rasmussen Reports
+president,OH,2012-10-07,47.0,48.0,4.08,American Research Group
+president,OH,2012-10-07,48.0,45.0,3.72,Big Village
+president,OH,2012-10-07,45.0,44.0,3.52,SurveyUSA
+president,OH,2012-10-08,51.0,45.0,3.17,Marist College
+president,OH,2012-10-10,48.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-09,50.0,46.0,3.84,CallFire
+president,OH,2012-10-08,45.1,45.9,2.76,Gravis Marketing
+president,OH,2012-10-10,45.0,44.0,3.46,Zogby Analytics
+president,OH,2012-10-08,50.0,46.0,3.43,YouGov
+president,OH,2012-10-12,51.0,46.0,3.37,Public Policy Polling
+president,OH,2012-10-15,46.0,47.0,3.16,Rasmussen Reports
+president,OH,2012-10-14,45.0,42.0,4.04,SurveyUSA
+president,OH,2012-10-17,49.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-17,46.0,43.0,2.97,Beacon Research/Shaw & Co. Research
+president,OH,2012-10-18,47.0,47.0,2.27,Gravis Marketing
+president,OH,2012-10-19,49.0,48.0,4.34,Public Policy Polling
+president,OH,2012-10-19,45.0,45.0,4.26,Angus Reid Global
+president,OH,2012-10-19,50.0,45.0,2.54,Quinnipiac University
+president,OH,2012-10-20,46.5,46.6,4.08,Suffolk University
+president,OH,2012-10-21,47.0,44.0,4.05,SurveyUSA
+president,OH,2012-10-23,48.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-23,47.0,47.0,3.16,Rasmussen Reports
+president,OH,2012-10-22,49.0,44.0,3.57,Abt Associates
+president,OH,2012-10-22,46.0,44.0,4.08,Lake Research Partners
+president,OH,2012-10-20,49.0,49.0,3.14,University of Cincinnati (Ohio Poll)
+president,OH,2012-10-24,49.0,47.0,4.08,American Research Group
+president,OH,2012-10-24,46.0,44.0,4.08,Purple Strategies
+president,OH,2012-10-24,48.0,44.0,3.67,Big Village
+president,OH,2012-10-24,49.0,44.0,4.08,Mellman Group
+president,OH,2012-10-27,50.0,49.0,3.7,Gravis Marketing
+president,OH,2012-10-28,48.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-27,51.0,47.0,3.73,Public Policy Polling
+president,OH,2012-10-25,50.0,45.0,3.0,Quinnipiac University
+president,OH,2012-10-25,50.0,45.0,3.76,Quinnipiac University
+president,OH,2012-10-29,48.0,46.0,3.16,Rasmussen Reports
+president,OH,2012-10-28,48.0,45.0,4.47,Grove Insight
+president,OH,2012-10-28,48.0,45.0,4.07,SurveyUSA
+president,OH,2012-10-29,48.3,42.8,3.48,Zogby Analytics
+president,OH,2012-10-29,50.0,45.0,4.08,Public Policy Polling
+president,OH,2012-10-27,48.0,46.0,2.91,University of Cincinnati (Ohio Poll)
+president,OH,2012-10-30,46.0,49.0,2.79,Clout Research
+president,OH,2012-11-01,49.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-10-31,51.0,45.0,3.21,Marist College
+president,OH,2012-10-31,50.2,45.8,2.46,We Ask America
+president,OH,2012-10-31,47.0,44.0,3.54,Big Village
+president,OH,2012-11-01,47.0,45.0,3.14,Ipsos
+president,OH,2012-11-01,48.0,40.0,2.76,Ipsos
+president,OH,2012-11-01,49.0,45.0,4.47,Grove Insight
+president,OH,2012-10-28,50.0,48.0,2.58,Columbus Dispatch
+president,OH,2012-11-02,49.0,46.0,2.48,YouGov
+president,OH,2012-11-04,49.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,OH,2012-11-03,52.0,47.0,3.16,Public Policy Polling
+president,OH,2012-11-03,51.0,48.0,4.3,Angus Reid Global
+president,OH,2012-11-03,49.0,44.0,3.53,SurveyUSA
+president,OH,2012-11-02,50.0,48.5,3.33,University of Cincinnati (Ohio Poll)
+president,OH,2012-11-04,50.0,46.0,3.83,Ipsos
+president,OH,2012-11-04,50.0,42.6,3.47,Zogby Analytics
+president,OH,2012-11-04,49.0,48.0,2.76,Gravis Marketing
+president,OK,2012-10-21,32.7,58.6,5,SoonerPoll.com
+president,OR,2012-09-12,50.0,41.0,4.26,SurveyUSA
+president,OR,2012-10-17,49.0,42.0,4.16,SurveyUSA
+president,OR,2012-10-24,47.0,42.0,4.03,Hoffman Research Group
+president,OR,2012-10-27,49.0,42.0,4.47,DHM Research
+president,OR,2012-10-27,47.0,41.0,4.97,Elway Research
+president,OR,2012-10-31,52.0,46.0,3.3,Public Policy Polling
+president,PA,2012-09-11,50.0,39.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,PA,2012-09-11,52.0,43.0,2.96,YouGov
+president,PA,2012-09-13,50.0,41.0,3.95,Muhlenberg College Institute of Public Opinion
+president,PA,2012-09-16,48.0,47.0,3.54,Susquehanna Polling & Research Inc.
+president,PA,2012-09-18,48.1,42.2,2.87,We Ask America
+president,PA,2012-09-17,52.0,40.0,2.21,Public Policy Polling
+president,PA,2012-09-19,51.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2012-09-19,47.0,45.0,3.54,Susquehanna Polling & Research Inc.
+president,PA,2012-09-16,48.0,40.0,4.38,Mercyhurst University Center for Applied Politics
+president,PA,2012-09-20,52.0,43.0,5,Franklin & Marshall College Center for Opinion Research
+president,PA,2012-09-21,54.0,42.0,2.91,Quinnipiac University
+president,PA,2012-09-24,49.0,42.0,4.84,Muhlenberg College Institute of Public Opinion
+president,PA,2012-10-01,50.0,43.0,3.16,Rasmussen Reports
+president,PA,2012-10-03,43.0,40.0,4.28,Siena College
+president,PA,2012-10-05,47.0,46.0,3.71,Susquehanna Polling & Research Inc.
+president,PA,2012-10-08,47.0,45.0,3.16,Rasmussen Reports
+president,PA,2012-10-06,50.0,42.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,PA,2012-10-09,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2012-10-08,51.0,44.0,3.22,YouGov
+president,PA,2012-10-12,45.0,49.0,2.7,Susquehanna Polling & Research Inc.
+president,PA,2012-10-13,51.0,44.0,4.47,Public Policy Polling
+president,PA,2012-10-13,50.0,46.0,2.57,Quinnipiac University
+president,PA,2012-10-12,49.0,45.0,4.78,Muhlenberg College Institute of Public Opinion
+president,PA,2012-10-15,48.0,44.0,3.16,Rasmussen Reports
+president,PA,2012-10-19,48.0,39.0,4.23,Angus Reid Global
+president,PA,2012-10-21,48.0,45.0,3.36,Gravis Marketing
+president,PA,2012-10-19,50.0,45.0,4.75,Muhlenberg College Institute of Public Opinion
+president,PA,2012-10-23,50.0,44.0,3.16,Rasmussen Reports
+president,PA,2012-10-24,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,PA,2012-10-24,49.0,43.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+president,PA,2012-10-25,49.0,45.0,4.28,Franklin & Marshall College Center for Opinion Research
+president,PA,2012-10-30,49.0,46.0,3.16,Rasmussen Reports
+president,PA,2012-10-30,47.0,47.0,3.54,Susquehanna Polling & Research Inc.
+president,PA,2012-11-02,52.0,46.0,3.56,Public Policy Polling
+president,PA,2012-11-02,49.0,46.0,4.82,Muhlenberg College Institute of Public Opinion
+president,PA,2012-11-02,52.0,44.0,2.8,YouGov
+president,PA,2012-11-04,49.0,46.0,3.07,Gravis Marketing
+president,PA,2012-11-03,51.0,47.0,4.44,Angus Reid Global
+president,RI,2012-09-28,57.0,33.0,4.47,Fleming & Associates
+president,RI,2012-09-30,58.0,32.0,4.61,Brown University A. Alfred Taubman Center for American Politics and Policy
+president,RI,2012-10-26,54.0,33.0,4.08,Fleming & Associates
+president,SD,2012-10-03,41.1,51.6,3.62,Nielson Brothers Polling
+president,SD,2012-10-30,42.0,50.0,3.86,Nielson Brothers Polling
+president,SD,2012-11-02,41.0,53.0,3.97,Nielson Brothers Polling
+president,TN,2012-09-11,42.0,50.0,3.8,YouGov
+president,TN,2012-10-08,43.0,52.0,4.55,YouGov
+president,TN,2012-10-18,34.0,59.0,4.05,Middle Tennessee State University
+president,TN,2012-11-02,42.0,53.0,3.79,YouGov
+president,TX,2012-09-10,40.0,55.0,3.16,WPA Intelligence
+president,TX,2012-09-11,41.0,53.0,2.93,YouGov
+president,TX,2012-09-18,39.0,58.0,2.92,Texas Lyceum
+president,TX,2012-10-08,41.0,55.0,3.23,YouGov
+president,TX,2012-10-18,39.0,55.0,4.3,YouGov
+president,TX,2012-11-02,38.0,57.0,2.53,YouGov
+president,UT,2012-10-29,26.0,69.0,3.39,Dan Jones & Associates
+president,VA,2012-09-08,43.05,48.31,2.11,Gravis Marketing
+president,VA,2012-09-10,49.0,44.0,3.17,Marist College
+president,VA,2012-09-13,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-09-11,48.0,44.0,3.09,YouGov
+president,VA,2012-09-15,49.0,45.0,3.13,Public Policy Polling
+president,VA,2012-09-14,49.0,41.0,3.44,ABC News/The Washington Post
+president,VA,2012-09-17,48.5,45.7,2.84,We Ask America
+president,VA,2012-09-14,50.0,46.0,2.6,Quinnipiac University
+president,VA,2012-09-17,49.0,42.0,3.15,Beacon Research/Shaw & Co. Research
+president,VA,2012-09-18,49.0,43.0,1.9,Public Policy Polling
+president,VA,2012-09-17,46.0,43.0,4.08,Purple Strategies
+president,VA,2012-09-25,46.0,44.0,4.08,Suffolk University
+president,VA,2012-09-26,49.0,47.0,4.08,American Research Group
+president,VA,2012-09-23,48.0,40.0,4.12,Roanoke College Institute for Policy and Opinion Research
+president,VA,2012-10-01,48.0,47.0,3.16,Rasmussen Reports
+president,VA,2012-09-30,48.0,46.0,3.21,Marist College
+president,VA,2012-10-04,48.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-10-04,45.0,48.0,2.89,We Ask America
+president,VA,2012-10-06,48.0,44.0,3.71,Public Policy Polling
+president,VA,2012-10-08,48.0,48.0,3.16,Rasmussen Reports
+president,VA,2012-10-08,44.0,51.0,4.08,McLaughlin & Associates
+president,VA,2012-10-08,47.0,48.0,3.19,Marist College
+president,VA,2012-10-06,51.0,46.0,2.79,Quinnipiac University
+president,VA,2012-10-11,47.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-10-08,46.0,45.0,3.67,YouGov
+president,VA,2012-10-13,47.0,48.0,4.08,American Research Group
+president,VA,2012-10-15,47.0,46.0,3.16,Rasmussen Reports
+president,VA,2012-10-15,49.0,48.0,3.69,Public Policy Polling
+president,VA,2012-10-03,50.0,43.0,4.64,Old Dominion University
+president,VA,2012-10-18,47.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-10-17,46.0,48.0,4.0,CallFire
+president,VA,2012-10-18,49.0,47.0,4.47,Public Policy Polling
+president,VA,2012-10-19,47.1,49.2,3.16,Clout Research
+president,VA,2012-10-20,46.0,45.0,3.54,Mellman Group
+president,VA,2012-10-23,48.0,48.0,3.16,Rasmussen Reports
+president,VA,2012-10-24,48.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-10-23,44.0,46.0,2.98,Beacon Research/Shaw & Co. Research
+president,VA,2012-10-23,51.0,46.0,3.72,Public Policy Polling
+president,VA,2012-10-24,48.0,48.0,3.46,Zogby Analytics
+president,VA,2012-10-24,47.0,47.0,4.08,Purple Strategies
+president,VA,2012-10-26,48.0,48.0,3.94,Gravis Marketing
+president,VA,2012-10-25,44.0,49.0,3.96,Roanoke College Institute for Policy and Opinion Research
+president,VA,2012-10-24,51.0,47.0,2.85,ABC News/The Washington Post
+president,VA,2012-10-26,49.0,46.0,3.52,Garin-Hart-Yang/Global Strategy Group
+president,VA,2012-10-27,48.1,46.0,3.48,Zogby Analytics
+president,VA,2012-10-25,49.0,47.0,3.05,Quinnipiac University
+president,VA,2012-10-29,46.3,47.1,3.54,Zogby Analytics
+president,VA,2012-10-30,49.0,48.0,3.16,Rasmussen Reports
+president,VA,2012-10-30,49.0,46.0,4.08,Public Policy Polling
+president,VA,2012-10-31,48.5,47.6,3.06,We Ask America
+president,VA,2012-11-01,48.0,45.0,3.06,Ipsos
+president,VA,2012-11-01,49.0,40.0,2.89,Ipsos
+president,VA,2012-11-01,48.0,47.0,2.93,Marist College
+president,VA,2012-11-01,48.0,45.0,3.54,Mellman Group
+president,VA,2012-11-02,48.0,46.0,2.58,YouGov
+president,VA,2012-11-04,48.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,VA,2012-11-03,51.0,47.0,3.2,Public Policy Polling
+president,VA,2012-11-04,48.0,46.0,3.48,Ipsos
+president,VA,2012-11-04,46.8,46.5,3.54,Zogby Analytics
+president,WA,2012-09-08,54.0,38.0,4.37,SurveyUSA
+president,WA,2012-09-08,53.0,42.0,4.21,Public Policy Polling
+president,WA,2012-09-11,53.0,36.0,4.97,Elway Research
+president,WA,2012-09-11,53.0,39.0,3.37,YouGov
+president,WA,2012-09-21,56.4,38.6,4.0,Gravis Marketing
+president,WA,2012-09-26,52.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WA,2012-09-29,56.0,36.0,4.3,SurveyUSA
+president,WA,2012-10-08,56.0,39.0,3.66,YouGov
+president,WA,2012-10-14,55.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WA,2012-10-13,54.0,40.0,4.29,SurveyUSA
+president,WA,2012-10-15,50.0,45.0,4.17,Public Policy Polling
+president,WA,2012-10-09,51.9,42.9,3.94,University of Washington Center for Survey Research
+president,WA,2012-10-19,52.0,39.0,4.47,Strategies 360
+president,WA,2012-10-30,54.0,40.0,4.24,SurveyUSA
+president,WA,2012-10-24,57.1,36.4,3.98,University of Washington Center for Survey Research
+president,WA,2012-11-02,53.0,46.0,3.28,Public Policy Polling
+president,WA,2012-11-02,54.0,40.0,3.46,YouGov
+president,WI,2012-09-12,49.0,48.0,3.23,Public Policy Polling
+president,WI,2012-09-11,48.0,47.0,3.64,YouGov
+president,WI,2012-09-15,54.0,40.0,4.08,Marquette University Law School
+president,WI,2012-09-17,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2012-09-14,51.0,45.0,2.59,Quinnipiac University
+president,WI,2012-09-17,50.0,45.0,3.21,Marist College
+president,WI,2012-09-18,52.0,45.0,3.45,Public Policy Polling
+president,WI,2012-09-22,52.5,41.0,2.84,We Ask America
+president,WI,2012-09-29,48.9,38.8,4.91,Zogby Analytics
+president,WI,2012-09-29,53.0,42.0,3.34,Marquette University Law School
+president,WI,2012-10-01,51.0,44.0,3.16,Rasmussen Reports
+president,WI,2012-10-05,49.0,47.0,3.2,Public Policy Polling
+president,WI,2012-10-08,50.0,46.0,3.16,Rasmussen Reports
+president,WI,2012-10-09,51.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2012-10-06,50.0,47.0,2.75,Quinnipiac University
+president,WI,2012-10-08,51.0,47.0,3.96,YouGov
+president,WI,2012-10-13,49.0,48.0,3.39,Marquette University Law School
+president,WI,2012-10-15,50.0,47.0,3.16,Rasmussen Reports
+president,WI,2012-10-16,51.0,45.0,3.14,Marist College
+president,WI,2012-10-16,48.0,46.0,4.0,Mason-Dixon Polling & Strategy
+president,WI,2012-10-18,50.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2012-10-17,47.0,44.0,4.47,Grove Insight
+president,WI,2012-10-19,48.0,43.0,4.46,Angus Reid Global
+president,WI,2012-10-23,48.0,47.0,3.16,Rasmussen Reports
+president,WI,2012-10-23,51.0,45.0,3.48,Public Policy Polling
+president,WI,2012-10-25,49.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
+president,WI,2012-10-24,48.0,43.0,4.47,Grove Insight
+president,WI,2012-10-27,51.0,43.0,2.84,Marquette University Law School
+president,WI,2012-10-29,49.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
+president,WI,2012-10-29,49.0,48.0,3.16,Rasmussen Reports
+president,WI,2012-10-28,49.0,46.0,3.06,Marist College
+president,WI,2012-10-27,51.0,42.0,4.99,St. Norbert College Strategic Research Institute
+president,WI,2012-10-29,51.0,46.0,3.48,Public Policy Polling
+president,WI,2012-10-30,49.0,47.0,3.05,Clout Research
+president,WI,2012-10-31,51.5,44.8,2.87,We Ask America
+president,WI,2012-11-01,48.0,42.0,4.47,Grove Insight
+president,WI,2012-11-02,51.0,48.0,2.82,Public Policy Polling
+president,WI,2012-11-02,53.0,46.0,4.69,Angus Reid Global
+president,WI,2012-11-02,50.0,46.0,2.86,YouGov
+governor,MT,2012-09-10,44.0,39.0,3.9,Public Policy Polling
+governor,MT,2012-09-18,44.0,43.0,4.0,Mason-Dixon Polling & Strategy
+governor,MT,2012-09-29,38.1,40.3,4.58,Montana State University Billings
+governor,MT,2012-10-09,42.0,43.0,3.68,Public Policy Polling
+governor,MT,2012-10-30,46.0,49.0,4.0,Mason-Dixon Polling & Strategy
+governor,MT,2012-10-30,47.0,40.0,3.54,Mellman Group
+governor,MT,2012-11-02,48.0,48.0,3.46,Public Policy Polling
+governor,IN,2012-09-11,34.0,49.0,3.96,YouGov
+governor,IN,2012-09-21,34.0,47.0,3.54,Howey Politics/DePauw University
+governor,IN,2012-10-03,39.0,53.0,4.08,McLaughlin & Associates
+governor,IN,2012-10-08,38.0,49.0,4.61,YouGov
+governor,IN,2012-10-20,38.0,44.0,3.78,Benenson Strategy Group
+governor,IN,2012-10-25,44.0,47.0,3.48,Clarity Campaign Labs
+governor,IN,2012-10-27,37.0,46.0,2.87,The Polling Company Inc.
+governor,IN,2012-10-29,40.0,47.0,3.54,Howey Politics/DePauw University
+governor,IN,2012-10-31,39.0,51.0,4.08,McLaughlin & Associates
+governor,MO,2012-09-11,51.0,33.0,3.52,YouGov
+governor,MO,2012-10-02,54.0,35.0,3.78,Public Policy Polling
+governor,MO,2012-10-08,54.0,36.0,4.33,YouGov
+governor,MO,2012-10-20,51.0,40.0,4.15,Public Policy Polling
+governor,MO,2012-10-24,55.0,33.0,4.08,Kiley & Company
+governor,MO,2012-10-24,48.0,42.0,4.0,Mason-Dixon Polling & Strategy
+governor,MO,2012-11-02,53.0,45.0,3.46,Public Policy Polling
+governor,MO,2012-10-31,48.0,39.0,4.12,SurveyUSA
+governor,NH,2012-09-16,45.0,47.0,4.65,American Research Group
+governor,NH,2012-09-18,44.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2012-09-17,48.0,46.0,4.08,GQR
+governor,NH,2012-09-24,51.0,44.0,3.41,Public Policy Polling
+governor,NH,2012-09-24,47.0,45.0,3.14,Marist College
+governor,NH,2012-09-29,42.0,40.0,4.08,University of New Hampshire Survey Center
+governor,NH,2012-10-03,35.0,39.0,4.89,University of New Hampshire Survey Center
+governor,NH,2012-10-09,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2012-10-09,44.0,39.0,4.47,Feldman Group
+governor,NH,2012-10-10,40.0,46.0,4.08,American Research Group
+governor,NH,2012-10-13,41.0,38.0,4.47,Suffolk University
+governor,NH,2012-10-15,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2012-10-18,45.0,43.0,3.11,Public Policy Polling
+governor,NH,2012-10-19,49.0,44.0,3.14,Marist College
+governor,NH,2012-10-19,43.0,35.0,3.6,University of New Hampshire Survey Center
+governor,NH,2012-10-23,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2012-10-24,45.0,45.0,4.18,New England College Polling Center
+governor,NH,2012-10-27,48.0,44.0,3.38,Public Policy Polling
+governor,NH,2012-10-28,49.0,44.0,3.14,Marist College
+governor,NH,2012-11-01,47.0,42.0,4.46,University of New Hampshire Survey Center
+governor,NH,2012-11-04,50.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
+governor,NH,2012-11-03,51.0,47.0,2.54,Public Policy Polling
+governor,NH,2012-11-03,47.0,45.0,3.87,New England College Polling Center
+governor,NH,2012-11-03,49.0,40.0,3.56,University of New Hampshire Survey Center
+governor,NC,2012-09-13,38.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2012-09-11,33.0,49.0,3.13,YouGov
+governor,NC,2012-09-18,38.0,49.0,4.08,National Research
+governor,NC,2012-09-24,39.0,52.0,3.11,Marist College
+governor,NC,2012-09-29,37.0,47.0,3.19,Public Policy Polling
+governor,NC,2012-09-30,39.0,51.0,4.18,SurveyUSA
+governor,NC,2012-10-02,38.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2012-10-07,33.3,49.6,2.75,Gravis Marketing
+governor,NC,2012-10-09,38.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2012-10-08,34.0,50.0,3.6,YouGov
+governor,NC,2012-10-12,37.0,51.0,4.08,The Tyson Group
+governor,NC,2012-10-13,37.0,47.0,3.04,Public Policy Polling
+governor,NC,2012-10-17,42.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2012-10-25,35.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,NC,2012-10-24,37.0,50.0,3.37,Public Policy Polling
+governor,NC,2012-10-23,38.0,52.0,2.84,Elon University
+governor,NC,2012-10-28,36.0,53.0,3.83,SurveyUSA
+governor,NC,2012-10-30,39.0,50.0,3.7,Public Policy Polling
+governor,NC,2012-11-03,43.0,50.0,3.29,Public Policy Polling
+governor,ND,2012-10-04,24.0,62.0,4.0,Mason-Dixon Polling & Strategy
+governor,ND,2012-10-17,39.0,53.0,4.08,Scott Rasmussen (Rasmussen Reports)
+governor,ND,2012-10-27,28.0,62.0,4.0,Mason-Dixon Polling & Strategy
+governor,UT,2012-10-29,24.0,69.0,3.39,Dan Jones & Associates
+governor,WA,2012-09-08,49.0,44.0,4.37,SurveyUSA
+governor,WA,2012-09-08,48.0,42.0,4.21,Public Policy Polling
+governor,WA,2012-09-11,44.0,41.0,4.97,Elway Research
+governor,WA,2012-09-11,47.0,43.0,3.59,YouGov
+governor,WA,2012-09-26,46.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2012-09-29,48.0,42.0,4.3,SurveyUSA
+governor,WA,2012-10-08,49.0,39.0,3.93,YouGov
+governor,WA,2012-10-14,47.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WA,2012-10-13,47.0,44.0,4.29,SurveyUSA
+governor,WA,2012-10-15,48.0,42.0,4.17,Public Policy Polling
+governor,WA,2012-10-09,47.1,46.3,3.94,University of Washington Center for Survey Research
+governor,WA,2012-10-19,46.0,46.0,4.47,Strategies 360
+governor,WA,2012-10-20,45.0,47.0,4.71,Elway Research
+governor,WA,2012-10-30,47.0,46.0,4.24,SurveyUSA
+governor,WA,2012-10-24,48.7,45.6,3.98,University of Washington Center for Survey Research
+governor,WA,2012-11-02,50.0,48.0,3.28,Public Policy Polling
+governor,WI,2012-04-14,45.0,50.0,3.51,Public Policy Polling
+governor,WI,2012-05-09,45.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+governor,WI,2012-05-11,44.0,50.0,4.08,Marquette University Law School
+governor,WI,2012-05-13,43.0,52.0,2.86,We Ask America
+governor,WI,2012-05-12,45.0,49.0,3.43,Public Policy Polling
+governor,WI,2012-05-16,42.0,50.0,4.05,Princeton Survey Research Associates International
+governor,WI,2012-05-20,47.0,50.0,4.6,GQR
+governor,WI,2012-05-19,45.0,50.0,4.96,St. Norbert College Strategic Research Institute
+governor,WI,2012-05-23,42.0,54.0,2.66,We Ask America
+governor,WI,2012-05-23,48.62,49.89,3.27,Garin-Hart-Yang Research Group
+governor,WI,2012-05-23,46.0,49.0,4.08,Mellman Group
+governor,WI,2012-05-25,45.0,52.0,4.08,Marquette University Law School
+governor,WI,2012-05-26,49.0,49.0,4.08,Lake Research Partners
+governor,WI,2012-05-29,48.0,50.0,3.27,Garin-Hart-Yang Research Group
+governor,WI,2012-06-01,46.0,51.0,4.37,Angus Reid Global
+governor,WI,2012-06-03,42.0,54.0,2.52,We Ask America
+governor,WI,2012-06-02,47.0,50.0,2.86,Public Policy Polling
+senate,AZ,2012-09-08,43.0,44.0,3.17,Public Policy Polling
+senate,AZ,2012-09-11,37.0,44.0,3.99,YouGov
+senate,AZ,2012-09-20,43.0,44.0,4.08,Impact Research
+senate,AZ,2012-09-25,41.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AZ,2012-09-25,40.0,43.0,4.47,Moore Information Group
+senate,AZ,2012-10-02,45.0,43.0,4.1,Public Policy Polling
+senate,AZ,2012-10-08,41.0,47.0,4.47,GS Strategy Group
+senate,AZ,2012-10-08,43.0,49.0,4.7,Tarrance Group
+senate,AZ,2012-10-08,47.0,43.0,4.08,Harstad Strategic Research
+senate,AZ,2012-10-07,44.0,40.0,4.71,Behavior Research Center (Rocky Mountain Poll)
+senate,AZ,2012-10-08,38.0,44.0,4.62,YouGov
+senate,AZ,2012-10-21,44.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,AZ,2012-10-19,45.0,41.0,3.54,Impact Research
+senate,AZ,2012-11-02,46.0,51.0,3.04,Public Policy Polling
+senate,AZ,2012-11-02,42.0,49.0,3.77,YouGov
+senate,CA,2012-09-10,55.0,37.0,4.37,SurveyUSA
+senate,CA,2012-09-11,52.4,30.4,3.53,MFour Mobile Research
+senate,CA,2012-09-11,53.0,35.0,2.71,YouGov
+senate,CA,2012-09-12,57.0,31.0,3.35,Field Research Corp. (Field Poll)
+senate,CA,2012-09-25,51.1,28.6,3.48,MFour Mobile Research
+senate,CA,2012-10-08,54.0,35.0,4.31,SurveyUSA
+senate,CA,2012-10-09,48.2,31.1,3.47,MFour Mobile Research
+senate,CA,2012-10-08,55.0,35.0,2.92,YouGov
+senate,CA,2012-10-13,60.0,34.0,4.44,Princeton Survey Research Associates International
+senate,CA,2012-10-18,55.0,38.0,2.64,Greenberg Quinlan Rosner/American Viewpoint
+senate,CA,2012-10-25,51.3,31.7,2.17,MFour Mobile Research
+senate,CA,2012-10-23,54.0,33.0,2.53,Field Research Corp. (Field Poll)
+senate,CA,2012-11-02,56.0,39.0,2.52,YouGov
+senate,CT,2012-09-11,41.0,45.0,3.97,YouGov
+senate,CT,2012-09-13,37.0,33.0,4.4,University of Connecticut
+senate,CT,2012-09-25,48.0,42.0,3.53,Public Policy Polling
+senate,CT,2012-10-01,39.0,42.0,4.08,National Research
+senate,CT,2012-09-30,47.0,48.0,2.43,Quinnipiac University
+senate,CT,2012-10-07,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,CT,2012-10-08,42.0,40.0,4.8,YouGov
+senate,CT,2012-10-09,46.0,44.0,4.26,Siena College
+senate,CT,2012-10-15,48.0,44.0,3.14,Public Policy Polling
+senate,CT,2012-10-13,44.0,38.0,4.17,University of Connecticut
+senate,CT,2012-10-16,44.0,44.0,4.0,Mason-Dixon Polling & Strategy
+senate,CT,2012-10-21,48.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,CT,2012-10-20,47.0,43.0,4.17,SurveyUSA
+senate,CT,2012-10-21,49.0,43.0,2.66,Quinnipiac University
+senate,CT,2012-10-21,46.0,40.0,3.54,EMC Research
+senate,CT,2012-10-23,47.0,41.0,5,Penta
+senate,CT,2012-10-28,51.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,CT,2012-11-01,52.0,43.0,2.86,Public Policy Polling
+senate,CT,2012-11-02,46.0,44.0,3.34,YouGov
+senate,FL,2012-09-08,47.0,36.0,4.1,SurveyUSA
+senate,FL,2012-09-10,51.0,37.0,3.19,Marist College
+senate,FL,2012-09-12,47.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2012-09-11,45.0,40.0,2.66,YouGov
+senate,FL,2012-09-15,41.5,42.7,2.41,Gravis Marketing
+senate,FL,2012-09-18,46.7,41.5,2.85,We Ask America
+senate,FL,2012-09-17,49.0,35.0,3.47,Beacon Research/Shaw & Co. Research
+senate,FL,2012-09-18,48.0,40.0,3.54,Mason-Dixon Polling & Strategy
+senate,FL,2012-09-22,46.0,37.0,3.41,Public Policy Polling
+senate,FL,2012-09-21,54.0,40.0,3.61,ABC News/The Washington Post
+senate,FL,2012-09-21,53.0,39.0,2.89,Quinnipiac University
+senate,FL,2012-09-29,43.1,43.0,3.31,Gravis Marketing
+senate,FL,2012-09-29,40.0,34.0,4.08,Suffolk University
+senate,FL,2012-09-30,52.0,41.0,3.35,Marist College
+senate,FL,2012-10-04,52.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2012-10-04,44.0,44.0,2.89,We Ask America
+senate,FL,2012-10-08,52.0,39.0,3.18,Marist College
+senate,FL,2012-10-05,50.0,40.0,3.91,University of North Florida Public Opinion Research Lab
+senate,FL,2012-10-09,47.0,42.0,3.54,Mason-Dixon Polling & Strategy
+senate,FL,2012-10-11,46.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2012-10-08,47.0,42.0,2.84,YouGov
+senate,FL,2012-10-13,45.0,37.0,3.56,Public Policy Polling
+senate,FL,2012-10-18,48.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2012-10-17,48.0,40.0,4.08,SurveyUSA
+senate,FL,2012-10-17,45.0,41.0,3.54,Public Policy Polling
+senate,FL,2012-10-19,48.0,33.0,4.46,Angus Reid Global
+senate,FL,2012-10-23,49.0,44.0,3.16,Susquehanna Polling & Research Inc.
+senate,FL,2012-10-23,47.0,44.0,4.0,Mason-Dixon Polling & Strategy
+senate,FL,2012-10-25,49.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,FL,2012-10-26,49.0,41.0,4.1,SurveyUSA
+senate,FL,2012-10-27,50.0,42.0,3.82,Public Policy Polling
+senate,FL,2012-10-27,50.0,41.0,3.48,Zogby Analytics
+senate,FL,2012-10-25,52.0,39.0,3.05,Quinnipiac University
+senate,FL,2012-10-29,50.0,46.0,3.16,Rasmussen Reports
+senate,FL,2012-10-29,48.7,42.1,3.48,Zogby Analytics
+senate,FL,2012-10-30,49.0,46.0,4.27,Gravis Marketing
+senate,FL,2012-10-31,52.0,43.0,2.54,Marist College
+senate,FL,2012-10-31,49.0,43.0,3.54,Mason-Dixon Polling & Strategy
+senate,FL,2012-11-01,53.0,41.0,3.19,Ipsos
+senate,FL,2012-11-01,49.0,35.0,2.75,Ipsos
+senate,FL,2012-11-02,53.0,45.0,4.36,Angus Reid Global
+senate,FL,2012-11-02,50.0,44.0,2.48,YouGov
+senate,FL,2012-11-03,51.0,46.0,3.24,Public Policy Polling
+senate,FL,2012-11-04,55.0,40.0,3.61,Ipsos
+senate,FL,2012-11-04,54.4,36.4,3.38,Zogby Analytics
+senate,HI,2012-09-19,54.0,37.0,3.84,Benenson Strategy Group
+senate,HI,2012-10-10,56.0,38.0,4.47,Benenson Strategy Group
+senate,HI,2012-10-13,47.0,43.0,2.89,Voter/Consumer Research
+senate,HI,2012-10-19,57.0,35.0,3.57,Ward Research
+senate,HI,2012-10-26,55.0,40.0,2.87,MRG Research
+senate,IN,2012-09-11,45.0,42.0,3.54,Global Strategy Group
+senate,IN,2012-09-11,39.0,42.0,4.02,YouGov
+senate,IN,2012-09-21,40.0,38.0,3.54,Howey Politics/DePauw University
+senate,IN,2012-10-03,42.0,45.0,4.08,McLaughlin & Associates
+senate,IN,2012-10-10,42.0,47.0,4.08,Scott Rasmussen (Rasmussen Reports)
+senate,IN,2012-10-08,41.0,45.0,4.49,YouGov
+senate,IN,2012-10-19,40.0,38.0,4.07,Global Strategy Group
+senate,IN,2012-10-24,44.0,44.0,4.08,McLaughlin & Associates
+senate,IN,2012-10-24,47.0,40.0,4.74,Impact Research
+senate,IN,2012-10-25,49.0,42.0,3.48,Clarity Campaign Labs
+senate,IN,2012-10-29,44.0,45.0,4.08,McLaughlin & Associates
+senate,IN,2012-10-29,47.0,36.0,3.54,Howey Politics/DePauw University
+senate,IN,2012-10-29,47.0,38.0,4.08,Global Strategy Group
+senate,IN,2012-11-01,45.0,42.0,4.08,Scott Rasmussen (Rasmussen Reports)
+senate,IN,2012-10-31,44.0,46.0,4.08,McLaughlin & Associates
+senate,IN,2012-11-02,47.0,45.0,3.84,YouGov
+senate,ME,2012-09-14,12.0,28.0,4.02,Digital Research
+senate,ME,2012-09-16,14.9,28.2,3.42,Maine People's Resource Center
+senate,ME,2012-09-17,14.0,35.0,3.53,Public Policy Polling
+senate,ME,2012-09-25,14.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,ME,2012-09-24,17.0,33.5,5,GS Strategy Group
+senate,ME,2012-09-26,12.1,23.8,5,Pan Atlantic Research
+senate,ME,2012-10-30,11.0,33.0,4.04,Digital Research
+senate,ME,2012-11-01,12.0,36.0,2.47,Public Policy Polling
+senate,ME,2012-11-02,10.7,34.0,3.32,Maine People's Resource Center
+senate,MD,2012-09-11,50.0,32.0,3.82,YouGov
+senate,MD,2012-09-20,50.0,22.0,3.51,Gonzales Research & Marketing Strategies Inc.
+senate,MD,2012-10-08,54.0,30.0,4.48,YouGov
+senate,MD,2012-10-13,53.0,22.0,3.84,ABC News/The Washington Post
+senate,MD,2012-10-22,50.0,24.0,3.53,OpinionWorks
+senate,MD,2012-11-02,57.0,34.0,3.77,YouGov
+senate,MA,2012-09-08,45.0,46.0,3.64,Kimball Political Consulting
+senate,MA,2012-09-10,50.0,44.0,4.75,Western New England University Polling Institute
+senate,MA,2012-09-11,44.0,44.0,3.5,YouGov
+senate,MA,2012-09-15,48.0,46.0,3.38,Public Policy Polling
+senate,MA,2012-09-15,48.0,44.0,4.08,Suffolk University
+senate,MA,2012-09-16,47.0,42.0,4.44,MassINC Polling Group
+senate,MA,2012-09-15,45.0,49.0,4.49,University of Massachusetts Lowell Center for Public Opinion
+senate,MA,2012-09-20,47.0,48.0,3.39,Kimball Political Consulting
+senate,MA,2012-09-24,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MA,2012-09-24,43.0,38.0,4.46,University of New Hampshire Survey Center
+senate,MA,2012-09-27,49.0,45.0,4.45,MassINC Polling Group
+senate,MA,2012-09-27,48.0,44.0,4.97,Opinion Dynamics
+senate,MA,2012-10-03,50.0,44.0,4.08,Harstad Strategic Research
+senate,MA,2012-10-01,50.0,45.0,4.77,Western New England University Polling Institute
+senate,MA,2012-10-06,45.0,48.0,4.47,MassINC Polling Group
+senate,MA,2012-10-05,48.0,45.0,4.79,YouGov
+senate,MA,2012-10-10,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MA,2012-10-10,50.0,44.0,3.08,Public Policy Polling
+senate,MA,2012-10-08,46.0,39.0,3.87,YouGov
+senate,MA,2012-10-15,53.0,44.0,3.76,Public Policy Polling
+senate,MA,2012-10-20,48.0,45.5,3.62,Kimball Political Consulting
+senate,MA,2012-10-21,50.0,44.0,4.4,MassINC Polling Group
+senate,MA,2012-10-25,52.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MA,2012-10-27,53.0,46.0,4.08,Suffolk University
+senate,MA,2012-10-26,47.0,47.0,4.14,University of New Hampshire Survey Center
+senate,MA,2012-10-31,47.0,49.0,3.62,Kimball Political Consulting
+senate,MA,2012-10-29,50.0,46.0,4.32,Western New England University Polling Institute
+senate,MA,2012-11-01,52.0,46.0,3.03,Public Policy Polling
+senate,MA,2012-11-02,50.0,43.0,3.51,YouGov
+senate,MA,2012-11-02,48.0,49.0,3.54,University of Massachusetts Lowell Center for Public Opinion
+senate,MI,2012-09-10,49.0,38.0,4.08,EPIC-MRA
+senate,MI,2012-09-12,46.7,41.9,2.94,Baydoun Consulting
+senate,MI,2012-09-12,46.2,40.2,4.08,Marketing Resource Group (MRG)
+senate,MI,2012-09-11,46.0,40.0,3.0,YouGov
+senate,MI,2012-09-16,49.7,33.8,4.08,Glengariff Group
+senate,MI,2012-09-20,53.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2012-09-21,53.5,39.6,3.53,Gravis Marketing
+senate,MI,2012-10-05,50.64,42.51,2.99,Baydoun Consulting
+senate,MI,2012-10-05,55.0,35.0,4.08,EPIC-MRA
+senate,MI,2012-10-07,50.1,37.5,4.08,Glengariff Group
+senate,MI,2012-10-07,48.0,39.3,2.99,Gravis Marketing
+senate,MI,2012-10-11,51.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MI,2012-10-08,49.0,39.0,3.34,YouGov
+senate,MI,2012-10-19,59.0,39.0,3.84,Angus Reid Global
+senate,MI,2012-10-28,52.4,37.5,4.08,Glengariff Group
+senate,MI,2012-10-28,54.0,33.0,4.08,EPIC-MRA
+senate,MI,2012-11-02,50.06,43.45,2.29,Baydoun Consulting
+senate,MI,2012-11-02,55.0,42.0,3.78,Public Policy Polling
+senate,MI,2012-11-02,56.0,43.0,4.46,Angus Reid Global
+senate,MI,2012-11-02,53.0,41.0,3.03,YouGov
+senate,MI,2012-11-04,55.0,41.0,2.77,Mitchell Research & Communications
+senate,MN,2012-09-08,55.0,34.0,4.26,SurveyUSA
+senate,MN,2012-09-10,55.0,36.0,3.48,Public Policy Polling
+senate,MN,2012-09-11,50.0,35.0,3.5,YouGov
+senate,MN,2012-09-18,57.0,28.0,3.54,Mason-Dixon Polling & Strategy
+senate,MN,2012-10-07,57.0,31.0,3.27,Public Policy Polling
+senate,MN,2012-10-08,55.0,32.0,3.83,YouGov
+senate,MN,2012-10-13,58.0,30.0,4.26,SurveyUSA
+senate,MN,2012-10-21,56.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MN,2012-10-24,65.0,22.0,3.54,Mason-Dixon Polling & Strategy
+senate,MN,2012-10-27,60.0,29.0,4.17,SurveyUSA
+senate,MN,2012-11-02,62.0,32.0,2.93,Public Policy Polling
+senate,MN,2012-11-02,60.0,30.0,4.24,SurveyUSA
+senate,MN,2012-11-02,60.0,32.0,3.56,YouGov
+senate,MO,2012-09-10,48.0,42.0,4.08,Kiley & Company
+senate,MO,2012-09-11,49.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MO,2012-09-10,42.6,47.5,3.43,Clout Research
+senate,MO,2012-09-11,47.0,40.0,3.69,YouGov
+senate,MO,2012-09-16,40.0,43.6,2.26,Gravis Marketing
+senate,MO,2012-09-26,46.0,45.2,2.96,We Ask America
+senate,MO,2012-09-30,50.0,41.0,4.08,Kiley & Company
+senate,MO,2012-09-30,46.8,48.7,3.85,Clout Research
+senate,MO,2012-10-02,51.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MO,2012-10-02,46.0,40.0,3.78,Public Policy Polling
+senate,MO,2012-10-08,47.0,42.0,4.28,YouGov
+senate,MO,2012-10-12,44.7,48.9,3.16,Clout Research
+senate,MO,2012-10-17,51.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MO,2012-10-16,47.0,35.0,4.07,Harstad Strategic Research
+senate,MO,2012-10-18,52.0,38.0,3.84,Kiley & Company
+senate,MO,2012-10-20,46.0,40.0,4.15,Public Policy Polling
+senate,MO,2012-10-24,53.0,39.0,4.08,Kiley & Company
+senate,MO,2012-10-24,45.0,43.0,4.0,Mason-Dixon Polling & Strategy
+senate,MO,2012-10-30,48.6,45.2,2.87,We Ask America
+senate,MO,2012-11-02,48.0,44.0,3.46,Public Policy Polling
+senate,MO,2012-11-02,52.0,42.0,3.58,YouGov
+senate,MO,2012-10-31,51.0,36.0,4.12,SurveyUSA
+senate,MT,2012-09-10,45.0,43.0,3.9,Public Policy Polling
+senate,MT,2012-09-18,45.0,48.0,4.0,Mason-Dixon Polling & Strategy
+senate,MT,2012-09-24,44.0,42.0,4.06,Global Strategy Group
+senate,MT,2012-09-29,39.7,42.6,4.58,Montana State University Billings
+senate,MT,2012-10-09,45.0,43.0,3.68,Public Policy Polling
+senate,MT,2012-10-14,48.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MT,2012-10-15,46.0,44.0,3.52,Public Policy Polling
+senate,MT,2012-10-29,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,MT,2012-10-28,44.0,43.0,3.52,Garin-Hart-Yang Research Group
+senate,MT,2012-10-30,45.0,49.0,3.84,Mason-Dixon Polling & Strategy
+senate,MT,2012-11-02,48.0,46.0,3.46,Public Policy Polling
+senate,NE,2012-09-19,40.0,56.0,3.9,Wiese Research Associates
+senate,NE,2012-10-15,45.0,50.0,4.08,Hickman Analytics
+senate,NE,2012-10-24,46.0,49.0,3.92,Wiese Research Associates
+senate,NE,2012-10-24,39.0,55.0,4.08,Public Opinion Strategies
+senate,NE,2012-10-28,44.0,56.0,2.93,Gravis Marketing
+senate,NE,2012-11-01,41.2,53.6,2.91,We Ask America
+senate,NV,2012-09-11,37.0,43.0,4.3,YouGov
+senate,NV,2012-09-18,41.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NV,2012-09-19,39.0,44.0,4.47,Public Opinion Strategies
+senate,NV,2012-09-19,48.0,44.0,4.47,Public Policy Polling
+senate,NV,2012-09-24,43.0,49.0,3.19,Marist College
+senate,NV,2012-09-26,44.9,45.2,2.95,We Ask America
+senate,NV,2012-10-03,35.8,52.5,3.15,Gravis Marketing
+senate,NV,2012-10-08,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NV,2012-10-08,41.0,47.0,3.33,Dane & Associates
+senate,NV,2012-10-08,37.0,40.0,4.47,Suffolk University
+senate,NV,2012-10-09,44.0,47.0,4.1,Public Policy Polling
+senate,NV,2012-10-09,42.0,39.0,4.08,Mellman Group
+senate,NV,2012-10-08,36.0,42.0,5,YouGov
+senate,NV,2012-10-15,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NV,2012-10-13,40.0,46.0,3.52,SurveyUSA
+senate,NV,2012-10-16,41.0,38.0,4.08,Mellman Group
+senate,NV,2012-10-23,45.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NV,2012-10-23,45.0,48.0,3.1,Marist College
+senate,NV,2012-10-23,44.0,44.0,3.97,Public Policy Polling
+senate,NV,2012-10-27,43.0,44.0,4.47,Grove Insight
+senate,NV,2012-10-26,40.0,46.0,2.87,SurveyUSA
+senate,NV,2012-11-02,40.0,49.0,3.7,YouGov
+senate,NV,2012-11-03,46.0,48.0,3.65,Public Policy Polling
+senate,NJ,2012-09-11,43.0,32.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+senate,NJ,2012-09-09,50.0,36.0,3.76,Fairleigh Dickinson University
+senate,NJ,2012-09-11,43.0,29.0,2.99,YouGov
+senate,NJ,2012-09-21,49.0,34.0,4.04,Monmouth University Polling Institute
+senate,NJ,2012-10-06,49.0,35.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+senate,NJ,2012-10-08,49.0,32.0,3.6,YouGov
+senate,NJ,2012-10-12,55.0,37.0,2.75,Quinnipiac University
+senate,NJ,2012-10-17,53.0,33.0,4.16,SurveyUSA
+senate,NJ,2012-10-15,52.0,30.0,3.51,Stockton University William J. Hughes Center for Public Policy
+senate,NJ,2012-10-24,50.0,32.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+senate,NJ,2012-11-02,51.0,36.0,3.18,YouGov
+senate,NM,2012-09-08,50.0,41.0,2.99,Public Policy Polling
+senate,NM,2012-09-12,46.0,41.0,4.47,Public Opinion Strategies
+senate,NM,2012-09-11,50.0,36.0,5,YouGov
+senate,NM,2012-09-25,48.0,40.0,4.08,GBAO
+senate,NM,2012-09-27,52.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2012-09-26,43.0,42.0,4.47,Public Opinion Strategies
+senate,NM,2012-09-26,52.3,40.8,2.82,We Ask America
+senate,NM,2012-10-06,51.0,39.0,4.08,GBAO
+senate,NM,2012-10-08,52.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,NM,2012-10-10,48.0,39.0,3.9,Research & Polling Inc.
+senate,NM,2012-10-21,43.0,44.0,4.47,Public Opinion Strategies
+senate,NM,2012-10-23,52.0,44.0,3.71,Public Policy Polling
+senate,NM,2012-10-24,50.0,42.0,3.92,Research & Polling Inc.
+senate,NM,2012-10-28,51.0,41.0,3.84,GBAO
+senate,NM,2012-10-30,46.0,46.0,4.47,Public Opinion Strategies
+senate,NM,2012-11-02,50.0,43.0,3.92,YouGov
+senate,NY,2012-09-06,64.0,27.0,2.59,Quinnipiac University
+senate,NY,2012-09-11,53.0,26.0,2.67,YouGov
+senate,NY,2012-10-08,55.0,25.0,2.96,YouGov
+senate,NY,2012-10-20,68.0,24.0,4.21,Marist College
+senate,NY,2012-10-23,67.0,24.0,3.65,Siena College
+senate,NY,2012-10-24,64.0,22.0,4.25,SurveyUSA
+senate,NY,2012-11-02,61.0,29.0,2.64,YouGov
+senate,ND,2012-09-26,48.0,44.0,4.08,DFM Research
+senate,ND,2012-10-04,47.0,47.0,4.0,Mason-Dixon Polling & Strategy
+senate,ND,2012-10-17,45.0,50.0,4.08,Scott Rasmussen (Rasmussen Reports)
+senate,ND,2012-10-18,45.0,42.0,4.08,Mellman Group
+senate,ND,2012-10-23,48.0,44.0,4.08,Mellman Group
+senate,ND,2012-10-27,45.0,47.0,4.0,Mason-Dixon Polling & Strategy
+senate,OH,2012-09-07,47.46,41.82,2.54,Gravis Marketing
+senate,OH,2012-09-08,48.0,40.0,3.05,Public Policy Polling
+senate,OH,2012-09-10,49.0,42.0,3.2,Marist College
+senate,OH,2012-09-12,49.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-09-11,46.0,42.0,3.11,YouGov
+senate,OH,2012-09-17,47.0,40.0,3.15,Beacon Research/Shaw & Co. Research
+senate,OH,2012-09-15,52.0,45.0,3.41,University of Cincinnati (Ohio Poll)
+senate,OH,2012-09-21,43.9,43.0,4.1,Gravis Marketing
+senate,OH,2012-09-21,53.0,41.0,3.63,ABC News/The Washington Post
+senate,OH,2012-09-23,47.0,44.0,4.08,Public Opinion Strategies
+senate,OH,2012-09-21,50.0,40.0,2.93,Quinnipiac University
+senate,OH,2012-09-24,49.0,39.0,2.45,Columbus Dispatch
+senate,OH,2012-09-29,49.0,41.0,3.34,Public Policy Polling
+senate,OH,2012-09-30,50.0,41.0,3.28,Marist College
+senate,OH,2012-10-04,46.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-04,46.0,44.0,2.89,We Ask America
+senate,OH,2012-10-04,41.6,45.7,3.05,Clout Research
+senate,OH,2012-10-08,48.0,43.0,3.16,Rasmussen Reports
+senate,OH,2012-10-07,42.0,38.0,3.52,SurveyUSA
+senate,OH,2012-10-08,38.0,37.0,3.45,Zogby Analytics
+senate,OH,2012-10-08,52.0,41.0,3.17,Marist College
+senate,OH,2012-10-10,47.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-08,48.0,43.0,3.43,YouGov
+senate,OH,2012-10-12,49.0,42.0,3.37,Public Policy Polling
+senate,OH,2012-10-15,47.0,41.0,3.16,Rasmussen Reports
+senate,OH,2012-10-14,43.0,38.0,4.04,SurveyUSA
+senate,OH,2012-10-17,49.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-16,43.0,44.0,4.08,Public Opinion Strategies
+senate,OH,2012-10-19,49.0,44.0,4.34,Public Policy Polling
+senate,OH,2012-10-19,45.0,39.0,4.26,Angus Reid Global
+senate,OH,2012-10-19,51.0,42.0,2.54,Quinnipiac University
+senate,OH,2012-10-20,46.0,39.0,4.08,Suffolk University
+senate,OH,2012-10-21,43.0,42.0,4.05,SurveyUSA
+senate,OH,2012-10-23,48.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-20,51.0,47.0,3.14,University of Cincinnati (Ohio Poll)
+senate,OH,2012-10-27,48.0,47.0,3.7,Gravis Marketing
+senate,OH,2012-10-28,50.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-27,53.0,42.0,3.73,Public Policy Polling
+senate,OH,2012-10-25,51.0,42.0,3.0,Quinnipiac University
+senate,OH,2012-10-29,50.0,43.0,3.16,Rasmussen Reports
+senate,OH,2012-10-28,46.0,41.0,4.07,SurveyUSA
+senate,OH,2012-10-29,46.2,39.9,3.48,Zogby Analytics
+senate,OH,2012-10-27,49.0,44.0,2.91,University of Cincinnati (Ohio Poll)
+senate,OH,2012-10-30,45.0,50.0,2.79,Clout Research
+senate,OH,2012-11-01,48.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,OH,2012-10-31,50.0,45.0,3.21,Marist College
+senate,OH,2012-11-01,50.0,42.0,3.14,Ipsos
+senate,OH,2012-11-01,48.0,39.0,2.76,Ipsos
+senate,OH,2012-10-28,51.0,45.0,2.58,Columbus Dispatch
+senate,OH,2012-11-02,48.0,46.0,2.48,YouGov
+senate,OH,2012-11-03,54.0,44.0,3.16,Public Policy Polling
+senate,OH,2012-11-03,52.0,46.0,4.3,Angus Reid Global
+senate,OH,2012-11-03,44.0,41.0,3.53,SurveyUSA
+senate,OH,2012-11-02,50.6,46.8,3.33,University of Cincinnati (Ohio Poll)
+senate,OH,2012-11-04,52.0,43.0,3.83,Ipsos
+senate,OH,2012-11-04,45.0,38.1,3.47,Zogby Analytics
+senate,PA,2012-09-11,46.0,38.0,2.96,YouGov
+senate,PA,2012-09-13,45.0,33.0,3.95,Muhlenberg College Institute of Public Opinion
+senate,PA,2012-09-16,45.0,42.0,3.54,Susquehanna Polling & Research Inc.
+senate,PA,2012-09-19,49.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2012-09-19,46.0,41.0,3.54,Susquehanna Polling & Research Inc.
+senate,PA,2012-09-16,31.0,21.0,4.38,Mercyhurst University Center for Applied Politics
+senate,PA,2012-09-20,48.0,38.0,5,Franklin & Marshall College Center for Opinion Research
+senate,PA,2012-09-21,49.0,43.0,2.91,Quinnipiac University
+senate,PA,2012-09-24,44.0,36.0,4.84,Muhlenberg College Institute of Public Opinion
+senate,PA,2012-10-03,44.0,35.0,4.28,Siena College
+senate,PA,2012-10-05,46.0,44.0,3.71,Susquehanna Polling & Research Inc.
+senate,PA,2012-10-08,44.0,41.0,3.16,Rasmussen Reports
+senate,PA,2012-10-07,46.0,44.0,4.08,McLaughlin & Associates
+senate,PA,2012-10-06,48.0,38.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+senate,PA,2012-10-09,49.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2012-10-08,48.0,41.0,3.22,YouGov
+senate,PA,2012-10-12,46.0,48.0,2.7,Susquehanna Polling & Research Inc.
+senate,PA,2012-10-13,50.0,39.0,4.47,Public Policy Polling
+senate,PA,2012-10-13,48.0,45.0,2.57,Quinnipiac University
+senate,PA,2012-10-12,41.0,39.0,4.78,Muhlenberg College Institute of Public Opinion
+senate,PA,2012-10-15,47.0,46.0,3.16,Rasmussen Reports
+senate,PA,2012-10-16,52.0,39.0,4.07,Garin-Hart-Yang Research Group
+senate,PA,2012-10-17,43.6,43.4,3.84,GS Strategy Group
+senate,PA,2012-10-19,44.0,39.0,4.23,Angus Reid Global
+senate,PA,2012-10-19,45.0,37.0,4.75,Muhlenberg College Institute of Public Opinion
+senate,PA,2012-10-22,45.2,44.0,3.16,Clout Research
+senate,PA,2012-10-24,46.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,PA,2012-10-23,52.0,40.0,3.84,Harstad Strategic Research
+senate,PA,2012-10-24,49.0,42.0,4.08,Global Strategy Group/National Research (Philadelphia Inquirer)
+senate,PA,2012-10-25,48.0,39.0,4.28,Franklin & Marshall College Center for Opinion Research
+senate,PA,2012-10-30,46.0,45.0,3.16,Rasmussen Reports
+senate,PA,2012-10-30,46.0,45.0,3.54,Susquehanna Polling & Research Inc.
+senate,PA,2012-11-02,52.0,44.0,3.56,Public Policy Polling
+senate,PA,2012-11-02,48.0,42.0,4.82,Muhlenberg College Institute of Public Opinion
+senate,PA,2012-11-02,50.0,42.0,2.8,YouGov
+senate,PA,2012-11-03,53.0,46.0,4.44,Angus Reid Global
+senate,RI,2012-09-28,56.0,30.0,4.47,Fleming & Associates
+senate,RI,2012-09-30,58.6,29.7,4.61,Brown University A. Alfred Taubman Center for American Politics and Policy
+senate,RI,2012-10-11,49.0,41.0,5,McLaughlin & Associates
+senate,RI,2012-10-26,54.6,33.3,4.08,Fleming & Associates
+senate,TN,2012-09-11,27.0,51.0,3.8,YouGov
+senate,TN,2012-10-08,27.0,48.0,4.55,YouGov
+senate,TN,2012-10-18,21.0,59.0,4.05,Middle Tennessee State University
+senate,TN,2012-11-02,29.0,62.0,3.79,YouGov
+senate,TX,2012-09-12,32.0,49.0,3.84,Frederick Polls
+senate,TX,2012-09-11,32.0,51.0,2.93,YouGov
+senate,TX,2012-09-18,24.0,50.0,2.92,Texas Lyceum
+senate,TX,2012-10-08,36.0,51.0,3.23,YouGov
+senate,TX,2012-10-18,39.0,54.0,4.3,YouGov
+senate,TX,2012-11-02,36.0,57.0,2.53,YouGov
+senate,UT,2012-10-29,26.0,63.0,3.39,Dan Jones & Associates
+senate,VA,2012-09-08,42.51,47.82,2.11,Gravis Marketing
+senate,VA,2012-09-10,46.0,46.0,3.17,Marist College
+senate,VA,2012-09-13,47.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-09-11,43.0,43.0,3.09,YouGov
+senate,VA,2012-09-15,47.0,46.0,3.13,Public Policy Polling
+senate,VA,2012-09-14,51.0,43.0,3.44,ABC News/The Washington Post
+senate,VA,2012-09-14,51.0,44.0,2.6,Quinnipiac University
+senate,VA,2012-09-17,47.0,43.0,3.15,Beacon Research/Shaw & Co. Research
+senate,VA,2012-09-25,44.0,44.0,4.08,Suffolk University
+senate,VA,2012-09-23,47.0,37.0,4.12,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2012-09-30,49.0,44.0,3.21,Marist College
+senate,VA,2012-10-04,52.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-10-06,51.0,44.0,3.71,Public Policy Polling
+senate,VA,2012-10-08,44.0,47.0,3.16,Rasmussen Reports
+senate,VA,2012-10-08,48.0,49.0,4.08,McLaughlin & Associates
+senate,VA,2012-10-08,47.0,46.0,3.19,Marist College
+senate,VA,2012-10-08,41.26,46.01,2.78,We Ask America
+senate,VA,2012-10-06,51.0,44.0,2.79,Quinnipiac University
+senate,VA,2012-10-11,48.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-10-08,42.0,42.0,3.67,YouGov
+senate,VA,2012-10-15,46.0,44.0,3.16,Rasmussen Reports
+senate,VA,2012-10-15,50.0,45.0,3.69,Public Policy Polling
+senate,VA,2012-10-03,50.0,43.0,4.64,Old Dominion University
+senate,VA,2012-10-18,49.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-10-17,48.0,44.0,3.53,Garin-Hart-Yang Research Group
+senate,VA,2012-10-19,46.1,49.4,3.16,Clout Research
+senate,VA,2012-10-24,49.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-10-24,45.0,45.0,3.46,Zogby Analytics
+senate,VA,2012-10-26,46.0,48.0,3.94,Gravis Marketing
+senate,VA,2012-10-25,42.0,47.0,3.96,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2012-10-24,51.0,44.0,2.85,ABC News/The Washington Post
+senate,VA,2012-10-27,46.7,45.1,3.48,Zogby Analytics
+senate,VA,2012-10-25,50.0,46.0,3.05,Quinnipiac University
+senate,VA,2012-10-29,45.7,45.0,3.54,Zogby Analytics
+senate,VA,2012-10-30,48.0,48.0,3.16,Rasmussen Reports
+senate,VA,2012-10-31,49.6,50.4,3.06,We Ask America
+senate,VA,2012-11-01,47.0,44.0,3.06,Ipsos
+senate,VA,2012-11-01,48.0,40.0,2.89,Ipsos
+senate,VA,2012-11-01,49.0,46.0,2.93,Marist College
+senate,VA,2012-11-02,46.0,46.0,2.58,YouGov
+senate,VA,2012-11-04,49.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,VA,2012-11-03,52.0,46.0,3.2,Public Policy Polling
+senate,VA,2012-11-04,48.0,45.0,3.48,Ipsos
+senate,VA,2012-11-04,47.6,46.1,3.54,Zogby Analytics
+senate,WA,2012-09-08,54.0,38.0,4.37,SurveyUSA
+senate,WA,2012-09-11,51.0,37.0,3.37,YouGov
+senate,WA,2012-09-26,57.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WA,2012-10-08,55.0,36.0,3.66,YouGov
+senate,WA,2012-10-14,52.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WA,2012-10-09,57.7,35.45,3.94,University of Washington Center for Survey Research
+senate,WA,2012-10-24,60.8,33.3,3.98,University of Washington Center for Survey Research
+senate,WA,2012-11-02,57.0,39.0,3.28,Public Policy Polling
+senate,WA,2012-11-02,56.0,38.0,3.46,YouGov
+senate,WI,2012-09-11,50.0,45.0,3.54,Feldman Group
+senate,WI,2012-09-12,48.0,45.0,3.23,Public Policy Polling
+senate,WI,2012-09-11,43.0,47.0,3.64,YouGov
+senate,WI,2012-09-15,50.0,41.0,4.08,Marquette University Law School
+senate,WI,2012-09-17,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2012-09-14,47.0,47.0,2.59,Quinnipiac University
+senate,WI,2012-09-17,48.0,46.0,3.21,Marist College
+senate,WI,2012-09-18,49.0,45.0,3.45,Public Policy Polling
+senate,WI,2012-09-22,51.8,40.4,2.84,We Ask America
+senate,WI,2012-09-29,48.0,44.0,3.34,Marquette University Law School
+senate,WI,2012-10-01,48.0,45.0,4.47,WPA Intelligence
+senate,WI,2012-10-05,49.0,46.0,3.2,Public Policy Polling
+senate,WI,2012-10-08,47.0,45.0,3.16,Rasmussen Reports
+senate,WI,2012-10-09,51.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2012-10-06,48.0,46.0,2.75,Quinnipiac University
+senate,WI,2012-10-08,48.0,43.0,3.96,YouGov
+senate,WI,2012-10-13,45.0,46.0,3.39,Marquette University Law School
+senate,WI,2012-10-15,47.0,46.0,3.16,Rasmussen Reports
+senate,WI,2012-10-15,48.0,44.0,3.54,Feldman Group
+senate,WI,2012-10-16,49.0,45.0,3.14,Marist College
+senate,WI,2012-10-16,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
+senate,WI,2012-10-18,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2012-10-19,45.0,42.0,4.46,Angus Reid Global
+senate,WI,2012-10-25,47.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2012-10-27,47.0,43.0,2.84,Marquette University Law School
+senate,WI,2012-10-29,48.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
+senate,WI,2012-10-29,47.0,48.0,3.16,Rasmussen Reports
+senate,WI,2012-10-28,48.0,47.0,3.06,Marist College
+senate,WI,2012-10-27,43.0,46.0,4.99,St. Norbert College Strategic Research Institute
+senate,WI,2012-10-29,48.0,45.0,3.54,Feldman Group
+senate,WI,2012-10-30,45.0,47.0,3.05,Clout Research
+senate,WI,2012-10-31,48.5,46.3,2.87,We Ask America
+senate,WI,2012-11-02,51.0,48.0,2.82,Public Policy Polling
+senate,WI,2012-11-02,50.0,48.0,4.69,Angus Reid Global
+senate,WI,2012-11-02,48.0,47.0,2.86,YouGov
+president,N2,2012-09-19,44.0,44.0,5,Wiese Research Associates
+president,N2,2012-09-20,44.0,46.0,5,Wiese Research Associates
+president,N2,2012-10-24,45.0,50.0,5,Wiese Research Associates
+president,M1,2012-09-14,59.0,31.0,5,Digital Research
+president,M1,2012-09-16,58.7,33.9,4.83,Maine People's Resource Center
+president,M1,2012-09-26,52.5,35.4,5,Pan Atlantic Research
+president,M1,2012-10-30,49.0,43.0,5,Digital Research
+president,M1,2012-11-01,59.0,39.0,3.4,Public Policy Polling
+president,M1,2012-11-02,56.7,39.0,4.62,Maine People's Resource Center
+president,M2,2012-09-14,46.0,41.0,5,Digital Research
+president,M2,2012-09-16,47.8,41.0,4.83,Maine People's Resource Center
+president,M2,2012-09-26,49.0,38.1,5,Pan Atlantic Research
+president,M2,2012-10-07,44.0,49.0,4.47,Public Opinion Strategies
+president,M2,2012-10-30,49.0,42.0,5,Digital Research
+president,M2,2012-10-30,50.0,45.0,3.48,Kimball Political Consulting
+president,M2,2012-11-01,50.0,47.0,4.43,Gravis Marketing
+president,M2,2012-11-01,51.0,46.0,3.61,Public Policy Polling
+president,M2,2012-11-02,49.7,45.7,4.79,Maine People's Resource Center

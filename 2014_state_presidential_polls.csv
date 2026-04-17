@@ -1,0 +1,896 @@
+mode,state,date,dem,rep,sigma,pollster
+senate,NE,2014-09-26,31.0,58.0,3.72,YouGov
+senate,NE,2014-10-20,30.0,59.0,3.83,YouGov
+senate,MI,2014-09-06,43.0,36.0,3.82,Public Policy Polling
+senate,MI,2014-09-08,45.6,36.8,4.47,Suffolk University
+senate,MI,2014-09-12,44.7,37.7,4.08,Denno Research
+senate,MI,2014-09-14,43.0,41.0,3.47,Mitchell Research & Communications
+senate,MI,2014-09-14,45.0,40.0,3.73,Magellan Strategies
+senate,MI,2014-09-17,41.0,39.0,3.65,Rasmussen Reports
+senate,MI,2014-09-18,47.0,40.0,3.43,Public Policy Polling
+senate,MI,2014-09-18,42.0,39.0,2.91,We Ask America
+senate,MI,2014-09-24,48.0,38.0,4.08,Target Insyght
+senate,MI,2014-09-27,33.0,34.0,3.84,ccAdvertising
+senate,MI,2014-09-29,49.0,36.0,2.91,Mitchell Research & Communications
+senate,MI,2014-09-27,42.0,33.0,4.08,EPIC-MRA
+senate,MI,2014-09-28,45.0,36.0,4.08,Lake Research Partners
+senate,MI,2014-09-30,47.4,36.4,4.08,Marketing Resource Group (MRG)
+senate,MI,2014-09-26,46.0,41.0,1.98,YouGov
+senate,MI,2014-10-02,49.0,42.0,3.91,Public Policy Polling
+senate,MI,2014-10-03,44.0,35.0,4.08,Glengariff Group
+senate,MI,2014-10-06,46.9,44.3,4.03,Clout Research
+senate,MI,2014-10-09,48.0,43.0,2.77,Mitchell Research & Communications
+senate,MI,2014-10-12,50.0,39.0,2.73,Mitchell Research & Communications
+senate,MI,2014-10-13,49.0,36.0,3.23,Clarity Campaign Labs
+senate,MI,2014-10-19,51.1,37.5,3.3,Mitchell Research & Communications
+senate,MI,2014-10-18,45.0,34.0,4.08,EPIC-MRA
+senate,MI,2014-10-19,48.0,33.0,3.11,Clarity Campaign Labs
+senate,MI,2014-10-20,53.0,39.0,3.72,Public Policy Polling
+senate,MI,2014-10-21,51.0,42.0,3.16,Rasmussen Reports
+senate,MI,2014-10-20,49.0,41.0,2.04,YouGov
+senate,MI,2014-10-23,47.7,32.6,4.08,Glengariff Group
+senate,MI,2014-10-27,52.2,38.1,2.94,Mitchell Research & Communications
+senate,MI,2014-10-27,50.0,35.0,4.08,EPIC-MRA
+senate,MI,2014-11-02,52.0,40.0,2.86,Mitchell Research & Communications
+senate,MI,2014-11-01,51.0,38.0,3.31,Public Policy Polling
+senate,NM,2014-09-10,51.0,38.0,4.07,Research & Polling Inc.
+senate,NM,2014-09-22,52.0,39.0,3.47,Rasmussen Reports
+senate,NM,2014-09-29,53.0,36.0,3.71,Gravis Marketing
+senate,NM,2014-09-26,53.0,35.0,3.02,YouGov
+senate,NM,2014-10-21,51.0,45.0,4.04,Vox Populi Polling
+senate,NM,2014-10-22,50.0,43.0,4.04,Research & Polling Inc.
+senate,NM,2014-10-20,52.0,36.0,3.22,YouGov
+senate,IL,2014-09-07,55.0,32.0,3.54,APC Research
+senate,IL,2014-09-24,51.0,37.0,3.65,Rasmussen Reports
+senate,IL,2014-09-26,51.0,39.0,1.59,YouGov
+senate,IL,2014-10-06,51.24,38.26,3.03,We Ask America
+senate,IL,2014-10-05,50.4,34.9,3.72,University of Illinois Springfield Survey Research Office
+senate,IL,2014-10-04,46.9,36.5,3.8,Southern Illinois University Paul Simon Public Policy Institute
+senate,IL,2014-10-18,50.0,36.0,3.54,APC Research
+senate,IL,2014-10-20,52.0,39.0,1.69,YouGov
+senate,IL,2014-10-28,49.0,39.0,3.49,McKeon & Associates
+senate,IL,2014-11-01,51.0,41.0,3.07,Public Policy Polling
+senate,MT,2014-09-29,41.0,54.0,4.32,Gravis Marketing
+senate,MT,2014-09-26,34.0,55.0,4.27,YouGov
+senate,MT,2014-10-08,30.6,46.7,4.94,Montana State University Billings
+senate,MT,2014-10-20,38.0,56.0,4.49,YouGov
+senate,MT,2014-10-23,39.0,53.0,4.07,Gravis Marketing
+senate,MN,2014-09-09,49.0,36.0,3.54,Mason-Dixon Polling & Strategy
+senate,MN,2014-09-29,49.0,41.0,3.65,Rasmussen Reports
+senate,MN,2014-09-26,49.0,42.0,1.98,YouGov
+senate,MN,2014-10-01,55.0,37.0,4.16,SurveyUSA
+senate,MN,2014-10-06,46.0,39.0,4.47,Public Opinion Strategies
+senate,MN,2014-10-15,53.0,38.0,4.09,SurveyUSA
+senate,MN,2014-10-21,48.0,39.0,3.54,Mason-Dixon Polling & Strategy
+senate,MN,2014-10-20,51.0,41.0,2.03,YouGov
+senate,MN,2014-10-29,51.0,40.0,4.09,SurveyUSA
+senate,NH,2014-09-10,48.0,41.0,3.12,Global Strategy Group
+senate,NH,2014-09-10,51.0,40.0,3.98,New England College Polling Center
+senate,NH,2014-09-10,44.3,45.9,2.13,Magellan Strategies
+senate,NH,2014-09-10,48.0,45.0,3.65,Rasmussen Reports
+senate,NH,2014-09-10,51.0,43.0,4.08,Kiley & Company
+senate,NH,2014-09-10,48.0,48.0,3.69,Big Village
+senate,NH,2014-09-14,50.0,45.0,4.49,American Research Group
+senate,NH,2014-09-15,43.0,47.0,4.26,Vox Populi Polling
+senate,NH,2014-09-18,50.0,44.0,3.92,Public Policy Polling
+senate,NH,2014-09-19,50.1,42.8,2.59,New England College Polling Center
+senate,NH,2014-09-26,47.1,46.6,2.74,New England College Polling Center
+senate,NH,2014-09-28,53.0,43.0,4.08,American Research Group
+senate,NH,2014-09-26,48.0,41.0,2.82,YouGov
+senate,NH,2014-10-03,48.5,45.9,2.79,New England College Polling Center
+senate,NH,2014-10-02,47.0,41.0,3.83,University of New Hampshire Survey Center
+senate,NH,2014-10-06,48.0,46.0,3.48,SurveyUSA
+senate,NH,2014-10-09,46.9,48.0,3.04,New England College Polling Center
+senate,NH,2014-10-08,50.0,44.0,4.08,Kiley & Company
+senate,NH,2014-10-12,48.0,45.0,5,YouGov
+senate,NH,2014-10-16,47.3,47.7,3.3,New England College Polling Center
+senate,NH,2014-10-18,48.6,45.6,4.47,Suffolk University
+senate,NH,2014-10-20,49.0,45.0,3.62,Public Policy Polling
+senate,NH,2014-10-20,49.0,47.0,3.94,Big Village
+senate,NH,2014-10-18,49.0,46.0,3.94,University of Massachusetts Lowell Center for Public Opinion
+senate,NH,2014-10-21,49.0,48.0,4.08,American Research Group
+senate,NH,2014-10-20,46.0,41.0,3.1,YouGov
+senate,NH,2014-10-24,46.8,48.3,2.97,New England College Polling Center
+senate,NH,2014-10-24,50.0,42.0,4.24,University of New Hampshire Survey Center
+senate,NH,2014-10-27,45.0,49.0,4.29,Vox Populi Polling
+senate,NH,2014-10-28,49.0,49.0,4.08,American Research Group
+senate,NH,2014-10-29,52.0,45.0,3.26,Rasmussen Reports
+senate,NH,2014-10-30,49.0,47.0,3.84,Public Policy Polling
+senate,NH,2014-10-31,48.2,48.7,2.56,New England College Polling Center
+senate,NH,2014-10-31,47.0,45.0,3.63,University of New Hampshire Survey Center
+senate,NH,2014-11-02,50.0,48.0,2.43,Public Policy Polling
+senate,ME,2014-09-22,29.0,59.0,4.55,University of New Hampshire Survey Center
+senate,ME,2014-09-26,24.8,68.1,5,Pan Atlantic Research
+senate,ME,2014-09-26,33.0,57.0,2.56,YouGov
+senate,ME,2014-10-09,31.0,56.0,4.3,Ipsos
+senate,ME,2014-10-18,30.0,65.0,3.87,University of New Hampshire Survey Center
+senate,ME,2014-10-18,27.0,66.6,5,Pan Atlantic Research
+senate,ME,2014-10-20,35.0,54.0,2.91,YouGov
+senate,ME,2014-10-26,32.0,64.0,4.53,Ipsos
+senate,ME,2014-11-01,37.3,57.4,3.32,Maine People's Resource Center
+senate,NJ,2014-09-07,49.0,36.0,3.52,Stockton University William J. Hughes Center for Public Policy
+senate,NJ,2014-09-27,51.0,40.0,3.07,Quinnipiac University
+senate,NJ,2014-09-26,51.0,37.0,2.23,YouGov
+senate,NJ,2014-10-04,53.0,38.0,4.58,Monmouth University Polling Institute
+senate,NJ,2014-10-07,48.0,39.0,3.51,Stockton University William J. Hughes Center for Public Policy
+senate,NJ,2014-10-16,56.0,40.0,4.36,Fairleigh Dickinson University
+senate,NJ,2014-10-20,57.0,33.0,3.52,Stockton University William J. Hughes Center for Public Policy
+senate,NJ,2014-10-20,51.0,39.0,2.31,YouGov
+senate,NJ,2014-11-01,54.0,40.0,3.65,Monmouth University Polling Institute
+senate,SC,2014-09-25,28.0,46.3,3.04,Winthrop University Center for Public Opinion & Policy Research
+senate,SC,2014-09-26,27.0,44.0,1.94,YouGov
+senate,SC,2014-10-16,29.0,49.0,3.3,Susquehanna Polling & Research Inc.
+senate,SC,2014-10-20,28.0,43.0,2.53,YouGov
+senate,AK,2014-09-09,45.0,40.0,3.76,Harstad Strategic Research
+senate,AK,2014-09-13,40.6,36.4,4.47,Hays Research Group
+senate,AK,2014-09-16,43.0,48.0,3.54,Dittman Research
+senate,AK,2014-09-20,41.0,43.0,3.37,Public Policy Polling
+senate,AK,2014-09-23,43.0,48.0,3.65,Rasmussen Reports
+senate,AK,2014-09-18,41.6,46.1,5,Hellenthal & Associates
+senate,AK,2014-09-26,42.0,48.0,4.11,YouGov
+senate,AK,2014-09-29,41.0,46.0,5,Hickman Analytics
+senate,AK,2014-10-03,44.0,50.0,3.77,Big Village
+senate,AK,2014-10-06,40.0,44.0,3.76,Beacon Research/Shaw & Co. Research
+senate,AK,2014-10-10,45.0,48.0,3.78,Rasmussen Reports
+senate,AK,2014-10-18,48.6,39.2,4.98,Hellenthal & Associates
+senate,AK,2014-10-20,44.0,44.0,3.78,Harstad Strategic Research
+senate,AK,2014-10-20,44.0,48.0,4.22,YouGov
+senate,AK,2014-10-25,50.1,42.2,5,Alaska Survey Research
+senate,AK,2014-10-27,38.0,42.0,4.47,Moore Information Group
+senate,AK,2014-10-29,42.0,47.0,3.36,Rasmussen Reports
+senate,AK,2014-11-01,45.0,46.0,3.08,Public Policy Polling
+senate,WY,2014-09-26,17.0,75.0,5,YouGov
+senate,WY,2014-10-20,27.0,67.0,5,YouGov
+senate,NC,2014-09-05,48.0,45.0,3.53,Garin-Hart-Yang Research Group
+senate,NC,2014-09-07,40.6,34.8,3.99,Elon University
+senate,NC,2014-09-09,46.0,43.0,4.52,SurveyUSA
+senate,NC,2014-09-09,45.0,39.0,3.16,Rasmussen Reports
+senate,NC,2014-09-13,44.0,40.0,2.81,Public Policy Polling
+senate,NC,2014-09-15,41.0,36.0,4.07,Beacon Research/Shaw & Co. Research
+senate,NC,2014-09-17,45.0,41.0,4.08,Global Strategy Group
+senate,NC,2014-09-15,42.0,40.0,4.94,High Point University Survey Research Center
+senate,NC,2014-09-22,46.0,42.0,3.41,Gravis Marketing
+senate,NC,2014-09-24,46.0,43.0,4.1,Big Village
+senate,NC,2014-09-26,46.0,41.0,4.08,National Research
+senate,NC,2014-09-29,44.0,40.0,3.88,Marist College
+senate,NC,2014-09-26,46.0,45.0,2.23,YouGov
+senate,NC,2014-09-26,45.0,41.0,3.84,GQR
+senate,NC,2014-10-06,48.0,46.0,3.21,Rasmussen Reports
+senate,NC,2014-10-06,46.8,45.4,4.47,Suffolk University
+senate,NC,2014-10-06,44.0,42.0,4.08,Public Opinion Strategies
+senate,NC,2014-10-04,39.5,40.4,4.14,High Point University Survey Research Center
+senate,NC,2014-10-11,44.0,41.0,4.25,SurveyUSA
+senate,NC,2014-10-16,43.0,48.0,3.13,Gravis Marketing
+senate,NC,2014-10-17,46.0,43.0,3.58,Public Policy Polling
+senate,NC,2014-10-17,41.0,42.0,4.08,National Research
+senate,NC,2014-10-18,46.0,43.0,4.2,SurveyUSA
+senate,NC,2014-10-21,43.0,43.0,3.64,Marist College
+senate,NC,2014-10-20,44.0,41.0,2.29,YouGov
+senate,NC,2014-10-23,44.7,40.7,3.82,Elon University
+senate,NC,2014-10-23,44.0,44.0,3.53,SurveyUSA
+senate,NC,2014-10-25,48.0,46.0,4.81,Monmouth University Polling Institute
+senate,NC,2014-10-26,43.0,48.0,4.03,Vox Populi Polling
+senate,NC,2014-10-26,44.0,44.0,4.08,Public Opinion Strategies
+senate,NC,2014-10-28,46.0,45.0,3.19,Rasmussen Reports
+senate,NC,2014-10-28,47.0,46.0,3.9,Public Policy Polling
+senate,NC,2014-10-30,46.0,47.0,3.15,Gravis Marketing
+senate,NC,2014-10-29,41.0,41.0,4.08,National Research
+senate,NC,2014-10-29,44.0,46.0,4.42,Harper Polling
+senate,NC,2014-10-29,43.0,42.0,3.32,Beacon Research/Shaw & Co. Research
+senate,NC,2014-10-29,48.0,46.0,4.23,Big Village
+senate,NC,2014-10-31,46.0,45.0,3.68,Public Policy Polling
+senate,NC,2014-10-28,43.5,41.5,2.41,YouGov
+senate,NC,2014-11-02,46.0,44.0,2.74,Public Policy Polling
+senate,KY,2014-09-06,43.0,42.0,3.54,Mellman Group
+senate,KY,2014-09-06,42.0,50.0,3.67,Magellan Strategies
+senate,KY,2014-09-10,42.0,46.0,3.25,Ipsos
+senate,KY,2014-09-10,42.0,46.0,3.84,Gravis Marketing
+senate,KY,2014-09-15,41.0,51.0,3.45,Gravis Marketing
+senate,KY,2014-09-13,33.0,42.0,2.09,ccAdvertising
+senate,KY,2014-09-23,42.0,40.0,2.36,Mellman Group
+senate,KY,2014-09-26,41.0,47.0,2.43,YouGov
+senate,KY,2014-10-01,46.0,44.0,3.98,SurveyUSA
+senate,KY,2014-10-06,41.0,45.0,3.76,Beacon Research/Shaw & Co. Research
+senate,KY,2014-10-11,47.0,50.0,3.13,Gravis Marketing
+senate,KY,2014-10-15,44.0,52.0,3.16,Rasmussen Reports
+senate,KY,2014-10-17,43.0,44.0,3.91,SurveyUSA
+senate,KY,2014-10-12,41.7,45.4,4.23,Western Kentucky University Social Science Research Center
+senate,KY,2014-10-18,41.0,49.0,3.5,Voter/Consumer Research
+senate,KY,2014-10-20,39.0,45.0,2.58,YouGov
+senate,KY,2014-10-26,43.0,50.0,4.08,Public Opinion Strategies
+senate,KY,2014-10-27,43.0,48.0,4.09,SurveyUSA
+senate,KY,2014-10-29,41.0,50.0,4.24,Marist College
+senate,KY,2014-10-31,42.0,50.0,2.58,Public Policy Polling
+senate,VA,2014-09-04,53.0,31.0,3.75,Christopher Newport University Wason Center for Civic Leadership
+senate,VA,2014-09-16,46.0,27.0,3.98,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2014-09-19,48.0,39.0,3.15,Quinnipiac University
+senate,VA,2014-09-22,48.0,35.0,4.0,Public Policy Polling
+senate,VA,2014-09-26,51.0,39.0,2.46,YouGov
+senate,VA,2014-10-02,51.0,39.0,3.81,Christopher Newport University Wason Center for Civic Leadership
+senate,VA,2014-10-03,47.0,37.0,4.75,Princeton Survey Research Associates International
+senate,VA,2014-10-20,49.0,39.0,2.5,YouGov
+senate,VA,2014-10-22,49.0,39.0,4.67,Roanoke College Institute for Policy and Opinion Research
+senate,VA,2014-10-27,44.0,40.0,3.69,Vox Populi Polling
+senate,VA,2014-10-26,51.0,44.0,3.97,Christopher Newport University Wason Center for Civic Leadership
+senate,VA,2014-10-29,49.0,40.0,3.27,Public Policy Polling
+senate,GA,2014-09-07,44.0,47.0,4.23,SurveyUSA
+senate,GA,2014-09-10,39.8,50.1,2.93,InsiderAdvantage
+senate,GA,2014-09-10,46.0,43.4,3.0,Landmark Communications
+senate,GA,2014-09-10,41.0,45.0,3.36,Abt Associates
+senate,GA,2014-09-15,41.0,46.0,3.65,Rasmussen Reports
+senate,GA,2014-09-21,45.0,46.0,4.26,SurveyUSA
+senate,GA,2014-09-30,40.0,44.0,3.16,Rasmussen Reports
+senate,GA,2014-09-30,43.0,47.0,3.25,InsiderAdvantage
+senate,GA,2014-09-26,43.0,47.0,2.32,YouGov
+senate,GA,2014-09-26,41.0,46.0,3.84,GQR
+senate,GA,2014-10-04,43.0,45.0,3.34,Public Policy Polling
+senate,GA,2014-09-30,39.0,41.0,4.47,Hickman Analytics
+senate,GA,2014-10-04,45.0,46.0,4.2,SurveyUSA
+senate,GA,2014-10-08,45.7,46.0,3.16,Landmark Communications
+senate,GA,2014-10-12,48.0,45.0,4.21,SurveyUSA
+senate,GA,2014-10-13,45.69,44.72,2.55,GaPundit.com
+senate,GA,2014-10-19,46.0,44.0,4.06,SurveyUSA
+senate,GA,2014-10-20,47.4,47.3,3.16,Landmark Communications
+senate,GA,2014-10-21,47.3,44.9,3.77,InsiderAdvantage
+senate,GA,2014-10-21,47.0,44.0,4.21,Big Village
+senate,GA,2014-10-20,42.0,44.0,2.92,Abt Associates
+senate,GA,2014-10-20,44.0,47.0,2.37,YouGov
+senate,GA,2014-10-23,47.0,47.0,3.6,Public Policy Polling
+senate,GA,2014-10-26,48.0,48.0,3.2,Rasmussen Reports
+senate,GA,2014-10-26,45.0,48.0,4.05,SurveyUSA
+senate,GA,2014-10-28,43.0,48.0,4.08,Vox Populi Polling
+senate,GA,2014-10-27,41.0,49.0,4.79,Monmouth University Polling Institute
+senate,GA,2014-10-29,46.6,47.4,2.58,Landmark Communications
+senate,GA,2014-10-29,44.0,48.0,4.07,Marist College
+senate,GA,2014-10-31,46.0,46.0,4.33,Public Policy Polling
+senate,GA,2014-10-28,42.2,43.7,2.4,YouGov
+senate,GA,2014-11-02,45.6,49.8,2.58,Landmark Communications
+senate,GA,2014-11-01,44.0,47.0,4.11,SurveyUSA
+senate,GA,2014-11-01,45.0,48.0,2.61,InsiderAdvantage
+senate,GA,2014-11-02,45.0,46.0,3.2,Public Policy Polling
+senate,MS,2014-09-26,35.0,46.0,3.48,YouGov
+senate,MS,2014-10-20,28.0,50.0,3.91,YouGov
+senate,TX,2014-09-18,30.0,48.0,3.87,Texas Lyceum
+senate,TX,2014-09-26,35.0,55.0,1.55,YouGov
+senate,TX,2014-10-01,29.0,50.0,3.43,Rasmussen Reports
+senate,TX,2014-10-14,31.0,57.0,3.4,YouGov
+senate,TX,2014-10-20,35.0,57.0,1.58,YouGov
+senate,OR,2014-09-10,42.0,34.0,4.08,The Polling Company Inc.
+senate,OR,2014-09-23,52.0,32.0,4.2,SurveyUSA
+senate,OR,2014-09-26,52.0,39.0,2.58,YouGov
+senate,OR,2014-10-09,47.0,26.0,4.47,DHM Research
+senate,OR,2014-10-18,53.0,32.0,4.22,SurveyUSA
+senate,OR,2014-10-20,51.0,39.0,2.65,YouGov
+senate,OR,2014-10-26,49.0,30.0,5,Elway Research
+senate,OR,2014-10-25,53.0,32.0,4.26,SurveyUSA
+senate,SD,2014-09-05,28.0,39.0,4.43,SurveyUSA
+senate,SD,2014-09-23,17.0,39.0,2.38,ccAdvertising
+senate,SD,2014-09-23,25.7,39.4,3.93,Nielson Brothers Polling
+senate,SD,2014-09-27,28.0,35.0,3.77,Public Policy Polling
+senate,SD,2014-09-26,27.0,42.0,5,YouGov
+senate,SD,2014-10-03,28.0,35.0,4.03,SurveyUSA
+senate,SD,2014-10-10,33.0,37.0,3.98,Harper Polling
+senate,SD,2014-10-19,24.0,48.0,4.47,Public Opinion Strategies
+senate,SD,2014-10-22,33.0,42.0,3.54,Mason-Dixon Polling & Strategy
+senate,SD,2014-10-21,29.0,43.0,3.7,Marist College
+senate,SD,2014-10-20,25.0,38.0,4.36,YouGov
+senate,SD,2014-10-24,31.0,45.0,3.32,Rasmussen Reports
+senate,SD,2014-10-23,32.0,43.0,4.05,SurveyUSA
+senate,SD,2014-10-26,31.0,45.0,4.83,Monmouth University Polling Institute
+senate,CO,2014-09-09,46.0,42.0,3.88,SurveyUSA
+senate,CO,2014-09-12,40.0,48.0,2.87,Quinnipiac University
+senate,CO,2014-09-15,42.0,43.0,4.47,Suffolk University
+senate,CO,2014-09-16,39.0,46.0,3.9,Gravis Marketing
+senate,CO,2014-09-20,45.0,47.0,3.92,Public Policy Polling
+senate,CO,2014-09-20,32.0,38.0,2.19,ccAdvertising
+senate,CO,2014-09-29,47.0,48.0,3.24,Rasmussen Reports
+senate,CO,2014-09-26,48.0,45.0,2.47,YouGov
+senate,CO,2014-09-26,45.0,45.0,3.84,GQR
+senate,CO,2014-10-06,37.0,43.0,3.68,Beacon Research/Shaw & Co. Research
+senate,CO,2014-10-06,42.0,46.0,3.54,SurveyUSA
+senate,CO,2014-10-11,43.0,45.0,4.19,SurveyUSA
+senate,CO,2014-10-11,46.0,50.0,3.88,Big Village
+senate,CO,2014-10-10,41.0,47.0,3.18,Quinnipiac University
+senate,CO,2014-10-14,39.0,37.0,3.54,Mellman Group
+senate,CO,2014-10-16,43.0,48.0,3.79,Gravis Marketing
+senate,CO,2014-10-15,47.0,44.0,4.08,Benenson Strategy Group
+senate,CO,2014-10-18,43.0,46.0,3.59,Public Policy Polling
+senate,CO,2014-10-19,46.0,47.0,4.82,Monmouth University Polling Institute
+senate,CO,2014-10-17,45.0,47.0,3.02,Ipsos
+senate,CO,2014-10-20,38.6,46.0,4.47,Suffolk University
+senate,CO,2014-10-18,41.0,46.0,3.2,Quinnipiac University
+senate,CO,2014-10-20,45.0,46.0,3.64,Marist College
+senate,CO,2014-10-22,45.0,44.0,3.15,Keating Research
+senate,CO,2014-10-22,45.0,51.0,3.22,Rasmussen Reports
+senate,CO,2014-10-21,44.0,43.0,3.16,Harstad Strategic Research
+senate,CO,2014-10-20,47.0,46.0,2.53,YouGov
+senate,CO,2014-10-22,45.0,44.0,3.63,Strategies 360
+senate,CO,2014-10-26,43.0,46.0,3.95,Vox Populi Polling
+senate,CO,2014-10-24,39.0,46.0,3.44,Quinnipiac University
+senate,CO,2014-10-28,48.0,48.0,4.18,Public Policy Polling
+senate,CO,2014-10-28,44.0,46.0,4.02,SurveyUSA
+senate,CO,2014-10-28,41.9,42.7,2.66,YouGov
+senate,CO,2014-11-01,45.0,48.0,3.68,Public Policy Polling
+senate,CO,2014-10-30,43.0,45.0,3.5,Quinnipiac University
+senate,DE,2014-09-11,49.0,34.0,3.65,Rasmussen Reports
+senate,DE,2014-09-16,50.0,25.0,3.61,University of Delaware Center for Political Communication
+senate,DE,2014-09-26,51.0,35.0,4.61,YouGov
+senate,DE,2014-10-20,54.0,36.0,4.66,YouGov
+senate,IA,2014-09-09,49.0,48.0,4.06,Big Village
+senate,IA,2014-09-11,43.7,42.0,1.92,Øptimus Analytics
+senate,IA,2014-09-12,44.0,50.0,2.93,Quinnipiac University
+senate,IA,2014-09-15,41.0,41.0,4.08,Beacon Research/Shaw & Co. Research
+senate,IA,2014-09-17,43.0,43.0,3.65,Rasmussen Reports
+senate,IA,2014-09-18,43.2,44.4,2.12,Øptimus Analytics
+senate,IA,2014-09-23,38.0,44.0,4.28,Selzer & Co.
+senate,IA,2014-09-23,42.0,42.0,3.52,Harstad Strategic Research
+senate,IA,2014-09-27,42.0,44.0,2.9,Public Policy Polling
+senate,IA,2014-09-25,44.1,43.3,2.04,Øptimus Analytics
+senate,IA,2014-09-29,41.0,50.0,4.38,Gravis Marketing
+senate,IA,2014-09-27,47.0,46.0,3.54,GQR
+senate,IA,2014-09-29,44.0,46.0,3.59,Marist College
+senate,IA,2014-09-26,43.8,43.4,2.06,YouGov
+senate,IA,2014-09-26,44.0,45.0,3.84,GQR
+senate,IA,2014-10-03,40.8,50.0,2.77,Magellan Strategies
+senate,IA,2014-10-02,42.1,42.4,4.08,Loras College Public Opinion Survey Center
+senate,IA,2014-10-02,44.3,45.3,1.95,Øptimus Analytics
+senate,IA,2014-10-05,46.0,47.0,3.16,Selzer & Co.
+senate,IA,2014-10-09,45.0,48.0,3.23,Rasmussen Reports
+senate,IA,2014-10-09,42.9,47.0,1.7,Øptimus Analytics
+senate,IA,2014-10-10,45.0,47.0,3.22,Quinnipiac University
+senate,IA,2014-10-13,43.2,47.0,4.47,Suffolk University
+senate,IA,2014-10-15,48.0,47.0,3.74,Public Policy Polling
+senate,IA,2014-10-16,44.4,45.0,2.02,Øptimus Analytics
+senate,IA,2014-10-21,43.0,49.0,3.22,Gravis Marketing
+senate,IA,2014-10-20,46.0,47.0,4.86,Monmouth University Polling Institute
+senate,IA,2014-10-18,46.0,48.0,3.22,Quinnipiac University
+senate,IA,2014-10-20,46.0,49.0,3.6,Marist College
+senate,IA,2014-10-20,44.0,44.0,2.08,YouGov
+senate,IA,2014-10-23,45.3,44.2,2.99,Loras College Public Opinion Survey Center
+senate,IA,2014-10-23,44.1,47.2,1.91,Øptimus Analytics
+senate,IA,2014-10-26,47.0,47.0,3.53,Garin-Hart-Yang Research Group
+senate,IA,2014-10-24,45.0,49.0,3.5,Quinnipiac University
+senate,IA,2014-10-26,45.0,45.0,2.98,Ipsos
+senate,IA,2014-10-29,44.0,45.0,3.31,Beacon Research/Shaw & Co. Research
+senate,IA,2014-10-29,47.0,48.0,3.18,Rasmussen Reports
+senate,IA,2014-10-29,47.0,49.0,3.93,Big Village
+senate,IA,2014-10-31,47.0,48.0,4.03,Public Policy Polling
+senate,IA,2014-10-30,44.0,51.0,3.76,Selzer & Co.
+senate,IA,2014-10-28,42.9,41.9,3.0,YouGov
+senate,IA,2014-10-30,47.0,47.0,3.59,Quinnipiac University
+senate,IA,2014-10-30,45.3,48.2,2.03,Øptimus Analytics
+senate,IA,2014-11-02,45.0,48.0,2.81,Public Policy Polling
+senate,ID,2014-09-26,27.0,64.0,4.1,YouGov
+senate,ID,2014-10-11,32.0,50.0,4.38,Public Policy Polling
+senate,ID,2014-10-20,30.0,61.0,4.17,YouGov
+senate,TN,2014-09-26,32.0,53.0,3.15,YouGov
+senate,TN,2014-10-18,32.0,45.0,4.1,Public Policy Polling
+senate,TN,2014-10-20,33.0,55.0,3.2,YouGov
+senate,TN,2014-10-24,26.0,44.0,4.23,Middle Tennessee State University
+senate,OK,2014-09-26,25.0,67.0,2.84,YouGov
+senate,OK,2014-10-20,27.0,63.0,3.17,YouGov
+senate,OK,2014-10-27,27.8,62.7,3.25,SoonerPoll.com
+senate,WV,2014-09-30,39.0,50.0,3.65,Rasmussen Reports
+senate,WV,2014-09-26,33.0,56.0,3.06,YouGov
+senate,WV,2014-10-20,34.0,56.0,3.38,YouGov
+senate,MA,2014-09-15,53.0,27.0,4.96,SocialSphere
+senate,MA,2014-09-16,49.0,31.0,3.65,Rasmussen Reports
+senate,MA,2014-09-18,58.0,30.0,4.46,MassINC Polling Group
+senate,MA,2014-09-27,53.8,30.4,4.47,Suffolk University
+senate,MA,2014-09-24,56.0,34.0,4.9,Western New England University Polling Institute
+senate,MA,2014-09-26,54.0,31.0,2.05,YouGov
+senate,MA,2014-10-03,56.0,30.0,4.45,MassINC Polling Group
+senate,MA,2014-10-20,54.0,32.0,2.12,YouGov
+senate,MA,2014-10-24,57.0,32.0,4.5,MassINC Polling Group
+senate,MA,2014-10-24,53.0,37.0,4.11,YouGov
+senate,MA,2014-10-28,48.8,33.8,4.47,Suffolk University
+senate,MA,2014-10-25,54.0,34.0,4.82,Western New England University Polling Institute
+senate,MA,2014-10-31,52.0,38.0,3.36,Public Policy Polling
+senate,AR,2014-09-10,43.0,47.0,3.33,Gravis Marketing
+senate,AR,2014-09-15,46.0,43.0,3.53,Hickman Analytics
+senate,AR,2014-09-20,38.0,43.0,2.62,Public Policy Polling
+senate,AR,2014-09-22,44.8,43.0,4.47,Suffolk University
+senate,AR,2014-09-24,40.0,47.0,3.65,Rasmussen Reports
+senate,AR,2014-09-26,41.0,45.0,2.24,YouGov
+senate,AR,2014-10-03,45.0,42.0,5,Opinion Research Associates
+senate,AR,2014-10-06,39.0,46.0,3.76,Beacon Research/Shaw & Co. Research
+senate,AR,2014-10-14,44.0,47.0,3.26,Rasmussen Reports
+senate,AR,2014-10-15,40.5,49.0,2.2,Hendrix College
+senate,AR,2014-10-21,43.0,45.0,4.01,Marist College
+senate,AR,2014-10-20,42.0,47.0,2.54,YouGov
+senate,AR,2014-10-25,45.0,44.0,4.99,Opinion Research Associates
+senate,AR,2014-10-24,36.0,49.0,4.2,University of Arkansas Department of Political Science
+senate,AR,2014-10-28,44.0,51.0,3.22,Rasmussen Reports
+senate,AR,2014-10-31,41.0,49.0,3.03,Public Policy Polling
+senate,AR,2014-10-31,45.0,43.0,5,Opinion Research Associates
+senate,RI,2014-09-24,61.0,26.0,3.65,Rasmussen Reports
+senate,RI,2014-09-26,64.0,22.0,3.72,YouGov
+senate,RI,2014-10-20,65.0,20.0,3.4,YouGov
+senate,HI,2014-09-09,60.0,28.0,3.65,Rasmussen Reports
+senate,HI,2014-09-13,62.0,25.0,3.08,MRG Research
+senate,HI,2014-09-26,71.0,17.0,2.75,YouGov
+senate,HI,2014-10-15,71.0,20.0,4.07,Ward Research
+senate,HI,2014-10-18,55.0,29.0,2.86,MRG Research
+senate,HI,2014-10-20,70.0,18.0,3.16,YouGov
+senate,OK,2014-09-26,24.0,65.0,2.84,YouGov
+senate,OK,2014-10-20,29.0,63.0,3.17,YouGov
+senate,OK,2014-10-27,28.1,59.4,3.25,SoonerPoll.com
+senate,SC,2014-09-25,31.8,52.4,3.04,Winthrop University Center for Public Opinion & Policy Research
+senate,SC,2014-09-26,31.0,54.0,1.94,YouGov
+senate,SC,2014-10-16,31.0,58.0,3.3,Susquehanna Polling & Research Inc.
+senate,SC,2014-10-20,28.0,57.0,2.53,YouGov
+governor,AL,2014-09-26,28.0,65.0,3.8,YouGov
+governor,AL,2014-10-14,35.7,57.0,3.52,Cygnal
+governor,AL,2014-10-20,25.0,63.0,3.89,YouGov
+governor,AZ,2014-09-16,38.0,44.0,4.45,Tarrance Group
+governor,AZ,2014-09-18,39.0,41.0,4.08,Keating Research
+governor,AZ,2014-09-26,39.0,50.0,1.89,YouGov
+governor,AZ,2014-10-07,39.0,36.0,5,Moore Information Group
+governor,AZ,2014-10-07,37.0,46.0,4.08,The Polling Company Inc.
+governor,AZ,2014-10-08,35.0,43.0,4.08,Adrian Gray Consulting
+governor,AZ,2014-10-13,36.0,37.0,4.47,McLaughlin & Associates
+governor,AZ,2014-10-15,42.0,47.0,3.08,Rasmussen Reports
+governor,AZ,2014-10-15,36.0,43.0,4.47,Tarrance Group
+governor,AZ,2014-10-21,35.0,42.0,4.08,The Polling Company Inc.
+governor,AZ,2014-10-20,40.0,50.0,1.95,YouGov
+governor,ID,2014-09-26,33.0,57.0,4.1,YouGov
+governor,ID,2014-10-11,35.0,39.0,4.38,Public Policy Polling
+governor,ID,2014-10-20,35.0,53.0,4.17,YouGov
+governor,ID,2014-10-31,37.0,49.0,3.16,Public Policy Polling
+governor,ME,2014-09-08,43.0,42.0,3.07,Public Policy Polling
+governor,ME,2014-09-09,42.0,40.0,3.33,GQR
+governor,ME,2014-09-16,35.0,35.0,5,Frederick Polls
+governor,ME,2014-09-22,44.0,38.0,4.07,GQR
+governor,ME,2014-09-22,40.0,38.0,4.55,University of New Hampshire Survey Center
+governor,ME,2014-09-26,34.0,39.0,5,Pan Atlantic Research
+governor,ME,2014-09-27,36.0,39.0,4.06,Digital Research
+governor,ME,2014-09-26,39.0,37.0,2.56,YouGov
+governor,ME,2014-10-06,43.0,39.0,4.07,GQR
+governor,ME,2014-10-07,41.0,39.0,4.08,"Normington, Petts & Associates"
+governor,ME,2014-10-08,40.0,41.0,3.28,Rasmussen Reports
+governor,ME,2014-10-09,42.0,36.0,4.3,Ipsos
+governor,ME,2014-10-18,35.0,45.0,3.96,University of New Hampshire Survey Center
+governor,ME,2014-10-18,39.7,40.3,5,Pan Atlantic Research
+governor,ME,2014-10-22,40.0,40.0,3.89,Public Policy Polling
+governor,ME,2014-10-20,37.0,35.0,2.91,YouGov
+governor,ME,2014-10-23,42.0,42.0,3.39,Magellan Strategies
+governor,ME,2014-10-26,42.0,42.0,4.53,Ipsos
+governor,ME,2014-11-01,44.7,44.4,3.32,Maine People's Resource Center
+governor,CT,2014-09-05,40.0,46.0,2.77,Quinnipiac University
+governor,CT,2014-09-26,41.0,41.0,2.79,YouGov
+governor,CT,2014-10-04,43.0,35.0,3.41,Public Policy Polling
+governor,CT,2014-10-03,43.0,43.0,3.04,Quinnipiac University
+governor,CT,2014-10-15,43.0,50.0,3.19,Rasmussen Reports
+governor,CT,2014-10-17,43.0,42.0,3.15,Quinnipiac University
+governor,CT,2014-10-20,40.0,40.0,2.81,YouGov
+governor,CT,2014-10-24,43.0,43.0,3.45,Quinnipiac University
+governor,CT,2014-10-29,48.0,47.0,3.2,Rasmussen Reports
+governor,CT,2014-10-31,44.0,41.0,3.28,Public Policy Polling
+governor,CT,2014-10-30,43.0,42.0,3.29,Quinnipiac University
+governor,IA,2014-09-12,37.0,60.0,2.93,Quinnipiac University
+governor,IA,2014-09-15,37.0,50.0,4.08,Beacon Research/Shaw & Co. Research
+governor,IA,2014-09-17,40.0,46.0,3.65,Rasmussen Reports
+governor,IA,2014-09-23,34.0,48.0,4.28,Selzer & Co.
+governor,IA,2014-09-27,36.0,50.0,2.9,Public Policy Polling
+governor,IA,2014-09-29,43.0,51.0,4.38,Gravis Marketing
+governor,IA,2014-09-29,36.0,58.0,3.59,Marist College
+governor,IA,2014-09-26,39.0,52.0,2.06,YouGov
+governor,IA,2014-10-03,39.0,55.0,2.77,Magellan Strategies
+governor,IA,2014-10-10,39.0,54.0,3.22,Quinnipiac University
+governor,IA,2014-10-13,37.0,54.0,4.47,Suffolk University
+governor,IA,2014-10-20,37.0,58.0,4.86,Monmouth University Polling Institute
+governor,IA,2014-10-18,37.0,55.0,3.22,Quinnipiac University
+governor,IA,2014-10-20,36.0,59.0,3.6,Marist College
+governor,IA,2014-10-20,37.0,50.0,2.08,YouGov
+governor,IA,2014-10-23,34.1,54.9,2.99,Loras College Public Opinion Survey Center
+governor,IA,2014-10-24,37.0,56.0,3.5,Quinnipiac University
+governor,IA,2014-10-26,34.0,57.0,2.98,Ipsos
+governor,IA,2014-10-29,36.0,53.0,3.31,Beacon Research/Shaw & Co. Research
+governor,IA,2014-10-29,37.0,55.0,3.18,Rasmussen Reports
+governor,IA,2014-10-30,35.0,59.0,3.78,Selzer & Co.
+governor,IA,2014-10-28,34.0,49.0,3.0,YouGov
+governor,IA,2014-10-30,41.0,52.0,3.59,Quinnipiac University
+governor,IA,2014-11-02,40.0,51.0,2.81,Public Policy Polling
+governor,HI,2014-09-09,40.0,39.0,3.65,Rasmussen Reports
+governor,HI,2014-09-13,43.0,39.0,3.08,MRG Research
+governor,HI,2014-09-26,41.0,35.0,2.75,YouGov
+governor,HI,2014-10-05,45.0,33.0,4.08,Global Strategy Group
+governor,HI,2014-10-16,39.0,37.0,3.54,Tarrance Group
+governor,HI,2014-10-15,47.0,35.0,4.07,Ward Research
+governor,HI,2014-10-18,40.0,34.0,2.86,MRG Research
+governor,HI,2014-10-22,39.0,36.0,3.54,Tarrance Group
+governor,HI,2014-10-20,54.0,22.0,3.16,YouGov
+governor,KS,2014-09-06,47.0,40.0,4.24,SurveyUSA
+governor,KS,2014-09-13,42.0,38.0,2.74,Public Policy Polling
+governor,KS,2014-09-15,45.0,41.0,4.07,Beacon Research/Shaw & Co. Research
+governor,KS,2014-09-16,47.0,43.0,3.65,Rasmussen Reports
+governor,KS,2014-09-23,46.0,44.0,4.0,Remington Research Group
+governor,KS,2014-09-18,38.8,36.5,3.82,Fort Hays State University Docking Institute of Public Affairs
+governor,KS,2014-09-29,46.0,42.0,4.47,Suffolk University
+governor,KS,2014-09-30,48.0,40.0,3.43,Gravis Marketing
+governor,KS,2014-09-29,44.0,43.0,3.97,Marist College
+governor,KS,2014-09-26,42.0,45.0,2.23,YouGov
+governor,KS,2014-10-04,47.0,42.0,4.27,SurveyUSA
+governor,KS,2014-10-04,49.0,49.0,3.82,Big Village
+governor,KS,2014-10-06,40.0,46.0,3.77,Beacon Research/Shaw & Co. Research
+governor,KS,2014-10-11,42.0,42.0,3.04,Public Policy Polling
+governor,KS,2014-10-11,45.0,48.0,3.03,Remington Research Group
+governor,KS,2014-10-18,50.0,45.0,4.83,Monmouth University Polling Institute
+governor,KS,2014-10-20,49.0,44.0,2.98,Gravis Marketing
+governor,KS,2014-10-20,52.0,45.0,3.23,Rasmussen Reports
+governor,KS,2014-10-20,45.0,44.0,3.63,Marist College
+governor,KS,2014-10-20,40.0,43.0,2.25,YouGov
+governor,KS,2014-10-24,46.0,43.0,4.01,SurveyUSA
+governor,KS,2014-10-29,48.0,42.0,3.32,Beacon Research/Shaw & Co. Research
+governor,KS,2014-10-30,48.0,44.0,3.65,Public Policy Polling
+governor,KS,2014-10-28,38.0,39.0,2.97,YouGov
+governor,KS,2014-11-02,46.0,45.0,3.22,Public Policy Polling
+governor,SD,2014-09-05,34.0,54.0,4.43,SurveyUSA
+governor,SD,2014-09-23,28.0,53.0,4.06,Nielson Brothers Polling
+governor,SD,2014-09-26,31.0,57.0,5,YouGov
+governor,SD,2014-10-22,26.0,62.0,3.54,Mason-Dixon Polling & Strategy
+governor,SD,2014-10-21,28.0,67.0,3.7,Marist College
+governor,SD,2014-10-20,28.0,54.0,4.36,YouGov
+governor,SD,2014-10-23,34.0,54.0,4.05,SurveyUSA
+governor,SD,2014-10-26,29.0,68.0,4.83,Monmouth University Polling Institute
+governor,VT,2014-09-26,46.0,29.0,5,YouGov
+governor,VT,2014-10-20,47.0,35.0,5,YouGov
+governor,WY,2014-09-26,30.0,53.0,5,YouGov
+governor,WY,2014-10-07,28.0,53.0,4.0,Mason-Dixon Polling & Strategy
+governor,WY,2014-10-20,33.0,58.0,5,YouGov
+governor,AR,2014-09-10,42.0,46.0,3.33,Gravis Marketing
+governor,AR,2014-09-20,38.0,44.0,2.62,Public Policy Polling
+governor,AR,2014-09-22,41.0,43.0,4.47,Suffolk University
+governor,AR,2014-09-24,42.0,46.0,3.65,Rasmussen Reports
+governor,AR,2014-09-26,38.0,49.0,2.24,YouGov
+governor,AR,2014-10-03,45.0,41.0,5,Opinion Research Associates
+governor,AR,2014-10-06,37.0,46.0,3.76,Beacon Research/Shaw & Co. Research
+governor,AR,2014-10-14,47.0,49.0,3.26,Rasmussen Reports
+governor,AR,2014-10-15,41.0,49.0,2.2,Hendrix College
+governor,AR,2014-10-21,44.0,47.0,4.01,Marist College
+governor,AR,2014-10-20,38.0,47.0,2.53,YouGov
+governor,AR,2014-10-25,44.0,42.0,4.99,Opinion Research Associates
+governor,AR,2014-10-24,39.0,50.0,4.2,University of Arkansas Department of Political Science
+governor,AR,2014-10-28,43.0,50.0,3.22,Rasmussen Reports
+governor,AR,2014-10-31,41.0,51.0,3.03,Public Policy Polling
+governor,AR,2014-10-31,43.0,39.0,5,Opinion Research Associates
+governor,NE,2014-09-26,35.0,55.0,3.72,YouGov
+governor,NE,2014-10-20,35.0,55.0,3.83,YouGov
+governor,NH,2014-09-10,51.0,36.0,3.98,New England College Polling Center
+governor,NH,2014-09-10,51.0,40.0,3.65,Rasmussen Reports
+governor,NH,2014-09-14,51.0,39.0,3.87,American Research Group
+governor,NH,2014-09-15,47.0,43.0,4.26,Vox Populi Polling
+governor,NH,2014-09-18,52.0,43.0,3.92,Public Policy Polling
+governor,NH,2014-09-19,52.0,40.0,2.59,New England College Polling Center
+governor,NH,2014-09-26,48.0,44.0,2.74,New England College Polling Center
+governor,NH,2014-09-28,55.0,40.0,4.08,American Research Group
+governor,NH,2014-09-26,49.0,39.0,2.82,YouGov
+governor,NH,2014-10-03,51.0,41.0,2.79,New England College Polling Center
+governor,NH,2014-10-02,46.0,36.0,4.34,University of New Hampshire Survey Center
+governor,NH,2014-10-06,50.0,42.0,3.48,SurveyUSA
+governor,NH,2014-10-09,48.7,43.5,3.04,New England College Polling Center
+governor,NH,2014-10-16,50.7,42.5,3.3,New England College Polling Center
+governor,NH,2014-10-18,49.4,39.2,4.47,Suffolk University
+governor,NH,2014-10-20,53.0,43.0,3.62,Public Policy Polling
+governor,NH,2014-10-20,51.0,45.0,3.94,Big Village
+governor,NH,2014-10-18,49.0,45.0,3.94,University of Massachusetts Lowell Center for Public Opinion
+governor,NH,2014-10-21,53.0,43.0,4.08,American Research Group
+governor,NH,2014-10-20,47.0,38.0,3.1,YouGov
+governor,NH,2014-10-24,47.0,47.0,2.97,New England College Polling Center
+governor,NH,2014-10-24,52.0,37.0,4.24,University of New Hampshire Survey Center
+governor,NH,2014-10-27,44.0,47.0,3.96,Vox Populi Polling
+governor,NH,2014-10-28,48.0,46.0,4.08,American Research Group
+governor,NH,2014-10-29,51.0,42.0,3.26,Rasmussen Reports
+governor,NH,2014-10-31,51.0,44.0,2.56,New England College Polling Center
+governor,NH,2014-10-31,47.0,43.0,3.66,University of New Hampshire Survey Center
+governor,NH,2014-11-02,51.0,46.0,2.43,Public Policy Polling
+governor,NM,2014-09-10,36.0,54.0,4.07,Research & Polling Inc.
+governor,NM,2014-09-22,37.0,50.0,3.47,Rasmussen Reports
+governor,NM,2014-09-29,44.0,48.0,3.71,Gravis Marketing
+governor,NM,2014-09-26,41.0,48.0,3.02,YouGov
+governor,NM,2014-10-06,36.0,55.0,4.08,Public Opinion Strategies
+governor,NM,2014-10-21,37.4,56.2,3.05,BWD Global
+governor,NM,2014-10-22,38.0,53.0,4.04,Research & Polling Inc.
+governor,NM,2014-10-20,38.0,50.0,3.22,YouGov
+governor,NV,2014-09-26,25.0,56.0,2.58,YouGov
+governor,NV,2014-10-13,24.0,68.0,3.53,Global Strategy Group
+governor,NV,2014-10-20,28.0,53.0,2.76,YouGov
+governor,NY,2014-09-19,54.0,29.0,4.4,Marist College
+governor,NY,2014-09-22,49.0,32.0,3.48,Rasmussen Reports
+governor,NY,2014-09-20,56.0,27.0,3.52,Siena College
+governor,NY,2014-09-26,57.0,30.0,1.4,YouGov
+governor,NY,2014-10-03,51.0,31.0,2.95,Quinnipiac University
+governor,NY,2014-10-18,54.0,33.0,3.66,Siena College
+governor,NY,2014-10-20,56.0,31.0,1.4,YouGov
+governor,NY,2014-10-27,56.0,30.0,4.46,Marist College
+governor,NY,2014-10-30,55.0,34.0,3.83,Zogby Analytics
+governor,MN,2014-09-09,45.0,33.0,3.54,Mason-Dixon Polling & Strategy
+governor,MN,2014-09-29,50.0,40.0,3.65,Rasmussen Reports
+governor,MN,2014-09-26,49.0,42.0,1.98,YouGov
+governor,MN,2014-10-01,51.0,39.0,4.16,SurveyUSA
+governor,MN,2014-10-15,50.0,40.0,4.09,SurveyUSA
+governor,MN,2014-10-21,47.0,42.0,3.54,Mason-Dixon Polling & Strategy
+governor,MN,2014-10-20,50.0,41.0,2.03,YouGov
+governor,MN,2014-10-29,47.0,42.0,4.1,SurveyUSA
+governor,RI,2014-09-10,42.0,42.0,4.47,Public Opinion Strategies
+governor,RI,2014-09-24,42.0,37.0,3.65,Rasmussen Reports
+governor,RI,2014-09-26,41.0,38.0,3.72,YouGov
+governor,RI,2014-10-08,42.0,36.0,4.45,Fleming & Associates
+governor,RI,2014-10-16,41.6,30.5,2.98,Brown University A. Alfred Taubman Center for American Politics and Policy
+governor,RI,2014-10-20,40.0,35.0,3.4,YouGov
+governor,RI,2014-10-25,38.0,37.4,4.47,Brown University A. Alfred Taubman Center for American Politics and Policy
+governor,OR,2014-09-23,50.0,38.0,4.2,SurveyUSA
+governor,OR,2014-09-26,49.0,42.0,2.58,YouGov
+governor,OR,2014-10-18,51.0,38.0,4.22,SurveyUSA
+governor,OR,2014-10-20,48.0,42.0,2.65,YouGov
+governor,OR,2014-10-26,45.0,38.0,4.98,Elway Research
+governor,OR,2014-10-25,50.0,40.0,4.26,SurveyUSA
+governor,MD,2014-09-20,47.0,43.0,3.52,Gonzales Research & Marketing Strategies Inc.
+governor,MD,2014-09-26,55.0,38.0,3.02,YouGov
+governor,MD,2014-10-04,47.0,38.0,4.27,The Washington Post/University of Maryland Center for Democracy and Civic Engagement
+governor,MD,2014-10-06,49.0,42.0,3.54,OpinionWorks
+governor,MD,2014-10-08,46.0,43.0,3.57,Gravis Marketing
+governor,MD,2014-10-19,42.0,41.0,4.47,WPA Intelligence
+governor,MD,2014-10-20,51.0,38.0,3.03,YouGov
+governor,MD,2014-10-22,46.0,44.0,3.49,Gonzales Research & Marketing Strategies Inc.
+governor,MD,2014-10-26,39.0,44.0,4.45,WPA Intelligence
+governor,OK,2014-09-24,45.0,47.0,3.45,Clarity Campaign Labs
+governor,OK,2014-09-28,36.0,50.0,5,SoonerPoll.com
+governor,OK,2014-09-26,33.0,58.0,2.84,YouGov
+governor,OK,2014-10-20,32.0,56.0,3.17,YouGov
+governor,OK,2014-10-27,40.0,48.4,3.25,SoonerPoll.com
+governor,OH,2014-09-08,30.0,50.0,3.58,Rasmussen Reports
+governor,OH,2014-09-07,29.0,59.0,2.9,Columbus Dispatch
+governor,OH,2014-09-26,35.0,57.0,3.16,Quinnipiac University
+governor,OH,2014-09-26,36.0,52.0,1.8,YouGov
+governor,OH,2014-10-20,35.0,54.0,1.91,YouGov
+governor,OH,2014-10-29,36.0,51.0,3.53,Beacon Research/Shaw & Co. Research
+governor,OH,2014-10-26,34.0,62.0,3.15,Columbus Dispatch
+governor,SC,2014-09-04,45.0,50.0,3.55,Public Policy Polling
+governor,SC,2014-09-25,34.0,44.0,3.04,Winthrop University Center for Public Opinion & Policy Research
+governor,SC,2014-09-29,37.0,41.0,3.81,Crantford Research
+governor,SC,2014-09-26,36.0,53.0,1.94,YouGov
+governor,SC,2014-10-16,31.0,51.0,3.3,Susquehanna Polling & Research Inc.
+governor,SC,2014-10-20,33.0,50.0,2.53,YouGov
+governor,WI,2014-09-13,46.0,49.0,4.12,Marquette University Law School
+governor,WI,2014-09-15,46.0,48.0,3.65,Rasmussen Reports
+governor,WI,2014-09-22,50.0,45.0,3.32,Gravis Marketing
+governor,WI,2014-09-27,45.0,50.0,4.13,Marquette University Law School
+governor,WI,2014-09-26,49.0,48.0,2.63,YouGov
+governor,WI,2014-10-03,46.0,50.0,3.46,Gravis Marketing
+governor,WI,2014-10-11,47.0,47.0,3.53,Marquette University Law School
+governor,WI,2014-10-17,46.0,47.0,3.41,Public Policy Polling
+governor,WI,2014-10-20,49.0,48.0,3.21,Rasmussen Reports
+governor,WI,2014-10-20,46.0,47.0,4.36,St. Norbert College Strategic Research Institute
+governor,WI,2014-10-20,45.0,46.0,1.74,YouGov
+governor,WI,2014-10-25,43.0,50.0,2.93,Marquette University Law School
+governor,WI,2014-10-29,47.0,48.0,2.35,Public Policy Polling
+governor,WI,2014-10-28,43.0,45.0,2.59,YouGov
+governor,TN,2014-09-26,28.0,60.0,3.15,YouGov
+governor,TN,2014-10-20,30.0,58.0,3.2,YouGov
+governor,TN,2014-10-24,18.0,51.0,4.24,Middle Tennessee State University
+governor,CO,2014-09-09,45.0,43.0,3.88,SurveyUSA
+governor,CO,2014-09-12,40.0,50.0,2.87,Quinnipiac University
+governor,CO,2014-09-15,43.0,41.0,4.47,Suffolk University
+governor,CO,2014-09-16,43.0,48.0,3.9,Gravis Marketing
+governor,CO,2014-09-29,50.0,46.0,3.24,Rasmussen Reports
+governor,CO,2014-09-26,49.0,45.0,2.47,YouGov
+governor,CO,2014-10-06,42.0,42.0,3.68,Beacon Research/Shaw & Co. Research
+governor,CO,2014-10-06,44.0,46.0,3.54,SurveyUSA
+governor,CO,2014-10-11,45.0,44.0,4.11,SurveyUSA
+governor,CO,2014-10-11,49.0,48.0,3.88,Big Village
+governor,CO,2014-10-10,42.0,46.0,3.18,Quinnipiac University
+governor,CO,2014-10-16,44.0,48.0,3.79,Gravis Marketing
+governor,CO,2014-10-18,45.0,44.0,3.59,Public Policy Polling
+governor,CO,2014-10-19,50.0,43.0,4.82,Monmouth University Polling Institute
+governor,CO,2014-10-17,46.0,46.0,3.02,Ipsos
+governor,CO,2014-10-20,43.0,45.0,4.47,Suffolk University
+governor,CO,2014-10-18,45.0,44.0,3.2,Quinnipiac University
+governor,CO,2014-10-20,46.0,41.0,3.64,Marist College
+governor,CO,2014-10-22,47.0,49.0,3.22,Rasmussen Reports
+governor,CO,2014-10-20,48.0,44.0,2.49,YouGov
+governor,CO,2014-10-22,46.0,43.0,3.63,Strategies 360
+governor,CO,2014-10-26,49.0,44.0,3.95,Vox Populi Polling
+governor,CO,2014-10-24,40.0,45.0,3.44,Quinnipiac University
+governor,CO,2014-10-28,47.0,47.0,4.18,Public Policy Polling
+governor,CO,2014-10-28,46.0,46.0,4.02,SurveyUSA
+governor,CO,2014-10-28,44.0,42.0,2.66,YouGov
+governor,CO,2014-11-01,46.0,46.0,3.68,Public Policy Polling
+governor,CO,2014-10-30,43.0,45.0,3.5,Quinnipiac University
+governor,MI,2014-09-06,42.0,43.0,3.82,Public Policy Polling
+governor,MI,2014-09-08,45.0,43.0,4.47,Suffolk University
+governor,MI,2014-09-12,40.0,43.0,4.08,Denno Research
+governor,MI,2014-09-14,41.0,46.0,3.47,Mitchell Research & Communications
+governor,MI,2014-09-17,41.0,47.0,3.65,Rasmussen Reports
+governor,MI,2014-09-18,44.0,46.0,3.43,Public Policy Polling
+governor,MI,2014-09-18,43.0,43.0,2.91,We Ask America
+governor,MI,2014-09-24,45.0,44.0,4.08,Target Insyght
+governor,MI,2014-09-29,42.0,46.0,2.91,Mitchell Research & Communications
+governor,MI,2014-09-27,39.0,45.0,4.08,EPIC-MRA
+governor,MI,2014-09-28,43.0,44.0,4.08,Lake Research Partners
+governor,MI,2014-09-30,41.0,46.0,4.08,Marketing Resource Group (MRG)
+governor,MI,2014-09-26,46.0,44.0,1.98,YouGov
+governor,MI,2014-10-02,46.0,47.0,3.91,Public Policy Polling
+governor,MI,2014-10-03,37.0,45.0,4.08,Glengariff Group
+governor,MI,2014-10-09,46.0,47.0,2.77,Mitchell Research & Communications
+governor,MI,2014-10-12,44.0,47.0,2.73,Mitchell Research & Communications
+governor,MI,2014-10-13,42.0,44.0,3.23,Clarity Campaign Labs
+governor,MI,2014-10-19,45.7,48.0,3.3,Mitchell Research & Communications
+governor,MI,2014-10-18,39.0,47.0,4.08,EPIC-MRA
+governor,MI,2014-10-19,44.0,41.0,3.11,Clarity Campaign Labs
+governor,MI,2014-10-20,48.0,48.0,3.72,Public Policy Polling
+governor,MI,2014-10-21,46.0,49.0,3.16,Rasmussen Reports
+governor,MI,2014-10-20,45.0,44.0,2.04,YouGov
+governor,MI,2014-10-23,40.0,45.0,4.08,Glengariff Group
+governor,MI,2014-10-27,43.4,48.3,2.94,Mitchell Research & Communications
+governor,MI,2014-10-27,43.0,45.0,4.08,EPIC-MRA
+governor,MI,2014-11-02,47.0,47.0,2.86,Mitchell Research & Communications
+governor,MI,2014-11-01,45.0,45.0,3.16,Clarity Campaign Labs
+governor,MI,2014-11-01,45.0,46.0,3.31,Public Policy Polling
+governor,GA,2014-09-07,44.0,45.0,4.23,SurveyUSA
+governor,GA,2014-09-10,40.0,44.0,2.93,InsiderAdvantage
+governor,GA,2014-09-10,47.0,44.0,3.0,Landmark Communications
+governor,GA,2014-09-10,42.0,43.0,3.36,Abt Associates
+governor,GA,2014-09-15,44.0,45.0,3.65,Rasmussen Reports
+governor,GA,2014-09-21,45.0,44.0,4.26,SurveyUSA
+governor,GA,2014-09-30,43.0,49.0,3.16,Rasmussen Reports
+governor,GA,2014-09-30,43.0,44.0,3.25,InsiderAdvantage
+governor,GA,2014-09-26,43.0,48.0,2.32,YouGov
+governor,GA,2014-10-04,41.0,46.0,3.34,Public Policy Polling
+governor,GA,2014-09-30,36.0,44.0,4.47,Hickman Analytics
+governor,GA,2014-10-04,44.0,46.0,4.2,SurveyUSA
+governor,GA,2014-10-08,45.0,45.0,3.16,Landmark Communications
+governor,GA,2014-10-12,46.0,46.0,4.21,SurveyUSA
+governor,GA,2014-10-13,44.0,44.0,2.55,GaPundit.com
+governor,GA,2014-10-19,43.0,45.0,4.06,SurveyUSA
+governor,GA,2014-10-20,45.2,47.7,3.16,Landmark Communications
+governor,GA,2014-10-21,43.9,43.8,3.77,InsiderAdvantage
+governor,GA,2014-10-21,48.0,46.0,4.21,Big Village
+governor,GA,2014-10-20,41.0,46.0,2.92,Abt Associates
+governor,GA,2014-10-20,43.0,47.0,2.37,YouGov
+governor,GA,2014-10-23,45.0,48.0,3.6,Public Policy Polling
+governor,GA,2014-10-26,43.0,49.0,3.2,Rasmussen Reports
+governor,GA,2014-10-26,44.0,46.0,4.05,SurveyUSA
+governor,GA,2014-10-28,42.0,49.0,4.08,Vox Populi Polling
+governor,GA,2014-10-27,42.0,48.0,4.79,Monmouth University Polling Institute
+governor,GA,2014-10-29,46.1,47.5,2.58,Landmark Communications
+governor,GA,2014-10-29,43.0,48.0,4.07,Marist College
+governor,GA,2014-10-28,41.0,45.0,2.4,YouGov
+governor,GA,2014-11-02,44.5,50.8,2.58,Landmark Communications
+governor,GA,2014-11-01,42.0,47.0,4.11,SurveyUSA
+governor,GA,2014-11-01,44.0,47.0,2.61,InsiderAdvantage
+governor,GA,2014-11-02,43.0,47.0,3.2,Public Policy Polling
+governor,PA,2014-09-05,59.0,35.0,2.93,Quinnipiac University
+governor,PA,2014-09-17,49.0,40.0,2.99,Magellan Strategies
+governor,PA,2014-09-17,54.0,33.0,4.83,Muhlenberg College Institute of Public Opinion
+governor,PA,2014-09-19,54.0,33.0,4.39,Franklin & Marshall College Center for Opinion Research
+governor,PA,2014-09-19,43.0,28.0,4.57,Mercyhurst University Center for Applied Politics
+governor,PA,2014-09-26,50.0,41.0,1.75,YouGov
+governor,PA,2014-10-02,55.0,38.0,3.32,Quinnipiac University
+governor,PA,2014-10-13,49.0,42.0,2.97,Magellan Strategies
+governor,PA,2014-10-20,52.0,39.0,1.79,YouGov
+governor,PA,2014-10-23,50.0,43.0,5,Franklin & Marshall College Center for Opinion Research
+governor,PA,2014-10-26,50.0,40.0,3.83,Harper Polling
+governor,PA,2014-10-27,50.0,43.0,2.64,Magellan Strategies
+governor,PA,2014-10-28,51.0,39.0,4.94,Muhlenberg College Institute of Public Opinion
+governor,MA,2014-09-13,44.0,35.0,4.45,MassINC Polling Group
+governor,MA,2014-09-15,39.0,36.0,4.96,SocialSphere
+governor,MA,2014-09-16,42.0,42.0,3.65,Rasmussen Reports
+governor,MA,2014-09-18,46.0,36.0,4.46,MassINC Polling Group
+governor,MA,2014-09-22,38.0,40.0,5,SocialSphere
+governor,MA,2014-09-21,45.0,46.0,4.77,YouGov
+governor,MA,2014-09-26,44.0,41.0,4.46,MassINC Polling Group
+governor,MA,2014-09-27,44.0,43.0,4.47,Suffolk University
+governor,MA,2014-09-24,43.0,44.0,4.9,Western New England University Polling Institute
+governor,MA,2014-09-29,36.0,39.0,4.99,SocialSphere
+governor,MA,2014-09-26,47.0,41.0,2.05,YouGov
+governor,MA,2014-09-29,48.0,44.0,4.91,YouGov
+governor,MA,2014-10-03,41.0,39.0,4.45,MassINC Polling Group
+governor,MA,2014-10-06,40.0,45.0,4.47,Emerson College
+governor,MA,2014-10-06,39.0,34.0,5,SocialSphere
+governor,MA,2014-10-10,42.0,39.0,4.47,MassINC Polling Group
+governor,MA,2014-10-13,41.0,41.0,5,SocialSphere
+governor,MA,2014-10-14,46.0,48.0,3.19,Rasmussen Reports
+governor,MA,2014-10-17,42.0,43.0,4.47,MassINC Polling Group
+governor,MA,2014-10-20,37.0,46.0,5,SocialSphere
+governor,MA,2014-10-21,45.0,44.0,4.05,GQR
+governor,MA,2014-10-20,45.0,41.0,2.12,YouGov
+governor,MA,2014-10-23,42.0,44.0,2.89,Kiley & Company
+governor,MA,2014-10-24,42.0,43.0,4.5,MassINC Polling Group
+governor,MA,2014-10-23,41.0,45.0,4.08,University of Massachusetts Lowell Center for Public Opinion
+governor,MA,2014-10-24,47.0,44.0,4.11,YouGov
+governor,MA,2014-10-28,37.0,44.0,4.08,SocialSphere
+governor,MA,2014-10-28,42.6,46.0,4.47,Suffolk University
+governor,MA,2014-10-28,42.0,48.0,3.99,Emerson College
+governor,MA,2014-10-25,41.0,46.0,4.82,Western New England University Polling Institute
+governor,MA,2014-10-31,42.0,46.0,3.36,Public Policy Polling
+governor,IL,2014-09-06,43.0,40.0,4.07,Global Strategy Group
+governor,IL,2014-09-07,48.0,37.0,3.54,APC Research
+governor,IL,2014-09-18,41.0,44.0,2.66,We Ask America
+governor,IL,2014-09-23,43.0,43.0,4.95,Battleground Polling
+governor,IL,2014-09-24,44.0,42.0,3.65,Rasmussen Reports
+governor,IL,2014-09-28,41.0,39.0,4.08,"Fabrizio, Lee & Associates"
+governor,IL,2014-09-30,36.7,42.5,2.88,Communication Express
+governor,IL,2014-09-26,46.0,43.0,1.59,YouGov
+governor,IL,2014-10-06,44.0,40.0,3.02,We Ask America
+governor,IL,2014-10-08,44.0,41.0,3.08,We Ask America
+governor,IL,2014-10-05,41.0,43.0,3.72,University of Illinois Springfield Survey Research Office
+governor,IL,2014-10-04,40.7,42.4,3.8,Southern Illinois University Paul Simon Public Policy Institute
+governor,IL,2014-10-18,43.0,45.0,3.54,APC Research
+governor,IL,2014-10-21,47.0,48.0,3.16,Rasmussen Reports
+governor,IL,2014-10-20,45.0,41.0,1.69,YouGov
+governor,IL,2014-10-28,45.0,42.0,3.49,McKeon & Associates
+governor,IL,2014-10-27,50.0,45.0,2.07,We Ask America
+governor,IL,2014-11-01,44.6,49.4,2.93,Ogden & Fry
+governor,IL,2014-11-02,45.1,48.6,3.08,Ogden & Fry
+governor,IL,2014-11-01,47.0,45.0,3.07,Public Policy Polling
+governor,FL,2014-09-06,42.0,39.0,3.5,Public Policy Polling
+governor,FL,2014-09-06,40.0,43.0,3.16,The Tyson Group
+governor,FL,2014-09-07,44.0,45.0,4.17,SurveyUSA
+governor,FL,2014-09-09,42.0,40.0,3.16,Rasmussen Reports
+governor,FL,2014-09-11,40.3,40.8,1.65,Øptimus Analytics
+governor,FL,2014-09-14,39.0,44.0,4.18,SurveyUSA
+governor,FL,2014-09-20,39.0,43.0,3.51,Cherry Communications
+governor,FL,2014-09-18,40.6,40.7,1.28,Øptimus Analytics
+governor,FL,2014-09-21,42.0,43.0,4.12,SurveyUSA
+governor,FL,2014-09-19,42.0,44.0,3.18,Quinnipiac University
+governor,FL,2014-09-25,41.1,40.1,1.73,Øptimus Analytics
+governor,FL,2014-09-28,46.0,40.0,4.14,SurveyUSA
+governor,FL,2014-09-26,44.0,47.0,1.33,YouGov
+governor,FL,2014-10-03,45.0,43.0,2.93,Public Policy Polling
+governor,FL,2014-10-02,40.2,39.1,1.24,Øptimus Analytics
+governor,FL,2014-10-04,44.0,42.0,4.1,SurveyUSA
+governor,FL,2014-10-03,43.0,38.0,4.61,University of North Florida Public Opinion Research Lab
+governor,FL,2014-10-10,44.0,45.0,1.79,St. Pete Polls
+governor,FL,2014-10-11,42.0,44.0,3.13,Gravis Marketing
+governor,FL,2014-10-09,40.0,40.0,3.58,University of Florida Bob Graham Center for Public Service
+governor,FL,2014-10-09,40.5,39.4,1.25,Øptimus Analytics
+governor,FL,2014-10-09,43.0,42.0,3.16,McLaughlin & Associates
+governor,FL,2014-10-12,45.0,41.0,4.2,SurveyUSA
+governor,FL,2014-10-11,44.0,44.0,4.05,Big Village
+governor,FL,2014-10-17,45.3,43.9,2.32,St. Pete Polls
+governor,FL,2014-10-16,47.0,47.0,3.16,Rasmussen Reports
+governor,FL,2014-10-18,43.0,40.0,4.47,Saint Leo University Polling Institute
+governor,FL,2014-10-16,40.2,41.1,1.46,Øptimus Analytics
+governor,FL,2014-10-17,42.0,42.0,3.19,Quinnipiac University
+governor,FL,2014-10-20,45.0,46.0,1.36,YouGov
+governor,FL,2014-10-23,44.0,42.0,3.41,Gravis Marketing
+governor,FL,2014-10-23,39.4,41.9,1.43,Øptimus Analytics
+governor,FL,2014-10-24,43.0,40.0,3.5,Quinnipiac University
+governor,FL,2014-10-26,36.0,36.0,3.43,University of Florida Bob Graham Center for Public Service
+governor,FL,2014-10-28,43.0,45.0,3.54,SEA Polling & Strategic Design
+governor,FL,2014-10-28,39.0,44.0,4.44,Cherry Communications
+governor,FL,2014-10-30,44.0,47.0,2.36,SEA Polling & Strategic Design
+governor,FL,2014-10-30,45.0,38.0,3.81,Zogby Analytics
+governor,FL,2014-10-28,41.0,41.0,2.36,YouGov
+governor,FL,2014-11-01,44.0,44.0,2.89,Public Policy Polling
+governor,FL,2014-11-01,41.3,42.8,1.98,Øptimus Analytics
+governor,FL,2014-10-30,42.0,41.0,3.5,Quinnipiac University
+governor,TX,2014-09-18,40.0,49.0,3.87,Texas Lyceum
+governor,TX,2014-09-26,40.0,54.0,1.55,YouGov
+governor,TX,2014-10-01,40.0,51.0,3.45,Rasmussen Reports
+governor,TX,2014-10-04,32.0,47.0,3.58,University of Houston Hobby School of Public Affairs
+governor,TX,2014-10-14,38.0,54.0,3.4,YouGov
+governor,TX,2014-10-20,37.0,57.0,1.58,YouGov
+governor,CA,2014-09-05,57.0,36.0,3.0,Greenberg Quinlan Rosner/American Viewpoint
+governor,CA,2014-09-12,54.0,33.0,3.3,Public Policy Institute of California
+governor,CA,2014-09-26,56.0,36.0,1.12,YouGov
+governor,CA,2014-10-16,52.0,36.0,3.2,Public Policy Institute of California
+governor,CA,2014-10-20,55.0,37.0,1.16,YouGov
+governor,CA,2014-10-21,54.0,33.0,3.26,Field Research Corp. (Field Poll)
+governor,CA,2014-10-26,56.0,37.0,2.92,Greenberg Quinlan Rosner/American Viewpoint
+governor,CA,2014-10-30,51.0,33.0,3.77,Zogby Analytics
+senate,LA,2014-10-13,44.0,48.0,4.28,Vox Populi Polling
+senate,LA,2014-10-13,43.0,52.0,3.22,Rasmussen Reports
+senate,LA,2014-10-16,40.0,43.0,4.07,Multi-Quest International
+senate,LA,2014-10-22,46.0,50.0,3.18,Rasmussen Reports
+senate,LA,2014-10-17,43.0,51.0,5,University of New Orleans Survey Research Center
+senate,LA,2014-10-25,40.6,48.0,4.47,Suffolk University
+senate,LA,2014-10-29,45.0,50.0,3.98,Marist College
+senate,LA,2014-11-12,41.0,57.0,2.28,Magellan Strategies
+senate,LA,2014-11-13,38.0,59.0,3.94,Gravis Marketing
+senate,LA,2014-11-16,42.0,53.0,3.62,Vox Populi Polling
+senate,LA,2014-11-18,41.0,56.0,3.16,Rasmussen Reports
+senate,LA,2014-11-20,40.0,55.0,3.64,JMC Analytics
+senate,LA,2014-11-24,33.0,57.0,4.47,WPA Intelligence
+senate,LA,2014-12-03,40.0,56.0,3.16,Rasmussen Reports
