@@ -25,8 +25,10 @@ const LABEL_OVERRIDES = {
 };
 
 /* ---------- Seat rules per year ----------
-   Senate: baseD + baseR + |RACES.senate| = 100.
-   Sanders, King, Lieberman, Jeffords count as D (caucus with Democrats).
+   Senate base = pre-election partisan composition minus seats up for election.
+   Sources: senate.gov/history/partydiv.htm + Wikipedia Nth Congress articles.
+   Sanders, King, Lieberman, Jeffords, Sinema, Manchin all counted as D when they caucused D.
+   baseD + baseR + |RACES.senate| = 100 for every cycle.
 */
 const SEAT_RULES = {
   2025: {
@@ -36,102 +38,98 @@ const SEAT_RULES = {
   },
   2024: {
     president: { total:538, majorityLine:270, baseR:0, baseD:0 },
-    senate:    { total:100, majorityLine:50, baseD:28, baseR:39 },
+    senate:    { total:100, majorityLine:50, baseD:28, baseR:39 },  // pre 51-49 → after 34 up
     governor:  { total:50,  majorityLine:26, baseD:20, baseR:19 },
     house:     { total:435, majorityLine:218, baseR:0, baseD:0 }
   },
   2022: {
-    senate:    { total:100, majorityLine:50, baseD:35, baseR:32 },
+    senate:    { total:100, majorityLine:50, baseD:36, baseR:30 },  // pre 50-50, 34 up (14D+20R)
     governor:  { total:50,  majorityLine:26, baseD:8,  baseR:6  },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2020: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:32, baseR:34 },
+    senate:    { total:100, majorityLine:50, baseD:35, baseR:31 },  // pre 47-53, 34 unique+1 dual (AZ)
     governor:  { total:50,  majorityLine:26, baseD:15, baseR:24 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2018: {
-    senate:    { total:100, majorityLine:50, baseD:24, baseR:43 },
+    senate:    { total:100, majorityLine:50, baseD:23, baseR:44 },  // pre 49-51, 33 unique+2 dual (MN,MS)
     governor:  { total:50,  majorityLine:26, baseD:7,  baseR:7  },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2016: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:36, baseR:31 },
+    senate:    { total:100, majorityLine:50, baseD:36, baseR:30 },  // pre 46-54, 34 up (10D+24R)
     governor:  { total:50,  majorityLine:26, baseD:13, baseR:26 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2014: {
-    senate:    { total:100, majorityLine:50, baseD:34, baseR:33 },
+    senate:    { total:100, majorityLine:50, baseD:34, baseR:32 },  // pre 55-45, 34 unique+2 dual (OK,SC)
     governor:  { total:50,  majorityLine:26, baseD:4,  baseR:10 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2012: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:30, baseR:37 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:37 },  // pre 53-47, 33 up (23D+10R)
     governor:  { total:50,  majorityLine:26, baseD:18, baseR:21 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2010: {
-    senate:    { total:100, majorityLine:50, baseD:40, baseR:26 },  // 34 up (Class III all 34)
+    senate:    { total:100, majorityLine:50, baseD:41, baseR:23 },  // pre 59-41, 36 unique+1 dual
     governor:  { total:50,  majorityLine:26, baseD:7,  baseR:7  },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2008: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:33, baseR:34 },
+    senate:    { total:100, majorityLine:50, baseD:40, baseR:27 },  // pre 51-49, 33 unique+2 dual (MS,WY)
     governor:  { total:50,  majorityLine:26, baseD:19, baseR:20 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2006: {
-    senate:    { total:100, majorityLine:50, baseD:27, baseR:40 },
+    senate:    { total:100, majorityLine:50, baseD:28, baseR:39 },  // pre 45-55, 33 up (17D+16R)
     governor:  { total:50,  majorityLine:26, baseD:4,  baseR:10 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2004: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:31, baseR:36 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:36 },  // pre 49-51, 34 up (19D+15R)
     governor:  { total:50,  majorityLine:26, baseD:21, baseR:18 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2002: {
-    senate:    { total:100, majorityLine:50, baseD:31, baseR:36 },
+    senate:    { total:100, majorityLine:50, baseD:37, baseR:29 },  // pre 51-49, 34 up (14D+20R)
     governor:  { total:50,  majorityLine:26, baseD:6,  baseR:8  },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   },
   2000: {
     president: { total:538, majorityLine:270, baseD:0, baseR:0 },
-    senate:    { total:100, majorityLine:50, baseD:30, baseR:37 },
+    senate:    { total:100, majorityLine:50, baseD:30, baseR:37 },  // pre 45-55, 33 up (15D+18R)
     governor:  { total:50,  majorityLine:26, baseD:20, baseR:19 },
     house:     { total:435, majorityLine:218, baseD:0, baseR:0 }
   }
 };
 
 /* ---------- Electoral votes per apportionment period ---------- */
-// 2024-present (2020 Census): total 538
-const EV_2024 = {
+const EV_2024 = {  // 2020 Census
   AL:9,AK:3,AZ:11,AR:6,CA:54,CO:10,CT:7,DE:3,DC:3,FL:30,GA:16,HI:4,ID:4,IL:19,
   IN:11,IA:6,KS:6,KY:8,LA:8,ME:4,MD:10,MA:11,MI:15,MN:10,MS:6,MO:10,MT:4,NE:5,
   NV:6,NH:4,NJ:14,NM:5,NY:28,NC:16,ND:3,OH:17,OK:7,OR:8,PA:19,RI:4,SC:9,SD:3,
   TN:11,TX:40,UT:6,VT:3,VA:13,WA:12,WV:4,WI:10,WY:3
 };
-// 2012–2020 (2010 Census)
-const EV_2012 = {
+const EV_2012 = {  // 2010 Census (used 2012-2020)
   AL:9,AK:3,AZ:11,AR:6,CA:55,CO:9,CT:7,DE:3,DC:3,FL:29,GA:16,HI:4,ID:4,IL:20,
   IN:11,IA:6,KS:6,KY:8,LA:8,ME:4,MD:10,MA:11,MI:16,MN:10,MS:6,MO:10,MT:3,NE:5,
   NV:6,NH:4,NJ:14,NM:5,NY:29,NC:15,ND:3,OH:18,OK:7,OR:7,PA:20,RI:4,SC:9,SD:3,
   TN:11,TX:38,UT:6,VT:3,VA:13,WA:12,WV:5,WI:10,WY:3
 };
-// 2004–2008 (2000 Census)
-const EV_2004 = {
+const EV_2004 = {  // 2000 Census (used 2004-2008)
   AL:9,AK:3,AZ:10,AR:6,CA:55,CO:9,CT:7,DE:3,DC:3,FL:27,GA:15,HI:4,ID:4,IL:21,
   IN:11,IA:7,KS:6,KY:8,LA:9,ME:4,MD:10,MA:12,MI:17,MN:10,MS:6,MO:11,MT:3,NE:5,
   NV:5,NH:4,NJ:15,NM:5,NY:31,NC:15,ND:3,OH:20,OK:7,OR:7,PA:21,RI:4,SC:8,SD:3,
   TN:11,TX:34,UT:5,VT:3,VA:13,WA:11,WV:5,WI:10,WY:3
 };
-// 2000 (1990 Census)
-const EV_2000 = {
+const EV_2000 = {  // 1990 Census (used 2000)
   AL:9,AK:3,AZ:8,AR:6,CA:54,CO:8,CT:8,DE:3,DC:3,FL:25,GA:13,HI:4,ID:4,IL:22,
   IN:12,IA:7,KS:6,KY:8,LA:9,ME:4,MD:10,MA:12,MI:18,MN:10,MS:7,MO:11,MT:3,NE:5,
   NV:4,NH:4,NJ:15,NM:5,NY:33,NC:14,ND:3,OH:21,OK:8,OR:7,PA:23,RI:4,SC:8,SD:3,
@@ -143,87 +141,76 @@ function evForYear(y){
   if (y >= 2004) return EV_2004;
   return EV_2000;
 }
-// Keep default EV pointing to current for legacy callers
 const EV = EV_2024;
 
 /* ---------- States that had races in each cycle (filter for senate/governor)
-   Senate includes special elections the same cycle.
+   Senate set = regular Class + special elections in states not already in regular.
+   Some cycles (2008, 2010, 2014, 2018, 2020, 2024) had dual-race states
+   (e.g. MS regular + MS special). Those are handled in SEAT_RULES baseR/baseD.
 */
 const RACES = {
   2025: {
-    president: new Set(),  // none
+    president: new Set(),
     senate:   new Set(["VA"]),
     governor: new Set(["NJ"]),
     house:    new Set(["CA"])
   },
   2024: {
-    president: null, // all states
+    president: null,
     senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NJ","NM","NY","ND","OH","PA","RI","TN","TX","UT","VT","VA","WA","WV","WI","WY"]),
     governor: new Set(["DE","IN","MO","MT","NC","NH","ND","UT","VT","WA","WV"]),
   },
   2022: {
-    // Class III (33) + OK special = 34
-    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2020: {
     president: null,
-    // Class II (33) + AZ (McSain) + GA (Isakson) specials = 35
     senate: new Set(["AK","AL","AR","AZ","CO","DE","GA","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
   2018: {
-    // Class I (33) + MN (Franken→Smith) + MS (Cochran→Hyde-Smith) specials = 35
     senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2016: {
     president: null,
-    // Class III (33) + no specials
-    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
   2014: {
-    // Class II (32) + HI (Inouye) + SC (DeMint) + OK (Coburn) specials = 35
-    senate: new Set(["AK","AL","AR","CO","DE","GA","HI","IA","ID","IL","KS","KY","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    senate: new Set(["AK","AL","AR","CO","DE","GA","HI","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2012: {
     president: null,
-    // Class I (33) + no specials
     senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
   2010: {
-    // Class III (33 states)
-    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI","WV"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2008: {
     president: null,
-    // Class II (33) + MS (Lott) + WY (Thomas) specials = 35
     senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
   2006: {
-    // Class I (33) + no specials
     senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2004: {
     president: null,
-    // Class III (33) + NJ special = 34. But actually 2004 had no specials per 538; use 34 assumed
-    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
+    senate: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MD","MO","NC","ND","NH","NV","NY","OH","OK","OR","PA","SC","SD","UT","VT","WA","WI"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
   2002: {
-    // Class II (32) + MO (Carnahan→Talent) + NJ (Torricelli→Lautenberg) = 34
-    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","MA","ME","MI","MN","MO","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
+    senate: new Set(["AK","AL","AR","CO","DE","GA","IA","ID","IL","KS","KY","LA","MA","ME","MI","MN","MO","MS","MT","NC","NE","NH","NJ","NM","OK","OR","RI","SC","SD","TN","TX","VA","WV","WY"]),
     governor: new Set(["AK","AL","AR","AZ","CA","CO","CT","FL","GA","HI","IA","ID","IL","KS","MA","MD","ME","MI","MN","NE","NH","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"]),
   },
   2000: {
     president: null,
-    // Class I (33) + MO special (Carnahan posthumous→Ashcroft defeated) = 34. Actually was regular class I.
     senate: new Set(["AZ","CA","CT","DE","FL","HI","IN","MA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NJ","NM","NV","NY","OH","PA","RI","TN","TX","UT","VA","VT","WA","WI","WV","WY"]),
     governor: new Set(["DE","IN","MO","MT","NC","ND","NH","UT","VT","WA","WV"]),
   },
@@ -736,18 +723,15 @@ async function renderPastYear(year){
   const rules = SEAT_RULES[year] || {};
   const raceFilters = RACES[year] || {};
 
-  // Determine year type
   const isPresYear = (year % 4 === 0) && (year >= 2000);
-  const isOffYear = !!LABEL_OVERRIDES[year];  // 2025-style single-race year
-  // Midterm = regular year but not pres year (2002, 2006, 2010, etc.) — hide president column
+  const isOffYear = !!LABEL_OVERRIDES[year];
   const isMidterm = !isPresYear && !isOffYear;
 
   // Adjust grid for years with fewer columns
   const pageEl = document.getElementById("pastElectionsPage");
   if (pageEl){
     let nCols = 4;
-    if (isOffYear) nCols = 3;     // off-year: hides president
-    else if (isMidterm) nCols = 3; // midterm: hides president
+    if (isOffYear || isMidterm) nCols = 3;
     pageEl.style.gridTemplateColumns = `repeat(${nCols}, minmax(0, 1fr))`;
   }
 
@@ -755,7 +739,7 @@ async function renderPastYear(year){
     const ui = PAST_UI[mode];
     if (!ui) continue;
 
-    // Hide president column for midterms
+    // Hide president column for midterms (there's no presidential race)
     if (isMidterm && mode === "president"){
       ui.col.style.display = "none";
       continue;
@@ -785,19 +769,19 @@ async function renderPastYear(year){
     } else {
       // Restore defaults for multi-state years
       ui.col.style.display = "";
-      const presNumbers = { 2000:54, 2004:55, 2008:56, 2012:57, 2016:58, 2020:59, 2024:60 };
-      const senClassMap = {
-        2000:"Class I - 2000", 2002:"Class II - 2002", 2004:"Class III - 2004",
-        2006:"Class I - 2006", 2008:"Class II - 2008", 2010:"Class III - 2010",
-        2012:"Class I - 2012", 2014:"Class II - 2014", 2016:"Class III - 2016",
-        2018:"Class I - 2018", 2020:"Class II - 2020", 2022:"Class III - 2022",
-        2024:"Class I & III - 2024"
+      const presNumber = { 2000:54, 2004:55, 2008:56, 2012:57, 2016:58, 2020:59, 2024:60 };
+      const senClass = {
+        2000:"Class I", 2002:"Class II", 2004:"Class III",
+        2006:"Class I", 2008:"Class II", 2010:"Class III",
+        2012:"Class I", 2014:"Class II", 2016:"Class III",
+        2018:"Class I", 2020:"Class II", 2022:"Class III",
+        2024:"Class I & III"
       };
       const congNum = { 2000:107, 2002:108, 2004:109, 2006:110, 2008:111, 2010:112, 2012:113, 2014:114, 2016:115, 2018:116, 2020:117, 2022:118, 2024:119 };
       const defaults = { president:"President", senate:"Senate", governor:"Governor", house:"House" };
       const defaultSubs = {
-        president: presNumbers[year] ? `${presNumbers[year]}th Presidential Election` : "Presidential Election",
-        senate:    senClassMap[year] || `Senate - ${year}`,
+        president: presNumber[year] ? `${presNumber[year]}th Presidential Election` : `Presidential - ${year}`,
+        senate:    `${senClass[year] || "Senate"} - ${year}`,
         governor:  `Gubernatorial - ${year}`,
         house:     congNum[year] ? `${congNum[year]}th Congress - ${year}` : `U.S. House - ${year}`
       };
@@ -811,7 +795,8 @@ async function renderPastYear(year){
       const mapCard = ui.col.querySelector(".mapCard");
       const simMini = ui.col.querySelector(".simMini");
       if (seatsCard) seatsCard.style.display = "";
-      if (mapCard) mapCard.style.display = "";
+      // House: hide map entirely (district-level, state map meaningless)
+      if (mapCard) mapCard.style.display = (mode === "house") ? "none" : "";
       if (simMini) simMini.style.display = "";
     }
 
@@ -921,7 +906,7 @@ async function renderPastYear(year){
     }
 
 
-    // Render maps — HOUSE is district-level, never gets a state-level map
+    // Render maps — house is district-level, state-level map is meaningless
     const mapCard = ui.col.querySelector(".mapCard");
     if (mode === "house"){
       if (mapCard) mapCard.style.display = "none";
@@ -935,16 +920,15 @@ async function renderPastYear(year){
       }
     }
 
-    // Seats histogram — always clear canvas first, then draw if data exists
+    // Seats histogram — clear canvas before every render
     if (ui.simCanvas){
       const _ctx = ui.simCanvas.getContext("2d");
       if (_ctx) _ctx.clearRect(0, 0, ui.simCanvas.width, ui.simCanvas.height);
     }
     if (!isSingleRace) renderPastSim(mode, hist, rule);
 
-    // Combo chart — always clear SVG first and reset cached odds
+    // Combo chart — clear SVG before redraw (do NOT wipe _lastOdds, needed for tab toggle)
     if (ui.comboSvg) d3.select(ui.comboSvg).selectAll("*").remove();
-    ui._lastOdds = null;
 
 
 
