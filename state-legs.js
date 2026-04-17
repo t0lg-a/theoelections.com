@@ -502,15 +502,50 @@
 
   // Accessors — pick single-mode original DOM or split-mode injected DOM
   const singleSvgEl   = () => root() && root().querySelector('svg[data-sldl-map]');
-  const singlePanelEl = () => root() && root().querySelector('.modeCol[data-mode="sldl"]:not([data-split]) .sldlStatePanel');
-  const zoomSelect    = () => root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom-select]');
-  const usBtn         = () => root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom="us"]');
-  const stageEl       = () => root() && root().querySelector('.modeCol[data-mode="sldl"]:not([data-split]) .mapStage');
+  const singlePanelEl = () => root() && root().querySelector('.modeCol[data-mode="sldl"] .sldlStatePanel');
+  const zoomSelect    = () => root() && root().querySelector('.modeCol[data-mode="sldu"] [data-sldl-zoom-select]');
+  const usBtn         = () => root() && root().querySelector('.modeCol[data-mode="sldu"] [data-sldl-zoom="us"]');
+  const stageEl       = () => root() && root().querySelector('.modeCol[data-mode="sldl"] .mapStage');
 
-  const splitSvgEl      = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] svg[data-split-map]`);
-  const splitPanelEl    = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] .sldlStatePanel`);
-  const splitZoomSelect = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] [data-sldl-zoom-select]`);
-  const splitUsBtn      = (ch) => root() && root().querySelector(`.splitRow[data-chamber="${ch}"] [data-sldl-zoom="us"]`);
+  const splitSvgEl   = (ch) => {
+    const r = root(); if (!r) return null;
+    // House (sldl) uses the existing map SVG. Senate (sldu) uses the injected one.
+    return ch === 'sldl'
+      ? r.querySelector('svg[data-sldl-map]')
+      : r.querySelector('svg[data-sldu-split-map]');
+  };
+  const splitPanelEl = (ch) => {
+    const r = root(); if (!r) return null;
+    // Both panels live in the sldl column's stage. First one = house, second = senate.
+    const stage = r.querySelector('.modeCol[data-mode="sldl"] .mapStage');
+    if (!stage) return null;
+    const panels = stage.querySelectorAll('.sldlStatePanel');
+    return ch === 'sldl' ? panels[0] : panels[1];
+  };
+  const splitZoomSelect = (ch) => {
+    // House uses the existing map control bar. Senate uses the new right-column one.
+    const r = root(); if (!r) return null;
+    return ch === 'sldl'
+      ? r.querySelector('.modeCol[data-mode="sldu"] [data-sldl-zoom-select]')
+      : r.querySelector('.modeCol[data-mode="sldu-right"] [data-sldl-zoom-select]');
+  };
+  const splitUsBtn = (ch) => {
+    const r = root(); if (!r) return null;
+    return ch === 'sldl'
+      ? r.querySelector('.modeCol[data-mode="sldu"] [data-sldl-zoom="us"]')
+      : r.querySelector('.modeCol[data-mode="sldu-right"] [data-sldl-zoom="us"]');
+  };
+
+  // Where error/no-data banners go — next to the map for that chamber.
+  // In single mode, both chambers share the main sldu column's map card.
+  // In split mode, the senate chamber uses the new sldu-right column.
+  function bannerParent(ch){
+    const r = root(); if (!r) return null;
+    if (view === 'split' && ch === 'sldu'){
+      return r.querySelector('.modeCol[data-mode="sldu-right"] .mapCard');
+    }
+    return r.querySelector('.modeCol[data-mode="sldu"] .mapCard');
+  }
 
   function svgForChamber(ch){
     return view === 'split' ? splitSvgEl(ch) : (ch === currentChamber ? singleSvgEl() : null);
@@ -635,66 +670,42 @@
         display:flex; align-items:center; justify-content:center;
         gap:12px; margin-bottom:12px;
       }
-      /* Inherits .forecastToggle / .fcBtn base styles from index.html */
 
-      /* ----- v10: split view layout ------------------------- */
-      #stateLegsPage.view-split .modeCol:not([data-split]){ display:none !important; }
-      #stateLegsPage.view-split .splitRowsWrap{ display:grid !important; }
-      #stateLegsPage .splitRowsWrap{ display:none; grid-column:1/-1; gap:16px; }
+      /* ----- v11: split view — reflow existing grid to 3 cols ----
+         Maps render side-by-side in the existing map area (house on
+         the left where it always was; senate in a new right column).
+         Panels stack in the left column (house on top, senate below). */
 
-      @media (min-width: 980px){
-        #stateLegsPage .splitRow{
-          display:grid; grid-template-columns: 290px minmax(0, 1fr);
-          gap:14px;
-        }
-      }
-      @media (max-width: 979px){
-        #stateLegsPage .splitRow{ display:flex; flex-direction:column; gap:10px; }
-      }
-      #stateLegsPage .splitRow .splitPanelCol{ min-width:0; max-width:290px; }
-      #stateLegsPage .splitRow .splitMapCol{ min-width:0; display:flex; flex-direction:column; gap:6px; }
-      #stateLegsPage .splitRow .splitChamberLabel{
-        font-size:10px; font-weight:800; color:var(--muted);
-        text-transform:uppercase; letter-spacing:0.06em;
-        padding:0 2px;
-      }
-      #stateLegsPage .splitRow .splitMapFrame{
-        background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.12));
-        border-radius:6px; padding:6px; position:relative;
-      }
-      html[data-look="riso"] #stateLegsPage .splitRow .splitMapFrame{
-        border:1px solid var(--text-ink) !important;
-        box-shadow: 4px 4px 0 0 var(--text-ink) !important;
-        border-radius:0 !important;
-      }
-      #stateLegsPage .splitRow svg[data-split-map]{
-        width:100%; height:380px; display:block;
-      }
-      #stateLegsPage .splitRow .panelStage{ position:relative; }
+      /* The third column is hidden by default and only shown in split mode */
+      #stateLegsPage .modeCol[data-mode="sldu-right"]{ display:none; }
 
-      /* Split-mode control bar matches primary */
-      #stateLegsPage .splitRow .mapControlBar{
-        display:flex; align-items:center; gap:8px;
-        background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.12));
-        border-radius:6px; padding:6px 10px; font-size:11px;
+      #stateLegsPage.view-split.triGrid{
+        grid-template-columns: 290px minmax(0, 1fr) minmax(0, 1fr) !important;
       }
-      html[data-look="riso"] #stateLegsPage .splitRow .mapControlBar{
-        border:1px solid var(--text-ink) !important;
-        box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-        border-radius:0 !important;
+      #stateLegsPage.view-split .modeCol[data-mode="sldu-right"]{
+        display:flex; flex-direction:column; min-width:0;
       }
-      #stateLegsPage .splitRow .mapControlBar .zoomBtn{
-        appearance:none;border:1px solid var(--line,rgba(0,0,0,0.15));
-        background:transparent;padding:3px 10px;font-size:10px;font-weight:700;
-        cursor:pointer;border-radius:3px;color:var(--muted);
+      #stateLegsPage.view-split .modeCol[data-mode="sldu-right"] .mapCard{
+        flex:1; min-height:0;
       }
-      #stateLegsPage .splitRow .mapControlBar .zoomBtn.active{
-        background:var(--ink,#111);color:#fff;border-color:var(--ink,#111);
+      #stateLegsPage.view-split .modeCol[data-mode="sldu-right"] .mapGrid,
+      #stateLegsPage.view-split .modeCol[data-mode="sldu-right"] .mapStage{
+        height:100%;
       }
-      #stateLegsPage .splitRow .mapControlBar .zoomSelect{
-        appearance:none;border:1px solid var(--line,rgba(0,0,0,0.15));
-        background:transparent;padding:3px 8px;font-size:10px;font-weight:700;
-        border-radius:3px;color:var(--ink);
+      #stateLegsPage.view-split .modeCol[data-mode="sldu-right"] svg[data-sldu-split-map]{
+        height:100% !important; width:100%; display:block; min-height:520px;
+      }
+
+      /* Stacked panels in the left column in split mode */
+      #stateLegsPage.view-split .modeCol[data-mode="sldl"] .mapStage{
+        display:flex; flex-direction:column; gap:10px;
+      }
+      #stateLegsPage .sldlStatePanel--senate{
+        /* slight visual distinction so users can tell the panels apart at a glance */
+        border-top: 2px solid var(--red, #dc2626);
+      }
+      html[data-look="riso"] #stateLegsPage .sldlStatePanel--senate{
+        border-top: 2px solid var(--text-ink) !important;
       }
     `;
     document.head.appendChild(style);
@@ -741,55 +752,123 @@
   }
 
   // --- Split-view DOM ---------------------------------------
-  function ensureSplitRows(){
+  // v11: the split view reuses the existing grid instead of adding
+  // a whole extra row. When active, the page grid goes from
+  //   [290px panel] [1fr house map]
+  // to
+  //   [290px panel] [1fr house map] [1fr senate map]
+  // The panel column holds two stacked panels (house on top, senate
+  // below). The senate map lives in a new modeCol sibling.
+  function ensureSplitLayout(){
     const r = root(); if (!r) return;
-    if (r.querySelector('.splitRowsWrap')) return;
-    const wrap = document.createElement('div');
-    wrap.className = 'splitRowsWrap';
-    for (const ch of ['sldl','sldu']){
-      const row = document.createElement('section');
-      row.className = 'splitRow';
-      row.setAttribute('data-chamber', ch);
-      row.setAttribute('data-split', '1');
-      row.innerHTML = `
-        <div class="splitPanelCol">
-          <div class="splitChamberLabel">${CHAMBERS[ch].label}</div>
-          <div class="mapStage panelStage" data-split="1"></div>
+
+    // 1) Second panel in the sldl column's stage.
+    const stage = r.querySelector('.modeCol[data-mode="sldl"] .mapStage');
+    if (stage && stage.querySelectorAll('.sldlStatePanel').length < 2){
+      ensurePanel(stage);  // ensurePanel no-ops if one already exists — so call helper directly instead
+      const div = document.createElement('div');
+      div.className = 'sldlStatePanel sldlStatePanel--senate';
+      div.innerHTML = `
+        <div class="sldlPanelHeader">
+          <div>
+            <div class="sldlPanelTitle">—</div>
+            <div class="sldlPanelSub">—</div>
+          </div>
+          <div class="sldlModeToggle" data-mode-toggle>
+            <button type="button" data-mode="model" class="active">Model</button>
+            <button type="button" data-mode="ratings">Ratings</button>
+          </div>
         </div>
-        <div class="splitMapCol">
-          <div class="splitChamberLabel">${CHAMBERS[ch].label} · Map</div>
-          <div class="splitMapFrame">
-            <svg data-split-map="${ch}" aria-label="${CHAMBERS[ch].label} districts"></svg>
-          </div>
-          <div class="mapControlBar" data-split="1">
-            <button class="zoomBtn active" data-sldl-zoom="us" type="button">US</button>
-            <select class="zoomSelect" data-sldl-zoom-select>
-              <option value="">State…</option>
-            </select>
-          </div>
+        <div class="sldlMmNote" data-mm-note style="display:none;"></div>
+        <div class="sldlSeatLine">
+          <span class="dSide">D <b data-seats-d>—</b></span>
+          <span class="sep">|</span>
+          <span class="rSide">R <b data-seats-r>—</b></span>
+        </div>
+        <div class="sldlRatingBar" data-rating-bar></div>
+        <div class="sldlRatingLabels" data-rating-labels></div>
+        <div class="sldlOddsRow" data-odds-row></div>
+        <div class="sldlPanelDivider"></div>
+        <div class="sldlPanelDistrict" data-district>
+          <div class="dstPlaceholder">Hover a district</div>
         </div>`;
-      wrap.appendChild(row);
-      ensurePanel(row.querySelector('.panelStage'));
-      // Zoom controls scoped to this row's chamber
-      const capturedCh = ch;
-      row.addEventListener('click', (ev) => {
-        const btn = ev.target.closest('[data-sldl-zoom]');
-        if (!btn) return;
-        viewState[capturedCh].zoom = btn.getAttribute('data-sldl-zoom');
-        row.querySelectorAll('[data-sldl-zoom]').forEach(b => b.classList.toggle('active', b===btn));
-        const sel = row.querySelector('[data-sldl-zoom-select]');
-        if (sel) sel.value = '';
-        renderChamber(capturedCh);
-      });
-      const sel = row.querySelector('[data-sldl-zoom-select]');
-      if (sel) sel.addEventListener('change', () => {
-        if (!sel.value) return;
-        viewState[capturedCh].zoom = sel.value;
-        const ub = row.querySelector('[data-sldl-zoom="us"]'); if (ub) ub.classList.remove('active');
-        renderChamber(capturedCh);
+      stage.appendChild(div);
+      // Wire Model/Ratings toggle on the new panel — mirrors to all panels.
+      div.querySelectorAll('[data-mode-toggle] button').forEach(b => {
+        b.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          fillMode = b.getAttribute('data-mode');
+          document.querySelectorAll('#stateLegsPage [data-mode-toggle] button').forEach(x => {
+            x.classList.toggle('active', x.getAttribute('data-mode') === fillMode);
+          });
+          rerenderActive();
+        });
       });
     }
-    r.appendChild(wrap);
+
+    // 2) Third column: senate map, injected as a modeCol sibling after sldu.
+    if (!r.querySelector('.modeCol[data-mode="sldu-right"]')){
+      const existingSldu = r.querySelector('.modeCol[data-mode="sldu"]');
+      if (!existingSldu) return;
+      const col = document.createElement('section');
+      col.className = 'modeCol';
+      col.setAttribute('data-mode', 'sldu-right');
+      col.innerHTML = `
+        <section class="card topCard">
+          <div class="panelHeaderRow">
+            <div class="panelTitleWrap">
+              <div class="panelTitle">State Senate Map</div>
+              <div class="panelSub">District baselines</div>
+            </div>
+          </div>
+        </section>
+        <section class="card mapCard">
+          <div class="mapGrid">
+            <div class="mapStage">
+              <svg data-sldu-split-map class="mapSvg" aria-label="State Senate districts"></svg>
+            </div>
+          </div>
+        </section>
+        <div class="mapControlBar">
+          <button class="zoomBtn active" data-sldl-zoom="us" type="button">US</button>
+          <select class="zoomSelect" data-sldl-zoom-select>
+            <option value="">State…</option>
+          </select>
+        </div>`;
+      existingSldu.parentNode.insertBefore(col, existingSldu.nextSibling);
+      // Wire zoom controls — synced across both maps.
+      col.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('[data-sldl-zoom]');
+        if (!btn) return;
+        const z = btn.getAttribute('data-sldl-zoom');
+        syncZoomBothChambers(z);
+      });
+      const selR = col.querySelector('[data-sldl-zoom-select]');
+      if (selR) selR.addEventListener('change', () => {
+        if (!selR.value) return;
+        syncZoomBothChambers(selR.value);
+      });
+    }
+  }
+
+  // In split mode, change both chambers' zoom at once and re-render.
+  // In single mode, just update the active chamber.
+  function syncZoomBothChambers(z){
+    if (view === 'split'){
+      viewState.sldl.zoom = z;
+      viewState.sldu.zoom = z;
+      // Sync all zoom UI
+      const r = root();
+      const allZoomBtns = r.querySelectorAll('[data-sldl-zoom]');
+      allZoomBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-sldl-zoom') === z));
+      const allSelects = r.querySelectorAll('[data-sldl-zoom-select]');
+      allSelects.forEach(s => s.value = (z === 'us' ? '' : z));
+      renderChamber('sldl');
+      renderChamber('sldu');
+    } else {
+      viewState[currentChamber].zoom = z;
+      renderChamber(currentChamber);
+    }
   }
 
   function setCardTitles(){
@@ -800,7 +879,7 @@
     r.querySelectorAll('[data-sldl-right-title]').forEach(el => el.textContent = ch.label + ' Map');
     const svg = singleSvgEl();
     if (svg) svg.setAttribute('aria-label', ch.label + ' districts');
-    const mapCard = r.querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard');
+    const mapCard = r.querySelector('.modeCol[data-mode="sldu"] .mapCard');
     if (mapCard) mapCard.setAttribute('aria-label', ch.mapLabel);
   }
 
@@ -813,12 +892,14 @@
     if (view === 'sldl' || view === 'sldu'){
       currentChamber = view;
       setCardTitles();
+      // Hide the secondary senate panel — it's only meaningful in split mode.
+      const sp = root().querySelector('.sldlStatePanel--senate');
+      if (sp) sp.classList.remove('show');
       await ensureChamberLoaded(view);
-      // Update zoom dropdown for new chamber
       populateStateSelectForPanel(zoomSelect(), CS(view).byState);
       renderChamber(view);
     } else if (view === 'split'){
-      ensureSplitRows();
+      ensureSplitLayout();
       await Promise.all(['sldl','sldu'].map(ensureChamberLoaded));
       populateStateSelectForPanel(splitZoomSelect('sldl'), CS('sldl').byState);
       populateStateSelectForPanel(splitZoomSelect('sldu'), CS('sldu').byState);
@@ -1127,15 +1208,14 @@
 
     sel.on('click.reset', function(ev){
       if (ev.target.tagName !== 'path' && vs.zoom !== 'us'){
-        vs.zoom = 'us';
         if (view === 'split'){
-          const zs = splitZoomSelect(chamber); if (zs) zs.value = '';
-          const ub = splitUsBtn(chamber); if (ub) ub.classList.add('active');
+          syncZoomBothChambers('us');
         } else {
+          vs.zoom = 'us';
           const zs = zoomSelect(); if (zs) zs.value = '';
           const ub = usBtn(); if (ub) ub.classList.add('active');
+          renderChamber(chamber);
         }
-        renderChamber(chamber);
       }
     });
 
@@ -1151,7 +1231,15 @@
       .on('mouseenter', function(ev, d){
         d3.select(this).attr('stroke','#1f2937').attr('stroke-width', strokeBase * 2.4);
         const st = d.properties.state_abbr;
-        if (vs.zoom === 'us' && st) renderPanelForState(chamber, st);
+        if (vs.zoom === 'us' && st){
+          renderPanelForState(chamber, st);
+          // Split mode: mirror the state hover to the OTHER chamber's panel
+          // so both sides reflect the same state at a glance.
+          if (view === 'split'){
+            const other = chamber === 'sldl' ? 'sldu' : 'sldl';
+            if (CS(other).byState) renderPanelForState(other, st);
+          }
+        }
         renderPanelDistrict(chamber, d.properties);
         showTip(d.properties, ev);
       })
@@ -1163,15 +1251,14 @@
       .on('click', function(ev, d){
         ev.stopPropagation();
         const st = d.properties.state_abbr; if (!st) return;
-        vs.zoom = st;
         if (view === 'split'){
-          const zs = splitZoomSelect(chamber); if (zs) zs.value = st;
-          const ub = splitUsBtn(chamber); if (ub) ub.classList.remove('active');
+          syncZoomBothChambers(st);
         } else {
+          vs.zoom = st;
           const zs = zoomSelect(); if (zs) zs.value = st;
           const ub = usBtn(); if (ub) ub.classList.remove('active');
+          renderChamber(chamber);
         }
-        renderChamber(chamber);
       });
 
     if (vs.zoom === 'us') resetPanelToUS(chamber);
@@ -1298,9 +1385,7 @@
 
       const hasAnyMargin = state.features.some(f => f.properties && f.properties.margin != null && isFinite(f.properties.margin));
       if (!hasAnyMargin){
-        const stage = view === 'split'
-          ? splitSvgEl(chamber)?.closest('.splitMapFrame')
-          : (root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard'));
+        const stage = bannerParent(chamber);
         if (stage && !stage.querySelector('.sldlDataBanner')){
           const b = document.createElement('div');
           b.className = 'sldlDataBanner';
@@ -1312,9 +1397,7 @@
       state.loaded = true;
     } catch(e){
       console.error(`[state-legs/${chamber}] load failed`, e);
-      const stage = view === 'split'
-        ? splitSvgEl(chamber)?.closest('.splitMapFrame')
-        : (root() && root().querySelector('.modeCol[data-mode="sldu"]:not([data-split]) .mapCard'));
+      const stage = bannerParent(chamber);
       if (stage && !stage.querySelector('.sldlDataBanner')){
         const b = document.createElement('div');
         b.className = 'sldlDataBanner';
@@ -1332,10 +1415,10 @@
     const r = root(); if (!r) return;
     r.addEventListener('click', (ev) => {
       if (view === 'split') return;
-      const btn = ev.target.closest('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom]');
+      const btn = ev.target.closest('.modeCol[data-mode="sldu"] [data-sldl-zoom]');
       if (!btn) return;
       viewState[currentChamber].zoom = btn.getAttribute('data-sldl-zoom');
-      r.querySelectorAll('.modeCol[data-mode="sldu"]:not([data-split]) [data-sldl-zoom]')
+      r.querySelectorAll('.modeCol[data-mode="sldu"] [data-sldl-zoom]')
         .forEach(b => b.classList.toggle('active', b===btn));
       const sel = zoomSelect(); if (sel) sel.value = '';
       renderChamber(currentChamber);
@@ -1367,7 +1450,7 @@
       r.style.display = 'grid';
       r.classList.add('sldl-active');
       if (view === 'split'){
-        ensureSplitRows();
+        ensureSplitLayout();
         await Promise.all(['sldl','sldu'].map(ensureChamberLoaded));
         populateStateSelectForPanel(splitZoomSelect('sldl'), CS('sldl').byState);
         populateStateSelectForPanel(splitZoomSelect('sldu'), CS('sldu').byState);
