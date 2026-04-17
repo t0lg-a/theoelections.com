@@ -62,6 +62,10 @@
   //   it's the chamber we most recently rendered/handled.
   let view = 'sldl';
   let currentChamber = 'sldl';
+  // syncZoomEnabled: when true (default), clicking a state in one split-view
+  // map zooms both maps to the same state. When false, each map zooms
+  // independently — useful for comparing different states side-by-side.
+  let syncZoomEnabled = true;
   const CH = (ch) => CHAMBERS[ch || currentChamber];
 
   // Per-chamber view state — zoom target + d3.zoom transform.
@@ -331,6 +335,11 @@
     OR: 'odd',
     ND: 'odd',
     HI: 'odd', // "13 seats contested in 2026—covering odd-numbered districts"
+    // Alaska uses letter-suffix districts (A-T). Per Wikipedia 2026 AK Senate:
+    // "The A, C, E, G, I, K, M, O, Q, and S districts are up for election."
+    // These map to odd letter-positions (A=1, C=3, E=5, ... S=19). Handled as
+    // 'odd' here with a letter-to-number conversion in isDistrictUp2026.
+    AK: 'odd',
     // Presidential-cycle-offset: even-numbered districts up in midterms
     CA: 'even', // Ballotpedia: "senators from even-numbered districts elected in intervening even years"
     FL: 'even', // Wikipedia 2026 FL senate: "Only even-numbered seats will be up for election in 2026"
@@ -372,7 +381,20 @@
     // Whole-chamber not-up states: already handled elsewhere
     if (NOT_UP_SET('sldu').has(st)) return false;
     const geoid = props.GEOID; if (!geoid || geoid.length < 3) return true;
-    const dnum = parseInt(geoid.slice(-3), 10);
+
+    // Extract district number. Alaska uses letter suffixes (A-T); all other
+    // states use numeric suffixes. For Alaska, convert letter → 1-indexed
+    // position (A=1, B=2, ..., T=20) so parity rules work uniformly.
+    const last = geoid.slice(-3);
+    let dnum;
+    if (st === 'AK'){
+      const letter = geoid.slice(-1).toUpperCase();
+      if (letter < 'A' || letter > 'Z') return true;
+      dnum = letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+    } else {
+      if (!last.match(/^\d+$/)) return true;
+      dnum = parseInt(last, 10);
+    }
     if (!isFinite(dnum)) return true;
 
     // Flat up-districts lists (e.g. CO) take precedence over parity.
@@ -775,6 +797,23 @@
         gap:12px; margin-bottom:12px;
       }
 
+      /* Sync-zoom toggle — hidden except in split view. */
+      #sldlViewToolbar .sldlSyncToggle{
+        display:none;
+        align-items:center;
+        gap:6px;
+        font-size:13px; color:#374151;
+        cursor:pointer;
+        user-select:none;
+      }
+      #stateLegsPage.view-split #sldlViewToolbar .sldlSyncToggle{
+        display:inline-flex;
+      }
+      #sldlViewToolbar .sldlSyncToggle input[type="checkbox"]{
+        margin:0;
+        cursor:pointer;
+      }
+
       /* ----- v11: split view — reflow existing grid to 3 cols ----
          Maps render side-by-side in the existing map area (house on
          the left where it always was; senate in a new right column).
@@ -800,9 +839,26 @@
         height:100% !important; width:100%; display:block; min-height:520px;
       }
 
-      /* Stacked panels in the left column in split mode */
+      /* Stacked panels in the left column in split mode.
+         Both panels share the column's height (matched to the map cards
+         on the right). Each panel gets its own internal scroll so neither
+         gets cut off regardless of content length. */
+      #stateLegsPage.view-split .modeCol[data-mode="sldl"]{
+        display:flex; flex-direction:column; min-height:0;
+      }
+      #stateLegsPage.view-split .modeCol[data-mode="sldl"] .mapCard{
+        flex:1; min-height:0; display:flex; flex-direction:column;
+      }
+      #stateLegsPage.view-split .modeCol[data-mode="sldl"] .mapGrid{
+        flex:1; min-height:0; display:flex; flex-direction:column;
+      }
       #stateLegsPage.view-split .modeCol[data-mode="sldl"] .mapStage{
         display:flex; flex-direction:column; gap:10px;
+        flex:1; min-height:0;
+      }
+      #stateLegsPage.view-split .modeCol[data-mode="sldl"] .sldlStatePanel{
+        flex:1 1 0; min-height:0;
+        overflow-y:auto;
       }
       #stateLegsPage .sldlStatePanel--senate{
         /* slight visual distinction so users can tell the panels apart at a glance */
@@ -843,7 +899,11 @@
         <button class="fcBtn active" data-view="sldl" type="button">House</button>
         <button class="fcBtn"        data-view="sldu" type="button">Senate</button>
         <button class="fcBtn"        data-view="split" type="button">Split</button>
-      </div>`;
+      </div>
+      <label class="sldlSyncToggle" data-sldl-sync-wrap title="When on, zooming one map zooms the other. When off, each map can be zoomed to a different state independently.">
+        <input type="checkbox" data-sldl-sync checked>
+        <span>Sync zoom</span>
+      </label>`;
     r.insertBefore(bar, r.firstChild);
     bar.addEventListener('click', async (ev) => {
       const btn = ev.target.closest('[data-view]');
@@ -853,6 +913,17 @@
       bar.querySelectorAll('[data-view]').forEach(x => x.classList.toggle('active', x===btn));
       await setView(next);
     });
+    // Wire the sync toggle. Default state = checked = synced.
+    const syncCb = bar.querySelector('[data-sldl-sync]');
+    if (syncCb){
+      syncCb.addEventListener('change', () => {
+        syncZoomEnabled = syncCb.checked;
+        // If the user re-enables sync, snap both maps to the left (sldl) zoom.
+        if (syncZoomEnabled && view === 'split'){
+          syncZoomBothChambers(viewState.sldl.zoom);
+        }
+      });
+    }
   }
 
   // --- Split-view DOM ---------------------------------------
@@ -945,30 +1016,50 @@
         const btn = ev.target.closest('[data-sldl-zoom]');
         if (!btn) return;
         const z = btn.getAttribute('data-sldl-zoom');
-        syncZoomBothChambers(z);
+        syncZoomBothChambers(z, 'sldu');
       });
       const selR = col.querySelector('[data-sldl-zoom-select]');
       if (selR) selR.addEventListener('change', () => {
         if (!selR.value) return;
-        syncZoomBothChambers(selR.value);
+        syncZoomBothChambers(selR.value, 'sldu');
       });
     }
   }
 
-  // In split mode, change both chambers' zoom at once and re-render.
+  // In split mode, change both chambers' zoom at once and re-render —
+  // unless the sync toggle is off, in which case only touch the caller's
+  // chamber (passed via `chamberHint`; defaults to currentChamber).
   // In single mode, just update the active chamber.
-  function syncZoomBothChambers(z){
+  function syncZoomBothChambers(z, chamberHint){
     if (view === 'split'){
-      viewState.sldl.zoom = z;
-      viewState.sldu.zoom = z;
-      // Sync all zoom UI
-      const r = root();
-      const allZoomBtns = r.querySelectorAll('[data-sldl-zoom]');
-      allZoomBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-sldl-zoom') === z));
-      const allSelects = r.querySelectorAll('[data-sldl-zoom-select]');
-      allSelects.forEach(s => s.value = (z === 'us' ? '' : z));
-      renderChamber('sldl');
-      renderChamber('sldu');
+      if (syncZoomEnabled){
+        viewState.sldl.zoom = z;
+        viewState.sldu.zoom = z;
+        // Sync all zoom UI
+        const r = root();
+        const allZoomBtns = r.querySelectorAll('[data-sldl-zoom]');
+        allZoomBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-sldl-zoom') === z));
+        const allSelects = r.querySelectorAll('[data-sldl-zoom-select]');
+        allSelects.forEach(s => s.value = (z === 'us' ? '' : z));
+        renderChamber('sldl');
+        renderChamber('sldu');
+      } else {
+        // Sync off: only update the chamber the user interacted with.
+        const ch = chamberHint || currentChamber;
+        viewState[ch].zoom = z;
+        // Update just that chamber's zoom UI. The sldl/house map lives in
+        // .modeCol[data-mode="sldu"]; the sldu/senate map lives in
+        // .modeCol[data-mode="sldu-right"].
+        const r = root();
+        const colSel = ch === 'sldl'
+          ? '.modeCol[data-mode="sldu"]'
+          : '.modeCol[data-mode="sldu-right"]';
+        r.querySelectorAll(`${colSel} [data-sldl-zoom]`)
+          .forEach(b => b.classList.toggle('active', b.getAttribute('data-sldl-zoom') === z));
+        const sel = r.querySelector(`${colSel} [data-sldl-zoom-select]`);
+        if (sel) sel.value = (z === 'us' ? '' : z);
+        renderChamber(ch);
+      }
     } else {
       viewState[currentChamber].zoom = z;
       renderChamber(currentChamber);
@@ -1323,7 +1414,7 @@
     sel.on('click.reset', function(ev){
       if (ev.target.tagName !== 'path' && vs.zoom !== 'us'){
         if (view === 'split'){
-          syncZoomBothChambers('us');
+          syncZoomBothChambers('us', chamber);
         } else {
           vs.zoom = 'us';
           const zs = zoomSelect(); if (zs) zs.value = '';
@@ -1366,7 +1457,7 @@
         ev.stopPropagation();
         const st = d.properties.state_abbr; if (!st) return;
         if (view === 'split'){
-          syncZoomBothChambers(st);
+          syncZoomBothChambers(st, chamber);
         } else {
           vs.zoom = st;
           const zs = zoomSelect(); if (zs) zs.value = st;
@@ -1528,24 +1619,34 @@
   function wireSingleModeControls(){
     const r = root(); if (!r) return;
     r.addEventListener('click', (ev) => {
-      if (view === 'split') return;
       const btn = ev.target.closest('.modeCol[data-mode="sldu"] [data-sldl-zoom]');
       if (!btn) return;
-      viewState[currentChamber].zoom = btn.getAttribute('data-sldl-zoom');
-      r.querySelectorAll('.modeCol[data-mode="sldu"] [data-sldl-zoom]')
-        .forEach(b => b.classList.toggle('active', b===btn));
-      const sel = zoomSelect(); if (sel) sel.value = '';
-      renderChamber(currentChamber);
+      const z = btn.getAttribute('data-sldl-zoom');
+      if (view === 'split'){
+        // In split view, the sldu modeCol hosts the HOUSE map. Pass 'sldl'
+        // as the chamber hint so independent-zoom mode updates only the
+        // house side.
+        syncZoomBothChambers(z, 'sldl');
+      } else {
+        viewState[currentChamber].zoom = z;
+        r.querySelectorAll('.modeCol[data-mode="sldu"] [data-sldl-zoom]')
+          .forEach(b => b.classList.toggle('active', b===btn));
+        const sel = zoomSelect(); if (sel) sel.value = '';
+        renderChamber(currentChamber);
+      }
     });
     const setupSelect = () => {
       const sel = zoomSelect(); if (!sel || sel._wired) return;
       sel._wired = true;
       sel.addEventListener('change', () => {
-        if (view === 'split') return;
         if (!sel.value) return;
-        viewState[currentChamber].zoom = sel.value;
-        const ub = usBtn(); if (ub) ub.classList.remove('active');
-        renderChamber(currentChamber);
+        if (view === 'split'){
+          syncZoomBothChambers(sel.value, 'sldl');
+        } else {
+          viewState[currentChamber].zoom = sel.value;
+          const ub = usBtn(); if (ub) ub.classList.remove('active');
+          renderChamber(currentChamber);
+        }
       });
     };
     setupSelect();
