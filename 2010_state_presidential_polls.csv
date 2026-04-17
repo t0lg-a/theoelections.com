@@ -1,983 +1,517 @@
-mode,state,date,dem,rep,sigma,pollster
-governor,AL,2010-09-21,35.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AL,2010-10-14,35.0,48.0,3.59,University of South Alabama Polling Group
-governor,AK,2010-09-19,34.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AK,2010-09-25,34.8,53.1,4.18,Alaska Survey Research
-governor,AK,2010-09-26,38.0,57.0,3.28,Big Village
-governor,AK,2010-10-09,42.0,51.0,2.44,Public Policy Polling
-governor,AK,2010-10-13,39.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AK,2010-10-17,36.0,62.0,3.25,Big Village
-governor,AK,2010-10-25,40.0,50.0,5,Dittman Research
-governor,AK,2010-10-25,40.0,52.0,4.87,Dittman Research
-governor,AK,2010-10-30,43.0,54.0,2.55,Public Policy Polling
-governor,AZ,2010-09-07,38.0,60.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AZ,2010-10-03,39.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AZ,2010-10-05,35.0,46.0,4.71,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2010-10-12,34.0,51.0,4.47,Moore Information Group
-governor,AZ,2010-10-23,44.0,52.0,3.88,Public Policy Polling
-governor,AZ,2010-10-28,39.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AR,2010-09-13,54.0,33.0,4.0,Mason-Dixon Polling & Strategy
-governor,AR,2010-09-18,55.0,37.0,4.79,Ipsos
-governor,AR,2010-09-30,51.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AR,2010-10-11,47.9,36.2,2.17,ccAdvertising
-governor,AR,2010-10-14,50.0,34.0,2.26,Hendrix College
-governor,AR,2010-10-17,62.0,35.0,3.52,Big Village
-governor,AR,2010-10-17,59.0,33.0,4.0,Mason-Dixon Polling & Strategy
-governor,AR,2010-10-28,60.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-09-06,45.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-09-04,46.0,48.0,3.4,Big Village
-governor,CA,2010-09-11,43.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-09-15,47.0,42.0,3.98,Public Policy Polling
-governor,CA,2010-09-18,45.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-09-20,47.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-09-20,46.0,43.0,4.05,SurveyUSA
-governor,CA,2010-09-18,41.0,41.0,4.09,Field Research Corp. (Field Poll)
-governor,CA,2010-09-19,49.0,44.0,3.45,Greenberg Quinlan Rosner/American Viewpoint
-governor,CA,2010-09-23,37.0,38.0,3.01,Public Policy Institute of California
-governor,CA,2010-09-26,52.0,43.0,3.57,Big Village
-governor,CA,2010-09-29,38.0,42.4,2.44,ccAdvertising
-governor,CA,2010-10-03,49.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-02,47.0,43.0,3.86,SurveyUSA
-governor,CA,2010-10-03,50.0,43.0,4.72,Ipsos
-governor,CA,2010-10-05,53.0,41.0,4.47,Angus Reid Global
-governor,CA,2010-10-13,50.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-13,44.0,45.0,3.54,WPA Intelligence
-governor,CA,2010-10-13,48.0,44.0,4.72,Ipsos
-governor,CA,2010-10-16,48.0,43.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-14,44.0,36.0,3.06,Public Policy Institute of California
-governor,CA,2010-10-17,46.0,46.0,4.08,Tarrance Group
-governor,CA,2010-10-17,47.0,40.0,4.01,SurveyUSA
-governor,CA,2010-10-17,52.0,39.0,3.29,Greenberg Quinlan Rosner/American Viewpoint
-governor,CA,2010-10-21,48.0,42.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-20,46.0,43.0,3.33,McLaughlin & Associates
-governor,CA,2010-10-23,50.0,41.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-22,53.0,42.0,4.01,Public Policy Polling
-governor,CA,2010-10-23,50.0,42.0,4.08,Suffolk University
-governor,CA,2010-10-23,46.0,38.0,4.1,SurveyUSA
-governor,CA,2010-10-23,51.0,44.0,3.36,Big Village
-governor,CA,2010-10-20,49.0,39.0,3.03,Field Research Corp. (Field Poll)
-governor,CA,2010-10-27,49.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2010-10-26,45.0,37.0,3.78,Tulchin Research
-governor,CA,2010-10-27,50.0,41.0,3.5,YouGov
-governor,CA,2010-10-28,49.0,44.0,4.54,Angus Reid Global
-governor,CA,2010-10-30,51.0,46.0,3.37,Public Policy Polling
-governor,CA,2010-10-30,51.0,41.0,3.51,YouGov
-governor,CA,2010-10-28,48.0,37.0,4.13,SurveyUSA
-governor,CO,2010-09-12,46.0,21.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-09-13,39.9,13.5,3.87,ccAdvertising
-governor,CO,2010-09-19,47.0,21.0,3.41,Big Village
-governor,CO,2010-09-25,44.0,15.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-09-27,48.0,19.0,4.32,Marist College
-governor,CO,2010-09-29,46.0,15.0,3.93,SurveyUSA
-governor,CO,2010-10-01,47.0,13.0,3.46,Public Policy Polling
-governor,CO,2010-10-03,43.0,16.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-10-14,42.0,12.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-10-16,45.0,10.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-10-16,46.0,14.0,4.97,Ipsos
-governor,CO,2010-10-20,44.0,9.0,3.06,Magellan Strategies
-governor,CO,2010-10-20,49.0,9.0,4.01,SurveyUSA
-governor,CO,2010-10-22,47.0,5.0,3.5,Public Policy Polling
-governor,CO,2010-10-25,48.0,10.0,4.47,RBI Strategies & Research
-governor,CO,2010-10-23,51.0,10.0,3.47,Big Village
-governor,CO,2010-10-28,47.0,5.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-10-27,47.0,7.0,4.03,Marist College
-governor,CO,2010-10-27,47.0,9.0,3.42,YouGov
-governor,CO,2010-10-30,47.0,6.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2010-10-30,48.0,8.0,3.07,Public Policy Polling
-governor,CT,2010-09-09,46.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-09-10,50.0,41.0,3.38,Quinnipiac University
-governor,CT,2010-09-26,50.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-09-23,45.0,42.0,3.04,Quinnipiac University
-governor,CT,2010-10-02,47.0,41.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-01,50.0,40.0,3.51,Public Policy Polling
-governor,CT,2010-10-03,48.0,45.0,2.51,MRG Research
-governor,CT,2010-10-05,49.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-03,50.0,42.0,3.6,Big Village
-governor,CT,2010-10-09,45.0,41.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-09,49.0,42.0,2.99,Quinnipiac University
-governor,CT,2010-10-14,49.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-19,49.0,38.0,4.47,Suffolk University
-governor,CT,2010-10-23,47.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-24,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-21,48.0,43.0,3.77,Quinnipiac University
-governor,CT,2010-10-25,45.0,45.0,2.33,MRG Research
-governor,CT,2010-10-27,48.0,44.0,3.57,YouGov
-governor,CT,2010-10-28,47.0,49.0,3.63,Public Policy Polling
-governor,CT,2010-10-31,46.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2010-10-28,45.0,48.0,3.28,Quinnipiac University
-governor,FL,2010-09-04,49.0,42.0,3.34,Big Village
-governor,FL,2010-09-04,44.0,42.0,3.14,Susquehanna Polling & Research Inc.
-governor,FL,2010-09-11,49.0,41.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-09-11,45.0,47.0,4.54,Ipsos
-governor,FL,2010-09-14,48.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-09-22,44.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-09-21,47.0,40.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2010-09-26,45.0,47.0,3.57,Big Village
-governor,FL,2010-09-25,43.0,49.0,2.95,Quinnipiac University
-governor,FL,2010-09-28,41.0,39.0,3.53,Zogby Analytics
-governor,FL,2010-09-26,45.0,44.0,3.16,EMC Research
-governor,FL,2010-09-30,41.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-09-29,42.0,46.0,3.54,Public Opinion Strategies
-governor,FL,2010-09-30,42.0,44.0,3.16,Susquehanna Polling & Research Inc.
-governor,FL,2010-10-05,44.0,40.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2010-10-07,47.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-10-07,44.0,45.0,3.08,Quinnipiac University
-governor,FL,2010-10-09,46.0,41.0,4.72,Public Policy Polling
-governor,FL,2010-10-11,47.0,41.0,3.78,SEA Polling & Strategic Design
-governor,FL,2010-10-12,48.0,45.0,2.24,Susquehanna Polling & Research Inc.
-governor,FL,2010-10-16,45.0,38.0,4.47,Suffolk University
-governor,FL,2010-10-18,44.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-10-17,46.0,49.0,3.54,Big Village
-governor,FL,2010-10-17,41.0,44.0,4.16,Ipsos
-governor,FL,2010-10-20,45.0,45.0,2.57,Susquehanna Polling & Research Inc.
-governor,FL,2010-10-20,43.0,39.0,3.53,Zogby Analytics
-governor,FL,2010-10-21,45.0,41.0,3.57,Quinnipiac University
-governor,FL,2010-10-24,45.0,47.0,2.54,Susquehanna Polling & Research Inc.
-governor,FL,2010-10-27,45.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2010-10-26,46.0,43.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2010-10-25,39.0,44.0,3.79,The Florida Poll
-governor,FL,2010-10-27,44.0,41.0,3.48,YouGov
-governor,FL,2010-10-30,48.0,47.0,3.6,Public Policy Polling
-governor,FL,2010-10-30,49.0,46.0,2.56,Susquehanna Polling & Research Inc.
-governor,FL,2010-10-30,45.0,45.0,4.27,YouGov
-governor,FL,2010-10-28,44.0,43.0,3.29,Quinnipiac University
-governor,FL,2010-10-31,45.0,49.0,2.56,Susquehanna Polling & Research Inc.
-governor,GA,2010-09-11,38.0,49.0,4.09,SurveyUSA
-governor,GA,2010-09-14,41.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,GA,2010-09-16,42.0,42.0,3.98,InsiderAdvantage
-governor,GA,2010-09-21,39.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,GA,2010-09-27,37.0,45.0,4.93,InsiderAdvantage
-governor,GA,2010-10-06,41.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,GA,2010-10-10,41.0,49.0,4.38,InsiderAdvantage
-governor,GA,2010-10-18,39.7,45.2,4.44,InsiderAdvantage
-governor,GA,2010-10-19,38.9,47.0,1.75,Landmark Communications
-governor,GA,2010-10-24,39.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,GA,2010-10-24,41.1,46.9,2.17,InsiderAdvantage
-governor,GA,2010-10-23,39.0,49.0,4.08,SurveyUSA
-governor,GA,2010-10-27,41.6,48.5,2.44,Landmark Communications
-governor,GA,2010-10-27,40.0,47.0,4.0,Mason-Dixon Polling & Strategy
-governor,HI,2010-10-02,49.0,47.0,2.75,Public Policy Polling
-governor,HI,2010-10-11,47.0,44.0,2.95,MRG Research
-governor,HI,2010-10-13,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,HI,2010-10-16,51.0,43.0,4.06,Ward Research
-governor,HI,2010-10-23,49.5,44.5,2.91,MRG Research
-governor,ID,2010-09-14,29.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,ID,2010-10-21,30.0,52.0,4.0,Mason-Dixon Polling & Strategy
-governor,IL,2010-09-12,37.0,50.0,3.65,SurveyUSA
-governor,IL,2010-09-12,37.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-09-13,32.4,41.9,2.74,We Ask America
-governor,IL,2010-09-25,36.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-09-25,35.0,42.0,4.61,Public Policy Polling
-governor,IL,2010-09-25,35.0,36.0,4.07,Global Strategy Group
-governor,IL,2010-09-26,38.0,40.0,3.48,Big Village
-governor,IL,2010-09-26,39.0,38.0,4.08,Market Shares Corp.
-governor,IL,2010-09-30,43.0,37.0,4.47,Suffolk University
-governor,IL,2010-10-04,38.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-10-05,29.8,38.4,3.63,Southern Illinois University Paul Simon Public Policy Institute
-governor,IL,2010-10-12,40.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-10-15,41.0,42.0,4.24,Public Policy Polling
-governor,IL,2010-10-20,37.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-10-19,40.0,44.0,4.0,Mason-Dixon Polling & Strategy
-governor,IL,2010-10-20,39.0,43.0,3.78,Market Shares Corp.
-governor,IL,2010-10-23,39.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-10-30,38.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2010-10-27,42.2,49.5,3.89,YouGov
-governor,IL,2010-10-30,40.0,45.0,3.5,Public Policy Polling
-governor,IA,2010-09-21,33.0,52.0,4.26,Selzer & Co.
-governor,IA,2010-09-23,37.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IA,2010-10-09,39.0,47.0,4.08,Global Strategy Group
-governor,IA,2010-10-24,40.0,46.0,4.08,Global Strategy Group
-governor,IA,2010-10-28,38.0,50.0,3.52,Selzer & Co.
-governor,NE,2010-10-07,24.0,66.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2010-09-11,51.0,39.0,2.26,Public Policy Polling
-governor,NH,2010-09-15,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2010-09-24,42.0,40.0,3.54,American Research Group
-governor,NH,2010-09-26,51.0,34.0,4.61,University of New Hampshire Survey Center
-governor,NH,2010-10-04,51.0,41.0,4.08,American Research Group
-governor,NH,2010-10-10,53.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2010-10-09,51.0,38.0,3.77,University of New Hampshire Survey Center
-governor,NH,2010-10-21,45.0,39.0,3.67,ccAdvertising
-governor,NH,2010-10-27,51.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2010-10-28,53.0,44.0,2.77,Public Policy Polling
-governor,NH,2010-10-29,52.0,45.0,3.36,University of New Hampshire Survey Center
-governor,NM,2010-09-12,41.0,52.0,3.54,Public Opinion Strategies
-governor,NM,2010-09-13,44.0,49.0,4.08,GQR
-governor,NM,2010-09-25,42.0,50.0,2.77,Public Policy Polling
-governor,NM,2010-09-29,41.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NM,2010-09-29,42.0,49.0,3.26,Research & Polling Inc.
-governor,NM,2010-10-02,46.0,49.0,4.08,GQR
-governor,NM,2010-10-04,42.0,51.0,3.33,Public Opinion Strategies
-governor,NM,2010-10-10,43.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NM,2010-10-13,42.0,54.0,3.93,SurveyUSA
-governor,NM,2010-10-24,42.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NM,2010-10-22,42.0,50.0,3.54,Public Opinion Strategies
-governor,NM,2010-10-22,45.0,46.0,4.07,GQR
-governor,NM,2010-10-27,43.0,53.0,3.16,Research & Polling Inc.
-governor,OK,2010-09-23,34.0,60.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OK,2010-10-05,38.0,54.0,5,SoonerPoll.com
-governor,OK,2010-10-20,38.0,56.0,3.64,SoonerPoll.com
-governor,KS,2010-09-15,32.0,59.0,4.08,SurveyUSA
-governor,KS,2010-10-11,32.0,60.0,4.02,SurveyUSA
-governor,KS,2010-10-24,32.0,59.0,4.22,SurveyUSA
-governor,ME,2010-09-04,29.0,43.0,2.61,Public Policy Polling
-governor,ME,2010-09-13,25.0,38.0,4.07,Digital Research
-governor,ME,2010-09-20,27.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2010-09-27,30.0,29.0,4.97,Digital Research
-governor,ME,2010-10-10,29.0,34.0,4.07,Digital Research
-governor,ME,2010-10-12,32.0,35.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2010-10-13,28.0,32.9,4.47,Pan Atlantic Research
-governor,ME,2010-10-16,27.0,32.0,5,Frederick Polls
-governor,ME,2010-10-15,20.0,32.0,4.08,Digital Research
-governor,ME,2010-10-26,26.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2010-10-26,21.8,36.8,5,Pan Atlantic Research
-governor,ME,2010-10-27,24.0,40.0,2.35,Public Policy Polling
-governor,ME,2010-10-29,24.0,39.0,4.28,Maine People's Resource Center
-governor,MD,2010-09-15,50.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2010-09-24,52.0,41.0,3.7,ABC News/The Washington Post
-governor,MD,2010-10-04,49.0,41.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2010-10-13,47.0,42.0,3.5,Gonzales Research & Marketing Strategies Inc.
-governor,MD,2010-10-17,52.0,38.0,3.54,OpinionWorks
-governor,MD,2010-10-21,54.0,40.0,2.64,ABC News/The Washington Post
-governor,MD,2010-10-24,52.0,42.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2010-09-15,45.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2010-09-18,41.0,34.0,4.47,Suffolk University
-governor,MA,2010-09-19,35.0,34.0,4.62,University of New Hampshire Survey Center
-governor,MA,2010-09-21,39.0,33.0,4.99,Western New England University Polling Institute
-governor,MA,2010-09-28,47.0,42.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2010-10-11,46.0,39.0,4.47,Suffolk University
-governor,MA,2010-10-12,35.0,42.0,3.54,Public Opinion Strategies
-governor,MA,2010-10-16,47.0,42.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2010-10-18,44.0,36.0,5,Western New England University Polling Institute
-governor,MA,2010-10-19,43.0,39.0,4.39,University of New Hampshire Survey Center
-governor,MA,2010-10-27,46.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2010-10-26,46.0,39.0,4.47,Suffolk University
-governor,MA,2010-10-26,42.0,37.0,5,Western New England University Polling Institute
-governor,MI,2010-09-07,35.9,56.2,4.08,Glengariff Group
-governor,MI,2010-09-11,29.0,53.0,4.08,EPIC-MRA
-governor,MI,2010-09-18,31.0,52.0,4.49,Public Policy Polling
-governor,MI,2010-09-20,38.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MI,2010-10-07,37.0,50.0,2.09,Baydoun Consulting
-governor,MI,2010-10-05,29.0,49.0,4.08,EPIC-MRA
-governor,MI,2010-10-17,34.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MI,2010-10-18,36.0,50.0,5,Rossman Group
-governor,MI,2010-10-25,35.0,53.0,4.08,Glengariff Group
-governor,MI,2010-10-25,37.0,55.0,4.08,EPIC-MRA
-governor,MN,2010-09-13,38.0,36.0,3.9,SurveyUSA
-governor,MN,2010-09-22,41.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2010-09-22,39.0,30.0,3.25,Princeton Survey Research Associates International
-governor,MN,2010-09-24,38.0,27.0,3.65,University of Minnesota Hubert H. Humphrey School of Public Affairs
-governor,MN,2010-10-06,40.0,38.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2010-10-12,42.0,37.0,3.75,SurveyUSA
-governor,MN,2010-10-20,44.0,41.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2010-10-20,41.0,34.0,3.16,Princeton Survey Research Associates International
-governor,MN,2010-10-16,40.0,30.0,4.65,St. Cloud State University
-governor,MN,2010-10-24,40.0,40.0,4.47,Public Opinion Strategies
-governor,MN,2010-10-23,41.0,29.0,3.65,University of Minnesota Hubert H. Humphrey School of Public Affairs
-governor,MN,2010-10-26,39.0,38.0,4.0,SurveyUSA
-governor,MN,2010-10-28,43.0,40.0,2.2,Public Policy Polling
-governor,NV,2010-09-08,36.0,52.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2010-09-11,38.0,56.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-09-11,31.0,60.0,4.65,Ipsos
-governor,NV,2010-09-13,39.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-09-12,31.0,58.0,3.56,Big Village
-governor,NV,2010-09-21,37.0,51.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2010-09-22,39.0,45.0,4.47,Public Opinion Strategies
-governor,NV,2010-09-28,40.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-10-05,40.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-10-03,33.0,56.0,3.56,Big Village
-governor,NV,2010-10-08,43.0,52.0,4.45,Public Policy Polling
-governor,NV,2010-10-11,40.0,55.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-10-09,39.0,50.0,4.47,Suffolk University
-governor,NV,2010-10-11,37.0,52.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2010-10-17,37.0,56.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-10-20,32.0,48.0,2.3,ccAdvertising
-governor,NV,2010-10-25,35.0,58.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2010-10-23,34.0,58.0,3.6,Big Village
-governor,NV,2010-10-26,38.0,54.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2010-10-27,40.0,56.0,3.75,YouGov
-governor,NV,2010-10-30,44.0,55.0,3.83,Public Policy Polling
-governor,NY,2010-09-16,54.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NY,2010-09-18,49.0,43.0,3.65,Quinnipiac University
-governor,NY,2010-09-20,49.0,40.0,4.18,SurveyUSA
-governor,NY,2010-09-18,57.0,24.0,3.53,Siena College
-governor,NY,2010-09-21,53.0,34.0,4.03,Marist College
-governor,NY,2010-09-28,56.0,40.0,4.11,Marist College
-governor,NY,2010-10-02,53.0,38.0,4.11,Public Policy Polling
-governor,NY,2010-10-03,56.0,32.0,4.0,Siena College
-governor,NY,2010-10-03,55.0,41.0,4.13,Big Village
-governor,NY,2010-10-03,55.0,37.0,2.96,Quinnipiac University
-governor,NY,2010-10-06,57.0,34.0,3.99,SurveyUSA
-governor,NY,2010-10-06,63.0,32.0,4.47,Angus Reid Global
-governor,NY,2010-10-12,59.0,33.0,3.97,SurveyUSA
-governor,NY,2010-10-12,59.0,24.0,3.28,The New York Times
-governor,NY,2010-10-16,63.0,26.0,3.93,Siena College
-governor,NY,2010-10-19,51.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NY,2010-10-19,60.0,37.0,4.45,Marist College
-governor,NY,2010-10-21,55.0,35.0,3.86,Quinnipiac University
-governor,NY,2010-10-27,56.0,37.0,4.91,Marist College
-governor,NY,2010-10-27,57.0,27.0,3.48,YouGov
-governor,NY,2010-10-27,55.0,33.0,4.29,SurveyUSA
-governor,NY,2010-10-28,55.0,38.0,4.28,Angus Reid Global
-governor,NY,2010-10-29,58.0,33.0,4.07,Siena College
-governor,NY,2010-10-30,56.0,29.0,4.16,YouGov
-governor,OH,2010-09-11,43.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-09-13,43.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-09-12,40.0,52.0,3.95,SurveyUSA
-governor,OH,2010-09-12,44.0,51.0,3.49,Big Village
-governor,OH,2010-09-11,37.0,54.0,3.7,Quinnipiac University
-governor,OH,2010-09-11,45.0,48.0,2.89,Feldman Group
-governor,OH,2010-09-18,41.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-09-18,45.0,49.0,3.43,University of Cincinnati (Ohio Poll)
-governor,OH,2010-09-25,43.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-09-24,46.0,47.0,4.77,Ipsos
-governor,OH,2010-09-25,46.0,40.0,4.08,Ipsos
-governor,OH,2010-09-27,42.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-09-26,41.0,40.0,4.08,Benenson Strategy Group
-governor,OH,2010-09-25,42.0,43.0,3.26,CBS News/The New York Times
-governor,OH,2010-10-02,43.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-01,41.0,50.0,3.12,Quinnipiac University
-governor,OH,2010-10-04,44.0,37.0,4.08,Feldman Group
-governor,OH,2010-10-05,42.0,46.0,4.47,Suffolk University
-governor,OH,2010-10-07,46.0,48.0,4.47,Angus Reid Global
-governor,OH,2010-10-09,42.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-11,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-10,43.0,51.0,3.88,University of Cincinnati (Ohio Poll)
-governor,OH,2010-10-16,43.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-14,41.0,51.0,2.9,Quinnipiac University
-governor,OH,2010-10-16,47.0,49.0,3.45,University of Cincinnati (Ohio Poll)
-governor,OH,2010-10-19,41.0,44.0,2.2,ccAdvertising
-governor,OH,2010-10-17,48.0,47.0,3.4,Big Village
-governor,OH,2010-10-23,43.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-21,43.0,49.0,3.82,Quinnipiac University
-governor,OH,2010-10-26,44.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-24,44.0,49.0,4.04,SurveyUSA
-governor,OH,2010-10-27,45.0,48.0,3.52,YouGov
-governor,OH,2010-10-28,46.0,49.0,4.66,Angus Reid Global
-governor,OH,2010-10-24,47.0,49.0,2.63,Columbus Dispatch
-governor,OH,2010-10-30,44.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2010-10-29,48.0,49.0,2.72,Public Policy Polling
-governor,OH,2010-10-27,46.0,47.0,3.43,Quinnipiac University
-governor,OH,2010-10-30,45.0,48.0,4.23,YouGov
-governor,OH,2010-10-29,48.0,52.0,3.28,University of Cincinnati (Ohio Poll)
-governor,OR,2010-09-08,44.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2010-09-04,40.0,39.0,5,Riley Research Associates
-governor,OR,2010-09-13,43.0,49.0,4.22,SurveyUSA
-governor,OR,2010-10-10,48.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2010-10-13,43.0,46.0,2.11,ccAdvertising
-governor,OR,2010-10-13,46.0,45.0,3.92,SurveyUSA
-governor,OR,2010-10-16,48.0,47.0,2.85,Public Policy Polling
-governor,OR,2010-10-18,45.0,44.0,4.47,Elway Research
-governor,OR,2010-10-23,49.0,45.0,4.47,Grove Insight
-governor,OR,2010-10-25,46.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2010-10-24,43.0,46.0,4.47,DHM Research
-governor,OR,2010-10-25,48.0,41.0,4.15,SurveyUSA
-governor,OR,2010-10-28,46.0,43.0,3.16,DHM Research
-governor,PA,2010-09-11,40.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-09-13,39.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-09-15,37.0,38.0,4.08,Digital Research
-governor,PA,2010-09-18,39.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-09-17,39.0,54.0,3.82,Quinnipiac University
-governor,PA,2010-09-21,38.1,50.1,2.64,Magellan Strategies
-governor,PA,2010-09-19,44.0,52.0,3.67,Big Village
-governor,PA,2010-09-20,37.0,46.0,4.74,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-09-25,40.0,46.0,3.54,Susquehanna Polling & Research Inc.
-governor,PA,2010-09-23,32.0,36.0,4.79,Franklin & Marshall College Center for Opinion Research
-governor,PA,2010-09-26,40.0,47.0,4.47,Suffolk University
-governor,PA,2010-09-27,41.0,53.0,4.62,Marist College
-governor,PA,2010-09-29,41.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-10-01,36.0,47.0,4.16,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-10-07,37.9,44.8,2.11,ccAdvertising
-governor,PA,2010-10-10,38.0,48.0,2.38,Magellan Strategies
-governor,PA,2010-10-12,40.0,54.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-10-15,44.0,49.0,3.09,Quinnipiac University
-governor,PA,2010-10-17,46.0,48.0,3.73,Public Policy Polling
-governor,PA,2010-10-18,40.0,47.0,4.98,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-10-21,45.0,50.0,3.87,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-10-22,37.0,46.0,4.74,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-10-23,43.0,49.0,5,Ipsos
-governor,PA,2010-10-21,35.0,51.0,4.52,Franklin & Marshall College Center for Opinion Research
-governor,PA,2010-10-23,45.0,52.0,3.49,Big Village
-governor,PA,2010-10-26,37.0,52.0,4.66,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-10-26,41.0,48.0,3.54,Susquehanna Polling & Research Inc.
-governor,PA,2010-10-28,43.0,52.0,3.87,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2010-10-27,44.0,51.0,4.66,Marist College
-governor,PA,2010-10-27,41.0,50.0,3.58,YouGov
-governor,PA,2010-10-27,42.0,52.0,2.84,Quinnipiac University
-governor,PA,2010-10-30,42.0,49.0,4.59,Muhlenberg College Institute of Public Opinion
-governor,PA,2010-10-30,45.0,52.0,3.6,Public Policy Polling
-governor,PA,2010-10-30,40.0,51.0,4.19,YouGov
-governor,RI,2010-09-16,30.0,23.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2010-09-16,36.0,13.0,4.49,Quest Research Group
-governor,RI,2010-09-24,32.8,18.6,4.47,Fleming & Associates
-governor,RI,2010-09-28,29.6,14.3,4.21,Brown University A. Alfred Taubman Center for American Politics and Policy
-governor,RI,2010-10-04,30.0,22.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2010-10-05,37.0,22.0,4.51,Quest Research Group
-governor,RI,2010-10-21,28.0,25.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2010-10-23,26.2,25.5,4.47,Fleming & Associates
-governor,RI,2010-10-25,25.0,28.0,4.37,Quest Research Group
-governor,SC,2010-09-22,33.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SC,2010-09-26,41.0,51.0,4.47,EMC Research
-governor,SC,2010-09-30,41.0,45.0,3.97,Crantford Research
-governor,SC,2010-10-03,44.0,49.0,4.47,EMC Research
-governor,SC,2010-10-07,37.0,46.0,3.67,Winthrop University Center for Public Opinion & Policy Research
-governor,SC,2010-10-18,41.0,43.0,3.91,Crantford Research
-governor,SC,2010-10-19,38.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SC,2010-10-19,37.0,51.0,3.37,InsiderAdvantage
-governor,SC,2010-10-22,39.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SD,2010-09-08,28.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SD,2010-10-04,33.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SD,2010-10-20,36.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SD,2010-10-20,35.0,54.0,3.54,Mason-Dixon Polling & Strategy
-governor,SD,2010-10-21,40.0,43.0,3.84,Nielson Brothers Polling
-governor,TN,2010-09-20,24.0,55.0,4.08,CJ&N
-governor,TN,2010-10-07,31.0,59.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,TN,2010-10-26,27.8,56.5,4.08,CJ&N
-governor,TX,2010-09-04,42.0,48.0,4.31,Public Policy Polling
-governor,TX,2010-09-05,33.0,39.0,3.54,YouGov
-governor,TX,2010-09-22,42.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,TX,2010-09-19,39.0,46.0,3.8,Blum & Weprin Associates
-governor,TX,2010-09-26,43.0,48.0,4.9,Texas Lyceum
-governor,TX,2010-09-29,36.0,50.0,3.77,Public Strategies Inc.
-governor,TX,2010-10-06,42.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,TX,2010-10-12,35.5,49.8,2.57,ccAdvertising
-governor,TX,2010-10-21,42.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,TX,2010-10-24,37.0,49.0,3.85,Blum & Weprin Associates
-governor,TX,2010-10-27,44.0,53.0,4.2,Public Policy Polling
-governor,UT,2010-09-10,31.0,52.0,4.08,Dan Jones & Associates
-governor,UT,2010-10-13,29.0,66.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,UT,2010-10-13,33.0,58.0,4.08,Dan Jones & Associates
-governor,UT,2010-10-26,32.0,59.0,4.0,Mason-Dixon Polling & Strategy
-governor,UT,2010-10-27,29.0,63.0,2.88,Dan Jones & Associates
-governor,VT,2010-09-13,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,VT,2010-10-12,43.0,44.0,4.0,Mason-Dixon Polling & Strategy
-governor,VT,2010-10-28,50.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-09-15,43.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-09-15,42.0,45.0,4.08,Mellman Group
-governor,WI,2010-09-18,41.0,50.0,3.88,Public Policy Polling
-governor,WI,2010-09-19,42.0,53.0,3.22,Big Village
-governor,WI,2010-09-25,45.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-09-27,43.0,51.0,4.46,Marist College
-governor,WI,2010-09-29,44.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-10-01,37.0,44.0,5,Voter/Consumer Research
-governor,WI,2010-10-01,37.0,44.0,5,Wood Communications Group
-governor,WI,2010-10-06,38.8,48.2,2.25,ccAdvertising
-governor,WI,2010-10-05,47.0,47.0,4.08,FM3 Research
-governor,WI,2010-10-11,42.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-10-10,42.0,52.0,4.71,Ipsos
-governor,WI,2010-10-10,44.0,52.0,3.28,Big Village
-governor,WI,2010-10-14,41.0,50.0,4.99,St. Norbert College Strategic Research Institute
-governor,WI,2010-10-19,45.0,47.0,4.08,Mellman Group
-governor,WI,2010-10-25,42.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2010-10-26,36.0,44.0,5,Voter/Consumer Research
-governor,WI,2010-10-27,44.0,48.0,3.78,Forward Strategies
-governor,WI,2010-10-27,44.0,53.0,2.7,Public Policy Polling
-governor,WI,2010-10-27,44.0,51.0,4.51,Marist College
-governor,WI,2010-10-27,43.0,53.0,3.45,YouGov
-governor,WY,2010-09-30,25.0,61.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AL,2010-09-21,30.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AK,2010-09-19,25.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AK,2010-09-24,19.0,30.0,5,Craciun Research Group
-senate,AK,2010-09-25,13.7,35.8,4.18,Alaska Survey Research
-senate,AK,2010-09-26,22.0,38.0,3.28,Big Village
-senate,AK,2010-10-05,16.0,31.0,4.47,Hays Research Group
-senate,AK,2010-10-08,27.0,33.0,5,National Research
-senate,AK,2010-10-09,26.0,35.0,2.44,Public Policy Polling
-senate,AK,2010-10-09,21.0,26.0,4.91,Dittman Research
-senate,AK,2010-10-13,27.0,35.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AK,2010-10-17,25.0,23.0,4.47,Hays Research Group
-senate,AK,2010-10-17,23.0,37.0,3.25,Big Village
-senate,AK,2010-10-21,25.0,26.0,4.47,Hays Research Group
-senate,AK,2010-10-25,29.0,23.0,4.47,Hays Research Group
-senate,AK,2010-10-26,23.0,29.0,5,Hellenthal & Associates
-senate,AK,2010-10-25,23.0,27.0,4.87,Dittman Research
-senate,AK,2010-10-30,30.0,37.0,2.55,Public Policy Polling
-senate,AK,2010-10-30,25.9,27.1,4.46,Hays Research Group
-senate,AZ,2010-09-07,37.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AZ,2010-10-03,33.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AZ,2010-10-05,22.0,56.0,4.71,Behavior Research Center (Rocky Mountain Poll)
-senate,AZ,2010-10-23,38.0,56.0,3.88,Public Policy Polling
-senate,AZ,2010-10-28,32.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AR,2010-09-13,34.0,51.0,4.0,Mason-Dixon Polling & Strategy
-senate,AR,2010-09-16,29.0,56.0,4.18,Hendrix College
-senate,AR,2010-09-18,39.0,53.0,4.79,Ipsos
-senate,AR,2010-09-30,37.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AR,2010-10-11,37.1,51.7,2.17,ccAdvertising
-senate,AR,2010-10-14,36.0,49.0,2.26,Hendrix College
-senate,AR,2010-10-17,41.0,55.0,3.52,Big Village
-senate,AR,2010-10-17,34.0,55.0,4.0,Mason-Dixon Polling & Strategy
-senate,AR,2010-10-14,35.0,54.0,4.2,University of Arkansas Department of Political Science
-senate,AR,2010-10-28,36.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-09-06,47.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-09-04,48.0,44.0,3.4,Big Village
-senate,CA,2010-09-11,46.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-09-15,50.0,42.0,3.98,Public Policy Polling
-senate,CA,2010-09-18,47.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-09-20,47.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-09-20,49.0,43.0,4.05,SurveyUSA
-senate,CA,2010-09-18,41.0,41.0,4.09,Field Research Corp. (Field Poll)
-senate,CA,2010-09-19,51.0,43.0,3.45,Greenberg Quinlan Rosner/American Viewpoint
-senate,CA,2010-09-23,42.0,35.0,3.01,Public Policy Institute of California
-senate,CA,2010-09-26,52.0,43.0,3.57,Big Village
-senate,CA,2010-09-29,42.2,46.3,2.44,ccAdvertising
-senate,CA,2010-10-03,49.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-02,46.0,43.0,3.86,SurveyUSA
-senate,CA,2010-10-03,49.0,45.0,4.72,Ipsos
-senate,CA,2010-10-05,55.0,39.0,4.47,Angus Reid Global
-senate,CA,2010-10-13,49.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-13,43.0,46.0,3.54,WPA Intelligence
-senate,CA,2010-10-13,46.0,45.0,4.72,Ipsos
-senate,CA,2010-10-16,48.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-14,43.0,38.0,3.06,Public Policy Institute of California
-senate,CA,2010-10-17,46.0,44.0,4.01,SurveyUSA
-senate,CA,2010-10-18,44.0,44.0,4.08,Tarrance Group
-senate,CA,2010-10-17,50.0,42.0,3.29,Greenberg Quinlan Rosner/American Viewpoint
-senate,CA,2010-10-21,48.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-23,48.0,44.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-22,52.0,43.0,4.01,Public Policy Polling
-senate,CA,2010-10-23,52.0,43.0,4.08,Suffolk University
-senate,CA,2010-10-23,45.0,40.0,4.1,SurveyUSA
-senate,CA,2010-10-23,50.0,45.0,3.36,Big Village
-senate,CA,2010-10-20,49.0,41.0,3.03,Field Research Corp. (Field Poll)
-senate,CA,2010-10-27,49.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CA,2010-10-26,48.0,40.0,3.78,Tulchin Research
-senate,CA,2010-10-27,48.6,45.3,3.5,YouGov
-senate,CA,2010-10-28,51.0,44.0,4.54,Angus Reid Global
-senate,CA,2010-10-30,50.0,46.0,3.37,Public Policy Polling
-senate,CA,2010-10-30,49.0,45.0,3.51,YouGov
-senate,CA,2010-10-28,46.0,38.0,4.13,SurveyUSA
-senate,CO,2010-09-13,41.7,39.4,3.84,ccAdvertising
-senate,CO,2010-09-14,45.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-09-19,44.0,49.0,3.41,Big Village
-senate,CO,2010-09-25,43.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-09-24,48.0,46.0,3.54,GQR
-senate,CO,2010-09-27,43.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-09-27,42.0,50.0,4.32,Marist College
-senate,CO,2010-09-29,43.0,48.0,3.93,SurveyUSA
-senate,CO,2010-10-01,46.0,45.0,3.46,Public Policy Polling
-senate,CO,2010-10-03,45.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-10-03,44.0,41.0,4.43,Harstad Strategic Research
-senate,CO,2010-10-14,45.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-10-16,45.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-10-19,45.0,48.0,4.97,Ipsos
-senate,CO,2010-10-20,47.0,47.0,4.01,SurveyUSA
-senate,CO,2010-10-22,47.0,47.0,3.5,Public Policy Polling
-senate,CO,2010-10-25,44.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-10-25,43.0,42.0,4.47,RBI Strategies & Research
-senate,CO,2010-10-23,46.0,47.0,3.47,Big Village
-senate,CO,2010-10-27,45.0,49.0,4.03,Marist College
-senate,CO,2010-10-27,49.0,48.0,3.42,YouGov
-senate,CO,2010-10-30,46.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2010-10-30,48.0,49.0,3.07,Public Policy Polling
-senate,CT,2010-09-09,53.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-09-10,51.0,45.0,3.38,Quinnipiac University
-senate,CT,2010-09-10,54.0,39.0,3.54,EMC Research
-senate,CT,2010-09-26,50.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-09-23,49.0,46.0,3.04,Quinnipiac University
-senate,CT,2010-10-02,52.0,42.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-01,53.0,41.0,3.51,Public Policy Polling
-senate,CT,2010-10-03,52.0,45.0,2.48,MRG Research
-senate,CT,2010-10-03,53.0,38.0,4.08,GQR
-senate,CT,2010-10-05,54.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-03,54.0,41.0,3.6,Big Village
-senate,CT,2010-10-09,49.0,43.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-09,54.0,43.0,2.99,Quinnipiac University
-senate,CT,2010-10-14,51.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-19,57.0,39.0,4.47,Suffolk University
-senate,CT,2010-10-23,53.0,42.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-24,56.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-21,54.0,42.0,3.77,Quinnipiac University
-senate,CT,2010-10-25,52.0,44.0,2.33,MRG Research
-senate,CT,2010-10-27,52.7,42.8,3.57,YouGov
-senate,CT,2010-10-28,54.0,43.0,3.63,Public Policy Polling
-senate,CT,2010-10-31,53.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2010-10-28,53.0,44.0,3.28,Quinnipiac University
-senate,DE,2010-09-15,53.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,DE,2010-09-20,49.0,33.7,3.84,ccAdvertising
-senate,DE,2010-09-26,49.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,DE,2010-09-23,49.0,30.0,3.7,University of Delaware Center for Political Communication
-senate,DE,2010-09-30,53.0,36.0,3.53,Fairleigh Dickinson University
-senate,DE,2010-10-09,54.0,38.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,DE,2010-10-10,54.0,36.0,3.28,Magellan Strategies
-senate,DE,2010-10-10,57.0,38.0,3.56,Monmouth University Polling Institute
-senate,DE,2010-10-11,54.0,33.0,2.06,SurveyUSA
-senate,DE,2010-10-10,57.0,38.0,3.46,Big Village
-senate,DE,2010-10-14,51.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,DE,2010-10-23,57.0,36.0,3.54,Fairleigh Dickinson University
-senate,DE,2010-10-26,51.0,41.0,2.92,Monmouth University Polling Institute
-senate,FL,2010-09-04,24.0,36.0,3.34,Big Village
-senate,FL,2010-09-04,23.0,43.0,3.14,Susquehanna Polling & Research Inc.
-senate,FL,2010-09-11,21.0,43.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-09-11,21.0,40.0,4.54,Ipsos
-senate,FL,2010-09-14,23.0,41.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-09-21,23.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2010-09-28,21.0,41.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-09-26,23.0,42.0,3.57,Big Village
-senate,FL,2010-09-25,18.0,46.0,2.95,Quinnipiac University
-senate,FL,2010-09-28,18.0,39.0,3.53,Zogby Analytics
-senate,FL,2010-09-29,16.0,40.0,3.54,Public Opinion Strategies
-senate,FL,2010-10-05,21.0,42.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2010-10-07,19.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-10-09,21.0,44.0,4.72,Public Policy Polling
-senate,FL,2010-10-08,22.0,44.0,3.08,Quinnipiac University
-senate,FL,2010-10-08,22.0,45.0,2.95,Susquehanna Polling & Research Inc.
-senate,FL,2010-10-16,22.0,39.0,4.47,Suffolk University
-senate,FL,2010-10-18,20.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-10-17,20.0,46.0,3.54,Big Village
-senate,FL,2010-10-17,20.0,41.0,4.16,Ipsos
-senate,FL,2010-10-20,18.0,40.0,3.53,Zogby Analytics
-senate,FL,2010-10-21,15.0,42.0,3.57,Quinnipiac University
-senate,FL,2010-10-26,23.0,47.0,3.84,Susquehanna Polling & Research Inc.
-senate,FL,2010-10-27,16.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2010-10-27,18.0,42.0,3.48,YouGov
-senate,FL,2010-10-30,21.0,47.0,3.6,Public Policy Polling
-senate,FL,2010-10-30,20.0,48.0,2.56,Susquehanna Polling & Research Inc.
-senate,FL,2010-10-30,15.0,46.0,4.27,YouGov
-senate,FL,2010-10-28,18.0,45.0,3.29,Quinnipiac University
-senate,GA,2010-09-11,34.0,56.0,4.09,SurveyUSA
-senate,GA,2010-09-14,33.0,52.0,4.0,Mason-Dixon Polling & Strategy
-senate,GA,2010-09-16,34.0,52.0,3.98,InsiderAdvantage
-senate,GA,2010-09-21,36.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,GA,2010-09-27,29.0,61.0,4.93,InsiderAdvantage
-senate,GA,2010-10-06,38.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,GA,2010-10-19,35.0,55.8,1.75,Landmark Communications
-senate,GA,2010-10-24,29.0,59.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,GA,2010-10-23,34.0,58.0,4.08,SurveyUSA
-senate,GA,2010-10-27,33.0,56.0,4.0,Mason-Dixon Polling & Strategy
-senate,HI,2010-10-02,65.0,29.0,2.75,Public Policy Polling
-senate,HI,2010-10-13,53.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,HI,2010-10-23,62.7,30.6,2.91,MRG Research
-senate,ID,2010-09-14,17.0,61.0,4.0,Mason-Dixon Polling & Strategy
-senate,ID,2010-10-21,20.0,64.0,4.0,Mason-Dixon Polling & Strategy
-senate,IL,2010-09-07,37.0,41.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-09-13,36.32,38.65,2.69,We Ask America
-senate,IL,2010-09-21,41.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-09-25,40.0,42.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-09-25,36.0,40.0,4.61,Public Policy Polling
-senate,IL,2010-09-25,40.0,37.0,4.07,Global Strategy Group
-senate,IL,2010-09-26,43.0,42.0,3.48,Big Village
-senate,IL,2010-09-26,38.0,36.0,4.08,Market Shares Corp.
-senate,IL,2010-09-30,41.0,42.0,4.47,Suffolk University
-senate,IL,2010-10-04,41.0,45.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-05,36.8,37.3,3.63,Southern Illinois University Paul Simon Public Policy Institute
-senate,IL,2010-10-11,44.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-11,44.0,41.0,4.08,GQR
-senate,IL,2010-10-15,40.0,42.0,4.24,Public Policy Polling
-senate,IL,2010-10-15,41.0,36.0,4.08,Impact Research
-senate,IL,2010-10-18,40.0,44.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-19,41.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,IL,2010-10-20,41.0,44.0,3.78,Market Shares Corp.
-senate,IL,2010-10-23,41.0,43.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-22,38.0,36.0,4.08,Impact Research
-senate,IL,2010-10-26,42.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-27,39.0,37.0,5,Impact Research
-senate,IL,2010-10-30,42.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2010-10-27,48.5,45.8,3.86,YouGov
-senate,IL,2010-10-30,42.0,46.0,3.5,Public Policy Polling
-senate,IN,2010-09-14,34.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,IN,2010-09-30,33.0,51.0,4.47,EPIC-MRA
-senate,IN,2010-10-20,34.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,IN,2010-10-20,35.0,53.0,4.47,EPIC-MRA
-senate,IN,2010-10-23,32.0,54.0,2.5,SurveyUSA
-senate,IA,2010-09-21,30.0,61.0,4.26,Selzer & Co.
-senate,IA,2010-09-23,37.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,IA,2010-10-28,30.0,61.0,3.52,Selzer & Co.
-senate,KS,2010-09-15,24.0,66.0,4.08,SurveyUSA
-senate,KS,2010-10-11,27.0,67.0,4.02,SurveyUSA
-senate,KS,2010-10-24,26.0,66.0,4.22,SurveyUSA
-senate,KY,2010-09-07,39.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,KY,2010-09-04,46.0,46.0,3.39,Big Village
-senate,KY,2010-09-09,45.0,47.0,3.84,Benenson Strategy Group
-senate,KY,2010-09-11,42.0,49.0,3.23,Public Policy Polling
-senate,KY,2010-09-21,42.0,45.0,3.78,Benenson Strategy Group
-senate,KY,2010-09-22,47.0,49.0,4.05,SurveyUSA
-senate,KY,2010-09-29,38.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,KY,2010-10-05,39.5,43.4,3.48,Braun Research
-senate,KY,2010-10-18,42.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,KY,2010-10-17,49.0,47.0,4.08,"Normington, Petts & Associates"
-senate,KY,2010-10-18,43.0,48.0,4.0,Mason-Dixon Polling & Strategy
-senate,KY,2010-10-23,43.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,KY,2010-10-23,40.0,53.0,3.33,Public Policy Polling
-senate,KY,2010-10-23,43.0,50.0,3.57,Big Village
-senate,KY,2010-10-27,41.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,KY,2010-10-26,39.0,46.5,3.54,Braun Research
-senate,KY,2010-10-26,43.0,52.0,3.96,SurveyUSA
-senate,KY,2010-10-27,44.0,52.0,3.49,YouGov
-senate,KY,2010-10-29,40.0,55.0,3.13,Public Policy Polling
-senate,MD,2010-09-15,54.0,38.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MD,2010-09-24,61.0,29.0,3.7,ABC News/The Washington Post
-senate,MD,2010-10-13,55.0,38.0,3.5,Gonzales Research & Marketing Strategies Inc.
-senate,MD,2010-10-17,59.0,32.0,3.54,OpinionWorks
-senate,MD,2010-10-21,64.0,27.0,2.64,ABC News/The Washington Post
-senate,MD,2010-10-24,56.0,38.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MA,2010-01-04,50.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MA,2010-01-04,53.0,36.0,4.25,University of New Hampshire Survey Center
-senate,MA,2010-01-08,47.0,48.0,3.59,Public Policy Polling
-senate,MA,2010-01-09,50.0,36.0,3.54,Mellman Group
-senate,MA,2010-01-11,49.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,MA,2010-01-12,46.0,50.0,4.47,Suffolk University
-senate,MA,2010-01-13,45.0,48.0,4.08,American Research Group
-senate,MA,2010-01-15,41.2,50.8,4.21,MRG Research
-senate,MA,2010-01-14,38.5,53.9,3.25,CrossTarget
-senate,MA,2010-01-17,43.1,52.2,3.53,InsiderAdvantage
-senate,MA,2010-01-16,46.0,51.0,2.85,Public Policy Polling
-senate,MA,2010-01-16,45.0,52.0,4.08,American Research Group
-senate,MA,2010-01-17,42.3,51.9,4.17,CrossTarget
-senate,MO,2010-09-07,43.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-09-16,39.0,43.0,4.08,Global Strategy Group
-senate,MO,2010-09-21,44.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-09-21,41.0,45.0,3.78,Garin-Hart-Yang Research Group
-senate,MO,2010-10-02,42.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-10-05,43.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-10-03,40.0,53.0,3.47,Big Village
-senate,MO,2010-10-16,43.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-10-17,41.0,46.0,3.93,Public Policy Polling
-senate,MO,2010-10-19,43.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2010-10-19,40.0,49.0,4.0,Mason-Dixon Polling & Strategy
-senate,MO,2010-10-24,40.7,53.8,3.86,Missouri State University Center for Social Science and Public Policy Research
-senate,MO,2010-10-27,42.5,53.6,3.56,YouGov
-senate,NV,2010-09-08,46.0,44.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2010-09-11,44.0,45.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-09-11,46.0,44.0,4.65,Ipsos
-senate,NV,2010-09-13,48.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-09-12,41.0,42.0,3.56,Big Village
-senate,NV,2010-09-18,45.0,46.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-09-21,43.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2010-09-22,45.0,40.0,4.47,Public Opinion Strategies
-senate,NV,2010-09-28,48.0,47.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-02,46.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-05,46.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-03,40.0,42.0,3.56,Big Village
-senate,NV,2010-10-09,47.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-08,47.0,45.0,4.45,Public Policy Polling
-senate,NV,2010-10-09,46.0,43.0,4.47,Suffolk University
-senate,NV,2010-10-11,45.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2010-10-17,47.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-20,39.8,45.7,2.3,ccAdvertising
-senate,NV,2010-10-25,45.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-23,45.0,49.0,3.6,Big Village
-senate,NV,2010-10-26,45.0,49.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2010-10-30,45.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2010-10-27,47.0,49.0,3.75,YouGov
-senate,NV,2010-10-30,46.0,47.0,3.83,Public Policy Polling
-senate,NH,2010-09-11,43.0,47.0,2.26,Public Policy Polling
-senate,NH,2010-09-15,44.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NH,2010-09-24,32.0,46.0,3.54,American Research Group
-senate,NH,2010-09-26,35.0,50.0,4.6,University of New Hampshire Survey Center
-senate,NH,2010-10-04,42.0,47.0,4.08,American Research Group
-senate,NH,2010-10-10,44.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,NH,2010-10-09,35.0,50.0,3.76,University of New Hampshire Survey Center
-senate,NH,2010-10-21,33.1,55.8,3.67,ccAdvertising
-senate,NH,2010-10-27,41.0,56.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NH,2010-10-28,41.0,56.0,2.77,Public Policy Polling
-senate,NH,2010-10-29,36.0,54.0,3.36,University of New Hampshire Survey Center
-senate,NY,2010-09-16,58.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NY,2010-09-18,54.0,38.0,3.65,Quinnipiac University
-senate,NY,2010-09-20,54.0,33.0,4.18,SurveyUSA
-senate,NY,2010-09-18,63.0,30.0,3.53,Siena College
-senate,NY,2010-09-21,59.0,38.0,4.03,Marist College
-senate,NY,2010-10-02,59.0,37.0,4.11,Public Policy Polling
-senate,NY,2010-10-03,57.0,41.0,4.13,Big Village
-senate,NY,2010-10-03,63.0,32.0,2.96,Quinnipiac University
-senate,NY,2010-10-06,60.0,30.0,3.99,SurveyUSA
-senate,NY,2010-10-06,67.0,27.0,4.47,Angus Reid Global
-senate,NY,2010-10-12,63.0,30.0,3.97,SurveyUSA
-senate,NY,2010-10-12,61.0,21.0,3.28,The New York Times
-senate,NY,2010-10-16,67.0,28.0,3.93,Siena College
-senate,NY,2010-10-19,59.0,31.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NY,2010-10-19,63.0,35.0,4.45,Marist College
-senate,NY,2010-10-21,64.0,32.0,3.86,Quinnipiac University
-senate,NY,2010-10-27,60.0,36.0,4.91,Marist College
-senate,NY,2010-10-27,59.0,35.0,3.49,YouGov
-senate,NY,2010-10-27,62.0,32.0,4.29,SurveyUSA
-senate,NY,2010-10-28,61.0,35.0,4.3,Angus Reid Global
-senate,NY,2010-10-29,64.0,32.0,4.07,Siena College
-senate,NY,2010-10-30,60.0,34.0,4.16,YouGov
-senate,NY,2010-09-16,49.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NY,2010-09-18,48.0,42.0,3.65,Quinnipiac University
-senate,NY,2010-09-20,45.0,44.0,4.18,SurveyUSA
-senate,NY,2010-09-18,57.0,31.0,3.53,Siena College
-senate,NY,2010-09-21,54.0,42.0,4.03,Marist College
-senate,NY,2010-10-02,50.0,40.0,4.11,Public Policy Polling
-senate,NY,2010-10-03,55.0,41.0,4.13,Big Village
-senate,NY,2010-10-03,55.0,34.0,2.96,Quinnipiac University
-senate,NY,2010-10-06,54.0,35.0,3.99,SurveyUSA
-senate,NY,2010-10-12,54.0,36.0,3.97,SurveyUSA
-senate,NY,2010-10-12,50.0,25.0,3.28,The New York Times
-senate,NY,2010-10-16,60.0,31.0,3.93,Siena College
-senate,NY,2010-10-19,54.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NY,2010-10-19,56.0,38.0,4.45,Marist College
-senate,NY,2010-10-21,57.0,34.0,3.86,Quinnipiac University
-senate,NY,2010-10-27,55.0,40.0,4.91,Marist College
-senate,NY,2010-10-27,57.0,33.0,3.49,YouGov
-senate,NY,2010-10-27,56.0,36.0,4.29,SurveyUSA
-senate,NY,2010-10-28,59.0,38.0,4.44,Angus Reid Global
-senate,NY,2010-10-29,57.0,37.0,4.07,Siena College
-senate,NY,2010-10-30,58.1,34.5,4.16,YouGov
-senate,NC,2010-09-08,38.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NC,2010-09-12,34.0,58.0,4.15,SurveyUSA
-senate,NC,2010-09-16,31.0,51.0,4.08,National Research
-senate,NC,2010-09-25,36.0,49.0,3.83,Public Policy Polling
-senate,NC,2010-09-27,31.0,45.0,5,High Point University Survey Research Center
-senate,NC,2010-10-12,38.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NC,2010-10-16,40.0,48.0,4.09,Public Policy Polling
-senate,NC,2010-10-19,34.0,44.0,4.08,The Tyson Group
-senate,NC,2010-10-24,38.0,53.0,4.12,SurveyUSA
-senate,NC,2010-10-30,40.0,52.0,3.44,Public Policy Polling
-senate,ND,2010-09-20,25.0,68.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,ND,2010-10-21,25.0,72.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-11,41.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-13,41.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-12,40.0,49.0,3.95,SurveyUSA
-senate,OH,2010-09-12,41.0,52.0,3.49,Big Village
-senate,OH,2010-09-11,35.0,55.0,3.7,Quinnipiac University
-senate,OH,2010-09-18,36.0,49.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-18,40.0,55.0,3.43,University of Cincinnati (Ohio Poll)
-senate,OH,2010-09-25,37.0,50.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-24,37.0,50.0,4.77,Ipsos
-senate,OH,2010-09-25,38.0,41.0,4.08,Ipsos
-senate,OH,2010-09-27,42.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-09-25,34.0,45.0,3.26,CBS News/The New York Times
-senate,OH,2010-10-02,37.0,53.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-10-01,36.0,55.0,3.12,Quinnipiac University
-senate,OH,2010-10-05,37.0,47.0,4.47,Suffolk University
-senate,OH,2010-10-07,43.0,52.0,4.47,Angus Reid Global
-senate,OH,2010-10-09,35.0,52.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-10-11,34.0,57.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-10-10,36.0,58.0,3.92,University of Cincinnati (Ohio Poll)
-senate,OH,2010-10-14,34.0,55.0,2.9,Quinnipiac University
-senate,OH,2010-10-16,39.0,58.0,3.45,University of Cincinnati (Ohio Poll)
-senate,OH,2010-10-19,35.3,53.6,2.2,ccAdvertising
-senate,OH,2010-10-17,40.0,55.0,3.4,Big Village
-senate,OH,2010-10-20,38.0,49.0,4.47,WPA Intelligence
-senate,OH,2010-10-21,36.0,53.0,3.82,Quinnipiac University
-senate,OH,2010-10-26,33.0,57.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2010-10-24,37.0,52.0,4.04,SurveyUSA
-senate,OH,2010-10-27,40.0,53.0,3.52,YouGov
-senate,OH,2010-10-28,40.0,57.0,4.51,Angus Reid Global
-senate,OH,2010-10-24,40.0,56.0,2.63,Columbus Dispatch
-senate,OH,2010-10-29,39.0,57.0,2.72,Public Policy Polling
-senate,OH,2010-10-27,37.0,56.0,3.43,Quinnipiac University
-senate,OH,2010-10-30,39.0,52.0,4.23,YouGov
-senate,OH,2010-10-29,39.0,60.0,3.28,University of Cincinnati (Ohio Poll)
-senate,OK,2010-09-23,26.0,68.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OK,2010-10-05,22.0,62.0,5,SoonerPoll.com
-senate,OR,2010-09-13,54.0,38.0,4.22,SurveyUSA
-senate,OR,2010-10-10,52.0,36.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,OR,2010-10-13,52.7,39.0,2.11,ccAdvertising
-senate,OR,2010-10-13,56.0,34.0,3.92,SurveyUSA
-senate,OR,2010-10-16,56.0,40.0,2.85,Public Policy Polling
-senate,OR,2010-10-25,53.0,42.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,OR,2010-10-25,57.0,32.0,4.15,SurveyUSA
-senate,PA,2010-09-11,41.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-09-13,41.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-09-15,36.0,40.0,4.08,Digital Research
-senate,PA,2010-09-18,40.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-09-17,43.0,50.0,3.82,Quinnipiac University
-senate,PA,2010-09-21,40.6,49.4,2.64,Magellan Strategies
-senate,PA,2010-09-19,44.0,49.0,3.67,Big Village
-senate,PA,2010-09-20,39.0,46.0,4.74,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-09-25,42.0,45.0,3.54,Susquehanna Polling & Research Inc.
-senate,PA,2010-09-23,29.0,38.0,4.79,Franklin & Marshall College Center for Opinion Research
-senate,PA,2010-09-26,40.0,45.0,4.47,Suffolk University
-senate,PA,2010-09-27,42.0,51.0,4.62,Marist College
-senate,PA,2010-09-29,40.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-10-01,38.0,45.0,4.16,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-10-05,45.0,46.0,3.54,"Normington, Petts & Associates"
-senate,PA,2010-10-07,40.1,47.7,2.11,ccAdvertising
-senate,PA,2010-10-09,47.0,44.0,4.07,Garin-Hart-Yang Research Group
-senate,PA,2010-10-12,39.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-10-15,46.0,48.0,3.09,Quinnipiac University
-senate,PA,2010-10-17,46.0,45.0,3.73,Public Policy Polling
-senate,PA,2010-10-18,44.0,41.0,4.98,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-10-21,44.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-10-22,43.0,46.0,4.74,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-10-23,46.0,46.0,5,Ipsos
-senate,PA,2010-10-21,40.0,48.0,4.52,Franklin & Marshall College Center for Opinion Research
-senate,PA,2010-10-23,45.0,49.0,3.49,Big Village
-senate,PA,2010-10-26,40.0,48.0,4.66,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-10-26,44.0,46.0,3.54,Susquehanna Polling & Research Inc.
-senate,PA,2010-10-28,46.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2010-10-27,45.0,52.0,4.66,Marist College
-senate,PA,2010-10-27,44.0,50.0,3.58,YouGov
-senate,PA,2010-10-27,45.0,50.0,2.84,Quinnipiac University
-senate,PA,2010-10-30,44.0,48.0,4.59,Muhlenberg College Institute of Public Opinion
-senate,PA,2010-10-30,46.0,51.0,3.6,Public Policy Polling
-senate,PA,2010-10-30,44.0,48.0,4.19,YouGov
-senate,SC,2010-09-22,21.0,64.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,SC,2010-09-30,23.0,56.0,3.97,Crantford Research
-senate,SC,2010-10-07,11.2,58.3,3.67,Winthrop University Center for Public Opinion & Policy Research
-senate,SC,2010-10-19,21.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,UT,2010-09-10,25.0,52.0,4.08,Dan Jones & Associates
-senate,UT,2010-10-13,28.0,61.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,UT,2010-10-13,31.0,53.0,4.08,Dan Jones & Associates
-senate,UT,2010-10-26,32.0,48.0,4.0,Mason-Dixon Polling & Strategy
-senate,UT,2010-10-27,30.0,57.0,2.88,Dan Jones & Associates
-senate,VT,2010-09-13,62.0,32.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VT,2010-10-12,62.0,27.0,4.0,Mason-Dixon Polling & Strategy
-senate,WA,2010-09-11,50.0,41.0,4.47,Elway Research
-senate,WA,2010-09-14,51.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-09-12,53.0,44.0,3.32,Big Village
-senate,WA,2010-09-20,50.0,48.0,4.05,SurveyUSA
-senate,WA,2010-09-25,48.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-09-26,42.0,48.0,4.47,"Fabrizio, Lee & Associates/McLaughlin & Associates"
-senate,WA,2010-09-28,47.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-06,46.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-08,43.9,43.7,2.24,ccAdvertising
-senate,WA,2010-10-09,46.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-09,55.0,40.0,4.71,Elway Research
-senate,WA,2010-10-10,51.0,43.0,3.43,Big Village
-senate,WA,2010-10-13,50.0,47.0,4.04,SurveyUSA
-senate,WA,2010-10-09,50.0,42.0,4.47,University of Washington Center for Survey Research
-senate,WA,2010-10-15,49.0,47.0,2.31,Public Policy Polling
-senate,WA,2010-10-17,49.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-16,48.0,47.0,4.12,Marist College
-senate,WA,2010-10-27,47.0,48.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-26,47.0,47.0,3.84,SurveyUSA
-senate,WA,2010-10-27,49.0,48.0,3.96,Marist College
-senate,WA,2010-10-23,51.0,45.0,3.79,University of Washington Center for Survey Research
-senate,WA,2010-10-30,49.0,47.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2010-10-27,50.2,47.5,3.43,YouGov
-senate,WA,2010-10-30,48.0,50.0,2.21,Public Policy Polling
-senate,WV,2010-09-07,39.2,41.9,3.84,ccAdvertising
-senate,WV,2010-09-08,50.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-09-19,50.0,43.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-09-18,43.0,46.0,2.68,Public Policy Polling
-senate,WV,2010-09-27,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-02,43.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-05,44.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-09,48.0,45.0,2.83,Public Policy Polling
-senate,WV,2010-10-09,49.0,44.0,4.04,GQR
-senate,WV,2010-10-12,46.0,49.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-11,48.0,38.0,4.71,Orion Strategies
-senate,WV,2010-10-10,44.0,44.0,3.57,Big Village
-senate,WV,2010-10-15,43.0,39.8,2.43,ccAdvertising
-senate,WV,2010-10-16,45.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-19,43.0,50.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-19,48.0,43.0,3.53,Global Strategy Group
-senate,WV,2010-10-23,46.0,48.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-23,50.0,44.0,2.83,Public Policy Polling
-senate,WV,2010-10-26,49.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-31,50.0,46.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WV,2010-10-30,51.0,46.0,2.44,Public Policy Polling
-senate,WI,2010-09-15,44.0,51.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2010-09-18,41.0,52.0,3.84,Public Policy Polling
-senate,WI,2010-09-19,45.0,51.0,3.22,Big Village
-senate,WI,2010-09-25,44.0,52.0,3.16,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2010-09-27,45.0,52.0,4.46,Marist College
-senate,WI,2010-09-29,42.0,54.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2010-10-01,41.0,49.0,5,Voter/Consumer Research
-senate,WI,2010-10-01,41.0,49.0,5,Wood Communications Group
-senate,WI,2010-10-06,42.4,49.7,2.25,ccAdvertising
-senate,WI,2010-10-05,48.0,49.0,4.08,FM3 Research
-senate,WI,2010-10-11,45.0,52.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2010-10-10,44.0,51.0,4.71,Ipsos
-senate,WI,2010-10-09,48.0,48.0,3.84,FM3 Research
-senate,WI,2010-10-10,44.0,52.0,3.28,Big Village
-senate,WI,2010-10-14,47.0,49.0,4.99,St. Norbert College Strategic Research Institute
-senate,WI,2010-10-25,46.0,53.0,3.65,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2010-10-26,44.0,48.0,5,Voter/Consumer Research
-senate,WI,2010-10-26,44.0,48.0,5,Wood Communications Group
-senate,WI,2010-10-27,46.0,50.0,3.78,Forward Strategies
-senate,WI,2010-10-27,44.0,53.0,2.7,Public Policy Polling
-senate,WI,2010-10-27,45.0,52.0,4.51,Marist College
-senate,WI,2010-10-27,46.0,52.0,3.45,YouGov
+mode,state,date,dem,rep,pollster,sigma
+governor,AK,2010-09-25,34.8,53.1,Alaska Survey Research,3
+governor,AK,2010-09-26,38.0,57.0,Big Village,3
+governor,AK,2010-10-09,42.0,51.0,Public Policy Polling,3
+governor,AK,2010-10-17,36.0,62.0,Big Village,3
+governor,AK,2010-10-30,43.0,54.0,Public Policy Polling,3
+governor,AR,2010-09-13,54.0,33.0,Mason-Dixon Polling & Strategy,3
+governor,AR,2010-09-18,55.0,37.0,Ipsos,3
+governor,AR,2010-10-17,62.0,35.0,Big Village,3
+governor,AR,2010-10-17,59.0,33.0,Mason-Dixon Polling & Strategy,3
+governor,AZ,2010-10-12,34.0,51.0,Moore Information Group,3
+governor,AZ,2010-10-23,44.0,52.0,Public Policy Polling,3
+governor,CA,2010-09-04,46.0,48.0,Big Village,3
+governor,CA,2010-09-15,47.0,42.0,Public Policy Polling,3
+governor,CA,2010-09-18,41.0,41.0,Field Research Corp. (Field Poll),3
+governor,CA,2010-09-20,46.0,43.0,SurveyUSA,3
+governor,CA,2010-09-23,37.0,38.0,Public Policy Institute of California,3
+governor,CA,2010-09-26,52.0,43.0,Big Village,3
+governor,CA,2010-10-02,47.0,43.0,SurveyUSA,3
+governor,CA,2010-10-03,50.0,43.0,Ipsos,3
+governor,CA,2010-10-05,53.0,41.0,Angus Reid Global,3
+governor,CA,2010-10-13,44.0,45.0,WPA Intelligence,3
+governor,CA,2010-10-13,48.0,44.0,Ipsos,3
+governor,CA,2010-10-14,44.0,36.0,Public Policy Institute of California,3
+governor,CA,2010-10-17,46.0,46.0,Tarrance Group,3
+governor,CA,2010-10-17,47.0,40.0,SurveyUSA,3
+governor,CA,2010-10-20,49.0,39.0,Field Research Corp. (Field Poll),3
+governor,CA,2010-10-22,53.0,42.0,Public Policy Polling,3
+governor,CA,2010-10-23,50.0,42.0,Suffolk University,3
+governor,CA,2010-10-23,46.0,38.0,SurveyUSA,3
+governor,CA,2010-10-23,51.0,44.0,Big Village,3
+governor,CA,2010-10-27,50.0,41.0,YouGov,3
+governor,CA,2010-10-28,49.0,44.0,Angus Reid Global,3
+governor,CA,2010-10-28,48.0,37.0,SurveyUSA,3
+governor,CA,2010-10-30,51.0,46.0,Public Policy Polling,3
+governor,CA,2010-10-30,51.0,41.0,YouGov,3
+governor,CO,2010-09-19,47.0,21.0,Big Village,3
+governor,CO,2010-09-27,48.0,19.0,Marist College,3
+governor,CO,2010-09-29,46.0,15.0,SurveyUSA,3
+governor,CO,2010-10-01,47.0,13.0,Public Policy Polling,3
+governor,CO,2010-10-16,46.0,14.0,Ipsos,3
+governor,CO,2010-10-20,44.0,9.0,Magellan Strategies,3
+governor,CO,2010-10-20,49.0,9.0,SurveyUSA,3
+governor,CO,2010-10-22,47.0,5.0,Public Policy Polling,3
+governor,CO,2010-10-23,51.0,10.0,Big Village,3
+governor,CO,2010-10-27,47.0,7.0,Marist College,3
+governor,CO,2010-10-27,47.0,9.0,YouGov,3
+governor,CO,2010-10-30,48.0,8.0,Public Policy Polling,3
+governor,CT,2010-09-10,50.0,41.0,Quinnipiac University,3
+governor,CT,2010-09-23,45.0,42.0,Quinnipiac University,3
+governor,CT,2010-10-01,50.0,40.0,Public Policy Polling,3
+governor,CT,2010-10-03,50.0,42.0,Big Village,3
+governor,CT,2010-10-09,49.0,42.0,Quinnipiac University,3
+governor,CT,2010-10-19,49.0,38.0,Suffolk University,3
+governor,CT,2010-10-21,48.0,43.0,Quinnipiac University,3
+governor,CT,2010-10-27,48.0,44.0,YouGov,3
+governor,CT,2010-10-28,47.0,49.0,Public Policy Polling,3
+governor,CT,2010-10-28,45.0,48.0,Quinnipiac University,3
+governor,FL,2010-09-04,49.0,42.0,Big Village,3
+governor,FL,2010-09-04,44.0,42.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-09-11,45.0,47.0,Ipsos,3
+governor,FL,2010-09-21,47.0,40.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2010-09-25,43.0,49.0,Quinnipiac University,3
+governor,FL,2010-09-26,45.0,47.0,Big Village,3
+governor,FL,2010-09-28,41.0,39.0,Zogby Analytics,3
+governor,FL,2010-09-30,42.0,44.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-10-05,44.0,40.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2010-10-07,44.0,45.0,Quinnipiac University,3
+governor,FL,2010-10-09,46.0,41.0,Public Policy Polling,3
+governor,FL,2010-10-12,48.0,45.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-10-16,45.0,38.0,Suffolk University,3
+governor,FL,2010-10-17,46.0,49.0,Big Village,3
+governor,FL,2010-10-17,41.0,44.0,Ipsos,3
+governor,FL,2010-10-20,45.0,45.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-10-20,43.0,39.0,Zogby Analytics,3
+governor,FL,2010-10-21,45.0,41.0,Quinnipiac University,3
+governor,FL,2010-10-24,45.0,47.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-10-26,46.0,43.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2010-10-27,44.0,41.0,YouGov,3
+governor,FL,2010-10-28,44.0,43.0,Quinnipiac University,3
+governor,FL,2010-10-30,48.0,47.0,Public Policy Polling,3
+governor,FL,2010-10-30,49.0,46.0,Susquehanna Polling & Research Inc.,3
+governor,FL,2010-10-30,45.0,45.0,YouGov,3
+governor,FL,2010-10-31,45.0,49.0,Susquehanna Polling & Research Inc.,3
+governor,GA,2010-09-11,38.0,49.0,SurveyUSA,3
+governor,GA,2010-09-14,41.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,GA,2010-10-19,38.9,47.0,Landmark Communications,3
+governor,GA,2010-10-23,39.0,49.0,SurveyUSA,3
+governor,GA,2010-10-27,41.6,48.5,Landmark Communications,3
+governor,GA,2010-10-27,40.0,47.0,Mason-Dixon Polling & Strategy,3
+governor,HI,2010-10-02,49.0,47.0,Public Policy Polling,3
+governor,IA,2010-09-21,33.0,52.0,Selzer & Co.,3
+governor,IA,2010-10-28,38.0,50.0,Selzer & Co.,3
+governor,ID,2010-09-14,29.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,ID,2010-10-21,30.0,52.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2010-09-12,37.0,50.0,SurveyUSA,3
+governor,IL,2010-09-13,32.4,41.9,We Ask America,3
+governor,IL,2010-09-25,35.0,42.0,Public Policy Polling,3
+governor,IL,2010-09-26,38.0,40.0,Big Village,3
+governor,IL,2010-09-26,39.0,38.0,Market Shares Corp.,3
+governor,IL,2010-09-30,43.0,37.0,Suffolk University,3
+governor,IL,2010-10-15,41.0,42.0,Public Policy Polling,3
+governor,IL,2010-10-19,40.0,44.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2010-10-20,39.0,43.0,Market Shares Corp.,3
+governor,IL,2010-10-27,42.2,49.5,YouGov,3
+governor,IL,2010-10-30,40.0,45.0,Public Policy Polling,3
+governor,KS,2010-09-15,32.0,59.0,SurveyUSA,3
+governor,KS,2010-10-11,32.0,60.0,SurveyUSA,3
+governor,KS,2010-10-24,32.0,59.0,SurveyUSA,3
+governor,MA,2010-09-18,41.0,34.0,Suffolk University,3
+governor,MA,2010-09-19,35.0,34.0,University of New Hampshire Survey Center,3
+governor,MA,2010-10-11,46.0,39.0,Suffolk University,3
+governor,MA,2010-10-19,43.0,39.0,University of New Hampshire Survey Center,3
+governor,MA,2010-10-26,46.0,39.0,Suffolk University,3
+governor,MD,2010-09-24,52.0,41.0,ABC News/The Washington Post,3
+governor,MD,2010-10-21,54.0,40.0,ABC News/The Washington Post,3
+governor,ME,2010-09-04,29.0,43.0,Public Policy Polling,3
+governor,ME,2010-10-27,24.0,40.0,Public Policy Polling,3
+governor,ME,2010-10-29,24.0,39.0,Maine People's Resource Center,3
+governor,MI,2010-09-07,35.9,56.2,Glengariff Group,3
+governor,MI,2010-09-11,29.0,53.0,EPIC-MRA,3
+governor,MI,2010-09-18,31.0,52.0,Public Policy Polling,3
+governor,MI,2010-10-05,29.0,49.0,EPIC-MRA,3
+governor,MI,2010-10-25,35.0,53.0,Glengariff Group,3
+governor,MI,2010-10-25,37.0,55.0,EPIC-MRA,3
+governor,MN,2010-09-13,38.0,36.0,SurveyUSA,3
+governor,MN,2010-09-22,39.0,30.0,Princeton Survey Research Associates International,3
+governor,MN,2010-10-12,42.0,37.0,SurveyUSA,3
+governor,MN,2010-10-20,41.0,34.0,Princeton Survey Research Associates International,3
+governor,MN,2010-10-26,39.0,38.0,SurveyUSA,3
+governor,MN,2010-10-28,43.0,40.0,Public Policy Polling,3
+governor,NH,2010-09-11,51.0,39.0,Public Policy Polling,3
+governor,NH,2010-09-24,42.0,40.0,American Research Group,3
+governor,NH,2010-09-26,51.0,34.0,University of New Hampshire Survey Center,3
+governor,NH,2010-10-04,51.0,41.0,American Research Group,3
+governor,NH,2010-10-09,51.0,38.0,University of New Hampshire Survey Center,3
+governor,NH,2010-10-28,53.0,44.0,Public Policy Polling,3
+governor,NH,2010-10-29,52.0,45.0,University of New Hampshire Survey Center,3
+governor,NM,2010-09-25,42.0,50.0,Public Policy Polling,3
+governor,NM,2010-09-29,42.0,49.0,Research & Polling Inc.,3
+governor,NM,2010-10-13,42.0,54.0,SurveyUSA,3
+governor,NM,2010-10-27,43.0,53.0,Research & Polling Inc.,3
+governor,NV,2010-09-08,36.0,52.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2010-09-11,31.0,60.0,Ipsos,3
+governor,NV,2010-09-12,31.0,58.0,Big Village,3
+governor,NV,2010-09-21,37.0,51.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2010-10-03,33.0,56.0,Big Village,3
+governor,NV,2010-10-08,43.0,52.0,Public Policy Polling,3
+governor,NV,2010-10-09,39.0,50.0,Suffolk University,3
+governor,NV,2010-10-11,37.0,52.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2010-10-23,34.0,58.0,Big Village,3
+governor,NV,2010-10-26,38.0,54.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2010-10-27,40.0,56.0,YouGov,3
+governor,NV,2010-10-30,44.0,55.0,Public Policy Polling,3
+governor,NY,2010-09-18,49.0,43.0,Quinnipiac University,3
+governor,NY,2010-09-18,57.0,24.0,Siena College,3
+governor,NY,2010-09-20,49.0,40.0,SurveyUSA,3
+governor,NY,2010-09-21,53.0,34.0,Marist College,3
+governor,NY,2010-09-28,56.0,40.0,Marist College,3
+governor,NY,2010-10-02,53.0,38.0,Public Policy Polling,3
+governor,NY,2010-10-03,56.0,32.0,Siena College,3
+governor,NY,2010-10-03,55.0,41.0,Big Village,3
+governor,NY,2010-10-03,55.0,37.0,Quinnipiac University,3
+governor,NY,2010-10-06,57.0,34.0,SurveyUSA,3
+governor,NY,2010-10-06,63.0,32.0,Angus Reid Global,3
+governor,NY,2010-10-12,59.0,33.0,SurveyUSA,3
+governor,NY,2010-10-16,63.0,26.0,Siena College,3
+governor,NY,2010-10-19,60.0,37.0,Marist College,3
+governor,NY,2010-10-21,55.0,35.0,Quinnipiac University,3
+governor,NY,2010-10-27,56.0,37.0,Marist College,3
+governor,NY,2010-10-27,57.0,27.0,YouGov,3
+governor,NY,2010-10-27,55.0,33.0,SurveyUSA,3
+governor,NY,2010-10-28,55.0,38.0,Angus Reid Global,3
+governor,NY,2010-10-29,58.0,33.0,Siena College,3
+governor,NY,2010-10-30,56.0,29.0,YouGov,3
+governor,OH,2010-09-11,37.0,54.0,Quinnipiac University,3
+governor,OH,2010-09-12,40.0,52.0,SurveyUSA,3
+governor,OH,2010-09-12,44.0,51.0,Big Village,3
+governor,OH,2010-09-24,46.0,47.0,Ipsos,3
+governor,OH,2010-09-25,46.0,40.0,Ipsos,3
+governor,OH,2010-09-25,42.0,43.0,CBS News/The New York Times,3
+governor,OH,2010-10-01,41.0,50.0,Quinnipiac University,3
+governor,OH,2010-10-05,42.0,46.0,Suffolk University,3
+governor,OH,2010-10-07,46.0,48.0,Angus Reid Global,3
+governor,OH,2010-10-14,41.0,51.0,Quinnipiac University,3
+governor,OH,2010-10-17,48.0,47.0,Big Village,3
+governor,OH,2010-10-21,43.0,49.0,Quinnipiac University,3
+governor,OH,2010-10-24,44.0,49.0,SurveyUSA,3
+governor,OH,2010-10-27,45.0,48.0,YouGov,3
+governor,OH,2010-10-27,46.0,47.0,Quinnipiac University,3
+governor,OH,2010-10-28,46.0,49.0,Angus Reid Global,3
+governor,OH,2010-10-29,48.0,49.0,Public Policy Polling,3
+governor,OH,2010-10-30,45.0,48.0,YouGov,3
+governor,OR,2010-09-13,43.0,49.0,SurveyUSA,3
+governor,OR,2010-10-13,46.0,45.0,SurveyUSA,3
+governor,OR,2010-10-16,48.0,47.0,Public Policy Polling,3
+governor,OR,2010-10-18,45.0,44.0,Elway Research,3
+governor,OR,2010-10-23,49.0,45.0,Grove Insight,3
+governor,OR,2010-10-24,43.0,46.0,DHM Research,3
+governor,OR,2010-10-25,48.0,41.0,SurveyUSA,3
+governor,OR,2010-10-28,46.0,43.0,DHM Research,3
+governor,PA,2010-09-17,39.0,54.0,Quinnipiac University,3
+governor,PA,2010-09-19,44.0,52.0,Big Village,3
+governor,PA,2010-09-20,37.0,46.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-09-21,38.1,50.1,Magellan Strategies,3
+governor,PA,2010-09-23,32.0,36.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2010-09-25,40.0,46.0,Susquehanna Polling & Research Inc.,3
+governor,PA,2010-09-26,40.0,47.0,Suffolk University,3
+governor,PA,2010-09-27,41.0,53.0,Marist College,3
+governor,PA,2010-10-01,36.0,47.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-10-10,38.0,48.0,Magellan Strategies,3
+governor,PA,2010-10-15,44.0,49.0,Quinnipiac University,3
+governor,PA,2010-10-17,46.0,48.0,Public Policy Polling,3
+governor,PA,2010-10-18,40.0,47.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-10-21,35.0,51.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2010-10-22,37.0,46.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-10-23,43.0,49.0,Ipsos,3
+governor,PA,2010-10-23,45.0,52.0,Big Village,3
+governor,PA,2010-10-26,37.0,52.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-10-26,41.0,48.0,Susquehanna Polling & Research Inc.,3
+governor,PA,2010-10-27,44.0,51.0,Marist College,3
+governor,PA,2010-10-27,41.0,50.0,YouGov,3
+governor,PA,2010-10-27,42.0,52.0,Quinnipiac University,3
+governor,PA,2010-10-30,42.0,49.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2010-10-30,45.0,52.0,Public Policy Polling,3
+governor,PA,2010-10-30,40.0,51.0,YouGov,3
+governor,RI,2010-09-24,32.8,18.6,Fleming & Associates,3
+governor,RI,2010-10-23,26.2,25.5,Fleming & Associates,3
+governor,SD,2010-10-20,35.0,54.0,Mason-Dixon Polling & Strategy,3
+governor,TX,2010-09-04,42.0,48.0,Public Policy Polling,3
+governor,TX,2010-09-05,33.0,39.0,YouGov,3
+governor,TX,2010-10-27,44.0,53.0,Public Policy Polling,3
+governor,UT,2010-09-10,31.0,52.0,Dan Jones & Associates,3
+governor,UT,2010-10-13,33.0,58.0,Dan Jones & Associates,3
+governor,UT,2010-10-26,32.0,59.0,Mason-Dixon Polling & Strategy,3
+governor,UT,2010-10-27,29.0,63.0,Dan Jones & Associates,3
+governor,VT,2010-10-12,43.0,44.0,Mason-Dixon Polling & Strategy,3
+governor,WI,2010-09-18,41.0,50.0,Public Policy Polling,3
+governor,WI,2010-09-19,42.0,53.0,Big Village,3
+governor,WI,2010-09-27,43.0,51.0,Marist College,3
+governor,WI,2010-10-10,42.0,52.0,Ipsos,3
+governor,WI,2010-10-10,44.0,52.0,Big Village,3
+governor,WI,2010-10-27,44.0,53.0,Public Policy Polling,3
+governor,WI,2010-10-27,44.0,51.0,Marist College,3
+governor,WI,2010-10-27,43.0,53.0,YouGov,3
+senate,AK,2010-09-25,13.7,35.8,Alaska Survey Research,3
+senate,AK,2010-09-26,22.0,38.0,Big Village,3
+senate,AK,2010-10-08,27.0,33.0,National Research,3
+senate,AK,2010-10-09,26.0,35.0,Public Policy Polling,3
+senate,AK,2010-10-17,23.0,37.0,Big Village,3
+senate,AK,2010-10-30,30.0,37.0,Public Policy Polling,3
+senate,AR,2010-09-13,34.0,51.0,Mason-Dixon Polling & Strategy,3
+senate,AR,2010-09-18,39.0,53.0,Ipsos,3
+senate,AR,2010-10-17,41.0,55.0,Big Village,3
+senate,AR,2010-10-17,34.0,55.0,Mason-Dixon Polling & Strategy,3
+senate,AZ,2010-10-23,38.0,56.0,Public Policy Polling,3
+senate,CA,2010-09-04,48.0,44.0,Big Village,3
+senate,CA,2010-09-15,50.0,42.0,Public Policy Polling,3
+senate,CA,2010-09-18,41.0,41.0,Field Research Corp. (Field Poll),3
+senate,CA,2010-09-20,49.0,43.0,SurveyUSA,3
+senate,CA,2010-09-23,42.0,35.0,Public Policy Institute of California,3
+senate,CA,2010-09-26,52.0,43.0,Big Village,3
+senate,CA,2010-10-02,46.0,43.0,SurveyUSA,3
+senate,CA,2010-10-03,49.0,45.0,Ipsos,3
+senate,CA,2010-10-05,55.0,39.0,Angus Reid Global,3
+senate,CA,2010-10-13,43.0,46.0,WPA Intelligence,3
+senate,CA,2010-10-13,46.0,45.0,Ipsos,3
+senate,CA,2010-10-14,43.0,38.0,Public Policy Institute of California,3
+senate,CA,2010-10-17,46.0,44.0,SurveyUSA,3
+senate,CA,2010-10-18,44.0,44.0,Tarrance Group,3
+senate,CA,2010-10-20,49.0,41.0,Field Research Corp. (Field Poll),3
+senate,CA,2010-10-22,52.0,43.0,Public Policy Polling,3
+senate,CA,2010-10-23,52.0,43.0,Suffolk University,3
+senate,CA,2010-10-23,45.0,40.0,SurveyUSA,3
+senate,CA,2010-10-23,50.0,45.0,Big Village,3
+senate,CA,2010-10-27,48.6,45.3,YouGov,3
+senate,CA,2010-10-28,51.0,44.0,Angus Reid Global,3
+senate,CA,2010-10-28,46.0,38.0,SurveyUSA,3
+senate,CA,2010-10-30,50.0,46.0,Public Policy Polling,3
+senate,CA,2010-10-30,49.0,45.0,YouGov,3
+senate,CO,2010-09-19,44.0,49.0,Big Village,3
+senate,CO,2010-09-27,42.0,50.0,Marist College,3
+senate,CO,2010-09-29,43.0,48.0,SurveyUSA,3
+senate,CO,2010-10-01,46.0,45.0,Public Policy Polling,3
+senate,CO,2010-10-19,45.0,48.0,Ipsos,3
+senate,CO,2010-10-20,47.0,47.0,SurveyUSA,3
+senate,CO,2010-10-22,47.0,47.0,Public Policy Polling,3
+senate,CO,2010-10-23,46.0,47.0,Big Village,3
+senate,CO,2010-10-27,45.0,49.0,Marist College,3
+senate,CO,2010-10-27,49.0,48.0,YouGov,3
+senate,CO,2010-10-30,48.0,49.0,Public Policy Polling,3
+senate,CT,2010-09-10,51.0,45.0,Quinnipiac University,3
+senate,CT,2010-09-23,49.0,46.0,Quinnipiac University,3
+senate,CT,2010-10-01,53.0,41.0,Public Policy Polling,3
+senate,CT,2010-10-03,54.0,41.0,Big Village,3
+senate,CT,2010-10-09,54.0,43.0,Quinnipiac University,3
+senate,CT,2010-10-19,57.0,39.0,Suffolk University,3
+senate,CT,2010-10-21,54.0,42.0,Quinnipiac University,3
+senate,CT,2010-10-27,52.7,42.8,YouGov,3
+senate,CT,2010-10-28,54.0,43.0,Public Policy Polling,3
+senate,CT,2010-10-28,53.0,44.0,Quinnipiac University,3
+senate,DE,2010-09-30,53.0,36.0,Fairleigh Dickinson University,3
+senate,DE,2010-10-10,54.0,36.0,Magellan Strategies,3
+senate,DE,2010-10-10,57.0,38.0,Monmouth University Polling Institute,3
+senate,DE,2010-10-10,57.0,38.0,Big Village,3
+senate,DE,2010-10-11,54.0,33.0,SurveyUSA,3
+senate,DE,2010-10-23,57.0,36.0,Fairleigh Dickinson University,3
+senate,DE,2010-10-26,51.0,41.0,Monmouth University Polling Institute,3
+senate,FL,2010-09-04,24.0,36.0,Big Village,3
+senate,FL,2010-09-04,23.0,43.0,Susquehanna Polling & Research Inc.,3
+senate,FL,2010-09-11,21.0,40.0,Ipsos,3
+senate,FL,2010-09-21,23.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2010-09-25,18.0,46.0,Quinnipiac University,3
+senate,FL,2010-09-26,23.0,42.0,Big Village,3
+senate,FL,2010-09-28,18.0,39.0,Zogby Analytics,3
+senate,FL,2010-10-05,21.0,42.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2010-10-08,22.0,44.0,Quinnipiac University,3
+senate,FL,2010-10-08,22.0,45.0,Susquehanna Polling & Research Inc.,3
+senate,FL,2010-10-09,21.0,44.0,Public Policy Polling,3
+senate,FL,2010-10-16,22.0,39.0,Suffolk University,3
+senate,FL,2010-10-17,20.0,46.0,Big Village,3
+senate,FL,2010-10-17,20.0,41.0,Ipsos,3
+senate,FL,2010-10-20,18.0,40.0,Zogby Analytics,3
+senate,FL,2010-10-21,15.0,42.0,Quinnipiac University,3
+senate,FL,2010-10-26,23.0,47.0,Susquehanna Polling & Research Inc.,3
+senate,FL,2010-10-27,18.0,42.0,YouGov,3
+senate,FL,2010-10-28,18.0,45.0,Quinnipiac University,3
+senate,FL,2010-10-30,21.0,47.0,Public Policy Polling,3
+senate,FL,2010-10-30,20.0,48.0,Susquehanna Polling & Research Inc.,3
+senate,FL,2010-10-30,15.0,46.0,YouGov,3
+senate,GA,2010-09-11,34.0,56.0,SurveyUSA,3
+senate,GA,2010-09-14,33.0,52.0,Mason-Dixon Polling & Strategy,3
+senate,GA,2010-10-19,35.0,55.8,Landmark Communications,3
+senate,GA,2010-10-23,34.0,58.0,SurveyUSA,3
+senate,GA,2010-10-27,33.0,56.0,Mason-Dixon Polling & Strategy,3
+senate,HI,2010-10-02,65.0,29.0,Public Policy Polling,3
+senate,IA,2010-09-21,30.0,61.0,Selzer & Co.,3
+senate,IA,2010-10-28,30.0,61.0,Selzer & Co.,3
+senate,ID,2010-09-14,17.0,61.0,Mason-Dixon Polling & Strategy,3
+senate,ID,2010-10-21,20.0,64.0,Mason-Dixon Polling & Strategy,3
+senate,IL,2010-09-13,36.32,38.65,We Ask America,3
+senate,IL,2010-09-25,36.0,40.0,Public Policy Polling,3
+senate,IL,2010-09-26,43.0,42.0,Big Village,3
+senate,IL,2010-09-26,38.0,36.0,Market Shares Corp.,3
+senate,IL,2010-09-30,41.0,42.0,Suffolk University,3
+senate,IL,2010-10-15,40.0,42.0,Public Policy Polling,3
+senate,IL,2010-10-19,41.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,IL,2010-10-20,41.0,44.0,Market Shares Corp.,3
+senate,IL,2010-10-27,48.5,45.8,YouGov,3
+senate,IL,2010-10-30,42.0,46.0,Public Policy Polling,3
+senate,IN,2010-09-30,33.0,51.0,EPIC-MRA,3
+senate,IN,2010-10-20,35.0,53.0,EPIC-MRA,3
+senate,IN,2010-10-23,32.0,54.0,SurveyUSA,3
+senate,KS,2010-09-15,24.0,66.0,SurveyUSA,3
+senate,KS,2010-10-11,27.0,67.0,SurveyUSA,3
+senate,KS,2010-10-24,26.0,66.0,SurveyUSA,3
+senate,KY,2010-09-04,46.0,46.0,Big Village,3
+senate,KY,2010-09-11,42.0,49.0,Public Policy Polling,3
+senate,KY,2010-09-22,47.0,49.0,SurveyUSA,3
+senate,KY,2010-10-18,43.0,48.0,Mason-Dixon Polling & Strategy,3
+senate,KY,2010-10-23,40.0,53.0,Public Policy Polling,3
+senate,KY,2010-10-23,43.0,50.0,Big Village,3
+senate,KY,2010-10-26,43.0,52.0,SurveyUSA,3
+senate,KY,2010-10-27,44.0,52.0,YouGov,3
+senate,KY,2010-10-29,40.0,55.0,Public Policy Polling,3
+senate,MA,2010-01-04,53.0,36.0,University of New Hampshire Survey Center,3
+senate,MA,2010-01-08,47.0,48.0,Public Policy Polling,3
+senate,MA,2010-01-12,46.0,50.0,Suffolk University,3
+senate,MA,2010-01-13,45.0,48.0,American Research Group,3
+senate,MA,2010-01-16,46.0,51.0,Public Policy Polling,3
+senate,MA,2010-01-16,45.0,52.0,American Research Group,3
+senate,MD,2010-09-24,61.0,29.0,ABC News/The Washington Post,3
+senate,MD,2010-10-21,64.0,27.0,ABC News/The Washington Post,3
+senate,MO,2010-10-03,40.0,53.0,Big Village,3
+senate,MO,2010-10-17,41.0,46.0,Public Policy Polling,3
+senate,MO,2010-10-19,40.0,49.0,Mason-Dixon Polling & Strategy,3
+senate,MO,2010-10-27,42.5,53.6,YouGov,3
+senate,NC,2010-09-12,34.0,58.0,SurveyUSA,3
+senate,NC,2010-09-16,31.0,51.0,National Research,3
+senate,NC,2010-09-25,36.0,49.0,Public Policy Polling,3
+senate,NC,2010-10-16,40.0,48.0,Public Policy Polling,3
+senate,NC,2010-10-19,34.0,44.0,The Tyson Group,3
+senate,NC,2010-10-24,38.0,53.0,SurveyUSA,3
+senate,NC,2010-10-30,40.0,52.0,Public Policy Polling,3
+senate,NH,2010-09-11,43.0,47.0,Public Policy Polling,3
+senate,NH,2010-09-24,32.0,46.0,American Research Group,3
+senate,NH,2010-09-26,35.0,50.0,University of New Hampshire Survey Center,3
+senate,NH,2010-10-04,42.0,47.0,American Research Group,3
+senate,NH,2010-10-09,35.0,50.0,University of New Hampshire Survey Center,3
+senate,NH,2010-10-28,41.0,56.0,Public Policy Polling,3
+senate,NH,2010-10-29,36.0,54.0,University of New Hampshire Survey Center,3
+senate,NV,2010-09-08,46.0,44.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2010-09-11,46.0,44.0,Ipsos,3
+senate,NV,2010-09-12,41.0,42.0,Big Village,3
+senate,NV,2010-09-21,43.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2010-10-03,40.0,42.0,Big Village,3
+senate,NV,2010-10-08,47.0,45.0,Public Policy Polling,3
+senate,NV,2010-10-09,46.0,43.0,Suffolk University,3
+senate,NV,2010-10-11,45.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2010-10-23,45.0,49.0,Big Village,3
+senate,NV,2010-10-26,45.0,49.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2010-10-27,47.0,49.0,YouGov,3
+senate,NV,2010-10-30,46.0,47.0,Public Policy Polling,3
+senate,NY,2010-09-18,54.0,38.0,Quinnipiac University,3
+senate,NY,2010-09-18,63.0,30.0,Siena College,3
+senate,NY,2010-09-18,48.0,42.0,Quinnipiac University,3
+senate,NY,2010-09-18,57.0,31.0,Siena College,3
+senate,NY,2010-09-20,54.0,33.0,SurveyUSA,3
+senate,NY,2010-09-20,45.0,44.0,SurveyUSA,3
+senate,NY,2010-09-21,59.0,38.0,Marist College,3
+senate,NY,2010-09-21,54.0,42.0,Marist College,3
+senate,NY,2010-10-02,59.0,37.0,Public Policy Polling,3
+senate,NY,2010-10-02,50.0,40.0,Public Policy Polling,3
+senate,NY,2010-10-03,57.0,41.0,Big Village,3
+senate,NY,2010-10-03,63.0,32.0,Quinnipiac University,3
+senate,NY,2010-10-03,55.0,41.0,Big Village,3
+senate,NY,2010-10-03,55.0,34.0,Quinnipiac University,3
+senate,NY,2010-10-06,60.0,30.0,SurveyUSA,3
+senate,NY,2010-10-06,67.0,27.0,Angus Reid Global,3
+senate,NY,2010-10-06,54.0,35.0,SurveyUSA,3
+senate,NY,2010-10-12,63.0,30.0,SurveyUSA,3
+senate,NY,2010-10-12,54.0,36.0,SurveyUSA,3
+senate,NY,2010-10-16,67.0,28.0,Siena College,3
+senate,NY,2010-10-16,60.0,31.0,Siena College,3
+senate,NY,2010-10-19,63.0,35.0,Marist College,3
+senate,NY,2010-10-19,56.0,38.0,Marist College,3
+senate,NY,2010-10-21,64.0,32.0,Quinnipiac University,3
+senate,NY,2010-10-21,57.0,34.0,Quinnipiac University,3
+senate,NY,2010-10-27,60.0,36.0,Marist College,3
+senate,NY,2010-10-27,59.0,35.0,YouGov,3
+senate,NY,2010-10-27,62.0,32.0,SurveyUSA,3
+senate,NY,2010-10-27,55.0,40.0,Marist College,3
+senate,NY,2010-10-27,57.0,33.0,YouGov,3
+senate,NY,2010-10-27,56.0,36.0,SurveyUSA,3
+senate,NY,2010-10-28,61.0,35.0,Angus Reid Global,3
+senate,NY,2010-10-28,59.0,38.0,Angus Reid Global,3
+senate,NY,2010-10-29,64.0,32.0,Siena College,3
+senate,NY,2010-10-29,57.0,37.0,Siena College,3
+senate,NY,2010-10-30,60.0,34.0,YouGov,3
+senate,NY,2010-10-30,58.1,34.5,YouGov,3
+senate,OH,2010-09-11,35.0,55.0,Quinnipiac University,3
+senate,OH,2010-09-12,40.0,49.0,SurveyUSA,3
+senate,OH,2010-09-12,41.0,52.0,Big Village,3
+senate,OH,2010-09-24,37.0,50.0,Ipsos,3
+senate,OH,2010-09-25,38.0,41.0,Ipsos,3
+senate,OH,2010-09-25,34.0,45.0,CBS News/The New York Times,3
+senate,OH,2010-10-01,36.0,55.0,Quinnipiac University,3
+senate,OH,2010-10-05,37.0,47.0,Suffolk University,3
+senate,OH,2010-10-07,43.0,52.0,Angus Reid Global,3
+senate,OH,2010-10-14,34.0,55.0,Quinnipiac University,3
+senate,OH,2010-10-17,40.0,55.0,Big Village,3
+senate,OH,2010-10-20,38.0,49.0,WPA Intelligence,3
+senate,OH,2010-10-21,36.0,53.0,Quinnipiac University,3
+senate,OH,2010-10-24,37.0,52.0,SurveyUSA,3
+senate,OH,2010-10-27,40.0,53.0,YouGov,3
+senate,OH,2010-10-27,37.0,56.0,Quinnipiac University,3
+senate,OH,2010-10-28,40.0,57.0,Angus Reid Global,3
+senate,OH,2010-10-29,39.0,57.0,Public Policy Polling,3
+senate,OH,2010-10-30,39.0,52.0,YouGov,3
+senate,OR,2010-09-13,54.0,38.0,SurveyUSA,3
+senate,OR,2010-10-13,56.0,34.0,SurveyUSA,3
+senate,OR,2010-10-16,56.0,40.0,Public Policy Polling,3
+senate,OR,2010-10-25,57.0,32.0,SurveyUSA,3
+senate,PA,2010-09-17,43.0,50.0,Quinnipiac University,3
+senate,PA,2010-09-19,44.0,49.0,Big Village,3
+senate,PA,2010-09-20,39.0,46.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-09-21,40.6,49.4,Magellan Strategies,3
+senate,PA,2010-09-23,29.0,38.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2010-09-25,42.0,45.0,Susquehanna Polling & Research Inc.,3
+senate,PA,2010-09-26,40.0,45.0,Suffolk University,3
+senate,PA,2010-09-27,42.0,51.0,Marist College,3
+senate,PA,2010-10-01,38.0,45.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-10-15,46.0,48.0,Quinnipiac University,3
+senate,PA,2010-10-17,46.0,45.0,Public Policy Polling,3
+senate,PA,2010-10-18,44.0,41.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-10-21,40.0,48.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2010-10-22,43.0,46.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-10-23,46.0,46.0,Ipsos,3
+senate,PA,2010-10-23,45.0,49.0,Big Village,3
+senate,PA,2010-10-26,40.0,48.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-10-26,44.0,46.0,Susquehanna Polling & Research Inc.,3
+senate,PA,2010-10-27,45.0,52.0,Marist College,3
+senate,PA,2010-10-27,44.0,50.0,YouGov,3
+senate,PA,2010-10-27,45.0,50.0,Quinnipiac University,3
+senate,PA,2010-10-30,44.0,48.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2010-10-30,46.0,51.0,Public Policy Polling,3
+senate,PA,2010-10-30,44.0,48.0,YouGov,3
+senate,UT,2010-09-10,25.0,52.0,Dan Jones & Associates,3
+senate,UT,2010-10-13,31.0,53.0,Dan Jones & Associates,3
+senate,UT,2010-10-26,32.0,48.0,Mason-Dixon Polling & Strategy,3
+senate,UT,2010-10-27,30.0,57.0,Dan Jones & Associates,3
+senate,VT,2010-10-12,62.0,27.0,Mason-Dixon Polling & Strategy,3
+senate,WA,2010-09-11,50.0,41.0,Elway Research,3
+senate,WA,2010-09-12,53.0,44.0,Big Village,3
+senate,WA,2010-09-20,50.0,48.0,SurveyUSA,3
+senate,WA,2010-10-09,55.0,40.0,Elway Research,3
+senate,WA,2010-10-10,51.0,43.0,Big Village,3
+senate,WA,2010-10-13,50.0,47.0,SurveyUSA,3
+senate,WA,2010-10-15,49.0,47.0,Public Policy Polling,3
+senate,WA,2010-10-16,48.0,47.0,Marist College,3
+senate,WA,2010-10-26,47.0,47.0,SurveyUSA,3
+senate,WA,2010-10-27,49.0,48.0,Marist College,3
+senate,WA,2010-10-27,50.2,47.5,YouGov,3
+senate,WA,2010-10-30,48.0,50.0,Public Policy Polling,3
+senate,WI,2010-09-18,41.0,52.0,Public Policy Polling,3
+senate,WI,2010-09-19,45.0,51.0,Big Village,3
+senate,WI,2010-09-27,45.0,52.0,Marist College,3
+senate,WI,2010-10-10,44.0,51.0,Ipsos,3
+senate,WI,2010-10-10,44.0,52.0,Big Village,3
+senate,WI,2010-10-27,44.0,53.0,Public Policy Polling,3
+senate,WI,2010-10-27,45.0,52.0,Marist College,3
+senate,WI,2010-10-27,46.0,52.0,YouGov,3
+senate,WV,2010-09-18,43.0,46.0,Public Policy Polling,3
+senate,WV,2010-10-09,48.0,45.0,Public Policy Polling,3
+senate,WV,2010-10-10,44.0,44.0,Big Village,3
+senate,WV,2010-10-23,50.0,44.0,Public Policy Polling,3
+senate,WV,2010-10-30,51.0,46.0,Public Policy Polling,3

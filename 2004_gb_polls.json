@@ -1,1 +1,2153 @@
-{"genericBallot": [{"end_date": "2004-09-04", "dem": 41.9, "rep": 40.4, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-04", "dem": 46.0, "rep": 48.0, "pollster": "Gallup", "sample": "1038"}, {"end_date": "2004-09-07", "dem": 44.5, "rep": 40.5, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-07", "dem": 46.0, "rep": 42.0, "pollster": "YouGov", "sample": "2106"}, {"end_date": "2004-09-08", "dem": 46.0, "rep": 49.0, "pollster": "Ipsos", "sample": "1038"}, {"end_date": "2004-09-08", "dem": 46.0, "rep": 45.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-09-10", "dem": 43.8, "rep": 40.1, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-10", "dem": 48.0, "rep": 40.0, "pollster": "Knowledge Networks", "sample": "959"}, {"end_date": "2004-09-13", "dem": 45.4, "rep": 38.9, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-13", "dem": 48.0, "rep": 44.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-09-14", "dem": 45.0, "rep": 41.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1038"}, {"end_date": "2004-09-15", "dem": 45.0, "rep": 41.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-09-14", "dem": 41.0, "rep": 39.0, "pollster": "CBS News/The New York Times", "sample": "1038"}, {"end_date": "2004-09-16", "dem": 43.1, "rep": 41.9, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-18", "dem": 46.0, "rep": 42.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1038"}, {"end_date": "2004-09-19", "dem": 43.4, "rep": 41.1, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-20", "dem": 48.0, "rep": 45.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-09-21", "dem": 46.0, "rep": 49.0, "pollster": "Ipsos", "sample": "1038"}, {"end_date": "2004-09-22", "dem": 44.0, "rep": 43.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-09-22", "dem": 44.6, "rep": 40.2, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-25", "dem": 43.3, "rep": 41.8, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-27", "dem": 47.0, "rep": 46.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-09-28", "dem": 44.0, "rep": 40.7, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-09-28", "dem": 45.0, "rep": 42.0, "pollster": "YouGov", "sample": "2225"}, {"end_date": "2004-09-29", "dem": 46.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-09-29", "dem": 45.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1038"}, {"end_date": "2004-10-01", "dem": 45.0, "rep": 40.1, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-04", "dem": 45.5, "rep": 40.7, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-04", "dem": 46.0, "rep": 41.0, "pollster": "YouGov", "sample": "1566"}, {"end_date": "2004-10-04", "dem": 49.0, "rep": 45.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-10-05", "dem": 48.0, "rep": 44.0, "pollster": "Ipsos", "sample": "1038"}, {"end_date": "2004-10-06", "dem": 43.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-10-07", "dem": 43.9, "rep": 41.4, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-10", "dem": 44.4, "rep": 40.7, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-10", "dem": 48.0, "rep": 45.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-10-13", "dem": 44.0, "rep": 40.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-10-13", "dem": 43.6, "rep": 42.3, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-14", "dem": 44.0, "rep": 46.0, "pollster": "Princeton Survey Research Associates International", "sample": "1038"}, {"end_date": "2004-10-14", "dem": 45.0, "rep": 39.0, "pollster": "CBS News/The New York Times", "sample": "678"}, {"end_date": "2004-10-15", "dem": 49.0, "rep": 45.0, "pollster": "GQR", "sample": "1024"}, {"end_date": "2004-10-16", "dem": 44.1, "rep": 41.2, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-17", "dem": 48.0, "rep": 46.0, "pollster": "GQR", "sample": "1001"}, {"end_date": "2004-10-17", "dem": 44.0, "rep": 44.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1038"}, {"end_date": "2004-10-15", "dem": 46.0, "rep": 42.0, "pollster": "Knowledge Networks", "sample": "968"}, {"end_date": "2004-10-19", "dem": 44.5, "rep": 40.9, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-19", "dem": 47.0, "rep": 46.0, "pollster": "Ipsos", "sample": "1038"}, {"end_date": "2004-10-19", "dem": 47.0, "rep": 39.0, "pollster": "YouGov", "sample": "2535"}, {"end_date": "2004-10-19", "dem": 48.0, "rep": 45.0, "pollster": "The Winston Group", "sample": "1200"}, {"end_date": "2004-10-20", "dem": 46.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-10-20", "dem": 49.0, "rep": 44.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-10-20", "dem": 46.0, "rep": 43.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1038"}, {"end_date": "2004-10-21", "dem": 46.0, "rep": 47.0, "pollster": "Princeton Survey Research Associates International", "sample": "1038"}, {"end_date": "2004-10-22", "dem": 45.0, "rep": 42.6, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-23", "dem": 47.0, "rep": 50.0, "pollster": "Gallup", "sample": "1038"}, {"end_date": "2004-10-24", "dem": 51.0, "rep": 42.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-10-25", "dem": 44.4, "rep": 42.2, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-27", "dem": 44.0, "rep": 44.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-10-27", "dem": 48.0, "rep": 45.0, "pollster": "GQR", "sample": "1503"}, {"end_date": "2004-10-27", "dem": 45.0, "rep": 44.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1038"}, {"end_date": "2004-10-28", "dem": 45.2, "rep": 43.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2004-10-28", "dem": 44.0, "rep": 49.0, "pollster": "Princeton Survey Research Associates International", "sample": "882"}, {"end_date": "2004-10-30", "dem": 48.0, "rep": 46.0, "pollster": "GQR", "sample": "1038"}, {"end_date": "2004-10-30", "dem": 48.0, "rep": 47.0, "pollster": "Gallup", "sample": "1573"}, {"end_date": "2004-10-30", "dem": 44.0, "rep": 43.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1014"}, {"end_date": "2004-10-31", "dem": 44.0, "rep": 47.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2004-10-31", "dem": 45.6, "rep": 43.2, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}]}
+{
+  "genericBallot": [
+    {
+      "end_date": "2004-01-01",
+      "dem": 44.25022,
+      "rep": 44.80838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-02",
+      "dem": 44.25022,
+      "rep": 44.80838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-03",
+      "dem": 44.25022,
+      "rep": 44.80838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-04",
+      "dem": 44.25022,
+      "rep": 44.80838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-05",
+      "dem": 44.25022,
+      "rep": 44.80838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-06",
+      "dem": 45.03308,
+      "rep": 49.09946,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-07",
+      "dem": 42.02192,
+      "rep": 43.52014,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-08",
+      "dem": 41.91696,
+      "rep": 43.96053,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-09",
+      "dem": 41.91702,
+      "rep": 43.95984,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-10",
+      "dem": 41.917,
+      "rep": 43.95923,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-11",
+      "dem": 41.91698,
+      "rep": 43.95921,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-12",
+      "dem": 41.91625,
+      "rep": 43.9611,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-13",
+      "dem": 41.91649,
+      "rep": 43.96097,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-14",
+      "dem": 41.91676,
+      "rep": 43.96009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-15",
+      "dem": 41.91445,
+      "rep": 43.96224,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-16",
+      "dem": 41.91445,
+      "rep": 43.96224,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-17",
+      "dem": 41.91491,
+      "rep": 43.96228,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-18",
+      "dem": 41.91421,
+      "rep": 43.96272,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-19",
+      "dem": 42.20289,
+      "rep": 41.4811,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-20",
+      "dem": 42.20293,
+      "rep": 41.48057,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-21",
+      "dem": 42.20291,
+      "rep": 41.48013,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-22",
+      "dem": 42.20288,
+      "rep": 41.48012,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-23",
+      "dem": 42.20241,
+      "rep": 41.48163,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-24",
+      "dem": 42.20259,
+      "rep": 41.48159,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-25",
+      "dem": 42.2029,
+      "rep": 41.48066,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-26",
+      "dem": 42.20075,
+      "rep": 41.48283,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-27",
+      "dem": 42.20075,
+      "rep": 41.48283,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-28",
+      "dem": 42.20108,
+      "rep": 41.48285,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-29",
+      "dem": 42.2004,
+      "rep": 41.48326,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-30",
+      "dem": 42.19988,
+      "rep": 41.48365,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-01-31",
+      "dem": 42.20245,
+      "rep": 41.48217,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-01",
+      "dem": 42.20261,
+      "rep": 41.48217,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-02",
+      "dem": 42.20261,
+      "rep": 41.48217,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-03",
+      "dem": 42.20261,
+      "rep": 41.48217,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-04",
+      "dem": 42.20261,
+      "rep": 41.48217,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-05",
+      "dem": 42.47401,
+      "rep": 41.22258,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-06",
+      "dem": 42.474,
+      "rep": 41.22214,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-07",
+      "dem": 42.47403,
+      "rep": 41.22173,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-08",
+      "dem": 42.474,
+      "rep": 41.22173,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-09",
+      "dem": 42.47359,
+      "rep": 41.22314,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-10",
+      "dem": 42.47374,
+      "rep": 41.22325,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-11",
+      "dem": 42.47404,
+      "rep": 41.22235,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-12",
+      "dem": 42.47185,
+      "rep": 41.22453,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-13",
+      "dem": 42.47185,
+      "rep": 41.22453,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-14",
+      "dem": 42.47221,
+      "rep": 41.22456,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-15",
+      "dem": 42.47151,
+      "rep": 41.225,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-16",
+      "dem": 42.47103,
+      "rep": 41.22538,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-17",
+      "dem": 42.47345,
+      "rep": 41.22403,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-18",
+      "dem": 42.47367,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-19",
+      "dem": 42.47367,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-20",
+      "dem": 42.47367,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-21",
+      "dem": 42.47367,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-22",
+      "dem": 42.47367,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-23",
+      "dem": 42.4737,
+      "rep": 41.22405,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-24",
+      "dem": 42.47371,
+      "rep": 41.22406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-25",
+      "dem": 42.47342,
+      "rep": 41.22404,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-26",
+      "dem": 42.47332,
+      "rep": 41.22385,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-27",
+      "dem": 42.47305,
+      "rep": 41.22349,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-28",
+      "dem": 42.47295,
+      "rep": 41.2235,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-02-29",
+      "dem": 42.47308,
+      "rep": 41.22356,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-01",
+      "dem": 42.47305,
+      "rep": 41.22375,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-02",
+      "dem": 42.47311,
+      "rep": 41.22363,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-03",
+      "dem": 42.47311,
+      "rep": 41.22363,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-04",
+      "dem": 42.47311,
+      "rep": 41.22363,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-05",
+      "dem": 42.57594,
+      "rep": 41.31915,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-06",
+      "dem": 42.5759,
+      "rep": 41.31874,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-07",
+      "dem": 42.57596,
+      "rep": 41.31835,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-08",
+      "dem": 39.16222,
+      "rep": 36.39885,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-09",
+      "dem": 40.65793,
+      "rep": 37.65637,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-10",
+      "dem": 40.65748,
+      "rep": 37.56452,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-11",
+      "dem": 40.65756,
+      "rep": 37.56409,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-12",
+      "dem": 40.65761,
+      "rep": 37.56376,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-13",
+      "dem": 40.65759,
+      "rep": 37.56379,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-14",
+      "dem": 40.65718,
+      "rep": 37.5654,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-15",
+      "dem": 40.86419,
+      "rep": 37.69614,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-16",
+      "dem": 40.86429,
+      "rep": 37.69581,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-17",
+      "dem": 40.86415,
+      "rep": 37.69543,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-18",
+      "dem": 40.86387,
+      "rep": 37.69682,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-19",
+      "dem": 40.86406,
+      "rep": 37.6971,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-20",
+      "dem": 42.23679,
+      "rep": 38.21406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-21",
+      "dem": 42.23652,
+      "rep": 38.21447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-22",
+      "dem": 42.65376,
+      "rep": 38.92455,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-23",
+      "dem": 42.65384,
+      "rep": 38.92443,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-24",
+      "dem": 42.65373,
+      "rep": 38.9242,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-25",
+      "dem": 42.65368,
+      "rep": 38.92521,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-26",
+      "dem": 42.65381,
+      "rep": 38.9256,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-27",
+      "dem": 42.65414,
+      "rep": 38.92471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-28",
+      "dem": 42.65211,
+      "rep": 38.9269,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-29",
+      "dem": 42.65211,
+      "rep": 38.9269,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-30",
+      "dem": 42.65208,
+      "rep": 38.9267,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-03-31",
+      "dem": 42.65137,
+      "rep": 38.92728,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-01",
+      "dem": 43.23689,
+      "rep": 38.3978,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-02",
+      "dem": 43.23689,
+      "rep": 38.39767,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-03",
+      "dem": 43.23697,
+      "rep": 38.39764,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-04",
+      "dem": 43.23686,
+      "rep": 38.39746,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-05",
+      "dem": 43.23689,
+      "rep": 38.39831,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-06",
+      "dem": 43.23683,
+      "rep": 38.39645,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-07",
+      "dem": 43.23718,
+      "rep": 38.39554,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-08",
+      "dem": 43.23516,
+      "rep": 38.39781,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-09",
+      "dem": 43.23516,
+      "rep": 38.39781,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-10",
+      "dem": 43.2351,
+      "rep": 38.39765,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-11",
+      "dem": 43.2344,
+      "rep": 38.39819,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-12",
+      "dem": 43.23424,
+      "rep": 38.39839,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-13",
+      "dem": 43.23462,
+      "rep": 38.39818,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-14",
+      "dem": 43.23513,
+      "rep": 38.39834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-15",
+      "dem": 43.23513,
+      "rep": 38.39834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-16",
+      "dem": 43.23513,
+      "rep": 38.39834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-17",
+      "dem": 43.23513,
+      "rep": 38.39834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-18",
+      "dem": 43.23513,
+      "rep": 38.39834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-19",
+      "dem": 43.2352,
+      "rep": 38.39833,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-20",
+      "dem": 43.23522,
+      "rep": 38.39832,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-21",
+      "dem": 43.23491,
+      "rep": 38.39832,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-22",
+      "dem": 43.23479,
+      "rep": 38.3982,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-23",
+      "dem": 43.52402,
+      "rep": 38.63422,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-24",
+      "dem": 43.52411,
+      "rep": 38.63422,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-25",
+      "dem": 43.52415,
+      "rep": 38.63476,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-26",
+      "dem": 43.52415,
+      "rep": 38.63476,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-27",
+      "dem": 43.52408,
+      "rep": 38.63289,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-28",
+      "dem": 43.52446,
+      "rep": 38.63196,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-29",
+      "dem": 43.60484,
+      "rep": 38.48329,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-04-30",
+      "dem": 43.60487,
+      "rep": 38.4838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-01",
+      "dem": 43.60476,
+      "rep": 38.48209,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-02",
+      "dem": 43.60514,
+      "rep": 38.48108,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-03",
+      "dem": 43.60323,
+      "rep": 38.48332,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-04",
+      "dem": 43.92996,
+      "rep": 38.8555,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-05",
+      "dem": 43.92986,
+      "rep": 38.85386,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-06",
+      "dem": 44.50056,
+      "rep": 39.05434,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-07",
+      "dem": 44.50045,
+      "rep": 39.05284,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-08",
+      "dem": 44.50082,
+      "rep": 39.05193,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-09",
+      "dem": 44.49894,
+      "rep": 39.0541,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-10",
+      "dem": 44.49887,
+      "rep": 39.05399,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-11",
+      "dem": 44.49824,
+      "rep": 39.05453,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-12",
+      "dem": 44.49821,
+      "rep": 39.05463,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-13",
+      "dem": 44.49784,
+      "rep": 39.05471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-14",
+      "dem": 45.5187,
+      "rep": 39.20198,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-15",
+      "dem": 45.51903,
+      "rep": 39.20111,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-16",
+      "dem": 45.51722,
+      "rep": 39.20324,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-17",
+      "dem": 45.51714,
+      "rep": 39.20317,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-18",
+      "dem": 45.51648,
+      "rep": 39.20372,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-19",
+      "dem": 45.51647,
+      "rep": 39.20381,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-20",
+      "dem": 45.51664,
+      "rep": 39.20401,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-21",
+      "dem": 45.51696,
+      "rep": 39.2041,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-22",
+      "dem": 45.51696,
+      "rep": 39.2041,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-23",
+      "dem": 45.51696,
+      "rep": 39.2041,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-24",
+      "dem": 45.51696,
+      "rep": 39.2041,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-25",
+      "dem": 45.51706,
+      "rep": 39.20408,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-26",
+      "dem": 45.51676,
+      "rep": 39.20408,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-27",
+      "dem": 45.51664,
+      "rep": 39.20399,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-28",
+      "dem": 45.51665,
+      "rep": 39.20403,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-29",
+      "dem": 45.51658,
+      "rep": 39.20406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-30",
+      "dem": 45.51658,
+      "rep": 39.20406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-05-31",
+      "dem": 45.51659,
+      "rep": 39.20405,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-01",
+      "dem": 45.51652,
+      "rep": 39.20401,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-02",
+      "dem": 45.51652,
+      "rep": 39.20401,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-03",
+      "dem": 45.51668,
+      "rep": 39.20406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-04",
+      "dem": 45.51641,
+      "rep": 39.20411,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-05",
+      "dem": 46.9785,
+      "rep": 39.30882,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-06",
+      "dem": 47.00386,
+      "rep": 39.32301,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-07",
+      "dem": 46.72071,
+      "rep": 39.19237,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-08",
+      "dem": 46.74237,
+      "rep": 39.20526,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-09",
+      "dem": 47.69566,
+      "rep": 38.07291,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-10",
+      "dem": 47.56796,
+      "rep": 38.44203,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-11",
+      "dem": 47.59023,
+      "rep": 38.44592,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-12",
+      "dem": 47.60764,
+      "rep": 38.4456,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-13",
+      "dem": 47.62955,
+      "rep": 38.43422,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-14",
+      "dem": 47.64406,
+      "rep": 38.43228,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-15",
+      "dem": 47.65675,
+      "rep": 38.43085,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-16",
+      "dem": 47.66275,
+      "rep": 38.43144,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-17",
+      "dem": 47.66927,
+      "rep": 38.43204,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-18",
+      "dem": 47.6103,
+      "rep": 38.71076,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-19",
+      "dem": 47.62875,
+      "rep": 38.70645,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-20",
+      "dem": 47.64125,
+      "rep": 38.70864,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-21",
+      "dem": 47.65188,
+      "rep": 38.7103,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-22",
+      "dem": 47.66383,
+      "rep": 38.71231,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-23",
+      "dem": 47.6742,
+      "rep": 38.71397,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-24",
+      "dem": 48.50854,
+      "rep": 39.26702,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-25",
+      "dem": 48.52462,
+      "rep": 39.27144,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-26",
+      "dem": 48.54108,
+      "rep": 39.27659,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-27",
+      "dem": 48.55841,
+      "rep": 39.28102,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-28",
+      "dem": 48.5869,
+      "rep": 39.27755,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-29",
+      "dem": 48.51319,
+      "rep": 39.78365,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-06-30",
+      "dem": 48.52885,
+      "rep": 39.79092,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-01",
+      "dem": 47.7746,
+      "rep": 39.60194,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-02",
+      "dem": 47.78341,
+      "rep": 39.6067,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-03",
+      "dem": 47.79188,
+      "rep": 39.61152,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-04",
+      "dem": 47.80155,
+      "rep": 39.61746,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-05",
+      "dem": 47.80974,
+      "rep": 39.62279,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-06",
+      "dem": 47.82304,
+      "rep": 39.62533,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-07",
+      "dem": 47.83125,
+      "rep": 39.63179,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-08",
+      "dem": 47.75377,
+      "rep": 39.93284,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-09",
+      "dem": 47.75993,
+      "rep": 39.94319,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-10",
+      "dem": 47.76423,
+      "rep": 39.95343,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-11",
+      "dem": 47.76596,
+      "rep": 39.96188,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-12",
+      "dem": 47.76597,
+      "rep": 39.97077,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-13",
+      "dem": 47.76472,
+      "rep": 39.97952,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-14",
+      "dem": 47.7185,
+      "rep": 39.91845,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-15",
+      "dem": 47.71468,
+      "rep": 39.92943,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-16",
+      "dem": 47.55778,
+      "rep": 39.68052,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-17",
+      "dem": 47.55285,
+      "rep": 39.69022,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-18",
+      "dem": 47.5478,
+      "rep": 39.69506,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-19",
+      "dem": 47.54467,
+      "rep": 39.69869,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-20",
+      "dem": 47.53943,
+      "rep": 39.70367,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-21",
+      "dem": 47.53803,
+      "rep": 39.70582,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-22",
+      "dem": 47.53883,
+      "rep": 39.70614,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-23",
+      "dem": 47.53933,
+      "rep": 39.70672,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-24",
+      "dem": 47.5392,
+      "rep": 39.7085,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-25",
+      "dem": 47.53849,
+      "rep": 39.7092,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-26",
+      "dem": 47.53696,
+      "rep": 39.70982,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-27",
+      "dem": 47.53566,
+      "rep": 39.71028,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-28",
+      "dem": 47.53365,
+      "rep": 39.71038,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-29",
+      "dem": 47.53096,
+      "rep": 39.71032,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-30",
+      "dem": 47.52708,
+      "rep": 39.70999,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-07-31",
+      "dem": 47.96903,
+      "rep": 39.67736,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-01",
+      "dem": 47.96787,
+      "rep": 39.67675,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-02",
+      "dem": 47.19492,
+      "rep": 40.32811,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-03",
+      "dem": 47.21401,
+      "rep": 40.31276,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-04",
+      "dem": 47.20368,
+      "rep": 40.32092,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-05",
+      "dem": 47.19429,
+      "rep": 40.33362,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-06",
+      "dem": 47.40359,
+      "rep": 40.10854,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-07",
+      "dem": 47.3933,
+      "rep": 40.11324,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-08",
+      "dem": 47.38235,
+      "rep": 40.12095,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-09",
+      "dem": 47.36483,
+      "rep": 40.12696,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-10",
+      "dem": 47.36992,
+      "rep": 40.11135,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-11",
+      "dem": 47.35304,
+      "rep": 40.11555,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-12",
+      "dem": 47.33783,
+      "rep": 40.12103,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-13",
+      "dem": 47.328,
+      "rep": 40.12952,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-14",
+      "dem": 47.32217,
+      "rep": 40.13495,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-15",
+      "dem": 47.3143,
+      "rep": 40.14123,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-16",
+      "dem": 47.31031,
+      "rep": 40.14236,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-17",
+      "dem": 47.30518,
+      "rep": 40.14371,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-18",
+      "dem": 47.58159,
+      "rep": 40.97102,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-19",
+      "dem": 47.59378,
+      "rep": 40.97826,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-20",
+      "dem": 47.58841,
+      "rep": 40.99609,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-21",
+      "dem": 47.58299,
+      "rep": 41.00977,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-22",
+      "dem": 47.57925,
+      "rep": 41.01603,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-23",
+      "dem": 47.57472,
+      "rep": 41.02313,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-24",
+      "dem": 47.57219,
+      "rep": 41.03062,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-25",
+      "dem": 47.57046,
+      "rep": 41.03914,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-26",
+      "dem": 47.56895,
+      "rep": 41.04634,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-27",
+      "dem": 47.56724,
+      "rep": 41.05438,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-28",
+      "dem": 47.56529,
+      "rep": 41.06344,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-29",
+      "dem": 47.56302,
+      "rep": 41.07381,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-30",
+      "dem": 47.56037,
+      "rep": 41.08577,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-08-31",
+      "dem": 47.55916,
+      "rep": 41.09539,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-01",
+      "dem": 47.55837,
+      "rep": 41.10266,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-02",
+      "dem": 47.55864,
+      "rep": 41.11454,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-03",
+      "dem": 47.55904,
+      "rep": 41.12338,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-04",
+      "dem": 46.97235,
+      "rep": 41.18147,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-05",
+      "dem": 46.96563,
+      "rep": 41.19206,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-06",
+      "dem": 46.08375,
+      "rep": 41.79996,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-07",
+      "dem": 46.06609,
+      "rep": 41.81979,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-08",
+      "dem": 46.05031,
+      "rep": 41.83811,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-09",
+      "dem": 46.03724,
+      "rep": 41.85518,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-10",
+      "dem": 45.55384,
+      "rep": 43.16255,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-11",
+      "dem": 45.54165,
+      "rep": 43.18159,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-12",
+      "dem": 45.52635,
+      "rep": 43.20698,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-13",
+      "dem": 45.51399,
+      "rep": 43.22573,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-14",
+      "dem": 45.49937,
+      "rep": 43.24783,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-15",
+      "dem": 45.55791,
+      "rep": 43.10662,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-16",
+      "dem": 45.86143,
+      "rep": 42.77228,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-17",
+      "dem": 45.40848,
+      "rep": 42.48094,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-18",
+      "dem": 45.39816,
+      "rep": 42.49145,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-19",
+      "dem": 45.38928,
+      "rep": 42.50018,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-20",
+      "dem": 45.75991,
+      "rep": 42.81431,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-21",
+      "dem": 45.75269,
+      "rep": 42.82486,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-22",
+      "dem": 45.76516,
+      "rep": 42.87963,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-23",
+      "dem": 45.75361,
+      "rep": 43.33265,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-24",
+      "dem": 45.78071,
+      "rep": 43.42828,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-25",
+      "dem": 45.77359,
+      "rep": 43.44508,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-26",
+      "dem": 45.76547,
+      "rep": 43.46415,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-27",
+      "dem": 45.76129,
+      "rep": 43.47692,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-28",
+      "dem": 45.75761,
+      "rep": 43.48662,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-29",
+      "dem": 45.62705,
+      "rep": 43.45822,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-09-30",
+      "dem": 45.62123,
+      "rep": 43.47055,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-01",
+      "dem": 45.78079,
+      "rep": 43.41499,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-02",
+      "dem": 45.77702,
+      "rep": 43.42733,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-03",
+      "dem": 45.7737,
+      "rep": 43.43972,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-04",
+      "dem": 45.77207,
+      "rep": 43.45102,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-05",
+      "dem": 45.77044,
+      "rep": 43.46018,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-06",
+      "dem": 46.06776,
+      "rep": 43.35063,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-07",
+      "dem": 46.35412,
+      "rep": 43.20646,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-08",
+      "dem": 46.22261,
+      "rep": 43.11133,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-09",
+      "dem": 46.24116,
+      "rep": 43.10609,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-10",
+      "dem": 46.20877,
+      "rep": 43.12906,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-11",
+      "dem": 46.21832,
+      "rep": 43.12638,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-12",
+      "dem": 46.22061,
+      "rep": 43.12567,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-13",
+      "dem": 46.22462,
+      "rep": 43.12181,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-14",
+      "dem": 46.22853,
+      "rep": 43.11895,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-15",
+      "dem": 46.33611,
+      "rep": 42.67059,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-16",
+      "dem": 45.74151,
+      "rep": 42.08084,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-17",
+      "dem": 45.69991,
+      "rep": 42.11155,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-18",
+      "dem": 45.70147,
+      "rep": 42.09084,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-19",
+      "dem": 45.69931,
+      "rep": 42.07345,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-20",
+      "dem": 45.69823,
+      "rep": 42.05784,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-21",
+      "dem": 45.78058,
+      "rep": 42.4222,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-22",
+      "dem": 46.23267,
+      "rep": 42.4565,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-23",
+      "dem": 45.96998,
+      "rep": 42.9835,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-24",
+      "dem": 45.97645,
+      "rep": 42.97553,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-25",
+      "dem": 45.60347,
+      "rep": 43.51032,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-26",
+      "dem": 45.88971,
+      "rep": 43.18299,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-27",
+      "dem": 45.88998,
+      "rep": 43.18327,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-28",
+      "dem": 45.85517,
+      "rep": 43.26479,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-29",
+      "dem": 45.934,
+      "rep": 43.46299,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-30",
+      "dem": 45.49953,
+      "rep": 43.98136,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-10-31",
+      "dem": 45.49149,
+      "rep": 44.00206,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-11-01",
+      "dem": 45.85207,
+      "rep": 44.23992,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2004-11-02",
+      "dem": 45.88198,
+      "rep": 44.64894,
+      "pollster": "538 trendline",
+      "sample": ""
+    }
+  ]
+}

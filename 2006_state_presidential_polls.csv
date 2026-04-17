@@ -1,778 +1,500 @@
-mode,state,date,dem,rep,sigma,pollster
-governor,AK,2006-09-25,37.0,49.0,4.44,Dittman Research
-governor,AK,2006-10-03,37.0,48.0,4.46,Alaska Survey Research
-governor,AK,2006-10-09,37.0,48.0,4.46,Alaska Survey Research
-governor,AK,2006-10-09,40.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AK,2006-10-11,43.0,43.0,4.89,Craciun Research Group
-governor,AK,2006-10-20,42.6,41.9,5,Hellenthal & Associates
-governor,AK,2006-10-21,39.0,48.0,4.43,Dittman Research
-governor,AK,2006-10-29,44.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AK,2006-11-02,43.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AK,2006-11-04,43.4,49.5,4.04,Dittman Research
-governor,AL,2006-09-26,38.0,54.0,4.22,SurveyUSA
-governor,AL,2006-10-02,32.0,57.0,4.04,University of South Alabama Polling Group
-governor,AL,2006-10-08,36.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AL,2006-10-16,36.0,57.0,4.4,SurveyUSA
-governor,AL,2006-10-30,39.0,54.0,4.08,SurveyUSA
-governor,AL,2006-11-01,42.0,58.0,4.45,YouGov
-governor,AR,2006-09-25,55.0,40.0,4.5,SurveyUSA
-governor,AR,2006-09-27,51.0,40.0,3.16,Constituent Dynamics/RT Strategies
-governor,AR,2006-09-28,53.0,35.0,4.47,Opinion Research Associates
-governor,AR,2006-10-11,50.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AR,2006-10-13,49.2,45.0,3.87,Zogby Analytics
-governor,AR,2006-10-16,52.0,39.0,3.16,Constituent Dynamics/RT Strategies
-governor,AR,2006-10-12,51.0,38.0,3.62,University of Arkansas Department of Political Science
-governor,AR,2006-10-23,49.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AR,2006-10-23,58.0,38.0,4.18,SurveyUSA
-governor,AR,2006-10-24,56.0,38.0,4.47,Opinion Research Associates
-governor,AR,2006-10-25,45.3,48.2,4.44,Zogby Analytics
-governor,AR,2006-10-29,52.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AR,2006-11-04,51.0,42.0,4.27,SurveyUSA
-governor,AZ,2006-09-17,56.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AZ,2006-09-17,56.0,40.0,4.6,SurveyUSA
-governor,AZ,2006-09-23,64.0,28.0,3.37,Arizona State University Morrison Institute for Public Policy
-governor,AZ,2006-09-30,58.0,24.0,4.0,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2006-10-15,58.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,AZ,2006-10-15,56.0,37.0,4.59,SurveyUSA
-governor,AZ,2006-10-13,58.0,25.0,4.98,Northern Arizona University Social Research Laboratory
-governor,AZ,2006-10-13,51.4,41.9,3.87,Zogby Analytics
-governor,AZ,2006-10-21,67.0,24.0,3.13,Arizona State University Morrison Institute for Public Policy
-governor,AZ,2006-10-25,51.3,42.7,3.94,Zogby Analytics
-governor,AZ,2006-11-01,61.0,33.0,4.0,Mason-Dixon Polling & Strategy
-governor,AZ,2006-11-01,57.0,38.0,4.23,SurveyUSA
-governor,AZ,2006-10-31,57.0,41.0,3.54,YouGov
-governor,CA,2006-09-14,31.0,54.0,2.31,Datamar Analytics
-governor,CA,2006-09-17,31.0,48.0,3.03,Public Policy Institute of California
-governor,CA,2006-09-19,34.0,44.0,4.24,Field Research Corp. (Field Poll)
-governor,CA,2006-09-25,38.0,52.0,4.74,SurveyUSA
-governor,CA,2006-09-27,36.0,49.0,4.0,Mason-Dixon Polling & Strategy
-governor,CA,2006-09-25,33.0,50.0,3.18,Los Angeles Times
-governor,CA,2006-09-28,33.0,46.0,4.13,San Jose State
-governor,CA,2006-10-10,40.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2006-10-13,39.6,47.0,3.87,Zogby Analytics
-governor,CA,2006-10-19,30.0,48.0,3.05,Public Policy Institute of California
-governor,CA,2006-10-24,37.0,55.0,4.44,SurveyUSA
-governor,CA,2006-10-25,38.8,47.6,2.94,Zogby Analytics
-governor,CA,2006-10-23,40.0,50.0,3.38,YouGov
-governor,CA,2006-10-28,40.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CA,2006-10-27,33.0,49.0,3.55,Field Research Corp. (Field Poll)
-governor,CA,2006-11-03,38.0,53.0,4.25,SurveyUSA
-governor,CA,2006-11-03,36.0,54.0,3.8,Datamar Analytics
-governor,CA,2006-10-31,42.0,52.0,3.14,YouGov
-governor,CO,2006-09-11,50.0,33.0,4.47,Public Opinion Strategies
-governor,CO,2006-09-19,50.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2006-09-26,55.0,38.0,4.34,SurveyUSA
-governor,CO,2006-09-29,43.0,33.0,4.47,Ciruli Associates
-governor,CO,2006-10-04,50.0,35.0,4.0,Mason-Dixon Polling & Strategy
-governor,CO,2006-10-13,46.7,44.7,3.87,Zogby Analytics
-governor,CO,2006-10-21,56.0,38.0,4.1,SurveyUSA
-governor,CO,2006-10-21,52.0,33.0,4.47,Ciruli Associates
-governor,CO,2006-10-23,51.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CO,2006-10-25,50.0,38.0,4.0,Mason-Dixon Polling & Strategy
-governor,CO,2006-10-25,46.4,46.6,4.14,Zogby Analytics
-governor,CO,2006-10-30,55.0,33.0,4.47,Public Opinion Strategies
-governor,CO,2006-10-31,57.0,35.0,3.89,SurveyUSA
-governor,CO,2006-10-31,60.0,40.0,4.47,YouGov
-governor,CT,2006-09-13,32.0,60.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2006-09-23,30.0,63.0,2.91,Quinnipiac University
-governor,CT,2006-10-02,33.0,58.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2006-10-06,28.0,50.0,3.96,University of Connecticut
-governor,CT,2006-10-18,33.0,59.0,3.37,Quinnipiac University
-governor,CT,2006-10-28,35.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,CT,2006-10-27,35.0,59.0,3.29,Quinnipiac University
-governor,CT,2006-11-01,32.0,64.0,4.99,YouGov
-governor,FL,2006-09-12,41.0,49.0,4.42,SurveyUSA
-governor,FL,2006-09-16,39.0,45.0,3.5,Bendixen & Amandi International
-governor,FL,2006-09-19,40.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2006-09-21,36.0,51.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2006-09-24,37.0,51.0,3.54,McLaughlin & Associates
-governor,FL,2006-09-27,30.0,51.0,3.53,Zogby Analytics
-governor,FL,2006-10-02,40.0,55.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2006-10-07,30.0,49.0,4.47,InsiderAdvantage
-governor,FL,2006-10-05,43.0,53.0,3.57,Quinnipiac University
-governor,FL,2006-10-08,41.0,54.0,4.41,SurveyUSA
-governor,FL,2006-10-13,41.0,50.2,3.87,Zogby Analytics
-governor,FL,2006-10-17,41.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2006-10-16,39.0,50.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2006-10-18,38.0,49.0,5,Cromer Group
-governor,FL,2006-10-20,44.0,46.0,3.5,Quinnipiac University
-governor,FL,2006-10-20,32.0,46.0,3.65,Public Opinion Strategies
-governor,FL,2006-10-24,42.0,48.0,3.54,SEA Polling & Strategic Design
-governor,FL,2006-10-26,41.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2006-10-25,45.1,49.9,3.24,Zogby Analytics
-governor,FL,2006-10-31,43.0,50.0,4.0,Mason-Dixon Polling & Strategy
-governor,FL,2006-11-01,38.0,48.0,3.53,Zogby Analytics
-governor,FL,2006-11-03,47.0,49.0,3.83,SurveyUSA
-governor,FL,2006-11-05,42.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,FL,2006-10-31,42.0,54.0,3.15,YouGov
-governor,GA,2006-09-19,32.0,52.0,4.47,InsiderAdvantage
-governor,GA,2006-09-25,34.0,53.0,4.0,Mason-Dixon Polling & Strategy
-governor,GA,2006-10-11,32.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,GA,2006-10-15,30.0,47.0,4.47,InsiderAdvantage
-governor,GA,2006-10-13,37.7,49.3,3.87,Zogby Analytics
-governor,GA,2006-10-18,31.0,47.0,4.47,InsiderAdvantage
-governor,GA,2006-10-21,31.0,48.0,4.47,InsiderAdvantage
-governor,GA,2006-10-24,34.0,51.0,4.47,InsiderAdvantage
-governor,GA,2006-10-26,36.0,53.0,4.0,Mason-Dixon Polling & Strategy
-governor,GA,2006-10-25,36.3,48.3,3.14,Zogby Analytics
-governor,GA,2006-10-30,39.0,49.0,4.47,InsiderAdvantage
-governor,GA,2006-11-01,42.0,59.0,3.53,YouGov
-governor,GA,2006-11-01,36.0,50.0,4.47,InsiderAdvantage
-governor,IA,2006-09-12,44.0,44.0,4.08,Selzer & Co.
-governor,IA,2006-10-04,44.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IA,2006-10-10,46.0,39.0,3.54,Selzer & Co.
-governor,IA,2006-10-13,47.6,45.4,3.87,Zogby Analytics
-governor,IA,2006-10-22,49.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IA,2006-10-25,47.6,46.4,4.44,Zogby Analytics
-governor,IA,2006-10-28,44.0,37.0,4.08,Global Strategy Group
-governor,IA,2006-10-28,44.0,37.0,4.08,Global Strategy Group
-governor,IA,2006-11-02,52.0,43.0,3.64,Selzer & Co.
-governor,IA,2006-10-31,54.0,46.0,5,YouGov
-governor,ID,2006-10-24,43.0,44.0,4.0,Mason-Dixon Polling & Strategy
-governor,ID,2006-10-29,41.0,36.0,4.36,Greg Smith & Associates
-governor,IL,2006-09-09,45.0,33.0,4.08,Market Shares Corp.
-governor,IL,2006-09-11,56.0,26.0,5,KRC Research
-governor,IL,2006-09-18,45.0,39.0,4.35,SurveyUSA
-governor,IL,2006-09-20,47.0,37.0,4.0,Mason-Dixon Polling & Strategy
-governor,IL,2006-10-11,49.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2006-10-10,43.0,29.0,4.08,Market Shares Corp.
-governor,IL,2006-10-15,44.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2006-10-14,39.0,30.0,4.08,Glengariff Group
-governor,IL,2006-10-13,47.1,33.2,3.87,Zogby Analytics
-governor,IL,2006-10-21,44.0,34.0,4.16,SurveyUSA
-governor,IL,2006-10-19,48.0,32.0,4.07,Richard Day Research
-governor,IL,2006-10-25,39.6,33.0,4.14,Zogby Analytics
-governor,IL,2006-10-28,44.0,29.0,4.08,Market Shares Corp.
-governor,IL,2006-10-30,44.0,40.0,4.0,Mason-Dixon Polling & Strategy
-governor,IL,2006-11-01,61.0,39.0,3.54,YouGov
-governor,IL,2006-10-31,45.0,37.0,4.8,SurveyUSA
-governor,IL,2006-11-02,44.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,KS,2006-09-12,58.0,38.0,4.12,SurveyUSA
-governor,KS,2006-09-26,48.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,KS,2006-10-14,55.0,42.0,4.3,SurveyUSA
-governor,KS,2006-10-23,56.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,KS,2006-11-03,57.0,40.0,4.42,SurveyUSA
-governor,MA,2006-09-09,43.0,30.0,5,KRC Research
-governor,MA,2006-09-20,64.0,25.0,4.06,SurveyUSA
-governor,MA,2006-09-23,57.0,24.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2006-09-28,55.0,30.0,4.36,University of New Hampshire Survey Center
-governor,MA,2006-10-03,49.0,28.0,4.47,Suffolk University
-governor,MA,2006-10-09,52.0,34.0,4.05,SurveyUSA
-governor,MA,2006-10-10,46.0,33.0,5,Suffolk University
-governor,MA,2006-10-13,56.0,33.6,3.87,Zogby Analytics
-governor,MA,2006-10-23,53.0,29.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MA,2006-10-22,56.0,31.0,4.01,SurveyUSA
-governor,MA,2006-10-22,53.0,26.0,5,Suffolk University
-governor,MA,2006-10-24,54.0,29.0,4.13,University of New Hampshire Survey Center
-governor,MA,2006-10-25,58.1,32.7,3.84,Zogby Analytics
-governor,MA,2006-10-31,55.0,34.0,3.88,SurveyUSA
-governor,MA,2006-10-31,61.0,32.0,3.54,YouGov
-governor,MD,2006-09-13,49.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2006-09-17,50.0,44.0,3.5,Potomac Incorporated
-governor,MD,2006-09-18,51.0,44.0,4.38,SurveyUSA
-governor,MD,2006-09-24,47.0,43.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2006-09-26,51.0,42.0,4.06,Garin-Hart-Yang Research Group
-governor,MD,2006-09-29,53.0,41.0,3.84,Gallup
-governor,MD,2006-10-10,53.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2006-10-13,51.6,40.7,3.87,Zogby Analytics
-governor,MD,2006-10-16,49.0,43.0,3.79,SurveyUSA
-governor,MD,2006-10-26,50.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2006-10-25,45.0,46.0,4.08,Public Opinion Strategies
-governor,MD,2006-10-24,55.0,45.0,3.16,ABC News/The Washington Post
-governor,MD,2006-10-25,49.3,43.9,3.94,Zogby Analytics
-governor,MD,2006-10-29,47.0,46.0,3.54,Potomac Incorporated
-governor,MD,2006-10-29,50.0,44.0,3.32,Garin-Hart-Yang Research Group
-governor,MD,2006-11-01,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MD,2006-11-01,48.0,47.0,3.8,SurveyUSA
-governor,MD,2006-11-02,45.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2006-11-04,50.0,47.0,3.88,SurveyUSA
-governor,MD,2006-10-31,50.0,48.0,3.53,YouGov
-governor,ME,2006-09-11,42.0,41.0,4.39,SurveyUSA
-governor,ME,2006-09-17,44.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2006-09-25,44.0,39.0,4.29,SurveyUSA
-governor,ME,2006-10-17,46.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2006-10-21,42.0,34.0,3.97,SurveyUSA
-governor,ME,2006-10-20,42.0,25.0,4.08,Digital Research
-governor,ME,2006-10-30,45.0,31.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,ME,2006-11-03,36.0,30.0,3.96,SurveyUSA
-governor,MI,2006-09-09,50.0,42.0,4.06,EPIC-MRA
-governor,MI,2006-09-16,47.0,47.0,3.65,SurveyUSA
-governor,MI,2006-10-04,49.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MI,2006-10-03,46.0,40.0,4.08,EPIC-MRA
-governor,MI,2006-10-07,50.0,45.0,3.6,SurveyUSA
-governor,MI,2006-10-10,49.0,41.0,3.94,Selzer & Co.
-governor,MI,2006-10-11,51.0,42.0,4.06,EPIC-MRA
-governor,MI,2006-10-13,50.6,44.1,3.87,Zogby Analytics
-governor,MI,2006-10-22,54.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MI,2006-10-23,52.0,45.0,3.53,SurveyUSA
-governor,MI,2006-10-24,48.0,43.0,4.08,EPIC-MRA
-governor,MI,2006-10-25,51.6,42.7,3.04,Zogby Analytics
-governor,MI,2006-10-28,52.0,42.0,4.08,EPIC-MRA
-governor,MI,2006-10-31,52.0,43.0,4.08,EPIC-MRA
-governor,MI,2006-11-01,52.0,38.0,4.0,Mason-Dixon Polling & Strategy
-governor,MI,2006-11-01,54.0,41.0,4.34,Selzer & Co.
-governor,MI,2006-11-03,51.0,45.0,3.82,SurveyUSA
-governor,MI,2006-10-31,55.0,43.0,3.54,YouGov
-governor,MN,2006-09-14,42.0,42.0,3.49,Minneapolis Star Tribune
-governor,MN,2006-09-15,44.0,42.0,3.13,University of Minnesota Hubert H. Humphrey School of Public Affairs
-governor,MN,2006-09-19,39.0,42.0,4.0,Mason-Dixon Polling & Strategy
-governor,MN,2006-09-26,44.0,45.0,4.03,SurveyUSA
-governor,MN,2006-10-04,44.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2006-10-08,46.0,37.0,3.5,Minneapolis Star Tribune
-governor,MN,2006-10-13,45.0,44.9,3.87,Zogby Analytics
-governor,MN,2006-10-22,45.0,44.0,4.06,SurveyUSA
-governor,MN,2006-10-25,45.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2006-10-21,46.0,37.0,4.45,St. Cloud State University
-governor,MN,2006-10-25,46.1,44.7,3.74,Zogby Analytics
-governor,MN,2006-10-25,45.0,39.0,3.88,University of Minnesota Hubert H. Humphrey School of Public Affairs
-governor,MN,2006-10-28,44.0,42.0,4.0,Mason-Dixon Polling & Strategy
-governor,MN,2006-11-01,47.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,MN,2006-11-02,45.0,40.0,3.12,Minneapolis Star Tribune
-governor,MN,2006-11-04,45.0,45.0,3.75,SurveyUSA
-governor,MN,2006-10-31,49.0,45.0,4.47,YouGov
-governor,MN,2006-11-05,44.0,41.0,3.12,Minneapolis Star Tribune
-governor,NE,2006-09-20,18.0,72.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NE,2006-10-16,22.0,70.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2006-09-17,73.0,23.0,4.67,SurveyUSA
-governor,NH,2006-09-19,69.0,14.0,4.41,University of New Hampshire Survey Center
-governor,NH,2006-09-26,59.0,29.0,4.24,American Research Group
-governor,NH,2006-10-07,70.0,19.0,4.95,Becker Institute
-governor,NH,2006-10-31,71.0,19.0,3.88,University of New Hampshire Survey Center
-governor,NH,2006-11-04,74.0,18.0,3.95,University of New Hampshire Survey Center
-governor,NM,2006-09-27,60.0,28.0,3.88,Research & Polling Inc.
-governor,NV,2006-09-20,36.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2006-10-13,43.2,48.4,3.87,Zogby Analytics
-governor,NV,2006-10-17,43.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2006-10-25,47.5,46.6,4.54,Zogby Analytics
-governor,NV,2006-10-28,40.0,44.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2006-10-31,46.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NV,2006-10-31,44.0,51.0,4.99,YouGov
-governor,NY,2006-09-13,72.0,21.0,4.0,Siena College
-governor,NY,2006-09-26,70.0,20.0,3.69,CBS News/The New York Times
-governor,NY,2006-09-28,69.0,18.0,2.81,Quinnipiac University
-governor,NY,2006-10-11,68.0,22.0,4.02,Siena College
-governor,NY,2006-10-13,71.0,22.0,3.08,Quinnipiac University
-governor,NY,2006-10-13,64.1,26.0,3.87,Zogby Analytics
-governor,NY,2006-10-17,73.0,22.0,4.59,Marist College
-governor,NY,2006-10-25,63.2,27.3,3.24,Zogby Analytics
-governor,NY,2006-11-01,69.0,24.0,3.15,YouGov
-governor,NY,2006-10-31,69.0,24.0,4.46,Marist College
-governor,NY,2006-10-31,69.0,24.0,4.47,Siena College
-governor,OH,2006-09-13,54.0,35.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2006-09-14,55.0,34.0,3.38,Quinnipiac University
-governor,OH,2006-09-12,50.0,38.0,3.96,University of Cincinnati (Ohio Poll)
-governor,OH,2006-09-19,56.0,35.0,4.52,SurveyUSA
-governor,OH,2006-09-15,52.0,33.0,2.36,Columbus Dispatch
-governor,OH,2006-09-26,53.0,36.0,4.0,Mason-Dixon Polling & Strategy
-governor,OH,2006-09-09,47.0,34.0,4.58,University of Akron Ray C. Bliss Institute of Applied Politics
-governor,OH,2006-10-03,52.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2006-10-10,60.0,32.0,4.41,SurveyUSA
-governor,OH,2006-10-11,52.0,38.0,4.36,University of Cincinnati (Ohio Poll)
-governor,OH,2006-10-13,54.0,29.0,3.81,CBS News/The New York Times
-governor,OH,2006-10-12,59.0,32.0,3.33,Quinnipiac University
-governor,OH,2006-10-13,51.0,40.6,3.87,Zogby Analytics
-governor,OH,2006-10-19,54.0,34.0,4.0,Mason-Dixon Polling & Strategy
-governor,OH,2006-10-24,58.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OH,2006-10-24,62.0,32.0,4.21,SurveyUSA
-governor,OH,2006-10-25,50.8,43.3,3.84,Zogby Analytics
-governor,OH,2006-10-28,59.0,36.0,4.3,Big Village
-governor,OH,2006-10-24,55.0,39.0,3.54,Opinion Consultants
-governor,OH,2006-11-01,56.0,37.0,4.0,Mason-Dixon Polling & Strategy
-governor,OH,2006-10-29,67.0,31.0,2.55,Columbus Dispatch
-governor,OH,2006-11-04,55.0,38.0,4.79,SurveyUSA
-governor,OH,2006-11-03,59.0,37.0,3.15,University of Cincinnati (Ohio Poll)
-governor,OH,2006-10-31,62.0,35.0,3.16,YouGov
-governor,OK,2006-09-16,59.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OK,2006-09-23,64.0,33.0,4.5,SurveyUSA
-governor,OK,2006-10-22,64.0,32.0,4.6,SurveyUSA
-governor,OK,2006-10-21,68.0,25.0,4.28,SoonerPoll.com
-governor,OK,2006-11-02,65.0,29.0,4.53,SurveyUSA
-governor,PA,2006-09-15,52.0,34.0,4.07,Franklin & Marshall College Center for Opinion Research
-governor,PA,2006-09-15,61.0,32.0,2.89,Pew Research Center
-governor,PA,2006-09-20,56.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2006-09-17,60.0,33.0,3.87,Temple University Institute for Survey Research
-governor,PA,2006-09-21,55.0,39.0,3.27,Quinnipiac University
-governor,PA,2006-09-24,54.0,37.0,4.0,Mason-Dixon Polling & Strategy
-governor,PA,2006-10-05,56.0,35.0,4.42,Muhlenberg College Institute of Public Opinion
-governor,PA,2006-10-14,57.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2006-10-13,51.4,44.4,3.87,Zogby Analytics
-governor,PA,2006-10-20,56.0,35.0,4.0,Mason-Dixon Polling & Strategy
-governor,PA,2006-10-24,57.0,32.0,4.08,West Chester University
-governor,PA,2006-10-20,58.0,34.0,3.79,Temple University Institute for Survey Research
-governor,PA,2006-10-25,55.2,42.0,3.64,Zogby Analytics
-governor,PA,2006-10-28,56.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,PA,2006-10-27,58.0,33.0,4.0,Franklin & Marshall College Center for Opinion Research
-governor,PA,2006-10-26,58.0,35.0,3.27,Quinnipiac University
-governor,PA,2006-11-01,56.0,38.0,4.0,Mason-Dixon Polling & Strategy
-governor,PA,2006-10-31,60.0,35.0,4.44,Muhlenberg College Institute of Public Opinion
-governor,PA,2006-10-31,61.0,37.0,3.15,YouGov
-governor,RI,2006-09-13,45.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2006-09-17,38.0,50.0,4.16,Brown University A. Alfred Taubman Center for American Politics and Policy
-governor,RI,2006-09-27,34.0,50.0,4.0,Mason-Dixon Polling & Strategy
-governor,RI,2006-09-29,46.0,47.0,3.78,Gallup
-governor,RI,2006-10-04,45.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2006-10-03,36.0,44.0,4.67,Quest Research Group
-governor,RI,2006-10-19,44.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,RI,2006-10-19,39.0,49.0,4.0,Mason-Dixon Polling & Strategy
-governor,RI,2006-10-24,35.0,49.0,4.95,Quest Research Group
-governor,RI,2006-10-29,41.0,50.0,4.99,Fleming & Associates
-governor,RI,2006-11-01,42.0,50.0,4.0,Mason-Dixon Polling & Strategy
-governor,SC,2006-09-18,41.0,54.0,4.46,SurveyUSA
-governor,SC,2006-09-27,46.0,50.0,4.67,SurveyUSA
-governor,SC,2006-10-15,41.0,56.0,4.7,SurveyUSA
-governor,SC,2006-10-23,34.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,SC,2006-10-21,31.0,58.0,4.47,Clemson University
-governor,SC,2006-11-03,40.0,57.0,4.54,SurveyUSA
-governor,SC,2006-10-31,44.0,56.0,5,YouGov
-governor,SD,2006-10-25,35.0,57.0,3.54,Mason-Dixon Polling & Strategy
-governor,TN,2006-09-10,63.0,30.0,3.96,SurveyUSA
-governor,TN,2006-09-22,61.0,21.0,4.07,Benenson Strategy Group
-governor,TN,2006-09-25,63.0,22.0,4.0,Mason-Dixon Polling & Strategy
-governor,TN,2006-09-25,59.0,21.0,4.27,Middle Tennessee State University
-governor,TN,2006-09-30,63.0,28.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,TN,2006-09-29,66.0,26.0,4.09,Gallup
-governor,TN,2006-10-08,63.0,32.0,4.31,SurveyUSA
-governor,TN,2006-10-19,62.0,27.0,4.0,Mason-Dixon Polling & Strategy
-governor,TN,2006-10-23,66.0,29.0,3.58,SurveyUSA
-governor,TN,2006-10-28,59.0,37.0,4.3,Big Village
-governor,TN,2006-11-02,61.0,26.0,4.0,Mason-Dixon Polling & Strategy
-governor,TN,2006-11-04,62.0,34.0,3.84,SurveyUSA
-governor,TN,2006-10-31,63.0,31.0,4.46,YouGov
-governor,TX,2006-09-17,23.0,35.0,4.32,SurveyUSA
-governor,TX,2006-09-30,15.0,38.0,3.48,Blum & Weprin Associates
-governor,TX,2006-10-09,19.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,TX,2006-10-13,26.2,37.5,3.87,Zogby Analytics
-governor,TX,2006-10-22,26.0,36.0,4.34,SurveyUSA
-governor,TX,2006-10-24,25.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,TX,2006-10-24,22.0,38.0,3.16,Zogby Analytics
-governor,TX,2006-10-25,28.5,36.7,3.04,Zogby Analytics
-governor,TX,2006-11-02,22.0,38.0,4.24,SurveyUSA
-governor,VT,2006-09-13,32.0,59.0,4.08,American Research Group
-governor,VT,2006-09-24,38.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2006-09-14,47.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2006-09-20,45.0,40.0,4.08,Diversified Research Inc
-governor,WI,2006-10-11,47.0,41.0,3.76,Abacus Associates
-governor,WI,2006-10-13,47.4,45.6,3.87,Zogby Analytics
-governor,WI,2006-10-13,51.0,38.0,5,St. Norbert College Strategic Research Institute
-governor,WI,2006-10-18,48.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,WI,2006-10-22,51.0,39.0,5,University of Wisconsin Survey Center
-governor,WI,2006-10-25,46.7,47.2,3.44,Zogby Analytics
-governor,WI,2006-10-31,53.0,43.0,4.46,YouGov
-governor,WY,2006-10-11,63.0,30.0,4.0,Mason-Dixon Polling & Strategy
-governor,WY,2006-10-22,69.0,18.0,3.87,Aspen Media & Market Research
-governor,OR,2006-09-15,38.0,38.0,3.16,Moore Information Group
-governor,OR,2006-09-18,47.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2006-09-24,43.0,38.0,4.08,DHM Research
-governor,OR,2006-09-27,47.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2006-09-24,37.0,39.0,4.61,Riley Research Associates
-governor,OR,2006-10-13,47.2,43.5,3.87,Zogby Analytics
-governor,OR,2006-10-21,47.0,36.0,4.74,Riley Research Associates
-governor,OR,2006-10-25,47.2,46.6,3.64,Zogby Analytics
-governor,OR,2006-10-28,51.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,OR,2006-10-30,46.0,39.0,4.08,DHM Research
-governor,OR,2006-10-31,54.0,46.0,4.46,YouGov
-senate,AZ,2006-09-18,39.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AZ,2006-09-17,43.0,48.0,4.6,SurveyUSA
-senate,AZ,2006-09-23,38.0,49.0,3.37,Arizona State University Morrison Institute for Public Policy
-senate,AZ,2006-09-22,44.0,50.5,3.84,Zogby Analytics
-senate,AZ,2006-09-30,36.0,45.0,4.0,Behavior Research Center (Rocky Mountain Poll)
-senate,AZ,2006-10-15,42.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,AZ,2006-10-15,43.0,48.0,4.59,SurveyUSA
-senate,AZ,2006-10-13,33.0,49.0,4.98,Northern Arizona University Social Research Laboratory
-senate,AZ,2006-10-13,43.7,49.9,3.84,Zogby Analytics
-senate,AZ,2006-10-21,41.0,47.0,3.13,Arizona State University Morrison Institute for Public Policy
-senate,AZ,2006-10-25,44.4,51.8,3.94,Zogby Analytics
-senate,AZ,2006-10-27,41.3,45.8,5,Zimmerman & Associates/Marketing Intelligence
-senate,AZ,2006-11-01,41.0,49.0,4.0,Mason-Dixon Polling & Strategy
-senate,AZ,2006-11-01,40.0,53.0,4.23,SurveyUSA
-senate,AZ,2006-10-31,46.0,50.0,3.54,YouGov
-senate,CA,2006-09-14,49.0,38.1,2.31,Datamar Analytics
-senate,CA,2006-09-19,57.0,29.0,3.84,Field Research Corp. (Field Poll)
-senate,CA,2006-09-25,55.0,35.0,4.74,SurveyUSA
-senate,CA,2006-09-27,53.0,23.0,4.0,Mason-Dixon Polling & Strategy
-senate,CA,2006-09-25,54.0,36.0,3.18,Los Angeles Times
-senate,CA,2006-10-24,59.0,33.0,4.44,SurveyUSA
-senate,CA,2006-10-23,57.0,39.0,3.38,YouGov
-senate,CA,2006-10-27,55.0,33.0,3.55,Field Research Corp. (Field Poll)
-senate,CA,2006-11-03,60.0,31.0,4.25,SurveyUSA
-senate,CA,2006-11-03,54.0,38.0,3.8,Datamar Analytics
-senate,CA,2006-10-31,61.0,29.0,3.14,YouGov
-senate,CT,2006-09-10,38.0,7.0,4.18,SurveyUSA
-senate,CT,2006-09-13,43.0,5.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2006-09-17,45.0,3.0,4.08,American Research Group
-senate,CT,2006-09-23,39.0,5.0,2.91,Quinnipiac University
-senate,CT,2006-09-22,44.0,4.0,3.84,Zogby Analytics
-senate,CT,2006-10-02,40.0,5.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2006-09-29,33.0,4.0,4.08,Zogby Analytics
-senate,CT,2006-10-06,40.0,4.0,3.96,University of Connecticut
-senate,CT,2006-10-09,40.0,4.0,4.18,SurveyUSA
-senate,CT,2006-10-13,43.2,4.0,3.84,Zogby Analytics
-senate,CT,2006-10-18,35.0,6.0,3.37,Quinnipiac University
-senate,CT,2006-10-19,37.0,8.0,4.08,American Research Group
-senate,CT,2006-10-25,42.5,6.0,3.84,Zogby Analytics
-senate,CT,2006-10-28,40.0,9.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CT,2006-10-27,37.0,8.0,3.29,Quinnipiac University
-senate,CT,2006-10-27,37.0,8.0,4.08,Zogby Analytics
-senate,CT,2006-11-03,38.0,9.0,3.92,SurveyUSA
-senate,CT,2006-11-02,38.0,8.0,3.85,Quinnipiac University
-senate,CT,2006-10-31,44.0,5.0,4.99,YouGov
-senate,DE,2006-09-16,63.0,23.0,3.92,Fairleigh Dickinson University
-senate,DE,2006-10-21,60.0,26.0,4.46,Fairleigh Dickinson University
-senate,FL,2006-09-12,53.0,38.0,4.42,SurveyUSA
-senate,FL,2006-09-22,56.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2006-09-21,53.0,35.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2006-09-22,52.0,34.6,3.84,Zogby Analytics
-senate,FL,2006-10-02,54.0,37.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,FL,2006-10-05,61.0,33.0,3.57,Quinnipiac University
-senate,FL,2006-10-08,55.0,37.0,4.41,SurveyUSA
-senate,FL,2006-10-13,54.1,36.8,3.84,Zogby Analytics
-senate,FL,2006-10-16,57.0,31.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2006-10-20,64.0,29.0,3.5,Quinnipiac University
-senate,FL,2006-10-24,56.0,30.0,3.54,SEA Polling & Strategic Design
-senate,FL,2006-10-25,53.7,39.6,3.24,Zogby Analytics
-senate,FL,2006-10-31,58.0,34.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2006-11-01,60.0,31.0,3.53,Zogby Analytics
-senate,FL,2006-11-03,59.0,36.0,3.83,SurveyUSA
-senate,FL,2006-10-31,60.0,34.0,3.15,YouGov
-senate,ME,2006-10-17,24.0,70.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,ME,2006-10-20,14.0,74.0,4.08,Digital Research
-senate,MD,2006-09-13,50.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MD,2006-09-17,51.0,40.0,3.5,Potomac Incorporated
-senate,MD,2006-09-18,47.0,48.0,4.38,SurveyUSA
-senate,MD,2006-09-22,51.9,38.9,3.84,Zogby Analytics
-senate,MD,2006-09-24,47.0,41.0,4.0,Mason-Dixon Polling & Strategy
-senate,MD,2006-09-27,44.0,39.0,4.08,Voter/Consumer Research
-senate,MD,2006-09-29,54.0,39.0,3.84,Gallup
-senate,MD,2006-09-29,45.0,37.0,4.08,Zogby Analytics
-senate,MD,2006-10-03,47.0,43.0,3.54,Public Opinion Strategies
-senate,MD,2006-10-10,53.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MD,2006-10-13,51.1,42.7,3.84,Zogby Analytics
-senate,MD,2006-10-16,46.0,46.0,3.79,SurveyUSA
-senate,MD,2006-10-22,41.0,39.0,4.08,Voter/Consumer Research
-senate,MD,2006-10-23,52.0,40.0,4.08,Garin-Hart-Yang Research Group
-senate,MD,2006-10-26,50.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MD,2006-10-24,54.0,43.0,3.16,ABC News/The Washington Post
-senate,MD,2006-10-25,52.8,43.5,3.94,Zogby Analytics
-senate,MD,2006-10-29,49.0,43.0,3.54,Potomac Incorporated
-senate,MD,2006-10-27,49.0,44.0,4.08,Zogby Analytics
-senate,MD,2006-11-01,50.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MD,2006-11-01,47.0,47.0,3.8,SurveyUSA
-senate,MD,2006-11-02,47.0,44.0,4.0,Mason-Dixon Polling & Strategy
-senate,MD,2006-11-04,49.0,46.0,3.88,SurveyUSA
-senate,MD,2006-10-31,51.0,45.0,3.53,YouGov
-senate,MA,2006-10-22,60.0,26.0,5,Suffolk University
-senate,MA,2006-10-24,66.0,25.0,4.13,University of New Hampshire Survey Center
-senate,MA,2006-10-31,67.0,27.0,3.54,YouGov
-senate,MI,2006-09-09,53.0,34.0,4.06,EPIC-MRA
-senate,MI,2006-09-16,54.0,41.0,3.65,SurveyUSA
-senate,MI,2006-09-17,52.0,30.0,4.08,Marketing Resource Group (MRG)
-senate,MI,2006-09-22,48.8,42.3,3.84,Zogby Analytics
-senate,MI,2006-10-04,56.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MI,2006-10-03,48.0,35.0,4.08,EPIC-MRA
-senate,MI,2006-10-07,53.0,42.0,3.6,SurveyUSA
-senate,MI,2006-10-10,48.0,34.0,3.94,Selzer & Co.
-senate,MI,2006-10-13,48.2,43.6,3.84,Zogby Analytics
-senate,MI,2006-10-22,56.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MI,2006-10-22,53.0,35.0,4.08,Lake Research Partners
-senate,MI,2006-10-23,51.0,44.0,3.53,SurveyUSA
-senate,MI,2006-10-24,50.0,38.0,4.08,EPIC-MRA
-senate,MI,2006-10-25,49.3,41.9,3.04,Zogby Analytics
-senate,MI,2006-10-28,52.0,38.0,4.08,EPIC-MRA
-senate,MI,2006-10-31,51.0,38.0,4.08,EPIC-MRA
-senate,MI,2006-11-01,53.0,37.0,4.0,Mason-Dixon Polling & Strategy
-senate,MI,2006-11-01,53.0,34.0,4.34,Selzer & Co.
-senate,MI,2006-11-03,52.0,42.0,3.82,SurveyUSA
-senate,MI,2006-10-31,55.0,40.0,3.54,YouGov
-senate,MN,2006-09-14,56.0,32.0,3.49,Minneapolis Star Tribune
-senate,MN,2006-09-15,52.0,36.0,3.13,University of Minnesota Hubert H. Humphrey School of Public Affairs
-senate,MN,2006-09-19,52.0,37.0,4.0,Mason-Dixon Polling & Strategy
-senate,MN,2006-09-24,49.0,41.0,4.08,McLaughlin & Associates
-senate,MN,2006-09-22,49.0,40.0,3.84,Zogby Analytics
-senate,MN,2006-09-26,51.0,43.0,4.03,SurveyUSA
-senate,MN,2006-10-04,53.0,36.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MN,2006-10-08,55.0,34.0,3.5,Minneapolis Star Tribune
-senate,MN,2006-10-13,50.2,42.7,3.84,Zogby Analytics
-senate,MN,2006-10-22,55.0,39.0,4.06,SurveyUSA
-senate,MN,2006-10-25,53.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MN,2006-10-21,56.0,31.0,4.45,St. Cloud State University
-senate,MN,2006-10-25,50.5,42.8,3.84,Zogby Analytics
-senate,MN,2006-10-25,55.0,33.0,3.88,University of Minnesota Hubert H. Humphrey School of Public Affairs
-senate,MN,2006-10-28,50.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,MN,2006-11-01,54.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MN,2006-11-02,54.0,34.0,3.12,Minneapolis Star Tribune
-senate,MN,2006-11-04,56.0,40.0,3.75,SurveyUSA
-senate,MN,2006-10-31,57.0,39.0,4.47,YouGov
-senate,MN,2006-11-05,55.0,34.0,3.12,Minneapolis Star Tribune
-senate,MO,2006-09-11,45.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-09-12,48.0,47.0,4.62,SurveyUSA
-senate,MO,2006-09-22,45.3,46.9,3.84,Zogby Analytics
-senate,MO,2006-09-26,43.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,MO,2006-09-29,48.0,45.0,4.16,Gallup
-senate,MO,2006-09-28,49.0,40.0,3.84,The Polling Company Inc.
-senate,MO,2006-10-02,47.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-09-29,39.0,43.0,4.08,Zogby Analytics
-senate,MO,2006-10-10,48.0,43.0,3.54,"Normington, Petts & Associates"
-senate,MO,2006-10-10,51.0,42.0,4.49,SurveyUSA
-senate,MO,2006-10-12,44.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-10-13,47.2,49.8,3.84,Zogby Analytics
-senate,MO,2006-10-18,46.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,MO,2006-10-22,45.0,48.0,3.98,SurveyUSA
-senate,MO,2006-10-22,45.0,48.0,4.11,Los Angeles Times
-senate,MO,2006-10-25,48.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-10-25,47.3,48.6,3.84,Zogby Analytics
-senate,MO,2006-10-28,49.0,49.0,4.21,Big Village
-senate,MO,2006-10-30,48.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-10-29,49.0,46.0,4.36,SurveyUSA
-senate,MO,2006-10-27,46.0,43.0,4.08,Zogby Analytics
-senate,MO,2006-11-02,49.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-11-02,46.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,MO,2006-11-03,49.0,45.0,3.75,Gallup
-senate,MO,2006-11-05,48.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MO,2006-10-31,50.0,50.0,3.53,YouGov
-senate,MO,2006-11-05,50.0,44.0,3.55,SurveyUSA
-senate,MO,2006-11-06,49.0,46.0,4.1,OnPoint
-senate,MT,2006-09-13,52.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-09-20,50.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-09-27,47.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,MT,2006-09-27,49.0,40.0,3.84,The Polling Company Inc.
-senate,MT,2006-09-29,46.0,42.0,4.08,Zogby Analytics
-senate,MT,2006-10-11,49.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-10-12,50.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-10-12,46.0,35.0,4.94,Montana State University Billings
-senate,MT,2006-10-18,49.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-10-18,46.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,MT,2006-10-24,48.0,42.0,3.89,Harstad Strategic Research
-senate,MT,2006-10-26,51.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-10-27,47.0,46.0,4.08,Zogby Analytics
-senate,MT,2006-11-01,50.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-11-01,47.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,MT,2006-11-02,50.0,41.0,3.69,Gallup
-senate,MT,2006-11-04,50.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,MT,2006-11-06,49.0,44.0,4.08,OnPoint
-senate,NE,2006-09-20,55.0,32.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NE,2006-10-16,54.0,34.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2006-09-20,35.0,58.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2006-09-22,42.0,49.0,3.84,Zogby Analytics
-senate,NV,2006-10-13,43.2,52.1,3.84,Zogby Analytics
-senate,NV,2006-10-17,43.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2006-10-25,36.8,58.3,4.54,Zogby Analytics
-senate,NV,2006-10-28,37.0,54.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2006-10-31,42.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2006-10-31,42.0,53.0,4.99,YouGov
-senate,NJ,2006-09-15,45.0,48.0,3.81,Quinnipiac University
-senate,NJ,2006-09-20,38.0,44.0,5,Monmouth University Polling Institute
-senate,NJ,2006-09-22,40.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NJ,2006-09-24,45.0,44.0,4.98,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2006-09-22,46.6,40.9,3.84,Zogby Analytics
-senate,NJ,2006-09-26,44.0,41.0,4.0,Mason-Dixon Polling & Strategy
-senate,NJ,2006-09-28,37.0,42.0,4.66,Marist College
-senate,NJ,2006-09-27,41.0,41.0,3.84,The Polling Company Inc.
-senate,NJ,2006-09-29,46.0,43.0,4.3,Gallup
-senate,NJ,2006-09-29,46.0,39.0,4.41,Fairleigh Dickinson University
-senate,NJ,2006-09-29,45.0,35.0,4.08,Zogby Analytics
-senate,NJ,2006-10-07,49.0,45.0,3.62,Quinnipiac University
-senate,NJ,2006-10-11,44.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NJ,2006-10-13,44.8,47.1,3.84,Zogby Analytics
-senate,NJ,2006-10-18,48.0,39.0,5,Monmouth University Polling Institute
-senate,NJ,2006-10-20,45.0,42.0,4.0,Mason-Dixon Polling & Strategy
-senate,NJ,2006-10-22,45.0,41.0,5,Los Angeles Times
-senate,NJ,2006-10-25,45.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NJ,2006-10-24,45.0,36.0,3.54,"Normington, Petts & Associates"
-senate,NJ,2006-10-22,40.0,39.0,4.26,CBS News/The New York Times
-senate,NJ,2006-10-25,48.7,42.8,3.84,Zogby Analytics
-senate,NJ,2006-10-29,49.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NJ,2006-10-28,51.0,44.0,4.16,Big Village
-senate,NJ,2006-10-26,49.0,44.0,3.36,Quinnipiac University
-senate,NJ,2006-10-27,49.0,37.0,4.08,Zogby Analytics
-senate,NJ,2006-10-30,46.0,42.0,4.47,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2006-10-28,48.0,38.0,4.16,Fairleigh Dickinson University
-senate,NJ,2006-11-01,48.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NJ,2006-10-31,43.0,41.0,4.08,Public Opinion Strategies
-senate,NJ,2006-11-02,50.0,40.0,3.91,Gallup
-senate,NJ,2006-11-02,50.0,42.0,4.02,Marist College
-senate,NJ,2006-11-02,48.0,41.0,4.0,Mason-Dixon Polling & Strategy
-senate,NJ,2006-11-02,45.0,42.0,3.03,Monmouth University Polling Institute
-senate,NJ,2006-11-02,48.0,43.0,3.3,Quinnipiac University
-senate,NJ,2006-10-31,53.0,47.0,4.47,YouGov
-senate,NJ,2006-11-06,50.0,41.0,4.39,OnPoint
-senate,NM,2006-09-22,57.4,32.0,3.84,Zogby Analytics
-senate,NM,2006-09-27,65.0,19.0,3.88,Research & Polling Inc.
-senate,NM,2006-10-13,61.5,34.3,3.84,Zogby Analytics
-senate,NM,2006-10-25,58.2,37.5,3.84,Zogby Analytics
-senate,NM,2006-11-01,65.0,23.0,4.46,Research & Polling Inc.
-senate,NY,2006-09-13,62.0,33.0,4.0,Siena College
-senate,NY,2006-09-22,54.7,31.0,3.84,Zogby Analytics
-senate,NY,2006-09-26,60.0,30.0,3.69,CBS News/The New York Times
-senate,NY,2006-09-28,66.0,31.0,2.81,Quinnipiac University
-senate,NY,2006-10-11,59.0,32.0,4.02,Siena College
-senate,NY,2006-10-13,65.0,30.0,3.08,Quinnipiac University
-senate,NY,2006-10-13,55.8,32.0,3.84,Zogby Analytics
-senate,NY,2006-10-17,67.0,31.0,4.59,Marist College
-senate,NY,2006-10-25,57.3,33.0,3.24,Zogby Analytics
-senate,NY,2006-10-31,65.0,32.0,4.46,Marist College
-senate,NY,2006-10-31,65.0,28.0,4.47,Siena College
-senate,OH,2006-09-13,47.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2006-09-14,45.0,44.0,3.38,Quinnipiac University
-senate,OH,2006-09-12,51.0,47.0,3.96,University of Cincinnati (Ohio Poll)
-senate,OH,2006-09-19,52.0,42.0,4.52,SurveyUSA
-senate,OH,2006-09-15,47.0,42.0,2.36,Columbus Dispatch
-senate,OH,2006-09-22,44.6,40.5,3.84,Zogby Analytics
-senate,OH,2006-09-26,45.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,OH,2006-09-09,41.5,41.7,4.58,University of Akron Ray C. Bliss Institute of Applied Politics
-senate,OH,2006-09-30,49.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2006-09-29,41.0,41.0,4.08,Zogby Analytics
-senate,OH,2006-10-03,50.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2006-10-10,54.0,40.0,4.41,SurveyUSA
-senate,OH,2006-10-12,48.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2006-10-11,52.0,45.0,4.36,University of Cincinnati (Ohio Poll)
-senate,OH,2006-10-13,51.0,38.0,3.13,CBS News/The New York Times
-senate,OH,2006-10-12,53.0,41.0,3.33,Quinnipiac University
-senate,OH,2006-10-13,49.4,45.1,3.84,Zogby Analytics
-senate,OH,2006-10-19,48.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,OH,2006-10-22,47.0,39.0,4.44,Los Angeles Times
-senate,OH,2006-10-24,54.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OH,2006-10-24,57.0,37.0,4.21,SurveyUSA
-senate,OH,2006-10-25,48.7,47.3,3.84,Zogby Analytics
-senate,OH,2006-10-28,54.0,43.0,4.3,Big Village
-senate,OH,2006-10-24,51.0,44.0,3.54,Opinion Consultants
-senate,OH,2006-10-27,49.0,42.0,4.08,Zogby Analytics
-senate,OH,2006-11-01,50.0,44.0,4.0,Mason-Dixon Polling & Strategy
-senate,OH,2006-10-29,62.0,38.0,2.55,Columbus Dispatch
-senate,OH,2006-11-04,54.0,42.0,4.79,SurveyUSA
-senate,OH,2006-11-03,56.0,44.0,3.15,University of Cincinnati (Ohio Poll)
-senate,OH,2006-10-31,58.0,40.0,3.16,YouGov
-senate,PA,2006-09-15,45.0,38.0,4.07,Franklin & Marshall College Center for Opinion Research
-senate,PA,2006-09-15,52.0,31.0,2.89,Pew Research Center
-senate,PA,2006-09-18,53.0,39.0,4.91,GQR
-senate,PA,2006-09-20,49.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2006-09-17,49.0,39.0,3.87,Temple University Institute for Survey Research
-senate,PA,2006-09-21,54.0,40.0,3.27,Quinnipiac University
-senate,PA,2006-09-22,45.8,39.8,3.84,Zogby Analytics
-senate,PA,2006-09-24,49.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,PA,2006-09-27,52.0,36.0,3.84,The Polling Company Inc.
-senate,PA,2006-09-29,48.0,36.0,4.08,Zogby Analytics
-senate,PA,2006-10-06,52.0,39.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2006-10-05,46.0,41.0,4.42,Muhlenberg College Institute of Public Opinion
-senate,PA,2006-10-15,55.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2006-10-13,52.4,44.3,3.84,Zogby Analytics
-senate,PA,2006-10-16,54.0,37.0,4.08,GQR
-senate,PA,2006-10-20,51.0,39.0,4.0,Mason-Dixon Polling & Strategy
-senate,PA,2006-10-24,50.0,39.0,4.08,West Chester University
-senate,PA,2006-10-20,54.0,38.0,3.79,Temple University Institute for Survey Research
-senate,PA,2006-10-25,52.7,43.8,3.64,Zogby Analytics
-senate,PA,2006-10-28,55.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,PA,2006-10-27,53.0,38.0,4.0,Franklin & Marshall College Center for Opinion Research
-senate,PA,2006-10-26,52.0,42.0,3.27,Quinnipiac University
-senate,PA,2006-10-27,48.0,40.0,4.08,Zogby Analytics
-senate,PA,2006-11-01,52.0,39.0,4.0,Mason-Dixon Polling & Strategy
-senate,PA,2006-10-31,51.0,43.0,4.44,Muhlenberg College Institute of Public Opinion
-senate,PA,2006-11-04,48.1,44.1,3.54,Victory Research
-senate,PA,2006-10-31,56.0,40.0,3.15,YouGov
-senate,RI,2006-09-13,51.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,RI,2006-09-17,40.0,39.0,4.16,Brown University A. Alfred Taubman Center for American Politics and Policy
-senate,RI,2006-09-17,45.0,40.0,4.08,American Research Group
-senate,RI,2006-09-27,42.0,41.0,4.0,Mason-Dixon Polling & Strategy
-senate,RI,2006-09-29,50.0,39.0,3.78,Gallup
-senate,RI,2006-09-29,45.0,41.0,4.08,Zogby Analytics
-senate,RI,2006-10-04,51.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,RI,2006-10-03,40.0,37.0,4.67,Quest Research Group
-senate,RI,2006-10-13,46.0,42.0,4.99,Fleming & Associates
-senate,RI,2006-10-19,52.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,RI,2006-10-19,48.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,RI,2006-10-24,43.0,33.0,4.95,Quest Research Group
-senate,RI,2006-10-27,53.0,39.0,4.08,Zogby Analytics
-senate,RI,2006-11-01,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
-senate,RI,2006-11-02,48.0,45.0,3.76,Gallup
-senate,TN,2006-09-10,48.0,45.0,3.96,SurveyUSA
-senate,TN,2006-09-22,45.0,39.0,4.07,Benenson Strategy Group
-senate,TN,2006-09-22,42.4,47.6,3.84,Zogby Analytics
-senate,TN,2006-09-25,43.0,42.0,4.0,Mason-Dixon Polling & Strategy
-senate,TN,2006-09-25,42.0,43.0,4.27,Middle Tennessee State University
-senate,TN,2006-09-30,48.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-09-29,50.0,45.0,4.09,Gallup
-senate,TN,2006-09-29,40.0,40.0,4.08,Zogby Analytics
-senate,TN,2006-10-03,51.0,44.0,3.54,EMC Research
-senate,TN,2006-10-08,46.0,48.0,4.31,SurveyUSA
-senate,TN,2006-10-11,48.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-10-13,42.0,49.4,3.84,Zogby Analytics
-senate,TN,2006-10-19,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-10-19,43.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,TN,2006-10-23,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-10-22,44.0,49.0,4.41,Los Angeles Times
-senate,TN,2006-10-23,48.0,48.0,3.58,SurveyUSA
-senate,TN,2006-10-23,47.0,45.0,3.54,EMC Research
-senate,TN,2006-10-25,48.1,49.3,3.84,Zogby Analytics
-senate,TN,2006-10-27,48.0,43.0,4.23,Benenson Strategy Group
-senate,TN,2006-10-28,44.0,52.0,4.3,Big Village
-senate,TN,2006-10-30,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-10-27,46.0,40.0,4.08,EMC Research
-senate,TN,2006-10-27,43.0,53.0,4.08,Zogby Analytics
-senate,TN,2006-11-02,45.0,53.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-11-02,38.0,50.0,4.0,Mason-Dixon Polling & Strategy
-senate,TN,2006-11-04,47.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TN,2006-11-03,46.0,49.0,3.85,Gallup
-senate,TN,2006-11-04,46.0,51.0,3.84,SurveyUSA
-senate,TN,2006-10-31,46.0,51.0,4.46,YouGov
-senate,TN,2006-11-06,47.0,48.0,3.84,OnPoint
-senate,TX,2006-09-22,30.0,53.5,3.84,Zogby Analytics
-senate,TX,2006-10-13,27.9,59.9,3.84,Zogby Analytics
-senate,TX,2006-10-23,34.0,60.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,TX,2006-10-24,26.6,61.1,3.16,Zogby Analytics
-senate,TX,2006-10-25,35.9,54.8,3.04,Zogby Analytics
-senate,TX,2006-10-31,29.0,65.0,3.16,YouGov
-senate,UT,2006-09-27,25.0,62.0,3.29,Dan Jones & Associates
-senate,UT,2006-10-31,31.0,61.0,4.0,Mason-Dixon Polling & Strategy
-senate,UT,2006-10-31,34.0,66.0,4.99,YouGov
-senate,VA,2006-09-11,43.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-09-11,45.0,48.0,4.63,SurveyUSA
-senate,VA,2006-09-22,43.5,49.1,3.84,Zogby Analytics
-senate,VA,2006-09-25,44.0,49.0,3.99,SurveyUSA
-senate,VA,2006-09-25,43.0,43.0,4.0,Mason-Dixon Polling & Strategy
-senate,VA,2006-09-27,44.0,50.0,4.04,SurveyUSA
-senate,VA,2006-09-30,43.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-09-29,45.0,48.0,4.09,Gallup
-senate,VA,2006-09-29,37.0,48.0,4.08,Zogby Analytics
-senate,VA,2006-10-12,46.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-10-11,47.0,49.0,3.16,ABC News/The Washington Post
-senate,VA,2006-10-11,47.0,49.0,3.84,ABC News/The Washington Post
-senate,VA,2006-10-13,46.7,49.7,3.84,Zogby Analytics
-senate,VA,2006-10-18,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,VA,2006-10-22,47.0,44.0,5,Los Angeles Times
-senate,VA,2006-10-23,46.0,49.0,4.04,SurveyUSA
-senate,VA,2006-10-25,48.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-10-25,51.0,47.2,3.84,Zogby Analytics
-senate,VA,2006-10-29,51.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-10-28,47.0,43.0,3.51,Garin-Hart-Yang Research Group
-senate,VA,2006-10-28,50.0,46.0,4.09,Big Village
-senate,VA,2006-10-26,42.0,45.0,4.7,Roanoke College Institute for Policy and Opinion Research
-senate,VA,2006-10-27,45.0,44.0,4.08,Zogby Analytics
-senate,VA,2006-11-02,49.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,VA,2006-11-02,46.0,49.0,3.75,Gallup
-senate,VA,2006-11-02,46.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,VA,2006-11-04,52.0,44.0,3.67,SurveyUSA
-senate,VA,2006-10-31,50.0,50.0,3.53,YouGov
-senate,WA,2006-09-20,48.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2006-09-23,53.0,35.0,4.97,Elway Research
-senate,WA,2006-09-23,54.0,42.0,4.56,SurveyUSA
-senate,WA,2006-09-22,50.1,43.2,3.84,Zogby Analytics
-senate,WA,2006-09-26,50.0,40.0,4.0,Mason-Dixon Polling & Strategy
-senate,WA,2006-10-14,51.0,43.0,3.43,SurveyUSA
-senate,WA,2006-10-13,51.8,45.4,3.84,Zogby Analytics
-senate,WA,2006-10-17,53.0,38.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2006-10-18,52.0,37.0,4.0,Mason-Dixon Polling & Strategy
-senate,WA,2006-10-20,52.0,34.0,4.97,Elway Research
-senate,WA,2006-10-26,54.0,42.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WA,2006-10-25,50.0,46.1,3.84,Zogby Analytics
-senate,WA,2006-10-28,54.0,41.0,3.59,SurveyUSA
-senate,WA,2006-10-28,53.0,41.0,3.78,University of Washington Center for Survey Research
-senate,WA,2006-11-01,54.0,38.0,4.0,Mason-Dixon Polling & Strategy
-senate,WA,2006-10-31,57.0,43.0,3.53,YouGov
-senate,WV,2006-10-31,67.0,33.0,5,YouGov
-senate,WI,2006-09-14,60.0,33.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2006-09-22,47.4,34.1,3.84,Zogby Analytics
-senate,WI,2006-10-13,50.0,34.4,3.84,Zogby Analytics
-senate,WI,2006-10-22,73.0,16.0,5,University of Wisconsin Survey Center
-senate,WI,2006-10-25,47.2,38.0,3.84,Zogby Analytics
-senate,WI,2006-10-31,69.0,24.0,4.46,YouGov
-senate,WY,2006-10-11,26.0,67.0,4.0,Mason-Dixon Polling & Strategy
-senate,WY,2006-10-22,22.0,70.0,4.31,Aspen Media & Market Research
+mode,state,date,dem,rep,pollster,sigma
+governor,AK,2006-10-03,37.0,48.0,Alaska Survey Research,3
+governor,AK,2006-10-09,37.0,48.0,Alaska Survey Research,3
+governor,AL,2006-09-26,38.0,54.0,SurveyUSA,3
+governor,AL,2006-10-16,36.0,57.0,SurveyUSA,3
+governor,AL,2006-10-30,39.0,54.0,SurveyUSA,3
+governor,AL,2006-11-01,42.0,58.0,YouGov,3
+governor,AR,2006-09-25,55.0,40.0,SurveyUSA,3
+governor,AR,2006-10-13,49.2,45.0,Zogby Analytics,3
+governor,AR,2006-10-23,58.0,38.0,SurveyUSA,3
+governor,AR,2006-10-25,45.3,48.2,Zogby Analytics,3
+governor,AR,2006-11-04,51.0,42.0,SurveyUSA,3
+governor,AZ,2006-09-17,56.0,40.0,SurveyUSA,3
+governor,AZ,2006-10-13,51.4,41.9,Zogby Analytics,3
+governor,AZ,2006-10-15,56.0,37.0,SurveyUSA,3
+governor,AZ,2006-10-25,51.3,42.7,Zogby Analytics,3
+governor,AZ,2006-10-31,57.0,41.0,YouGov,3
+governor,AZ,2006-11-01,61.0,33.0,Mason-Dixon Polling & Strategy,3
+governor,AZ,2006-11-01,57.0,38.0,SurveyUSA,3
+governor,CA,2006-09-17,31.0,48.0,Public Policy Institute of California,3
+governor,CA,2006-09-19,34.0,44.0,Field Research Corp. (Field Poll),3
+governor,CA,2006-09-25,38.0,52.0,SurveyUSA,3
+governor,CA,2006-09-25,33.0,50.0,Los Angeles Times,3
+governor,CA,2006-09-27,36.0,49.0,Mason-Dixon Polling & Strategy,3
+governor,CA,2006-10-13,39.6,47.0,Zogby Analytics,3
+governor,CA,2006-10-19,30.0,48.0,Public Policy Institute of California,3
+governor,CA,2006-10-23,40.0,50.0,YouGov,3
+governor,CA,2006-10-24,37.0,55.0,SurveyUSA,3
+governor,CA,2006-10-25,38.8,47.6,Zogby Analytics,3
+governor,CA,2006-10-27,33.0,49.0,Field Research Corp. (Field Poll),3
+governor,CA,2006-10-31,42.0,52.0,YouGov,3
+governor,CA,2006-11-03,38.0,53.0,SurveyUSA,3
+governor,CO,2006-09-26,55.0,38.0,SurveyUSA,3
+governor,CO,2006-09-29,43.0,33.0,Ciruli Associates,3
+governor,CO,2006-10-04,50.0,35.0,Mason-Dixon Polling & Strategy,3
+governor,CO,2006-10-13,46.7,44.7,Zogby Analytics,3
+governor,CO,2006-10-21,56.0,38.0,SurveyUSA,3
+governor,CO,2006-10-21,52.0,33.0,Ciruli Associates,3
+governor,CO,2006-10-25,50.0,38.0,Mason-Dixon Polling & Strategy,3
+governor,CO,2006-10-25,46.4,46.6,Zogby Analytics,3
+governor,CO,2006-10-31,57.0,35.0,SurveyUSA,3
+governor,CO,2006-10-31,60.0,40.0,YouGov,3
+governor,CT,2006-09-23,30.0,63.0,Quinnipiac University,3
+governor,CT,2006-10-06,28.0,50.0,University of Connecticut,3
+governor,CT,2006-10-18,33.0,59.0,Quinnipiac University,3
+governor,CT,2006-10-27,35.0,59.0,Quinnipiac University,3
+governor,CT,2006-11-01,32.0,64.0,YouGov,3
+governor,FL,2006-09-12,41.0,49.0,SurveyUSA,3
+governor,FL,2006-09-21,36.0,51.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2006-09-27,30.0,51.0,Zogby Analytics,3
+governor,FL,2006-10-05,43.0,53.0,Quinnipiac University,3
+governor,FL,2006-10-08,41.0,54.0,SurveyUSA,3
+governor,FL,2006-10-13,41.0,50.2,Zogby Analytics,3
+governor,FL,2006-10-16,39.0,50.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2006-10-20,44.0,46.0,Quinnipiac University,3
+governor,FL,2006-10-25,45.1,49.9,Zogby Analytics,3
+governor,FL,2006-10-31,43.0,50.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2006-10-31,42.0,54.0,YouGov,3
+governor,FL,2006-11-01,38.0,48.0,Zogby Analytics,3
+governor,FL,2006-11-03,47.0,49.0,SurveyUSA,3
+governor,GA,2006-09-25,34.0,53.0,Mason-Dixon Polling & Strategy,3
+governor,GA,2006-10-13,37.7,49.3,Zogby Analytics,3
+governor,GA,2006-10-25,36.3,48.3,Zogby Analytics,3
+governor,GA,2006-10-26,36.0,53.0,Mason-Dixon Polling & Strategy,3
+governor,GA,2006-11-01,42.0,59.0,YouGov,3
+governor,IA,2006-09-12,44.0,44.0,Selzer & Co.,3
+governor,IA,2006-10-10,46.0,39.0,Selzer & Co.,3
+governor,IA,2006-10-13,47.6,45.4,Zogby Analytics,3
+governor,IA,2006-10-25,47.6,46.4,Zogby Analytics,3
+governor,IA,2006-10-31,54.0,46.0,YouGov,3
+governor,IA,2006-11-02,52.0,43.0,Selzer & Co.,3
+governor,ID,2006-10-24,43.0,44.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2006-09-09,45.0,33.0,Market Shares Corp.,3
+governor,IL,2006-09-11,56.0,26.0,KRC Research,3
+governor,IL,2006-09-18,45.0,39.0,SurveyUSA,3
+governor,IL,2006-09-20,47.0,37.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2006-10-10,43.0,29.0,Market Shares Corp.,3
+governor,IL,2006-10-13,47.1,33.2,Zogby Analytics,3
+governor,IL,2006-10-14,39.0,30.0,Glengariff Group,3
+governor,IL,2006-10-21,44.0,34.0,SurveyUSA,3
+governor,IL,2006-10-25,39.6,33.0,Zogby Analytics,3
+governor,IL,2006-10-28,44.0,29.0,Market Shares Corp.,3
+governor,IL,2006-10-30,44.0,40.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2006-10-31,45.0,37.0,SurveyUSA,3
+governor,IL,2006-11-01,61.0,39.0,YouGov,3
+governor,KS,2006-09-12,58.0,38.0,SurveyUSA,3
+governor,KS,2006-10-14,55.0,42.0,SurveyUSA,3
+governor,KS,2006-11-03,57.0,40.0,SurveyUSA,3
+governor,MA,2006-09-09,43.0,30.0,KRC Research,3
+governor,MA,2006-09-20,64.0,25.0,SurveyUSA,3
+governor,MA,2006-09-28,55.0,30.0,University of New Hampshire Survey Center,3
+governor,MA,2006-10-03,49.0,28.0,Suffolk University,3
+governor,MA,2006-10-09,52.0,34.0,SurveyUSA,3
+governor,MA,2006-10-10,46.0,33.0,Suffolk University,3
+governor,MA,2006-10-13,56.0,33.6,Zogby Analytics,3
+governor,MA,2006-10-22,56.0,31.0,SurveyUSA,3
+governor,MA,2006-10-22,53.0,26.0,Suffolk University,3
+governor,MA,2006-10-24,54.0,29.0,University of New Hampshire Survey Center,3
+governor,MA,2006-10-25,58.1,32.7,Zogby Analytics,3
+governor,MA,2006-10-31,55.0,34.0,SurveyUSA,3
+governor,MA,2006-10-31,61.0,32.0,YouGov,3
+governor,MD,2006-09-18,51.0,44.0,SurveyUSA,3
+governor,MD,2006-09-24,47.0,43.0,Mason-Dixon Polling & Strategy,3
+governor,MD,2006-09-29,53.0,41.0,Gallup,3
+governor,MD,2006-10-13,51.6,40.7,Zogby Analytics,3
+governor,MD,2006-10-16,49.0,43.0,SurveyUSA,3
+governor,MD,2006-10-24,55.0,45.0,ABC News/The Washington Post,3
+governor,MD,2006-10-25,49.3,43.9,Zogby Analytics,3
+governor,MD,2006-10-31,50.0,48.0,YouGov,3
+governor,MD,2006-11-01,48.0,47.0,SurveyUSA,3
+governor,MD,2006-11-02,45.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,MD,2006-11-04,50.0,47.0,SurveyUSA,3
+governor,ME,2006-09-11,42.0,41.0,SurveyUSA,3
+governor,ME,2006-09-25,44.0,39.0,SurveyUSA,3
+governor,ME,2006-10-21,42.0,34.0,SurveyUSA,3
+governor,ME,2006-11-03,36.0,30.0,SurveyUSA,3
+governor,MI,2006-09-09,50.0,42.0,EPIC-MRA,3
+governor,MI,2006-09-16,47.0,47.0,SurveyUSA,3
+governor,MI,2006-10-03,46.0,40.0,EPIC-MRA,3
+governor,MI,2006-10-07,50.0,45.0,SurveyUSA,3
+governor,MI,2006-10-10,49.0,41.0,Selzer & Co.,3
+governor,MI,2006-10-11,51.0,42.0,EPIC-MRA,3
+governor,MI,2006-10-13,50.6,44.1,Zogby Analytics,3
+governor,MI,2006-10-23,52.0,45.0,SurveyUSA,3
+governor,MI,2006-10-24,48.0,43.0,EPIC-MRA,3
+governor,MI,2006-10-25,51.6,42.7,Zogby Analytics,3
+governor,MI,2006-10-28,52.0,42.0,EPIC-MRA,3
+governor,MI,2006-10-31,52.0,43.0,EPIC-MRA,3
+governor,MI,2006-10-31,55.0,43.0,YouGov,3
+governor,MI,2006-11-01,52.0,38.0,Mason-Dixon Polling & Strategy,3
+governor,MI,2006-11-01,54.0,41.0,Selzer & Co.,3
+governor,MI,2006-11-03,51.0,45.0,SurveyUSA,3
+governor,MN,2006-09-19,39.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2006-09-26,44.0,45.0,SurveyUSA,3
+governor,MN,2006-10-13,45.0,44.9,Zogby Analytics,3
+governor,MN,2006-10-22,45.0,44.0,SurveyUSA,3
+governor,MN,2006-10-25,46.1,44.7,Zogby Analytics,3
+governor,MN,2006-10-28,44.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2006-10-31,49.0,45.0,YouGov,3
+governor,MN,2006-11-04,45.0,45.0,SurveyUSA,3
+governor,NH,2006-09-17,73.0,23.0,SurveyUSA,3
+governor,NH,2006-09-19,69.0,14.0,University of New Hampshire Survey Center,3
+governor,NH,2006-09-26,59.0,29.0,American Research Group,3
+governor,NH,2006-10-31,71.0,19.0,University of New Hampshire Survey Center,3
+governor,NH,2006-11-04,74.0,18.0,University of New Hampshire Survey Center,3
+governor,NM,2006-09-27,60.0,28.0,Research & Polling Inc.,3
+governor,NV,2006-09-20,36.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2006-10-13,43.2,48.4,Zogby Analytics,3
+governor,NV,2006-10-25,47.5,46.6,Zogby Analytics,3
+governor,NV,2006-10-28,40.0,44.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2006-10-31,44.0,51.0,YouGov,3
+governor,NY,2006-09-13,72.0,21.0,Siena College,3
+governor,NY,2006-09-26,70.0,20.0,CBS News/The New York Times,3
+governor,NY,2006-09-28,69.0,18.0,Quinnipiac University,3
+governor,NY,2006-10-11,68.0,22.0,Siena College,3
+governor,NY,2006-10-13,71.0,22.0,Quinnipiac University,3
+governor,NY,2006-10-13,64.1,26.0,Zogby Analytics,3
+governor,NY,2006-10-17,73.0,22.0,Marist College,3
+governor,NY,2006-10-25,63.2,27.3,Zogby Analytics,3
+governor,NY,2006-10-31,69.0,24.0,Marist College,3
+governor,NY,2006-10-31,69.0,24.0,Siena College,3
+governor,NY,2006-11-01,69.0,24.0,YouGov,3
+governor,OH,2006-09-14,55.0,34.0,Quinnipiac University,3
+governor,OH,2006-09-19,56.0,35.0,SurveyUSA,3
+governor,OH,2006-09-26,53.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,OH,2006-10-10,60.0,32.0,SurveyUSA,3
+governor,OH,2006-10-12,59.0,32.0,Quinnipiac University,3
+governor,OH,2006-10-13,54.0,29.0,CBS News/The New York Times,3
+governor,OH,2006-10-13,51.0,40.6,Zogby Analytics,3
+governor,OH,2006-10-19,54.0,34.0,Mason-Dixon Polling & Strategy,3
+governor,OH,2006-10-24,62.0,32.0,SurveyUSA,3
+governor,OH,2006-10-25,50.8,43.3,Zogby Analytics,3
+governor,OH,2006-10-28,59.0,36.0,Big Village,3
+governor,OH,2006-10-31,62.0,35.0,YouGov,3
+governor,OH,2006-11-01,56.0,37.0,Mason-Dixon Polling & Strategy,3
+governor,OH,2006-11-04,55.0,38.0,SurveyUSA,3
+governor,OK,2006-09-23,64.0,33.0,SurveyUSA,3
+governor,OK,2006-10-22,64.0,32.0,SurveyUSA,3
+governor,OK,2006-11-02,65.0,29.0,SurveyUSA,3
+governor,OR,2006-09-15,38.0,38.0,Moore Information Group,3
+governor,OR,2006-09-24,43.0,38.0,DHM Research,3
+governor,OR,2006-10-13,47.2,43.5,Zogby Analytics,3
+governor,OR,2006-10-25,47.2,46.6,Zogby Analytics,3
+governor,OR,2006-10-30,46.0,39.0,DHM Research,3
+governor,OR,2006-10-31,54.0,46.0,YouGov,3
+governor,PA,2006-09-15,52.0,34.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2006-09-15,61.0,32.0,Pew Research Center,3
+governor,PA,2006-09-21,55.0,39.0,Quinnipiac University,3
+governor,PA,2006-09-24,54.0,37.0,Mason-Dixon Polling & Strategy,3
+governor,PA,2006-10-05,56.0,35.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2006-10-13,51.4,44.4,Zogby Analytics,3
+governor,PA,2006-10-20,56.0,35.0,Mason-Dixon Polling & Strategy,3
+governor,PA,2006-10-25,55.2,42.0,Zogby Analytics,3
+governor,PA,2006-10-26,58.0,35.0,Quinnipiac University,3
+governor,PA,2006-10-27,58.0,33.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2006-10-31,60.0,35.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2006-10-31,61.0,37.0,YouGov,3
+governor,PA,2006-11-01,56.0,38.0,Mason-Dixon Polling & Strategy,3
+governor,RI,2006-09-27,34.0,50.0,Mason-Dixon Polling & Strategy,3
+governor,RI,2006-09-29,46.0,47.0,Gallup,3
+governor,RI,2006-10-19,39.0,49.0,Mason-Dixon Polling & Strategy,3
+governor,RI,2006-10-29,41.0,50.0,Fleming & Associates,3
+governor,RI,2006-11-01,42.0,50.0,Mason-Dixon Polling & Strategy,3
+governor,SC,2006-09-18,41.0,54.0,SurveyUSA,3
+governor,SC,2006-09-27,46.0,50.0,SurveyUSA,3
+governor,SC,2006-10-15,41.0,56.0,SurveyUSA,3
+governor,SC,2006-10-31,44.0,56.0,YouGov,3
+governor,SC,2006-11-03,40.0,57.0,SurveyUSA,3
+governor,SD,2006-10-25,35.0,57.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2006-09-10,63.0,30.0,SurveyUSA,3
+governor,TN,2006-09-25,63.0,22.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2006-09-29,66.0,26.0,Gallup,3
+governor,TN,2006-10-08,63.0,32.0,SurveyUSA,3
+governor,TN,2006-10-19,62.0,27.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2006-10-23,66.0,29.0,SurveyUSA,3
+governor,TN,2006-10-28,59.0,37.0,Big Village,3
+governor,TN,2006-10-31,63.0,31.0,YouGov,3
+governor,TN,2006-11-02,61.0,26.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2006-11-04,62.0,34.0,SurveyUSA,3
+governor,TX,2006-09-17,23.0,35.0,SurveyUSA,3
+governor,TX,2006-10-13,26.2,37.5,Zogby Analytics,3
+governor,TX,2006-10-22,26.0,36.0,SurveyUSA,3
+governor,TX,2006-10-24,22.0,38.0,Zogby Analytics,3
+governor,TX,2006-10-25,28.5,36.7,Zogby Analytics,3
+governor,TX,2006-11-02,22.0,38.0,SurveyUSA,3
+governor,VT,2006-09-13,32.0,59.0,American Research Group,3
+governor,WI,2006-10-13,47.4,45.6,Zogby Analytics,3
+governor,WI,2006-10-25,46.7,47.2,Zogby Analytics,3
+governor,WI,2006-10-31,53.0,43.0,YouGov,3
+governor,WY,2006-10-11,63.0,30.0,Mason-Dixon Polling & Strategy,3
+senate,AZ,2006-09-17,43.0,48.0,SurveyUSA,3
+senate,AZ,2006-09-22,44.0,50.5,Zogby Analytics,3
+senate,AZ,2006-10-13,43.7,49.9,Zogby Analytics,3
+senate,AZ,2006-10-15,43.0,48.0,SurveyUSA,3
+senate,AZ,2006-10-25,44.4,51.8,Zogby Analytics,3
+senate,AZ,2006-10-31,46.0,50.0,YouGov,3
+senate,AZ,2006-11-01,41.0,49.0,Mason-Dixon Polling & Strategy,3
+senate,AZ,2006-11-01,40.0,53.0,SurveyUSA,3
+senate,CA,2006-09-19,57.0,29.0,Field Research Corp. (Field Poll),3
+senate,CA,2006-09-25,55.0,35.0,SurveyUSA,3
+senate,CA,2006-09-25,54.0,36.0,Los Angeles Times,3
+senate,CA,2006-09-27,53.0,23.0,Mason-Dixon Polling & Strategy,3
+senate,CA,2006-10-23,57.0,39.0,YouGov,3
+senate,CA,2006-10-24,59.0,33.0,SurveyUSA,3
+senate,CA,2006-10-27,55.0,33.0,Field Research Corp. (Field Poll),3
+senate,CA,2006-10-31,61.0,29.0,YouGov,3
+senate,CA,2006-11-03,60.0,31.0,SurveyUSA,3
+senate,CT,2006-09-10,38.0,7.0,SurveyUSA,3
+senate,CT,2006-09-17,45.0,3.0,American Research Group,3
+senate,CT,2006-09-22,44.0,4.0,Zogby Analytics,3
+senate,CT,2006-09-23,39.0,5.0,Quinnipiac University,3
+senate,CT,2006-09-29,33.0,4.0,Zogby Analytics,3
+senate,CT,2006-10-06,40.0,4.0,University of Connecticut,3
+senate,CT,2006-10-09,40.0,4.0,SurveyUSA,3
+senate,CT,2006-10-13,43.2,4.0,Zogby Analytics,3
+senate,CT,2006-10-18,35.0,6.0,Quinnipiac University,3
+senate,CT,2006-10-19,37.0,8.0,American Research Group,3
+senate,CT,2006-10-25,42.5,6.0,Zogby Analytics,3
+senate,CT,2006-10-27,37.0,8.0,Quinnipiac University,3
+senate,CT,2006-10-27,37.0,8.0,Zogby Analytics,3
+senate,CT,2006-10-31,44.0,5.0,YouGov,3
+senate,CT,2006-11-02,38.0,8.0,Quinnipiac University,3
+senate,CT,2006-11-03,38.0,9.0,SurveyUSA,3
+senate,DE,2006-09-16,63.0,23.0,Fairleigh Dickinson University,3
+senate,DE,2006-10-21,60.0,26.0,Fairleigh Dickinson University,3
+senate,FL,2006-09-12,53.0,38.0,SurveyUSA,3
+senate,FL,2006-09-21,53.0,35.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2006-09-22,52.0,34.6,Zogby Analytics,3
+senate,FL,2006-10-05,61.0,33.0,Quinnipiac University,3
+senate,FL,2006-10-08,55.0,37.0,SurveyUSA,3
+senate,FL,2006-10-13,54.1,36.8,Zogby Analytics,3
+senate,FL,2006-10-16,57.0,31.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2006-10-20,64.0,29.0,Quinnipiac University,3
+senate,FL,2006-10-25,53.7,39.6,Zogby Analytics,3
+senate,FL,2006-10-31,58.0,34.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2006-10-31,60.0,34.0,YouGov,3
+senate,FL,2006-11-01,60.0,31.0,Zogby Analytics,3
+senate,FL,2006-11-03,59.0,36.0,SurveyUSA,3
+senate,MA,2006-10-22,60.0,26.0,Suffolk University,3
+senate,MA,2006-10-24,66.0,25.0,University of New Hampshire Survey Center,3
+senate,MA,2006-10-31,67.0,27.0,YouGov,3
+senate,MD,2006-09-18,47.0,48.0,SurveyUSA,3
+senate,MD,2006-09-22,51.9,38.9,Zogby Analytics,3
+senate,MD,2006-09-24,47.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,MD,2006-09-29,54.0,39.0,Gallup,3
+senate,MD,2006-09-29,45.0,37.0,Zogby Analytics,3
+senate,MD,2006-10-13,51.1,42.7,Zogby Analytics,3
+senate,MD,2006-10-16,46.0,46.0,SurveyUSA,3
+senate,MD,2006-10-24,54.0,43.0,ABC News/The Washington Post,3
+senate,MD,2006-10-25,52.8,43.5,Zogby Analytics,3
+senate,MD,2006-10-27,49.0,44.0,Zogby Analytics,3
+senate,MD,2006-10-31,51.0,45.0,YouGov,3
+senate,MD,2006-11-01,47.0,47.0,SurveyUSA,3
+senate,MD,2006-11-02,47.0,44.0,Mason-Dixon Polling & Strategy,3
+senate,MD,2006-11-04,49.0,46.0,SurveyUSA,3
+senate,MI,2006-09-09,53.0,34.0,EPIC-MRA,3
+senate,MI,2006-09-16,54.0,41.0,SurveyUSA,3
+senate,MI,2006-09-22,48.8,42.3,Zogby Analytics,3
+senate,MI,2006-10-03,48.0,35.0,EPIC-MRA,3
+senate,MI,2006-10-07,53.0,42.0,SurveyUSA,3
+senate,MI,2006-10-10,48.0,34.0,Selzer & Co.,3
+senate,MI,2006-10-13,48.2,43.6,Zogby Analytics,3
+senate,MI,2006-10-23,51.0,44.0,SurveyUSA,3
+senate,MI,2006-10-24,50.0,38.0,EPIC-MRA,3
+senate,MI,2006-10-25,49.3,41.9,Zogby Analytics,3
+senate,MI,2006-10-28,52.0,38.0,EPIC-MRA,3
+senate,MI,2006-10-31,51.0,38.0,EPIC-MRA,3
+senate,MI,2006-10-31,55.0,40.0,YouGov,3
+senate,MI,2006-11-01,53.0,37.0,Mason-Dixon Polling & Strategy,3
+senate,MI,2006-11-01,53.0,34.0,Selzer & Co.,3
+senate,MI,2006-11-03,52.0,42.0,SurveyUSA,3
+senate,MN,2006-09-19,52.0,37.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2006-09-22,49.0,40.0,Zogby Analytics,3
+senate,MN,2006-09-26,51.0,43.0,SurveyUSA,3
+senate,MN,2006-10-13,50.2,42.7,Zogby Analytics,3
+senate,MN,2006-10-22,55.0,39.0,SurveyUSA,3
+senate,MN,2006-10-25,50.5,42.8,Zogby Analytics,3
+senate,MN,2006-10-28,50.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2006-10-31,57.0,39.0,YouGov,3
+senate,MN,2006-11-04,56.0,40.0,SurveyUSA,3
+senate,MO,2006-09-12,48.0,47.0,SurveyUSA,3
+senate,MO,2006-09-22,45.3,46.9,Zogby Analytics,3
+senate,MO,2006-09-26,43.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,MO,2006-09-29,48.0,45.0,Gallup,3
+senate,MO,2006-09-29,39.0,43.0,Zogby Analytics,3
+senate,MO,2006-10-10,51.0,42.0,SurveyUSA,3
+senate,MO,2006-10-13,47.2,49.8,Zogby Analytics,3
+senate,MO,2006-10-18,46.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,MO,2006-10-22,45.0,48.0,SurveyUSA,3
+senate,MO,2006-10-22,45.0,48.0,Los Angeles Times,3
+senate,MO,2006-10-25,47.3,48.6,Zogby Analytics,3
+senate,MO,2006-10-27,46.0,43.0,Zogby Analytics,3
+senate,MO,2006-10-28,49.0,49.0,Big Village,3
+senate,MO,2006-10-29,49.0,46.0,SurveyUSA,3
+senate,MO,2006-10-31,50.0,50.0,YouGov,3
+senate,MO,2006-11-02,46.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,MO,2006-11-03,49.0,45.0,Gallup,3
+senate,MO,2006-11-05,50.0,44.0,SurveyUSA,3
+senate,MT,2006-09-27,47.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,MT,2006-09-29,46.0,42.0,Zogby Analytics,3
+senate,MT,2006-10-18,46.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,MT,2006-10-27,47.0,46.0,Zogby Analytics,3
+senate,MT,2006-11-01,47.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,MT,2006-11-02,50.0,41.0,Gallup,3
+senate,NJ,2006-09-15,45.0,48.0,Quinnipiac University,3
+senate,NJ,2006-09-20,38.0,44.0,Monmouth University Polling Institute,3
+senate,NJ,2006-09-22,46.6,40.9,Zogby Analytics,3
+senate,NJ,2006-09-24,45.0,44.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2006-09-26,44.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,NJ,2006-09-28,37.0,42.0,Marist College,3
+senate,NJ,2006-09-29,46.0,43.0,Gallup,3
+senate,NJ,2006-09-29,46.0,39.0,Fairleigh Dickinson University,3
+senate,NJ,2006-09-29,45.0,35.0,Zogby Analytics,3
+senate,NJ,2006-10-07,49.0,45.0,Quinnipiac University,3
+senate,NJ,2006-10-13,44.8,47.1,Zogby Analytics,3
+senate,NJ,2006-10-18,48.0,39.0,Monmouth University Polling Institute,3
+senate,NJ,2006-10-20,45.0,42.0,Mason-Dixon Polling & Strategy,3
+senate,NJ,2006-10-22,45.0,41.0,Los Angeles Times,3
+senate,NJ,2006-10-22,40.0,39.0,CBS News/The New York Times,3
+senate,NJ,2006-10-25,48.7,42.8,Zogby Analytics,3
+senate,NJ,2006-10-26,49.0,44.0,Quinnipiac University,3
+senate,NJ,2006-10-27,49.0,37.0,Zogby Analytics,3
+senate,NJ,2006-10-28,51.0,44.0,Big Village,3
+senate,NJ,2006-10-28,48.0,38.0,Fairleigh Dickinson University,3
+senate,NJ,2006-10-30,46.0,42.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2006-10-31,53.0,47.0,YouGov,3
+senate,NJ,2006-11-02,50.0,40.0,Gallup,3
+senate,NJ,2006-11-02,50.0,42.0,Marist College,3
+senate,NJ,2006-11-02,48.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,NJ,2006-11-02,45.0,42.0,Monmouth University Polling Institute,3
+senate,NJ,2006-11-02,48.0,43.0,Quinnipiac University,3
+senate,NM,2006-09-22,57.4,32.0,Zogby Analytics,3
+senate,NM,2006-09-27,65.0,19.0,Research & Polling Inc.,3
+senate,NM,2006-10-13,61.5,34.3,Zogby Analytics,3
+senate,NM,2006-10-25,58.2,37.5,Zogby Analytics,3
+senate,NM,2006-11-01,65.0,23.0,Research & Polling Inc.,3
+senate,NV,2006-09-20,35.0,58.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2006-09-22,42.0,49.0,Zogby Analytics,3
+senate,NV,2006-10-13,43.2,52.1,Zogby Analytics,3
+senate,NV,2006-10-25,36.8,58.3,Zogby Analytics,3
+senate,NV,2006-10-28,37.0,54.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2006-10-31,42.0,53.0,YouGov,3
+senate,NY,2006-09-13,62.0,33.0,Siena College,3
+senate,NY,2006-09-22,54.7,31.0,Zogby Analytics,3
+senate,NY,2006-09-26,60.0,30.0,CBS News/The New York Times,3
+senate,NY,2006-09-28,66.0,31.0,Quinnipiac University,3
+senate,NY,2006-10-11,59.0,32.0,Siena College,3
+senate,NY,2006-10-13,65.0,30.0,Quinnipiac University,3
+senate,NY,2006-10-13,55.8,32.0,Zogby Analytics,3
+senate,NY,2006-10-17,67.0,31.0,Marist College,3
+senate,NY,2006-10-25,57.3,33.0,Zogby Analytics,3
+senate,NY,2006-10-31,65.0,32.0,Marist College,3
+senate,NY,2006-10-31,65.0,28.0,Siena College,3
+senate,OH,2006-09-14,45.0,44.0,Quinnipiac University,3
+senate,OH,2006-09-19,52.0,42.0,SurveyUSA,3
+senate,OH,2006-09-22,44.6,40.5,Zogby Analytics,3
+senate,OH,2006-09-26,45.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,OH,2006-09-29,41.0,41.0,Zogby Analytics,3
+senate,OH,2006-10-10,54.0,40.0,SurveyUSA,3
+senate,OH,2006-10-12,53.0,41.0,Quinnipiac University,3
+senate,OH,2006-10-13,51.0,38.0,CBS News/The New York Times,3
+senate,OH,2006-10-13,49.4,45.1,Zogby Analytics,3
+senate,OH,2006-10-19,48.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,OH,2006-10-22,47.0,39.0,Los Angeles Times,3
+senate,OH,2006-10-24,57.0,37.0,SurveyUSA,3
+senate,OH,2006-10-25,48.7,47.3,Zogby Analytics,3
+senate,OH,2006-10-27,49.0,42.0,Zogby Analytics,3
+senate,OH,2006-10-28,54.0,43.0,Big Village,3
+senate,OH,2006-10-31,58.0,40.0,YouGov,3
+senate,OH,2006-11-01,50.0,44.0,Mason-Dixon Polling & Strategy,3
+senate,OH,2006-11-04,54.0,42.0,SurveyUSA,3
+senate,PA,2006-09-15,45.0,38.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2006-09-15,52.0,31.0,Pew Research Center,3
+senate,PA,2006-09-21,54.0,40.0,Quinnipiac University,3
+senate,PA,2006-09-22,45.8,39.8,Zogby Analytics,3
+senate,PA,2006-09-24,49.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,PA,2006-09-29,48.0,36.0,Zogby Analytics,3
+senate,PA,2006-10-05,46.0,41.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2006-10-13,52.4,44.3,Zogby Analytics,3
+senate,PA,2006-10-20,51.0,39.0,Mason-Dixon Polling & Strategy,3
+senate,PA,2006-10-25,52.7,43.8,Zogby Analytics,3
+senate,PA,2006-10-26,52.0,42.0,Quinnipiac University,3
+senate,PA,2006-10-27,53.0,38.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2006-10-27,48.0,40.0,Zogby Analytics,3
+senate,PA,2006-10-31,51.0,43.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2006-10-31,56.0,40.0,YouGov,3
+senate,PA,2006-11-01,52.0,39.0,Mason-Dixon Polling & Strategy,3
+senate,RI,2006-09-17,45.0,40.0,American Research Group,3
+senate,RI,2006-09-27,42.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,RI,2006-09-29,50.0,39.0,Gallup,3
+senate,RI,2006-09-29,45.0,41.0,Zogby Analytics,3
+senate,RI,2006-10-13,46.0,42.0,Fleming & Associates,3
+senate,RI,2006-10-19,48.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,RI,2006-10-27,53.0,39.0,Zogby Analytics,3
+senate,RI,2006-11-01,45.0,46.0,Mason-Dixon Polling & Strategy,3
+senate,RI,2006-11-02,48.0,45.0,Gallup,3
+senate,TN,2006-09-10,48.0,45.0,SurveyUSA,3
+senate,TN,2006-09-22,42.4,47.6,Zogby Analytics,3
+senate,TN,2006-09-25,43.0,42.0,Mason-Dixon Polling & Strategy,3
+senate,TN,2006-09-29,50.0,45.0,Gallup,3
+senate,TN,2006-09-29,40.0,40.0,Zogby Analytics,3
+senate,TN,2006-10-08,46.0,48.0,SurveyUSA,3
+senate,TN,2006-10-13,42.0,49.4,Zogby Analytics,3
+senate,TN,2006-10-19,43.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,TN,2006-10-22,44.0,49.0,Los Angeles Times,3
+senate,TN,2006-10-23,48.0,48.0,SurveyUSA,3
+senate,TN,2006-10-25,48.1,49.3,Zogby Analytics,3
+senate,TN,2006-10-27,43.0,53.0,Zogby Analytics,3
+senate,TN,2006-10-28,44.0,52.0,Big Village,3
+senate,TN,2006-10-31,46.0,51.0,YouGov,3
+senate,TN,2006-11-02,38.0,50.0,Mason-Dixon Polling & Strategy,3
+senate,TN,2006-11-03,46.0,49.0,Gallup,3
+senate,TN,2006-11-04,46.0,51.0,SurveyUSA,3
+senate,TX,2006-09-22,30.0,53.5,Zogby Analytics,3
+senate,TX,2006-10-13,27.9,59.9,Zogby Analytics,3
+senate,TX,2006-10-24,26.6,61.1,Zogby Analytics,3
+senate,TX,2006-10-25,35.9,54.8,Zogby Analytics,3
+senate,TX,2006-10-31,29.0,65.0,YouGov,3
+senate,UT,2006-09-27,25.0,62.0,Dan Jones & Associates,3
+senate,UT,2006-10-31,31.0,61.0,Mason-Dixon Polling & Strategy,3
+senate,UT,2006-10-31,34.0,66.0,YouGov,3
+senate,VA,2006-09-11,45.0,48.0,SurveyUSA,3
+senate,VA,2006-09-22,43.5,49.1,Zogby Analytics,3
+senate,VA,2006-09-25,44.0,49.0,SurveyUSA,3
+senate,VA,2006-09-25,43.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,VA,2006-09-27,44.0,50.0,SurveyUSA,3
+senate,VA,2006-09-29,45.0,48.0,Gallup,3
+senate,VA,2006-09-29,37.0,48.0,Zogby Analytics,3
+senate,VA,2006-10-11,47.0,49.0,ABC News/The Washington Post,3
+senate,VA,2006-10-11,47.0,49.0,ABC News/The Washington Post,3
+senate,VA,2006-10-13,46.7,49.7,Zogby Analytics,3
+senate,VA,2006-10-18,43.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,VA,2006-10-22,47.0,44.0,Los Angeles Times,3
+senate,VA,2006-10-23,46.0,49.0,SurveyUSA,3
+senate,VA,2006-10-25,51.0,47.2,Zogby Analytics,3
+senate,VA,2006-10-27,45.0,44.0,Zogby Analytics,3
+senate,VA,2006-10-28,50.0,46.0,Big Village,3
+senate,VA,2006-10-31,50.0,50.0,YouGov,3
+senate,VA,2006-11-02,46.0,49.0,Gallup,3
+senate,VA,2006-11-02,46.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,VA,2006-11-04,52.0,44.0,SurveyUSA,3
+senate,VT,2006-09-13,55.0,40.0,American Research Group,3
+senate,WA,2006-09-22,50.1,43.2,Zogby Analytics,3
+senate,WA,2006-09-23,53.0,35.0,Elway Research,3
+senate,WA,2006-09-23,54.0,42.0,SurveyUSA,3
+senate,WA,2006-09-26,50.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,WA,2006-10-13,51.8,45.4,Zogby Analytics,3
+senate,WA,2006-10-14,51.0,43.0,SurveyUSA,3
+senate,WA,2006-10-18,52.0,37.0,Mason-Dixon Polling & Strategy,3
+senate,WA,2006-10-20,52.0,34.0,Elway Research,3
+senate,WA,2006-10-25,50.0,46.1,Zogby Analytics,3
+senate,WA,2006-10-28,54.0,41.0,SurveyUSA,3
+senate,WA,2006-10-31,57.0,43.0,YouGov,3
+senate,WA,2006-11-01,54.0,38.0,Mason-Dixon Polling & Strategy,3
+senate,WI,2006-09-22,47.4,34.1,Zogby Analytics,3
+senate,WI,2006-10-13,50.0,34.4,Zogby Analytics,3
+senate,WI,2006-10-25,47.2,38.0,Zogby Analytics,3
+senate,WI,2006-10-31,69.0,24.0,YouGov,3
+senate,WV,2006-10-31,67.0,33.0,YouGov,3
+senate,WY,2006-10-11,26.0,67.0,Mason-Dixon Polling & Strategy,3

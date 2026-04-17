@@ -1,1 +1,935 @@
-{"polls": [{"end_date": "2000-09-07", "dem": 49.0, "rep": 41.0, "pollster": "Princeton Survey Research Associates International", "sample": "595"}, {"end_date": "2000-09-09", "dem": 45.0, "rep": 42.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "2017"}, {"end_date": "2000-09-09", "dem": 42.0, "rep": 42.0, "pollster": "TIPP Insights", "sample": "1305"}, {"end_date": "2000-09-08", "dem": 47.0, "rep": 38.0, "pollster": "SSRS", "sample": "651"}, {"end_date": "2000-09-10", "dem": 48.0, "rep": 42.0, "pollster": "Gallup", "sample": "732"}, {"end_date": "2000-09-10", "dem": 46.0, "rep": 42.0, "pollster": "CBS News/The New York Times", "sample": "843"}, {"end_date": "2000-09-11", "dem": 46.0, "rep": 39.0, "pollster": "Zogby Analytics", "sample": "1005"}, {"end_date": "2000-09-09", "dem": 46.0, "rep": 40.0, "pollster": "Princeton Survey Research Associates International", "sample": "773"}, {"end_date": "2000-09-12", "dem": 39.0, "rep": 41.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-09-13", "dem": 49.0, "rep": 42.0, "pollster": "Gallup", "sample": "690"}, {"end_date": "2000-09-14", "dem": 52.0, "rep": 38.0, "pollster": "Princeton Survey Research Associates International", "sample": "580"}, {"end_date": "2000-09-15", "dem": 47.0, "rep": 41.0, "pollster": "Pew Research Center", "sample": "709"}, {"end_date": "2000-09-16", "dem": 48.0, "rep": 43.0, "pollster": "Gallup", "sample": "741"}, {"end_date": "2000-09-16", "dem": 46.0, "rep": 44.0, "pollster": "McLaughlin & Associates", "sample": "1000"}, {"end_date": "2000-09-15", "dem": 44.0, "rep": 41.0, "pollster": "Garin-Hart-Yang Research Group", "sample": "1023"}, {"end_date": "2000-09-15", "dem": 44.0, "rep": 42.0, "pollster": "SSRS", "sample": "656"}, {"end_date": "2000-09-12", "dem": 49.0, "rep": 41.0, "pollster": "Harris Insights & Analytics", "sample": "781"}, {"end_date": "2000-09-12", "dem": 47.0, "rep": 43.0, "pollster": "ABC News/The Washington Post", "sample": "1477"}, {"end_date": "2000-09-13", "dem": 46.0, "rep": 43.0, "pollster": "Harris Insights & Analytics", "sample": "45000"}, {"end_date": "2000-09-16", "dem": 39.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-09-18", "dem": 41.0, "rep": 41.0, "pollster": "Public Opinion Strategies", "sample": "800"}, {"end_date": "2000-09-19", "dem": 51.0, "rep": 41.0, "pollster": "Gallup", "sample": "657"}, {"end_date": "2000-09-19", "dem": 45.0, "rep": 41.0, "pollster": "Zogby Analytics", "sample": "1202"}, {"end_date": "2000-09-17", "dem": 38.0, "rep": 43.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-09-20", "dem": 43.0, "rep": 43.0, "pollster": "Opinion Dynamics", "sample": "900"}, {"end_date": "2000-09-21", "dem": 47.0, "rep": 45.0, "pollster": "Princeton Survey Research Associates International", "sample": "766"}, {"end_date": "2000-09-22", "dem": 46.0, "rep": 47.0, "pollster": "Gallup", "sample": "693"}, {"end_date": "2000-09-21", "dem": 42.0, "rep": 44.0, "pollster": "Zogby Analytics", "sample": "1003"}, {"end_date": "2000-09-22", "dem": 46.0, "rep": 40.0, "pollster": "SSRS", "sample": "680"}, {"end_date": "2000-09-22", "dem": 40.0, "rep": 43.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-09-24", "dem": 42.0, "rep": 48.0, "pollster": "Los Angeles Times", "sample": "694"}, {"end_date": "2000-09-24", "dem": 43.0, "rep": 42.0, "pollster": "Wirthlin Worldwide", "sample": "713"}, {"end_date": "2000-09-25", "dem": 44.0, "rep": 46.0, "pollster": "Gallup", "sample": "686"}, {"end_date": "2000-09-27", "dem": 43.0, "rep": 37.0, "pollster": "University of Massachusetts Department of Political Science", "sample": "700"}, {"end_date": "2000-09-28", "dem": 46.0, "rep": 44.0, "pollster": "Gallup", "sample": "664"}, {"end_date": "2000-09-28", "dem": 44.0, "rep": 45.0, "pollster": "Princeton Survey Research Associates International", "sample": "772"}, {"end_date": "2000-09-29", "dem": 45.0, "rep": 43.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-09-29", "dem": 47.0, "rep": 44.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2000-09-28", "dem": 41.0, "rep": 41.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-09-30", "dem": 48.0, "rep": 46.0, "pollster": "ABC News/The Washington Post", "sample": "995"}, {"end_date": "2000-09-30", "dem": 47.0, "rep": 44.0, "pollster": "ABC News/The Washington Post", "sample": "709"}, {"end_date": "2000-09-29", "dem": 45.0, "rep": 47.0, "pollster": "Marist College", "sample": "588"}, {"end_date": "2000-09-29", "dem": 47.0, "rep": 43.0, "pollster": "CBS News/The New York Times", "sample": "963"}, {"end_date": "2000-09-29", "dem": 45.0, "rep": 42.0, "pollster": "SSRS", "sample": "667"}, {"end_date": "2000-10-01", "dem": 46.0, "rep": 44.0, "pollster": "Gallup", "sample": "684"}, {"end_date": "2000-10-02", "dem": 46.0, "rep": 41.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-03", "dem": 46.0, "rep": 44.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "500"}, {"end_date": "2000-10-03", "dem": 49.0, "rep": 42.0, "pollster": "CBS News", "sample": "812"}, {"end_date": "2000-10-04", "dem": 45.0, "rep": 44.0, "pollster": "Gallup", "sample": "683"}, {"end_date": "2000-10-04", "dem": 41.0, "rep": 43.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-10-04", "dem": 45.0, "rep": 47.0, "pollster": "Yankelovich Partners Inc.", "sample": "636"}, {"end_date": "2000-10-04", "dem": 43.0, "rep": 42.0, "pollster": "Opinion Dynamics", "sample": "900"}, {"end_date": "2000-10-05", "dem": 45.0, "rep": 41.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-05", "dem": 44.0, "rep": 43.0, "pollster": "Princeton Survey Research Associates International", "sample": "804"}, {"end_date": "2000-10-07", "dem": 42.0, "rep": 50.0, "pollster": "Gallup", "sample": "790"}, {"end_date": "2000-10-07", "dem": 43.0, "rep": 42.0, "pollster": "TIPP Insights", "sample": "809"}, {"end_date": "2000-10-06", "dem": 42.0, "rep": 43.0, "pollster": "SSRS", "sample": "647"}, {"end_date": "2000-10-06", "dem": 44.0, "rep": 45.0, "pollster": "Pew Research Center", "sample": "709"}, {"end_date": "2000-10-08", "dem": 42.0, "rep": 43.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-08", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "826"}, {"end_date": "2000-10-08", "dem": 43.0, "rep": 47.0, "pollster": "Wirthlin Worldwide", "sample": "730"}, {"end_date": "2000-10-08", "dem": 44.0, "rep": 44.0, "pollster": "CBS News", "sample": "999"}, {"end_date": "2000-10-09", "dem": 46.0, "rep": 43.0, "pollster": "GQR", "sample": "1027"}, {"end_date": "2000-10-09", "dem": 40.0, "rep": 41.0, "pollster": "Polling Company/Global Strategy Group", "sample": "1004"}, {"end_date": "2000-10-10", "dem": 45.0, "rep": 44.0, "pollster": "Gallup", "sample": "690"}, {"end_date": "2000-10-10", "dem": 40.0, "rep": 44.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-10-11", "dem": 41.0, "rep": 46.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "501"}, {"end_date": "2000-10-11", "dem": 47.0, "rep": 47.0, "pollster": "CBS News", "sample": "669"}, {"end_date": "2000-10-11", "dem": 42.0, "rep": 43.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-12", "dem": 43.0, "rep": 45.0, "pollster": "Princeton Survey Research Associates International", "sample": "803"}, {"end_date": "2000-10-12", "dem": 43.0, "rep": 48.0, "pollster": "Yankelovich Partners Inc.", "sample": "603"}, {"end_date": "2000-10-13", "dem": 43.0, "rep": 48.0, "pollster": "Gallup", "sample": "727"}, {"end_date": "2000-10-14", "dem": 42.0, "rep": 43.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-14", "dem": 42.0, "rep": 48.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "709"}, {"end_date": "2000-10-14", "dem": 42.0, "rep": 44.0, "pollster": "TIPP Insights", "sample": "803"}, {"end_date": "2000-10-14", "dem": 44.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1103"}, {"end_date": "2000-10-13", "dem": 39.0, "rep": 42.0, "pollster": "SSRS", "sample": "679"}, {"end_date": "2000-10-16", "dem": 42.0, "rep": 48.0, "pollster": "Gallup", "sample": "709"}, {"end_date": "2000-10-14", "dem": 40.0, "rep": 42.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-10-15", "dem": 44.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1770"}, {"end_date": "2000-10-15", "dem": 44.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1770"}, {"end_date": "2000-10-17", "dem": 43.0, "rep": 44.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-18", "dem": 43.0, "rep": 45.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "709"}, {"end_date": "2000-10-18", "dem": 43.0, "rep": 45.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "709"}, {"end_date": "2000-10-18", "dem": 46.0, "rep": 45.0, "pollster": "GQR", "sample": "832"}, {"end_date": "2000-10-18", "dem": 42.0, "rep": 45.0, "pollster": "Opinion Dynamics", "sample": "900"}, {"end_date": "2000-10-18", "dem": 46.0, "rep": 41.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-10-16", "dem": 44.0, "rep": 46.0, "pollster": "ABC News/The Washington Post", "sample": "1224"}, {"end_date": "2000-10-19", "dem": 40.0, "rep": 51.0, "pollster": "Gallup", "sample": "718"}, {"end_date": "2000-10-19", "dem": 41.0, "rep": 48.0, "pollster": "Princeton Survey Research Associates International", "sample": "800"}, {"end_date": "2000-10-19", "dem": 46.0, "rep": 44.0, "pollster": "GQR", "sample": "1009"}, {"end_date": "2000-10-20", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1071"}, {"end_date": "2000-10-20", "dem": 41.0, "rep": 45.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-20", "dem": 44.0, "rep": 46.0, "pollster": "CBS News/The New York Times", "sample": "825"}, {"end_date": "2000-10-21", "dem": 42.0, "rep": 44.0, "pollster": "TIPP Insights", "sample": "829"}, {"end_date": "2000-10-20", "dem": 41.0, "rep": 43.0, "pollster": "SSRS", "sample": "653"}, {"end_date": "2000-10-20", "dem": 45.0, "rep": 45.0, "pollster": "Pew Research Center", "sample": "663"}, {"end_date": "2000-10-20", "dem": 40.0, "rep": 42.0, "pollster": "American Viewpoint", "sample": "800"}, {"end_date": "2000-10-22", "dem": 46.0, "rep": 45.0, "pollster": "Gallup", "sample": "752"}, {"end_date": "2000-10-20", "dem": 39.0, "rep": 45.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-10-22", "dem": 47.0, "rep": 41.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-10-22", "dem": 43.0, "rep": 47.0, "pollster": "Wirthlin Worldwide", "sample": "751"}, {"end_date": "2000-10-23", "dem": 46.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1000"}, {"end_date": "2000-10-23", "dem": 45.0, "rep": 42.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-24", "dem": 46.0, "rep": 44.0, "pollster": "GQR", "sample": "998"}, {"end_date": "2000-10-25", "dem": 39.0, "rep": 52.0, "pollster": "Gallup", "sample": "851"}, {"end_date": "2000-10-25", "dem": 43.0, "rep": 49.0, "pollster": "Yankelovich Partners Inc.", "sample": "1076"}, {"end_date": "2000-10-25", "dem": 46.0, "rep": 42.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-10-23", "dem": 43.0, "rep": 48.0, "pollster": "Harris Insights & Analytics", "sample": "813"}, {"end_date": "2000-10-26", "dem": 46.0, "rep": 47.0, "pollster": "ABC News/The Washington Post", "sample": "1009"}, {"end_date": "2000-10-26", "dem": 46.0, "rep": 47.0, "pollster": "ABC News/The Washington Post", "sample": "1009"}, {"end_date": "2000-10-26", "dem": 41.0, "rep": 49.0, "pollster": "Princeton Survey Research Associates International", "sample": "818"}, {"end_date": "2000-10-27", "dem": 43.0, "rep": 44.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-28", "dem": 44.0, "rep": 47.0, "pollster": "Gallup", "sample": "2207"}, {"end_date": "2000-10-26", "dem": 39.0, "rep": 44.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-10-27", "dem": 43.0, "rep": 47.0, "pollster": "Pew Research Center", "sample": "1062"}, {"end_date": "2000-10-27", "dem": 40.0, "rep": 43.0, "pollster": "SSRS", "sample": "1103"}, {"end_date": "2000-10-26", "dem": 43.0, "rep": 46.0, "pollster": "Princeton Survey Research Associates International", "sample": "1113"}, {"end_date": "2000-10-29", "dem": 46.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1067"}, {"end_date": "2000-10-29", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1020"}, {"end_date": "2000-10-29", "dem": 47.0, "rep": 40.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-10-30", "dem": 43.0, "rep": 47.0, "pollster": "TIPP Insights", "sample": "1016"}, {"end_date": "2000-10-30", "dem": 42.0, "rep": 45.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-30", "dem": 41.0, "rep": 46.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-10-30", "dem": 45.0, "rep": 45.0, "pollster": "GQR", "sample": "1016"}, {"end_date": "2000-10-30", "dem": 45.0, "rep": 45.0, "pollster": "CBS News", "sample": "965"}, {"end_date": "2000-10-31", "dem": 43.0, "rep": 47.0, "pollster": "Gallup", "sample": "2123"}, {"end_date": "2000-11-01", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1280"}, {"end_date": "2000-11-01", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1280"}, {"end_date": "2000-11-01", "dem": 37.0, "rep": 46.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-11-01", "dem": 43.0, "rep": 43.0, "pollster": "Opinion Dynamics", "sample": "1000"}, {"end_date": "2000-11-01", "dem": 44.0, "rep": 49.0, "pollster": "Marist College", "sample": "623"}, {"end_date": "2000-11-01", "dem": 40.0, "rep": 47.0, "pollster": "Polling Company/Global Strategy Group", "sample": "1000"}, {"end_date": "2000-11-01", "dem": 43.0, "rep": 45.0, "pollster": "Princeton Survey Research Associates International", "sample": "808"}, {"end_date": "2000-11-01", "dem": 43.0, "rep": 46.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-11-02", "dem": 41.0, "rep": 48.0, "pollster": "TIPP Insights", "sample": "883"}, {"end_date": "2000-11-02", "dem": 42.0, "rep": 46.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-11-02", "dem": 44.0, "rep": 47.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "751"}, {"end_date": "2000-11-02", "dem": 44.0, "rep": 46.0, "pollster": "CBS News/The New York Times", "sample": "825"}, {"end_date": "2000-11-02", "dem": 44.0, "rep": 46.0, "pollster": "CBS News", "sample": "825"}, {"end_date": "2000-11-03", "dem": 43.0, "rep": 48.0, "pollster": "Gallup", "sample": "2733"}, {"end_date": "2000-11-03", "dem": 42.0, "rep": 47.0, "pollster": "CBS News/The New York Times", "sample": "1158"}, {"end_date": "2000-11-03", "dem": 43.0, "rep": 46.0, "pollster": "Pew Research Center", "sample": "1307"}, {"end_date": "2000-11-01", "dem": 46.0, "rep": 47.0, "pollster": "Harris Insights & Analytics", "sample": "134000"}, {"end_date": "2000-11-04", "dem": 45.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1801"}, {"end_date": "2000-11-04", "dem": 44.0, "rep": 47.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1026"}, {"end_date": "2000-11-04", "dem": 47.0, "rep": 47.0, "pollster": "Harris Insights & Analytics", "sample": "1348"}, {"end_date": "2000-11-04", "dem": 42.0, "rep": 45.0, "pollster": "Polling Company/Global Strategy Group", "sample": "1253"}, {"end_date": "2000-11-04", "dem": 47.0, "rep": 49.0, "pollster": "Pew Research Center", "sample": "1301"}, {"end_date": "2000-11-04", "dem": 42.0, "rep": 46.0, "pollster": "CBS News", "sample": "1273"}, {"end_date": "2000-11-03", "dem": 44.0, "rep": 46.0, "pollster": "SSRS", "sample": "1103"}, {"end_date": "2000-11-02", "dem": 42.0, "rep": 45.0, "pollster": "Polling Company/Global Strategy Group", "sample": "1253"}, {"end_date": "2000-11-05", "dem": 46.0, "rep": 48.0, "pollster": "Gallup", "sample": "2350"}, {"end_date": "2000-11-05", "dem": 41.0, "rep": 46.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2000-11-05", "dem": 46.0, "rep": 47.9, "pollster": "TIPP Insights", "sample": "1292"}, {"end_date": "2000-11-05", "dem": 48.0, "rep": 46.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-11-05", "dem": 45.0, "rep": 44.0, "pollster": "CBS News/The New York Times", "sample": "1091"}, {"end_date": "2000-11-05", "dem": 40.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3750"}, {"end_date": "2000-11-05", "dem": 48.0, "rep": 46.0, "pollster": "Zogby Analytics", "sample": "1200"}, {"end_date": "2000-11-05", "dem": 45.0, "rep": 44.0, "pollster": "CBS News", "sample": "1091"}]}
+{
+  "polls": [
+    {
+      "end_date": "2000-09-07",
+      "dem": 49.0,
+      "rep": 41.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "595"
+    },
+    {
+      "end_date": "2000-09-08",
+      "dem": 47.0,
+      "rep": 38.0,
+      "pollster": "SSRS",
+      "sample": "651"
+    },
+    {
+      "end_date": "2000-09-09",
+      "dem": 45.0,
+      "rep": 42.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "2017"
+    },
+    {
+      "end_date": "2000-09-09",
+      "dem": 42.0,
+      "rep": 42.0,
+      "pollster": "TIPP Insights",
+      "sample": "1305"
+    },
+    {
+      "end_date": "2000-09-09",
+      "dem": 46.0,
+      "rep": 40.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "773"
+    },
+    {
+      "end_date": "2000-09-10",
+      "dem": 48.0,
+      "rep": 42.0,
+      "pollster": "Gallup",
+      "sample": "732"
+    },
+    {
+      "end_date": "2000-09-10",
+      "dem": 46.0,
+      "rep": 42.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "843"
+    },
+    {
+      "end_date": "2000-09-11",
+      "dem": 46.0,
+      "rep": 39.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1005"
+    },
+    {
+      "end_date": "2000-09-12",
+      "dem": 39.0,
+      "rep": 41.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-09-12",
+      "dem": 49.0,
+      "rep": 41.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "781"
+    },
+    {
+      "end_date": "2000-09-12",
+      "dem": 47.0,
+      "rep": 43.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1477"
+    },
+    {
+      "end_date": "2000-09-13",
+      "dem": 49.0,
+      "rep": 42.0,
+      "pollster": "Gallup",
+      "sample": "690"
+    },
+    {
+      "end_date": "2000-09-13",
+      "dem": 46.0,
+      "rep": 43.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "45000"
+    },
+    {
+      "end_date": "2000-09-14",
+      "dem": 52.0,
+      "rep": 38.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "580"
+    },
+    {
+      "end_date": "2000-09-15",
+      "dem": 47.0,
+      "rep": 41.0,
+      "pollster": "Pew Research Center",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-09-15",
+      "dem": 44.0,
+      "rep": 42.0,
+      "pollster": "SSRS",
+      "sample": "656"
+    },
+    {
+      "end_date": "2000-09-16",
+      "dem": 48.0,
+      "rep": 43.0,
+      "pollster": "Gallup",
+      "sample": "741"
+    },
+    {
+      "end_date": "2000-09-16",
+      "dem": 39.0,
+      "rep": 42.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-09-17",
+      "dem": 38.0,
+      "rep": 43.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-09-19",
+      "dem": 51.0,
+      "rep": 41.0,
+      "pollster": "Gallup",
+      "sample": "657"
+    },
+    {
+      "end_date": "2000-09-19",
+      "dem": 45.0,
+      "rep": 41.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1202"
+    },
+    {
+      "end_date": "2000-09-20",
+      "dem": 43.0,
+      "rep": 43.0,
+      "pollster": "Opinion Dynamics",
+      "sample": "900"
+    },
+    {
+      "end_date": "2000-09-21",
+      "dem": 47.0,
+      "rep": 45.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "766"
+    },
+    {
+      "end_date": "2000-09-21",
+      "dem": 42.0,
+      "rep": 44.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1003"
+    },
+    {
+      "end_date": "2000-09-22",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "Gallup",
+      "sample": "693"
+    },
+    {
+      "end_date": "2000-09-22",
+      "dem": 46.0,
+      "rep": 40.0,
+      "pollster": "SSRS",
+      "sample": "680"
+    },
+    {
+      "end_date": "2000-09-22",
+      "dem": 40.0,
+      "rep": 43.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-09-24",
+      "dem": 42.0,
+      "rep": 48.0,
+      "pollster": "Los Angeles Times",
+      "sample": "694"
+    },
+    {
+      "end_date": "2000-09-25",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "Gallup",
+      "sample": "686"
+    },
+    {
+      "end_date": "2000-09-28",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "Gallup",
+      "sample": "664"
+    },
+    {
+      "end_date": "2000-09-28",
+      "dem": 44.0,
+      "rep": 45.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "772"
+    },
+    {
+      "end_date": "2000-09-28",
+      "dem": 41.0,
+      "rep": 41.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-09-29",
+      "dem": 45.0,
+      "rep": 43.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-09-29",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "Marist College",
+      "sample": "588"
+    },
+    {
+      "end_date": "2000-09-29",
+      "dem": 47.0,
+      "rep": 43.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "963"
+    },
+    {
+      "end_date": "2000-09-29",
+      "dem": 45.0,
+      "rep": 42.0,
+      "pollster": "SSRS",
+      "sample": "667"
+    },
+    {
+      "end_date": "2000-09-30",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "995"
+    },
+    {
+      "end_date": "2000-09-30",
+      "dem": 47.0,
+      "rep": 44.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-01",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "Gallup",
+      "sample": "684"
+    },
+    {
+      "end_date": "2000-10-02",
+      "dem": 46.0,
+      "rep": 41.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-03",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "500"
+    },
+    {
+      "end_date": "2000-10-03",
+      "dem": 49.0,
+      "rep": 42.0,
+      "pollster": "CBS News",
+      "sample": "812"
+    },
+    {
+      "end_date": "2000-10-04",
+      "dem": 45.0,
+      "rep": 44.0,
+      "pollster": "Gallup",
+      "sample": "683"
+    },
+    {
+      "end_date": "2000-10-04",
+      "dem": 41.0,
+      "rep": 43.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-04",
+      "dem": 43.0,
+      "rep": 42.0,
+      "pollster": "Opinion Dynamics",
+      "sample": "900"
+    },
+    {
+      "end_date": "2000-10-05",
+      "dem": 45.0,
+      "rep": 41.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-05",
+      "dem": 44.0,
+      "rep": 43.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "804"
+    },
+    {
+      "end_date": "2000-10-06",
+      "dem": 42.0,
+      "rep": 43.0,
+      "pollster": "SSRS",
+      "sample": "647"
+    },
+    {
+      "end_date": "2000-10-06",
+      "dem": 44.0,
+      "rep": 45.0,
+      "pollster": "Pew Research Center",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-07",
+      "dem": 42.0,
+      "rep": 50.0,
+      "pollster": "Gallup",
+      "sample": "790"
+    },
+    {
+      "end_date": "2000-10-07",
+      "dem": 43.0,
+      "rep": 42.0,
+      "pollster": "TIPP Insights",
+      "sample": "809"
+    },
+    {
+      "end_date": "2000-10-08",
+      "dem": 42.0,
+      "rep": 43.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-08",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "826"
+    },
+    {
+      "end_date": "2000-10-08",
+      "dem": 44.0,
+      "rep": 44.0,
+      "pollster": "CBS News",
+      "sample": "999"
+    },
+    {
+      "end_date": "2000-10-10",
+      "dem": 45.0,
+      "rep": 44.0,
+      "pollster": "Gallup",
+      "sample": "690"
+    },
+    {
+      "end_date": "2000-10-10",
+      "dem": 40.0,
+      "rep": 44.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-11",
+      "dem": 41.0,
+      "rep": 46.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "501"
+    },
+    {
+      "end_date": "2000-10-11",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "CBS News",
+      "sample": "669"
+    },
+    {
+      "end_date": "2000-10-11",
+      "dem": 42.0,
+      "rep": 43.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-12",
+      "dem": 43.0,
+      "rep": 45.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "803"
+    },
+    {
+      "end_date": "2000-10-13",
+      "dem": 43.0,
+      "rep": 48.0,
+      "pollster": "Gallup",
+      "sample": "727"
+    },
+    {
+      "end_date": "2000-10-13",
+      "dem": 39.0,
+      "rep": 42.0,
+      "pollster": "SSRS",
+      "sample": "679"
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 42.0,
+      "rep": 43.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 42.0,
+      "rep": 48.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 42.0,
+      "rep": 44.0,
+      "pollster": "TIPP Insights",
+      "sample": "803"
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 44.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1103"
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 40.0,
+      "rep": 42.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-15",
+      "dem": 44.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1770"
+    },
+    {
+      "end_date": "2000-10-15",
+      "dem": 44.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1770"
+    },
+    {
+      "end_date": "2000-10-16",
+      "dem": 42.0,
+      "rep": 48.0,
+      "pollster": "Gallup",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-16",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1224"
+    },
+    {
+      "end_date": "2000-10-17",
+      "dem": 43.0,
+      "rep": 44.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-18",
+      "dem": 43.0,
+      "rep": 45.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-18",
+      "dem": 43.0,
+      "rep": 45.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "709"
+    },
+    {
+      "end_date": "2000-10-18",
+      "dem": 42.0,
+      "rep": 45.0,
+      "pollster": "Opinion Dynamics",
+      "sample": "900"
+    },
+    {
+      "end_date": "2000-10-19",
+      "dem": 40.0,
+      "rep": 51.0,
+      "pollster": "Gallup",
+      "sample": "718"
+    },
+    {
+      "end_date": "2000-10-19",
+      "dem": 41.0,
+      "rep": 48.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "800"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1071"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 41.0,
+      "rep": 45.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "825"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 41.0,
+      "rep": 43.0,
+      "pollster": "SSRS",
+      "sample": "653"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 45.0,
+      "rep": 45.0,
+      "pollster": "Pew Research Center",
+      "sample": "663"
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 39.0,
+      "rep": 45.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-21",
+      "dem": 42.0,
+      "rep": 44.0,
+      "pollster": "TIPP Insights",
+      "sample": "829"
+    },
+    {
+      "end_date": "2000-10-22",
+      "dem": 46.0,
+      "rep": 45.0,
+      "pollster": "Gallup",
+      "sample": "752"
+    },
+    {
+      "end_date": "2000-10-23",
+      "dem": 46.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-23",
+      "dem": 45.0,
+      "rep": 42.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-23",
+      "dem": 43.0,
+      "rep": 48.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "813"
+    },
+    {
+      "end_date": "2000-10-25",
+      "dem": 39.0,
+      "rep": 52.0,
+      "pollster": "Gallup",
+      "sample": "851"
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1009"
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1009"
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 41.0,
+      "rep": 49.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "818"
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 39.0,
+      "rep": 44.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 43.0,
+      "rep": 46.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "1113"
+    },
+    {
+      "end_date": "2000-10-27",
+      "dem": 43.0,
+      "rep": 44.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-27",
+      "dem": 43.0,
+      "rep": 47.0,
+      "pollster": "Pew Research Center",
+      "sample": "1062"
+    },
+    {
+      "end_date": "2000-10-27",
+      "dem": 40.0,
+      "rep": 43.0,
+      "pollster": "SSRS",
+      "sample": "1103"
+    },
+    {
+      "end_date": "2000-10-28",
+      "dem": 44.0,
+      "rep": 47.0,
+      "pollster": "Gallup",
+      "sample": "2207"
+    },
+    {
+      "end_date": "2000-10-29",
+      "dem": 46.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1067"
+    },
+    {
+      "end_date": "2000-10-29",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1020"
+    },
+    {
+      "end_date": "2000-10-30",
+      "dem": 43.0,
+      "rep": 47.0,
+      "pollster": "TIPP Insights",
+      "sample": "1016"
+    },
+    {
+      "end_date": "2000-10-30",
+      "dem": 42.0,
+      "rep": 45.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-30",
+      "dem": 41.0,
+      "rep": 46.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-10-30",
+      "dem": 45.0,
+      "rep": 45.0,
+      "pollster": "CBS News",
+      "sample": "965"
+    },
+    {
+      "end_date": "2000-10-31",
+      "dem": 43.0,
+      "rep": 47.0,
+      "pollster": "Gallup",
+      "sample": "2123"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1280"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1280"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 37.0,
+      "rep": 46.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 43.0,
+      "rep": 43.0,
+      "pollster": "Opinion Dynamics",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 44.0,
+      "rep": 49.0,
+      "pollster": "Marist College",
+      "sample": "623"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 43.0,
+      "rep": 45.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "808"
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "134000"
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 41.0,
+      "rep": 48.0,
+      "pollster": "TIPP Insights",
+      "sample": "883"
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 42.0,
+      "rep": 46.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 44.0,
+      "rep": 47.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "751"
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "825"
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "CBS News",
+      "sample": "825"
+    },
+    {
+      "end_date": "2000-11-03",
+      "dem": 43.0,
+      "rep": 48.0,
+      "pollster": "Gallup",
+      "sample": "2733"
+    },
+    {
+      "end_date": "2000-11-03",
+      "dem": 42.0,
+      "rep": 47.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "1158"
+    },
+    {
+      "end_date": "2000-11-03",
+      "dem": 43.0,
+      "rep": 46.0,
+      "pollster": "Pew Research Center",
+      "sample": "1307"
+    },
+    {
+      "end_date": "2000-11-03",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "SSRS",
+      "sample": "1103"
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1801"
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 44.0,
+      "rep": 47.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "1026"
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "1348"
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Pew Research Center",
+      "sample": "1301"
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 42.0,
+      "rep": 46.0,
+      "pollster": "CBS News",
+      "sample": "1273"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 46.0,
+      "rep": 48.0,
+      "pollster": "Gallup",
+      "sample": "2350"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 41.0,
+      "rep": 46.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 46.0,
+      "rep": 47.9,
+      "pollster": "TIPP Insights",
+      "sample": "1292"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 45.0,
+      "rep": 44.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "1091"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 45.0,
+      "rep": 44.0,
+      "pollster": "CBS News",
+      "sample": "1091"
+    }
+  ]
+}

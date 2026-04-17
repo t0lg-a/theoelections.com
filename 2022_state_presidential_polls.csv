@@ -1,844 +1,444 @@
-mode,state,date,dem,rep,sigma,pollster
-senate,AL,2022-10-28,27.5,57.1,4.03,Cygnal
-senate,AZ,2022-09-08,50.0,40.0,5,OnMessage Inc.
-senate,AZ,2022-09-12,50.0,42.0,4.47,Fabrizio Lee & Associates/Impact Research
-senate,AZ,2022-09-16,46.6,45.4,3.04,Trafalgar Group
-senate,AZ,2022-09-17,48.0,47.0,3.61,Data for Progress
-senate,AZ,2022-09-21,51.0,41.0,2.82,Marist College
-senate,AZ,2022-09-23,49.0,42.2,4.47,Suffolk University
-senate,AZ,2022-09-24,46.0,40.0,3.15,Beacon Research/Shaw & Co. Research
-senate,AZ,2022-09-29,51.0,45.0,3.55,SSRS
-senate,AZ,2022-10-02,51.0,48.0,2.93,YouGov
-senate,AZ,2022-10-05,46.0,33.0,3.85,Noble Predictive Insights
-senate,AZ,2022-10-06,55.0,38.0,4.26,Center Street PAC
-senate,AZ,2022-10-09,46.0,43.0,4.08,OnMessage Inc.
-senate,AZ,2022-10-09,48.0,44.0,3.24,Ascend Action
-senate,AZ,2022-10-11,46.0,41.6,4.26,InsiderAdvantage
-senate,AZ,2022-10-12,42.4,39.6,4.47,HighGround Inc.
-senate,AZ,2022-10-12,47.0,43.0,4.46,Garin-Hart-Yang Research Group
-senate,AZ,2022-10-10,48.9,46.4,3.16,Wick
-senate,AZ,2022-10-16,47.4,46.4,3.05,Trafalgar Group
-senate,AZ,2022-10-14,47.0,47.0,3.35,Data for Progress
-senate,AZ,2022-10-16,47.7,44.5,4.08,Susquehanna Polling & Research Inc.
-senate,AZ,2022-10-20,46.6,44.8,3.0,co/efficient
-senate,AZ,2022-10-24,45.0,43.0,4.26,InsiderAdvantage
-senate,AZ,2022-10-25,51.0,45.0,4.07,The New York Times/Siena College
-senate,AZ,2022-10-25,48.0,46.0,4.08,Noble Predictive Insights
-senate,AZ,2022-10-25,47.0,46.0,3.54,"Fabrizio, Lee & Associates"
-senate,AZ,2022-10-23,47.0,43.0,3.87,BSP Research/Shaw & Company Research
-senate,AZ,2022-10-29,47.2,46.6,3.19,Phillips Academy
-senate,AZ,2022-10-28,49.2,46.9,2.99,Wick
-senate,AZ,2022-10-28,47.0,45.0,3.16,Beacon Research/Shaw & Co. Research
-senate,AZ,2022-10-27,55.0,45.0,4.23,Center Street PAC
-senate,AZ,2022-10-31,47.7,48.1,3.16,Emerson College
-senate,AZ,2022-11-02,48.0,48.0,4.26,InsiderAdvantage
-senate,AZ,2022-11-01,48.0,47.0,3.05,Remington Research Group
-senate,AZ,2022-11-01,46.4,45.0,4.47,HighGround Inc.
-senate,AZ,2022-11-01,49.0,45.0,2.94,Marist College
-senate,AZ,2022-11-01,48.6,47.9,3.5,Patriot Polling
-senate,AZ,2022-10-31,49.0,49.0,3.43,Civiqs
-senate,AZ,2022-11-02,47.0,46.0,4.47,KAConsulting
-senate,AZ,2022-11-05,51.0,47.0,4.71,Research Co.
-senate,AZ,2022-11-05,48.2,46.5,4.26,Data Orbital
-senate,AZ,2022-11-04,49.0,50.0,2.71,Data for Progress
-senate,AZ,2022-11-04,50.0,47.0,4.23,Targoz Market Research
-senate,AZ,2022-11-06,46.7,48.2,3.02,Trafalgar Group
-senate,AR,2022-09-12,30.5,43.5,3.46,Hendrix College
-senate,AR,2022-10-17,32.0,52.0,3.2,Hendrix College
-senate,AR,2022-10-22,25.8,54.6,4.24,University of Arkansas Department of Political Science
-senate,CA,2022-10-09,56.0,34.0,3.14,SurveyUSA
-senate,CA,2022-11-01,63.0,37.0,3.53,University of Southern California Schwarzenegger Institute for State and Global Policy
-senate,CA,2022-11-05,53.0,37.0,4.71,Research Co.
-senate,CO,2022-09-18,45.5,35.9,3.16,Emerson College
-senate,CO,2022-09-22,48.6,42.6,3.05,Trafalgar Group
-senate,CO,2022-09-22,46.0,36.0,3.07,Keating Research/Magellan Strategies
-senate,CO,2022-09-24,46.0,45.0,4.08,OnMessage Inc.
-senate,CO,2022-10-05,50.0,41.0,3.15,Data for Progress
-senate,CO,2022-10-05,48.0,41.0,2.98,Marist College
-senate,CO,2022-10-08,49.0,38.0,3.54,Global Strategy Group
-senate,CO,2022-10-17,54.0,41.0,4.08,Civiqs
-senate,CO,2022-10-15,56.0,42.0,3.76,YouGov
-senate,CO,2022-10-24,49.9,34.4,3.48,co/efficient
-senate,CO,2022-10-28,51.4,43.3,3.16,Emerson College
-senate,CO,2022-10-31,47.6,46.1,3.04,Trafalgar Group
-senate,CO,2022-11-04,51.0,44.0,2.25,Data for Progress
-senate,CO,2022-11-05,51.0,43.0,3.42,co/efficient
-senate,CT,2022-09-17,57.0,40.0,2.29,Quinnipiac University
-senate,CT,2022-09-18,53.0,40.0,4.0,Western New England University Polling Institute
-senate,CT,2022-10-12,49.0,44.0,2.89,"Fabrizio, Lee & Associates"
-senate,CT,2022-10-20,54.0,41.7,3.16,Emerson College
-senate,CT,2022-10-21,56.0,41.0,2.31,Quinnipiac University
-senate,CT,2022-10-25,51.0,26.0,3.16,"Long Island University Steven S. Hornstein Center for Policy, Polling, and Analysis"
-senate,FL,2022-09-10,46.0,49.0,4.08,Sachs Media
-senate,FL,2022-09-09,45.0,50.0,4.06,Center Street PAC
-senate,FL,2022-09-17,41.2,45.2,4.47,Suffolk University
-senate,FL,2022-09-19,47.0,49.0,4.03,Civiqs
-senate,FL,2022-09-22,41.0,48.0,3.87,Siena College
-senate,FL,2022-09-24,46.0,46.0,1.87,Clarity Campaign Labs
-senate,FL,2022-09-27,41.0,47.0,3.54,Mason-Dixon Polling & Strategy
-senate,FL,2022-10-08,40.0,42.0,2.83,African American Research Collaborative
-senate,FL,2022-10-12,45.0,50.0,3.82,RMG Research
-senate,FL,2022-10-14,42.0,47.7,3.73,Florida Atlantic University Business and Economics Polling Initiative
-senate,FL,2022-10-18,45.0,52.0,3.94,Stetson University Center for Public Opinion Research
-senate,FL,2022-10-21,44.0,51.0,2.83,Data for Progress
-senate,FL,2022-10-21,43.0,54.0,4.01,University of North Florida Public Opinion Research Lab
-senate,FL,2022-10-26,44.0,51.0,2.99,YouGov
-senate,FL,2022-11-01,45.0,51.0,4.26,InsiderAdvantage
-senate,FL,2022-10-31,45.7,49.7,4.47,Victory Insights
-senate,FL,2022-10-31,43.0,51.0,3.9,Siena College
-senate,FL,2022-11-01,40.0,49.0,4.08,Amber Integrated
-senate,FL,2022-10-31,45.0,52.0,3.6,Civiqs
-senate,FL,2022-11-05,44.0,54.0,4.71,Research Co.
-senate,FL,2022-11-04,43.0,55.0,2.64,Data for Progress
-senate,GA,2022-09-11,49.0,45.0,4.3,Center Street PAC
-senate,GA,2022-09-10,52.0,46.0,2.8,Quinnipiac University
-senate,GA,2022-09-14,47.0,42.0,2.88,Marist College
-senate,GA,2022-09-11,44.2,45.8,3.41,University of Georgia School of Public and International Affairs
-senate,GA,2022-09-16,51.0,49.0,2.91,YouGov
-senate,GA,2022-09-18,46.0,46.0,3.15,Data for Progress
-senate,GA,2022-09-24,46.0,41.0,3.15,Beacon Research/Shaw & Co. Research
-senate,GA,2022-10-04,47.2,43.6,4.26,InsiderAdvantage
-senate,GA,2022-10-02,50.0,38.0,3.05,SurveyUSA
-senate,GA,2022-09-29,46.4,43.4,3.12,University of Georgia School of Public and International Affairs
-senate,GA,2022-10-06,47.8,45.6,3.16,Emerson College
-senate,GA,2022-10-09,52.0,45.0,2.94,Quinnipiac University
-senate,GA,2022-10-10,46.3,44.8,3.04,Trafalgar Group
-senate,GA,2022-10-10,44.0,46.0,3.54,Moore Information Group
-senate,GA,2022-10-10,49.0,46.0,3.73,Civiqs
-senate,GA,2022-10-10,46.1,46.1,3.13,Wick
-senate,GA,2022-10-16,46.3,43.4,4.26,InsiderAdvantage
-senate,GA,2022-10-16,46.1,46.0,4.47,Landmark Communications
-senate,GA,2022-10-15,48.0,47.0,3.19,Data for Progress
-senate,GA,2022-10-15,48.7,46.5,3.32,East Carolina University Center for Survey Research
-senate,GA,2022-10-20,48.0,45.0,4.46,Garin-Hart-Yang Research Group
-senate,GA,2022-10-22,46.5,48.9,3.05,Trafalgar Group
-senate,GA,2022-10-23,43.0,48.0,3.08,Rasmussen Reports
-senate,GA,2022-10-24,43.6,47.0,3.25,co/efficient
-senate,GA,2022-10-24,42.0,46.0,3.54,Moore Information Group
-senate,GA,2022-10-27,45.3,47.5,4.26,InsiderAdvantage
-senate,GA,2022-10-26,47.0,44.0,4.07,The New York Times/Siena College
-senate,GA,2022-10-22,45.2,45.5,3.13,University of Georgia School of Public and International Affairs
-senate,GA,2022-10-28,44.0,43.0,3.16,Beacon Research/Shaw & Co. Research
-senate,GA,2022-10-30,49.5,47.6,3.16,Emerson College
-senate,GA,2022-10-31,49.0,45.0,3.78,Patinkin Research Strategies
-senate,GA,2022-11-01,45.0,49.0,2.95,Remington Research Group
-senate,GA,2022-11-01,45.0,48.0,4.08,Amber Integrated
-senate,GA,2022-11-01,45.0,49.0,4.47,Echelon Insights
-senate,GA,2022-11-01,49.0,45.0,2.93,Marist College
-senate,GA,2022-10-31,49.0,43.0,2.92,SurveyUSA
-senate,GA,2022-10-31,44.0,49.0,3.54,Moore Information Group
-senate,GA,2022-11-04,48.9,48.9,3.05,East Carolina University Center for Survey Research
-senate,GA,2022-11-06,47.0,49.0,4.26,InsiderAdvantage
-senate,GA,2022-11-05,49.0,49.0,4.71,Research Co.
-senate,GA,2022-11-05,46.5,49.7,3.01,Trafalgar Group
-senate,GA,2022-11-04,48.0,49.0,2.6,Data for Progress
-senate,GA,2022-11-04,47.0,49.0,4.16,Targoz Market Research
-senate,GA,2022-11-06,45.8,49.0,3.56,AtlasIntel
-senate,GA,2022-11-06,59.0,41.0,3.81,The Political Matrix/The Listener Group
-senate,GA,2022-11-06,46.4,46.8,2.87,Landmark Communications
-senate,IL,2022-09-22,49.7,30.8,3.16,Emerson College
-senate,IL,2022-10-10,50.0,36.0,3.6,Public Policy Polling
-senate,IL,2022-10-08,48.2,28.5,3.16,Repass
-senate,IL,2022-10-22,49.1,39.3,3.16,Emerson College
-senate,IL,2022-10-24,56.0,40.0,3.9,Civiqs
-senate,IL,2022-11-05,58.0,40.0,4.71,Research Co.
-senate,IN,2022-09-25,37.0,39.0,4.08,ARW Strategies
-senate,IN,2022-11-06,38.0,49.0,3.76,Civiqs
-senate,IA,2022-09-25,44.0,49.0,3.2,Change Research
-senate,IA,2022-10-03,39.7,54.1,4.08,Cygnal
-senate,IA,2022-10-03,38.0,48.7,3.23,Emerson College
-senate,IA,2022-10-11,43.0,46.0,4.02,Selzer & Co.
-senate,IA,2022-10-16,45.0,48.0,3.15,Change Research
-senate,IA,2022-10-17,42.0,53.0,4.08,Tarrance Group
-senate,IA,2022-10-24,44.0,52.0,4.01,Civiqs
-senate,IA,2022-10-26,42.7,53.9,4.08,Cygnal
-senate,IA,2022-11-02,41.0,53.0,3.53,Selzer & Co.
-senate,KS,2022-09-17,33.1,45.3,3.16,Emerson College
-senate,KS,2022-10-28,32.6,54.2,3.16,Emerson College
-senate,MD,2022-09-10,56.0,33.0,3.66,Goucher College Sarah T. Hughes Center for Politics
-senate,MO,2022-09-16,36.0,47.0,3.86,SurveyUSA
-senate,MO,2022-09-25,37.7,49.1,2.94,Emerson College
-senate,MO,2022-10-24,42.0,51.0,3.15,Remington Research Group
-senate,MO,2022-10-27,40.1,53.6,3.16,Emerson College
-senate,MO,2022-10-31,42.3,53.3,3.04,Trafalgar Group
-senate,MO,2022-10-29,41.0,50.0,3.56,SurveyUSA
-senate,MO,2022-11-06,40.0,55.0,3.66,Civiqs
-senate,NV,2022-09-09,41.3,41.8,3.16,Emerson College
-senate,NV,2022-09-16,46.0,47.0,3.38,Data for Progress
-senate,NV,2022-09-20,43.0,45.9,4.47,InsiderAdvantage
-senate,NV,2022-09-19,42.0,39.0,4.47,WPA Intelligence
-senate,NV,2022-09-19,43.1,47.1,3.03,Trafalgar Group
-senate,NV,2022-09-24,43.0,45.0,3.67,Noble Predictive Insights
-senate,NV,2022-09-29,46.0,48.0,3.48,SSRS
-senate,NV,2022-10-03,44.0,42.0,4.47,WPA Intelligence
-senate,NV,2022-10-06,45.6,43.6,4.47,Suffolk University
-senate,NV,2022-10-15,43.0,48.0,3.76,Rasmussen Reports
-senate,NV,2022-10-17,43.0,45.0,4.47,WPA Intelligence
-senate,NV,2022-10-16,48.0,49.0,3.08,YouGov
-senate,NV,2022-10-16,48.0,49.0,3.49,Data for Progress
-senate,NV,2022-10-16,47.0,45.0,3.72,BSP Research/Shaw & Company Research
-senate,NV,2022-10-12,52.0,39.0,4.13,University of Nevada Department of Political Science
-senate,NV,2022-10-20,46.3,48.2,4.26,InsiderAdvantage
-senate,NV,2022-10-21,47.0,46.0,4.47,Garin-Hart-Yang Research Group
-senate,NV,2022-10-22,48.9,47.2,3.08,Phillips Academy
-senate,NV,2022-10-21,47.0,47.0,3.36,The New York Times/Siena College
-senate,NV,2022-10-24,45.6,49.8,3.02,Trafalgar Group
-senate,NV,2022-10-25,45.0,45.0,4.47,Echelon Insights
-senate,NV,2022-10-26,43.0,41.0,4.08,Noble Predictive Insights
-senate,NV,2022-10-26,42.5,48.1,4.47,Susquehanna Polling & Research Inc.
-senate,NV,2022-10-26,45.0,44.0,4.47,Suffolk University
-senate,NV,2022-10-28,45.8,51.0,2.24,Emerson College
-senate,NV,2022-11-01,43.3,45.8,4.08,Cygnal
-senate,NV,2022-11-02,45.0,44.0,4.47,KAConsulting
-senate,NV,2022-11-04,43.8,49.8,4.26,InsiderAdvantage
-senate,NV,2022-11-05,48.0,49.0,4.71,Research Co.
-senate,NV,2022-11-04,47.0,49.0,3.02,Data for Progress
-senate,NV,2022-11-06,45.4,50.3,3.03,Trafalgar Group
-senate,NH,2022-09-14,50.6,40.1,3.54,Emerson College
-senate,NH,2022-09-17,53.0,40.0,4.24,American Research Group
-senate,NH,2022-09-17,49.0,41.0,3.39,University of New Hampshire Survey Center
-senate,NH,2022-09-25,49.6,41.2,4.47,Suffolk University
-senate,NH,2022-09-27,49.0,43.0,3.33,Saint Anselm College Survey Center
-senate,NH,2022-09-28,48.2,45.0,3.04,Trafalgar Group
-senate,NH,2022-09-27,50.0,43.0,2.95,Data for Progress
-senate,NH,2022-10-04,52.0,45.0,4.47,Fabrizio Lee & Associates/Impact Research
-senate,NH,2022-10-18,49.5,45.4,3.71,Emerson College
-senate,NH,2022-10-18,49.0,47.0,4.08,"Fabrizio, Lee & Associates"
-senate,NH,2022-10-16,50.0,44.0,2.68,Data for Progress
-senate,NH,2022-10-23,47.6,47.1,4.08,InsiderAdvantage
-senate,NH,2022-10-20,51.0,41.0,4.08,University of Massachusetts Lowell Center for Public Opinion
-senate,NH,2022-10-25,45.0,45.0,3.02,co/efficient
-senate,NH,2022-10-28,47.0,48.0,2.55,Saint Anselm College Survey Center
-senate,NH,2022-10-31,45.7,47.0,2.84,Trafalgar Group
-senate,NH,2022-10-31,50.2,45.7,3.43,Emerson College
-senate,NH,2022-11-05,49.4,47.6,3.78,InsiderAdvantage
-senate,NH,2022-11-04,48.3,48.4,3.71,Wick
-senate,NH,2022-11-04,50.0,47.0,2.24,Data for Progress
-senate,NH,2022-11-05,48.3,44.7,3.08,Phillips Academy
-senate,NH,2022-11-04,50.0,48.0,2.19,University of New Hampshire Survey Center
-senate,NY,2022-09-20,55.0,36.0,3.91,Siena College
-senate,NY,2022-10-05,54.0,34.0,2.99,Marist College
-senate,NY,2022-10-13,57.0,37.0,3.76,Siena College
-senate,NY,2022-10-14,54.0,42.0,2.49,Quinnipiac University
-senate,NY,2022-10-16,52.0,38.0,3.77,SurveyUSA
-senate,NY,2022-10-22,52.8,39.6,3.16,Emerson College
-senate,NY,2022-10-24,56.0,41.0,4.11,Civiqs
-senate,NY,2022-10-25,54.0,27.0,3.16,"Long Island University Steven S. Hornstein Center for Policy, Polling, and Analysis"
-senate,NY,2022-10-27,56.0,39.0,3.5,Data for Progress
-senate,NY,2022-10-28,50.0,38.0,4.47,KAConsulting
-senate,NY,2022-10-30,57.0,38.5,3.16,Emerson College
-senate,NY,2022-10-29,50.6,40.0,2.89,Trafalgar Group
-senate,NY,2022-11-05,59.0,39.0,4.71,Research Co.
-senate,NY,2022-09-22,60.0,40.0,5,ActiVote
-senate,NC,2022-09-09,45.9,48.7,3.13,East Carolina University Center for Survey Research
-senate,NC,2022-09-15,43.2,45.6,3.16,Emerson College
-senate,NC,2022-09-19,49.0,48.0,4.13,Civiqs
-senate,NC,2022-09-16,46.0,46.0,3.54,Global Strategy Group
-senate,NC,2022-09-22,41.0,41.3,3.7,"Meredith College Department of History, Political Science, and International Studies"
-senate,NC,2022-09-25,44.0,43.7,3.92,Cygnal
-senate,NC,2022-09-30,42.0,43.0,3.84,SurveyUSA
-senate,NC,2022-10-07,45.0,46.0,4.06,Public Policy Polling
-senate,NC,2022-10-12,44.0,50.0,3.33,East Carolina University Center for Survey Research
-senate,NC,2022-10-10,44.2,48.7,3.15,Wick
-senate,NC,2022-10-18,44.2,48.4,3.04,Trafalgar Group
-senate,NC,2022-10-19,44.0,44.0,2.97,Marist College
-senate,NC,2022-10-21,43.1,46.9,4.08,Cygnal
-senate,NC,2022-10-28,45.7,51.4,3.16,Emerson College
-senate,NC,2022-10-29,42.7,43.9,3.72,"Meredith College Department of History, Political Science, and International Studies"
-senate,NC,2022-11-01,43.0,50.0,2.96,Remington Research Group
-senate,NC,2022-10-31,49.0,49.0,3.85,Civiqs
-senate,NC,2022-11-02,47.0,51.9,2.91,East Carolina University Center for Survey Research
-senate,NC,2022-09-19,47.0,48.0,5,ActiVote
-senate,NC,2022-11-05,44.8,51.2,3.02,Trafalgar Group
-senate,NC,2022-11-04,45.0,51.0,2.75,Data for Progress
-senate,OH,2022-09-08,46.1,43.1,4.08,Fallon Research & Communications
-senate,OH,2022-09-12,40.1,44.4,3.16,Emerson College
-senate,OH,2022-09-12,45.0,48.0,3.58,Civiqs
-senate,OH,2022-09-14,45.0,46.0,2.89,Marist College
-senate,OH,2022-09-14,48.2,45.1,3.42,Baldwin Wallace University Community Research Institute
-senate,OH,2022-09-20,46.0,43.0,3.95,Siena College
-senate,OH,2022-10-02,49.0,38.0,4.35,Center Street PAC
-senate,OH,2022-10-06,44.7,45.5,3.16,Emerson College
-senate,OH,2022-10-07,44.4,46.3,3.95,Cygnal
-senate,OH,2022-10-11,43.8,47.3,3.04,Trafalgar Group
-senate,OH,2022-10-09,46.0,49.0,3.14,Data for Progress
-senate,OH,2022-10-13,45.0,47.0,4.47,Suffolk University
-senate,OH,2022-10-13,43.12,41.19,3.87,Ohio Northern University Institute for Civics and Public Policy
-senate,OH,2022-10-16,43.0,47.0,4.2,Redfield & Wilton Strategies
-senate,OH,2022-10-16,43.2,47.3,2.64,Cygnal
-senate,OH,2022-10-16,46.0,46.0,3.94,Siena College
-senate,OH,2022-10-19,45.0,46.0,2.96,Marist College
-senate,OH,2022-10-22,50.2,46.0,3.06,Baldwin Wallace University Community Research Institute
-senate,OH,2022-10-22,44.2,48.3,2.3,Cygnal
-senate,OH,2022-10-25,47.0,42.0,4.44,Center Street PAC
-senate,OH,2022-10-28,43.7,48.2,2.57,Cygnal
-senate,OH,2022-10-31,43.8,52.7,3.16,Emerson College
-senate,OH,2022-11-01,43.0,48.0,2.98,Remington Research Group
-senate,OH,2022-11-02,43.1,49.3,2.58,Cygnal
-senate,OH,2022-11-04,43.5,53.9,2.98,Trafalgar Group
-senate,OH,2022-11-04,45.0,55.0,2.66,Data for Progress
-senate,OH,2022-11-05,46.0,54.0,4.71,Research Co.
-senate,OH,2022-11-04,45.0,52.0,4.45,Targoz Market Research
-senate,OH,2022-11-06,46.0,51.0,3.74,Civiqs
-senate,OK,2022-09-17,26.68,49.12,1.83,Bruno Political Consulting
-senate,OK,2022-09-20,34.0,52.0,4.47,Amber Integrated
-senate,OK,2022-10-05,40.4,51.7,5,SoonerPoll.com
-senate,OK,2022-10-11,37.0,51.0,3.96,Ascend Action
-senate,OK,2022-10-14,36.0,52.0,4.47,Amber Integrated
-senate,OK,2022-10-27,38.0,52.0,4.47,Amber Integrated
-senate,OK,2022-10-27,34.2,61.5,3.16,Emerson College
-senate,OK,2022-10-26,34.0,51.0,3.65,Ascend Action
-senate,OK,2022-11-05,36.0,56.0,3.83,Ascend Action
-senate,OR,2022-09-30,51.1,31.6,3.54,Emerson College
-senate,OR,2022-10-17,51.0,40.0,3.13,Data for Progress
-senate,OR,2022-10-17,55.0,38.0,3.53,Civiqs
-senate,OR,2022-10-31,50.6,33.6,3.2,Emerson College
-senate,OR,2022-11-03,56.0,42.0,2.68,Data for Progress
-senate,PA,2022-09-09,52.0,47.0,2.9,YouGov
-senate,PA,2022-09-14,47.7,45.9,3.05,Trafalgar Group
-senate,PA,2022-09-15,49.0,44.0,4.88,Muhlenberg College Institute of Public Opinion
-senate,PA,2022-09-18,46.5,44.5,3.63,Phillips Academy
-senate,PA,2022-09-21,51.0,41.0,2.84,Marist College
-senate,PA,2022-09-23,44.8,41.7,4.47,InsiderAdvantage
-senate,PA,2022-09-22,45.0,42.0,4.4,Franklin & Marshall College Center for Opinion Research
-senate,PA,2022-09-25,44.6,42.6,3.16,Emerson College
-senate,PA,2022-09-24,45.0,41.0,3.15,Beacon Research/Shaw & Co. Research
-senate,PA,2022-09-29,55.0,36.0,4.2,Center Street PAC
-senate,PA,2022-09-29,46.4,40.0,4.47,Suffolk University
-senate,PA,2022-10-10,47.2,44.8,3.05,Trafalgar Group
-senate,PA,2022-10-11,46.0,47.6,3.42,Patriot Polling
-senate,PA,2022-10-08,48.0,46.0,2.67,Fabrizio Lee & Associates/Impact Research
-senate,PA,2022-10-10,44.6,49.1,3.14,Wick
-senate,PA,2022-10-15,51.0,45.0,3.77,SSRS
-senate,PA,2022-10-19,46.3,45.5,4.26,InsiderAdvantage
-senate,PA,2022-10-18,46.0,44.0,4.45,Garin-Hart-Yang Research Group
-senate,PA,2022-10-19,45.0,43.0,3.21,Rasmussen Reports
-senate,PA,2022-10-19,46.0,43.0,4.47,Echelon Insights
-senate,PA,2022-10-18,49.0,45.0,5,Franklin & Marshall College Center for Opinion Research
-senate,PA,2022-10-23,51.0,49.0,3.04,YouGov
-senate,PA,2022-10-26,44.8,47.5,3.65,InsiderAdvantage
-senate,PA,2022-10-25,49.0,44.0,4.02,The New York Times/Siena College
-senate,PA,2022-10-19,48.1,42.4,3.43,YouGov
-senate,PA,2022-10-26,45.9,47.6,3.16,Wick
-senate,PA,2022-10-27,45.0,48.0,2.41,co/efficient
-senate,PA,2022-10-26,47.0,47.0,4.66,Muhlenberg College Institute of Public Opinion
-senate,PA,2022-10-29,46.6,44.8,4.47,Suffolk University
-senate,PA,2022-10-28,45.0,42.0,3.15,Beacon Research/Shaw & Co. Research
-senate,PA,2022-10-30,47.3,48.4,3.16,Emerson College
-senate,PA,2022-10-30,46.6,47.6,3.78,Susquehanna Polling & Research Inc.
-senate,PA,2022-11-01,44.0,47.0,2.91,Remington Research Group
-senate,PA,2022-11-01,50.0,44.0,2.95,Marist College
-senate,PA,2022-11-03,46.0,48.3,3.65,InsiderAdvantage
-senate,PA,2022-11-02,45.5,47.7,3.02,Trafalgar Group
-senate,PA,2022-11-04,46.1,49.4,3.44,Patriot Polling
-senate,PA,2022-11-05,49.0,48.0,4.71,Research Co.
-senate,PA,2022-11-04,46.0,51.0,3.98,Targoz Market Research
-senate,PA,2022-11-06,53.0,47.0,3.54,The Political Matrix/The Listener Group
-senate,SD,2022-09-08,33.0,46.0,5,Lake Research Partners
-senate,SD,2022-10-04,28.0,53.0,4.21,South Dakota State University School of American and Global Studies
-senate,SD,2022-10-20,27.0,58.0,2.58,Emerson College
-senate,VT,2022-10-01,62.0,28.0,3.62,University of New Hampshire Survey Center
-senate,VT,2022-10-23,63.0,32.0,3.1,Data for Progress
-senate,WA,2022-09-14,50.0,37.0,4.98,Elway Research
-senate,WA,2022-09-23,48.7,46.5,3.03,Trafalgar Group
-senate,WA,2022-09-25,52.0,40.0,5,Strategies 360
-senate,WA,2022-09-24,46.0,42.0,4.08,OnMessage Inc.
-senate,WA,2022-09-27,52.0,40.0,3.6,Public Policy Polling
-senate,WA,2022-09-30,50.7,41.9,3.58,Emerson College
-senate,WA,2022-10-17,55.0,41.0,3.79,Civiqs
-senate,WA,2022-10-16,49.0,41.0,4.12,SurveyUSA
-senate,WA,2022-10-19,52.0,42.0,3.58,Public Policy Polling
-senate,WA,2022-10-19,48.0,45.0,2.91,co/efficient
-senate,WA,2022-10-21,48.0,42.0,4.47,KAConsulting
-senate,WA,2022-10-21,46.0,46.0,4.47,Moore Information Group
-senate,WA,2022-10-26,50.6,45.4,4.45,American Pulse Research & Polling
-senate,WA,2022-10-27,49.4,48.2,2.88,Trafalgar Group
-senate,WA,2022-10-31,48.0,46.4,4.26,InsiderAdvantage
-senate,WA,2022-11-04,47.0,47.4,4.47,Moore Information Group
-senate,WI,2022-09-08,48.0,49.0,3.98,Marquette University Law School
-senate,WI,2022-09-12,45.0,49.0,3.54,OnMessage Inc.
-senate,WI,2022-09-12,48.0,49.0,3.58,Civiqs
-senate,WI,2022-09-14,48.0,47.0,3.92,Siena College
-senate,WI,2022-09-17,44.1,47.7,3.41,Emerson College
-senate,WI,2022-09-17,46.5,48.7,3.03,Trafalgar Group
-senate,WI,2022-09-22,48.0,50.0,3.16,Data for Progress
-senate,WI,2022-09-22,46.0,51.0,4.47,Fabrizio Lee & Associates/Impact Research
-senate,WI,2022-09-24,44.0,48.0,3.14,Beacon Research/Shaw & Co. Research
-senate,WI,2022-09-26,47.0,47.0,4.17,Public Policy Polling
-senate,WI,2022-10-05,49.0,50.0,2.97,YouGov
-senate,WI,2022-10-06,46.0,52.0,3.92,Marquette University Law School
-senate,WI,2022-10-09,48.0,47.0,3.38,Clarity Campaign Labs
-senate,WI,2022-10-13,46.0,48.0,4.46,Garin-Hart-Yang Research Group
-senate,WI,2022-10-15,49.0,50.0,3.74,SSRS
-senate,WI,2022-10-18,46.0,51.0,2.7,Data for Progress
-senate,WI,2022-10-22,43.2,51.6,3.53,Patriot Polling
-senate,WI,2022-10-28,46.4,51.0,3.16,Emerson College
-senate,WI,2022-10-28,46.1,50.2,3.03,Wick
-senate,WI,2022-10-28,45.0,48.0,3.16,Beacon Research/Shaw & Co. Research
-senate,WI,2022-10-29,48.0,46.0,3.36,Clarity Campaign Labs
-senate,WI,2022-10-29,45.0,47.0,3.91,Siena College
-senate,WI,2022-10-28,48.0,50.0,3.84,Marquette University Law School
-senate,WI,2022-11-03,47.4,50.1,3.02,Trafalgar Group
-senate,WI,2022-11-04,47.0,53.0,2.58,Data for Progress
-senate,WI,2022-11-05,47.0,53.0,4.71,Research Co.
-senate,WI,2022-11-06,49.0,50.0,3.68,Civiqs
-governor,AL,2022-10-28,25.3,59.5,4.03,Cygnal
-governor,AK,2022-09-08,41.0,59.0,4.47,Fabrizio Lee & Associates/Impact Research
-governor,AK,2022-10-23,25.0,51.0,4.98,Dittman Research
-governor,AZ,2022-09-12,49.0,48.0,4.47,Fabrizio Lee & Associates/Impact Research
-governor,AZ,2022-09-16,45.6,50.0,3.04,Trafalgar Group
-governor,AZ,2022-09-17,47.0,51.0,3.61,Data for Progress
-governor,AZ,2022-09-21,45.0,46.0,2.82,Marist College
-governor,AZ,2022-09-23,46.2,45.4,4.47,Suffolk University
-governor,AZ,2022-09-24,44.0,43.0,3.15,Beacon Research/Shaw & Co. Research
-governor,AZ,2022-09-29,49.0,46.0,3.55,SSRS
-governor,AZ,2022-10-02,49.0,49.0,2.93,YouGov
-governor,AZ,2022-10-05,43.96,46.6,3.85,Noble Predictive Insights
-governor,AZ,2022-10-09,45.0,46.0,3.24,Ascend Action
-governor,AZ,2022-10-11,45.6,49.3,4.26,InsiderAdvantage
-governor,AZ,2022-10-12,45.8,44.8,4.47,HighGround Inc.
-governor,AZ,2022-10-10,47.5,47.4,3.16,Wick
-governor,AZ,2022-10-16,46.4,49.2,3.05,Trafalgar Group
-governor,AZ,2022-10-14,46.0,50.0,3.35,Data for Progress
-governor,AZ,2022-10-16,47.9,47.2,4.08,Susquehanna Polling & Research Inc.
-governor,AZ,2022-10-18,44.2,46.7,4.26,Data Orbital
-governor,AZ,2022-10-20,45.3,48.6,3.0,co/efficient
-governor,AZ,2022-10-24,43.0,54.0,4.26,InsiderAdvantage
-governor,AZ,2022-10-25,48.0,48.0,4.07,The New York Times/Siena College
-governor,AZ,2022-10-25,47.0,49.0,4.08,Noble Predictive Insights
-governor,AZ,2022-10-25,47.0,50.0,3.54,"Fabrizio, Lee & Associates"
-governor,AZ,2022-10-23,44.0,44.0,3.87,BSP Research/Shaw & Company Research
-governor,AZ,2022-10-29,42.3,53.4,3.19,Phillips Academy
-governor,AZ,2022-10-28,46.8,49.2,2.99,Wick
-governor,AZ,2022-10-28,46.0,47.0,3.16,Beacon Research/Shaw & Co. Research
-governor,AZ,2022-10-31,46.7,50.2,3.16,Emerson College
-governor,AZ,2022-10-31,46.0,50.0,3.96,Alloy Analytics
-governor,AZ,2022-11-02,48.0,51.0,4.26,InsiderAdvantage
-governor,AZ,2022-11-01,46.0,49.0,3.05,Remington Research Group
-governor,AZ,2022-11-01,45.2,46.6,4.47,HighGround Inc.
-governor,AZ,2022-11-01,48.0,47.0,2.94,Marist College
-governor,AZ,2022-10-31,48.0,50.0,3.43,Civiqs
-governor,AZ,2022-11-02,45.0,49.0,4.47,KAConsulting
-governor,AZ,2022-11-05,49.0,51.0,4.71,Research Co.
-governor,AZ,2022-11-05,46.6,49.7,4.26,Data Orbital
-governor,AZ,2022-11-04,48.0,52.0,2.71,Data for Progress
-governor,AZ,2022-11-04,48.0,50.0,4.23,Targoz Market Research
-governor,AZ,2022-11-06,46.9,50.5,3.02,Trafalgar Group
-governor,AR,2022-09-12,40.0,51.0,3.46,Hendrix College
-governor,AR,2022-09-14,34.0,59.0,2.66,Remington Research Group
-governor,AR,2022-10-17,41.0,51.0,3.2,Hendrix College
-governor,AR,2022-10-22,33.9,53.0,4.24,University of Arkansas Department of Political Science
-governor,CA,2022-09-24,53.0,32.0,1.2,University of California Berkeley Institute of Governmental Studies
-governor,CA,2022-10-09,57.0,35.0,3.14,SurveyUSA
-governor,CA,2022-10-18,55.0,36.0,3.0,Public Policy Institute of California
-governor,CA,2022-10-19,56.0,37.0,3.41,YouGov
-governor,CA,2022-09-12,61.0,39.0,5,ActiVote
-governor,CA,2022-10-28,58.0,37.0,1.29,University of California Berkeley Institute of Governmental Studies
-governor,CA,2022-11-01,62.0,38.0,3.53,University of Southern California Schwarzenegger Institute for State and Global Policy
-governor,CA,2022-11-05,60.0,40.0,4.71,Research Co.
-governor,CO,2022-09-18,52.8,35.9,3.16,Emerson College
-governor,CO,2022-09-22,49.2,40.7,3.05,Trafalgar Group
-governor,CO,2022-09-22,51.0,34.0,3.07,Keating Research/Magellan Strategies
-governor,CO,2022-10-05,56.0,39.0,3.15,Data for Progress
-governor,CO,2022-10-05,54.0,36.0,2.98,Marist College
-governor,CO,2022-10-08,52.0,34.0,3.54,Global Strategy Group
-governor,CO,2022-10-17,55.0,40.0,4.08,Civiqs
-governor,CO,2022-10-15,57.0,41.0,3.76,YouGov
-governor,CO,2022-10-26,49.5,41.8,2.92,Trafalgar Group
-governor,CO,2022-10-28,54.2,40.8,3.16,Emerson College
-governor,CO,2022-10-31,49.6,42.5,3.04,Trafalgar Group
-governor,CO,2022-11-04,55.0,43.0,2.25,Data for Progress
-governor,CO,2022-11-05,54.0,42.0,3.42,co/efficient
-governor,CT,2022-09-17,57.0,40.0,2.29,Quinnipiac University
-governor,CT,2022-09-18,55.0,40.0,4.0,Western New England University Polling Institute
-governor,CT,2022-10-12,46.0,40.0,2.89,"Fabrizio, Lee & Associates"
-governor,CT,2022-10-17,52.0,34.0,3.73,SurveyUSA
-governor,CT,2022-10-20,53.4,42.7,3.16,Emerson College
-governor,CT,2022-10-21,56.0,41.0,2.31,Quinnipiac University
-governor,CT,2022-10-23,49.0,43.0,4.47,McLaughlin & Associates
-governor,CT,2022-10-25,55.0,24.0,3.16,"Long Island University Steven S. Hornstein Center for Policy, Polling, and Analysis"
-governor,FL,2022-09-10,45.0,51.0,4.08,Sachs Media
-governor,FL,2022-09-09,47.0,50.0,4.06,Center Street PAC
-governor,FL,2022-09-17,41.0,47.8,4.47,Suffolk University
-governor,FL,2022-09-19,45.0,52.0,4.03,Civiqs
-governor,FL,2022-09-21,53.0,47.0,3.78,The Political Matrix/The Listener Group
-governor,FL,2022-09-22,41.0,49.0,3.87,Siena College
-governor,FL,2022-09-24,46.0,47.0,1.87,Clarity Campaign Labs
-governor,FL,2022-09-27,41.0,52.0,3.54,Mason-Dixon Polling & Strategy
-governor,FL,2022-10-08,41.0,46.0,2.83,African American Research Collaborative
-governor,FL,2022-10-12,42.0,52.0,3.82,RMG Research
-governor,FL,2022-10-15,42.0,52.0,4.08,Sachs Media
-governor,FL,2022-10-14,39.7,50.9,3.73,Florida Atlantic University Business and Economics Polling Initiative
-governor,FL,2022-10-18,45.0,53.0,3.94,Stetson University Center for Public Opinion Research
-governor,FL,2022-10-21,42.0,54.0,2.83,Data for Progress
-governor,FL,2022-10-18,42.0,53.0,4.08,Cherry Communications
-governor,FL,2022-10-21,41.0,55.0,4.01,University of North Florida Public Opinion Research Lab
-governor,FL,2022-10-19,43.0,53.0,3.47,YouGov
-governor,FL,2022-10-27,53.4,46.6,3.97,The Political Matrix/The Listener Group
-governor,FL,2022-10-26,43.0,53.0,2.99,YouGov
-governor,FL,2022-11-01,43.0,53.0,4.26,InsiderAdvantage
-governor,FL,2022-10-31,41.4,54.1,4.47,Victory Insights
-governor,FL,2022-10-31,42.0,54.0,3.9,Siena College
-governor,FL,2022-11-01,40.0,53.0,4.08,Amber Integrated
-governor,FL,2022-10-31,45.0,54.0,3.6,Civiqs
-governor,FL,2022-09-21,44.0,56.0,5,ActiVote
-governor,FL,2022-11-05,42.0,56.0,4.71,Research Co.
-governor,FL,2022-11-04,42.0,57.0,2.64,Data for Progress
-governor,FL,2022-11-06,48.0,52.0,3.72,The Political Matrix/The Listener Group
-governor,GA,2022-09-11,47.0,49.0,4.3,Center Street PAC
-governor,GA,2022-09-10,48.0,50.0,2.8,Quinnipiac University
-governor,GA,2022-09-14,44.0,50.0,2.88,Marist College
-governor,GA,2022-09-11,42.2,50.2,3.41,University of Georgia School of Public and International Affairs
-governor,GA,2022-09-16,46.5,49.9,4.08,Patinkin Research Strategies
-governor,GA,2022-09-16,46.0,52.0,2.91,YouGov
-governor,GA,2022-09-18,44.0,51.0,3.15,Data for Progress
-governor,GA,2022-09-24,43.0,50.0,3.15,Beacon Research/Shaw & Co. Research
-governor,GA,2022-10-04,44.6,50.2,4.26,InsiderAdvantage
-governor,GA,2022-10-02,45.0,47.0,3.05,SurveyUSA
-governor,GA,2022-09-29,40.7,51.0,3.12,University of Georgia School of Public and International Affairs
-governor,GA,2022-10-06,46.0,50.9,3.16,Emerson College
-governor,GA,2022-10-09,49.0,50.0,2.94,Quinnipiac University
-governor,GA,2022-10-10,43.6,52.5,3.04,Trafalgar Group
-governor,GA,2022-10-10,46.0,51.0,3.73,Civiqs
-governor,GA,2022-10-10,42.9,52.0,3.13,Wick
-governor,GA,2022-10-16,42.9,50.3,4.26,InsiderAdvantage
-governor,GA,2022-10-16,44.6,51.2,4.47,Landmark Communications
-governor,GA,2022-10-15,43.0,53.0,3.19,Data for Progress
-governor,GA,2022-10-15,44.0,51.3,3.32,East Carolina University Center for Survey Research
-governor,GA,2022-10-22,45.3,52.2,3.05,Trafalgar Group
-governor,GA,2022-10-23,41.0,51.0,3.08,Rasmussen Reports
-governor,GA,2022-10-27,43.2,51.6,4.26,InsiderAdvantage
-governor,GA,2022-10-26,45.0,50.0,4.07,The New York Times/Siena College
-governor,GA,2022-10-22,44.3,51.1,3.13,University of Georgia School of Public and International Affairs
-governor,GA,2022-10-28,43.0,49.0,3.16,Beacon Research/Shaw & Co. Research
-governor,GA,2022-10-30,46.4,52.0,3.16,Emerson College
-governor,GA,2022-10-28,44.0,49.0,3.62,Seven Letter Insight
-governor,GA,2022-10-31,47.0,49.0,3.78,Patinkin Research Strategies
-governor,GA,2022-11-01,41.0,55.0,2.95,Remington Research Group
-governor,GA,2022-11-01,43.0,52.0,4.08,Amber Integrated
-governor,GA,2022-11-01,43.0,50.0,4.47,Echelon Insights
-governor,GA,2022-11-01,45.0,51.0,2.93,Marist College
-governor,GA,2022-10-31,45.0,52.0,2.92,SurveyUSA
-governor,GA,2022-11-04,45.7,53.7,3.05,East Carolina University Center for Survey Research
-governor,GA,2022-11-06,45.0,50.0,4.26,InsiderAdvantage
-governor,GA,2022-11-05,46.0,53.0,4.71,Research Co.
-governor,GA,2022-11-05,43.7,52.6,3.01,Trafalgar Group
-governor,GA,2022-11-04,45.0,54.0,2.6,Data for Progress
-governor,GA,2022-11-04,42.0,56.0,4.16,Targoz Market Research
-governor,GA,2022-11-06,45.5,52.1,2.87,Landmark Communications
-governor,IL,2022-09-09,44.0,37.0,4.47,Osage Research
-governor,IL,2022-09-22,50.9,35.8,3.16,Emerson College
-governor,IL,2022-09-26,48.0,40.0,3.54,"Fabrizio, Lee & Associates"
-governor,IL,2022-10-10,49.0,34.0,3.6,Public Policy Polling
-governor,IL,2022-10-08,49.7,27.7,3.16,Repass
-governor,IL,2022-10-14,44.0,42.0,4.08,Osage Research
-governor,IL,2022-10-22,51.6,42.3,3.16,Emerson College
-governor,IL,2022-10-24,56.0,39.0,3.9,Civiqs
-governor,IL,2022-11-05,59.0,39.0,4.71,Research Co.
-governor,IL,2022-11-06,49.3,41.7,2.88,Victory Research
-governor,IA,2022-10-03,38.0,58.6,4.08,Cygnal
-governor,IA,2022-10-03,35.6,52.9,3.23,Emerson College
-governor,IA,2022-10-11,35.0,52.0,4.02,Selzer & Co.
-governor,IA,2022-10-17,39.0,56.0,4.08,Tarrance Group
-governor,IA,2022-10-24,42.0,54.0,4.01,Civiqs
-governor,IA,2022-10-26,38.1,57.1,4.08,Cygnal
-governor,IA,2022-11-02,37.0,54.0,3.53,Selzer & Co.
-governor,KS,2022-09-17,44.6,43.1,3.16,Emerson College
-governor,KS,2022-10-28,48.7,44.1,3.16,Emerson College
-governor,ME,2022-09-17,53.0,39.0,3.8,University of New Hampshire Survey Center
-governor,ME,2022-09-19,52.6,41.3,2.93,Emerson College
-governor,ME,2022-10-11,49.0,39.0,3.54,Pan Atlantic Research
-governor,ME,2022-10-28,55.0,40.0,4.61,Ascend Action
-governor,ME,2022-10-30,49.0,43.0,2.99,SurveyUSA
-governor,ME,2022-11-04,52.0,44.0,3.29,University of New Hampshire Survey Center
-governor,MD,2022-09-10,53.0,31.0,3.66,Goucher College Sarah T. Hughes Center for Politics
-governor,MD,2022-09-24,60.0,28.0,3.51,The Washington Post/University of Maryland Center for Democracy and Civic Engagement
-governor,MD,2022-10-22,58.0,27.0,3.18,OpinionWorks
-governor,MA,2022-09-12,51.6,26.2,4.47,Suffolk University
-governor,MA,2022-10-09,53.0,23.0,3.18,MassINC Polling Group
-governor,MA,2022-10-15,56.0,33.0,4.47,Suffolk University
-governor,MA,2022-10-22,59.0,32.0,3.16,University of Massachusetts Lowell Center for Public Opinion
-governor,MA,2022-10-23,61.0,33.0,3.78,YouGov
-governor,MI,2022-09-10,51.0,40.0,3.54,EPIC-MRA
-governor,MI,2022-09-17,55.0,39.0,4.08,EPIC-MRA
-governor,MI,2022-09-26,50.9,45.1,3.05,Trafalgar Group
-governor,MI,2022-09-28,49.5,32.2,4.08,Glengariff Group
-governor,MI,2022-10-05,53.0,47.0,2.79,YouGov
-governor,MI,2022-10-11,44.4,43.9,4.26,InsiderAdvantage
-governor,MI,2022-10-09,49.0,38.0,4.08,EPIC-MRA
-governor,MI,2022-10-13,48.7,43.6,3.95,Cygnal
-governor,MI,2022-10-13,49.2,43.8,4.15,Emerson College
-governor,MI,2022-10-11,47.1,47.9,2.97,Wick
-governor,MI,2022-10-15,52.0,46.0,3.92,SSRS
-governor,MI,2022-10-17,49.4,43.6,2.36,Cygnal
-governor,MI,2022-10-19,49.0,47.0,4.3,Mitchell Research & Communications
-governor,MI,2022-10-20,48.4,47.9,3.04,Trafalgar Group
-governor,MI,2022-10-23,50.6,44.5,2.69,Cygnal
-governor,MI,2022-10-27,51.7,43.1,4.08,Glengariff Group
-governor,MI,2022-10-28,48.0,41.0,4.47,KAConsulting
-governor,MI,2022-10-30,44.6,44.8,4.26,InsiderAdvantage
-governor,MI,2022-10-28,48.5,47.2,2.97,Wick
-governor,MI,2022-10-29,50.9,44.5,2.51,Cygnal
-governor,MI,2022-10-30,50.9,45.8,3.33,Emerson College
-governor,MI,2022-10-30,54.0,43.0,4.08,EPIC-MRA
-governor,MI,2022-11-03,49.0,47.0,3.9,Mitchell Research & Communications
-governor,MI,2022-11-03,50.2,46.5,2.5,Cygnal
-governor,MI,2022-11-06,48.2,48.5,3.02,Trafalgar Group
-governor,MN,2022-09-14,47.7,45.0,3.04,Trafalgar Group
-governor,MN,2022-09-13,48.0,41.0,3.54,Mason-Dixon Polling & Strategy
-governor,MN,2022-09-25,47.6,44.2,4.08,Cygnal
-governor,MN,2022-10-02,50.0,40.0,4.07,SurveyUSA
-governor,MN,2022-10-12,47.0,42.0,2.51,Change Research
-governor,MN,2022-10-18,45.8,46.3,3.03,Trafalgar Group
-governor,MN,2022-10-28,51.0,43.0,3.46,SurveyUSA
-governor,MN,2022-10-20,52.0,31.0,5,St. Cloud State University
-governor,NE,2022-09-27,41.0,48.0,2.73,Data Targeting
-governor,NV,2022-09-09,40.4,40.2,3.16,Emerson College
-governor,NV,2022-09-16,45.0,45.0,3.38,Data for Progress
-governor,NV,2022-09-19,44.5,47.5,3.03,Trafalgar Group
-governor,NV,2022-09-24,42.0,45.0,3.67,Noble Predictive Insights
-governor,NV,2022-09-29,46.0,48.0,3.48,SSRS
-governor,NV,2022-10-06,43.0,43.6,4.47,Suffolk University
-governor,NV,2022-10-15,42.0,47.0,3.76,Rasmussen Reports
-governor,NV,2022-10-16,48.0,48.0,3.08,YouGov
-governor,NV,2022-10-16,47.0,48.0,3.49,Data for Progress
-governor,NV,2022-10-16,46.0,45.0,3.72,BSP Research/Shaw & Company Research
-governor,NV,2022-10-12,47.0,45.0,4.13,University of Nevada Department of Political Science
-governor,NV,2022-10-20,42.8,48.5,4.26,InsiderAdvantage
-governor,NV,2022-10-22,50.0,45.4,3.08,Phillips Academy
-governor,NV,2022-10-21,45.0,49.0,3.36,The New York Times/Siena College
-governor,NV,2022-10-24,44.1,50.9,3.02,Trafalgar Group
-governor,NV,2022-10-25,44.0,44.0,4.47,Echelon Insights
-governor,NV,2022-10-26,45.0,41.0,4.08,Noble Predictive Insights
-governor,NV,2022-10-26,43.4,44.6,4.47,Susquehanna Polling & Research Inc.
-governor,NV,2022-10-26,42.8,43.2,4.47,Suffolk University
-governor,NV,2022-10-28,46.0,50.0,2.24,Emerson College
-governor,NV,2022-11-01,42.0,47.0,4.08,Cygnal
-governor,NV,2022-11-02,43.0,45.0,4.47,KAConsulting
-governor,NV,2022-11-04,43.5,48.7,4.26,InsiderAdvantage
-governor,NV,2022-11-05,47.0,49.0,4.71,Research Co.
-governor,NV,2022-11-04,46.0,48.0,3.02,Data for Progress
-governor,NV,2022-11-06,46.1,48.6,3.03,Trafalgar Group
-governor,NH,2022-09-14,36.8,52.0,3.54,Emerson College
-governor,NH,2022-09-17,38.0,53.0,4.24,American Research Group
-governor,NH,2022-09-17,37.0,55.0,3.39,University of New Hampshire Survey Center
-governor,NH,2022-09-25,35.6,52.6,4.47,Suffolk University
-governor,NH,2022-09-27,34.0,50.0,3.33,Saint Anselm College Survey Center
-governor,NH,2022-09-27,39.0,52.0,2.95,Data for Progress
-governor,NH,2022-10-04,41.0,55.0,4.47,Fabrizio Lee & Associates/Impact Research
-governor,NH,2022-10-18,40.9,53.8,3.71,Emerson College
-governor,NH,2022-10-18,40.0,57.0,4.08,"Fabrizio, Lee & Associates"
-governor,NH,2022-10-16,40.0,53.0,2.68,Data for Progress
-governor,NH,2022-10-23,37.0,53.9,4.08,InsiderAdvantage
-governor,NH,2022-10-20,35.0,51.0,4.08,University of Massachusetts Lowell Center for Public Opinion
-governor,NH,2022-10-25,34.0,52.0,3.02,co/efficient
-governor,NH,2022-10-28,37.0,55.0,2.55,Saint Anselm College Survey Center
-governor,NH,2022-10-31,37.3,58.1,3.43,Emerson College
-governor,NH,2022-11-05,40.4,55.7,3.78,InsiderAdvantage
-governor,NH,2022-11-04,42.5,53.1,3.71,Wick
-governor,NH,2022-11-04,40.0,58.0,2.24,Data for Progress
-governor,NH,2022-11-05,35.8,58.0,3.08,Phillips Academy
-governor,NH,2022-11-04,43.0,55.0,2.19,University of New Hampshire Survey Center
-governor,NM,2022-09-10,48.3,43.4,3.16,Emerson College
-governor,NM,2022-09-10,48.0,36.0,4.23,SurveyUSA
-governor,NM,2022-09-28,46.2,44.4,5,Cygnal
-governor,NM,2022-10-03,53.0,37.0,4.19,SurveyUSA
-governor,NM,2022-10-06,48.0,40.0,3.52,Public Policy Polling
-governor,NM,2022-10-20,45.5,46.6,3.05,Trafalgar Group
-governor,NM,2022-10-23,46.0,39.0,3.92,SurveyUSA
-governor,NM,2022-10-24,50.0,42.0,2.82,Research & Polling Inc.
-governor,NM,2022-10-27,49.6,48.0,3.16,Emerson College
-governor,NY,2022-09-08,54.0,39.0,4.47,Public Policy Polling
-governor,NY,2022-09-11,52.0,39.0,3.28,Data for Progress
-governor,NY,2022-09-23,50.7,44.9,3.54,McLaughlin & Associates
-governor,NY,2022-09-20,54.0,37.0,3.91,Siena College
-governor,NY,2022-10-02,44.5,42.6,3.03,Trafalgar Group
-governor,NY,2022-10-05,51.0,41.0,2.99,Marist College
-governor,NY,2022-10-10,50.0,44.0,3.48,Schoen Cooperman Research
-governor,NY,2022-10-13,52.0,41.0,3.76,Siena College
-governor,NY,2022-10-14,50.0,46.0,2.49,Quinnipiac University
-governor,NY,2022-10-16,47.0,41.0,3.77,SurveyUSA
-governor,NY,2022-10-18,45.0,46.0,3.08,co/efficient
-governor,NY,2022-10-18,52.0,37.0,2.88,Bold Decision
-governor,NY,2022-10-22,51.6,44.4,3.16,Emerson College
-governor,NY,2022-10-24,54.0,43.0,4.11,Civiqs
-governor,NY,2022-10-25,48.0,42.0,3.16,Slingshot Strategies
-governor,NY,2022-10-19,54.0,41.0,3.54,YouGov
-governor,NY,2022-10-27,54.0,42.0,3.5,Data for Progress
-governor,NY,2022-10-28,46.0,45.0,4.47,KAConsulting
-governor,NY,2022-10-30,53.6,44.9,3.16,Emerson College
-governor,NY,2022-10-29,47.6,48.4,2.89,Trafalgar Group
-governor,NY,2022-11-02,49.1,44.0,3.48,Patriot Polling
-governor,NY,2022-11-05,55.0,45.0,4.71,Research Co.
-governor,NY,2022-09-22,55.0,45.0,5,ActiVote
-governor,OH,2022-09-08,36.5,49.0,4.08,Fallon Research & Communications
-governor,OH,2022-09-12,33.2,49.9,3.16,Emerson College
-governor,OH,2022-09-12,41.0,44.0,3.58,Civiqs
-governor,OH,2022-09-14,37.0,55.0,2.89,Marist College
-governor,OH,2022-09-14,38.9,56.7,3.42,Baldwin Wallace University Community Research Institute
-governor,OH,2022-09-20,32.0,55.0,3.95,Siena College
-governor,OH,2022-10-01,38.0,52.0,4.31,Center Street PAC
-governor,OH,2022-10-06,36.0,49.6,3.16,Emerson College
-governor,OH,2022-10-07,34.6,56.9,3.95,Cygnal
-governor,OH,2022-10-11,37.4,54.8,3.04,Trafalgar Group
-governor,OH,2022-10-09,38.0,57.0,3.14,Data for Progress
-governor,OH,2022-10-13,38.0,56.0,4.47,Suffolk University
-governor,OH,2022-10-13,29.08,60.04,3.87,Ohio Northern University Institute for Civics and Public Policy
-governor,OH,2022-10-16,37.0,53.0,4.2,Redfield & Wilton Strategies
-governor,OH,2022-10-16,35.2,56.3,2.64,Cygnal
-governor,OH,2022-10-16,34.0,58.0,3.94,Siena College
-governor,OH,2022-10-19,40.0,53.0,2.96,Marist College
-governor,OH,2022-10-22,40.0,56.6,3.06,Baldwin Wallace University Community Research Institute
-governor,OH,2022-10-22,37.3,54.9,2.3,Cygnal
-governor,OH,2022-10-25,40.0,53.0,4.44,Center Street PAC
-governor,OH,2022-10-28,35.5,56.0,2.57,Cygnal
-governor,OH,2022-10-31,34.0,54.8,3.16,Emerson College
-governor,OH,2022-11-01,35.0,58.0,2.98,Remington Research Group
-governor,OH,2022-11-02,36.9,55.8,2.58,Cygnal
-governor,OH,2022-11-04,34.0,58.5,2.98,Trafalgar Group
-governor,OH,2022-11-04,38.0,62.0,2.66,Data for Progress
-governor,OH,2022-09-21,42.0,58.0,5,ActiVote
-governor,OH,2022-11-05,39.0,61.0,4.71,Research Co.
-governor,OH,2022-11-04,32.0,62.0,4.45,Targoz Market Research
-governor,OH,2022-11-06,39.0,53.0,3.74,Civiqs
-governor,OK,2022-09-17,40.2,39.19,1.83,Bruno Political Consulting
-governor,OK,2022-09-20,44.0,47.0,4.47,Amber Integrated
-governor,OK,2022-09-27,33.0,48.0,4.47,American Viewpoint
-governor,OK,2022-10-05,46.8,43.0,5,SoonerPoll.com
-governor,OK,2022-10-11,49.0,42.0,3.96,Ascend Action
-governor,OK,2022-10-14,46.0,45.0,4.47,Amber Integrated
-governor,OK,2022-10-27,44.0,45.0,4.47,Amber Integrated
-governor,OK,2022-10-27,42.6,52.2,3.16,Emerson College
-governor,OK,2022-10-26,48.0,45.0,3.65,Ascend Action
-governor,OK,2022-10-26,48.2,44.9,5,SoonerPoll.com
-governor,OK,2022-10-30,39.0,52.0,4.47,WPA Intelligence
-governor,OK,2022-10-29,39.7,48.2,4.24,Blueprint Polling
-governor,OK,2022-11-02,45.3,41.9,3.7,Tomahawk Strategies
-governor,OK,2022-11-05,46.0,49.0,3.83,Ascend Action
-governor,OR,2022-09-19,31.5,33.4,4.02,Nelson Research
-governor,OR,2022-09-23,31.0,32.0,4.08,DHM Research
-governor,OR,2022-09-25,35.1,38.6,4.87,Clout Research
-governor,OR,2022-09-30,33.6,36.0,3.54,Emerson College
-governor,OR,2022-10-08,38.4,43.8,3.45,Clout Research
-governor,OR,2022-10-12,40.0,38.0,3.54,GBAO
-governor,OR,2022-10-17,35.0,37.0,3.82,Hoffman Research Group
-governor,OR,2022-10-17,42.0,43.0,3.13,Data for Progress
-governor,OR,2022-10-17,47.0,39.0,3.53,Civiqs
-governor,OR,2022-10-20,40.4,41.7,2.93,Trafalgar Group
-governor,OR,2022-10-25,40.0,38.0,3.67,FM3 Research
-governor,OR,2022-10-31,46.0,40.5,3.2,Emerson College
-governor,OR,2022-10-29,45.0,41.0,4.13,Blueprint Polling
-governor,OR,2022-11-01,42.5,45.4,4.16,Nelson Research
-governor,OR,2022-11-03,48.0,44.0,2.68,Data for Progress
-governor,PA,2022-09-09,55.0,44.0,2.89,YouGov
-governor,PA,2022-09-14,47.4,45.4,3.05,Trafalgar Group
-governor,PA,2022-09-15,53.0,42.0,4.88,Muhlenberg College Institute of Public Opinion
-governor,PA,2022-09-18,45.9,42.5,3.63,Phillips Academy
-governor,PA,2022-09-21,53.0,40.0,2.84,Marist College
-governor,PA,2022-09-23,51.9,37.1,4.47,InsiderAdvantage
-governor,PA,2022-09-22,51.0,37.0,4.4,Franklin & Marshall College Center for Opinion Research
-governor,PA,2022-09-25,50.6,40.5,3.16,Emerson College
-governor,PA,2022-09-24,51.0,40.0,3.15,Beacon Research/Shaw & Co. Research
-governor,PA,2022-09-30,57.0,37.0,2.95,Center Street PAC
-governor,PA,2022-09-29,48.2,36.8,4.47,Suffolk University
-governor,PA,2022-10-10,52.8,43.5,3.05,Trafalgar Group
-governor,PA,2022-10-11,50.1,44.7,3.42,Patriot Polling
-governor,PA,2022-10-08,53.0,42.0,2.67,Fabrizio Lee & Associates/Impact Research
-governor,PA,2022-10-10,48.5,46.4,3.14,Wick
-governor,PA,2022-10-15,56.0,41.0,3.77,SSRS
-governor,PA,2022-10-19,48.5,42.2,4.26,InsiderAdvantage
-governor,PA,2022-10-19,43.0,40.0,3.21,Rasmussen Reports
-governor,PA,2022-10-19,50.0,38.0,4.47,Echelon Insights
-governor,PA,2022-10-18,58.0,36.0,5,Franklin & Marshall College Center for Opinion Research
-governor,PA,2022-10-23,54.0,45.0,3.04,YouGov
-governor,PA,2022-10-26,50.2,41.8,3.65,InsiderAdvantage
-governor,PA,2022-10-25,60.0,35.0,3.08,Center Street PAC
-governor,PA,2022-10-25,53.0,40.0,4.02,The New York Times/Siena College
-governor,PA,2022-10-19,53.1,38.1,3.43,YouGov
-governor,PA,2022-10-26,49.2,43.3,3.16,Wick
-governor,PA,2022-10-27,51.0,41.0,2.41,co/efficient
-governor,PA,2022-10-26,54.0,40.0,4.66,Muhlenberg College Institute of Public Opinion
-governor,PA,2022-10-29,52.4,40.4,4.47,Suffolk University
-governor,PA,2022-10-28,53.0,37.0,3.15,Beacon Research/Shaw & Co. Research
-governor,PA,2022-10-30,53.1,42.7,3.16,Emerson College
-governor,PA,2022-10-30,51.7,38.1,3.78,Susquehanna Polling & Research Inc.
-governor,PA,2022-11-01,52.0,40.0,2.91,Remington Research Group
-governor,PA,2022-11-01,54.0,39.0,2.95,Marist College
-governor,PA,2022-11-03,50.9,43.2,3.65,InsiderAdvantage
-governor,PA,2022-11-02,49.7,45.4,3.02,Trafalgar Group
-governor,PA,2022-11-04,51.5,45.0,3.44,Patriot Polling
-governor,PA,2022-09-21,54.0,46.0,5,ActiVote
-governor,PA,2022-11-05,55.0,43.0,4.71,Research Co.
-governor,PA,2022-11-04,52.0,46.0,3.98,Targoz Market Research
-governor,RI,2022-10-01,45.0,32.0,4.99,Fleming & Associates
-governor,RI,2022-10-03,46.38,36.25,3.54,Suffolk University
-governor,SD,2022-10-04,41.0,45.0,4.21,South Dakota State University School of American and Global Studies
-governor,SD,2022-10-20,38.6,57.5,2.58,Emerson College
-governor,TN,2022-10-20,28.0,52.0,4.27,RABA Research
-governor,TX,2022-09-10,38.0,47.0,2.81,University of Texas at Tyler Center for Opinion Research
-governor,TX,2022-09-10,44.0,51.0,2.92,Texas Hispanic Policy Foundation
-governor,TX,2022-09-16,43.0,50.0,3.92,Siena College
-governor,TX,2022-09-21,42.1,50.0,3.16,Emerson College
-governor,TX,2022-09-24,46.0,53.0,2.75,Quinnipiac University
-governor,TX,2022-10-05,45.0,49.0,3.07,Marist College
-governor,TX,2022-10-10,44.0,52.0,3.56,Civiqs
-governor,TX,2022-10-12,43.0,54.0,3.37,YouGov
-governor,TX,2022-10-15,41.0,53.0,3.28,BSP Research/Shaw & Company Research
-governor,TX,2022-10-18,42.1,51.8,3.16,Emerson College
-governor,TX,2022-10-18,43.0,52.0,3.93,Siena College
-governor,TX,2022-10-17,45.0,48.0,2.81,Beacon Research
-governor,TX,2022-10-21,44.0,50.0,3.21,University of Texas at Tyler Center for Opinion Research
-governor,TX,2022-10-23,40.0,53.0,2.89,YouGov
-governor,TX,2022-10-19,44.0,51.0,3.5,YouGov
-governor,TX,2022-11-04,42.0,53.0,3.57,CWS Research
-governor,TX,2022-09-21,47.0,53.0,3.72,ActiVote
-governor,VT,2022-10-01,31.0,48.0,3.62,University of New Hampshire Survey Center
-governor,VT,2022-10-23,24.0,65.0,3.1,Data for Progress
-governor,WI,2022-09-08,47.0,44.0,3.98,Marquette University Law School
-governor,WI,2022-09-12,49.0,48.0,3.58,Civiqs
-governor,WI,2022-09-14,49.0,44.0,3.92,Siena College
-governor,WI,2022-09-17,44.8,43.3,3.41,Emerson College
-governor,WI,2022-09-17,47.0,47.7,3.03,Trafalgar Group
-governor,WI,2022-09-22,47.0,48.0,3.16,Data for Progress
-governor,WI,2022-09-22,47.0,50.0,4.47,Fabrizio Lee & Associates/Impact Research
-governor,WI,2022-09-24,47.0,47.0,3.14,Beacon Research/Shaw & Co. Research
-governor,WI,2022-09-26,48.0,46.0,4.17,Public Policy Polling
-governor,WI,2022-10-05,50.0,50.0,2.97,YouGov
-governor,WI,2022-10-06,47.0,46.0,3.92,Marquette University Law School
-governor,WI,2022-10-15,50.0,48.0,3.74,SSRS
-governor,WI,2022-10-18,48.0,49.0,2.7,Data for Progress
-governor,WI,2022-10-22,45.7,50.1,3.53,Patriot Polling
-governor,WI,2022-10-28,47.5,49.4,3.16,Emerson College
-governor,WI,2022-10-28,47.2,47.5,3.03,Wick
-governor,WI,2022-10-28,46.0,47.0,3.16,Beacon Research/Shaw & Co. Research
-governor,WI,2022-10-29,47.0,45.0,3.91,Siena College
-governor,WI,2022-10-28,48.0,48.0,3.84,Marquette University Law School
-governor,WI,2022-11-03,48.0,49.6,3.02,Trafalgar Group
-governor,WI,2022-11-04,48.0,50.0,2.58,Data for Progress
-governor,WI,2022-11-05,50.0,50.0,4.71,Research Co.
-governor,WI,2022-11-06,51.0,48.0,3.68,Civiqs
-governor,WY,2022-10-28,23.6,75.9,4.79,University of Wyoming Survey & Analysis Center
-senate,CA,2022-10-09,56.0,34.0,3.14,SurveyUSA
-senate,CA,2022-11-05,53.0,37.0,4.71,Research Co.
-senate,OK,2022-09-17,37.09,49.17,1.83,Bruno Political Consulting
-senate,OK,2022-09-20,39.0,50.0,4.47,Amber Integrated
-senate,OK,2022-10-05,42.0,50.7,5,SoonerPoll.com
-senate,OK,2022-10-11,39.0,50.0,3.96,Ascend Action
-senate,OK,2022-10-14,39.0,52.0,4.47,Amber Integrated
-senate,OK,2022-10-27,41.0,52.0,4.47,Amber Integrated
-senate,OK,2022-10-27,36.3,58.9,3.16,Emerson College
-senate,OK,2022-10-26,41.0,47.0,3.65,Ascend Action
-senate,OK,2022-11-05,41.0,53.0,3.83,Ascend Action
-senate,GA,2022-11-14,51.0,47.0,4.47,Fabrizio Lee & Associates/Impact Research
-senate,GA,2022-11-25,50.0,50.0,3.26,Frederick Polls
-senate,GA,2022-11-26,47.3,48.1,3.41,Phillips Academy
-senate,GA,2022-11-23,51.0,46.0,2.77,University of Massachusetts Lowell Center for Public Opinion
-senate,GA,2022-11-27,52.0,48.0,2.91,SSRS
-senate,GA,2022-11-29,50.8,49.2,3.36,Emerson College
-senate,GA,2022-11-28,50.0,47.0,2.87,SurveyUSA
-senate,GA,2022-12-01,48.7,47.0,3.5,Patriot Polling
-senate,GA,2022-12-04,50.5,48.4,3.65,InsiderAdvantage
-senate,GA,2022-12-04,50.0,45.0,4.0,Mitchell Research & Communications
-senate,GA,2022-12-04,52.2,46.7,3.54,Landmark Communications
-senate,GA,2022-12-04,51.1,47.4,3.02,Trafalgar Group
-senate,GA,2022-12-03,51.0,49.0,2.85,Data for Progress
+mode,state,date,dem,rep,pollster,sigma
+governor,AL,2022-10-28,25.3,59.5,Cygnal,3
+governor,AR,2022-09-14,34.0,59.0,Remington Research Group,3
+governor,AZ,2022-09-17,47.0,51.0,Data for Progress,3
+governor,AZ,2022-09-21,45.0,46.0,Marist College,3
+governor,AZ,2022-09-23,46.2,45.4,Suffolk University,3
+governor,AZ,2022-09-24,44.0,43.0,Beacon Research/Shaw & Co. Research,3
+governor,AZ,2022-09-29,49.0,46.0,SSRS,3
+governor,AZ,2022-10-02,49.0,49.0,YouGov,3
+governor,AZ,2022-10-05,43.96,46.6,Noble Predictive Insights,3
+governor,AZ,2022-10-14,46.0,50.0,Data for Progress,3
+governor,AZ,2022-10-16,47.9,47.2,Susquehanna Polling & Research Inc.,3
+governor,AZ,2022-10-25,48.0,48.0,The New York Times/Siena College,3
+governor,AZ,2022-10-25,47.0,49.0,Noble Predictive Insights,3
+governor,AZ,2022-10-25,47.0,50.0,"Fabrizio, Lee & Associates",3
+governor,AZ,2022-10-28,46.0,47.0,Beacon Research/Shaw & Co. Research,3
+governor,AZ,2022-10-31,46.7,50.2,Emerson College,3
+governor,AZ,2022-11-01,46.0,49.0,Remington Research Group,3
+governor,AZ,2022-11-01,48.0,47.0,Marist College,3
+governor,AZ,2022-11-04,48.0,52.0,Data for Progress,3
+governor,AZ,2022-11-05,49.0,51.0,Research Co.,3
+governor,CA,2022-10-09,57.0,35.0,SurveyUSA,3
+governor,CA,2022-10-18,55.0,36.0,Public Policy Institute of California,3
+governor,CA,2022-10-19,56.0,37.0,YouGov,3
+governor,CA,2022-11-05,60.0,40.0,Research Co.,3
+governor,CO,2022-09-18,52.8,35.9,Emerson College,3
+governor,CO,2022-10-05,56.0,39.0,Data for Progress,3
+governor,CO,2022-10-05,54.0,36.0,Marist College,3
+governor,CO,2022-10-15,57.0,41.0,YouGov,3
+governor,CO,2022-10-28,54.2,40.8,Emerson College,3
+governor,CO,2022-11-04,55.0,43.0,Data for Progress,3
+governor,CT,2022-09-17,57.0,40.0,Quinnipiac University,3
+governor,CT,2022-10-12,46.0,40.0,"Fabrizio, Lee & Associates",3
+governor,CT,2022-10-17,52.0,34.0,SurveyUSA,3
+governor,CT,2022-10-20,53.4,42.7,Emerson College,3
+governor,CT,2022-10-21,56.0,41.0,Quinnipiac University,3
+governor,FL,2022-09-17,41.0,47.8,Suffolk University,3
+governor,FL,2022-09-22,41.0,49.0,Siena College,3
+governor,FL,2022-09-27,41.0,52.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2022-10-19,43.0,53.0,YouGov,3
+governor,FL,2022-10-21,42.0,54.0,Data for Progress,3
+governor,FL,2022-10-26,43.0,53.0,YouGov,3
+governor,FL,2022-10-31,42.0,54.0,Siena College,3
+governor,FL,2022-11-04,42.0,57.0,Data for Progress,3
+governor,FL,2022-11-05,42.0,56.0,Research Co.,3
+governor,GA,2022-09-10,48.0,50.0,Quinnipiac University,3
+governor,GA,2022-09-14,44.0,50.0,Marist College,3
+governor,GA,2022-09-16,46.0,52.0,YouGov,3
+governor,GA,2022-09-18,44.0,51.0,Data for Progress,3
+governor,GA,2022-09-24,43.0,50.0,Beacon Research/Shaw & Co. Research,3
+governor,GA,2022-10-02,45.0,47.0,SurveyUSA,3
+governor,GA,2022-10-06,46.0,50.9,Emerson College,3
+governor,GA,2022-10-09,49.0,50.0,Quinnipiac University,3
+governor,GA,2022-10-15,43.0,53.0,Data for Progress,3
+governor,GA,2022-10-16,44.6,51.2,Landmark Communications,3
+governor,GA,2022-10-26,45.0,50.0,The New York Times/Siena College,3
+governor,GA,2022-10-28,43.0,49.0,Beacon Research/Shaw & Co. Research,3
+governor,GA,2022-10-30,46.4,52.0,Emerson College,3
+governor,GA,2022-10-31,45.0,52.0,SurveyUSA,3
+governor,GA,2022-11-01,41.0,55.0,Remington Research Group,3
+governor,GA,2022-11-01,45.0,51.0,Marist College,3
+governor,GA,2022-11-04,45.0,54.0,Data for Progress,3
+governor,GA,2022-11-05,46.0,53.0,Research Co.,3
+governor,GA,2022-11-06,45.5,52.1,Landmark Communications,3
+governor,IA,2022-10-03,38.0,58.6,Cygnal,3
+governor,IA,2022-10-03,35.6,52.9,Emerson College,3
+governor,IA,2022-10-11,35.0,52.0,Selzer & Co.,3
+governor,IA,2022-10-17,39.0,56.0,Tarrance Group,3
+governor,IA,2022-10-26,38.1,57.1,Cygnal,3
+governor,IA,2022-11-02,37.0,54.0,Selzer & Co.,3
+governor,IL,2022-09-22,50.9,35.8,Emerson College,3
+governor,IL,2022-09-26,48.0,40.0,"Fabrizio, Lee & Associates",3
+governor,IL,2022-10-10,49.0,34.0,Public Policy Polling,3
+governor,IL,2022-10-22,51.6,42.3,Emerson College,3
+governor,IL,2022-11-05,59.0,39.0,Research Co.,3
+governor,KS,2022-09-17,44.6,43.1,Emerson College,3
+governor,KS,2022-10-28,48.7,44.1,Emerson College,3
+governor,MA,2022-09-12,51.6,26.2,Suffolk University,3
+governor,MA,2022-10-09,53.0,23.0,MassINC Polling Group,3
+governor,MA,2022-10-15,56.0,33.0,Suffolk University,3
+governor,MA,2022-10-22,59.0,32.0,University of Massachusetts Lowell Center for Public Opinion,3
+governor,MA,2022-10-23,61.0,33.0,YouGov,3
+governor,ME,2022-09-17,53.0,39.0,University of New Hampshire Survey Center,3
+governor,ME,2022-09-19,52.6,41.3,Emerson College,3
+governor,ME,2022-10-30,49.0,43.0,SurveyUSA,3
+governor,ME,2022-11-04,52.0,44.0,University of New Hampshire Survey Center,3
+governor,MI,2022-09-10,51.0,40.0,EPIC-MRA,3
+governor,MI,2022-09-17,55.0,39.0,EPIC-MRA,3
+governor,MI,2022-09-28,49.5,32.2,Glengariff Group,3
+governor,MI,2022-10-05,53.0,47.0,YouGov,3
+governor,MI,2022-10-09,49.0,38.0,EPIC-MRA,3
+governor,MI,2022-10-13,48.7,43.6,Cygnal,3
+governor,MI,2022-10-13,49.2,43.8,Emerson College,3
+governor,MI,2022-10-15,52.0,46.0,SSRS,3
+governor,MI,2022-10-17,49.4,43.6,Cygnal,3
+governor,MI,2022-10-19,49.0,47.0,Mitchell Research & Communications,3
+governor,MI,2022-10-23,50.6,44.5,Cygnal,3
+governor,MI,2022-10-27,51.7,43.1,Glengariff Group,3
+governor,MI,2022-10-29,50.9,44.5,Cygnal,3
+governor,MI,2022-10-30,50.9,45.8,Emerson College,3
+governor,MI,2022-10-30,54.0,43.0,EPIC-MRA,3
+governor,MI,2022-11-03,49.0,47.0,Mitchell Research & Communications,3
+governor,MI,2022-11-03,50.2,46.5,Cygnal,3
+governor,MN,2022-09-13,48.0,41.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2022-09-25,47.6,44.2,Cygnal,3
+governor,MN,2022-10-02,50.0,40.0,SurveyUSA,3
+governor,MN,2022-10-28,51.0,43.0,SurveyUSA,3
+governor,NH,2022-09-14,36.8,52.0,Emerson College,3
+governor,NH,2022-09-17,38.0,53.0,American Research Group,3
+governor,NH,2022-09-17,37.0,55.0,University of New Hampshire Survey Center,3
+governor,NH,2022-09-25,35.6,52.6,Suffolk University,3
+governor,NH,2022-09-27,34.0,50.0,Saint Anselm College Survey Center,3
+governor,NH,2022-09-27,39.0,52.0,Data for Progress,3
+governor,NH,2022-10-16,40.0,53.0,Data for Progress,3
+governor,NH,2022-10-18,40.9,53.8,Emerson College,3
+governor,NH,2022-10-18,40.0,57.0,"Fabrizio, Lee & Associates",3
+governor,NH,2022-10-20,35.0,51.0,University of Massachusetts Lowell Center for Public Opinion,3
+governor,NH,2022-10-28,37.0,55.0,Saint Anselm College Survey Center,3
+governor,NH,2022-10-31,37.3,58.1,Emerson College,3
+governor,NH,2022-11-04,40.0,58.0,Data for Progress,3
+governor,NH,2022-11-04,43.0,55.0,University of New Hampshire Survey Center,3
+governor,NM,2022-09-10,48.3,43.4,Emerson College,3
+governor,NM,2022-09-10,48.0,36.0,SurveyUSA,3
+governor,NM,2022-09-28,46.2,44.4,Cygnal,3
+governor,NM,2022-10-03,53.0,37.0,SurveyUSA,3
+governor,NM,2022-10-06,48.0,40.0,Public Policy Polling,3
+governor,NM,2022-10-23,46.0,39.0,SurveyUSA,3
+governor,NM,2022-10-24,50.0,42.0,Research & Polling Inc.,3
+governor,NM,2022-10-27,49.6,48.0,Emerson College,3
+governor,NV,2022-09-09,40.4,40.2,Emerson College,3
+governor,NV,2022-09-16,45.0,45.0,Data for Progress,3
+governor,NV,2022-09-24,42.0,45.0,Noble Predictive Insights,3
+governor,NV,2022-09-29,46.0,48.0,SSRS,3
+governor,NV,2022-10-06,43.0,43.6,Suffolk University,3
+governor,NV,2022-10-16,48.0,48.0,YouGov,3
+governor,NV,2022-10-16,47.0,48.0,Data for Progress,3
+governor,NV,2022-10-21,45.0,49.0,The New York Times/Siena College,3
+governor,NV,2022-10-26,45.0,41.0,Noble Predictive Insights,3
+governor,NV,2022-10-26,43.4,44.6,Susquehanna Polling & Research Inc.,3
+governor,NV,2022-10-26,42.8,43.2,Suffolk University,3
+governor,NV,2022-10-28,46.0,50.0,Emerson College,3
+governor,NV,2022-11-01,42.0,47.0,Cygnal,3
+governor,NV,2022-11-04,46.0,48.0,Data for Progress,3
+governor,NV,2022-11-05,47.0,49.0,Research Co.,3
+governor,NY,2022-09-08,54.0,39.0,Public Policy Polling,3
+governor,NY,2022-09-11,52.0,39.0,Data for Progress,3
+governor,NY,2022-09-20,54.0,37.0,Siena College,3
+governor,NY,2022-10-05,51.0,41.0,Marist College,3
+governor,NY,2022-10-13,52.0,41.0,Siena College,3
+governor,NY,2022-10-14,50.0,46.0,Quinnipiac University,3
+governor,NY,2022-10-16,47.0,41.0,SurveyUSA,3
+governor,NY,2022-10-19,54.0,41.0,YouGov,3
+governor,NY,2022-10-22,51.6,44.4,Emerson College,3
+governor,NY,2022-10-27,54.0,42.0,Data for Progress,3
+governor,NY,2022-10-30,53.6,44.9,Emerson College,3
+governor,NY,2022-11-05,55.0,45.0,Research Co.,3
+governor,OH,2022-09-12,33.2,49.9,Emerson College,3
+governor,OH,2022-09-14,37.0,55.0,Marist College,3
+governor,OH,2022-09-20,32.0,55.0,Siena College,3
+governor,OH,2022-10-06,36.0,49.6,Emerson College,3
+governor,OH,2022-10-07,34.6,56.9,Cygnal,3
+governor,OH,2022-10-09,38.0,57.0,Data for Progress,3
+governor,OH,2022-10-13,38.0,56.0,Suffolk University,3
+governor,OH,2022-10-16,35.2,56.3,Cygnal,3
+governor,OH,2022-10-16,34.0,58.0,Siena College,3
+governor,OH,2022-10-19,40.0,53.0,Marist College,3
+governor,OH,2022-10-22,37.3,54.9,Cygnal,3
+governor,OH,2022-10-28,35.5,56.0,Cygnal,3
+governor,OH,2022-10-31,34.0,54.8,Emerson College,3
+governor,OH,2022-11-01,35.0,58.0,Remington Research Group,3
+governor,OH,2022-11-02,36.9,55.8,Cygnal,3
+governor,OH,2022-11-04,38.0,62.0,Data for Progress,3
+governor,OH,2022-11-05,39.0,61.0,Research Co.,3
+governor,OK,2022-10-27,42.6,52.2,Emerson College,3
+governor,OK,2022-10-30,39.0,52.0,WPA Intelligence,3
+governor,OR,2022-09-23,31.0,32.0,DHM Research,3
+governor,OR,2022-09-30,33.6,36.0,Emerson College,3
+governor,OR,2022-10-17,42.0,43.0,Data for Progress,3
+governor,OR,2022-10-31,46.0,40.5,Emerson College,3
+governor,OR,2022-11-03,48.0,44.0,Data for Progress,3
+governor,PA,2022-09-09,55.0,44.0,YouGov,3
+governor,PA,2022-09-15,53.0,42.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2022-09-21,53.0,40.0,Marist College,3
+governor,PA,2022-09-22,51.0,37.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2022-09-24,51.0,40.0,Beacon Research/Shaw & Co. Research,3
+governor,PA,2022-09-25,50.6,40.5,Emerson College,3
+governor,PA,2022-09-29,48.2,36.8,Suffolk University,3
+governor,PA,2022-10-15,56.0,41.0,SSRS,3
+governor,PA,2022-10-18,58.0,36.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2022-10-19,53.1,38.1,YouGov,3
+governor,PA,2022-10-23,54.0,45.0,YouGov,3
+governor,PA,2022-10-25,53.0,40.0,The New York Times/Siena College,3
+governor,PA,2022-10-26,54.0,40.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2022-10-28,53.0,37.0,Beacon Research/Shaw & Co. Research,3
+governor,PA,2022-10-29,52.4,40.4,Suffolk University,3
+governor,PA,2022-10-30,53.1,42.7,Emerson College,3
+governor,PA,2022-10-30,51.7,38.1,Susquehanna Polling & Research Inc.,3
+governor,PA,2022-11-01,52.0,40.0,Remington Research Group,3
+governor,PA,2022-11-01,54.0,39.0,Marist College,3
+governor,PA,2022-11-05,55.0,43.0,Research Co.,3
+governor,RI,2022-10-01,45.0,32.0,Fleming & Associates,3
+governor,RI,2022-10-03,46.38,36.25,Suffolk University,3
+governor,SD,2022-10-20,38.6,57.5,Emerson College,3
+governor,TX,2022-09-16,43.0,50.0,Siena College,3
+governor,TX,2022-09-21,42.1,50.0,Emerson College,3
+governor,TX,2022-09-24,46.0,53.0,Quinnipiac University,3
+governor,TX,2022-10-05,45.0,49.0,Marist College,3
+governor,TX,2022-10-12,43.0,54.0,YouGov,3
+governor,TX,2022-10-18,42.1,51.8,Emerson College,3
+governor,TX,2022-10-18,43.0,52.0,Siena College,3
+governor,TX,2022-10-19,44.0,51.0,YouGov,3
+governor,TX,2022-10-23,40.0,53.0,YouGov,3
+governor,VT,2022-10-01,31.0,48.0,University of New Hampshire Survey Center,3
+governor,VT,2022-10-23,24.0,65.0,Data for Progress,3
+governor,WI,2022-09-08,47.0,44.0,Marquette University Law School,3
+governor,WI,2022-09-14,49.0,44.0,Siena College,3
+governor,WI,2022-09-17,44.8,43.3,Emerson College,3
+governor,WI,2022-09-22,47.0,48.0,Data for Progress,3
+governor,WI,2022-09-24,47.0,47.0,Beacon Research/Shaw & Co. Research,3
+governor,WI,2022-09-26,48.0,46.0,Public Policy Polling,3
+governor,WI,2022-10-05,50.0,50.0,YouGov,3
+governor,WI,2022-10-06,47.0,46.0,Marquette University Law School,3
+governor,WI,2022-10-15,50.0,48.0,SSRS,3
+governor,WI,2022-10-18,48.0,49.0,Data for Progress,3
+governor,WI,2022-10-28,47.5,49.4,Emerson College,3
+governor,WI,2022-10-28,46.0,47.0,Beacon Research/Shaw & Co. Research,3
+governor,WI,2022-10-28,48.0,48.0,Marquette University Law School,3
+governor,WI,2022-10-29,47.0,45.0,Siena College,3
+governor,WI,2022-11-04,48.0,50.0,Data for Progress,3
+governor,WI,2022-11-05,50.0,50.0,Research Co.,3
+senate,AK,2022-09-26,43.4,56.6,Alaska Survey Research,3
+senate,AK,2022-10-21,44.5,55.5,Alaska Survey Research,3
+senate,AL,2022-10-28,27.5,57.1,Cygnal,3
+senate,AZ,2022-09-17,48.0,47.0,Data for Progress,3
+senate,AZ,2022-09-21,51.0,41.0,Marist College,3
+senate,AZ,2022-09-23,49.0,42.2,Suffolk University,3
+senate,AZ,2022-09-24,46.0,40.0,Beacon Research/Shaw & Co. Research,3
+senate,AZ,2022-09-29,51.0,45.0,SSRS,3
+senate,AZ,2022-10-02,51.0,48.0,YouGov,3
+senate,AZ,2022-10-05,46.0,33.0,Noble Predictive Insights,3
+senate,AZ,2022-10-14,47.0,47.0,Data for Progress,3
+senate,AZ,2022-10-16,47.7,44.5,Susquehanna Polling & Research Inc.,3
+senate,AZ,2022-10-25,51.0,45.0,The New York Times/Siena College,3
+senate,AZ,2022-10-25,48.0,46.0,Noble Predictive Insights,3
+senate,AZ,2022-10-25,47.0,46.0,"Fabrizio, Lee & Associates",3
+senate,AZ,2022-10-28,47.0,45.0,Beacon Research/Shaw & Co. Research,3
+senate,AZ,2022-10-31,47.7,48.1,Emerson College,3
+senate,AZ,2022-11-01,48.0,47.0,Remington Research Group,3
+senate,AZ,2022-11-01,49.0,45.0,Marist College,3
+senate,AZ,2022-11-04,49.0,50.0,Data for Progress,3
+senate,AZ,2022-11-05,51.0,47.0,Research Co.,3
+senate,CA,2022-10-09,56.0,34.0,SurveyUSA,3
+senate,CA,2022-10-09,56.0,34.0,SurveyUSA,3
+senate,CA,2022-11-05,53.0,37.0,Research Co.,3
+senate,CA,2022-11-05,53.0,37.0,Research Co.,3
+senate,CO,2022-09-18,45.5,35.9,Emerson College,3
+senate,CO,2022-10-05,50.0,41.0,Data for Progress,3
+senate,CO,2022-10-05,48.0,41.0,Marist College,3
+senate,CO,2022-10-15,56.0,42.0,YouGov,3
+senate,CO,2022-10-28,51.4,43.3,Emerson College,3
+senate,CO,2022-11-04,51.0,44.0,Data for Progress,3
+senate,CT,2022-09-17,57.0,40.0,Quinnipiac University,3
+senate,CT,2022-10-12,49.0,44.0,"Fabrizio, Lee & Associates",3
+senate,CT,2022-10-20,54.0,41.7,Emerson College,3
+senate,CT,2022-10-21,56.0,41.0,Quinnipiac University,3
+senate,FL,2022-09-17,41.2,45.2,Suffolk University,3
+senate,FL,2022-09-22,41.0,48.0,Siena College,3
+senate,FL,2022-09-27,41.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2022-10-21,44.0,51.0,Data for Progress,3
+senate,FL,2022-10-26,44.0,51.0,YouGov,3
+senate,FL,2022-10-31,43.0,51.0,Siena College,3
+senate,FL,2022-11-04,43.0,55.0,Data for Progress,3
+senate,FL,2022-11-05,44.0,54.0,Research Co.,3
+senate,GA,2022-09-10,52.0,46.0,Quinnipiac University,3
+senate,GA,2022-09-14,47.0,42.0,Marist College,3
+senate,GA,2022-09-16,51.0,49.0,YouGov,3
+senate,GA,2022-09-18,46.0,46.0,Data for Progress,3
+senate,GA,2022-09-24,46.0,41.0,Beacon Research/Shaw & Co. Research,3
+senate,GA,2022-10-02,50.0,38.0,SurveyUSA,3
+senate,GA,2022-10-06,47.8,45.6,Emerson College,3
+senate,GA,2022-10-09,52.0,45.0,Quinnipiac University,3
+senate,GA,2022-10-10,44.0,46.0,Moore Information Group,3
+senate,GA,2022-10-15,48.0,47.0,Data for Progress,3
+senate,GA,2022-10-16,46.1,46.0,Landmark Communications,3
+senate,GA,2022-10-24,42.0,46.0,Moore Information Group,3
+senate,GA,2022-10-26,47.0,44.0,The New York Times/Siena College,3
+senate,GA,2022-10-28,44.0,43.0,Beacon Research/Shaw & Co. Research,3
+senate,GA,2022-10-30,49.5,47.6,Emerson College,3
+senate,GA,2022-10-31,49.0,43.0,SurveyUSA,3
+senate,GA,2022-10-31,44.0,49.0,Moore Information Group,3
+senate,GA,2022-11-01,45.0,49.0,Remington Research Group,3
+senate,GA,2022-11-01,49.0,45.0,Marist College,3
+senate,GA,2022-11-04,48.0,49.0,Data for Progress,3
+senate,GA,2022-11-05,49.0,49.0,Research Co.,3
+senate,GA,2022-11-06,45.8,49.0,AtlasIntel,3
+senate,GA,2022-11-06,46.4,46.8,Landmark Communications,3
+senate,GA,2022-11-23,51.0,46.0,University of Massachusetts Lowell Center for Public Opinion,3
+senate,GA,2022-11-27,52.0,48.0,SSRS,3
+senate,GA,2022-11-28,50.0,47.0,SurveyUSA,3
+senate,GA,2022-11-29,50.8,49.2,Emerson College,3
+senate,GA,2022-12-03,51.0,49.0,Data for Progress,3
+senate,GA,2022-12-04,50.0,45.0,Mitchell Research & Communications,3
+senate,GA,2022-12-04,52.2,46.7,Landmark Communications,3
+senate,IA,2022-10-03,39.7,54.1,Cygnal,3
+senate,IA,2022-10-03,38.0,48.7,Emerson College,3
+senate,IA,2022-10-11,43.0,46.0,Selzer & Co.,3
+senate,IA,2022-10-17,42.0,53.0,Tarrance Group,3
+senate,IA,2022-10-26,42.7,53.9,Cygnal,3
+senate,IA,2022-11-02,41.0,53.0,Selzer & Co.,3
+senate,IL,2022-09-22,49.7,30.8,Emerson College,3
+senate,IL,2022-10-10,50.0,36.0,Public Policy Polling,3
+senate,IL,2022-10-22,49.1,39.3,Emerson College,3
+senate,IL,2022-11-05,58.0,40.0,Research Co.,3
+senate,KS,2022-09-17,33.1,45.3,Emerson College,3
+senate,KS,2022-10-28,32.6,54.2,Emerson College,3
+senate,MO,2022-09-16,36.0,47.0,SurveyUSA,3
+senate,MO,2022-09-25,37.7,49.1,Emerson College,3
+senate,MO,2022-10-24,42.0,51.0,Remington Research Group,3
+senate,MO,2022-10-27,40.1,53.6,Emerson College,3
+senate,MO,2022-10-29,41.0,50.0,SurveyUSA,3
+senate,NC,2022-09-15,43.2,45.6,Emerson College,3
+senate,NC,2022-09-25,44.0,43.7,Cygnal,3
+senate,NC,2022-09-30,42.0,43.0,SurveyUSA,3
+senate,NC,2022-10-07,45.0,46.0,Public Policy Polling,3
+senate,NC,2022-10-19,44.0,44.0,Marist College,3
+senate,NC,2022-10-21,43.1,46.9,Cygnal,3
+senate,NC,2022-10-28,45.7,51.4,Emerson College,3
+senate,NC,2022-11-01,43.0,50.0,Remington Research Group,3
+senate,NC,2022-11-04,45.0,51.0,Data for Progress,3
+senate,NH,2022-09-14,50.6,40.1,Emerson College,3
+senate,NH,2022-09-17,53.0,40.0,American Research Group,3
+senate,NH,2022-09-17,49.0,41.0,University of New Hampshire Survey Center,3
+senate,NH,2022-09-25,49.6,41.2,Suffolk University,3
+senate,NH,2022-09-27,49.0,43.0,Saint Anselm College Survey Center,3
+senate,NH,2022-09-27,50.0,43.0,Data for Progress,3
+senate,NH,2022-10-16,50.0,44.0,Data for Progress,3
+senate,NH,2022-10-18,49.5,45.4,Emerson College,3
+senate,NH,2022-10-18,49.0,47.0,"Fabrizio, Lee & Associates",3
+senate,NH,2022-10-20,51.0,41.0,University of Massachusetts Lowell Center for Public Opinion,3
+senate,NH,2022-10-28,47.0,48.0,Saint Anselm College Survey Center,3
+senate,NH,2022-10-31,50.2,45.7,Emerson College,3
+senate,NH,2022-11-04,50.0,47.0,Data for Progress,3
+senate,NH,2022-11-04,50.0,48.0,University of New Hampshire Survey Center,3
+senate,NV,2022-09-09,41.3,41.8,Emerson College,3
+senate,NV,2022-09-16,46.0,47.0,Data for Progress,3
+senate,NV,2022-09-19,42.0,39.0,WPA Intelligence,3
+senate,NV,2022-09-24,43.0,45.0,Noble Predictive Insights,3
+senate,NV,2022-09-29,46.0,48.0,SSRS,3
+senate,NV,2022-10-03,44.0,42.0,WPA Intelligence,3
+senate,NV,2022-10-06,45.6,43.6,Suffolk University,3
+senate,NV,2022-10-16,48.0,49.0,YouGov,3
+senate,NV,2022-10-16,48.0,49.0,Data for Progress,3
+senate,NV,2022-10-17,43.0,45.0,WPA Intelligence,3
+senate,NV,2022-10-21,47.0,47.0,The New York Times/Siena College,3
+senate,NV,2022-10-26,43.0,41.0,Noble Predictive Insights,3
+senate,NV,2022-10-26,42.5,48.1,Susquehanna Polling & Research Inc.,3
+senate,NV,2022-10-26,45.0,44.0,Suffolk University,3
+senate,NV,2022-10-28,45.8,51.0,Emerson College,3
+senate,NV,2022-11-01,43.3,45.8,Cygnal,3
+senate,NV,2022-11-04,47.0,49.0,Data for Progress,3
+senate,NV,2022-11-05,48.0,49.0,Research Co.,3
+senate,NY,2022-09-20,55.0,36.0,Siena College,3
+senate,NY,2022-10-05,54.0,34.0,Marist College,3
+senate,NY,2022-10-13,57.0,37.0,Siena College,3
+senate,NY,2022-10-14,54.0,42.0,Quinnipiac University,3
+senate,NY,2022-10-16,52.0,38.0,SurveyUSA,3
+senate,NY,2022-10-22,52.8,39.6,Emerson College,3
+senate,NY,2022-10-27,56.0,39.0,Data for Progress,3
+senate,NY,2022-10-30,57.0,38.5,Emerson College,3
+senate,NY,2022-11-05,59.0,39.0,Research Co.,3
+senate,OH,2022-09-12,40.1,44.4,Emerson College,3
+senate,OH,2022-09-14,45.0,46.0,Marist College,3
+senate,OH,2022-09-20,46.0,43.0,Siena College,3
+senate,OH,2022-10-06,44.7,45.5,Emerson College,3
+senate,OH,2022-10-07,44.4,46.3,Cygnal,3
+senate,OH,2022-10-09,46.0,49.0,Data for Progress,3
+senate,OH,2022-10-13,45.0,47.0,Suffolk University,3
+senate,OH,2022-10-16,43.2,47.3,Cygnal,3
+senate,OH,2022-10-16,46.0,46.0,Siena College,3
+senate,OH,2022-10-19,45.0,46.0,Marist College,3
+senate,OH,2022-10-22,44.2,48.3,Cygnal,3
+senate,OH,2022-10-28,43.7,48.2,Cygnal,3
+senate,OH,2022-10-31,43.8,52.7,Emerson College,3
+senate,OH,2022-11-01,43.0,48.0,Remington Research Group,3
+senate,OH,2022-11-02,43.1,49.3,Cygnal,3
+senate,OH,2022-11-04,45.0,55.0,Data for Progress,3
+senate,OH,2022-11-05,46.0,54.0,Research Co.,3
+senate,OK,2022-10-27,34.2,61.5,Emerson College,3
+senate,OK,2022-10-27,36.3,58.9,Emerson College,3
+senate,OR,2022-09-30,51.1,31.6,Emerson College,3
+senate,OR,2022-10-17,51.0,40.0,Data for Progress,3
+senate,OR,2022-10-31,50.6,33.6,Emerson College,3
+senate,OR,2022-11-03,56.0,42.0,Data for Progress,3
+senate,PA,2022-09-09,52.0,47.0,YouGov,3
+senate,PA,2022-09-15,49.0,44.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2022-09-21,51.0,41.0,Marist College,3
+senate,PA,2022-09-22,45.0,42.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2022-09-24,45.0,41.0,Beacon Research/Shaw & Co. Research,3
+senate,PA,2022-09-25,44.6,42.6,Emerson College,3
+senate,PA,2022-09-29,46.4,40.0,Suffolk University,3
+senate,PA,2022-10-15,51.0,45.0,SSRS,3
+senate,PA,2022-10-18,49.0,45.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2022-10-19,48.1,42.4,YouGov,3
+senate,PA,2022-10-23,51.0,49.0,YouGov,3
+senate,PA,2022-10-25,49.0,44.0,The New York Times/Siena College,3
+senate,PA,2022-10-26,47.0,47.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2022-10-28,45.0,42.0,Beacon Research/Shaw & Co. Research,3
+senate,PA,2022-10-29,46.6,44.8,Suffolk University,3
+senate,PA,2022-10-30,47.3,48.4,Emerson College,3
+senate,PA,2022-10-30,46.6,47.6,Susquehanna Polling & Research Inc.,3
+senate,PA,2022-11-01,44.0,47.0,Remington Research Group,3
+senate,PA,2022-11-01,50.0,44.0,Marist College,3
+senate,PA,2022-11-05,49.0,48.0,Research Co.,3
+senate,SD,2022-10-20,27.0,58.0,Emerson College,3
+senate,UT,2022-09-12,34.0,37.0,Dan Jones & Associates,3
+senate,UT,2022-10-05,32.0,47.0,Noble Predictive Insights,3
+senate,UT,2022-10-05,37.0,42.0,Dan Jones & Associates,3
+senate,UT,2022-10-26,36.0,51.0,Noble Predictive Insights,3
+senate,UT,2022-10-27,39.8,49.6,Emerson College,3
+senate,VT,2022-10-01,62.0,28.0,University of New Hampshire Survey Center,3
+senate,VT,2022-10-23,63.0,32.0,Data for Progress,3
+senate,WA,2022-09-14,50.0,37.0,Elway Research,3
+senate,WA,2022-09-27,52.0,40.0,Public Policy Polling,3
+senate,WA,2022-09-30,50.7,41.9,Emerson College,3
+senate,WA,2022-10-16,49.0,41.0,SurveyUSA,3
+senate,WA,2022-10-19,52.0,42.0,Public Policy Polling,3
+senate,WA,2022-10-21,46.0,46.0,Moore Information Group,3
+senate,WA,2022-11-04,47.0,47.4,Moore Information Group,3
+senate,WI,2022-09-08,48.0,49.0,Marquette University Law School,3
+senate,WI,2022-09-14,48.0,47.0,Siena College,3
+senate,WI,2022-09-17,44.1,47.7,Emerson College,3
+senate,WI,2022-09-22,48.0,50.0,Data for Progress,3
+senate,WI,2022-09-24,44.0,48.0,Beacon Research/Shaw & Co. Research,3
+senate,WI,2022-09-26,47.0,47.0,Public Policy Polling,3
+senate,WI,2022-10-05,49.0,50.0,YouGov,3
+senate,WI,2022-10-06,46.0,52.0,Marquette University Law School,3
+senate,WI,2022-10-15,49.0,50.0,SSRS,3
+senate,WI,2022-10-18,46.0,51.0,Data for Progress,3
+senate,WI,2022-10-28,46.4,51.0,Emerson College,3
+senate,WI,2022-10-28,45.0,48.0,Beacon Research/Shaw & Co. Research,3
+senate,WI,2022-10-28,48.0,50.0,Marquette University Law School,3
+senate,WI,2022-10-29,45.0,47.0,Siena College,3
+senate,WI,2022-11-04,47.0,53.0,Data for Progress,3
+senate,WI,2022-11-05,47.0,53.0,Research Co.,3

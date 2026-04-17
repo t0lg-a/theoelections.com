@@ -1,684 +1,446 @@
-mode,state,date,dem,rep,sigma,pollster
-senate,AZ,2018-09-10,47.0,44.0,3.75,Beacon Research/Shaw & Co. Research
-senate,AZ,2018-09-10,51.0,46.0,3.54,TargetSmart
-senate,AZ,2018-09-09,46.9,44.3,3.14,Ipsos
-senate,AZ,2018-09-13,50.0,43.0,3.62,SSRS
-senate,AZ,2018-09-18,45.0,43.0,4.21,Marist College
-senate,AZ,2018-09-20,44.5,39.0,3.92,Emerson College
-senate,AZ,2018-09-18,47.0,41.0,4.65,Latino Decisions
-senate,AZ,2018-09-29,44.6,41.6,4.47,Suffolk University
-senate,AZ,2018-09-30,49.0,52.0,3.77,Vox Populi Polling
-senate,AZ,2018-10-01,41.0,47.0,4.08,Noble Predictive Insights
-senate,AZ,2018-10-01,47.0,45.0,3.74,Beacon Research/Shaw & Co. Research
-senate,AZ,2018-10-04,47.0,44.0,3.34,YouGov
-senate,AZ,2018-10-09,43.7,43.5,3.57,Change Research
-senate,AZ,2018-10-16,47.94,39.78,4.08,Data Orbital
-senate,AZ,2018-10-17,45.86,47.65,4.06,The New York Times/Siena College
-senate,AZ,2018-10-22,45.0,52.0,4.08,Noble Predictive Insights
-senate,AZ,2018-10-25,47.0,44.0,3.21,YouGov
-senate,AZ,2018-10-21,46.0,48.0,3.54,Ipsos
-senate,AZ,2018-10-25,47.0,44.0,4.45,Marist College
-senate,AZ,2018-10-27,45.3,46.5,5,HighGround Inc.
-senate,AZ,2018-10-28,46.0,46.0,3.94,Beacon Research/Shaw & Co. Research
-senate,AZ,2018-10-26,51.0,47.0,3.77,SSRS
-senate,AZ,2018-10-27,42.7,47.5,2.67,Harris Insights & Analytics
-senate,AZ,2018-10-29,52.0,48.0,3.84,Vox Populi Polling
-senate,AZ,2018-10-31,49.8,47.1,2.15,Trafalgar Group
-senate,AZ,2018-11-01,43.5,49.1,4.08,Harris Insights & Analytics
-senate,AZ,2018-10-28,46.0,47.0,2.93,Gravis Marketing
-senate,AZ,2018-11-02,48.0,49.0,3.98,Noble Predictive Insights
-senate,AZ,2018-11-02,48.5,47.8,3.63,Emerson College
-senate,AZ,2018-11-02,45.0,44.0,4.71,Research Co.
-senate,AZ,2018-11-04,48.6,44.0,4.08,Harris Insights & Analytics
-senate,AZ,2018-11-04,45.3,47.4,2.87,Trafalgar Group
-senate,CT,2018-10-05,57.0,42.0,3.61,Quinnipiac University
-senate,CT,2018-10-25,56.0,41.0,2.89,Quinnipiac University
-senate,CT,2018-10-28,55.1,35.1,3.58,Emerson College
-senate,CT,2018-10-31,58.0,35.0,3.83,Gravis Marketing
-senate,DE,2018-09-14,61.0,24.0,3.71,University of Delaware Center for Political Communication
-senate,FL,2018-09-08,44.0,46.0,3.97,SurveyUSA
-senate,FL,2018-09-10,45.0,44.0,3.54,Rasmussen Reports
-senate,FL,2018-09-09,44.6,46.0,3.16,Ipsos
-senate,FL,2018-09-15,41.0,42.0,3.43,Florida Atlantic University Business and Economics Polling Initiative
-senate,FL,2018-09-18,45.0,45.0,4.07,University of North Florida Public Opinion Research Lab
-senate,FL,2018-09-18,48.0,45.0,4.08,Marist College
-senate,FL,2018-09-22,53.0,46.0,3.36,Quinnipiac University
-senate,FL,2018-09-21,48.0,46.0,4.01,Cherry Communications
-senate,FL,2018-09-26,47.0,46.0,3.5,Mason-Dixon Polling & Strategy
-senate,FL,2018-09-29,47.4,46.7,2.08,St. Pete Polls
-senate,FL,2018-09-29,48.0,44.0,3.58,Public Policy Polling
-senate,FL,2018-09-29,45.8,44.6,3.11,The Political Matrix/The Listener Group
-senate,FL,2018-09-23,45.0,44.0,3.54,Strategic Research Associates
-senate,FL,2018-09-25,48.0,45.0,4.38,KFF
-senate,FL,2018-10-03,44.48,45.97,4.58,Florida Southern College Center for Polling and Policy Research
-senate,FL,2018-10-15,47.2,48.6,2.25,St. Pete Polls
-senate,FL,2018-10-16,46.0,51.0,2.13,OnMessage Inc.
-senate,FL,2018-10-19,45.0,47.0,4.08,SEA Polling & Strategic Design
-senate,FL,2018-10-18,50.0,45.0,3.63,SSRS
-senate,FL,2018-10-20,48.3,48.6,2.52,St. Pete Polls
-senate,FL,2018-10-20,49.0,41.0,3.88,SurveyUSA
-senate,FL,2018-10-20,40.6,42.3,3.77,Florida Atlantic University Business and Economics Polling Initiative
-senate,FL,2018-10-19,52.0,46.0,2.93,Quinnipiac University
-senate,FL,2018-10-19,46.6,38.4,3.79,Saint Leo University Polling Institute
-senate,FL,2018-10-22,49.0,45.0,3.6,Gravis Marketing
-senate,FL,2018-10-20,46.0,45.0,3.54,Strategic Research Associates
-senate,FL,2018-10-21,49.0,44.0,3.06,Ipsos
-senate,FL,2018-10-25,46.0,46.0,3.18,YouGov
-senate,FL,2018-10-25,47.0,46.0,3.08,University of North Florida Public Opinion Research Lab
-senate,FL,2018-10-25,47.89,44.36,3.68,The New York Times/Siena College
-senate,FL,2018-10-27,45.0,43.2,4.47,Suffolk University
-senate,FL,2018-10-28,50.1,48.3,4.49,Cygnal
-senate,FL,2018-10-26,49.0,47.0,3.58,SSRS
-senate,FL,2018-10-27,43.4,44.3,2.67,Harris Insights & Analytics
-senate,FL,2018-10-29,49.4,47.2,1.98,Trafalgar Group
-senate,FL,2018-10-29,47.3,46.9,2.9,The Political Matrix/The Listener Group
-senate,FL,2018-10-29,50.0,50.0,3.79,Vox Populi Polling
-senate,FL,2018-10-30,49.3,47.4,2.01,St. Pete Polls
-senate,FL,2018-10-30,45.0,49.0,4.23,Targoz Market Research
-senate,FL,2018-10-28,40.5,42.8,3.15,MWR Strategies
-senate,FL,2018-11-01,45.5,48.1,4.08,Harris Insights & Analytics
-senate,FL,2018-11-01,50.0,48.0,2.84,Change Research
-senate,FL,2018-11-01,47.5,49.1,1.91,St. Pete Polls
-senate,FL,2018-11-01,50.0,46.0,4.1,Marist College
-senate,FL,2018-10-31,50.0,47.0,3.64,Gravis Marketing
-senate,FL,2018-11-02,49.9,44.9,3.57,Emerson College
-senate,FL,2018-11-02,47.0,46.0,4.71,Research Co.
-senate,FL,2018-11-03,49.9,46.2,1.8,St. Pete Polls
-senate,FL,2018-11-01,51.0,44.0,2.96,Quinnipiac University
-senate,FL,2018-11-04,47.6,48.2,4.08,Harris Insights & Analytics
-senate,FL,2018-11-04,47.3,49.0,2.6,Trafalgar Group
-senate,IN,2018-09-10,43.0,45.0,3.84,Beacon Research/Shaw & Co. Research
-senate,IN,2018-09-16,45.6,43.4,2.91,Ipsos
-senate,IN,2018-10-01,43.0,41.0,3.79,Beacon Research/Shaw & Co. Research
-senate,IN,2018-10-02,39.0,43.0,3.54,American Viewpoint
-senate,IN,2018-10-09,40.0,44.0,3.54,American Viewpoint
-senate,IN,2018-10-14,55.0,45.0,3.57,Vox Populi Polling
-senate,IN,2018-10-14,44.0,40.0,5,Gravis Marketing
-senate,IN,2018-10-14,41.0,40.0,3.5,SurveyUSA
-senate,IN,2018-10-16,40.0,44.0,3.54,American Viewpoint
-senate,IN,2018-10-17,43.0,47.0,4.08,Mason Strategies
-senate,IN,2018-10-25,43.0,46.0,3.2,YouGov
-senate,IN,2018-10-26,46.2,49.1,4.45,Cygnal
-senate,IN,2018-10-26,45.0,42.0,4.49,Marist College
-senate,IN,2018-10-27,41.6,42.1,2.67,Harris Insights & Analytics
-senate,IN,2018-10-29,45.0,38.0,3.72,Beacon Research/Shaw & Co. Research
-senate,IN,2018-11-01,44.4,42.0,4.08,Harris Insights & Analytics
-senate,IN,2018-11-04,41.8,42.9,4.08,Harris Insights & Analytics
-senate,ME,2018-09-29,8.0,36.0,3.65,Wick
-senate,ME,2018-10-04,8.2,29.6,4.47,Pan Atlantic Research
-senate,ME,2018-10-12,7.0,27.0,4.08,Digital Research
-senate,ME,2018-10-28,5.8,37.2,3.37,Emerson College
-senate,MD,2018-09-13,56.0,17.0,4.6,Goucher College Sarah T. Hughes Center for Politics
-senate,MD,2018-10-03,49.4,21.5,3.52,Gonzales Research & Marketing Strategies Inc.
-senate,MA,2018-09-15,53.8,24.4,4.47,Suffolk University
-senate,MA,2018-09-19,56.0,30.0,4.45,MassINC Polling Group
-senate,MA,2018-10-04,56.0,31.0,4.54,University of Massachusetts Lowell Center for Public Opinion
-senate,MA,2018-10-18,57.0,27.0,4.99,Western New England University Polling Institute
-senate,MA,2018-10-27,54.0,32.0,4.46,MassINC Polling Group
-senate,MA,2018-10-26,55.6,34.4,4.47,Suffolk University
-senate,MI,2018-09-08,53.0,35.0,3.16,Strategic National
-senate,MI,2018-09-12,54.0,41.0,3.15,Mitchell Research & Communications
-senate,MI,2018-09-12,55.0,40.0,3.54,Target Insyght
-senate,MI,2018-09-18,54.7,35.4,2.95,Ipsos
-senate,MI,2018-09-23,56.0,33.0,4.08,EPIC-MRA
-senate,MI,2018-10-01,52.7,34.7,4.08,Glengariff Group
-senate,MI,2018-10-04,50.5,41.7,3.91,Mitchell Research & Communications
-senate,MI,2018-10-16,53.0,37.0,4.08,Marketing Resource Group (MRG)
-senate,MI,2018-10-21,48.0,41.0,4.07,Tarrance Group
-senate,MI,2018-10-17,49.0,42.0,5,Michigan State University Institute for Public Policy and Social Research
-senate,MI,2018-10-20,49.0,42.0,4.08,EPIC-MRA
-senate,MI,2018-10-23,53.0,43.0,3.54,Target Insyght
-senate,MI,2018-10-25,52.0,46.0,5,Mitchell Research & Communications
-senate,MI,2018-10-25,51.9,42.5,3.49,Emerson College
-senate,MI,2018-10-26,53.0,36.3,4.08,Glengariff Group
-senate,MI,2018-10-29,54.0,41.0,3.62,Gravis Marketing
-senate,MI,2018-11-02,52.0,36.0,4.71,Research Co.
-senate,MI,2018-11-04,53.0,46.0,3.78,Mitchell Research & Communications
-senate,MI,2018-11-03,49.0,47.0,3.37,Change Research
-senate,MI,2018-11-05,49.0,46.0,3.48,Mitchell Research & Communications
-senate,MI,2018-11-04,52.8,43.8,2.35,Trafalgar Group
-senate,MN,2018-09-07,53.0,38.0,4.17,SurveyUSA
-senate,MN,2018-09-11,60.0,30.0,3.54,Mason-Dixon Polling & Strategy
-senate,MN,2018-10-02,60.0,32.0,3.96,Marist College
-senate,MN,2018-10-12,50.0,41.0,2.66,Change Research
-senate,MN,2018-10-16,56.0,33.0,3.54,Mason-Dixon Polling & Strategy
-senate,MN,2018-10-23,54.0,28.0,4.88,St. Cloud State University
-senate,MN,2018-10-30,57.0,34.0,4.08,SurveyUSA
-senate,MN,2018-11-02,53.0,33.0,4.71,Research Co.
-senate,MN,2018-11-03,55.0,40.0,3.24,Change Research
-senate,MS,2018-09-17,29.0,43.0,3.19,SurveyMonkey
-senate,MS,2018-10-15,31.0,57.0,4.42,Marist College
-senate,MS,2018-11-03,40.0,48.0,3.16,Change Research
-senate,MO,2018-09-10,44.0,41.0,3.85,Beacon Research/Shaw & Co. Research
-senate,MO,2018-09-12,44.0,47.0,2.41,Trafalgar Group
-senate,MO,2018-09-12,45.0,45.0,3.3,YouGov
-senate,MO,2018-09-26,46.0,48.0,2.54,Remington Research Group
-senate,MO,2018-09-27,47.0,44.0,3.64,SSRS
-senate,MO,2018-09-30,49.0,51.0,3.39,Vox Populi Polling
-senate,MO,2018-10-01,43.0,43.0,3.83,Beacon Research/Shaw & Co. Research
-senate,MO,2018-10-01,44.0,52.0,4.08,McLaughlin & Associates
-senate,MO,2018-10-05,42.0,44.0,3.08,1st Tuesday Campaigns
-senate,MO,2018-10-02,44.0,45.2,3.0,Ipsos
-senate,MO,2018-10-12,47.0,50.0,4.08,The Polling Company Inc.
-senate,MO,2018-10-17,46.0,47.0,2.87,Remington Research Group
-senate,MO,2018-10-17,42.0,49.0,3.54,OnMessage Inc.
-senate,MO,2018-10-24,45.0,49.0,2.7,Remington Research Group
-senate,MO,2018-10-26,46.4,49.4,4.47,Cygnal
-senate,MO,2018-10-27,46.0,44.1,2.67,Harris Insights & Analytics
-senate,MO,2018-10-29,43.0,43.0,3.67,Beacon Research/Shaw & Co. Research
-senate,MO,2018-10-31,47.0,44.0,4.08,Marist College
-senate,MO,2018-11-01,45.3,46.2,4.08,Harris Insights & Analytics
-senate,MO,2018-11-01,47.0,47.0,2.65,Remington Research Group
-senate,MO,2018-11-02,45.6,49.0,3.7,Emerson College
-senate,MO,2018-11-01,44.4,48.3,2.36,Trafalgar Group
-senate,MO,2018-11-04,44.7,45.5,4.08,Harris Insights & Analytics
-senate,MT,2018-09-12,47.0,45.0,4.7,YouGov
-senate,MT,2018-09-11,50.0,43.0,3.24,Benenson Strategy Group/GS Strategy Group
-senate,MT,2018-09-18,44.0,44.0,4.56,Axis Research
-senate,MT,2018-09-21,49.0,45.0,3.75,Gravis Marketing
-senate,MT,2018-09-28,49.0,45.0,4.1,Public Policy Polling
-senate,MT,2018-09-25,46.2,43.1,2.19,Montana State University Bozeman Human Ecology Learning and Problem Solving Lab
-senate,MT,2018-10-10,47.0,38.0,4.61,Montana State University Billings
-senate,MT,2018-10-14,48.9,38.8,4.33,University of Montana Social Science Research Laboratory
-senate,MT,2018-10-25,48.0,45.0,3.58,Gravis Marketing
-senate,MT,2018-10-29,48.5,41.8,4.47,Harris Insights & Analytics
-senate,MT,2018-10-28,48.0,41.0,3.78,Harris Insights & Analytics
-senate,MT,2018-11-03,46.0,49.0,3.37,Change Research
-senate,MT,2018-11-03,49.9,42.1,4.47,Harris Insights & Analytics
-senate,MT,2018-11-04,50.1,49.0,3.24,Trafalgar Group
-senate,NE,2018-10-25,39.0,54.0,3.83,DFM Research
-senate,NV,2018-09-07,41.6,41.2,4.47,Suffolk University
-senate,NV,2018-09-11,47.0,45.0,3.78,Gravis Marketing
-senate,NV,2018-09-12,43.0,46.0,3.1,Ipsos
-senate,NV,2018-09-27,47.0,43.0,3.8,SSRS
-senate,NV,2018-09-25,44.0,45.0,4.42,KFF
-senate,NV,2018-10-02,42.0,44.0,4.17,Marist College
-senate,NV,2018-10-09,44.84,46.89,3.95,The New York Times/Siena College
-senate,NV,2018-10-11,41.4,48.1,4.0,Emerson College
-senate,NV,2018-10-14,51.0,49.0,4.04,Vox Populi Polling
-senate,NV,2018-10-15,48.0,46.0,3.93,Public Policy Polling
-senate,NV,2018-10-16,41.2,46.9,2.97,Ipsos
-senate,NV,2018-10-25,47.0,45.0,3.6,Gravis Marketing
-senate,NV,2018-10-26,48.0,45.0,4.01,SSRS
-senate,NV,2018-10-27,45.6,42.7,2.67,Harris Insights & Analytics
-senate,NV,2018-10-31,45.6,48.9,1.97,Trafalgar Group
-senate,NV,2018-11-01,44.4,45.2,4.08,Harris Insights & Analytics
-senate,NV,2018-11-03,49.1,44.6,2.89,Emerson College
-senate,NV,2018-11-04,46.9,44.6,4.08,Harris Insights & Analytics
-senate,NJ,2018-09-23,45.3,43.4,4.34,Stockton University William J. Hughes Center for Public Policy
-senate,NJ,2018-09-28,43.0,37.0,4.44,Fairleigh Dickinson University
-senate,NJ,2018-09-30,52.0,48.0,3.55,Vox Populi Polling
-senate,NJ,2018-09-29,53.0,42.0,3.07,Quinnipiac University
-senate,NJ,2018-10-04,49.0,39.0,3.44,YouGov
-senate,NJ,2018-10-08,42.0,40.0,4.08,National Research
-senate,NJ,2018-10-13,51.0,39.0,4.36,Monmouth University Polling Institute
-senate,NJ,2018-10-13,51.0,44.0,3.38,Quinnipiac University
-senate,NJ,2018-10-15,42.0,40.0,4.08,National Research
-senate,NJ,2018-10-16,51.0,46.0,4.49,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2018-10-25,47.3,42.0,3.9,Emerson College
-senate,NJ,2018-10-28,54.0,46.0,3.5,Vox Populi Polling
-senate,NJ,2018-10-28,51.3,39.3,4.09,Stockton University William J. Hughes Center for Public Policy
-senate,NJ,2018-11-03,51.0,41.0,3.15,Change Research
-senate,NJ,2018-11-01,55.0,40.0,2.99,Quinnipiac University
-senate,NM,2018-09-10,47.0,26.0,3.22,Research & Polling Inc.
-senate,NM,2018-09-16,38.0,10.0,3.33,In Lux Research
-senate,NM,2018-09-22,35.65,10.04,3.28,NSON Opinion Strategy/In Lux Research
-senate,NM,2018-10-21,45.0,32.0,5,Pacific Market Research
-senate,NM,2018-10-25,48.0,31.5,3.27,Emerson College
-senate,NM,2018-10-29,50.7,37.9,2.88,Carroll Strategies
-senate,NM,2018-10-29,51.0,31.0,3.17,Research & Polling Inc.
-senate,NM,2018-11-02,47.0,33.0,4.71,Research Co.
-senate,NY,2018-09-24,61.0,29.0,3.78,Siena College
-senate,NY,2018-10-13,58.0,33.0,3.43,Quinnipiac University
-senate,NY,2018-10-30,58.0,35.0,3.95,Siena College
-senate,NY,2018-11-02,60.0,32.0,4.71,Research Co.
-senate,ND,2018-09-10,44.0,48.0,3.78,Beacon Research/Shaw & Co. Research
-senate,ND,2018-09-22,41.0,51.0,3.92,Strategic Research Associates
-senate,ND,2018-10-01,41.0,53.0,3.77,Beacon Research/Shaw & Co. Research
-senate,ND,2018-10-16,40.0,56.0,3.92,Strategic Research Associates
-senate,ND,2018-10-23,45.5,54.5,2.58,Trafalgar Group
-senate,ND,2018-10-29,42.0,51.0,3.56,Beacon Research/Shaw & Co. Research
-senate,OH,2018-09-06,47.0,31.0,2.51,Morning Consult
-senate,OH,2018-09-10,49.2,31.8,3.09,Baldwin Wallace University Community Research Institute
-senate,OH,2018-09-19,52.5,42.3,3.16,American Pulse Research & Polling
-senate,OH,2018-09-18,49.0,35.0,4.21,Marist College
-senate,OH,2018-09-17,49.5,39.3,3.05,Ipsos
-senate,OH,2018-09-22,43.0,31.0,3.16,University of Akron Ray C. Bliss Institute of Applied Politics
-senate,OH,2018-10-06,53.6,36.0,4.47,Suffolk University
-senate,OH,2018-10-03,49.5,33.0,3.14,Baldwin Wallace University Community Research Institute
-senate,OH,2018-10-23,51.2,31.7,3.08,Baldwin Wallace University Community Research Institute
-senate,OH,2018-10-27,48.8,43.0,4.2,Emerson College
-senate,OH,2018-10-29,46.0,37.0,3.56,Gravis Marketing
-senate,OH,2018-10-30,52.4,42.0,4.46,Cygnal
-senate,OH,2018-11-02,53.0,39.0,4.71,Research Co.
-senate,OH,2018-11-03,53.0,43.0,3.29,Change Research
-senate,PA,2018-09-12,52.0,38.0,3.54,Rasmussen Reports
-senate,PA,2018-09-16,53.0,35.0,4.98,Muhlenberg College Institute of Public Opinion
-senate,PA,2018-09-16,52.6,37.0,3.04,Ipsos
-senate,PA,2018-09-20,50.0,33.0,5,Franklin & Marshall College Center for Opinion Research
-senate,PA,2018-10-01,47.0,32.0,2.9,Morning Consult
-senate,PA,2018-10-25,50.0,35.0,5,Franklin & Marshall College Center for Opinion Research
-senate,PA,2018-10-30,54.0,40.0,4.87,Muhlenberg College Institute of Public Opinion
-senate,PA,2018-11-02,56.0,39.0,4.71,Research Co.
-senate,PA,2018-11-03,51.0,44.0,2.34,Change Research
-senate,RI,2018-09-16,54.0,35.0,4.88,Fleming & Associates
-senate,RI,2018-10-01,57.0,33.0,4.46,University of New Hampshire Survey Center
-senate,RI,2018-10-07,56.0,32.0,4.46,SocialSphere
-senate,RI,2018-10-22,55.3,36.3,4.9,Fleming & Associates
-senate,TN,2018-09-10,44.0,47.0,3.82,Beacon Research/Shaw & Co. Research
-senate,TN,2018-09-11,45.0,48.3,3.1,American Pulse Research & Polling
-senate,TN,2018-09-13,50.0,45.0,3.72,SSRS
-senate,TN,2018-09-17,51.0,49.0,4.2,Vox Populi Polling
-senate,TN,2018-09-17,42.0,42.0,2.49,SurveyMonkey
-senate,TN,2018-09-24,47.0,45.0,4.08,Garin-Hart-Yang Research Group
-senate,TN,2018-10-01,43.0,48.0,3.87,Beacon Research/Shaw & Co. Research
-senate,TN,2018-10-04,42.0,50.0,3.39,YouGov
-senate,TN,2018-10-10,40.03,54.46,4.11,The New York Times/Siena College
-senate,TN,2018-10-08,44.0,47.0,3.0,Ipsos
-senate,TN,2018-10-11,48.0,52.0,4.23,Targoz Market Research
-senate,TN,2018-10-10,44.0,43.0,3.54,SSRS
-senate,TN,2018-10-26,44.7,50.5,4.49,Cygnal
-senate,TN,2018-10-25,46.0,51.0,4.61,Marist College
-senate,TN,2018-10-28,47.0,53.0,3.58,Vox Populi Polling
-senate,TN,2018-10-26,45.0,49.0,3.62,SSRS
-senate,TN,2018-10-26,44.0,44.0,4.49,East Tennessee State University Applied Social Research Laboratory
-senate,TN,2018-10-29,43.6,52.0,3.98,Emerson College
-senate,TN,2018-10-29,41.0,50.0,3.73,Beacon Research/Shaw & Co. Research
-senate,TN,2018-10-30,49.0,49.0,4.56,Targoz Market Research
-senate,TX,2018-09-06,41.74,45.87,4.39,Dixie Strategies
-senate,TX,2018-09-08,44.0,47.0,3.54,Rasmussen Reports
-senate,TX,2018-09-11,45.4,49.4,2.93,Blueprint Polling
-senate,TX,2018-09-10,47.0,45.0,3.18,Ipsos
-senate,TX,2018-09-14,45.0,54.0,3.52,Quinnipiac University
-senate,TX,2018-09-17,50.0,50.0,4.44,Vox Populi Polling
-senate,TX,2018-09-19,46.0,49.0,4.07,Public Policy Polling
-senate,TX,2018-10-04,44.0,50.0,3.37,YouGov
-senate,TX,2018-10-03,42.4,47.0,4.47,Emerson College
-senate,TX,2018-10-06,45.0,54.0,3.7,Quinnipiac University
-senate,TX,2018-10-10,43.19,51.25,3.54,The New York Times/Siena College
-senate,TX,2018-10-11,45.0,52.0,3.74,SSRS
-senate,TX,2018-10-10,43.0,52.0,3.53,WPA Intelligence
-senate,TX,2018-10-12,45.0,49.0,4.08,Tulchin Research
-senate,TX,2018-10-15,44.4,48.9,2.78,Ipsos
-senate,TX,2018-10-20,46.0,50.0,3.16,GBAO
-senate,TX,2018-10-18,45.0,51.0,3.28,YouGov
-senate,TX,2018-10-25,42.0,52.0,4.12,Dixie Strategies
-senate,TX,2018-10-25,46.0,51.0,3.05,Quinnipiac University
-senate,TX,2018-10-21,43.4,47.0,3.32,University of Texas at Tyler Center for Opinion Research
-senate,TX,2018-10-29,47.2,50.3,3.58,Emerson College
-senate,TX,2018-11-01,49.0,49.0,2.87,Change Research
-senate,TX,2018-11-04,43.2,52.1,2.16,Trafalgar Group
-senate,UT,2018-10-06,23.0,59.0,4.06,University of Utah Hinckley Institute of Politics
-senate,VA,2018-09-06,52.0,36.0,4.42,SSRS
-senate,WA,2018-10-06,53.0,39.0,4.97,Elway Research
-senate,WV,2018-09-14,44.8,33.1,3.48,Emerson College
-senate,WV,2018-09-21,48.0,36.0,4.08,Global Strategy Group
-senate,WV,2018-09-24,45.0,45.0,4.47,1892 Polling
-senate,WV,2018-09-24,47.0,43.0,4.04,Tarrance Group
-senate,WV,2018-09-21,46.0,38.0,3.92,Strategic Research Associates
-senate,WV,2018-10-08,41.0,40.0,4.08,Public Opinion Strategies
-senate,WV,2018-10-12,49.0,45.0,4.08,The Polling Company Inc.
-senate,WV,2018-10-14,53.0,47.0,3.56,Vox Populi Polling
-senate,WV,2018-10-17,42.0,44.0,4.08,"Fabrizio, Lee & Associates"
-senate,WV,2018-10-16,52.0,36.0,3.92,Strategic Research Associates
-senate,WV,2018-10-25,45.0,40.0,5,Repass
-senate,WV,2018-10-30,47.3,41.5,3.14,Emerson College
-senate,WI,2018-09-14,53.0,42.0,4.04,Marquette University Law School
-senate,WI,2018-09-18,52.0,39.0,3.0,Ipsos
-senate,WI,2018-10-02,54.0,40.0,4.18,Marist College
-senate,WI,2018-10-05,53.0,43.0,3.54,Marquette University Law School
-senate,WI,2018-10-10,52.0,42.0,3.5,Public Policy Polling
-senate,WI,2018-10-15,53.7,38.5,2.9,Ipsos
-senate,WI,2018-10-26,54.0,43.0,2.94,Marquette University Law School
-senate,WI,2018-10-30,53.1,44.4,4.07,Emerson College
-senate,WI,2018-11-02,50.0,39.0,4.71,Research Co.
-senate,WY,2018-11-03,31.0,60.0,3.41,Change Research
-senate,MN,2018-09-07,48.0,39.0,4.17,SurveyUSA
-senate,MN,2018-09-11,44.0,37.0,3.54,Mason-Dixon Polling & Strategy
-senate,MN,2018-10-02,54.0,38.0,3.96,Marist College
-senate,MN,2018-10-12,46.0,43.0,2.66,Change Research
-senate,MN,2018-10-16,47.0,41.0,3.54,Mason-Dixon Polling & Strategy
-senate,MN,2018-10-23,44.0,29.0,4.88,St. Cloud State University
-senate,MN,2018-10-30,48.0,40.0,4.08,SurveyUSA
-senate,MN,2018-11-02,49.0,39.0,4.71,Research Co.
-senate,MN,2018-11-03,51.0,42.0,3.24,Change Research
-governor,AL,2018-09-22,38.0,58.0,5,Research Consultants
-governor,AL,2018-09-17,26.0,51.0,2.82,SurveyMonkey
-governor,AK,2018-09-23,29.0,44.4,4.47,Alaska Survey Research
-governor,AK,2018-10-03,22.6,46.5,4.47,Alaska Survey Research
-governor,AK,2018-10-11,23.0,43.0,3.94,Public Policy Polling
-governor,AK,2018-10-13,26.4,43.4,4.47,Alaska Survey Research
-governor,AK,2018-10-21,43.7,48.3,4.47,Alaska Survey Research
-governor,AK,2018-10-28,42.3,42.5,4.47,Alaska Survey Research
-governor,AZ,2018-09-10,40.0,51.0,3.75,Beacon Research/Shaw & Co. Research
-governor,AZ,2018-09-10,48.0,49.0,3.54,TargetSmart
-governor,AZ,2018-09-09,39.1,50.7,3.14,Ipsos
-governor,AZ,2018-09-13,46.0,49.0,3.62,SSRS
-governor,AZ,2018-09-18,39.0,49.0,4.21,Marist College
-governor,AZ,2018-09-20,38.3,41.9,3.92,Emerson College
-governor,AZ,2018-09-18,40.0,45.0,4.65,Latino Decisions
-governor,AZ,2018-09-29,38.0,49.6,4.47,Suffolk University
-governor,AZ,2018-09-30,43.0,57.0,3.77,Vox Populi Polling
-governor,AZ,2018-10-01,37.0,55.0,3.74,Beacon Research/Shaw & Co. Research
-governor,AZ,2018-10-03,37.0,54.0,4.08,Noble Predictive Insights
-governor,AZ,2018-10-02,35.02,50.65,4.26,Data Orbital
-governor,AZ,2018-10-09,39.6,47.2,3.57,Change Research
-governor,AZ,2018-10-22,39.0,57.0,4.08,Noble Predictive Insights
-governor,AZ,2018-10-25,41.0,52.0,3.21,YouGov
-governor,AZ,2018-10-21,37.0,57.0,3.54,Ipsos
-governor,AZ,2018-10-25,40.0,54.0,4.45,Marist College
-governor,AZ,2018-10-27,35.3,54.8,5,HighGround Inc.
-governor,AZ,2018-10-28,37.0,55.0,3.94,Beacon Research/Shaw & Co. Research
-governor,AZ,2018-10-26,45.0,52.0,3.77,SSRS
-governor,AZ,2018-10-27,34.8,57.0,2.67,Harris Insights & Analytics
-governor,AZ,2018-10-29,46.0,54.0,3.84,Vox Populi Polling
-governor,AZ,2018-11-01,36.5,56.4,4.08,Harris Insights & Analytics
-governor,AZ,2018-10-28,40.0,53.0,2.93,Gravis Marketing
-governor,AZ,2018-11-02,40.2,55.3,3.63,Emerson College
-governor,AZ,2018-11-02,39.0,54.0,4.71,Research Co.
-governor,AZ,2018-11-04,38.5,52.8,4.08,Harris Insights & Analytics
-governor,AR,2018-10-18,24.0,60.0,4.35,Hendrix College
-governor,AR,2018-10-15,35.0,59.0,4.02,University of Arkansas Department of Political Science
-governor,CA,2018-09-08,47.9,39.7,2.85,Thomas Partners Strategies/Øptimus
-governor,CA,2018-09-09,52.2,39.5,3.13,Ipsos
-governor,CA,2018-09-15,45.2,41.1,3.1,Thomas Partners Strategies/Øptimus
-governor,CA,2018-09-17,60.0,40.0,4.47,Vox Populi Polling
-governor,CA,2018-09-13,51.0,39.0,3.22,Public Policy Institute of California
-governor,CA,2018-09-22,53.0,42.0,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-09-29,50.0,45.0,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-10-06,53.8,42.2,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-10-13,52.0,35.0,3.62,SurveyUSA
-governor,CA,2018-10-13,50.7,43.3,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-10-01,54.0,31.0,3.55,University of Southern California Dornsife Center for Economic and Social Research
-governor,CA,2018-10-18,52.1,32.2,3.86,Emerson College
-governor,CA,2018-10-19,53.9,41.4,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-10-16,49.0,38.0,3.18,Public Policy Institute of California
-governor,CA,2018-10-17,53.0,34.0,2.14,YouGov
-governor,CA,2018-10-22,58.0,40.0,2.73,University of California Berkeley Institute of Governmental Studies
-governor,CA,2018-10-25,55.0,35.0,3.67,Gravis Marketing
-governor,CA,2018-10-26,55.0,41.6,3.06,Thomas Partners Strategies/Øptimus
-governor,CA,2018-10-27,47.2,36.7,3.33,Probolsky Research
-governor,CA,2018-11-01,53.0,38.0,3.29,SurveyUSA
-governor,CA,2018-11-02,58.0,38.0,4.71,Research Co.
-governor,CA,2018-11-03,53.0,41.0,3.0,Change Research
-governor,CO,2018-09-19,47.0,40.0,4.08,Keating Research/Magellan Strategies
-governor,CO,2018-10-09,47.0,40.0,4.47,Magellan Strategies
-governor,CO,2018-10-14,54.0,42.0,3.54,YouGov
-governor,CO,2018-10-29,45.0,40.0,4.47,Magellan Strategies
-governor,CO,2018-10-27,50.0,42.0,4.4,Keating Research/OnSight Public Affairs/Melanson
-governor,CT,2018-09-14,43.1,36.9,4.47,GreatBlue Research
-governor,CT,2018-10-05,47.0,39.0,3.61,Quinnipiac University
-governor,CT,2018-10-08,43.0,38.0,3.48,Public Policy Polling
-governor,CT,2018-10-15,39.5,36.1,4.47,GreatBlue Research
-governor,CT,2018-10-25,47.0,43.0,2.89,Quinnipiac University
-governor,CT,2018-10-28,45.5,39.3,3.58,Emerson College
-governor,CT,2018-10-30,37.6,40.0,4.47,GreatBlue Research
-governor,CT,2018-10-31,46.0,37.0,3.83,Gravis Marketing
-governor,FL,2018-09-08,47.0,43.0,3.97,SurveyUSA
-governor,FL,2018-09-08,47.0,43.0,4.41,Cherry Communications
-governor,FL,2018-09-10,48.0,42.0,3.54,Rasmussen Reports
-governor,FL,2018-09-09,50.1,43.5,3.16,Ipsos
-governor,FL,2018-09-15,41.0,39.0,3.43,Florida Atlantic University Business and Economics Polling Initiative
-governor,FL,2018-09-18,47.0,43.0,4.07,University of North Florida Public Opinion Research Lab
-governor,FL,2018-09-18,48.0,43.0,4.08,Marist College
-governor,FL,2018-09-22,54.0,45.0,3.36,Quinnipiac University
-governor,FL,2018-09-21,48.0,42.0,4.01,Cherry Communications
-governor,FL,2018-09-26,45.0,44.0,3.5,Mason-Dixon Polling & Strategy
-governor,FL,2018-09-29,46.7,44.7,2.08,St. Pete Polls
-governor,FL,2018-09-29,48.0,44.0,3.58,Public Policy Polling
-governor,FL,2018-09-29,44.5,46.7,3.11,The Political Matrix/The Listener Group
-governor,FL,2018-09-23,44.0,43.0,3.54,Strategic Research Associates
-governor,FL,2018-09-25,48.0,40.0,4.38,KFF
-governor,FL,2018-10-03,47.13,43.82,4.58,Florida Southern College Center for Polling and Policy Research
-governor,FL,2018-10-15,47.0,45.9,2.25,St. Pete Polls
-governor,FL,2018-10-16,45.0,48.0,2.13,OnMessage Inc.
-governor,FL,2018-10-19,48.0,42.0,4.08,SEA Polling & Strategic Design
-governor,FL,2018-10-18,54.0,42.0,3.63,SSRS
-governor,FL,2018-10-20,47.4,46.4,2.52,St. Pete Polls
-governor,FL,2018-10-20,49.0,42.0,3.88,SurveyUSA
-governor,FL,2018-10-20,41.4,36.7,3.77,Florida Atlantic University Business and Economics Polling Initiative
-governor,FL,2018-10-19,52.0,46.0,2.93,Quinnipiac University
-governor,FL,2018-10-21,46.0,47.0,2.0,1892 Polling
-governor,FL,2018-10-19,48.6,36.8,3.79,Saint Leo University Polling Institute
-governor,FL,2018-10-22,51.0,46.0,3.6,Gravis Marketing
-governor,FL,2018-10-20,45.0,48.0,3.54,Strategic Research Associates
-governor,FL,2018-10-21,50.0,44.0,3.06,Ipsos
-governor,FL,2018-10-25,47.0,46.0,3.18,YouGov
-governor,FL,2018-10-25,49.0,43.0,3.08,University of North Florida Public Opinion Research Lab
-governor,FL,2018-10-25,47.63,43.25,3.68,The New York Times/Siena College
-governor,FL,2018-10-27,45.0,44.0,4.47,Suffolk University
-governor,FL,2018-10-28,46.7,47.3,4.49,Cygnal
-governor,FL,2018-10-26,49.0,48.0,3.58,SSRS
-governor,FL,2018-10-27,44.2,41.9,2.67,Harris Insights & Analytics
-governor,FL,2018-10-29,48.4,46.1,1.98,Trafalgar Group
-governor,FL,2018-10-29,43.3,50.5,2.9,The Political Matrix/The Listener Group
-governor,FL,2018-10-29,53.0,47.0,3.79,Vox Populi Polling
-governor,FL,2018-10-30,47.0,48.0,4.23,Targoz Market Research
-governor,FL,2018-10-28,41.3,40.3,3.15,MWR Strategies
-governor,FL,2018-11-01,49.5,44.8,4.08,Harris Insights & Analytics
-governor,FL,2018-11-01,48.4,46.3,1.91,St. Pete Polls
-governor,FL,2018-11-01,50.0,46.0,4.1,Marist College
-governor,FL,2018-10-31,48.0,47.0,3.64,Gravis Marketing
-governor,FL,2018-11-02,50.9,45.6,3.57,Emerson College
-governor,FL,2018-11-02,47.0,46.0,4.71,Research Co.
-governor,FL,2018-11-03,49.5,45.4,1.8,St. Pete Polls
-governor,FL,2018-11-01,50.0,43.0,2.96,Quinnipiac University
-governor,FL,2018-11-04,48.7,46.3,4.08,Harris Insights & Analytics
-governor,FL,2018-11-04,46.6,50.0,2.6,Trafalgar Group
-governor,GA,2018-09-19,48.0,42.0,4.07,Garin-Hart-Yang Research Group
-governor,GA,2018-09-17,43.0,43.0,2.26,SurveyMonkey
-governor,GA,2018-10-01,46.3,48.0,3.22,Landmark Communications
-governor,GA,2018-10-05,46.0,46.0,3.7,Public Policy Polling
-governor,GA,2018-10-05,45.0,47.0,3.91,SurveyUSA
-governor,GA,2018-10-04,46.3,47.7,2.85,University of Georgia School of Public and International Affairs
-governor,GA,2018-10-08,46.0,47.0,3.03,Ipsos
-governor,GA,2018-10-16,45.0,46.0,4.25,Marist College
-governor,GA,2018-10-21,47.7,48.4,3.48,InsiderAdvantage
-governor,GA,2018-10-28,48.1,47.2,4.01,InsiderAdvantage
-governor,GA,2018-10-29,47.0,49.2,4.45,Cygnal
-governor,GA,2018-10-25,46.9,46.7,3.03,University of Georgia School of Public and International Affairs
-governor,GA,2018-10-30,47.3,49.4,3.72,Emerson College
-governor,GA,2018-11-01,50.0,46.0,4.04,20/20 Insight
-governor,GA,2018-11-01,40.1,52.4,2.15,Trafalgar Group
-governor,HI,2018-10-10,52.0,31.0,3.23,MRG Research
-governor,ID,2018-11-03,39.0,55.0,3.45,Change Research
-governor,IL,2018-09-09,44.0,27.1,3.12,Repass
-governor,IL,2018-09-23,48.0,32.0,3.15,Impact Research
-governor,IL,2018-09-26,49.0,27.0,3.74,Southern Illinois University Paul Simon Public Policy Institute
-governor,IL,2018-09-29,47.4,31.5,2.88,Victory Research
-governor,IL,2018-10-01,50.1,29.7,3.21,Ipsos
-governor,IL,2018-11-02,49.0,33.0,2.88,Victory Research
-governor,IA,2018-09-07,35.9,31.3,3.16,Emerson College
-governor,IA,2018-09-19,43.0,41.0,4.24,Selzer & Co.
-governor,IA,2018-10-15,47.7,40.31,4.7,University of Iowa Hawkeye Poll Cooperative
-governor,IA,2018-10-31,45.0,48.9,2.62,Emerson College
-governor,IA,2018-11-01,46.0,44.0,3.53,Selzer & Co.
-governor,IA,2018-11-03,49.0,46.0,3.23,Change Research
-governor,KS,2018-09-12,38.0,39.0,4.02,Public Policy Polling
-governor,KS,2018-09-23,41.0,39.0,2.91,Civiqs
-governor,KS,2018-09-08,40.0,36.0,5,Fort Hays State University Docking Institute of Public Affairs
-governor,KS,2018-09-27,35.9,37.3,3.27,Emerson College
-governor,KS,2018-09-30,42.0,41.0,2.44,Remington Research Group
-governor,KS,2018-10-19,41.0,41.0,3.79,Public Policy Polling
-governor,KS,2018-10-22,43.0,41.0,3.18,Ipsos
-governor,KS,2018-10-27,43.0,44.3,3.2,Emerson College
-governor,ME,2018-09-28,41.0,33.0,4.08,Slingshot Strategies
-governor,ME,2018-09-30,52.0,44.0,3.53,Change Research
-governor,ME,2018-10-04,44.4,35.9,4.47,Pan Atlantic Research
-governor,ME,2018-10-28,49.7,41.7,3.37,Emerson College
-governor,ME,2018-11-01,55.0,38.0,4.39,Slingshot Strategies
-governor,MD,2018-09-13,32.0,54.0,4.6,Goucher College Sarah T. Hughes Center for Politics
-governor,MD,2018-09-25,37.0,52.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2018-10-03,35.7,53.6,3.52,Gonzales Research & Marketing Strategies Inc.
-governor,MD,2018-10-06,38.0,58.0,3.93,The Washington Post/University of Maryland Center for Democracy and Civic Engagement
-governor,MA,2018-09-15,27.8,55.4,4.47,Suffolk University
-governor,MA,2018-09-19,24.0,68.0,4.45,MassINC Polling Group
-governor,MA,2018-10-04,27.0,66.0,4.54,University of Massachusetts Lowell Center for Public Opinion
-governor,MA,2018-10-18,27.0,65.0,4.99,Western New England University Polling Institute
-governor,MA,2018-10-27,25.0,68.0,4.46,MassINC Polling Group
-governor,MA,2018-10-26,26.0,65.4,4.47,Suffolk University
-governor,MI,2018-09-08,49.0,39.0,3.16,Strategic National
-governor,MI,2018-09-12,48.0,38.0,3.15,Mitchell Research & Communications
-governor,MI,2018-09-10,45.0,38.0,3.54,Impact Research
-governor,MI,2018-09-12,50.0,41.0,3.54,Target Insyght
-governor,MI,2018-09-18,52.2,38.6,2.95,Ipsos
-governor,MI,2018-09-23,45.0,37.0,4.08,EPIC-MRA
-governor,MI,2018-09-27,49.0,37.0,3.54,Impact Research
-governor,MI,2018-10-01,46.8,35.2,4.08,Glengariff Group
-governor,MI,2018-10-04,45.7,38.2,3.91,Mitchell Research & Communications
-governor,MI,2018-10-11,46.0,36.0,3.54,Impact Research
-governor,MI,2018-10-16,50.0,36.0,4.08,Marketing Resource Group (MRG)
-governor,MI,2018-10-18,47.0,36.0,3.32,Impact Research
-governor,MI,2018-10-17,47.0,39.0,5,Michigan State University Institute for Public Policy and Social Research
-governor,MI,2018-10-20,46.0,41.0,4.08,EPIC-MRA
-governor,MI,2018-10-23,48.0,44.0,3.54,Target Insyght
-governor,MI,2018-10-25,48.0,43.0,5,Mitchell Research & Communications
-governor,MI,2018-10-25,51.7,41.3,3.49,Emerson College
-governor,MI,2018-10-26,50.0,37.5,4.08,Glengariff Group
-governor,MI,2018-11-02,47.0,43.0,4.71,Research Co.
-governor,MI,2018-11-04,54.0,40.0,3.78,Mitchell Research & Communications
-governor,MI,2018-11-03,51.0,43.0,3.37,Change Research
-governor,MI,2018-11-05,48.4,40.6,3.48,Mitchell Research & Communications
-governor,MN,2018-09-07,47.0,40.0,4.17,SurveyUSA
-governor,MN,2018-09-11,45.0,36.0,3.54,Mason-Dixon Polling & Strategy
-governor,MN,2018-10-02,51.0,36.0,3.96,Marist College
-governor,MN,2018-10-12,47.0,44.0,2.66,Change Research
-governor,MN,2018-10-16,45.0,39.0,3.54,Mason-Dixon Polling & Strategy
-governor,MN,2018-10-23,50.0,34.0,4.98,St. Cloud State University
-governor,MN,2018-10-30,49.0,41.0,4.08,SurveyUSA
-governor,MN,2018-11-02,48.0,42.0,4.71,Research Co.
-governor,MN,2018-11-03,53.0,41.0,3.24,Change Research
-governor,NV,2018-09-07,37.4,35.4,4.47,Suffolk University
-governor,NV,2018-09-11,50.0,38.0,3.78,Gravis Marketing
-governor,NV,2018-09-12,40.0,43.0,3.1,Ipsos
-governor,NV,2018-09-27,45.0,41.0,3.8,SSRS
-governor,NV,2018-09-25,40.0,46.0,4.42,KFF
-governor,NV,2018-10-02,40.0,44.0,4.17,Marist College
-governor,NV,2018-10-09,45.0,46.0,3.95,The New York Times/Siena College
-governor,NV,2018-10-11,40.7,45.9,4.0,Emerson College
-governor,NV,2018-10-14,52.0,48.0,4.04,Vox Populi Polling
-governor,NV,2018-10-16,41.2,46.0,2.97,Ipsos
-governor,NV,2018-10-25,46.0,44.0,3.6,Gravis Marketing
-governor,NV,2018-10-26,46.0,45.0,4.01,SSRS
-governor,NV,2018-10-27,45.1,43.0,2.67,Harris Insights & Analytics
-governor,NV,2018-10-31,44.9,47.0,1.97,Trafalgar Group
-governor,NV,2018-11-01,43.3,46.7,4.08,Harris Insights & Analytics
-governor,NV,2018-11-03,47.5,46.5,2.89,Emerson College
-governor,NV,2018-11-04,44.5,44.3,4.08,Harris Insights & Analytics
-governor,NH,2018-09-23,44.0,49.0,3.54,American Research Group
-governor,NH,2018-10-11,35.4,50.5,3.56,Emerson College
-governor,NH,2018-10-12,38.6,48.6,4.69,Saint Anselm College Survey Center
-governor,NH,2018-10-14,39.0,50.0,4.48,University of New Hampshire Survey Center
-governor,NH,2018-10-28,43.3,50.6,2.96,Emerson College
-governor,NH,2018-10-28,46.0,47.0,3.33,Change Research
-governor,NH,2018-11-03,46.0,46.0,3.98,University of New Hampshire Survey Center
-governor,NM,2018-09-10,50.0,43.0,3.22,Research & Polling Inc.
-governor,NM,2018-09-22,43.58,40.4,3.28,NSON Opinion Strategy/In Lux Research
-governor,NM,2018-10-21,55.0,45.0,5,Pacific Market Research
-governor,NM,2018-10-25,52.7,43.7,3.27,Emerson College
-governor,NM,2018-10-24,53.0,44.0,4.08,GQR
-governor,NM,2018-10-29,50.6,45.5,2.89,Carroll Strategies
-governor,NM,2018-10-29,53.0,43.0,3.17,Research & Polling Inc.
-governor,NM,2018-11-02,53.0,41.0,4.71,Research Co.
-governor,NY,2018-09-24,50.0,28.0,3.78,Siena College
-governor,NY,2018-10-06,48.0,25.0,3.57,Gravis Marketing
-governor,NY,2018-10-13,58.0,35.0,3.43,Quinnipiac University
-governor,NY,2018-10-30,49.0,36.0,3.95,Siena College
-governor,NY,2018-11-02,54.0,37.0,4.71,Research Co.
-governor,OH,2018-09-06,38.0,39.0,2.51,Morning Consult
-governor,OH,2018-09-10,37.0,42.0,3.09,Baldwin Wallace University Community Research Institute
-governor,OH,2018-09-19,43.9,48.6,3.16,American Pulse Research & Polling
-governor,OH,2018-09-18,44.0,44.0,4.21,Marist College
-governor,OH,2018-09-17,43.6,45.1,3.05,Ipsos
-governor,OH,2018-09-22,36.0,37.0,3.16,University of Akron Ray C. Bliss Institute of Applied Politics
-governor,OH,2018-10-06,46.4,40.4,4.47,Suffolk University
-governor,OH,2018-10-03,37.1,39.7,3.14,Baldwin Wallace University Community Research Institute
-governor,OH,2018-10-23,38.8,39.4,3.08,Baldwin Wallace University Community Research Institute
-governor,OH,2018-10-27,49.3,45.8,4.2,Emerson College
-governor,OH,2018-10-29,48.0,43.0,3.56,Gravis Marketing
-governor,OH,2018-10-30,43.2,43.4,4.46,Cygnal
-governor,OH,2018-11-02,44.0,44.0,4.71,Research Co.
-governor,OH,2018-11-03,48.0,43.0,3.29,Change Research
-governor,OH,2018-11-03,45.8,42.2,2.27,Trafalgar Group
-governor,OK,2018-09-07,44.2,46.6,4.96,SoonerPoll.com
-governor,OK,2018-09-25,43.4,46.9,3.07,The Right Strategy Group
-governor,OK,2018-09-27,40.0,46.0,4.47,Cole Hargrave Snodgrass & Associates
-governor,OK,2018-10-22,44.0,51.0,4.47,Magellan Strategies
-governor,OK,2018-10-24,41.6,46.4,4.73,SoonerPoll.com
-governor,OK,2018-11-02,44.1,47.0,5,SoonerPoll.com
-governor,OR,2018-09-08,41.0,43.0,1.88,Causeway Solutions
-governor,OR,2018-09-12,46.0,36.0,3.83,Hoffman Research Group
-governor,OR,2018-09-22,41.7,40.8,3.84,Clout Research
-governor,OR,2018-09-30,49.0,45.0,5,Riley Research Associates
-governor,OR,2018-10-08,40.0,35.0,4.47,DHM Research
-governor,OR,2018-10-27,46.7,41.6,3.66,Emerson College
-governor,OR,2018-10-29,45.0,42.0,3.8,Hoffman Research Group
-governor,PA,2018-09-12,52.0,40.0,3.54,Rasmussen Reports
-governor,PA,2018-09-16,55.0,36.0,4.98,Muhlenberg College Institute of Public Opinion
-governor,PA,2018-09-16,54.6,37.5,3.04,Ipsos
-governor,PA,2018-09-20,52.0,30.0,5,Franklin & Marshall College Center for Opinion Research
-governor,PA,2018-10-01,48.0,36.0,2.9,Morning Consult
-governor,PA,2018-10-25,59.0,33.0,5,Franklin & Marshall College Center for Opinion Research
-governor,PA,2018-10-30,58.0,37.0,4.87,Muhlenberg College Institute of Public Opinion
-governor,PA,2018-11-02,54.0,39.0,4.71,Research Co.
-governor,PA,2018-11-03,53.0,42.0,2.34,Change Research
-governor,RI,2018-09-16,43.0,36.0,4.88,Fleming & Associates
-governor,RI,2018-10-01,48.0,34.0,4.46,University of New Hampshire Survey Center
-governor,RI,2018-10-07,40.0,32.0,4.46,SocialSphere
-governor,RI,2018-10-22,44.5,33.7,4.9,Fleming & Associates
-governor,SC,2018-09-28,36.7,50.7,1.93,Trafalgar Group
-governor,SC,2018-10-13,32.1,55.5,1.44,Trafalgar Group
-governor,SC,2018-10-30,38.1,54.3,1.62,Trafalgar Group
-governor,SD,2018-09-22,45.0,42.0,4.47,Impact Research
-governor,SD,2018-10-20,45.0,45.0,4.47,Mason-Dixon Polling & Strategy
-governor,SD,2018-10-30,44.0,47.0,4.47,Mason-Dixon Polling & Strategy
-governor,SD,2018-11-03,51.0,45.0,3.43,Change Research
-governor,SD,2018-11-03,46.6,47.6,4.41,Emerson College
-governor,TN,2018-09-10,35.0,55.0,3.82,Beacon Research/Shaw & Co. Research
-governor,TN,2018-09-11,37.3,53.7,3.1,American Pulse Research & Polling
-governor,TN,2018-09-13,43.0,52.0,3.72,SSRS
-governor,TN,2018-09-17,46.0,55.0,4.2,Vox Populi Polling
-governor,TN,2018-09-17,35.0,46.0,2.49,SurveyMonkey
-governor,TN,2018-10-01,36.0,53.0,3.87,Beacon Research/Shaw & Co. Research
-governor,TN,2018-10-10,33.0,59.0,4.11,The New York Times/Siena College
-governor,TN,2018-10-11,44.0,56.0,4.23,Targoz Market Research
-governor,TN,2018-10-10,37.0,48.0,3.54,SSRS
-governor,TN,2018-10-26,36.1,58.5,4.49,Cygnal
-governor,TN,2018-10-25,40.0,57.0,4.61,Marist College
-governor,TN,2018-10-28,44.0,56.0,3.58,Vox Populi Polling
-governor,TN,2018-10-26,42.0,52.0,3.62,SSRS
-governor,TN,2018-10-26,36.0,48.0,4.49,East Tennessee State University Applied Social Research Laboratory
-governor,TN,2018-10-29,40.8,54.2,3.98,Emerson College
-governor,TN,2018-10-29,37.0,54.0,3.73,Beacon Research/Shaw & Co. Research
-governor,TN,2018-10-30,44.0,53.0,4.56,Targoz Market Research
-governor,TX,2018-09-06,33.91,52.79,4.39,Dixie Strategies
-governor,TX,2018-09-08,39.0,52.0,3.54,Rasmussen Reports
-governor,TX,2018-09-10,41.0,50.0,3.18,Ipsos
-governor,TX,2018-09-14,39.0,58.0,3.52,Quinnipiac University
-governor,TX,2018-09-17,45.0,55.0,4.44,Vox Populi Polling
-governor,TX,2018-09-19,29.0,58.0,2.89,The Eppstein Group
-governor,TX,2018-10-03,33.2,53.0,4.47,Emerson College
-governor,TX,2018-10-06,38.0,58.0,3.7,Quinnipiac University
-governor,TX,2018-10-10,35.0,57.0,3.54,The New York Times/Siena College
-governor,TX,2018-10-11,39.0,57.0,3.74,SSRS
-governor,TX,2018-10-15,38.1,53.1,2.78,Ipsos
-governor,TX,2018-10-18,37.0,56.0,3.28,YouGov
-governor,TX,2018-10-25,33.0,59.0,4.12,Dixie Strategies
-governor,TX,2018-10-25,40.0,54.0,3.05,Quinnipiac University
-governor,TX,2018-10-21,32.2,52.6,3.11,University of Texas at Tyler Center for Opinion Research
-governor,TX,2018-10-29,42.8,51.1,3.58,Emerson College
-governor,VT,2018-09-25,42.0,50.0,4.96,Tulchin Research
-governor,VT,2018-10-09,28.0,42.0,4.49,Braun Research
-governor,VT,2018-10-31,39.0,49.0,3.36,Gravis Marketing
-governor,WI,2018-09-14,49.0,44.0,4.04,Marquette University Law School
-governor,WI,2018-09-18,50.0,43.0,3.0,Ipsos
-governor,WI,2018-10-02,50.0,42.0,4.18,Marist College
-governor,WI,2018-10-05,46.0,47.0,3.54,Marquette University Law School
-governor,WI,2018-10-15,48.2,45.2,2.9,Ipsos
-governor,WI,2018-10-26,47.0,47.0,2.94,Marquette University Law School
-governor,WI,2018-10-30,50.9,46.1,4.07,Emerson College
-governor,WI,2018-11-02,45.0,44.0,4.71,Research Co.
-governor,WY,2018-11-03,27.0,61.0,3.41,Change Research
-senate,MS,2018-10-15,36.0,50.0,4.42,Marist College
-senate,MS,2018-11-21,44.0,54.0,3.82,JMC Analytics/Bold Blue Campaigns
-senate,MS,2018-11-25,46.0,51.0,2.87,Change Research
+mode,state,date,dem,rep,pollster,sigma
+governor,AK,2018-09-23,29.0,44.4,Alaska Survey Research,3
+governor,AK,2018-10-03,22.6,46.5,Alaska Survey Research,3
+governor,AK,2018-10-11,23.0,43.0,Public Policy Polling,3
+governor,AK,2018-10-13,26.4,43.4,Alaska Survey Research,3
+governor,AK,2018-10-21,43.7,48.3,Alaska Survey Research,3
+governor,AK,2018-10-28,42.3,42.5,Alaska Survey Research,3
+governor,AZ,2018-09-09,39.1,50.7,Ipsos,3
+governor,AZ,2018-09-10,40.0,51.0,Beacon Research/Shaw & Co. Research,3
+governor,AZ,2018-09-13,46.0,49.0,SSRS,3
+governor,AZ,2018-09-18,39.0,49.0,Marist College,3
+governor,AZ,2018-09-20,38.3,41.9,Emerson College,3
+governor,AZ,2018-09-29,38.0,49.6,Suffolk University,3
+governor,AZ,2018-09-30,43.0,57.0,Vox Populi Polling,3
+governor,AZ,2018-10-01,37.0,55.0,Beacon Research/Shaw & Co. Research,3
+governor,AZ,2018-10-03,37.0,54.0,Noble Predictive Insights,3
+governor,AZ,2018-10-21,37.0,57.0,Ipsos,3
+governor,AZ,2018-10-22,39.0,57.0,Noble Predictive Insights,3
+governor,AZ,2018-10-25,41.0,52.0,YouGov,3
+governor,AZ,2018-10-25,40.0,54.0,Marist College,3
+governor,AZ,2018-10-26,45.0,52.0,SSRS,3
+governor,AZ,2018-10-27,34.8,57.0,Harris Insights & Analytics,3
+governor,AZ,2018-10-28,37.0,55.0,Beacon Research/Shaw & Co. Research,3
+governor,AZ,2018-10-28,40.0,53.0,Gravis Marketing,3
+governor,AZ,2018-10-29,46.0,54.0,Vox Populi Polling,3
+governor,AZ,2018-11-01,36.5,56.4,Harris Insights & Analytics,3
+governor,AZ,2018-11-02,40.2,55.3,Emerson College,3
+governor,AZ,2018-11-02,39.0,54.0,Research Co.,3
+governor,AZ,2018-11-04,38.5,52.8,Harris Insights & Analytics,3
+governor,CA,2018-09-09,52.2,39.5,Ipsos,3
+governor,CA,2018-09-13,51.0,39.0,Public Policy Institute of California,3
+governor,CA,2018-09-17,60.0,40.0,Vox Populi Polling,3
+governor,CA,2018-10-13,52.0,35.0,SurveyUSA,3
+governor,CA,2018-10-16,49.0,38.0,Public Policy Institute of California,3
+governor,CA,2018-10-17,53.0,34.0,YouGov,3
+governor,CA,2018-10-18,52.1,32.2,Emerson College,3
+governor,CA,2018-10-25,55.0,35.0,Gravis Marketing,3
+governor,CA,2018-11-01,53.0,38.0,SurveyUSA,3
+governor,CA,2018-11-02,58.0,38.0,Research Co.,3
+governor,CO,2018-10-09,47.0,40.0,Magellan Strategies,3
+governor,CO,2018-10-14,54.0,42.0,YouGov,3
+governor,CO,2018-10-29,45.0,40.0,Magellan Strategies,3
+governor,CT,2018-10-05,47.0,39.0,Quinnipiac University,3
+governor,CT,2018-10-08,43.0,38.0,Public Policy Polling,3
+governor,CT,2018-10-25,47.0,43.0,Quinnipiac University,3
+governor,CT,2018-10-28,45.5,39.3,Emerson College,3
+governor,CT,2018-10-31,46.0,37.0,Gravis Marketing,3
+governor,FL,2018-09-08,47.0,43.0,SurveyUSA,3
+governor,FL,2018-09-09,50.1,43.5,Ipsos,3
+governor,FL,2018-09-18,48.0,43.0,Marist College,3
+governor,FL,2018-09-22,54.0,45.0,Quinnipiac University,3
+governor,FL,2018-09-26,45.0,44.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2018-09-29,46.7,44.7,St. Pete Polls,3
+governor,FL,2018-09-29,48.0,44.0,Public Policy Polling,3
+governor,FL,2018-10-15,47.0,45.9,St. Pete Polls,3
+governor,FL,2018-10-18,54.0,42.0,SSRS,3
+governor,FL,2018-10-19,52.0,46.0,Quinnipiac University,3
+governor,FL,2018-10-20,47.4,46.4,St. Pete Polls,3
+governor,FL,2018-10-20,49.0,42.0,SurveyUSA,3
+governor,FL,2018-10-21,50.0,44.0,Ipsos,3
+governor,FL,2018-10-22,51.0,46.0,Gravis Marketing,3
+governor,FL,2018-10-25,47.0,46.0,YouGov,3
+governor,FL,2018-10-25,47.63,43.25,The New York Times/Siena College,3
+governor,FL,2018-10-26,49.0,48.0,SSRS,3
+governor,FL,2018-10-27,45.0,44.0,Suffolk University,3
+governor,FL,2018-10-27,44.2,41.9,Harris Insights & Analytics,3
+governor,FL,2018-10-28,46.7,47.3,Cygnal,3
+governor,FL,2018-10-29,53.0,47.0,Vox Populi Polling,3
+governor,FL,2018-10-31,48.0,47.0,Gravis Marketing,3
+governor,FL,2018-11-01,49.5,44.8,Harris Insights & Analytics,3
+governor,FL,2018-11-01,48.4,46.3,St. Pete Polls,3
+governor,FL,2018-11-01,50.0,46.0,Marist College,3
+governor,FL,2018-11-01,50.0,43.0,Quinnipiac University,3
+governor,FL,2018-11-02,50.9,45.6,Emerson College,3
+governor,FL,2018-11-02,47.0,46.0,Research Co.,3
+governor,FL,2018-11-03,49.5,45.4,St. Pete Polls,3
+governor,FL,2018-11-04,48.7,46.3,Harris Insights & Analytics,3
+governor,GA,2018-10-01,46.3,48.0,Landmark Communications,3
+governor,GA,2018-10-05,46.0,46.0,Public Policy Polling,3
+governor,GA,2018-10-05,45.0,47.0,SurveyUSA,3
+governor,GA,2018-10-08,46.0,47.0,Ipsos,3
+governor,GA,2018-10-16,45.0,46.0,Marist College,3
+governor,GA,2018-10-29,47.0,49.2,Cygnal,3
+governor,GA,2018-10-30,47.3,49.4,Emerson College,3
+governor,IA,2018-09-07,35.9,31.3,Emerson College,3
+governor,IA,2018-09-19,43.0,41.0,Selzer & Co.,3
+governor,IA,2018-10-31,45.0,48.9,Emerson College,3
+governor,IA,2018-11-01,46.0,44.0,Selzer & Co.,3
+governor,IL,2018-10-01,50.1,29.7,Ipsos,3
+governor,KS,2018-09-12,38.0,39.0,Public Policy Polling,3
+governor,KS,2018-09-27,35.9,37.3,Emerson College,3
+governor,KS,2018-09-30,42.0,41.0,Remington Research Group,3
+governor,KS,2018-10-19,41.0,41.0,Public Policy Polling,3
+governor,KS,2018-10-22,43.0,41.0,Ipsos,3
+governor,KS,2018-10-27,43.0,44.3,Emerson College,3
+governor,MA,2018-09-15,27.8,55.4,Suffolk University,3
+governor,MA,2018-09-19,24.0,68.0,MassINC Polling Group,3
+governor,MA,2018-10-04,27.0,66.0,University of Massachusetts Lowell Center for Public Opinion,3
+governor,MA,2018-10-26,26.0,65.4,Suffolk University,3
+governor,MA,2018-10-27,25.0,68.0,MassINC Polling Group,3
+governor,MD,2018-09-25,37.0,52.0,Mason-Dixon Polling & Strategy,3
+governor,ME,2018-10-28,49.7,41.7,Emerson College,3
+governor,MI,2018-09-12,48.0,38.0,Mitchell Research & Communications,3
+governor,MI,2018-09-18,52.2,38.6,Ipsos,3
+governor,MI,2018-09-23,45.0,37.0,EPIC-MRA,3
+governor,MI,2018-10-01,46.8,35.2,Glengariff Group,3
+governor,MI,2018-10-04,45.7,38.2,Mitchell Research & Communications,3
+governor,MI,2018-10-20,46.0,41.0,EPIC-MRA,3
+governor,MI,2018-10-25,48.0,43.0,Mitchell Research & Communications,3
+governor,MI,2018-10-25,51.7,41.3,Emerson College,3
+governor,MI,2018-10-26,50.0,37.5,Glengariff Group,3
+governor,MI,2018-11-02,47.0,43.0,Research Co.,3
+governor,MI,2018-11-04,54.0,40.0,Mitchell Research & Communications,3
+governor,MI,2018-11-05,48.4,40.6,Mitchell Research & Communications,3
+governor,MN,2018-09-07,47.0,40.0,SurveyUSA,3
+governor,MN,2018-09-11,45.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2018-10-02,51.0,36.0,Marist College,3
+governor,MN,2018-10-16,45.0,39.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2018-10-30,49.0,41.0,SurveyUSA,3
+governor,MN,2018-11-02,48.0,42.0,Research Co.,3
+governor,NH,2018-09-23,44.0,49.0,American Research Group,3
+governor,NH,2018-10-11,35.4,50.5,Emerson College,3
+governor,NH,2018-10-12,38.6,48.6,Saint Anselm College Survey Center,3
+governor,NH,2018-10-14,39.0,50.0,University of New Hampshire Survey Center,3
+governor,NH,2018-10-28,43.3,50.6,Emerson College,3
+governor,NH,2018-11-03,46.0,46.0,University of New Hampshire Survey Center,3
+governor,NM,2018-09-10,50.0,43.0,Research & Polling Inc.,3
+governor,NM,2018-10-25,52.7,43.7,Emerson College,3
+governor,NM,2018-10-29,53.0,43.0,Research & Polling Inc.,3
+governor,NM,2018-11-02,53.0,41.0,Research Co.,3
+governor,NV,2018-09-07,37.4,35.4,Suffolk University,3
+governor,NV,2018-09-11,50.0,38.0,Gravis Marketing,3
+governor,NV,2018-09-12,40.0,43.0,Ipsos,3
+governor,NV,2018-09-27,45.0,41.0,SSRS,3
+governor,NV,2018-10-02,40.0,44.0,Marist College,3
+governor,NV,2018-10-09,45.0,46.0,The New York Times/Siena College,3
+governor,NV,2018-10-11,40.7,45.9,Emerson College,3
+governor,NV,2018-10-14,52.0,48.0,Vox Populi Polling,3
+governor,NV,2018-10-16,41.2,46.0,Ipsos,3
+governor,NV,2018-10-25,46.0,44.0,Gravis Marketing,3
+governor,NV,2018-10-26,46.0,45.0,SSRS,3
+governor,NV,2018-10-27,45.1,43.0,Harris Insights & Analytics,3
+governor,NV,2018-11-01,43.3,46.7,Harris Insights & Analytics,3
+governor,NV,2018-11-03,47.5,46.5,Emerson College,3
+governor,NV,2018-11-04,44.5,44.3,Harris Insights & Analytics,3
+governor,NY,2018-09-24,50.0,28.0,Siena College,3
+governor,NY,2018-10-06,48.0,25.0,Gravis Marketing,3
+governor,NY,2018-10-13,58.0,35.0,Quinnipiac University,3
+governor,NY,2018-10-30,49.0,36.0,Siena College,3
+governor,NY,2018-11-02,54.0,37.0,Research Co.,3
+governor,OH,2018-09-17,43.6,45.1,Ipsos,3
+governor,OH,2018-09-18,44.0,44.0,Marist College,3
+governor,OH,2018-10-06,46.4,40.4,Suffolk University,3
+governor,OH,2018-10-27,49.3,45.8,Emerson College,3
+governor,OH,2018-10-29,48.0,43.0,Gravis Marketing,3
+governor,OH,2018-10-30,43.2,43.4,Cygnal,3
+governor,OH,2018-11-02,44.0,44.0,Research Co.,3
+governor,OK,2018-10-22,44.0,51.0,Magellan Strategies,3
+governor,OR,2018-10-08,40.0,35.0,DHM Research,3
+governor,OR,2018-10-27,46.7,41.6,Emerson College,3
+governor,PA,2018-09-16,55.0,36.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2018-09-16,54.6,37.5,Ipsos,3
+governor,PA,2018-09-20,52.0,30.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2018-10-25,59.0,33.0,Franklin & Marshall College Center for Opinion Research,3
+governor,PA,2018-10-30,58.0,37.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2018-11-02,54.0,39.0,Research Co.,3
+governor,RI,2018-09-16,43.0,36.0,Fleming & Associates,3
+governor,RI,2018-10-01,48.0,34.0,University of New Hampshire Survey Center,3
+governor,RI,2018-10-22,44.5,33.7,Fleming & Associates,3
+governor,SD,2018-10-20,45.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,SD,2018-10-30,44.0,47.0,Mason-Dixon Polling & Strategy,3
+governor,SD,2018-11-03,46.6,47.6,Emerson College,3
+governor,TN,2018-09-10,35.0,55.0,Beacon Research/Shaw & Co. Research,3
+governor,TN,2018-09-13,43.0,52.0,SSRS,3
+governor,TN,2018-09-17,46.0,55.0,Vox Populi Polling,3
+governor,TN,2018-10-01,36.0,53.0,Beacon Research/Shaw & Co. Research,3
+governor,TN,2018-10-10,33.0,59.0,The New York Times/Siena College,3
+governor,TN,2018-10-10,37.0,48.0,SSRS,3
+governor,TN,2018-10-25,40.0,57.0,Marist College,3
+governor,TN,2018-10-26,36.1,58.5,Cygnal,3
+governor,TN,2018-10-26,42.0,52.0,SSRS,3
+governor,TN,2018-10-28,44.0,56.0,Vox Populi Polling,3
+governor,TN,2018-10-29,40.8,54.2,Emerson College,3
+governor,TN,2018-10-29,37.0,54.0,Beacon Research/Shaw & Co. Research,3
+governor,TX,2018-09-10,41.0,50.0,Ipsos,3
+governor,TX,2018-09-14,39.0,58.0,Quinnipiac University,3
+governor,TX,2018-09-17,45.0,55.0,Vox Populi Polling,3
+governor,TX,2018-10-03,33.2,53.0,Emerson College,3
+governor,TX,2018-10-06,38.0,58.0,Quinnipiac University,3
+governor,TX,2018-10-10,35.0,57.0,The New York Times/Siena College,3
+governor,TX,2018-10-11,39.0,57.0,SSRS,3
+governor,TX,2018-10-15,38.1,53.1,Ipsos,3
+governor,TX,2018-10-18,37.0,56.0,YouGov,3
+governor,TX,2018-10-25,40.0,54.0,Quinnipiac University,3
+governor,TX,2018-10-29,42.8,51.1,Emerson College,3
+governor,VT,2018-10-31,39.0,49.0,Gravis Marketing,3
+governor,WI,2018-09-14,49.0,44.0,Marquette University Law School,3
+governor,WI,2018-09-18,50.0,43.0,Ipsos,3
+governor,WI,2018-10-02,50.0,42.0,Marist College,3
+governor,WI,2018-10-05,46.0,47.0,Marquette University Law School,3
+governor,WI,2018-10-15,48.2,45.2,Ipsos,3
+governor,WI,2018-10-26,47.0,47.0,Marquette University Law School,3
+governor,WI,2018-10-30,50.9,46.1,Emerson College,3
+governor,WI,2018-11-02,45.0,44.0,Research Co.,3
+senate,AZ,2018-09-09,46.9,44.3,Ipsos,3
+senate,AZ,2018-09-10,47.0,44.0,Beacon Research/Shaw & Co. Research,3
+senate,AZ,2018-09-13,50.0,43.0,SSRS,3
+senate,AZ,2018-09-18,45.0,43.0,Marist College,3
+senate,AZ,2018-09-20,44.5,39.0,Emerson College,3
+senate,AZ,2018-09-29,44.6,41.6,Suffolk University,3
+senate,AZ,2018-09-30,49.0,52.0,Vox Populi Polling,3
+senate,AZ,2018-10-01,41.0,47.0,Noble Predictive Insights,3
+senate,AZ,2018-10-01,47.0,45.0,Beacon Research/Shaw & Co. Research,3
+senate,AZ,2018-10-04,47.0,44.0,YouGov,3
+senate,AZ,2018-10-17,45.86,47.65,The New York Times/Siena College,3
+senate,AZ,2018-10-21,46.0,48.0,Ipsos,3
+senate,AZ,2018-10-22,45.0,52.0,Noble Predictive Insights,3
+senate,AZ,2018-10-25,47.0,44.0,YouGov,3
+senate,AZ,2018-10-25,47.0,44.0,Marist College,3
+senate,AZ,2018-10-26,51.0,47.0,SSRS,3
+senate,AZ,2018-10-27,42.7,47.5,Harris Insights & Analytics,3
+senate,AZ,2018-10-28,46.0,46.0,Beacon Research/Shaw & Co. Research,3
+senate,AZ,2018-10-28,46.0,47.0,Gravis Marketing,3
+senate,AZ,2018-10-29,52.0,48.0,Vox Populi Polling,3
+senate,AZ,2018-11-01,43.5,49.1,Harris Insights & Analytics,3
+senate,AZ,2018-11-02,48.0,49.0,Noble Predictive Insights,3
+senate,AZ,2018-11-02,48.5,47.8,Emerson College,3
+senate,AZ,2018-11-02,45.0,44.0,Research Co.,3
+senate,AZ,2018-11-04,48.6,44.0,Harris Insights & Analytics,3
+senate,CA,2018-09-09,44.1,23.8,Ipsos,3
+senate,CA,2018-09-13,40.0,29.0,Public Policy Institute of California,3
+senate,CA,2018-09-17,55.0,45.0,Vox Populi Polling,3
+senate,CA,2018-10-13,40.0,26.0,SurveyUSA,3
+senate,CA,2018-10-16,43.0,27.0,Public Policy Institute of California,3
+senate,CA,2018-10-17,36.0,29.0,YouGov,3
+senate,CA,2018-10-18,40.8,22.7,Emerson College,3
+senate,CA,2018-11-01,50.0,36.0,SurveyUSA,3
+senate,CA,2018-11-02,47.0,28.0,Research Co.,3
+senate,CT,2018-10-05,57.0,42.0,Quinnipiac University,3
+senate,CT,2018-10-25,56.0,41.0,Quinnipiac University,3
+senate,CT,2018-10-28,55.1,35.1,Emerson College,3
+senate,CT,2018-10-31,58.0,35.0,Gravis Marketing,3
+senate,FL,2018-09-08,44.0,46.0,SurveyUSA,3
+senate,FL,2018-09-09,44.6,46.0,Ipsos,3
+senate,FL,2018-09-18,48.0,45.0,Marist College,3
+senate,FL,2018-09-22,53.0,46.0,Quinnipiac University,3
+senate,FL,2018-09-26,47.0,46.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2018-09-29,47.4,46.7,St. Pete Polls,3
+senate,FL,2018-09-29,48.0,44.0,Public Policy Polling,3
+senate,FL,2018-10-15,47.2,48.6,St. Pete Polls,3
+senate,FL,2018-10-18,50.0,45.0,SSRS,3
+senate,FL,2018-10-19,52.0,46.0,Quinnipiac University,3
+senate,FL,2018-10-20,48.3,48.6,St. Pete Polls,3
+senate,FL,2018-10-20,49.0,41.0,SurveyUSA,3
+senate,FL,2018-10-21,49.0,44.0,Ipsos,3
+senate,FL,2018-10-22,49.0,45.0,Gravis Marketing,3
+senate,FL,2018-10-25,46.0,46.0,YouGov,3
+senate,FL,2018-10-25,47.89,44.36,The New York Times/Siena College,3
+senate,FL,2018-10-26,49.0,47.0,SSRS,3
+senate,FL,2018-10-27,45.0,43.2,Suffolk University,3
+senate,FL,2018-10-27,43.4,44.3,Harris Insights & Analytics,3
+senate,FL,2018-10-28,50.1,48.3,Cygnal,3
+senate,FL,2018-10-29,50.0,50.0,Vox Populi Polling,3
+senate,FL,2018-10-30,49.3,47.4,St. Pete Polls,3
+senate,FL,2018-10-31,50.0,47.0,Gravis Marketing,3
+senate,FL,2018-11-01,45.5,48.1,Harris Insights & Analytics,3
+senate,FL,2018-11-01,47.5,49.1,St. Pete Polls,3
+senate,FL,2018-11-01,50.0,46.0,Marist College,3
+senate,FL,2018-11-01,51.0,44.0,Quinnipiac University,3
+senate,FL,2018-11-02,49.9,44.9,Emerson College,3
+senate,FL,2018-11-02,47.0,46.0,Research Co.,3
+senate,FL,2018-11-03,49.9,46.2,St. Pete Polls,3
+senate,FL,2018-11-04,47.6,48.2,Harris Insights & Analytics,3
+senate,IN,2018-09-10,43.0,45.0,Beacon Research/Shaw & Co. Research,3
+senate,IN,2018-09-16,45.6,43.4,Ipsos,3
+senate,IN,2018-10-01,43.0,41.0,Beacon Research/Shaw & Co. Research,3
+senate,IN,2018-10-14,55.0,45.0,Vox Populi Polling,3
+senate,IN,2018-10-14,44.0,40.0,Gravis Marketing,3
+senate,IN,2018-10-14,41.0,40.0,SurveyUSA,3
+senate,IN,2018-10-25,43.0,46.0,YouGov,3
+senate,IN,2018-10-26,46.2,49.1,Cygnal,3
+senate,IN,2018-10-26,45.0,42.0,Marist College,3
+senate,IN,2018-10-27,41.6,42.1,Harris Insights & Analytics,3
+senate,IN,2018-10-29,45.0,38.0,Beacon Research/Shaw & Co. Research,3
+senate,IN,2018-11-01,44.4,42.0,Harris Insights & Analytics,3
+senate,IN,2018-11-04,41.8,42.9,Harris Insights & Analytics,3
+senate,MA,2018-09-15,53.8,24.4,Suffolk University,3
+senate,MA,2018-09-19,56.0,30.0,MassINC Polling Group,3
+senate,MA,2018-10-04,56.0,31.0,University of Massachusetts Lowell Center for Public Opinion,3
+senate,MA,2018-10-26,55.6,34.4,Suffolk University,3
+senate,MA,2018-10-27,54.0,32.0,MassINC Polling Group,3
+senate,ME,2018-10-28,5.8,37.2,Emerson College,3
+senate,MI,2018-09-12,54.0,41.0,Mitchell Research & Communications,3
+senate,MI,2018-09-18,54.7,35.4,Ipsos,3
+senate,MI,2018-09-23,56.0,33.0,EPIC-MRA,3
+senate,MI,2018-10-01,52.7,34.7,Glengariff Group,3
+senate,MI,2018-10-04,50.5,41.7,Mitchell Research & Communications,3
+senate,MI,2018-10-20,49.0,42.0,EPIC-MRA,3
+senate,MI,2018-10-21,48.0,41.0,Tarrance Group,3
+senate,MI,2018-10-25,52.0,46.0,Mitchell Research & Communications,3
+senate,MI,2018-10-25,51.9,42.5,Emerson College,3
+senate,MI,2018-10-26,53.0,36.3,Glengariff Group,3
+senate,MI,2018-10-29,54.0,41.0,Gravis Marketing,3
+senate,MI,2018-11-02,52.0,36.0,Research Co.,3
+senate,MI,2018-11-04,53.0,46.0,Mitchell Research & Communications,3
+senate,MI,2018-11-05,49.0,46.0,Mitchell Research & Communications,3
+senate,MN,2018-09-07,53.0,38.0,SurveyUSA,3
+senate,MN,2018-09-07,48.0,39.0,SurveyUSA,3
+senate,MN,2018-09-11,60.0,30.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2018-09-11,44.0,37.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2018-10-02,60.0,32.0,Marist College,3
+senate,MN,2018-10-02,54.0,38.0,Marist College,3
+senate,MN,2018-10-16,56.0,33.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2018-10-16,47.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2018-10-30,57.0,34.0,SurveyUSA,3
+senate,MN,2018-10-30,48.0,40.0,SurveyUSA,3
+senate,MN,2018-11-02,53.0,33.0,Research Co.,3
+senate,MN,2018-11-02,49.0,39.0,Research Co.,3
+senate,MO,2018-09-10,44.0,41.0,Beacon Research/Shaw & Co. Research,3
+senate,MO,2018-09-12,45.0,45.0,YouGov,3
+senate,MO,2018-09-26,46.0,48.0,Remington Research Group,3
+senate,MO,2018-09-27,47.0,44.0,SSRS,3
+senate,MO,2018-09-30,49.0,51.0,Vox Populi Polling,3
+senate,MO,2018-10-01,43.0,43.0,Beacon Research/Shaw & Co. Research,3
+senate,MO,2018-10-02,44.0,45.2,Ipsos,3
+senate,MO,2018-10-17,46.0,47.0,Remington Research Group,3
+senate,MO,2018-10-24,45.0,49.0,Remington Research Group,3
+senate,MO,2018-10-26,46.4,49.4,Cygnal,3
+senate,MO,2018-10-27,46.0,44.1,Harris Insights & Analytics,3
+senate,MO,2018-10-29,43.0,43.0,Beacon Research/Shaw & Co. Research,3
+senate,MO,2018-10-31,47.0,44.0,Marist College,3
+senate,MO,2018-11-01,45.3,46.2,Harris Insights & Analytics,3
+senate,MO,2018-11-01,47.0,47.0,Remington Research Group,3
+senate,MO,2018-11-02,45.6,49.0,Emerson College,3
+senate,MO,2018-11-04,44.7,45.5,Harris Insights & Analytics,3
+senate,MS,2018-10-15,31.0,57.0,Marist College,3
+senate,MS,2018-10-15,36.0,50.0,Marist College,3
+senate,MT,2018-09-12,47.0,45.0,YouGov,3
+senate,MT,2018-09-21,49.0,45.0,Gravis Marketing,3
+senate,MT,2018-09-28,49.0,45.0,Public Policy Polling,3
+senate,MT,2018-10-25,48.0,45.0,Gravis Marketing,3
+senate,MT,2018-10-28,48.0,41.0,Harris Insights & Analytics,3
+senate,MT,2018-10-29,48.5,41.8,Harris Insights & Analytics,3
+senate,MT,2018-11-03,49.9,42.1,Harris Insights & Analytics,3
+senate,ND,2018-09-10,44.0,48.0,Beacon Research/Shaw & Co. Research,3
+senate,ND,2018-10-01,41.0,53.0,Beacon Research/Shaw & Co. Research,3
+senate,ND,2018-10-29,42.0,51.0,Beacon Research/Shaw & Co. Research,3
+senate,NJ,2018-09-23,45.3,43.4,Stockton University William J. Hughes Center for Public Policy,3
+senate,NJ,2018-09-28,43.0,37.0,Fairleigh Dickinson University,3
+senate,NJ,2018-09-29,53.0,42.0,Quinnipiac University,3
+senate,NJ,2018-09-30,52.0,48.0,Vox Populi Polling,3
+senate,NJ,2018-10-04,49.0,39.0,YouGov,3
+senate,NJ,2018-10-08,42.0,40.0,National Research,3
+senate,NJ,2018-10-13,51.0,39.0,Monmouth University Polling Institute,3
+senate,NJ,2018-10-13,51.0,44.0,Quinnipiac University,3
+senate,NJ,2018-10-15,42.0,40.0,National Research,3
+senate,NJ,2018-10-16,51.0,46.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2018-10-25,47.3,42.0,Emerson College,3
+senate,NJ,2018-10-28,54.0,46.0,Vox Populi Polling,3
+senate,NJ,2018-10-28,51.3,39.3,Stockton University William J. Hughes Center for Public Policy,3
+senate,NJ,2018-11-01,55.0,40.0,Quinnipiac University,3
+senate,NM,2018-09-10,47.0,26.0,Research & Polling Inc.,3
+senate,NM,2018-10-25,48.0,31.5,Emerson College,3
+senate,NM,2018-10-29,51.0,31.0,Research & Polling Inc.,3
+senate,NM,2018-11-02,47.0,33.0,Research Co.,3
+senate,NV,2018-09-07,41.6,41.2,Suffolk University,3
+senate,NV,2018-09-11,47.0,45.0,Gravis Marketing,3
+senate,NV,2018-09-12,43.0,46.0,Ipsos,3
+senate,NV,2018-09-27,47.0,43.0,SSRS,3
+senate,NV,2018-10-02,42.0,44.0,Marist College,3
+senate,NV,2018-10-09,44.84,46.89,The New York Times/Siena College,3
+senate,NV,2018-10-11,41.4,48.1,Emerson College,3
+senate,NV,2018-10-14,51.0,49.0,Vox Populi Polling,3
+senate,NV,2018-10-15,48.0,46.0,Public Policy Polling,3
+senate,NV,2018-10-16,41.2,46.9,Ipsos,3
+senate,NV,2018-10-25,47.0,45.0,Gravis Marketing,3
+senate,NV,2018-10-26,48.0,45.0,SSRS,3
+senate,NV,2018-10-27,45.6,42.7,Harris Insights & Analytics,3
+senate,NV,2018-11-01,44.4,45.2,Harris Insights & Analytics,3
+senate,NV,2018-11-03,49.1,44.6,Emerson College,3
+senate,NV,2018-11-04,46.9,44.6,Harris Insights & Analytics,3
+senate,NY,2018-09-24,61.0,29.0,Siena College,3
+senate,NY,2018-10-13,58.0,33.0,Quinnipiac University,3
+senate,NY,2018-10-30,58.0,35.0,Siena College,3
+senate,NY,2018-11-02,60.0,32.0,Research Co.,3
+senate,OH,2018-09-17,49.5,39.3,Ipsos,3
+senate,OH,2018-09-18,49.0,35.0,Marist College,3
+senate,OH,2018-10-06,53.6,36.0,Suffolk University,3
+senate,OH,2018-10-27,48.8,43.0,Emerson College,3
+senate,OH,2018-10-29,46.0,37.0,Gravis Marketing,3
+senate,OH,2018-10-30,52.4,42.0,Cygnal,3
+senate,OH,2018-11-02,53.0,39.0,Research Co.,3
+senate,PA,2018-09-16,53.0,35.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2018-09-16,52.6,37.0,Ipsos,3
+senate,PA,2018-09-20,50.0,33.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2018-10-25,50.0,35.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2018-10-30,54.0,40.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2018-11-02,56.0,39.0,Research Co.,3
+senate,RI,2018-09-16,54.0,35.0,Fleming & Associates,3
+senate,RI,2018-10-01,57.0,33.0,University of New Hampshire Survey Center,3
+senate,RI,2018-10-22,55.3,36.3,Fleming & Associates,3
+senate,TN,2018-09-10,44.0,47.0,Beacon Research/Shaw & Co. Research,3
+senate,TN,2018-09-13,50.0,45.0,SSRS,3
+senate,TN,2018-09-17,51.0,49.0,Vox Populi Polling,3
+senate,TN,2018-10-01,43.0,48.0,Beacon Research/Shaw & Co. Research,3
+senate,TN,2018-10-04,42.0,50.0,YouGov,3
+senate,TN,2018-10-08,44.0,47.0,Ipsos,3
+senate,TN,2018-10-10,40.03,54.46,The New York Times/Siena College,3
+senate,TN,2018-10-10,44.0,43.0,SSRS,3
+senate,TN,2018-10-25,46.0,51.0,Marist College,3
+senate,TN,2018-10-26,44.7,50.5,Cygnal,3
+senate,TN,2018-10-26,45.0,49.0,SSRS,3
+senate,TN,2018-10-28,47.0,53.0,Vox Populi Polling,3
+senate,TN,2018-10-29,43.6,52.0,Emerson College,3
+senate,TN,2018-10-29,41.0,50.0,Beacon Research/Shaw & Co. Research,3
+senate,TX,2018-09-10,47.0,45.0,Ipsos,3
+senate,TX,2018-09-14,45.0,54.0,Quinnipiac University,3
+senate,TX,2018-09-17,50.0,50.0,Vox Populi Polling,3
+senate,TX,2018-09-19,46.0,49.0,Public Policy Polling,3
+senate,TX,2018-10-03,42.4,47.0,Emerson College,3
+senate,TX,2018-10-04,44.0,50.0,YouGov,3
+senate,TX,2018-10-06,45.0,54.0,Quinnipiac University,3
+senate,TX,2018-10-10,43.19,51.25,The New York Times/Siena College,3
+senate,TX,2018-10-10,43.0,52.0,WPA Intelligence,3
+senate,TX,2018-10-11,45.0,52.0,SSRS,3
+senate,TX,2018-10-15,44.4,48.9,Ipsos,3
+senate,TX,2018-10-18,45.0,51.0,YouGov,3
+senate,TX,2018-10-25,46.0,51.0,Quinnipiac University,3
+senate,TX,2018-10-29,47.2,50.3,Emerson College,3
+senate,VA,2018-09-06,52.0,36.0,SSRS,3
+senate,VT,2018-10-31,66.0,30.0,Gravis Marketing,3
+senate,WA,2018-10-06,53.0,39.0,Elway Research,3
+senate,WI,2018-09-14,53.0,42.0,Marquette University Law School,3
+senate,WI,2018-09-18,52.0,39.0,Ipsos,3
+senate,WI,2018-10-02,54.0,40.0,Marist College,3
+senate,WI,2018-10-05,53.0,43.0,Marquette University Law School,3
+senate,WI,2018-10-10,52.0,42.0,Public Policy Polling,3
+senate,WI,2018-10-15,53.7,38.5,Ipsos,3
+senate,WI,2018-10-26,54.0,43.0,Marquette University Law School,3
+senate,WI,2018-10-30,53.1,44.4,Emerson College,3
+senate,WI,2018-11-02,50.0,39.0,Research Co.,3
+senate,WV,2018-09-14,44.8,33.1,Emerson College,3
+senate,WV,2018-09-24,47.0,43.0,Tarrance Group,3
+senate,WV,2018-10-14,53.0,47.0,Vox Populi Polling,3
+senate,WV,2018-10-17,42.0,44.0,"Fabrizio, Lee & Associates",3
+senate,WV,2018-10-30,47.3,41.5,Emerson College,3

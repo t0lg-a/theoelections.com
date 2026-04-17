@@ -1,1007 +1,722 @@
-mode,state,date,dem,rep,sigma,pollster
-president,AK,2004-09-10,30.0,57.0,4.08,American Research Group
-president,AL,2004-09-09,42.0,53.0,4.9,Scott Rasmussen (Rasmussen Reports)
-president,AL,2004-09-15,40.0,54.0,4.08,American Research Group
-president,AL,2004-09-29,22.0,59.0,4.39,University of South Alabama Polling Group
-president,AL,2004-10-02,34.0,62.0,4.08,SurveyUSA
-president,AL,2004-10-13,32.0,56.0,4.28,Capital Survey Research Center
-president,AL,2004-10-26,39.0,57.0,3.97,SurveyUSA
-president,AR,2004-09-16,45.0,48.0,4.08,American Research Group
-president,AR,2004-09-18,44.0,51.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,AR,2004-09-28,44.0,53.0,4.16,SurveyUSA
-president,AR,2004-10-02,46.9,46.7,4.28,Zogby Analytics
-president,AR,2004-10-05,43.0,52.0,4.46,Opinion Research Associates
-president,AR,2004-10-10,45.0,46.0,4.46,Zogby Analytics
-president,AR,2004-10-16,46.0,51.0,4.03,SurveyUSA
-president,AR,2004-10-15,48.4,49.7,4.39,Zogby Analytics
-president,AR,2004-10-19,48.0,48.0,4.47,Opinion Research Associates
-president,AR,2004-10-13,40.0,47.0,3.63,University of Arkansas Department of Political Science
-president,AR,2004-10-24,45.0,51.0,3.93,SurveyUSA
-president,AR,2004-10-28,46.9,50.1,3.98,Zogby Analytics
-president,AR,2004-10-28,43.0,51.0,4.0,Mason-Dixon Polling & Strategy
-president,AR,2004-10-30,48.0,48.0,3.93,SurveyUSA
-president,AR,2004-10-31,46.0,51.0,4.26,SurveyUSA
-president,AZ,2004-09-04,38.0,54.0,4.08,Market Solutions Group
-president,AZ,2004-09-13,39.0,50.0,4.0,Mason-Dixon Polling & Strategy
-president,AZ,2004-09-13,43.0,49.0,4.08,American Research Group
-president,AZ,2004-09-22,43.0,54.0,3.98,SurveyUSA
-president,AZ,2004-09-25,42.0,52.0,4.17,Arizona State University Morrison Institute for Public Policy
-president,AZ,2004-10-03,38.0,48.0,4.08,Market Solutions Group
-president,AZ,2004-10-06,41.0,55.0,4.09,SurveyUSA
-president,AZ,2004-10-10,44.0,49.0,4.99,Northern Arizona University Social Research Laboratory
-president,AZ,2004-10-18,40.0,47.0,4.08,Market Solutions Group
-president,AZ,2004-10-18,43.0,54.0,4.03,SurveyUSA
-president,AZ,2004-10-20,45.0,50.0,4.18,Arizona State University Morrison Institute for Public Policy
-president,AZ,2004-10-26,45.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,AZ,2004-10-29,41.0,56.0,4.09,SurveyUSA
-president,CA,2004-09-07,52.0,42.0,4.09,SurveyUSA
-president,CA,2004-09-12,52.0,41.0,4.08,American Research Group
-president,CA,2004-09-12,45.0,46.0,4.08,American Research Group
-president,CA,2004-09-16,51.0,39.0,2.92,Public Policy Institute of California
-president,CA,2004-09-19,53.0,40.0,3.41,Los Angeles Times
-president,CA,2004-09-22,53.0,40.0,3.43,Scott Rasmussen (Rasmussen Reports)
-president,CA,2004-09-26,49.0,41.0,4.27,Field Research Corp. (Field Poll)
-president,CA,2004-09-29,48.0,42.0,4.08,San Jose State
-president,CA,2004-10-02,49.0,40.0,4.13,Field Research Corp. (Field Poll)
-president,CA,2004-10-03,51.0,43.0,3.66,SurveyUSA
-president,CA,2004-10-02,53.0,42.0,3.4,Scott Rasmussen (Rasmussen Reports)
-president,CA,2004-10-16,53.0,43.0,3.77,SurveyUSA
-president,CA,2004-10-14,51.0,39.0,2.92,Public Policy Institute of California
-president,CA,2004-10-16,56.0,39.0,3.29,Los Angeles Times
-president,CA,2004-10-24,53.0,44.0,3.67,SurveyUSA
-president,CA,2004-10-24,49.0,42.0,3.03,Field Research Corp. (Field Poll)
-president,CA,2004-10-30,54.0,43.0,3.61,SurveyUSA
-president,CO,2004-09-12,44.0,45.0,4.47,Public Opinion Strategies
-president,CO,2004-09-12,45.0,46.0,4.08,American Research Group
-president,CO,2004-09-16,45.0,46.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,CO,2004-09-16,38.0,50.0,4.08,Ciruli Associates
-president,CO,2004-09-22,44.0,52.0,4.0,SurveyUSA
-president,CO,2004-09-29,44.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,CO,2004-10-04,49.2,47.8,3.76,Zogby Analytics
-president,CO,2004-10-05,41.0,50.0,3.98,Mason-Dixon Polling & Strategy
-president,CO,2004-10-05,49.0,49.0,3.87,Gallup
-president,CO,2004-10-06,44.0,52.0,4.09,SurveyUSA
-president,CO,2004-10-15,43.0,49.0,3.98,Mason-Dixon Polling & Strategy
-president,CO,2004-10-15,42.0,47.0,4.47,Public Opinion Strategies
-president,CO,2004-10-15,42.0,47.0,4.47,Public Opinion Strategies
-president,CO,2004-10-16,47.5,49.3,3.76,Zogby Analytics
-president,CO,2004-10-16,45.0,51.0,3.87,Gallup
-president,CO,2004-10-18,45.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,CO,2004-10-17,42.0,48.0,4.08,Ciruli Associates
-president,CO,2004-10-19,45.0,52.0,4.1,SurveyUSA
-president,CO,2004-10-20,48.0,48.0,5,FM3 Research
-president,CO,2004-10-23,49.0,45.0,4.08,Zogby Analytics
-president,CO,2004-10-26,42.0,51.0,4.47,Public Opinion Strategies
-president,CO,2004-10-27,48.0,47.0,4.08,Zogby Analytics
-president,CO,2004-10-28,43.0,50.0,4.0,Mason-Dixon Polling & Strategy
-president,CO,2004-10-29,46.0,52.0,4.0,SurveyUSA
-president,CO,2004-10-31,47.0,49.0,4.08,Zogby Analytics
-president,CO,2004-10-31,47.0,50.0,3.77,SurveyUSA
-president,CT,2004-09-13,54.0,39.0,4.08,American Research Group
-president,CT,2004-09-27,50.0,44.0,3.72,Quinnipiac University
-president,DC,2004-09-12,78.0,11.0,4.08,American Research Group
-president,DE,2004-09-14,50.0,41.0,4.08,American Research Group
-president,DE,2004-09-24,45.0,38.0,4.12,West Chester University
-president,FL,2004-09-13,45.0,51.0,4.06,SurveyUSA
-president,FL,2004-09-15,48.1,47.6,2.45,Zogby Analytics
-president,FL,2004-09-19,46.0,45.0,4.08,American Research Group
-president,FL,2004-09-20,41.0,49.0,3.49,Quinnipiac University
-president,FL,2004-09-20,46.0,49.0,3.85,Gallup
-president,FL,2004-09-26,43.0,52.0,3.77,Gallup
-president,FL,2004-10-01,45.0,47.0,5,InsiderAdvantage
-president,FL,2004-09-29,47.0,51.0,3.58,Scott Rasmussen (Rasmussen Reports)
-president,FL,2004-10-02,46.0,51.0,3.75,SurveyUSA
-president,FL,2004-10-03,49.0,47.0,3.54,EMC Research
-president,FL,2004-10-04,44.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,FL,2004-10-04,47.0,45.0,4.08,American Research Group
-president,FL,2004-10-03,44.0,51.0,3.73,Quinnipiac University
-president,FL,2004-10-02,49.5,49.1,2.28,Zogby Analytics
-president,FL,2004-10-07,48.0,48.0,3.91,ABC News/The Washington Post
-president,FL,2004-10-11,44.0,47.0,5,InsiderAdvantage
-president,FL,2004-10-11,46.0,49.0,3.82,Scott Rasmussen (Rasmussen Reports)
-president,FL,2004-10-12,45.0,44.0,4.04,University of North Florida Public Opinion Research Lab
-president,FL,2004-10-15,45.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,FL,2004-10-15,48.0,44.0,5,InsiderAdvantage
-president,FL,2004-10-16,50.0,49.0,4.08,SurveyUSA
-president,FL,2004-10-16,48.9,50.1,2.15,Zogby Analytics
-president,FL,2004-10-17,48.9,50.1,2.17,Zogby Analytics
-president,FL,2004-10-17,47.0,48.0,3.52,Quinnipiac University
-president,FL,2004-10-20,46.0,46.0,3.54,SEA Polling & Strategic Design
-president,FL,2004-10-20,46.0,46.0,5,InsiderAdvantage
-president,FL,2004-10-23,46.0,49.0,4.08,Zogby Analytics
-president,FL,2004-10-23,50.0,48.0,3.65,SurveyUSA
-president,FL,2004-10-23,43.0,51.0,3.61,Gallup
-president,FL,2004-10-24,49.0,46.0,4.08,American Research Group
-president,FL,2004-10-24,46.0,49.0,3.25,Quinnipiac University
-president,FL,2004-10-24,43.0,51.0,4.43,Los Angeles Times
-president,FL,2004-10-23,48.0,48.0,4.2,Scott Rasmussen (Rasmussen Reports)
-president,FL,2004-10-27,45.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,FL,2004-10-26,46.0,48.0,4.08,EMC Research
-president,FL,2004-10-25,48.0,47.0,3.53,The Florida Poll
-president,FL,2004-10-27,47.0,48.0,4.08,Zogby Analytics
-president,FL,2004-10-28,45.0,49.0,3.54,Mason-Dixon Polling & Strategy
-president,FL,2004-10-29,49.0,46.0,2.96,Gallup
-president,FL,2004-10-30,49.0,44.0,3.78,Opinion Dynamics
-president,FL,2004-10-30,48.0,48.0,5,InsiderAdvantage
-president,FL,2004-10-30,48.0,49.0,3.67,SurveyUSA
-president,FL,2004-10-30,48.0,47.0,2.56,Gallup
-president,FL,2004-10-29,43.0,51.0,3.02,Quinnipiac University
-president,FL,2004-10-28,47.0,50.0,4.08,Scott Rasmussen (Rasmussen Reports)
-president,FL,2004-10-31,48.0,48.0,4.08,Zogby Analytics
-president,FL,2004-10-31,50.0,48.0,4.08,American Research Group
-president,FL,2004-10-31,48.0,48.0,4.08,Zogby Analytics
-president,FL,2004-10-31,51.0,47.0,2.64,Harris Insights & Analytics
-president,FL,2004-10-31,48.0,47.0,4.09,Zogby Analytics
-president,GA,2004-09-12,42.0,53.0,4.08,American Research Group
-president,GA,2004-09-14,38.0,58.0,3.9,SurveyUSA
-president,GA,2004-09-15,42.0,53.0,5,Scott Rasmussen (Rasmussen Reports)
-president,GA,2004-10-06,39.0,58.0,4.1,SurveyUSA
-president,GA,2004-10-07,39.0,54.0,4.47,Zogby Analytics
-president,GA,2004-10-14,41.0,51.0,4.46,Zogby Analytics
-president,GA,2004-10-19,40.0,57.0,4.05,SurveyUSA
-president,GA,2004-10-28,42.0,52.0,4.47,Zogby Analytics
-president,GA,2004-10-29,43.0,55.0,3.99,SurveyUSA
-president,HI,2004-09-09,51.0,41.0,4.08,American Research Group
-president,HI,2004-10-15,43.0,43.0,4.08,Ward Research
-president,HI,2004-10-19,45.0,46.0,4.04,SMS Research & Marketing Services
-president,IA,2004-09-13,46.0,48.0,4.08,American Research Group
-president,IA,2004-09-15,42.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,IA,2004-09-15,50.3,47.3,4.2,Zogby Analytics
-president,IA,2004-09-18,44.0,50.0,3.98,Gallup
-president,IA,2004-09-21,45.0,48.0,3.78,Opinion Dynamics
-president,IA,2004-09-21,46.0,50.0,3.57,SurveyUSA
-president,IA,2004-09-16,45.0,48.0,5,Scott Rasmussen (Rasmussen Reports)
-president,IA,2004-09-30,47.0,46.0,4.09,University of Minnesota Hubert H. Humphrey School of Public Affairs
-president,IA,2004-10-03,43.0,46.0,3.73,Harstad Strategic Research
-president,IA,2004-10-02,51.1,44.5,4.13,Zogby Analytics
-president,IA,2004-10-05,48.0,47.0,3.87,SurveyUSA
-president,IA,2004-10-03,50.0,46.0,5,Scott Rasmussen (Rasmussen Reports)
-president,IA,2004-10-10,45.0,47.0,4.47,Market Shares Corp.
-president,IA,2004-10-11,47.0,47.0,4.08,American Research Group
-president,IA,2004-10-17,43.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,IA,2004-10-15,51.1,47.9,4.18,Zogby Analytics
-president,IA,2004-10-16,46.0,45.0,4.46,Central Surveys Inc.
-president,IA,2004-10-19,45.0,51.0,3.81,SurveyUSA
-president,IA,2004-10-15,46.0,48.0,5,Scott Rasmussen (Rasmussen Reports)
-president,IA,2004-10-23,45.0,47.0,4.08,Zogby Analytics
-president,IA,2004-10-24,46.0,50.0,3.93,Gallup
-president,IA,2004-10-26,47.0,48.0,4.08,American Research Group
-president,IA,2004-10-27,45.0,44.0,4.08,Zogby Analytics
-president,IA,2004-10-28,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,IA,2004-10-27,48.0,45.0,3.52,Selzer & Co.
-president,IA,2004-10-29,49.0,49.0,3.89,SurveyUSA
-president,IA,2004-10-29,46.0,48.0,2.99,Gallup
-president,IA,2004-10-30,44.0,48.0,3.78,Opinion Dynamics
-president,IA,2004-10-30,50.0,44.0,4.08,Zogby Analytics
-president,IA,2004-10-31,50.0,45.0,4.08,Zogby Analytics
-president,IA,2004-10-31,50.0,47.0,4.39,SurveyUSA
-president,ID,2004-09-09,30.0,59.0,4.08,American Research Group
-president,IL,2004-09-13,49.0,45.0,4.02,SurveyUSA
-president,IL,2004-09-15,49.0,43.0,4.08,American Research Group
-president,IL,2004-09-19,49.0,40.0,3.78,Market Shares Corp.
-president,IL,2004-10-04,52.0,41.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,IL,2004-10-05,55.0,39.0,3.94,SurveyUSA
-president,IL,2004-10-18,50.0,42.0,3.78,Market Shares Corp.
-president,IL,2004-10-17,52.0,42.0,3.48,Richard Day Research
-president,IL,2004-10-28,54.0,42.0,3.88,SurveyUSA
-president,IL,2004-10-30,53.0,43.0,2.89,Victory Research
-president,IN,2004-09-08,36.0,60.0,3.8,SurveyUSA
-president,IN,2004-09-18,39.0,54.0,4.08,American Research Group
-president,IN,2004-10-01,33.0,61.0,3.23,Selzer & Co.
-president,IN,2004-10-04,39.0,58.0,4.12,SurveyUSA
-president,IN,2004-10-18,37.0,59.0,4.08,SurveyUSA
-president,IN,2004-10-28,39.0,58.0,4.12,SurveyUSA
-president,IN,2004-10-28,37.0,57.0,3.16,Selzer & Co.
-president,KS,2004-09-08,35.0,60.0,4.07,SurveyUSA
-president,KS,2004-09-17,35.0,57.0,4.08,American Research Group
-president,KS,2004-10-10,38.0,57.0,4.1,SurveyUSA
-president,KS,2004-10-24,30.0,59.0,4.18,Market Research Institute Inc.
-president,KS,2004-10-26,37.0,60.0,3.92,SurveyUSA
-president,KY,2004-09-08,39.0,56.0,3.88,SurveyUSA
-president,KY,2004-09-10,39.0,57.0,4.08,American Research Group
-president,KY,2004-09-12,38.0,53.0,3.9,Louisville Courier-Journal
-president,KY,2004-10-05,38.0,57.0,4.01,SurveyUSA
-president,KY,2004-10-18,37.0,59.0,3.99,SurveyUSA
-president,KY,2004-10-19,39.0,56.0,3.81,Louisville Courier-Journal
-president,KY,2004-10-29,38.0,59.0,3.97,SurveyUSA
-president,LA,2004-09-19,42.0,50.0,4.08,American Research Group
-president,LA,2004-10-06,36.0,51.0,4.08,Market Research Insight
-president,LA,2004-10-12,32.0,50.0,4.08,Southern Media & Opinion Research
-president,LA,2004-10-14,37.0,46.0,4.08,Ed Renwick/Loyola University New Orleans
-president,LA,2004-10-18,37.0,52.0,4.08,Market Research Insight
-president,LA,2004-10-17,40.0,48.0,3.78,University of New Orleans Survey Research Center
-president,LA,2004-10-19,32.0,58.0,3.96,Southeastern Louisiana University Social Science Research Center
-president,MA,2004-09-12,64.0,27.0,4.08,American Research Group
-president,MD,2004-09-08,52.0,43.0,4.08,American Research Group
-president,MD,2004-09-18,48.0,48.0,4.09,SurveyUSA
-president,MD,2004-09-20,48.0,45.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MD,2004-10-03,52.0,42.0,3.52,Gonzales Research & Marketing Strategies Inc.
-president,MD,2004-10-06,56.0,41.0,4.14,SurveyUSA
-president,MD,2004-10-25,59.0,38.0,4.69,Ipsos
-president,MD,2004-10-25,52.0,41.0,4.0,Mason-Dixon Polling & Strategy
-president,MD,2004-10-28,54.0,43.0,4.06,SurveyUSA
-president,ME,2004-09-09,43.0,43.0,5,Zogby Analytics
-president,ME,2004-09-09,48.0,44.0,4.08,American Research Group
-president,ME,2004-09-21,46.0,47.0,3.97,SurveyUSA
-president,ME,2004-09-16,45.0,42.0,4.08,Digital Research
-president,ME,2004-09-25,42.0,39.0,5,Myers Research & Strategic Services
-president,ME,2004-10-04,49.0,47.0,3.91,SurveyUSA
-president,ME,2004-10-18,51.0,45.0,3.89,SurveyUSA
-president,ME,2004-10-20,50.0,39.0,4.99,Zogby Analytics
-president,ME,2004-10-29,52.0,44.0,3.15,SurveyUSA
-president,MI,2004-09-12,50.0,44.0,3.98,Gallup
-president,MI,2004-09-15,47.0,41.0,4.0,Mason-Dixon Polling & Strategy
-president,MI,2004-09-17,48.0,46.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MI,2004-09-15,51.9,45.9,2.96,Zogby Analytics
-president,MI,2004-09-17,48.0,44.0,4.05,EPIC-MRA
-president,MI,2004-09-19,48.0,40.0,4.08,American Research Group
-president,MI,2004-09-21,46.0,44.0,3.54,Opinion Dynamics
-president,MI,2004-09-21,52.0,42.0,4.03,SurveyUSA
-president,MI,2004-09-22,45.0,43.0,4.08,Marketing Resource Group (MRG)
-president,MI,2004-09-25,48.0,50.0,4.08,Detroit Free Press
-president,MI,2004-09-26,46.0,46.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MI,2004-10-05,52.0,42.0,3.9,SurveyUSA
-president,MI,2004-10-03,54.1,44.4,2.88,Zogby Analytics
-president,MI,2004-10-09,49.0,46.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MI,2004-10-17,47.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,MI,2004-10-15,52.6,45.9,2.85,Zogby Analytics
-president,MI,2004-10-18,43.0,47.0,5,Mitchell Research & Communications
-president,MI,2004-10-19,51.0,44.0,3.87,SurveyUSA
-president,MI,2004-10-20,49.0,43.0,4.05,EPIC-MRA
-president,MI,2004-10-23,52.0,42.0,4.08,Zogby Analytics
-president,MI,2004-10-22,45.0,44.0,4.08,Mitchell Research & Communications
-president,MI,2004-10-23,51.0,46.0,4.22,Scott Rasmussen (Rasmussen Reports)
-president,MI,2004-10-27,43.0,41.0,4.08,Mitchell Research & Communications
-president,MI,2004-10-27,45.0,47.0,4.08,Zogby Analytics
-president,MI,2004-10-28,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
-president,MI,2004-10-29,50.0,47.0,3.86,SurveyUSA
-president,MI,2004-10-28,50.0,46.0,4.08,Scott Rasmussen (Rasmussen Reports)
-president,MI,2004-10-28,52.0,44.0,4.08,Zogby Analytics
-president,MI,2004-10-31,52.0,46.0,4.08,Zogby Analytics
-president,MN,2004-09-11,47.0,45.0,4.08,American Research Group
-president,MN,2004-09-10,50.0,41.0,3.11,Minneapolis Star Tribune
-president,MN,2004-09-13,44.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,MN,2004-09-13,45.0,45.0,3.85,Gallup
-president,MN,2004-09-15,51.7,42.0,3.76,Zogby Analytics
-president,MN,2004-09-21,48.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,MN,2004-10-03,50.0,43.0,3.54,Garin-Hart-Yang Research Group
-president,MN,2004-10-02,52.4,44.1,3.76,Zogby Analytics
-president,MN,2004-10-10,48.0,43.0,3.52,Minneapolis Star Tribune
-president,MN,2004-10-10,45.0,43.0,4.47,Market Shares Corp.
-president,MN,2004-10-10,45.0,43.0,4.47,Market Shares Corp.
-president,MN,2004-10-11,48.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,MN,2004-10-14,48.0,49.0,3.6,Scott Rasmussen (Rasmussen Reports)
-president,MN,2004-10-17,45.0,47.0,4.0,Mason-Dixon Polling & Strategy
-president,MN,2004-10-15,54.2,43.1,3.57,Zogby Analytics
-president,MN,2004-10-23,46.0,45.0,4.08,Zogby Analytics
-president,MN,2004-10-23,44.0,47.0,3.81,University of Minnesota Hubert H. Humphrey School of Public Affairs
-president,MN,2004-10-21,49.0,42.0,4.44,St. Cloud State University
-president,MN,2004-10-27,45.0,46.0,4.07,Zogby Analytics
-president,MN,2004-10-28,47.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,MN,2004-10-28,48.0,47.0,4.08,Scott Rasmussen (Rasmussen Reports)
-president,MN,2004-10-28,49.0,41.0,3.17,Minneapolis Star Tribune
-president,MN,2004-10-29,52.0,44.0,3.05,Gallup
-president,MN,2004-10-28,49.0,47.0,3.76,Zogby Analytics
-president,MN,2004-10-31,51.0,45.0,4.08,Zogby Analytics
-president,MN,2004-10-31,47.0,43.0,3.67,Minneapolis Star Tribune
-president,MO,2004-09-05,41.0,55.0,3.82,Gallup
-president,MO,2004-09-08,46.0,48.0,3.89,SurveyUSA
-president,MO,2004-09-15,41.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,MO,2004-09-15,46.1,51.5,3.76,Zogby Analytics
-president,MO,2004-09-18,44.0,50.0,4.08,American Research Group
-president,MO,2004-10-03,47.0,49.0,3.83,SurveyUSA
-president,MO,2004-10-02,47.6,49.8,3.76,Zogby Analytics
-president,MO,2004-09-28,45.0,51.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MO,2004-10-15,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,MO,2004-10-17,45.0,51.0,3.86,SurveyUSA
-president,MO,2004-10-15,47.6,50.7,3.06,Zogby Analytics
-president,MO,2004-10-18,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,MO,2004-10-13,45.0,50.0,5,Scott Rasmussen (Rasmussen Reports)
-president,MO,2004-10-24,45.0,52.0,3.83,SurveyUSA
-president,MO,2004-10-24,45.0,49.0,4.25,Market Research Institute Inc.
-president,MO,2004-10-28,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,MO,2004-10-30,47.0,52.0,3.8,SurveyUSA
-president,MO,2004-10-28,47.2,51.4,2.76,Zogby Analytics
-president,MS,2004-09-16,42.0,51.0,4.08,American Research Group
-president,MT,2004-09-08,32.0,60.0,4.08,American Research Group
-president,MT,2004-09-21,36.0,54.0,4.0,Mason-Dixon Polling & Strategy
-president,MT,2004-10-09,34.0,55.0,4.93,Montana State University Billings
-president,MT,2004-10-19,36.0,57.0,4.0,Mason-Dixon Polling & Strategy
-president,NC,2004-09-07,46.0,50.0,4.13,SurveyUSA
-president,NC,2004-09-07,42.0,55.0,4.74,Scott Rasmussen (Rasmussen Reports)
-president,NC,2004-09-15,44.0,49.0,4.08,American Research Group
-president,NC,2004-09-16,47.0,47.0,3.54,Lake Research Partners
-president,NC,2004-09-26,41.0,53.0,4.08,Public Opinion Strategies
-president,NC,2004-09-27,43.0,52.0,4.0,Mason-Dixon Polling & Strategy
-president,NC,2004-09-26,42.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NC,2004-10-03,45.0,52.0,3.99,SurveyUSA
-president,NC,2004-10-16,47.0,50.0,3.99,SurveyUSA
-president,NC,2004-10-18,43.0,51.0,4.0,Mason-Dixon Polling & Strategy
-president,NC,2004-10-19,40.0,48.0,4.08,The Tyson Group
-president,NC,2004-10-23,44.0,54.0,3.8,SurveyUSA
-president,NC,2004-10-25,43.0,52.0,4.0,Mason-Dixon Polling & Strategy
-president,NC,2004-10-30,45.0,53.0,4.02,SurveyUSA
-president,ND,2004-09-11,33.0,62.0,4.08,American Research Group
-president,ND,2004-10-18,35.0,55.0,4.01,Minnesota State University Moorhead Public Affairs Institute
-president,NE,2004-09-11,30.0,61.0,4.08,American Research Group
-president,NE,2004-10-19,32.0,61.0,3.64,MSR Group
-president,NE,2004-10-17,32.0,61.0,3.15,RKM Research and Communications Inc.
-president,NH,2004-09-15,51.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NH,2004-09-14,40.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,NH,2004-09-16,45.0,47.0,4.08,American Research Group
-president,NH,2004-09-15,48.1,44.5,4.31,Zogby Analytics
-president,NH,2004-09-22,47.0,47.0,5,Lake Research Partners
-president,NH,2004-10-02,49.0,43.0,5,Becker Institute
-president,NH,2004-09-30,45.0,50.0,4.31,University of New Hampshire Survey Center
-president,NH,2004-10-03,49.0,42.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-president,NH,2004-10-04,47.0,47.0,4.08,American Research Group
-president,NH,2004-10-02,50.5,43.9,4.17,Zogby Analytics
-president,NH,2004-10-15,45.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,NH,2004-10-16,46.0,41.0,5,Suffolk University
-president,NH,2004-10-18,49.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NH,2004-10-17,46.0,47.0,4.08,American Research Group
-president,NH,2004-10-15,51.1,46.0,4.43,Zogby Analytics
-president,NH,2004-10-20,50.0,41.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-president,NH,2004-10-26,50.0,46.0,3.63,University of New Hampshire Survey Center
-president,NH,2004-10-27,50.0,43.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-president,NH,2004-10-28,47.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,NH,2004-10-29,47.0,47.0,4.08,American Research Group
-president,NH,2004-10-30,49.0,48.0,3.22,University of New Hampshire Survey Center
-president,NH,2004-10-28,50.2,45.7,3.98,Zogby Analytics
-president,NH,2004-10-31,48.0,49.0,4.08,American Research Group
-president,NJ,2004-09-05,43.0,41.0,3.96,Rutgers University Eagleton Center for Public Interest Polling
-president,NJ,2004-09-13,45.0,49.0,3.69,SurveyUSA
-president,NJ,2004-09-15,50.0,42.0,4.08,American Research Group
-president,NJ,2004-09-18,48.0,48.0,3.86,Quinnipiac University
-president,NJ,2004-09-18,49.0,46.0,5,Scott Rasmussen (Rasmussen Reports)
-president,NJ,2004-09-25,45.0,44.0,4.52,Fairleigh Dickinson University
-president,NJ,2004-10-02,50.0,45.0,3.79,SurveyUSA
-president,NJ,2004-10-03,49.0,46.0,3.49,Quinnipiac University
-president,NJ,2004-10-03,47.0,41.0,4.17,Rutgers University Eagleton Center for Public Interest Polling
-president,NJ,2004-10-03,49.0,41.0,4.47,Fairleigh Dickinson University
-president,NJ,2004-10-03,53.0,44.0,5,Scott Rasmussen (Rasmussen Reports)
-president,NJ,2004-10-09,48.0,43.0,4.47,Fairleigh Dickinson University
-president,NJ,2004-10-11,46.0,46.0,4.44,Fairleigh Dickinson University
-president,NJ,2004-10-16,49.0,45.0,3.57,Quinnipiac University
-president,NJ,2004-10-16,51.0,38.0,3.89,Rutgers University Eagleton Center for Public Interest Polling
-president,NJ,2004-10-17,51.0,43.0,3.77,SurveyUSA
-president,NJ,2004-10-17,49.0,41.0,4.46,Fairleigh Dickinson University
-president,NJ,2004-10-23,46.0,46.0,3.43,Quinnipiac University
-president,NJ,2004-10-25,47.0,40.0,4.27,Fairleigh Dickinson University
-president,NJ,2004-10-28,45.0,41.0,3.68,Rutgers University Eagleton Center for Public Interest Polling
-president,NJ,2004-10-28,54.0,42.0,3.55,SurveyUSA
-president,NJ,2004-10-23,53.0,41.0,5,Scott Rasmussen (Rasmussen Reports)
-president,NJ,2004-10-29,48.0,43.0,3.19,Quinnipiac University
-president,NM,2004-09-15,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
-president,NM,2004-09-15,49.0,44.0,4.08,American Research Group
-president,NM,2004-09-15,54.3,41.6,4.17,Zogby Analytics
-president,NM,2004-10-03,49.0,45.0,3.53,Garin-Hart-Yang Research Group
-president,NM,2004-10-03,46.0,43.0,3.39,Research & Polling Inc.
-president,NM,2004-10-02,53.9,42.5,4.3,Zogby Analytics
-president,NM,2004-10-05,47.0,50.0,3.85,Gallup
-president,NM,2004-10-17,48.0,46.0,4.08,American Research Group
-president,NM,2004-10-17,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,NM,2004-10-15,53.6,44.1,4.36,Zogby Analytics
-president,NM,2004-10-26,44.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NM,2004-10-26,44.0,47.0,4.08,Zogby Analytics
-president,NM,2004-10-28,45.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,NM,2004-10-28,44.0,47.0,2.96,Research & Polling Inc.
-president,NM,2004-10-29,48.0,47.0,4.08,American Research Group
-president,NM,2004-10-30,49.0,49.0,4.08,Zogby Analytics
-president,NM,2004-10-28,49.0,49.0,4.08,Zogby Analytics
-president,NV,2004-09-12,47.0,51.0,4.36,SurveyUSA
-president,NV,2004-09-13,45.0,50.0,4.0,Mason-Dixon Polling & Strategy
-president,NV,2004-09-13,45.0,47.0,4.08,American Research Group
-president,NV,2004-09-15,46.6,48.8,4.48,Zogby Analytics
-president,NV,2004-09-20,43.0,52.0,4.32,Gallup
-president,NV,2004-09-14,45.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NV,2004-09-24,44.0,48.0,4.08,Belden Russonello
-president,NV,2004-10-02,46.0,50.0,4.0,SurveyUSA
-president,NV,2004-10-02,48.1,47.1,4.39,Zogby Analytics
-president,NV,2004-10-17,45.0,52.0,4.13,SurveyUSA
-president,NV,2004-10-17,42.0,52.0,4.0,Mason-Dixon Polling & Strategy
-president,NV,2004-10-15,45.9,49.8,4.4,Zogby Analytics
-president,NV,2004-10-18,43.0,47.0,4.08,Belden Russonello
-president,NV,2004-10-19,46.0,47.0,4.45,Garin-Hart-Yang Research Group
-president,NV,2004-10-23,47.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NV,2004-10-23,44.0,48.0,4.08,Zogby Analytics
-president,NV,2004-10-27,45.0,50.0,4.08,Zogby Analytics
-president,NV,2004-10-28,49.0,49.0,4.32,SurveyUSA
-president,NV,2004-10-28,44.0,50.0,3.54,Mason-Dixon Polling & Strategy
-president,NV,2004-10-28,45.0,50.0,4.07,Zogby Analytics
-president,NV,2004-10-31,45.0,50.0,4.08,Zogby Analytics
-president,NV,2004-10-31,45.0,53.0,3.97,SurveyUSA
-president,NY,2004-09-09,50.0,45.0,3.28,Quinnipiac University
-president,NY,2004-09-13,52.0,41.0,4.14,Marist College
-president,NY,2004-09-15,52.0,40.0,4.08,American Research Group
-president,NY,2004-09-15,49.0,44.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,NY,2004-09-19,55.0,39.0,4.15,SurveyUSA
-president,NY,2004-09-22,51.0,31.0,2.99,Siena College
-president,NY,2004-10-10,58.0,35.0,4.06,SurveyUSA
-president,NY,2004-10-25,57.0,39.0,3.97,Marist College
-president,NY,2004-10-27,57.0,39.0,3.99,SurveyUSA
-president,NY,2004-10-27,52.0,37.0,3.07,Siena College
-president,OH,2004-09-06,43.0,52.0,3.89,Gallup
-president,OH,2004-09-07,47.0,50.0,3.76,SurveyUSA
-president,OH,2004-09-12,42.0,50.0,2.58,Mason-Dixon Polling & Strategy
-president,OH,2004-09-14,42.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,OH,2004-09-15,46.8,50.1,2.41,Zogby Analytics
-president,OH,2004-09-15,45.0,48.0,3.87,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-09-15,43.0,54.0,4.68,University of Cincinnati (Ohio Poll)
-president,OH,2004-09-19,46.0,48.0,4.08,American Research Group
-president,OH,2004-09-21,44.0,48.0,3.54,Opinion Dynamics
-president,OH,2004-09-21,46.0,46.0,3.54,Lake Research Partners
-president,OH,2004-09-27,47.0,49.0,3.88,Gallup
-president,OH,2004-09-26,44.0,51.0,1.87,Columbus Dispatch
-president,OH,2004-09-29,47.0,48.0,4.09,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-10-03,49.0,48.0,3.62,SurveyUSA
-president,OH,2004-10-02,49.1,48.8,2.33,Zogby Analytics
-president,OH,2004-10-05,48.0,47.0,4.08,American Research Group
-president,OH,2004-10-10,49.0,45.0,4.47,Market Shares Corp.
-president,OH,2004-10-10,47.0,49.0,4.21,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-10-16,50.0,47.0,3.56,ABC News/The Washington Post
-president,OH,2004-10-14,48.0,46.0,3.63,University of Cincinnati (Ohio Poll)
-president,OH,2004-10-17,45.0,47.0,3.54,Opinion Dynamics
-president,OH,2004-10-17,49.0,47.0,3.79,SurveyUSA
-president,OH,2004-10-17,45.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,OH,2004-10-15,47.6,50.6,2.22,Zogby Analytics
-president,OH,2004-10-15,47.0,47.0,4.32,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-10-19,48.0,47.0,3.76,Gallup
-president,OH,2004-10-19,50.0,46.0,5,Ohio University
-president,OH,2004-10-23,42.0,47.0,4.08,Zogby Analytics
-president,OH,2004-10-24,49.0,47.0,4.08,American Research Group
-president,OH,2004-10-24,50.0,47.0,3.47,SurveyUSA
-president,OH,2004-10-26,45.0,48.0,2.58,Mason-Dixon Polling & Strategy
-president,OH,2004-10-24,50.0,44.0,4.13,Los Angeles Times
-president,OH,2004-10-23,46.0,50.0,4.32,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-10-27,47.0,44.0,4.08,Zogby Analytics
-president,OH,2004-10-28,46.0,48.0,4.0,Mason-Dixon Polling & Strategy
-president,OH,2004-10-24,50.0,50.0,1.86,Columbus Dispatch
-president,OH,2004-10-30,47.0,50.0,3.78,Opinion Dynamics
-president,OH,2004-10-30,47.0,49.0,3.5,SurveyUSA
-president,OH,2004-10-30,50.0,46.0,3.0,Gallup
-president,OH,2004-10-29,49.0,50.0,3.49,University of Cincinnati (Ohio Poll)
-president,OH,2004-10-28,46.0,50.0,4.08,Scott Rasmussen (Rasmussen Reports)
-president,OH,2004-10-28,44.0,48.0,4.08,Zogby Analytics
-president,OH,2004-10-31,43.0,49.0,4.08,Zogby Analytics
-president,OH,2004-10-31,51.0,47.0,2.87,Harris Insights & Analytics
-president,OK,2004-09-03,30.0,61.0,4.47,WPA Intelligence
-president,OK,2004-09-09,32.0,63.0,4.47,Basswood Research
-president,OK,2004-09-11,29.0,59.0,4.47,WPA Intelligence
-president,OK,2004-09-18,24.0,64.0,4.47,WPA Intelligence
-president,OK,2004-09-17,38.0,55.0,4.08,American Research Group
-president,OK,2004-09-21,33.0,64.0,4.03,SurveyUSA
-president,OK,2004-09-25,31.0,57.0,4.47,WPA Intelligence
-president,OK,2004-09-27,29.0,62.0,4.47,Basswood Research
-president,OK,2004-09-29,30.0,64.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,OK,2004-10-02,28.0,58.0,4.47,WPA Intelligence
-president,OK,2004-10-05,33.0,63.0,4.04,SurveyUSA
-president,OK,2004-10-09,38.0,50.0,4.47,WPA Intelligence
-president,OK,2004-10-10,30.0,64.0,4.47,Cole Hargrave Snodgrass & Associates
-president,OK,2004-10-16,31.0,61.0,4.47,WPA Intelligence
-president,OK,2004-10-19,34.0,64.0,3.99,SurveyUSA
-president,OK,2004-10-23,28.0,61.0,4.47,WPA Intelligence
-president,OK,2004-10-25,32.0,60.0,4.47,Cole Hargrave Snodgrass & Associates
-president,OK,2004-10-29,34.0,64.0,3.89,SurveyUSA
-president,OR,2004-09-12,47.0,45.0,4.08,American Research Group
-president,OR,2004-09-15,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
-president,OR,2004-09-15,53.9,41.9,3.52,Zogby Analytics
-president,OR,2004-09-20,47.0,48.0,3.66,SurveyUSA
-president,OR,2004-09-14,51.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,OR,2004-09-26,47.0,45.0,4.0,DHM Research
-president,OR,2004-10-02,53.8,43.7,3.29,Zogby Analytics
-president,OR,2004-10-10,53.0,44.0,3.99,SurveyUSA
-president,OR,2004-10-11,50.0,44.0,4.08,American Research Group
-president,OR,2004-10-11,43.0,48.0,5,Riley Research Associates
-president,OR,2004-10-17,47.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,OR,2004-10-17,53.0,45.0,3.78,Gallup
-president,OR,2004-10-15,55.7,42.6,3.35,Zogby Analytics
-president,OR,2004-10-12,52.0,45.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,OR,2004-10-25,47.0,45.0,4.71,Moore Information Group
-president,OR,2004-10-26,49.0,43.0,4.06,DHM Research
-president,OR,2004-10-26,50.0,46.0,4.08,American Research Group
-president,OR,2004-10-26,50.0,47.0,3.82,SurveyUSA
-president,OR,2004-10-28,50.0,44.0,4.0,Mason-Dixon Polling & Strategy
-president,OR,2004-10-28,53.9,43.8,2.98,Zogby Analytics
-president,PA,2004-09-06,47.0,48.0,3.73,Gallup
-president,PA,2004-09-08,49.0,47.0,3.79,SurveyUSA
-president,PA,2004-09-11,46.0,49.0,3.81,ABC News/The Washington Post
-president,PA,2004-09-09,48.0,49.0,4.36,Scott Rasmussen (Rasmussen Reports)
-president,PA,2004-09-13,48.0,49.0,3.55,Quinnipiac University
-president,PA,2004-09-12,49.0,49.0,3.76,Franklin & Marshall College Center for Opinion Research
-president,PA,2004-09-15,45.0,44.0,4.0,Mason-Dixon Polling & Strategy
-president,PA,2004-09-15,50.6,47.5,2.9,Zogby Analytics
-president,PA,2004-09-17,47.0,46.0,4.08,American Research Group
-president,PA,2004-09-21,48.0,45.0,3.54,Opinion Dynamics
-president,PA,2004-09-20,49.0,47.0,2.97,Temple University Institute for Survey Research
-president,PA,2004-09-24,49.0,46.0,3.71,Quinnipiac University
-president,PA,2004-09-27,45.0,44.0,4.0,Mason-Dixon Polling & Strategy
-president,PA,2004-09-27,46.0,49.0,3.91,Gallup
-president,PA,2004-09-28,47.0,47.0,4.16,Scott Rasmussen (Rasmussen Reports)
-president,PA,2004-10-03,50.0,43.0,4.08,West Chester University
-president,PA,2004-10-02,49.0,43.0,3.76,Franklin & Marshall College Center for Opinion Research
-president,PA,2004-10-04,49.0,47.0,3.59,SurveyUSA
-president,PA,2004-10-02,51.8,46.4,2.69,Zogby Analytics
-president,PA,2004-10-05,48.0,46.0,4.08,American Research Group
-president,PA,2004-10-10,48.0,46.0,2.73,Quinnipiac University
-president,PA,2004-10-09,47.0,46.0,4.16,Scott Rasmussen (Rasmussen Reports)
-president,PA,2004-10-16,51.0,45.0,4.02,SurveyUSA
-president,PA,2004-10-17,46.0,45.0,4.0,Mason-Dixon Polling & Strategy
-president,PA,2004-10-15,51.8,46.1,2.67,Zogby Analytics
-president,PA,2004-10-18,50.0,44.0,3.45,Quinnipiac University
-president,PA,2004-10-19,48.0,46.0,3.56,Muhlenberg College Institute of Public Opinion
-president,PA,2004-10-21,51.0,46.0,5,Franklin & Marshall College Center for Opinion Research
-president,PA,2004-10-20,49.0,46.0,4.86,Scott Rasmussen (Rasmussen Reports)
-president,PA,2004-10-23,47.0,45.0,4.08,Zogby Analytics
-president,PA,2004-10-24,50.0,47.0,4.08,American Research Group
-president,PA,2004-10-24,53.0,45.0,3.53,SurveyUSA
-president,PA,2004-10-25,50.0,47.0,3.86,Gallup
-president,PA,2004-10-24,47.0,49.0,3.32,Quinnipiac University
-president,PA,2004-10-24,48.0,48.0,4.2,Los Angeles Times
-president,PA,2004-10-26,50.0,45.0,3.82,West Chester University
-president,PA,2004-10-24,48.0,47.0,2.59,Temple University Institute for Survey Research
-president,PA,2004-10-27,47.0,47.0,4.08,Zogby Analytics
-president,PA,2004-10-28,48.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,PA,2004-10-30,51.0,47.0,3.61,SurveyUSA
-president,PA,2004-10-30,46.0,50.0,3.04,Gallup
-president,PA,2004-10-29,47.0,47.0,3.13,Quinnipiac University
-president,PA,2004-10-28,49.0,47.0,4.08,Scott Rasmussen (Rasmussen Reports)
-president,PA,2004-10-28,50.0,45.0,4.08,Zogby Analytics
-president,PA,2004-10-31,50.0,46.0,4.08,Zogby Analytics
-president,PA,2004-10-31,49.0,48.0,3.9,SurveyUSA
-president,PA,2004-10-31,50.0,48.0,2.88,Harris Insights & Analytics
-president,RI,2004-09-12,58.0,30.0,4.08,American Research Group
-president,RI,2004-09-19,55.0,37.0,3.77,SurveyUSA
-president,RI,2004-10-10,56.0,36.0,4.07,SurveyUSA
-president,RI,2004-10-26,54.0,41.0,4.1,SurveyUSA
-president,SC,2004-09-08,38.0,54.0,4.08,Global Strategy Group
-president,SC,2004-09-08,42.0,54.0,4.08,Public Opinion Strategies
-president,SC,2004-09-15,40.0,52.0,4.08,American Research Group
-president,SC,2004-09-20,38.0,58.0,3.82,SurveyUSA
-president,SC,2004-09-25,32.0,59.0,4.47,Basswood Research
-president,SC,2004-09-28,37.0,55.0,4.0,Mason-Dixon Polling & Strategy
-president,SC,2004-10-11,42.0,55.0,4.21,SurveyUSA
-president,SC,2004-10-19,40.0,53.0,4.0,Mason-Dixon Polling & Strategy
-president,SC,2004-10-23,39.0,57.0,4.21,SurveyUSA
-president,SD,2004-09-08,41.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,SD,2004-09-10,39.0,58.0,4.08,American Research Group
-president,SD,2004-09-21,37.0,50.0,3.54,Mason-Dixon Polling & Strategy
-president,SD,2004-09-26,29.0,57.0,4.47,Zogby Analytics
-president,SD,2004-10-12,42.0,52.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,SD,2004-10-20,36.0,55.0,3.54,Mason-Dixon Polling & Strategy
-president,SD,2004-10-23,33.0,55.0,5,McLaughlin & Associates
-president,TN,2004-09-13,37.0,53.0,4.0,Mason-Dixon Polling & Strategy
-president,TN,2004-09-15,45.9,41.4,3.26,Zogby Analytics
-president,TN,2004-09-17,43.0,50.0,4.08,American Research Group
-president,TN,2004-09-21,41.0,55.0,4.08,SurveyUSA
-president,TN,2004-09-22,43.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,TN,2004-10-04,39.0,58.0,3.96,SurveyUSA
-president,TN,2004-10-02,47.8,48.7,3.19,Zogby Analytics
-president,TN,2004-10-14,37.0,54.0,3.9,University of Tennessee
-president,TN,2004-10-10,39.0,50.0,4.0,Middle Tennessee State University
-president,TN,2004-10-15,47.8,50.3,3.18,Zogby Analytics
-president,TN,2004-10-18,38.0,60.0,4.03,SurveyUSA
-president,TN,2004-10-13,37.0,54.0,3.9,University of Tennessee
-president,TN,2004-10-20,41.0,53.0,4.0,Mason-Dixon Polling & Strategy
-president,TN,2004-10-29,40.0,58.0,3.99,SurveyUSA
-president,TN,2004-10-28,47.1,50.4,2.87,Zogby Analytics
-president,TX,2004-09-18,36.0,58.0,4.08,American Research Group
-president,TX,2004-09-20,37.0,58.0,3.95,SurveyUSA
-president,TX,2004-10-10,37.0,60.0,4.09,SurveyUSA
-president,TX,2004-10-27,37.0,59.0,4.08,SurveyUSA
-president,UT,2004-09-08,25.0,65.0,3.31,Dan Jones & Associates
-president,UT,2004-09-12,27.0,64.0,4.08,American Research Group
-president,UT,2004-09-26,21.0,69.0,2.89,Valley Research
-president,UT,2004-10-23,23.0,68.0,2.89,Valley Research
-president,UT,2004-10-25,24.0,69.0,2.85,Dan Jones & Associates
-president,VA,2004-09-13,43.0,49.0,4.08,American Research Group
-president,VA,2004-09-22,42.0,53.0,3.67,SurveyUSA
-president,VA,2004-09-26,43.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,VA,2004-09-20,44.0,50.0,5,Scott Rasmussen (Rasmussen Reports)
-president,VA,2004-10-17,46.0,50.0,3.88,SurveyUSA
-president,VA,2004-10-24,44.0,50.0,4.0,Mason-Dixon Polling & Strategy
-president,VA,2004-10-23,40.0,49.0,3.65,Richmond Times-Dispatch
-president,VA,2004-10-28,47.0,51.0,4.06,SurveyUSA
-president,VT,2004-09-11,50.0,40.0,4.08,American Research Group
-president,WA,2004-09-05,52.0,44.0,3.93,Gallup
-president,WA,2004-09-11,51.0,44.0,4.08,American Research Group
-president,WA,2004-09-15,52.8,44.1,2.75,Zogby Analytics
-president,WA,2004-09-18,52.0,38.0,4.97,Elway Research
-president,WA,2004-09-19,48.0,46.0,4.47,Moore Information Group
-president,WA,2004-09-19,51.0,42.0,4.96,Ipsos
-president,WA,2004-09-20,51.0,46.0,3.99,SurveyUSA
-president,WA,2004-09-16,50.0,43.0,5,Scott Rasmussen (Rasmussen Reports)
-president,WA,2004-10-03,47.0,45.0,4.47,Moore Information Group
-president,WA,2004-10-03,54.0,43.0,3.95,SurveyUSA
-president,WA,2004-10-02,53.7,43.8,2.66,Zogby Analytics
-president,WA,2004-10-15,50.0,44.0,4.97,Elway Research
-president,WA,2004-10-16,52.0,45.0,3.97,SurveyUSA
-president,WA,2004-10-15,54.3,43.9,2.64,Zogby Analytics
-president,WA,2004-10-12,52.0,44.0,5,Scott Rasmussen (Rasmussen Reports)
-president,WA,2004-10-24,51.0,45.0,4.02,SurveyUSA
-president,WA,2004-10-25,50.0,45.0,3.54,Mason-Dixon Polling & Strategy
-president,WA,2004-10-30,51.0,47.0,4.01,SurveyUSA
-president,WA,2004-10-28,54.6,43.4,2.34,Zogby Analytics
-president,WI,2004-09-11,44.0,52.0,3.98,Gallup
-president,WI,2004-09-07,47.0,49.0,5,Scott Rasmussen (Rasmussen Reports)
-president,WI,2004-09-14,46.0,46.0,4.08,American Research Group
-president,WI,2004-09-15,44.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,WI,2004-09-15,50.3,47.9,3.6,Zogby Analytics
-president,WI,2004-09-18,43.0,53.0,3.57,ABC News/The Washington Post
-president,WI,2004-09-18,38.0,52.0,4.54,University of Minnesota Hubert H. Humphrey School of Public Affairs
-president,WI,2004-09-18,38.0,52.0,4.62,University of Wisconsin Survey Center
-president,WI,2004-09-24,40.0,50.0,4.22,Harris Insights & Analytics
-president,WI,2004-09-20,46.0,49.0,5,Scott Rasmussen (Rasmussen Reports)
-president,WI,2004-10-04,48.0,44.0,4.08,Lake Research Partners
-president,WI,2004-10-04,46.0,49.0,3.77,Gallup
-president,WI,2004-10-02,50.6,48.1,3.44,Zogby Analytics
-president,WI,2004-10-05,45.0,47.0,4.47,Moore Information Group
-president,WI,2004-10-10,47.0,43.0,4.47,Market Shares Corp.
-president,WI,2004-10-08,50.0,45.0,4.99,St. Norbert College Strategic Research Institute
-president,WI,2004-10-14,48.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,WI,2004-10-08,48.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,WI,2004-10-17,45.0,45.0,4.0,Mason-Dixon Polling & Strategy
-president,WI,2004-10-15,51.3,47.5,3.37,Zogby Analytics
-president,WI,2004-10-18,47.0,47.0,4.08,American Research Group
-president,WI,2004-10-18,44.0,50.0,3.84,Gallup
-president,WI,2004-10-16,47.0,48.0,4.01,University of Minnesota Hubert H. Humphrey School of Public Affairs
-president,WI,2004-10-23,45.0,48.0,4.08,Zogby Analytics
-president,WI,2004-10-26,48.0,47.0,4.08,American Research Group
-president,WI,2004-10-25,45.0,48.0,4.28,University of Wisconsin Survey Center
-president,WI,2004-10-27,49.0,46.0,4.08,Zogby Analytics
-president,WI,2004-10-28,48.0,46.0,4.0,Mason-Dixon Polling & Strategy
-president,WI,2004-10-29,44.0,52.0,2.99,Gallup
-president,WI,2004-10-30,45.0,48.0,3.78,Opinion Dynamics
-president,WI,2004-10-28,51.0,44.0,4.08,Zogby Analytics
-president,WI,2004-10-31,51.0,45.0,4.08,Zogby Analytics
-president,WV,2004-09-13,44.0,45.0,4.0,Mason-Dixon Polling & Strategy
-president,WV,2004-09-16,44.0,50.0,4.47,Scott Rasmussen (Rasmussen Reports)
-president,WV,2004-09-15,46.0,46.0,4.08,American Research Group
-president,WV,2004-09-15,38.8,51.2,4.35,Zogby Analytics
-president,WV,2004-09-19,45.0,51.0,4.02,Gallup
-president,WV,2004-10-02,44.0,50.1,4.47,Zogby Analytics
-president,WV,2004-10-13,45.0,47.0,4.08,Global Strategy Group
-president,WV,2004-10-17,44.0,49.0,4.0,Mason-Dixon Polling & Strategy
-president,WV,2004-10-15,45.8,48.6,4.47,Zogby Analytics
-president,WV,2004-10-28,43.0,51.0,4.0,Mason-Dixon Polling & Strategy
-president,WV,2004-10-28,45.6,50.1,4.14,Zogby Analytics
-president,WY,2004-09-10,29.0,65.0,4.08,American Research Group
-governor,DE,2004-09-22,45.0,39.0,5,Public Opinion Strategies
-governor,DE,2004-09-24,42.4,26.2,4.12,West Chester University
-governor,IN,2004-09-08,41.0,53.0,4.13,SurveyUSA
-governor,IN,2004-10-01,43.0,46.0,3.16,Selzer & Co.
-governor,IN,2004-10-04,47.0,48.0,4.13,SurveyUSA
-governor,IN,2004-10-18,42.0,48.0,4.87,Indiana University Public Opinion Laboratory
-governor,IN,2004-10-18,43.0,51.0,4.08,SurveyUSA
-governor,IN,2004-10-28,44.0,52.0,4.12,SurveyUSA
-governor,IN,2004-10-28,42.0,48.0,3.16,Selzer & Co.
-governor,MO,2004-09-08,47.0,48.0,3.81,SurveyUSA
-governor,MO,2004-10-03,46.0,47.0,3.81,SurveyUSA
-governor,MO,2004-10-17,44.0,50.0,3.87,SurveyUSA
-governor,MO,2004-10-24,44.0,52.0,3.84,SurveyUSA
-governor,MO,2004-10-24,46.0,47.0,4.47,Market Research Institute Inc.
-governor,MO,2004-10-30,47.0,47.0,3.81,SurveyUSA
-governor,MT,2004-09-21,45.0,41.0,4.0,Mason-Dixon Polling & Strategy
-governor,MT,2004-10-09,43.0,29.0,4.93,Montana State University Billings
-governor,MT,2004-10-19,48.0,43.0,4.0,Mason-Dixon Polling & Strategy
-governor,NC,2004-09-07,54.0,39.0,4.03,SurveyUSA
-governor,NC,2004-09-27,53.0,36.0,4.0,Mason-Dixon Polling & Strategy
-governor,NC,2004-10-03,56.0,38.0,4.03,SurveyUSA
-governor,NC,2004-10-16,52.0,40.0,4.01,SurveyUSA
-governor,NC,2004-10-18,55.0,35.0,4.0,Mason-Dixon Polling & Strategy
-governor,NC,2004-10-19,49.0,34.0,4.08,The Tyson Group
-governor,NC,2004-10-23,57.0,39.0,3.8,SurveyUSA
-governor,NC,2004-10-25,54.0,38.0,4.0,Mason-Dixon Polling & Strategy
-governor,NC,2004-10-30,55.0,41.0,4.03,SurveyUSA
-governor,ND,2004-10-18,22.0,70.0,4.01,Minnesota State University Moorhead Public Affairs Institute
-governor,NH,2004-09-15,52.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-governor,NH,2004-09-16,44.0,47.0,4.08,American Research Group
-governor,NH,2004-10-02,51.0,41.0,5,Becker Institute
-governor,NH,2004-09-30,43.0,43.0,3.23,University of New Hampshire Survey Center
-governor,NH,2004-10-03,47.0,42.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-governor,NH,2004-10-16,42.0,44.0,5,Suffolk University
-governor,NH,2004-10-20,45.0,45.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-governor,NH,2004-10-26,44.0,47.0,3.63,University of New Hampshire Survey Center
-governor,NH,2004-10-27,46.0,45.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-governor,NH,2004-10-30,46.0,47.0,3.23,University of New Hampshire Survey Center
-governor,UT,2004-09-08,39.0,49.0,2.85,Dan Jones & Associates
-governor,UT,2004-09-28,42.0,42.0,4.45,Garin-Hart-Yang Research Group
-governor,UT,2004-09-26,33.0,49.0,2.89,Valley Research
-governor,UT,2004-10-01,40.0,49.0,2.85,Dan Jones & Associates
-governor,UT,2004-10-23,36.0,50.0,2.89,Valley Research
-governor,UT,2004-10-25,38.0,54.0,2.85,Dan Jones & Associates
-governor,WA,2004-09-18,49.0,38.0,4.97,Elway Research
-governor,WA,2004-09-19,49.0,43.0,4.96,Ipsos
-governor,WA,2004-09-20,47.0,46.0,4.02,SurveyUSA
-governor,WA,2004-10-03,51.0,41.0,4.02,SurveyUSA
-governor,WA,2004-10-15,45.0,38.0,4.97,Elway Research
-governor,WA,2004-10-16,50.0,44.0,3.97,SurveyUSA
-governor,WA,2004-10-24,49.0,47.0,4.02,SurveyUSA
-governor,WA,2004-10-25,48.0,43.0,3.54,Mason-Dixon Polling & Strategy
-governor,WA,2004-10-30,45.0,51.0,4.02,SurveyUSA
-governor,WV,2004-10-13,57.0,24.0,4.08,Global Strategy Group
-senate,AK,2004-09-20,47.0,41.0,4.08,Global Strategy Group
-senate,AK,2004-09-30,48.1,45.2,3.84,Alaska Survey Research
-senate,AK,2004-10-16,46.9,45.3,4.27,Alaska Survey Research
-senate,AK,2004-10-18,47.0,43.0,4.08,Global Strategy Group
-senate,AK,2004-10-30,43.0,48.0,4.47,McLaughlin & Associates
-senate,AR,2004-09-28,54.0,40.0,4.17,SurveyUSA
-senate,AR,2004-10-05,60.0,32.0,4.47,Opinion Research Associates
-senate,AR,2004-10-10,60.0,32.0,4.46,Zogby Analytics
-senate,AR,2004-10-16,57.0,38.0,4.04,SurveyUSA
-senate,AR,2004-10-19,66.0,30.0,4.47,Opinion Research Associates
-senate,AR,2004-10-24,57.0,38.0,3.93,SurveyUSA
-senate,AR,2004-10-30,55.0,42.0,3.94,SurveyUSA
-senate,AR,2004-10-31,53.0,43.0,4.27,SurveyUSA
-senate,CA,2004-09-07,53.0,35.0,4.13,SurveyUSA
-senate,CA,2004-09-16,54.0,36.0,2.92,Public Policy Institute of California
-senate,CA,2004-09-19,52.0,34.0,3.41,Los Angeles Times
-senate,CA,2004-09-28,48.0,32.0,4.19,Field Research Corp. (Field Poll)
-senate,CA,2004-10-03,53.0,36.0,3.67,SurveyUSA
-senate,CA,2004-10-16,57.0,35.0,3.79,SurveyUSA
-senate,CA,2004-10-14,53.0,35.0,2.92,Public Policy Institute of California
-senate,CA,2004-10-16,55.0,33.0,3.29,Los Angeles Times
-senate,CA,2004-10-24,53.0,38.0,3.67,SurveyUSA
-senate,CA,2004-10-24,53.0,34.0,3.03,Field Research Corp. (Field Poll)
-senate,CA,2004-10-30,57.0,36.0,3.61,SurveyUSA
-senate,CO,2004-09-05,48.0,42.0,3.84,Harstad Strategic Research
-senate,CO,2004-09-12,53.0,42.0,4.47,Public Opinion Strategies
-senate,CO,2004-09-16,48.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2004-09-15,46.0,44.0,4.47,Tarrance Group
-senate,CO,2004-09-16,46.0,45.0,4.08,Ciruli Associates
-senate,CO,2004-09-22,46.0,51.0,4.0,SurveyUSA
-senate,CO,2004-10-05,46.0,44.0,4.0,Mason-Dixon Polling & Strategy
-senate,CO,2004-10-05,54.0,43.0,3.87,Gallup
-senate,CO,2004-10-06,48.0,48.0,4.1,SurveyUSA
-senate,CO,2004-10-15,40.0,45.0,4.47,Public Opinion Strategies
-senate,CO,2004-10-16,49.0,48.0,3.87,Gallup
-senate,CO,2004-10-18,48.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,CO,2004-10-17,49.0,43.0,4.41,Harstad Strategic Research
-senate,CO,2004-10-18,49.0,43.0,4.08,Global Strategy Group
-senate,CO,2004-10-17,47.0,43.0,4.08,Ciruli Associates
-senate,CO,2004-10-19,46.0,50.0,4.1,SurveyUSA
-senate,CO,2004-10-20,50.0,45.0,5,FM3 Research
-senate,CO,2004-10-26,53.0,42.0,4.08,Zogby Analytics
-senate,CO,2004-10-26,48.0,42.0,4.47,Public Opinion Strategies
-senate,CO,2004-10-26,46.0,46.0,4.0,Mason-Dixon Polling & Strategy
-senate,CO,2004-10-29,49.0,47.0,4.01,SurveyUSA
-senate,CO,2004-10-30,52.0,44.0,4.08,Zogby Analytics
-senate,CO,2004-10-31,51.0,47.0,3.77,SurveyUSA
-senate,CT,2004-09-27,69.0,24.0,3.72,Quinnipiac University
-senate,FL,2004-09-13,49.0,45.0,4.08,SurveyUSA
-senate,FL,2004-09-20,43.0,42.0,3.49,Quinnipiac University
-senate,FL,2004-09-20,51.0,45.0,3.85,Gallup
-senate,FL,2004-10-01,39.0,40.0,5,InsiderAdvantage
-senate,FL,2004-10-02,46.0,50.0,3.76,SurveyUSA
-senate,FL,2004-10-04,41.0,46.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2004-10-03,47.0,48.0,3.73,Quinnipiac University
-senate,FL,2004-10-06,47.0,40.0,3.84,Global Strategy Group
-senate,FL,2004-10-07,47.0,47.0,3.91,ABC News/The Washington Post
-senate,FL,2004-10-12,38.0,35.0,4.04,University of North Florida Public Opinion Research Lab
-senate,FL,2004-10-15,45.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2004-10-16,47.0,49.0,4.1,SurveyUSA
-senate,FL,2004-10-17,47.0,47.0,3.52,Quinnipiac University
-senate,FL,2004-10-20,44.0,44.0,3.54,SEA Polling & Strategic Design
-senate,FL,2004-10-20,48.0,41.0,5,InsiderAdvantage
-senate,FL,2004-10-23,50.0,47.0,3.68,SurveyUSA
-senate,FL,2004-10-23,44.0,46.0,5,InsiderAdvantage
-senate,FL,2004-10-25,47.0,43.0,3.78,Global Strategy Group
-senate,FL,2004-10-24,46.0,49.0,3.25,Quinnipiac University
-senate,FL,2004-10-26,45.0,45.0,4.09,Zogby Analytics
-senate,FL,2004-10-26,46.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,FL,2004-10-26,46.0,46.0,4.08,EMC Research
-senate,FL,2004-10-25,46.6,43.5,3.53,The Florida Poll
-senate,FL,2004-10-29,48.0,46.0,2.96,Gallup
-senate,FL,2004-10-30,46.0,46.0,4.09,Zogby Analytics
-senate,FL,2004-10-30,47.0,41.0,3.78,Opinion Dynamics
-senate,FL,2004-10-30,47.0,46.0,5,InsiderAdvantage
-senate,FL,2004-10-30,48.0,48.0,3.68,SurveyUSA
-senate,FL,2004-10-30,47.0,46.0,2.56,Gallup
-senate,FL,2004-10-29,44.0,49.0,3.02,Quinnipiac University
-senate,GA,2004-09-14,33.0,58.0,3.91,SurveyUSA
-senate,GA,2004-10-06,42.0,54.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,GA,2004-10-06,35.0,57.0,4.14,SurveyUSA
-senate,GA,2004-10-07,33.0,49.0,4.47,Zogby Analytics
-senate,GA,2004-10-14,35.0,53.0,4.47,Zogby Analytics
-senate,GA,2004-10-19,39.0,55.0,4.07,SurveyUSA
-senate,GA,2004-10-28,36.0,49.0,4.47,Zogby Analytics
-senate,GA,2004-10-29,40.0,56.0,4.0,SurveyUSA
-senate,IL,2004-09-13,65.0,24.0,4.06,SurveyUSA
-senate,IL,2004-09-19,68.0,17.0,3.78,Market Shares Corp.
-senate,IL,2004-10-05,64.0,20.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,IL,2004-10-05,68.0,23.0,3.97,SurveyUSA
-senate,IL,2004-10-18,66.0,19.0,3.78,Market Shares Corp.
-senate,IL,2004-10-17,70.0,20.0,3.48,Richard Day Research
-senate,IL,2004-10-28,66.0,27.0,3.91,SurveyUSA
-senate,IL,2004-10-30,70.0,24.0,2.89,Victory Research
-senate,IN,2004-09-08,64.0,28.0,3.82,SurveyUSA
-senate,IN,2004-10-01,61.0,22.0,3.23,Selzer & Co.
-senate,IN,2004-10-04,66.0,28.0,4.12,SurveyUSA
-senate,IN,2004-10-18,63.0,31.0,4.09,SurveyUSA
-senate,IN,2004-10-28,61.0,34.0,4.13,SurveyUSA
-senate,IA,2004-09-21,23.0,63.0,3.78,Opinion Dynamics
-senate,IA,2004-10-26,27.0,68.0,4.08,Zogby Analytics
-senate,IA,2004-10-30,22.0,68.0,4.08,Zogby Analytics
-senate,IA,2004-10-30,20.0,67.0,3.78,Opinion Dynamics
-senate,KS,2004-10-24,26.0,59.0,4.18,SurveyUSA
-senate,KS,2004-10-24,26.0,59.0,4.18,Market Research Institute Inc.
-senate,KY,2004-09-08,35.0,54.0,3.9,SurveyUSA
-senate,KY,2004-09-12,34.0,51.0,3.9,Louisville Courier-Journal
-senate,KY,2004-10-05,40.0,51.0,4.03,SurveyUSA
-senate,KY,2004-10-06,39.0,47.0,3.84,Garin-Hart-Yang Research Group
-senate,KY,2004-10-13,39.0,50.0,4.08,Public Opinion Strategies
-senate,KY,2004-10-16,43.0,43.0,3.84,Garin-Hart-Yang Research Group
-senate,KY,2004-10-18,39.0,53.0,4.01,SurveyUSA
-senate,KY,2004-10-19,43.0,49.0,3.81,Louisville Courier-Journal
-senate,KY,2004-10-23,43.0,44.0,4.46,Garin-Hart-Yang Research Group
-senate,KY,2004-10-29,42.0,51.0,3.98,SurveyUSA
-senate,MD,2004-10-03,58.0,34.0,3.52,Gonzales Research & Marketing Strategies Inc.
-senate,MD,2004-10-25,66.0,29.0,4.69,Ipsos
-senate,MO,2004-09-08,37.0,57.0,3.91,SurveyUSA
-senate,MO,2004-10-03,34.0,59.0,3.84,SurveyUSA
-senate,MO,2004-10-17,38.0,56.0,3.87,SurveyUSA
-senate,MO,2004-10-24,34.0,60.0,3.85,SurveyUSA
-senate,MO,2004-10-24,36.0,53.0,4.25,Market Research Institute Inc.
-senate,MO,2004-10-30,38.0,57.0,3.81,SurveyUSA
-senate,NV,2004-09-13,54.0,34.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2004-09-14,52.0,40.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NV,2004-09-24,58.0,32.0,4.08,Belden Russonello
-senate,NV,2004-10-17,59.0,32.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2004-10-18,63.0,29.0,4.08,Belden Russonello
-senate,NV,2004-10-26,57.0,34.0,4.08,Zogby Analytics
-senate,NV,2004-10-26,59.0,35.0,4.0,Mason-Dixon Polling & Strategy
-senate,NV,2004-10-30,58.0,34.0,4.07,Zogby Analytics
-senate,NH,2004-09-15,35.0,57.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NH,2004-09-16,20.0,63.0,4.08,American Research Group
-senate,NH,2004-09-30,21.0,62.0,4.31,University of New Hampshire Survey Center
-senate,NH,2004-10-03,26.0,61.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-senate,NH,2004-10-16,26.0,52.0,5,Suffolk University
-senate,NH,2004-10-20,27.0,60.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-senate,NH,2004-10-26,23.0,62.0,3.63,University of New Hampshire Survey Center
-senate,NH,2004-10-27,24.0,64.0,4.03,Franklin Pierce University Marlin Fitzwater Center for Communication
-senate,NH,2004-10-29,26.0,66.0,4.08,American Research Group
-senate,NH,2004-10-30,27.0,63.0,3.23,University of New Hampshire Survey Center
-senate,NY,2004-09-09,61.0,13.0,2.64,Quinnipiac University
-senate,NY,2004-09-15,65.0,17.0,3.84,Marist College
-senate,NY,2004-10-25,72.0,16.0,3.5,Marist College
-senate,NC,2004-09-07,50.0,40.0,4.15,SurveyUSA
-senate,NC,2004-09-20,42.0,31.0,3.54,Market Research Institute Inc.
-senate,NC,2004-09-26,45.0,44.0,4.08,Public Opinion Strategies
-senate,NC,2004-09-27,45.0,44.0,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2004-09-29,45.0,47.0,4.08,American Viewpoint
-senate,NC,2004-10-04,45.0,47.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NC,2004-10-03,47.0,46.0,4.03,SurveyUSA
-senate,NC,2004-10-16,45.0,47.0,4.01,SurveyUSA
-senate,NC,2004-10-18,45.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2004-10-20,45.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,NC,2004-10-19,42.0,43.0,4.08,The Tyson Group
-senate,NC,2004-10-20,46.0,44.0,3.54,Global Strategy Group
-senate,NC,2004-10-23,44.0,50.0,3.82,SurveyUSA
-senate,NC,2004-10-25,46.4,46.1,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2004-10-30,45.0,50.0,4.03,SurveyUSA
-senate,ND,2004-10-18,71.0,20.0,4.01,Minnesota State University Moorhead Public Affairs Institute
-senate,OH,2004-09-07,35.0,53.0,3.79,SurveyUSA
-senate,OH,2004-09-12,32.0,58.0,4.0,Mason-Dixon Polling & Strategy
-senate,OH,2004-09-15,34.0,64.0,4.68,University of Cincinnati (Ohio Poll)
-senate,OH,2004-09-21,30.0,58.0,3.54,Opinion Dynamics
-senate,OH,2004-09-26,34.0,56.0,1.87,Columbus Dispatch
-senate,OH,2004-10-03,34.0,58.0,3.66,SurveyUSA
-senate,OH,2004-10-16,35.0,60.0,3.56,ABC News/The Washington Post
-senate,OH,2004-10-14,35.0,62.0,3.84,University of Cincinnati (Ohio Poll)
-senate,OH,2004-10-17,28.0,58.0,3.54,Opinion Dynamics
-senate,OH,2004-10-17,34.0,58.0,3.79,SurveyUSA
-senate,OH,2004-10-24,33.0,59.0,3.5,SurveyUSA
-senate,OH,2004-10-26,27.0,58.0,4.08,Zogby Analytics
-senate,OH,2004-10-27,26.0,64.0,2.58,Mason-Dixon Polling & Strategy
-senate,OH,2004-10-24,38.0,62.0,1.86,Columbus Dispatch
-senate,OH,2004-10-30,33.0,57.0,4.08,Zogby Analytics
-senate,OH,2004-10-30,30.0,60.0,3.78,Opinion Dynamics
-senate,OH,2004-10-30,33.0,61.0,3.51,SurveyUSA
-senate,OH,2004-10-29,35.0,65.0,3.49,University of Cincinnati (Ohio Poll)
-senate,OK,2004-09-03,36.0,42.0,4.47,WPA Intelligence
-senate,OK,2004-09-09,44.0,44.0,4.47,Basswood Research
-senate,OK,2004-09-11,39.0,37.0,4.47,WPA Intelligence
-senate,OK,2004-09-16,42.0,35.0,4.47,SoonerPoll.com
-senate,OK,2004-09-18,41.0,40.0,4.47,WPA Intelligence
-senate,OK,2004-09-21,45.0,45.0,4.05,SurveyUSA
-senate,OK,2004-09-21,44.0,40.0,4.08,Global Strategy Group
-senate,OK,2004-09-23,39.8,37.0,4.47,SoonerPoll.com
-senate,OK,2004-09-25,44.0,39.0,4.47,WPA Intelligence
-senate,OK,2004-09-27,40.0,41.0,4.47,Basswood Research
-senate,OK,2004-09-29,44.0,37.2,4.25,SoonerPoll.com
-senate,OK,2004-10-02,43.0,41.0,4.47,WPA Intelligence
-senate,OK,2004-10-05,44.0,46.0,4.05,SurveyUSA
-senate,OK,2004-10-07,39.0,40.0,4.47,SoonerPoll.com
-senate,OK,2004-10-09,40.0,38.0,4.47,WPA Intelligence
-senate,OK,2004-10-10,41.0,46.0,4.47,Cole Hargrave Snodgrass & Associates
-senate,OK,2004-10-14,43.3,40.6,4.47,SoonerPoll.com
-senate,OK,2004-10-16,39.0,42.0,4.47,WPA Intelligence
-senate,OK,2004-10-16,47.0,40.0,3.64,Consumer Logic
-senate,OK,2004-10-20,43.0,48.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,OK,2004-10-19,41.0,47.0,4.0,SurveyUSA
-senate,OK,2004-10-19,45.0,44.0,4.08,Global Strategy Group
-senate,OK,2004-10-20,36.8,38.0,4.47,SoonerPoll.com
-senate,OK,2004-10-23,38.0,41.0,4.47,WPA Intelligence
-senate,OK,2004-10-25,38.0,43.0,4.47,Cole Hargrave Snodgrass & Associates
-senate,OK,2004-10-29,39.0,47.0,3.9,SurveyUSA
-senate,PA,2004-09-08,33.0,51.0,3.41,SurveyUSA
-senate,PA,2004-09-11,38.0,55.0,3.81,ABC News/The Washington Post
-senate,PA,2004-09-13,38.0,54.0,3.55,Quinnipiac University
-senate,PA,2004-09-12,25.0,51.0,4.51,Franklin & Marshall College Center for Opinion Research
-senate,PA,2004-09-21,30.0,52.0,3.54,Opinion Dynamics
-senate,PA,2004-09-20,35.0,50.0,2.97,Temple University Institute for Survey Research
-senate,PA,2004-09-24,37.0,56.0,3.71,Quinnipiac University
-senate,PA,2004-09-27,31.0,53.0,4.0,Mason-Dixon Polling & Strategy
-senate,PA,2004-10-03,30.0,49.0,4.08,West Chester University
-senate,PA,2004-10-02,35.0,44.0,3.84,Franklin & Marshall College Center for Opinion Research
-senate,PA,2004-10-04,35.0,54.0,3.61,SurveyUSA
-senate,PA,2004-10-10,36.0,55.0,2.73,Quinnipiac University
-senate,PA,2004-10-16,41.0,48.0,4.06,SurveyUSA
-senate,PA,2004-10-18,36.0,51.0,3.45,Quinnipiac University
-senate,PA,2004-10-20,32.0,50.0,3.54,Mason-Dixon Polling & Strategy
-senate,PA,2004-10-19,31.0,53.0,3.56,Muhlenberg College Institute of Public Opinion
-senate,PA,2004-10-21,31.0,52.0,5,Franklin & Marshall College Center for Opinion Research
-senate,PA,2004-10-24,38.0,51.0,3.53,SurveyUSA
-senate,PA,2004-10-24,33.0,55.0,3.32,Quinnipiac University
-senate,PA,2004-10-26,29.0,55.0,4.08,Zogby Analytics
-senate,PA,2004-10-26,34.0,53.0,3.82,West Chester University
-senate,PA,2004-10-24,29.0,51.0,2.59,Temple University Institute for Survey Research
-senate,PA,2004-10-30,32.0,53.0,4.08,Zogby Analytics
-senate,PA,2004-10-30,35.0,54.0,3.63,SurveyUSA
-senate,PA,2004-10-29,33.0,53.0,3.13,Quinnipiac University
-senate,PA,2004-10-31,35.0,53.0,3.92,SurveyUSA
-senate,SC,2004-09-08,41.0,44.0,4.47,Global Strategy Group
-senate,SC,2004-09-08,37.0,50.0,4.08,Public Opinion Strategies
-senate,SC,2004-09-20,39.0,51.0,3.85,SurveyUSA
-senate,SC,2004-09-25,32.0,45.0,4.47,Basswood Research
-senate,SC,2004-09-28,38.0,50.0,4.0,Mason-Dixon Polling & Strategy
-senate,SC,2004-09-28,46.0,43.0,4.47,Global Strategy Group
-senate,SC,2004-09-29,36.0,46.0,5,McLaughlin & Associates
-senate,SC,2004-10-06,43.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,SC,2004-10-11,43.0,46.0,4.24,SurveyUSA
-senate,SC,2004-10-19,43.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,SC,2004-10-23,39.0,52.0,4.23,SurveyUSA
-senate,SC,2004-10-27,40.0,48.0,5,McLaughlin & Associates
-senate,SD,2004-09-08,47.0,50.0,3.84,Scott Rasmussen (Rasmussen Reports)
-senate,SD,2004-09-21,50.0,45.0,3.54,Mason-Dixon Polling & Strategy
-senate,SD,2004-09-27,46.0,50.0,3.84,Scott Rasmussen (Rasmussen Reports)
-senate,SD,2004-09-26,48.0,46.0,4.47,Zogby Analytics
-senate,SD,2004-10-12,49.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,SD,2004-10-20,49.0,47.0,3.54,Mason-Dixon Polling & Strategy
-senate,SD,2004-10-23,45.0,49.0,5,McLaughlin & Associates
-senate,SD,2004-10-25,46.0,49.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,SD,2004-10-25,50.0,48.0,3.95,GQR
-senate,SD,2004-10-25,46.0,48.0,3.54,Zogby Analytics
-senate,UT,2004-09-08,23.0,60.0,3.31,Dan Jones & Associates
-senate,UT,2004-09-26,19.0,62.0,2.89,Valley Research
-senate,UT,2004-10-01,23.0,62.0,3.28,Dan Jones & Associates
-senate,UT,2004-10-23,23.0,61.0,2.89,Valley Research
-senate,UT,2004-10-25,22.0,65.0,2.85,Dan Jones & Associates
-senate,WA,2004-09-10,53.0,37.0,4.08,Mellman Group
-senate,WA,2004-09-09,53.0,40.0,3.16,FM3 Research
-senate,WA,2004-09-18,57.0,37.0,4.97,Elway Research
-senate,WA,2004-09-20,53.0,41.0,4.0,SurveyUSA
-senate,WA,2004-09-28,53.0,38.0,3.16,FM3 Research
-senate,WA,2004-10-03,57.0,38.0,3.97,SurveyUSA
-senate,WA,2004-10-15,54.0,37.0,4.97,Elway Research
-senate,WA,2004-10-16,56.0,38.0,3.95,SurveyUSA
-senate,WA,2004-10-24,55.0,41.0,4.02,SurveyUSA
-senate,WA,2004-10-25,53.0,39.0,3.54,Mason-Dixon Polling & Strategy
-senate,WA,2004-10-30,51.0,45.0,4.01,SurveyUSA
-senate,WI,2004-09-18,51.0,45.0,3.81,ABC News/The Washington Post
-senate,WI,2004-09-18,53.0,39.0,4.62,University of Wisconsin Survey Center
-senate,WI,2004-09-24,52.0,39.0,4.22,Harris Insights & Analytics
-senate,WI,2004-10-10,57.0,33.0,4.47,Market Shares Corp.
-senate,WI,2004-10-08,59.0,35.0,4.99,St. Norbert College Strategic Research Institute
-senate,WI,2004-10-14,53.0,43.0,4.47,Scott Rasmussen (Rasmussen Reports)
-senate,WI,2004-10-26,59.0,36.0,4.08,Zogby Analytics
-senate,WI,2004-10-25,51.0,36.0,4.28,University of Wisconsin Survey Center
-senate,WI,2004-10-26,48.0,43.0,4.47,Tarrance Group
-senate,WI,2004-10-30,59.0,36.0,4.08,Zogby Analytics
-senate,WI,2004-10-30,56.0,42.0,3.78,Opinion Dynamics
-president,M1,2004-09-21,49.0,45.0,5,SurveyUSA
-president,M1,2004-10-04,53.0,43.0,5,SurveyUSA
-president,M1,2004-10-18,49.0,46.0,5,SurveyUSA
-president,M2,2004-09-21,44.0,49.0,5,SurveyUSA
-president,M2,2004-10-04,44.0,53.0,5,SurveyUSA
-president,M2,2004-10-18,53.0,44.0,5,SurveyUSA
+mode,state,date,dem,rep,pollster,sigma
+governor,IN,2004-09-08,41.0,53.0,SurveyUSA,3
+governor,IN,2004-10-01,43.0,46.0,Selzer & Co.,3
+governor,IN,2004-10-04,47.0,48.0,SurveyUSA,3
+governor,IN,2004-10-18,43.0,51.0,SurveyUSA,3
+governor,IN,2004-10-28,44.0,52.0,SurveyUSA,3
+governor,IN,2004-10-28,42.0,48.0,Selzer & Co.,3
+governor,MO,2004-09-08,47.0,48.0,SurveyUSA,3
+governor,MO,2004-10-03,46.0,47.0,SurveyUSA,3
+governor,MO,2004-10-17,44.0,50.0,SurveyUSA,3
+governor,MO,2004-10-24,44.0,52.0,SurveyUSA,3
+governor,MO,2004-10-30,47.0,47.0,SurveyUSA,3
+governor,MT,2004-09-21,45.0,41.0,Mason-Dixon Polling & Strategy,3
+governor,MT,2004-10-19,48.0,43.0,Mason-Dixon Polling & Strategy,3
+governor,NC,2004-09-07,54.0,39.0,SurveyUSA,3
+governor,NC,2004-09-27,53.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,NC,2004-10-03,56.0,38.0,SurveyUSA,3
+governor,NC,2004-10-16,52.0,40.0,SurveyUSA,3
+governor,NC,2004-10-18,55.0,35.0,Mason-Dixon Polling & Strategy,3
+governor,NC,2004-10-19,49.0,34.0,The Tyson Group,3
+governor,NC,2004-10-23,57.0,39.0,SurveyUSA,3
+governor,NC,2004-10-25,54.0,38.0,Mason-Dixon Polling & Strategy,3
+governor,NC,2004-10-30,55.0,41.0,SurveyUSA,3
+governor,NH,2004-09-16,44.0,47.0,American Research Group,3
+governor,NH,2004-09-30,43.0,43.0,University of New Hampshire Survey Center,3
+governor,NH,2004-10-16,42.0,44.0,Suffolk University,3
+governor,NH,2004-10-26,44.0,47.0,University of New Hampshire Survey Center,3
+governor,NH,2004-10-30,46.0,47.0,University of New Hampshire Survey Center,3
+governor,UT,2004-09-08,39.0,49.0,Dan Jones & Associates,3
+governor,UT,2004-10-01,40.0,49.0,Dan Jones & Associates,3
+governor,UT,2004-10-25,38.0,54.0,Dan Jones & Associates,3
+governor,WA,2004-09-18,49.0,38.0,Elway Research,3
+governor,WA,2004-09-19,49.0,43.0,Ipsos,3
+governor,WA,2004-09-20,47.0,46.0,SurveyUSA,3
+governor,WA,2004-10-03,51.0,41.0,SurveyUSA,3
+governor,WA,2004-10-15,45.0,38.0,Elway Research,3
+governor,WA,2004-10-16,50.0,44.0,SurveyUSA,3
+governor,WA,2004-10-24,49.0,47.0,SurveyUSA,3
+governor,WA,2004-10-25,48.0,43.0,Mason-Dixon Polling & Strategy,3
+governor,WA,2004-10-30,45.0,51.0,SurveyUSA,3
+president,AK,2004-09-10,30.0,57.0,American Research Group,3
+president,AL,2004-09-15,40.0,54.0,American Research Group,3
+president,AL,2004-10-02,34.0,62.0,SurveyUSA,3
+president,AL,2004-10-26,39.0,57.0,SurveyUSA,3
+president,AR,2004-09-16,45.0,48.0,American Research Group,3
+president,AR,2004-09-28,44.0,53.0,SurveyUSA,3
+president,AR,2004-10-02,46.9,46.7,Zogby Analytics,3
+president,AR,2004-10-10,45.0,46.0,Zogby Analytics,3
+president,AR,2004-10-15,48.4,49.7,Zogby Analytics,3
+president,AR,2004-10-16,46.0,51.0,SurveyUSA,3
+president,AR,2004-10-24,45.0,51.0,SurveyUSA,3
+president,AR,2004-10-28,46.9,50.1,Zogby Analytics,3
+president,AR,2004-10-28,43.0,51.0,Mason-Dixon Polling & Strategy,3
+president,AR,2004-10-30,48.0,48.0,SurveyUSA,3
+president,AR,2004-10-31,46.0,51.0,SurveyUSA,3
+president,AZ,2004-09-13,39.0,50.0,Mason-Dixon Polling & Strategy,3
+president,AZ,2004-09-13,43.0,49.0,American Research Group,3
+president,AZ,2004-09-22,43.0,54.0,SurveyUSA,3
+president,AZ,2004-10-06,41.0,55.0,SurveyUSA,3
+president,AZ,2004-10-18,43.0,54.0,SurveyUSA,3
+president,AZ,2004-10-29,41.0,56.0,SurveyUSA,3
+president,CA,2004-09-07,52.0,42.0,SurveyUSA,3
+president,CA,2004-09-12,52.0,41.0,American Research Group,3
+president,CA,2004-09-12,45.0,46.0,American Research Group,3
+president,CA,2004-09-16,51.0,39.0,Public Policy Institute of California,3
+president,CA,2004-09-19,53.0,40.0,Los Angeles Times,3
+president,CA,2004-09-26,49.0,41.0,Field Research Corp. (Field Poll),3
+president,CA,2004-10-02,49.0,40.0,Field Research Corp. (Field Poll),3
+president,CA,2004-10-03,51.0,43.0,SurveyUSA,3
+president,CA,2004-10-14,51.0,39.0,Public Policy Institute of California,3
+president,CA,2004-10-16,53.0,43.0,SurveyUSA,3
+president,CA,2004-10-16,56.0,39.0,Los Angeles Times,3
+president,CA,2004-10-24,53.0,44.0,SurveyUSA,3
+president,CA,2004-10-24,49.0,42.0,Field Research Corp. (Field Poll),3
+president,CA,2004-10-30,54.0,43.0,SurveyUSA,3
+president,CO,2004-09-12,45.0,46.0,American Research Group,3
+president,CO,2004-09-16,38.0,50.0,Ciruli Associates,3
+president,CO,2004-09-22,44.0,52.0,SurveyUSA,3
+president,CO,2004-10-04,49.2,47.8,Zogby Analytics,3
+president,CO,2004-10-05,41.0,50.0,Mason-Dixon Polling & Strategy,3
+president,CO,2004-10-05,49.0,49.0,Gallup,3
+president,CO,2004-10-06,44.0,52.0,SurveyUSA,3
+president,CO,2004-10-15,43.0,49.0,Mason-Dixon Polling & Strategy,3
+president,CO,2004-10-16,47.5,49.3,Zogby Analytics,3
+president,CO,2004-10-16,45.0,51.0,Gallup,3
+president,CO,2004-10-17,42.0,48.0,Ciruli Associates,3
+president,CO,2004-10-19,45.0,52.0,SurveyUSA,3
+president,CO,2004-10-23,49.0,45.0,Zogby Analytics,3
+president,CO,2004-10-27,48.0,47.0,Zogby Analytics,3
+president,CO,2004-10-28,43.0,50.0,Mason-Dixon Polling & Strategy,3
+president,CO,2004-10-29,46.0,52.0,SurveyUSA,3
+president,CO,2004-10-31,47.0,49.0,Zogby Analytics,3
+president,CO,2004-10-31,47.0,50.0,SurveyUSA,3
+president,CT,2004-09-13,54.0,39.0,American Research Group,3
+president,CT,2004-09-27,50.0,44.0,Quinnipiac University,3
+president,DC,2004-09-12,78.0,11.0,American Research Group,3
+president,DE,2004-09-14,50.0,41.0,American Research Group,3
+president,FL,2004-09-13,45.0,51.0,SurveyUSA,3
+president,FL,2004-09-15,48.1,47.6,Zogby Analytics,3
+president,FL,2004-09-19,46.0,45.0,American Research Group,3
+president,FL,2004-09-20,41.0,49.0,Quinnipiac University,3
+president,FL,2004-09-20,46.0,49.0,Gallup,3
+president,FL,2004-09-26,43.0,52.0,Gallup,3
+president,FL,2004-10-02,46.0,51.0,SurveyUSA,3
+president,FL,2004-10-02,49.5,49.1,Zogby Analytics,3
+president,FL,2004-10-03,44.0,51.0,Quinnipiac University,3
+president,FL,2004-10-04,44.0,48.0,Mason-Dixon Polling & Strategy,3
+president,FL,2004-10-04,47.0,45.0,American Research Group,3
+president,FL,2004-10-07,48.0,48.0,ABC News/The Washington Post,3
+president,FL,2004-10-15,45.0,48.0,Mason-Dixon Polling & Strategy,3
+president,FL,2004-10-16,50.0,49.0,SurveyUSA,3
+president,FL,2004-10-16,48.9,50.1,Zogby Analytics,3
+president,FL,2004-10-17,48.9,50.1,Zogby Analytics,3
+president,FL,2004-10-17,47.0,48.0,Quinnipiac University,3
+president,FL,2004-10-23,46.0,49.0,Zogby Analytics,3
+president,FL,2004-10-23,50.0,48.0,SurveyUSA,3
+president,FL,2004-10-23,43.0,51.0,Gallup,3
+president,FL,2004-10-24,49.0,46.0,American Research Group,3
+president,FL,2004-10-24,46.0,49.0,Quinnipiac University,3
+president,FL,2004-10-24,43.0,51.0,Los Angeles Times,3
+president,FL,2004-10-27,47.0,48.0,Zogby Analytics,3
+president,FL,2004-10-28,45.0,49.0,Mason-Dixon Polling & Strategy,3
+president,FL,2004-10-29,49.0,46.0,Gallup,3
+president,FL,2004-10-29,43.0,51.0,Quinnipiac University,3
+president,FL,2004-10-30,49.0,44.0,Opinion Dynamics,3
+president,FL,2004-10-30,48.0,49.0,SurveyUSA,3
+president,FL,2004-10-30,48.0,47.0,Gallup,3
+president,FL,2004-10-31,48.0,48.0,Zogby Analytics,3
+president,FL,2004-10-31,50.0,48.0,American Research Group,3
+president,FL,2004-10-31,48.0,48.0,Zogby Analytics,3
+president,FL,2004-10-31,51.0,47.0,Harris Insights & Analytics,3
+president,FL,2004-10-31,48.0,47.0,Zogby Analytics,3
+president,GA,2004-09-12,42.0,53.0,American Research Group,3
+president,GA,2004-09-14,38.0,58.0,SurveyUSA,3
+president,GA,2004-10-06,39.0,58.0,SurveyUSA,3
+president,GA,2004-10-07,39.0,54.0,Zogby Analytics,3
+president,GA,2004-10-14,41.0,51.0,Zogby Analytics,3
+president,GA,2004-10-19,40.0,57.0,SurveyUSA,3
+president,GA,2004-10-28,42.0,52.0,Zogby Analytics,3
+president,GA,2004-10-29,43.0,55.0,SurveyUSA,3
+president,HI,2004-09-09,51.0,41.0,American Research Group,3
+president,IA,2004-09-13,46.0,48.0,American Research Group,3
+president,IA,2004-09-15,42.0,48.0,Mason-Dixon Polling & Strategy,3
+president,IA,2004-09-15,50.3,47.3,Zogby Analytics,3
+president,IA,2004-09-18,44.0,50.0,Gallup,3
+president,IA,2004-09-21,45.0,48.0,Opinion Dynamics,3
+president,IA,2004-09-21,46.0,50.0,SurveyUSA,3
+president,IA,2004-10-02,51.1,44.5,Zogby Analytics,3
+president,IA,2004-10-05,48.0,47.0,SurveyUSA,3
+president,IA,2004-10-10,45.0,47.0,Market Shares Corp.,3
+president,IA,2004-10-11,47.0,47.0,American Research Group,3
+president,IA,2004-10-15,51.1,47.9,Zogby Analytics,3
+president,IA,2004-10-17,43.0,49.0,Mason-Dixon Polling & Strategy,3
+president,IA,2004-10-19,45.0,51.0,SurveyUSA,3
+president,IA,2004-10-23,45.0,47.0,Zogby Analytics,3
+president,IA,2004-10-24,46.0,50.0,Gallup,3
+president,IA,2004-10-26,47.0,48.0,American Research Group,3
+president,IA,2004-10-27,45.0,44.0,Zogby Analytics,3
+president,IA,2004-10-27,48.0,45.0,Selzer & Co.,3
+president,IA,2004-10-28,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,IA,2004-10-29,49.0,49.0,SurveyUSA,3
+president,IA,2004-10-29,46.0,48.0,Gallup,3
+president,IA,2004-10-30,44.0,48.0,Opinion Dynamics,3
+president,IA,2004-10-30,50.0,44.0,Zogby Analytics,3
+president,IA,2004-10-31,50.0,45.0,Zogby Analytics,3
+president,IA,2004-10-31,50.0,47.0,SurveyUSA,3
+president,ID,2004-09-09,30.0,59.0,American Research Group,3
+president,IL,2004-09-13,49.0,45.0,SurveyUSA,3
+president,IL,2004-09-15,49.0,43.0,American Research Group,3
+president,IL,2004-09-19,49.0,40.0,Market Shares Corp.,3
+president,IL,2004-10-05,55.0,39.0,SurveyUSA,3
+president,IL,2004-10-18,50.0,42.0,Market Shares Corp.,3
+president,IL,2004-10-28,54.0,42.0,SurveyUSA,3
+president,IN,2004-09-08,36.0,60.0,SurveyUSA,3
+president,IN,2004-09-18,39.0,54.0,American Research Group,3
+president,IN,2004-10-01,33.0,61.0,Selzer & Co.,3
+president,IN,2004-10-04,39.0,58.0,SurveyUSA,3
+president,IN,2004-10-18,37.0,59.0,SurveyUSA,3
+president,IN,2004-10-28,39.0,58.0,SurveyUSA,3
+president,IN,2004-10-28,37.0,57.0,Selzer & Co.,3
+president,KS,2004-09-08,35.0,60.0,SurveyUSA,3
+president,KS,2004-09-17,35.0,57.0,American Research Group,3
+president,KS,2004-10-10,38.0,57.0,SurveyUSA,3
+president,KS,2004-10-26,37.0,60.0,SurveyUSA,3
+president,KY,2004-09-08,39.0,56.0,SurveyUSA,3
+president,KY,2004-09-10,39.0,57.0,American Research Group,3
+president,KY,2004-10-05,38.0,57.0,SurveyUSA,3
+president,KY,2004-10-18,37.0,59.0,SurveyUSA,3
+president,KY,2004-10-29,38.0,59.0,SurveyUSA,3
+president,LA,2004-09-19,42.0,50.0,American Research Group,3
+president,LA,2004-10-06,36.0,51.0,Market Research Insight,3
+president,LA,2004-10-18,37.0,52.0,Market Research Insight,3
+president,MA,2004-09-12,64.0,27.0,American Research Group,3
+president,MD,2004-09-08,52.0,43.0,American Research Group,3
+president,MD,2004-09-18,48.0,48.0,SurveyUSA,3
+president,MD,2004-10-06,56.0,41.0,SurveyUSA,3
+president,MD,2004-10-25,59.0,38.0,Ipsos,3
+president,MD,2004-10-25,52.0,41.0,Mason-Dixon Polling & Strategy,3
+president,MD,2004-10-28,54.0,43.0,SurveyUSA,3
+president,ME,2004-09-09,43.0,43.0,Zogby Analytics,3
+president,ME,2004-09-09,48.0,44.0,American Research Group,3
+president,ME,2004-09-21,46.0,47.0,SurveyUSA,3
+president,ME,2004-10-04,49.0,47.0,SurveyUSA,3
+president,ME,2004-10-18,51.0,45.0,SurveyUSA,3
+president,ME,2004-10-20,50.0,39.0,Zogby Analytics,3
+president,ME,2004-10-29,52.0,44.0,SurveyUSA,3
+president,MI,2004-09-12,50.0,44.0,Gallup,3
+president,MI,2004-09-15,47.0,41.0,Mason-Dixon Polling & Strategy,3
+president,MI,2004-09-15,51.9,45.9,Zogby Analytics,3
+president,MI,2004-09-17,48.0,44.0,EPIC-MRA,3
+president,MI,2004-09-19,48.0,40.0,American Research Group,3
+president,MI,2004-09-21,46.0,44.0,Opinion Dynamics,3
+president,MI,2004-09-21,52.0,42.0,SurveyUSA,3
+president,MI,2004-10-03,54.1,44.4,Zogby Analytics,3
+president,MI,2004-10-05,52.0,42.0,SurveyUSA,3
+president,MI,2004-10-15,52.6,45.9,Zogby Analytics,3
+president,MI,2004-10-17,47.0,46.0,Mason-Dixon Polling & Strategy,3
+president,MI,2004-10-18,43.0,47.0,Mitchell Research & Communications,3
+president,MI,2004-10-19,51.0,44.0,SurveyUSA,3
+president,MI,2004-10-20,49.0,43.0,EPIC-MRA,3
+president,MI,2004-10-22,45.0,44.0,Mitchell Research & Communications,3
+president,MI,2004-10-23,52.0,42.0,Zogby Analytics,3
+president,MI,2004-10-27,43.0,41.0,Mitchell Research & Communications,3
+president,MI,2004-10-27,45.0,47.0,Zogby Analytics,3
+president,MI,2004-10-28,47.0,45.0,Mason-Dixon Polling & Strategy,3
+president,MI,2004-10-28,52.0,44.0,Zogby Analytics,3
+president,MI,2004-10-29,50.0,47.0,SurveyUSA,3
+president,MI,2004-10-31,52.0,46.0,Zogby Analytics,3
+president,MN,2004-09-11,47.0,45.0,American Research Group,3
+president,MN,2004-09-13,44.0,46.0,Mason-Dixon Polling & Strategy,3
+president,MN,2004-09-13,45.0,45.0,Gallup,3
+president,MN,2004-09-15,51.7,42.0,Zogby Analytics,3
+president,MN,2004-10-02,52.4,44.1,Zogby Analytics,3
+president,MN,2004-10-10,45.0,43.0,Market Shares Corp.,3
+president,MN,2004-10-10,45.0,43.0,Market Shares Corp.,3
+president,MN,2004-10-15,54.2,43.1,Zogby Analytics,3
+president,MN,2004-10-17,45.0,47.0,Mason-Dixon Polling & Strategy,3
+president,MN,2004-10-23,46.0,45.0,Zogby Analytics,3
+president,MN,2004-10-27,45.0,46.0,Zogby Analytics,3
+president,MN,2004-10-28,47.0,48.0,Mason-Dixon Polling & Strategy,3
+president,MN,2004-10-28,49.0,47.0,Zogby Analytics,3
+president,MN,2004-10-29,52.0,44.0,Gallup,3
+president,MN,2004-10-31,51.0,45.0,Zogby Analytics,3
+president,MO,2004-09-05,41.0,55.0,Gallup,3
+president,MO,2004-09-08,46.0,48.0,SurveyUSA,3
+president,MO,2004-09-15,41.0,48.0,Mason-Dixon Polling & Strategy,3
+president,MO,2004-09-15,46.1,51.5,Zogby Analytics,3
+president,MO,2004-09-18,44.0,50.0,American Research Group,3
+president,MO,2004-10-02,47.6,49.8,Zogby Analytics,3
+president,MO,2004-10-03,47.0,49.0,SurveyUSA,3
+president,MO,2004-10-15,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,MO,2004-10-15,47.6,50.7,Zogby Analytics,3
+president,MO,2004-10-17,45.0,51.0,SurveyUSA,3
+president,MO,2004-10-18,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,MO,2004-10-24,45.0,52.0,SurveyUSA,3
+president,MO,2004-10-28,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,MO,2004-10-28,47.2,51.4,Zogby Analytics,3
+president,MO,2004-10-30,47.0,52.0,SurveyUSA,3
+president,MS,2004-09-16,42.0,51.0,American Research Group,3
+president,MT,2004-09-08,32.0,60.0,American Research Group,3
+president,MT,2004-09-21,36.0,54.0,Mason-Dixon Polling & Strategy,3
+president,MT,2004-10-19,36.0,57.0,Mason-Dixon Polling & Strategy,3
+president,NC,2004-09-07,46.0,50.0,SurveyUSA,3
+president,NC,2004-09-15,44.0,49.0,American Research Group,3
+president,NC,2004-09-27,43.0,52.0,Mason-Dixon Polling & Strategy,3
+president,NC,2004-10-03,45.0,52.0,SurveyUSA,3
+president,NC,2004-10-16,47.0,50.0,SurveyUSA,3
+president,NC,2004-10-18,43.0,51.0,Mason-Dixon Polling & Strategy,3
+president,NC,2004-10-19,40.0,48.0,The Tyson Group,3
+president,NC,2004-10-23,44.0,54.0,SurveyUSA,3
+president,NC,2004-10-25,43.0,52.0,Mason-Dixon Polling & Strategy,3
+president,NC,2004-10-30,45.0,53.0,SurveyUSA,3
+president,ND,2004-09-11,33.0,62.0,American Research Group,3
+president,NE,2004-09-11,30.0,61.0,American Research Group,3
+president,NE,2004-10-17,32.0,61.0,RKM Research and Communications Inc.,3
+president,NH,2004-09-14,40.0,49.0,Mason-Dixon Polling & Strategy,3
+president,NH,2004-09-15,48.1,44.5,Zogby Analytics,3
+president,NH,2004-09-16,45.0,47.0,American Research Group,3
+president,NH,2004-09-30,45.0,50.0,University of New Hampshire Survey Center,3
+president,NH,2004-10-02,50.5,43.9,Zogby Analytics,3
+president,NH,2004-10-04,47.0,47.0,American Research Group,3
+president,NH,2004-10-15,45.0,48.0,Mason-Dixon Polling & Strategy,3
+president,NH,2004-10-15,51.1,46.0,Zogby Analytics,3
+president,NH,2004-10-16,46.0,41.0,Suffolk University,3
+president,NH,2004-10-17,46.0,47.0,American Research Group,3
+president,NH,2004-10-26,50.0,46.0,University of New Hampshire Survey Center,3
+president,NH,2004-10-28,47.0,46.0,Mason-Dixon Polling & Strategy,3
+president,NH,2004-10-28,50.2,45.7,Zogby Analytics,3
+president,NH,2004-10-29,47.0,47.0,American Research Group,3
+president,NH,2004-10-30,49.0,48.0,University of New Hampshire Survey Center,3
+president,NH,2004-10-31,48.0,49.0,American Research Group,3
+president,NJ,2004-09-05,43.0,41.0,Rutgers University Eagleton Center for Public Interest Polling,3
+president,NJ,2004-09-13,45.0,49.0,SurveyUSA,3
+president,NJ,2004-09-15,50.0,42.0,American Research Group,3
+president,NJ,2004-09-18,48.0,48.0,Quinnipiac University,3
+president,NJ,2004-09-25,45.0,44.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-02,50.0,45.0,SurveyUSA,3
+president,NJ,2004-10-03,49.0,46.0,Quinnipiac University,3
+president,NJ,2004-10-03,47.0,41.0,Rutgers University Eagleton Center for Public Interest Polling,3
+president,NJ,2004-10-03,49.0,41.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-09,48.0,43.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-11,46.0,46.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-16,49.0,45.0,Quinnipiac University,3
+president,NJ,2004-10-16,51.0,38.0,Rutgers University Eagleton Center for Public Interest Polling,3
+president,NJ,2004-10-17,51.0,43.0,SurveyUSA,3
+president,NJ,2004-10-17,49.0,41.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-23,46.0,46.0,Quinnipiac University,3
+president,NJ,2004-10-25,47.0,40.0,Fairleigh Dickinson University,3
+president,NJ,2004-10-28,45.0,41.0,Rutgers University Eagleton Center for Public Interest Polling,3
+president,NJ,2004-10-28,54.0,42.0,SurveyUSA,3
+president,NJ,2004-10-29,48.0,43.0,Quinnipiac University,3
+president,NM,2004-09-15,43.0,47.0,Mason-Dixon Polling & Strategy,3
+president,NM,2004-09-15,49.0,44.0,American Research Group,3
+president,NM,2004-09-15,54.3,41.6,Zogby Analytics,3
+president,NM,2004-10-02,53.9,42.5,Zogby Analytics,3
+president,NM,2004-10-03,46.0,43.0,Research & Polling Inc.,3
+president,NM,2004-10-05,47.0,50.0,Gallup,3
+president,NM,2004-10-15,53.6,44.1,Zogby Analytics,3
+president,NM,2004-10-17,48.0,46.0,American Research Group,3
+president,NM,2004-10-17,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,NM,2004-10-26,44.0,47.0,Zogby Analytics,3
+president,NM,2004-10-28,45.0,49.0,Mason-Dixon Polling & Strategy,3
+president,NM,2004-10-28,44.0,47.0,Research & Polling Inc.,3
+president,NM,2004-10-28,49.0,49.0,Zogby Analytics,3
+president,NM,2004-10-29,48.0,47.0,American Research Group,3
+president,NM,2004-10-30,49.0,49.0,Zogby Analytics,3
+president,NV,2004-09-12,47.0,51.0,SurveyUSA,3
+president,NV,2004-09-13,45.0,50.0,Mason-Dixon Polling & Strategy,3
+president,NV,2004-09-13,45.0,47.0,American Research Group,3
+president,NV,2004-09-15,46.6,48.8,Zogby Analytics,3
+president,NV,2004-09-20,43.0,52.0,Gallup,3
+president,NV,2004-10-02,46.0,50.0,SurveyUSA,3
+president,NV,2004-10-02,48.1,47.1,Zogby Analytics,3
+president,NV,2004-10-15,45.9,49.8,Zogby Analytics,3
+president,NV,2004-10-17,45.0,52.0,SurveyUSA,3
+president,NV,2004-10-17,42.0,52.0,Mason-Dixon Polling & Strategy,3
+president,NV,2004-10-23,44.0,48.0,Zogby Analytics,3
+president,NV,2004-10-27,45.0,50.0,Zogby Analytics,3
+president,NV,2004-10-28,49.0,49.0,SurveyUSA,3
+president,NV,2004-10-28,44.0,50.0,Mason-Dixon Polling & Strategy,3
+president,NV,2004-10-28,45.0,50.0,Zogby Analytics,3
+president,NV,2004-10-31,45.0,50.0,Zogby Analytics,3
+president,NV,2004-10-31,45.0,53.0,SurveyUSA,3
+president,NY,2004-09-09,50.0,45.0,Quinnipiac University,3
+president,NY,2004-09-13,52.0,41.0,Marist College,3
+president,NY,2004-09-15,52.0,40.0,American Research Group,3
+president,NY,2004-09-19,55.0,39.0,SurveyUSA,3
+president,NY,2004-09-22,51.0,31.0,Siena College,3
+president,NY,2004-10-10,58.0,35.0,SurveyUSA,3
+president,NY,2004-10-25,57.0,39.0,Marist College,3
+president,NY,2004-10-27,57.0,39.0,SurveyUSA,3
+president,NY,2004-10-27,52.0,37.0,Siena College,3
+president,OH,2004-09-06,43.0,52.0,Gallup,3
+president,OH,2004-09-07,47.0,50.0,SurveyUSA,3
+president,OH,2004-09-12,42.0,50.0,Mason-Dixon Polling & Strategy,3
+president,OH,2004-09-14,42.0,49.0,Mason-Dixon Polling & Strategy,3
+president,OH,2004-09-15,46.8,50.1,Zogby Analytics,3
+president,OH,2004-09-19,46.0,48.0,American Research Group,3
+president,OH,2004-09-21,44.0,48.0,Opinion Dynamics,3
+president,OH,2004-09-27,47.0,49.0,Gallup,3
+president,OH,2004-10-02,49.1,48.8,Zogby Analytics,3
+president,OH,2004-10-03,49.0,48.0,SurveyUSA,3
+president,OH,2004-10-05,48.0,47.0,American Research Group,3
+president,OH,2004-10-10,49.0,45.0,Market Shares Corp.,3
+president,OH,2004-10-15,47.6,50.6,Zogby Analytics,3
+president,OH,2004-10-16,50.0,47.0,ABC News/The Washington Post,3
+president,OH,2004-10-17,45.0,47.0,Opinion Dynamics,3
+president,OH,2004-10-17,49.0,47.0,SurveyUSA,3
+president,OH,2004-10-17,45.0,46.0,Mason-Dixon Polling & Strategy,3
+president,OH,2004-10-19,48.0,47.0,Gallup,3
+president,OH,2004-10-23,42.0,47.0,Zogby Analytics,3
+president,OH,2004-10-24,49.0,47.0,American Research Group,3
+president,OH,2004-10-24,50.0,47.0,SurveyUSA,3
+president,OH,2004-10-24,50.0,44.0,Los Angeles Times,3
+president,OH,2004-10-26,45.0,48.0,Mason-Dixon Polling & Strategy,3
+president,OH,2004-10-27,47.0,44.0,Zogby Analytics,3
+president,OH,2004-10-28,46.0,48.0,Mason-Dixon Polling & Strategy,3
+president,OH,2004-10-28,44.0,48.0,Zogby Analytics,3
+president,OH,2004-10-30,47.0,50.0,Opinion Dynamics,3
+president,OH,2004-10-30,47.0,49.0,SurveyUSA,3
+president,OH,2004-10-30,50.0,46.0,Gallup,3
+president,OH,2004-10-31,43.0,49.0,Zogby Analytics,3
+president,OH,2004-10-31,51.0,47.0,Harris Insights & Analytics,3
+president,OK,2004-09-03,30.0,61.0,WPA Intelligence,3
+president,OK,2004-09-11,29.0,59.0,WPA Intelligence,3
+president,OK,2004-09-17,38.0,55.0,American Research Group,3
+president,OK,2004-09-18,24.0,64.0,WPA Intelligence,3
+president,OK,2004-09-21,33.0,64.0,SurveyUSA,3
+president,OK,2004-09-25,31.0,57.0,WPA Intelligence,3
+president,OK,2004-10-02,28.0,58.0,WPA Intelligence,3
+president,OK,2004-10-05,33.0,63.0,SurveyUSA,3
+president,OK,2004-10-09,38.0,50.0,WPA Intelligence,3
+president,OK,2004-10-16,31.0,61.0,WPA Intelligence,3
+president,OK,2004-10-19,34.0,64.0,SurveyUSA,3
+president,OK,2004-10-23,28.0,61.0,WPA Intelligence,3
+president,OK,2004-10-29,34.0,64.0,SurveyUSA,3
+president,OR,2004-09-12,47.0,45.0,American Research Group,3
+president,OR,2004-09-15,43.0,47.0,Mason-Dixon Polling & Strategy,3
+president,OR,2004-09-15,53.9,41.9,Zogby Analytics,3
+president,OR,2004-09-20,47.0,48.0,SurveyUSA,3
+president,OR,2004-09-26,47.0,45.0,DHM Research,3
+president,OR,2004-10-02,53.8,43.7,Zogby Analytics,3
+president,OR,2004-10-10,53.0,44.0,SurveyUSA,3
+president,OR,2004-10-11,50.0,44.0,American Research Group,3
+president,OR,2004-10-15,55.7,42.6,Zogby Analytics,3
+president,OR,2004-10-17,47.0,46.0,Mason-Dixon Polling & Strategy,3
+president,OR,2004-10-17,53.0,45.0,Gallup,3
+president,OR,2004-10-25,47.0,45.0,Moore Information Group,3
+president,OR,2004-10-26,49.0,43.0,DHM Research,3
+president,OR,2004-10-26,50.0,46.0,American Research Group,3
+president,OR,2004-10-26,50.0,47.0,SurveyUSA,3
+president,OR,2004-10-28,50.0,44.0,Mason-Dixon Polling & Strategy,3
+president,OR,2004-10-28,53.9,43.8,Zogby Analytics,3
+president,PA,2004-09-06,47.0,48.0,Gallup,3
+president,PA,2004-09-08,49.0,47.0,SurveyUSA,3
+president,PA,2004-09-11,46.0,49.0,ABC News/The Washington Post,3
+president,PA,2004-09-12,49.0,49.0,Franklin & Marshall College Center for Opinion Research,3
+president,PA,2004-09-13,48.0,49.0,Quinnipiac University,3
+president,PA,2004-09-15,45.0,44.0,Mason-Dixon Polling & Strategy,3
+president,PA,2004-09-15,50.6,47.5,Zogby Analytics,3
+president,PA,2004-09-17,47.0,46.0,American Research Group,3
+president,PA,2004-09-21,48.0,45.0,Opinion Dynamics,3
+president,PA,2004-09-24,49.0,46.0,Quinnipiac University,3
+president,PA,2004-09-27,45.0,44.0,Mason-Dixon Polling & Strategy,3
+president,PA,2004-09-27,46.0,49.0,Gallup,3
+president,PA,2004-10-02,49.0,43.0,Franklin & Marshall College Center for Opinion Research,3
+president,PA,2004-10-02,51.8,46.4,Zogby Analytics,3
+president,PA,2004-10-04,49.0,47.0,SurveyUSA,3
+president,PA,2004-10-05,48.0,46.0,American Research Group,3
+president,PA,2004-10-10,48.0,46.0,Quinnipiac University,3
+president,PA,2004-10-15,51.8,46.1,Zogby Analytics,3
+president,PA,2004-10-16,51.0,45.0,SurveyUSA,3
+president,PA,2004-10-17,46.0,45.0,Mason-Dixon Polling & Strategy,3
+president,PA,2004-10-18,50.0,44.0,Quinnipiac University,3
+president,PA,2004-10-19,48.0,46.0,Muhlenberg College Institute of Public Opinion,3
+president,PA,2004-10-21,51.0,46.0,Franklin & Marshall College Center for Opinion Research,3
+president,PA,2004-10-23,47.0,45.0,Zogby Analytics,3
+president,PA,2004-10-24,50.0,47.0,American Research Group,3
+president,PA,2004-10-24,53.0,45.0,SurveyUSA,3
+president,PA,2004-10-24,47.0,49.0,Quinnipiac University,3
+president,PA,2004-10-24,48.0,48.0,Los Angeles Times,3
+president,PA,2004-10-25,50.0,47.0,Gallup,3
+president,PA,2004-10-27,47.0,47.0,Zogby Analytics,3
+president,PA,2004-10-28,48.0,46.0,Mason-Dixon Polling & Strategy,3
+president,PA,2004-10-28,50.0,45.0,Zogby Analytics,3
+president,PA,2004-10-29,47.0,47.0,Quinnipiac University,3
+president,PA,2004-10-30,51.0,47.0,SurveyUSA,3
+president,PA,2004-10-30,46.0,50.0,Gallup,3
+president,PA,2004-10-31,50.0,46.0,Zogby Analytics,3
+president,PA,2004-10-31,49.0,48.0,SurveyUSA,3
+president,PA,2004-10-31,50.0,48.0,Harris Insights & Analytics,3
+president,RI,2004-09-12,58.0,30.0,American Research Group,3
+president,RI,2004-09-19,55.0,37.0,SurveyUSA,3
+president,RI,2004-10-10,56.0,36.0,SurveyUSA,3
+president,RI,2004-10-26,54.0,41.0,SurveyUSA,3
+president,SC,2004-09-15,40.0,52.0,American Research Group,3
+president,SC,2004-09-20,38.0,58.0,SurveyUSA,3
+president,SC,2004-09-28,37.0,55.0,Mason-Dixon Polling & Strategy,3
+president,SC,2004-10-11,42.0,55.0,SurveyUSA,3
+president,SC,2004-10-19,40.0,53.0,Mason-Dixon Polling & Strategy,3
+president,SC,2004-10-23,39.0,57.0,SurveyUSA,3
+president,SD,2004-09-10,39.0,58.0,American Research Group,3
+president,SD,2004-09-21,37.0,50.0,Mason-Dixon Polling & Strategy,3
+president,SD,2004-09-26,29.0,57.0,Zogby Analytics,3
+president,SD,2004-10-20,36.0,55.0,Mason-Dixon Polling & Strategy,3
+president,TN,2004-09-13,37.0,53.0,Mason-Dixon Polling & Strategy,3
+president,TN,2004-09-15,45.9,41.4,Zogby Analytics,3
+president,TN,2004-09-17,43.0,50.0,American Research Group,3
+president,TN,2004-09-21,41.0,55.0,SurveyUSA,3
+president,TN,2004-10-02,47.8,48.7,Zogby Analytics,3
+president,TN,2004-10-04,39.0,58.0,SurveyUSA,3
+president,TN,2004-10-15,47.8,50.3,Zogby Analytics,3
+president,TN,2004-10-18,38.0,60.0,SurveyUSA,3
+president,TN,2004-10-20,41.0,53.0,Mason-Dixon Polling & Strategy,3
+president,TN,2004-10-28,47.1,50.4,Zogby Analytics,3
+president,TN,2004-10-29,40.0,58.0,SurveyUSA,3
+president,TX,2004-09-18,36.0,58.0,American Research Group,3
+president,TX,2004-09-20,37.0,58.0,SurveyUSA,3
+president,TX,2004-10-10,37.0,60.0,SurveyUSA,3
+president,TX,2004-10-27,37.0,59.0,SurveyUSA,3
+president,UT,2004-09-08,25.0,65.0,Dan Jones & Associates,3
+president,UT,2004-09-12,27.0,64.0,American Research Group,3
+president,UT,2004-10-25,24.0,69.0,Dan Jones & Associates,3
+president,VA,2004-09-13,43.0,49.0,American Research Group,3
+president,VA,2004-09-22,42.0,53.0,SurveyUSA,3
+president,VA,2004-09-26,43.0,49.0,Mason-Dixon Polling & Strategy,3
+president,VA,2004-10-17,46.0,50.0,SurveyUSA,3
+president,VA,2004-10-24,44.0,50.0,Mason-Dixon Polling & Strategy,3
+president,VA,2004-10-28,47.0,51.0,SurveyUSA,3
+president,VT,2004-09-11,50.0,40.0,American Research Group,3
+president,WA,2004-09-05,52.0,44.0,Gallup,3
+president,WA,2004-09-11,51.0,44.0,American Research Group,3
+president,WA,2004-09-15,52.8,44.1,Zogby Analytics,3
+president,WA,2004-09-18,52.0,38.0,Elway Research,3
+president,WA,2004-09-19,48.0,46.0,Moore Information Group,3
+president,WA,2004-09-19,51.0,42.0,Ipsos,3
+president,WA,2004-09-20,51.0,46.0,SurveyUSA,3
+president,WA,2004-10-02,53.7,43.8,Zogby Analytics,3
+president,WA,2004-10-03,47.0,45.0,Moore Information Group,3
+president,WA,2004-10-03,54.0,43.0,SurveyUSA,3
+president,WA,2004-10-15,50.0,44.0,Elway Research,3
+president,WA,2004-10-15,54.3,43.9,Zogby Analytics,3
+president,WA,2004-10-16,52.0,45.0,SurveyUSA,3
+president,WA,2004-10-24,51.0,45.0,SurveyUSA,3
+president,WA,2004-10-25,50.0,45.0,Mason-Dixon Polling & Strategy,3
+president,WA,2004-10-28,54.6,43.4,Zogby Analytics,3
+president,WA,2004-10-30,51.0,47.0,SurveyUSA,3
+president,WI,2004-09-11,44.0,52.0,Gallup,3
+president,WI,2004-09-14,46.0,46.0,American Research Group,3
+president,WI,2004-09-15,44.0,46.0,Mason-Dixon Polling & Strategy,3
+president,WI,2004-09-15,50.3,47.9,Zogby Analytics,3
+president,WI,2004-09-18,43.0,53.0,ABC News/The Washington Post,3
+president,WI,2004-09-24,40.0,50.0,Harris Insights & Analytics,3
+president,WI,2004-10-02,50.6,48.1,Zogby Analytics,3
+president,WI,2004-10-04,46.0,49.0,Gallup,3
+president,WI,2004-10-05,45.0,47.0,Moore Information Group,3
+president,WI,2004-10-10,47.0,43.0,Market Shares Corp.,3
+president,WI,2004-10-15,51.3,47.5,Zogby Analytics,3
+president,WI,2004-10-17,45.0,45.0,Mason-Dixon Polling & Strategy,3
+president,WI,2004-10-18,47.0,47.0,American Research Group,3
+president,WI,2004-10-18,44.0,50.0,Gallup,3
+president,WI,2004-10-23,45.0,48.0,Zogby Analytics,3
+president,WI,2004-10-26,48.0,47.0,American Research Group,3
+president,WI,2004-10-27,49.0,46.0,Zogby Analytics,3
+president,WI,2004-10-28,48.0,46.0,Mason-Dixon Polling & Strategy,3
+president,WI,2004-10-28,51.0,44.0,Zogby Analytics,3
+president,WI,2004-10-29,44.0,52.0,Gallup,3
+president,WI,2004-10-30,45.0,48.0,Opinion Dynamics,3
+president,WI,2004-10-31,51.0,45.0,Zogby Analytics,3
+president,WV,2004-09-13,44.0,45.0,Mason-Dixon Polling & Strategy,3
+president,WV,2004-09-15,46.0,46.0,American Research Group,3
+president,WV,2004-09-15,38.8,51.2,Zogby Analytics,3
+president,WV,2004-09-19,45.0,51.0,Gallup,3
+president,WV,2004-10-02,44.0,50.1,Zogby Analytics,3
+president,WV,2004-10-15,45.8,48.6,Zogby Analytics,3
+president,WV,2004-10-17,44.0,49.0,Mason-Dixon Polling & Strategy,3
+president,WV,2004-10-28,43.0,51.0,Mason-Dixon Polling & Strategy,3
+president,WV,2004-10-28,45.6,50.1,Zogby Analytics,3
+president,WY,2004-09-10,29.0,65.0,American Research Group,3
+senate,AK,2004-09-30,48.1,45.2,Alaska Survey Research,3
+senate,AK,2004-10-16,46.9,45.3,Alaska Survey Research,3
+senate,AR,2004-09-28,54.0,40.0,SurveyUSA,3
+senate,AR,2004-10-10,60.0,32.0,Zogby Analytics,3
+senate,AR,2004-10-16,57.0,38.0,SurveyUSA,3
+senate,AR,2004-10-24,57.0,38.0,SurveyUSA,3
+senate,AR,2004-10-30,55.0,42.0,SurveyUSA,3
+senate,AR,2004-10-31,53.0,43.0,SurveyUSA,3
+senate,CA,2004-09-07,53.0,35.0,SurveyUSA,3
+senate,CA,2004-09-16,54.0,36.0,Public Policy Institute of California,3
+senate,CA,2004-09-19,52.0,34.0,Los Angeles Times,3
+senate,CA,2004-09-28,48.0,32.0,Field Research Corp. (Field Poll),3
+senate,CA,2004-10-03,53.0,36.0,SurveyUSA,3
+senate,CA,2004-10-14,53.0,35.0,Public Policy Institute of California,3
+senate,CA,2004-10-16,57.0,35.0,SurveyUSA,3
+senate,CA,2004-10-16,55.0,33.0,Los Angeles Times,3
+senate,CA,2004-10-24,53.0,38.0,SurveyUSA,3
+senate,CA,2004-10-24,53.0,34.0,Field Research Corp. (Field Poll),3
+senate,CA,2004-10-30,57.0,36.0,SurveyUSA,3
+senate,CO,2004-09-15,46.0,44.0,Tarrance Group,3
+senate,CO,2004-09-16,46.0,45.0,Ciruli Associates,3
+senate,CO,2004-09-22,46.0,51.0,SurveyUSA,3
+senate,CO,2004-10-05,46.0,44.0,Mason-Dixon Polling & Strategy,3
+senate,CO,2004-10-05,54.0,43.0,Gallup,3
+senate,CO,2004-10-06,48.0,48.0,SurveyUSA,3
+senate,CO,2004-10-16,49.0,48.0,Gallup,3
+senate,CO,2004-10-17,47.0,43.0,Ciruli Associates,3
+senate,CO,2004-10-19,46.0,50.0,SurveyUSA,3
+senate,CO,2004-10-26,53.0,42.0,Zogby Analytics,3
+senate,CO,2004-10-26,46.0,46.0,Mason-Dixon Polling & Strategy,3
+senate,CO,2004-10-29,49.0,47.0,SurveyUSA,3
+senate,CO,2004-10-30,52.0,44.0,Zogby Analytics,3
+senate,CO,2004-10-31,51.0,47.0,SurveyUSA,3
+senate,CT,2004-09-27,69.0,24.0,Quinnipiac University,3
+senate,FL,2004-09-13,49.0,45.0,SurveyUSA,3
+senate,FL,2004-09-20,43.0,42.0,Quinnipiac University,3
+senate,FL,2004-09-20,51.0,45.0,Gallup,3
+senate,FL,2004-10-02,46.0,50.0,SurveyUSA,3
+senate,FL,2004-10-03,47.0,48.0,Quinnipiac University,3
+senate,FL,2004-10-04,41.0,46.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2004-10-07,47.0,47.0,ABC News/The Washington Post,3
+senate,FL,2004-10-15,45.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2004-10-16,47.0,49.0,SurveyUSA,3
+senate,FL,2004-10-17,47.0,47.0,Quinnipiac University,3
+senate,FL,2004-10-23,50.0,47.0,SurveyUSA,3
+senate,FL,2004-10-24,46.0,49.0,Quinnipiac University,3
+senate,FL,2004-10-26,45.0,45.0,Zogby Analytics,3
+senate,FL,2004-10-26,46.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2004-10-29,48.0,46.0,Gallup,3
+senate,FL,2004-10-29,44.0,49.0,Quinnipiac University,3
+senate,FL,2004-10-30,46.0,46.0,Zogby Analytics,3
+senate,FL,2004-10-30,47.0,41.0,Opinion Dynamics,3
+senate,FL,2004-10-30,48.0,48.0,SurveyUSA,3
+senate,FL,2004-10-30,47.0,46.0,Gallup,3
+senate,GA,2004-09-14,33.0,58.0,SurveyUSA,3
+senate,GA,2004-10-06,35.0,57.0,SurveyUSA,3
+senate,GA,2004-10-07,33.0,49.0,Zogby Analytics,3
+senate,GA,2004-10-14,35.0,53.0,Zogby Analytics,3
+senate,GA,2004-10-19,39.0,55.0,SurveyUSA,3
+senate,GA,2004-10-28,36.0,49.0,Zogby Analytics,3
+senate,GA,2004-10-29,40.0,56.0,SurveyUSA,3
+senate,IA,2004-09-21,23.0,63.0,Opinion Dynamics,3
+senate,IA,2004-10-26,27.0,68.0,Zogby Analytics,3
+senate,IA,2004-10-30,22.0,68.0,Zogby Analytics,3
+senate,IA,2004-10-30,20.0,67.0,Opinion Dynamics,3
+senate,IL,2004-09-13,65.0,24.0,SurveyUSA,3
+senate,IL,2004-09-19,68.0,17.0,Market Shares Corp.,3
+senate,IL,2004-10-05,68.0,23.0,SurveyUSA,3
+senate,IL,2004-10-18,66.0,19.0,Market Shares Corp.,3
+senate,IL,2004-10-28,66.0,27.0,SurveyUSA,3
+senate,IN,2004-09-08,64.0,28.0,SurveyUSA,3
+senate,IN,2004-10-01,61.0,22.0,Selzer & Co.,3
+senate,IN,2004-10-04,66.0,28.0,SurveyUSA,3
+senate,IN,2004-10-18,63.0,31.0,SurveyUSA,3
+senate,IN,2004-10-28,61.0,34.0,SurveyUSA,3
+senate,KS,2004-10-24,26.0,59.0,SurveyUSA,3
+senate,KY,2004-09-08,35.0,54.0,SurveyUSA,3
+senate,KY,2004-10-05,40.0,51.0,SurveyUSA,3
+senate,KY,2004-10-18,39.0,53.0,SurveyUSA,3
+senate,KY,2004-10-29,42.0,51.0,SurveyUSA,3
+senate,MD,2004-10-25,66.0,29.0,Ipsos,3
+senate,MO,2004-09-08,37.0,57.0,SurveyUSA,3
+senate,MO,2004-10-03,34.0,59.0,SurveyUSA,3
+senate,MO,2004-10-17,38.0,56.0,SurveyUSA,3
+senate,MO,2004-10-24,34.0,60.0,SurveyUSA,3
+senate,MO,2004-10-30,38.0,57.0,SurveyUSA,3
+senate,NC,2004-09-07,50.0,40.0,SurveyUSA,3
+senate,NC,2004-09-27,45.0,44.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2004-10-03,47.0,46.0,SurveyUSA,3
+senate,NC,2004-10-16,45.0,47.0,SurveyUSA,3
+senate,NC,2004-10-18,45.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2004-10-19,42.0,43.0,The Tyson Group,3
+senate,NC,2004-10-23,44.0,50.0,SurveyUSA,3
+senate,NC,2004-10-25,46.4,46.1,Mason-Dixon Polling & Strategy,3
+senate,NC,2004-10-30,45.0,50.0,SurveyUSA,3
+senate,NH,2004-09-16,20.0,63.0,American Research Group,3
+senate,NH,2004-09-30,21.0,62.0,University of New Hampshire Survey Center,3
+senate,NH,2004-10-16,26.0,52.0,Suffolk University,3
+senate,NH,2004-10-26,23.0,62.0,University of New Hampshire Survey Center,3
+senate,NH,2004-10-29,26.0,66.0,American Research Group,3
+senate,NH,2004-10-30,27.0,63.0,University of New Hampshire Survey Center,3
+senate,NV,2004-09-13,54.0,34.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2004-10-17,59.0,32.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2004-10-26,57.0,34.0,Zogby Analytics,3
+senate,NV,2004-10-26,59.0,35.0,Mason-Dixon Polling & Strategy,3
+senate,NV,2004-10-30,58.0,34.0,Zogby Analytics,3
+senate,NY,2004-09-09,61.0,13.0,Quinnipiac University,3
+senate,NY,2004-09-15,65.0,17.0,Marist College,3
+senate,NY,2004-10-25,72.0,16.0,Marist College,3
+senate,OH,2004-09-07,35.0,53.0,SurveyUSA,3
+senate,OH,2004-09-12,32.0,58.0,Mason-Dixon Polling & Strategy,3
+senate,OH,2004-09-21,30.0,58.0,Opinion Dynamics,3
+senate,OH,2004-10-03,34.0,58.0,SurveyUSA,3
+senate,OH,2004-10-16,35.0,60.0,ABC News/The Washington Post,3
+senate,OH,2004-10-17,28.0,58.0,Opinion Dynamics,3
+senate,OH,2004-10-17,34.0,58.0,SurveyUSA,3
+senate,OH,2004-10-24,33.0,59.0,SurveyUSA,3
+senate,OH,2004-10-26,27.0,58.0,Zogby Analytics,3
+senate,OH,2004-10-27,26.0,64.0,Mason-Dixon Polling & Strategy,3
+senate,OH,2004-10-30,33.0,57.0,Zogby Analytics,3
+senate,OH,2004-10-30,30.0,60.0,Opinion Dynamics,3
+senate,OH,2004-10-30,33.0,61.0,SurveyUSA,3
+senate,OK,2004-09-03,36.0,42.0,WPA Intelligence,3
+senate,OK,2004-09-11,39.0,37.0,WPA Intelligence,3
+senate,OK,2004-09-18,41.0,40.0,WPA Intelligence,3
+senate,OK,2004-09-21,45.0,45.0,SurveyUSA,3
+senate,OK,2004-09-25,44.0,39.0,WPA Intelligence,3
+senate,OK,2004-10-02,43.0,41.0,WPA Intelligence,3
+senate,OK,2004-10-05,44.0,46.0,SurveyUSA,3
+senate,OK,2004-10-09,40.0,38.0,WPA Intelligence,3
+senate,OK,2004-10-16,39.0,42.0,WPA Intelligence,3
+senate,OK,2004-10-19,41.0,47.0,SurveyUSA,3
+senate,OK,2004-10-23,38.0,41.0,WPA Intelligence,3
+senate,OK,2004-10-29,39.0,47.0,SurveyUSA,3
+senate,PA,2004-09-08,33.0,51.0,SurveyUSA,3
+senate,PA,2004-09-11,38.0,55.0,ABC News/The Washington Post,3
+senate,PA,2004-09-12,25.0,51.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2004-09-13,38.0,54.0,Quinnipiac University,3
+senate,PA,2004-09-21,30.0,52.0,Opinion Dynamics,3
+senate,PA,2004-09-24,37.0,56.0,Quinnipiac University,3
+senate,PA,2004-09-27,31.0,53.0,Mason-Dixon Polling & Strategy,3
+senate,PA,2004-10-02,35.0,44.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2004-10-04,35.0,54.0,SurveyUSA,3
+senate,PA,2004-10-10,36.0,55.0,Quinnipiac University,3
+senate,PA,2004-10-16,41.0,48.0,SurveyUSA,3
+senate,PA,2004-10-18,36.0,51.0,Quinnipiac University,3
+senate,PA,2004-10-19,31.0,53.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2004-10-20,32.0,50.0,Mason-Dixon Polling & Strategy,3
+senate,PA,2004-10-21,31.0,52.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2004-10-24,38.0,51.0,SurveyUSA,3
+senate,PA,2004-10-24,33.0,55.0,Quinnipiac University,3
+senate,PA,2004-10-26,29.0,55.0,Zogby Analytics,3
+senate,PA,2004-10-29,33.0,53.0,Quinnipiac University,3
+senate,PA,2004-10-30,32.0,53.0,Zogby Analytics,3
+senate,PA,2004-10-30,35.0,54.0,SurveyUSA,3
+senate,PA,2004-10-31,35.0,53.0,SurveyUSA,3
+senate,SC,2004-09-20,39.0,51.0,SurveyUSA,3
+senate,SC,2004-09-28,38.0,50.0,Mason-Dixon Polling & Strategy,3
+senate,SC,2004-10-11,43.0,46.0,SurveyUSA,3
+senate,SC,2004-10-19,43.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,SC,2004-10-23,39.0,52.0,SurveyUSA,3
+senate,SD,2004-09-21,50.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,SD,2004-09-26,48.0,46.0,Zogby Analytics,3
+senate,SD,2004-10-20,49.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,SD,2004-10-25,46.0,48.0,Zogby Analytics,3
+senate,UT,2004-09-08,23.0,60.0,Dan Jones & Associates,3
+senate,UT,2004-10-01,23.0,62.0,Dan Jones & Associates,3
+senate,UT,2004-10-25,22.0,65.0,Dan Jones & Associates,3
+senate,WA,2004-09-18,57.0,37.0,Elway Research,3
+senate,WA,2004-09-20,53.0,41.0,SurveyUSA,3
+senate,WA,2004-10-03,57.0,38.0,SurveyUSA,3
+senate,WA,2004-10-15,54.0,37.0,Elway Research,3
+senate,WA,2004-10-16,56.0,38.0,SurveyUSA,3
+senate,WA,2004-10-24,55.0,41.0,SurveyUSA,3
+senate,WA,2004-10-25,53.0,39.0,Mason-Dixon Polling & Strategy,3
+senate,WA,2004-10-30,51.0,45.0,SurveyUSA,3
+senate,WI,2004-09-18,51.0,45.0,ABC News/The Washington Post,3
+senate,WI,2004-09-24,52.0,39.0,Harris Insights & Analytics,3
+senate,WI,2004-10-10,57.0,33.0,Market Shares Corp.,3
+senate,WI,2004-10-26,59.0,36.0,Zogby Analytics,3
+senate,WI,2004-10-26,48.0,43.0,Tarrance Group,3
+senate,WI,2004-10-30,59.0,36.0,Zogby Analytics,3
+senate,WI,2004-10-30,56.0,42.0,Opinion Dynamics,3

@@ -1,1531 +1,942 @@
-mode,state,date,dem,rep,sigma,pollster
-governor,DE,2016-09-22,57.0,25.0,3.33,University of Delaware Center for Political Communication
-governor,DE,2016-10-28,60.0,36.0,4.67,SurveyMonkey
-governor,DE,2016-11-04,56.0,40.0,5,SurveyMonkey
-governor,IN,2016-10-04,41.0,39.0,4.08,Public Opinion Strategies
-governor,IN,2016-10-12,50.0,38.0,4.99,Monmouth University Polling Institute
-governor,IN,2016-10-13,48.0,43.0,4.29,Ball State University Bowen Center for Public Affairs
-governor,IN,2016-10-23,42.0,38.0,4.1,Gravis Marketing
-governor,IN,2016-10-29,48.0,42.0,4.99,Monmouth University Polling Institute
-governor,IN,2016-10-28,48.0,47.0,3.85,SurveyMonkey
-governor,IN,2016-10-31,42.0,38.0,5,Gravis Marketing
-governor,IN,2016-11-02,42.0,42.0,4.08,Public Opinion Strategies
-governor,IN,2016-11-04,49.0,47.0,2.43,SurveyMonkey
-governor,MO,2016-09-12,49.0,41.0,4.07,Gravis Marketing
-governor,MO,2016-09-19,47.0,38.0,3.05,Remington Research Group
-governor,MO,2016-09-26,51.0,35.0,2.8,Remington Research Group
-governor,MO,2016-10-04,44.0,41.0,2.51,Remington Research Group
-governor,MO,2016-10-10,46.0,43.0,4.96,Monmouth University Polling Institute
-governor,MO,2016-10-10,48.0,42.0,2.15,Remington Research Group
-governor,MO,2016-10-24,47.0,45.0,1.98,Remington Research Group
-governor,MO,2016-10-25,46.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,MO,2016-10-27,46.0,45.0,2.43,BK Strategies
-governor,MO,2016-10-28,54.0,44.0,3.86,SurveyMonkey
-governor,MO,2016-10-30,46.0,46.0,4.97,Monmouth University Polling Institute
-governor,MO,2016-10-31,45.0,46.0,2.41,Remington Research Group
-governor,MO,2016-10-29,45.0,39.0,4.44,DFM Research
-governor,MO,2016-11-01,47.0,44.0,3.39,Public Policy Polling
-governor,MO,2016-11-04,48.0,47.0,2.7,SurveyMonkey
-governor,MT,2016-10-07,44.0,32.0,4.12,Montana State University Billings
-governor,MT,2016-10-11,47.0,45.0,3.16,Mason-Dixon Polling & Strategy
-governor,MT,2016-10-28,53.0,39.0,4.97,SurveyMonkey
-governor,MT,2016-11-04,44.0,46.0,4.72,SurveyMonkey
-governor,NC,2016-09-11,43.0,45.0,4.08,National Research
-governor,NC,2016-09-14,46.0,49.0,3.94,Elon University
-governor,NC,2016-09-18,50.0,42.0,3.58,The New York Times/Siena College
-governor,NC,2016-09-19,46.0,41.0,3.12,Public Policy Polling
-governor,NC,2016-09-19,43.0,46.0,3.69,Beacon Research/Shaw & Co. Research
-governor,NC,2016-09-20,39.0,41.0,4.53,"Meredith College Department of History, Political Science, and International Studies"
-governor,NC,2016-09-19,50.0,41.0,4.98,High Point University Survey Research Center
-governor,NC,2016-09-27,45.0,42.0,3.41,Public Policy Polling
-governor,NC,2016-09-29,48.0,44.0,3.89,Elon University
-governor,NC,2016-10-01,50.0,44.0,3.52,Selzer & Co.
-governor,NC,2016-09-29,48.0,46.0,4.44,Quinnipiac University
-governor,NC,2016-10-01,48.0,44.0,3.9,SurveyUSA
-governor,NC,2016-10-03,49.0,42.0,4.57,High Point University Survey Research Center
-governor,NC,2016-10-11,49.0,48.0,3.67,Marist College
-governor,NC,2016-10-12,49.0,48.0,3.56,Big Village
-governor,NC,2016-10-12,55.0,42.0,2.9,SurveyMonkey
-governor,NC,2016-10-16,47.0,45.0,3.92,SurveyUSA
-governor,NC,2016-10-16,42.0,46.0,4.08,National Research
-governor,NC,2016-10-17,50.0,43.0,3.29,Lucid
-governor,NC,2016-10-12,47.0,45.0,2.85,Ipsos
-governor,NC,2016-10-21,46.0,44.0,3.38,Public Policy Polling
-governor,NC,2016-10-22,47.0,48.0,4.99,Monmouth University Polling Institute
-governor,NC,2016-10-22,51.0,45.0,3.55,The New York Times/Siena College
-governor,NC,2016-10-25,51.0,45.0,3.58,Marist College
-governor,NC,2016-10-23,49.0,47.0,3.77,Quinnipiac University
-governor,NC,2016-10-25,44.0,44.0,3.75,Elon University
-governor,NC,2016-10-27,46.0,44.0,3.18,YouGov
-governor,NC,2016-10-28,52.0,46.0,2.52,SurveyMonkey
-governor,NC,2016-10-30,48.0,47.0,3.9,SurveyUSA
-governor,NC,2016-10-29,49.0,47.0,4.08,Quinnipiac University
-governor,NC,2016-11-05,47.0,46.0,3.54,The New York Times/Siena College
-governor,NC,2016-11-05,50.0,47.0,3.39,Quinnipiac University
-governor,NC,2016-11-04,54.0,43.0,1.79,SurveyMonkey
-governor,ND,2016-10-28,29.0,68.0,5,SurveyMonkey
-governor,ND,2016-11-04,27.0,70.0,5,SurveyMonkey
-governor,NH,2016-09-19,43.0,49.0,5,Monmouth University Polling Institute
-governor,NH,2016-09-22,44.0,45.0,4.38,American Research Group
-governor,NH,2016-09-28,44.0,47.0,4.46,MassINC Polling Group
-governor,NH,2016-10-01,44.0,44.0,4.47,GQR
-governor,NH,2016-10-04,36.0,40.0,4.47,Suffolk University
-governor,NH,2016-10-09,39.0,41.0,4.4,University of Massachusetts Lowell Center for Public Opinion
-governor,NH,2016-10-11,47.0,44.0,4.47,MassINC Polling Group
-governor,NH,2016-10-12,53.0,43.0,4.19,SurveyMonkey
-governor,NH,2016-10-14,44.0,38.0,3.85,University of New Hampshire Survey Center
-governor,NH,2016-10-19,44.0,43.0,3.6,YouGov
-governor,NH,2016-10-22,47.0,46.0,3.61,Marist College
-governor,NH,2016-10-24,48.0,43.0,4.99,Monmouth University Polling Institute
-governor,NH,2016-10-27,41.8,45.2,4.95,Praecones Analytica
-governor,NH,2016-10-28,42.0,41.0,4.46,University of New Hampshire Survey Center
-governor,NH,2016-10-28,53.0,43.0,3.9,SurveyMonkey
-governor,NH,2016-10-31,47.0,44.0,3.58,Public Policy Polling
-governor,NH,2016-10-31,44.0,49.0,4.47,MassINC Polling Group
-governor,NH,2016-11-01,46.0,38.0,4.69,University of New Hampshire Survey Center
-governor,NH,2016-11-01,44.0,48.0,4.08,American Research Group
-governor,NH,2016-11-01,37.0,41.0,4.47,Suffolk University
-governor,NH,2016-10-30,43.0,47.0,3.79,University of Massachusetts Lowell Center for Public Opinion
-governor,NH,2016-11-05,48.0,37.0,3.86,University of New Hampshire Survey Center
-governor,NH,2016-11-04,55.0,42.0,3.79,SurveyMonkey
-governor,OR,2016-10-11,46.0,42.0,3.91,SurveyUSA
-governor,OR,2016-10-10,46.0,33.0,4.08,DHM Research
-governor,OR,2016-10-09,48.0,34.0,4.06,Riley Research Associates
-governor,OR,2016-10-20,45.0,43.0,3.28,Clout Research
-governor,OR,2016-10-27,42.0,33.0,4.45,DHM Research
-governor,OR,2016-10-28,54.0,42.0,3.67,SurveyMonkey
-governor,OR,2016-11-03,52.5,41.4,3.19,Clout Research
-governor,OR,2016-11-04,56.0,41.0,2.5,SurveyMonkey
-governor,UT,2016-10-11,30.0,63.0,4.98,Monmouth University Polling Institute
-governor,UT,2016-10-15,25.0,64.0,3.5,Dan Jones & Associates
-governor,UT,2016-10-28,35.0,61.0,3.05,SurveyMonkey
-governor,UT,2016-11-01,30.0,63.0,4.99,Monmouth University Polling Institute
-governor,UT,2016-11-02,26.0,64.0,4.47,Y2 Analytics
-governor,UT,2016-11-04,38.0,58.0,2.6,SurveyMonkey
-governor,VT,2016-10-07,38.0,39.0,4.16,The Castleton Polling Institute
-governor,VT,2016-10-21,40.0,47.0,4.07,Braun Research
-governor,VT,2016-10-25,38.0,45.0,3.08,RRH Elections
-governor,VT,2016-10-28,45.0,52.0,4.79,SurveyMonkey
-governor,VT,2016-11-04,51.0,47.0,4.69,SurveyMonkey
-governor,WA,2016-10-01,50.0,40.0,4.47,Strategies 360
-governor,WA,2016-10-10,51.0,45.0,3.65,YouGov
-governor,WA,2016-10-21,51.0,39.0,4.46,Elway Research
-governor,WA,2016-10-28,55.0,42.0,3.66,SurveyMonkey
-governor,WA,2016-11-01,50.0,43.0,3.87,SurveyUSA
-governor,WA,2016-11-05,49.0,40.0,4.99,Leger
-governor,WA,2016-11-04,55.0,42.0,2.63,SurveyMonkey
-governor,WV,2016-09-09,44.0,42.0,4.08,Just Win Strategies
-governor,WV,2016-09-15,46.0,33.0,4.47,Garin-Hart-Yang Research Group
-governor,WV,2016-10-14,44.0,33.0,4.95,Repass
-governor,WV,2016-10-14,44.0,34.0,4.08,Global Strategy Group
-governor,WV,2016-10-28,42.0,43.0,5,SurveyMonkey
-governor,WV,2016-11-04,36.0,45.0,4.6,SurveyMonkey
-senate,KS,2016-09-08,34.0,50.0,4.21,SurveyUSA
-senate,KS,2016-10-13,31.0,56.0,4.27,SurveyUSA
-senate,KS,2016-10-28,31.0,55.0,4.1,SurveyUSA
-senate,KS,2016-10-28,39.0,56.0,2.8,SurveyMonkey
-senate,KS,2016-11-02,13.0,77.0,5,Fort Hays State University Docking Institute of Public Affairs
-senate,KS,2016-11-04,37.0,59.0,2.76,SurveyMonkey
-senate,NY,2016-09-13,69.0,23.0,4.08,Siena College
-senate,NY,2016-09-22,70.0,24.0,3.85,Marist College
-senate,NY,2016-10-15,66.0,27.0,4.05,Siena College
-senate,NY,2016-10-28,68.0,28.0,2.4,SurveyMonkey
-senate,NY,2016-11-03,67.0,25.0,4.03,Siena College
-senate,NY,2016-11-04,71.0,25.0,2.13,SurveyMonkey
-senate,NC,2016-09-11,39.0,44.0,3.84,National Research
-senate,NC,2016-09-14,44.4,43.4,3.94,Elon University
-senate,NC,2016-09-18,46.0,42.0,3.58,The New York Times/Siena College
-senate,NC,2016-09-14,30.0,46.0,5,GQR
-senate,NC,2016-09-19,41.0,41.0,3.12,Public Policy Polling
-senate,NC,2016-09-19,37.0,43.0,3.69,Beacon Research/Shaw & Co. Research
-senate,NC,2016-09-20,38.0,35.0,4.53,"Meredith College Department of History, Political Science, and International Studies"
-senate,NC,2016-09-19,43.0,45.0,4.98,High Point University Survey Research Center
-senate,NC,2016-09-23,48.0,39.0,3.8,Gravis Marketing
-senate,NC,2016-09-27,39.0,41.0,3.41,Public Policy Polling
-senate,NC,2016-09-29,43.6,43.4,3.89,Elon University
-senate,NC,2016-10-01,46.0,44.0,3.52,Selzer & Co.
-senate,NC,2016-09-29,46.0,46.0,4.44,Quinnipiac University
-senate,NC,2016-10-01,44.0,46.0,3.9,SurveyUSA
-senate,NC,2016-10-03,42.0,47.0,4.57,High Point University Survey Research Center
-senate,NC,2016-10-11,36.0,40.0,4.47,Suffolk University
-senate,NC,2016-10-11,46.0,46.0,3.67,Marist College
-senate,NC,2016-10-11,43.3,45.1,4.08,Emerson College
-senate,NC,2016-10-12,47.0,48.0,3.56,Big Village
-senate,NC,2016-10-12,48.0,42.0,3.35,SurveyMonkey
-senate,NC,2016-10-16,43.0,45.0,3.92,SurveyUSA
-senate,NC,2016-10-16,37.0,44.0,4.08,National Research
-senate,NC,2016-10-17,44.0,46.0,3.29,Lucid
-senate,NC,2016-10-21,41.0,42.0,3.38,Public Policy Polling
-senate,NC,2016-10-22,43.0,49.0,4.99,Monmouth University Polling Institute
-senate,NC,2016-10-22,47.0,46.0,3.55,The New York Times/Siena College
-senate,NC,2016-10-21,44.0,46.0,3.38,Rasmussen Reports
-senate,NC,2016-10-25,48.0,45.0,2.8,Gravis Marketing
-senate,NC,2016-10-25,48.0,48.0,3.58,Marist College
-senate,NC,2016-10-23,47.0,48.0,3.77,Quinnipiac University
-senate,NC,2016-10-26,43.0,48.0,4.36,Rasmussen Reports
-senate,NC,2016-10-26,44.0,48.0,3.92,Emerson College
-senate,NC,2016-10-25,39.9,43.5,3.75,Elon University
-senate,NC,2016-10-27,44.0,44.0,3.18,YouGov
-senate,NC,2016-10-28,47.0,43.0,2.52,SurveyMonkey
-senate,NC,2016-10-30,43.0,49.0,3.9,SurveyUSA
-senate,NC,2016-10-31,43.0,47.0,4.36,Rasmussen Reports
-senate,NC,2016-10-31,45.0,48.0,2.92,Public Policy Polling
-senate,NC,2016-10-29,49.0,45.0,4.08,Quinnipiac University
-senate,NC,2016-11-03,48.0,47.0,2.83,Gravis Marketing
-senate,NC,2016-11-04,47.0,46.0,4.36,Rasmussen Reports
-senate,NC,2016-11-05,45.0,46.0,3.54,The New York Times/Siena College
-senate,NC,2016-11-05,47.0,47.0,3.39,Quinnipiac University
-senate,NC,2016-11-04,47.0,43.0,1.79,SurveyMonkey
-senate,NV,2016-09-12,43.0,46.0,4.96,Monmouth University Polling Institute
-senate,NV,2016-09-13,39.0,43.0,5,Leger
-senate,NV,2016-09-17,40.0,44.0,3.54,Rasmussen Reports
-senate,NV,2016-09-14,41.0,47.0,5,GQR
-senate,NV,2016-09-19,36.0,43.0,3.77,Beacon Research/Shaw & Co. Research
-senate,NV,2016-09-28,35.2,37.6,4.47,Suffolk University
-senate,NV,2016-09-28,45.0,47.0,3.54,Bendixen & Amandi International
-senate,NV,2016-09-29,46.0,47.0,3.78,Garin-Hart-Yang Research Group
-senate,NV,2016-10-03,40.5,45.4,3.78,Emerson College
-senate,NV,2016-10-10,43.0,39.0,3.18,Public Policy Polling
-senate,NV,2016-10-10,44.0,41.0,3.15,Clarity Campaign Labs
-senate,NV,2016-10-11,44.0,47.0,4.08,Public Opinion Strategies
-senate,NV,2016-10-12,40.0,35.0,4.08,JMC Analytics
-senate,NV,2016-10-13,39.0,39.0,3.17,YouGov
-senate,NV,2016-10-12,52.0,45.0,3.79,Big Village
-senate,NV,2016-10-12,47.0,48.0,3.36,SurveyMonkey
-senate,NV,2016-10-16,42.0,45.0,4.92,Monmouth University Polling Institute
-senate,NV,2016-10-21,43.0,41.0,3.48,Rasmussen Reports
-senate,NV,2016-10-22,45.0,44.0,3.54,Bendixen & Amandi International
-senate,NV,2016-10-22,42.0,49.0,3.76,Marist College
-senate,NV,2016-10-25,50.0,44.0,3.38,Gravis Marketing
-senate,NV,2016-10-26,43.0,42.0,4.36,Rasmussen Reports
-senate,NV,2016-10-26,44.0,48.0,4.26,Emerson College
-senate,NV,2016-10-28,47.0,47.0,3.15,SurveyMonkey
-senate,NV,2016-10-31,46.0,44.0,4.36,Rasmussen Reports
-senate,NV,2016-10-31,47.0,44.0,3.81,Public Policy Polling
-senate,NV,2016-10-30,45.0,43.0,4.08,JMC Analytics
-senate,NV,2016-10-30,47.0,41.0,3.35,Lucid
-senate,NV,2016-10-29,47.0,49.0,3.56,Big Village
-senate,NV,2016-11-04,48.4,47.3,4.08,Emerson College
-senate,NV,2016-11-04,45.0,45.0,4.36,Rasmussen Reports
-senate,NV,2016-11-05,49.0,43.0,2.94,Gravis Marketing
-senate,NV,2016-11-04,50.0,45.0,2.88,SurveyMonkey
-senate,HI,2016-10-28,69.0,27.0,4.63,SurveyMonkey
-senate,HI,2016-11-04,70.0,26.0,4.85,SurveyMonkey
-senate,OR,2016-10-04,52.0,33.0,2.83,Gravis Marketing
-senate,OR,2016-10-11,54.0,32.0,3.91,SurveyUSA
-senate,OR,2016-10-28,62.0,34.0,3.67,SurveyMonkey
-senate,OR,2016-11-04,63.0,32.0,2.5,SurveyMonkey
-senate,SC,2016-10-28,39.0,56.0,2.38,SurveyMonkey
-senate,SC,2016-11-04,38.0,59.0,2.43,SurveyMonkey
-senate,OH,2016-09-11,36.0,53.0,3.53,Selzer & Co.
-senate,OH,2016-09-09,37.0,58.0,3.61,Big Village
-senate,OH,2016-09-13,31.0,39.0,4.47,Suffolk University
-senate,OH,2016-09-14,34.0,51.0,5,GQR
-senate,OH,2016-09-19,37.0,51.0,3.68,Beacon Research/Shaw & Co. Research
-senate,OH,2016-09-19,32.0,47.0,3.92,TargetSmart
-senate,OH,2016-09-22,36.0,44.0,3.43,Gravis Marketing
-senate,OH,2016-09-29,38.0,55.0,4.49,Quinnipiac University
-senate,OH,2016-09-29,39.0,51.0,3.54,Impact Research
-senate,OH,2016-10-03,39.0,54.0,4.97,Monmouth University Polling Institute
-senate,OH,2016-10-05,36.0,51.0,3.58,Public Policy Polling
-senate,OH,2016-10-06,38.0,49.0,3.17,YouGov
-senate,OH,2016-10-09,37.0,51.0,2.77,Lucid
-senate,OH,2016-10-10,35.6,47.9,2.95,Baldwin Wallace University Community Research Institute
-senate,OH,2016-10-11,37.0,55.0,3.72,Marist College
-senate,OH,2016-10-11,30.1,47.1,4.08,Emerson College
-senate,OH,2016-10-12,40.0,56.0,3.59,Big Village
-senate,OH,2016-10-13,41.0,54.0,4.0,Quinnipiac University
-senate,OH,2016-10-12,39.0,56.0,2.77,SurveyMonkey
-senate,OH,2016-10-18,30.8,45.8,4.47,Suffolk University
-senate,OH,2016-10-21,40.0,48.0,3.38,Rasmussen Reports
-senate,OH,2016-10-26,42.0,49.0,4.36,Rasmussen Reports
-senate,OH,2016-10-26,35.0,49.0,3.54,Emerson College
-senate,OH,2016-10-28,40.0,55.0,2.34,SurveyMonkey
-senate,OH,2016-10-31,41.0,49.0,4.36,Rasmussen Reports
-senate,OH,2016-10-29,38.0,56.0,4.12,Quinnipiac University
-senate,OH,2016-11-03,39.0,52.0,2.9,YouGov
-senate,OH,2016-11-04,28.3,48.8,3.33,Emerson College
-senate,OH,2016-10-31,37.0,58.0,2.95,Columbus Dispatch
-senate,OH,2016-11-04,38.0,52.0,4.36,Rasmussen Reports
-senate,OH,2016-11-04,39.0,57.0,1.87,SurveyMonkey
-senate,AL,2016-10-28,36.0,60.0,4.54,SurveyMonkey
-senate,AL,2016-11-04,38.0,57.0,2.97,SurveyMonkey
-senate,AK,2016-09-14,15.0,48.0,4.47,Moore Information Group
-senate,AK,2016-09-30,12.3,50.0,3.89,Alaska Survey Research
-senate,AK,2016-10-05,9.0,49.0,4.47,Moore Information Group
-senate,AK,2016-10-28,26.0,52.0,5,SurveyMonkey
-senate,AK,2016-11-04,33.0,55.0,4.94,SurveyMonkey
-senate,MO,2016-09-11,42.0,40.0,4.08,Emerson College
-senate,MO,2016-10-10,44.0,46.0,4.96,Monmouth University Polling Institute
-senate,MO,2016-10-18,44.4,44.0,4.08,Emerson College
-senate,MO,2016-10-25,46.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,MO,2016-10-27,44.0,47.0,2.43,BK Strategies
-senate,MO,2016-10-28,51.0,45.0,3.86,SurveyMonkey
-senate,MO,2016-10-30,46.0,47.0,4.97,Monmouth University Polling Institute
-senate,MO,2016-10-30,45.0,45.0,3.92,Emerson College
-senate,MO,2016-10-31,44.0,46.0,3.04,Public Policy Polling
-senate,MO,2016-10-31,44.0,48.0,2.41,Remington Research Group
-senate,MO,2016-10-29,41.0,41.0,4.44,DFM Research
-senate,MO,2016-11-01,45.0,47.0,3.11,Clarity Campaign Labs
-senate,MO,2016-11-04,45.5,44.8,3.65,Emerson College
-senate,MO,2016-11-04,51.0,44.0,2.7,SurveyMonkey
-senate,WI,2016-09-17,44.0,39.0,3.95,Marquette University Law School
-senate,WI,2016-09-19,51.5,41.6,3.78,Emerson College
-senate,WI,2016-10-04,53.0,41.0,3.01,Gravis Marketing
-senate,WI,2016-10-04,40.2,45.4,4.47,Loras College Public Opinion Survey Center
-senate,WI,2016-10-06,45.0,42.0,3.17,YouGov
-senate,WI,2016-10-08,46.0,44.0,3.37,Marquette University Law School
-senate,WI,2016-10-15,52.0,40.0,3.88,St. Norbert College Strategic Research Institute
-senate,WI,2016-10-12,51.0,46.0,3.05,SurveyMonkey
-senate,WI,2016-10-17,52.0,44.0,4.98,Monmouth University Polling Institute
-senate,WI,2016-10-18,47.0,41.0,3.53,Public Policy Polling
-senate,WI,2016-10-19,48.0,46.0,4.08,McLaughlin & Associates
-senate,WI,2016-10-19,45.0,42.0,5,WPA Intelligence
-senate,WI,2016-10-27,49.0,44.0,5,Emerson College
-senate,WI,2016-10-28,49.0,49.0,2.89,SurveyMonkey
-senate,WI,2016-10-28,45.0,44.0,2.82,Marquette University Law School
-senate,WI,2016-10-31,49.0,44.0,3.35,Public Policy Polling
-senate,WI,2016-10-31,46.8,45.0,4.47,Loras College Public Opinion Survey Center
-senate,WI,2016-11-01,49.0,46.0,2.98,Clarity Campaign Labs
-senate,WI,2016-11-04,48.0,49.0,2.11,SurveyMonkey
-senate,WA,2016-09-13,46.0,25.0,4.45,Leger
-senate,WA,2016-09-26,47.6,41.2,3.78,Emerson College
-senate,WA,2016-10-10,55.0,39.0,3.65,YouGov
-senate,WA,2016-10-21,58.0,34.0,4.46,Elway Research
-senate,WA,2016-10-28,61.0,36.0,3.66,SurveyMonkey
-senate,WA,2016-11-01,53.0,41.0,3.87,SurveyUSA
-senate,WA,2016-11-05,53.0,37.0,4.99,Leger
-senate,WA,2016-11-04,59.0,37.0,2.63,SurveyMonkey
-senate,UT,2016-10-11,31.0,60.0,4.98,Monmouth University Polling Institute
-senate,UT,2016-10-15,25.0,57.0,3.65,Rasmussen Reports
-senate,UT,2016-10-23,26.0,56.0,3.65,Rasmussen Reports
-senate,UT,2016-10-28,34.0,62.0,3.05,SurveyMonkey
-senate,UT,2016-10-30,27.0,59.0,3.65,Rasmussen Reports
-senate,UT,2016-11-01,28.0,61.0,4.99,Monmouth University Polling Institute
-senate,UT,2016-11-02,22.0,62.0,4.47,Y2 Analytics
-senate,UT,2016-11-04,23.0,69.0,3.62,YouGov
-senate,UT,2016-11-04,36.0,60.0,2.6,SurveyMonkey
-senate,CO,2016-09-11,46.0,39.0,4.08,Emerson College
-senate,CO,2016-09-16,42.0,31.0,5,Franklin & Marshall College Center for Opinion Research
-senate,CO,2016-09-17,52.0,43.0,3.94,Quinnipiac University
-senate,CO,2016-09-22,43.0,45.0,3.54,Gravis Marketing
-senate,CO,2016-09-22,53.0,43.0,3.57,Big Village
-senate,CO,2016-09-27,44.0,34.0,3.8,Public Policy Polling
-senate,CO,2016-10-01,53.0,35.0,5,Monmouth University Polling Institute
-senate,CO,2016-10-03,47.0,39.0,2.83,Gravis Marketing
-senate,CO,2016-10-12,48.0,38.0,2.86,Gravis Marketing
-senate,CO,2016-10-12,47.0,32.0,4.47,Magellan Strategies
-senate,CO,2016-10-13,56.0,38.0,3.82,Quinnipiac University
-senate,CO,2016-10-12,52.0,42.0,3.23,SurveyMonkey
-senate,CO,2016-10-21,54.0,40.0,3.16,University of Colorado American Politics Research Lab
-senate,CO,2016-10-27,46.0,41.0,3.17,YouGov
-senate,CO,2016-10-28,48.0,46.0,2.55,SurveyMonkey
-senate,CO,2016-10-30,48.0,40.0,4.26,Ciruli Associates
-senate,CO,2016-10-30,47.0,42.0,3.65,Emerson College
-senate,CO,2016-10-30,49.0,41.0,3.21,Lucid
-senate,CO,2016-11-01,47.0,44.0,2.98,Gravis Marketing
-senate,CO,2016-11-02,49.0,38.0,4.07,Keating Research
-senate,CO,2016-11-03,50.0,40.0,3.77,Public Policy Polling
-senate,CO,2016-11-04,52.0,45.0,1.9,SurveyMonkey
-senate,VT,2016-10-07,59.0,22.0,4.16,The Castleton Polling Institute
-senate,VT,2016-10-21,59.0,22.0,4.07,Braun Research
-senate,VT,2016-10-28,64.0,33.0,4.79,SurveyMonkey
-senate,VT,2016-11-04,75.0,24.0,4.69,SurveyMonkey
-senate,OK,2016-10-28,35.0,62.0,4.6,SurveyMonkey
-senate,OK,2016-11-04,37.0,61.0,2.8,SurveyMonkey
-senate,ND,2016-10-28,27.0,71.0,5,SurveyMonkey
-senate,ND,2016-11-04,23.0,74.0,5,SurveyMonkey
-senate,IN,2016-10-04,42.0,41.0,4.08,Public Opinion Strategies
-senate,IN,2016-10-09,46.0,43.0,2.98,Lucid
-senate,IN,2016-10-12,48.0,42.0,4.99,Monmouth University Polling Institute
-senate,IN,2016-10-13,49.0,43.0,4.29,Ball State University Bowen Center for Public Affairs
-senate,IN,2016-10-23,39.0,37.0,4.1,Gravis Marketing
-senate,IN,2016-10-29,45.0,45.0,4.99,Monmouth University Polling Institute
-senate,IN,2016-10-28,46.0,50.0,3.85,SurveyMonkey
-senate,IN,2016-10-31,40.0,37.0,5,Gravis Marketing
-senate,IN,2016-11-02,41.0,46.0,4.08,Public Opinion Strategies
-senate,IN,2016-11-04,42.0,53.0,2.43,SurveyMonkey
-senate,SD,2016-10-19,27.0,65.0,5,Mason-Dixon Polling & Strategy
-senate,SD,2016-10-20,36.0,57.0,2.99,Remington Research Group
-senate,SD,2016-10-25,35.0,54.0,4.08,Nielson Brothers Polling
-senate,SD,2016-10-28,31.0,67.0,5,SurveyMonkey
-senate,SD,2016-11-04,31.0,65.0,4.67,SurveyMonkey
-senate,ID,2016-10-22,24.0,57.0,3.13,Emerson College
-senate,ID,2016-10-28,34.0,61.0,4.73,SurveyMonkey
-senate,ID,2016-11-04,39.0,58.0,4.04,SurveyMonkey
-senate,KY,2016-10-27,41.8,51.5,3.51,Cygnal
-senate,KY,2016-10-27,39.0,55.0,4.08,Western Kentucky University Social Science Research Center
-senate,KY,2016-10-28,46.0,52.0,4.86,SurveyMonkey
-senate,KY,2016-11-04,46.0,50.0,2.76,SurveyMonkey
-senate,MD,2016-09-19,54.0,24.0,4.41,Goucher College Sarah T. Hughes Center for Politics
-senate,MD,2016-09-29,58.0,29.0,3.76,The Washington Post/University of Maryland Center for Democracy and Civic Engagement
-senate,MD,2016-10-28,66.0,31.0,3.68,SurveyMonkey
-senate,MD,2016-11-04,64.0,33.0,2.87,SurveyMonkey
-senate,AR,2016-09-11,30.0,44.0,4.08,Emerson College
-senate,AR,2016-09-16,29.0,55.0,3.47,Hendrix College
-senate,AR,2016-10-21,34.0,52.0,4.65,Hendrix College
-senate,AR,2016-10-22,29.4,47.2,4.13,University of Arkansas Department of Political Science
-senate,AR,2016-10-28,44.0,54.0,4.55,SurveyMonkey
-senate,AR,2016-11-04,41.0,56.0,3.28,SurveyMonkey
-senate,IL,2016-09-15,40.7,36.0,4.08,Loras College Public Opinion Survey Center
-senate,IL,2016-09-20,40.9,39.2,3.78,Emerson College
-senate,IL,2016-09-28,46.0,37.0,4.08,"Normington, Petts & Associates"
-senate,IL,2016-09-29,48.4,34.0,3.4,Southern Illinois University Paul Simon Public Policy Institute
-senate,IL,2016-10-04,41.0,37.0,4.08,GS Strategy Group
-senate,IL,2016-10-17,49.8,39.1,2.89,Victory Research
-senate,IL,2016-10-26,42.0,34.0,4.08,Loras College Public Opinion Survey Center
-senate,IL,2016-10-29,53.7,36.2,4.47,Emerson College
-senate,IL,2016-10-28,57.0,38.0,3.16,SurveyMonkey
-senate,IL,2016-11-04,56.0,39.0,2.34,SurveyMonkey
-senate,NH,2016-09-19,45.0,47.0,5,Monmouth University Polling Institute
-senate,NH,2016-09-22,47.0,47.0,4.38,American Research Group
-senate,NH,2016-09-26,47.0,44.0,4.08,GBAO
-senate,NH,2016-09-28,48.0,46.0,4.46,MassINC Polling Group
-senate,NH,2016-10-04,41.0,47.0,4.47,Suffolk University
-senate,NH,2016-10-08,44.0,43.0,4.08,Public Policy Polling
-senate,NH,2016-10-09,44.0,45.0,4.4,University of Massachusetts Lowell Center for Public Opinion
-senate,NH,2016-10-11,47.0,47.0,4.47,MassINC Polling Group
-senate,NH,2016-10-12,47.0,42.0,4.19,SurveyMonkey
-senate,NH,2016-10-14,48.0,39.0,3.72,University of New Hampshire Survey Center
-senate,NH,2016-10-18,44.9,45.0,3.33,Emerson College
-senate,NH,2016-10-19,44.0,48.0,3.6,YouGov
-senate,NH,2016-10-22,47.0,48.0,3.61,Marist College
-senate,NH,2016-10-24,44.0,50.0,4.08,Emerson College
-senate,NH,2016-10-24,46.0,46.0,4.99,Monmouth University Polling Institute
-senate,NH,2016-10-26,46.0,43.0,4.36,Rasmussen Reports
-senate,NH,2016-10-27,47.0,49.1,4.95,Praecones Analytica
-senate,NH,2016-10-28,45.0,44.0,4.4,University of New Hampshire Survey Center
-senate,NH,2016-10-28,50.0,38.0,3.9,SurveyMonkey
-senate,NH,2016-10-31,47.0,45.0,4.36,Rasmussen Reports
-senate,NH,2016-10-31,48.0,45.0,3.58,Public Policy Polling
-senate,NH,2016-10-31,45.0,51.0,4.47,MassINC Polling Group
-senate,NH,2016-11-01,48.0,41.0,4.63,University of New Hampshire Survey Center
-senate,NH,2016-11-01,44.0,46.0,3.16,Gravis Marketing
-senate,NH,2016-11-01,46.0,49.0,4.08,American Research Group
-senate,NH,2016-11-01,41.6,44.4,4.47,Suffolk University
-senate,NH,2016-10-30,47.0,46.0,3.79,University of Massachusetts Lowell Center for Public Opinion
-senate,NH,2016-11-04,45.6,48.8,3.16,Emerson College
-senate,NH,2016-11-04,50.0,42.0,4.36,Rasmussen Reports
-senate,NH,2016-11-05,49.0,45.0,3.8,University of New Hampshire Survey Center
-senate,NH,2016-11-04,51.0,42.0,3.79,SurveyMonkey
-senate,PA,2016-09-14,43.0,38.0,4.97,Muhlenberg College Institute of Public Opinion
-senate,PA,2016-09-14,43.0,45.0,5,GQR
-senate,PA,2016-09-21,42.0,42.0,4.47,Harper Polling
-senate,PA,2016-09-23,43.0,39.0,3.25,Gravis Marketing
-senate,PA,2016-09-21,40.0,41.0,4.54,Muhlenberg College Institute of Public Opinion
-senate,PA,2016-09-18,42.0,43.0,4.88,Mercyhurst University Center for Applied Politics
-senate,PA,2016-09-22,49.0,46.0,3.6,Big Village
-senate,PA,2016-09-27,40.0,35.0,3.36,Public Policy Polling
-senate,PA,2016-09-30,41.0,35.0,4.49,Franklin & Marshall College Center for Opinion Research
-senate,PA,2016-09-29,42.0,50.0,4.32,Quinnipiac University
-senate,PA,2016-10-02,46.0,46.0,4.99,Monmouth University Polling Institute
-senate,PA,2016-10-05,48.0,44.0,3.76,Marist College
-senate,PA,2016-10-06,42.0,42.0,3.17,YouGov
-senate,PA,2016-10-06,38.0,42.0,3.62,Susquehanna Polling & Research Inc.
-senate,PA,2016-10-09,44.0,44.0,2.62,Lucid
-senate,PA,2016-10-09,47.0,45.0,3.52,Selzer & Co.
-senate,PA,2016-10-13,45.0,49.0,3.89,Quinnipiac University
-senate,PA,2016-10-12,47.0,47.0,2.63,SurveyMonkey
-senate,PA,2016-10-18,42.6,45.8,3.54,Emerson College
-senate,PA,2016-10-21,44.0,41.0,3.38,Rasmussen Reports
-senate,PA,2016-10-24,47.0,44.0,3.48,The New York Times/Siena College
-senate,PA,2016-10-25,45.0,43.0,4.26,Emerson College
-senate,PA,2016-10-23,41.0,41.0,4.88,Muhlenberg College Institute of Public Opinion
-senate,PA,2016-10-26,46.0,40.0,4.36,Rasmussen Reports
-senate,PA,2016-10-27,44.0,41.0,3.03,YouGov
-senate,PA,2016-10-28,47.0,35.0,3.92,Franklin & Marshall College Center for Opinion Research
-senate,PA,2016-10-27,45.0,41.0,1.76,Gravis Marketing
-senate,PA,2016-10-28,49.0,46.0,2.11,SurveyMonkey
-senate,PA,2016-10-31,46.0,42.0,4.36,Rasmussen Reports
-senate,PA,2016-10-31,47.0,41.0,3.83,Susquehanna Polling & Research Inc.
-senate,PA,2016-10-31,46.0,44.0,3.09,Public Policy Polling
-senate,PA,2016-10-31,47.0,44.0,4.98,Monmouth University Polling Institute
-senate,PA,2016-10-29,51.0,46.0,3.54,Big Village
-senate,PA,2016-10-29,48.0,47.0,4.04,Quinnipiac University
-senate,PA,2016-11-01,45.0,43.0,3.14,Gravis Marketing
-senate,PA,2016-11-02,44.0,44.0,4.45,Harper Polling
-senate,PA,2016-11-03,46.0,43.0,3.11,Clarity Campaign Labs
-senate,PA,2016-11-01,42.0,43.0,4.97,Muhlenberg College Institute of Public Opinion
-senate,PA,2016-11-04,47.0,46.0,3.28,YouGov
-senate,PA,2016-11-04,42.0,46.0,4.36,Rasmussen Reports
-senate,PA,2016-11-04,49.0,45.0,1.87,SurveyMonkey
-senate,AZ,2016-09-13,35.0,53.0,4.55,Leger
-senate,AZ,2016-10-03,36.2,51.6,4.08,Emerson College
-senate,AZ,2016-10-14,35.3,45.3,5,HighGround Inc.
-senate,AZ,2016-10-12,40.0,51.9,3.89,Arizona State University Morrison Institute for Public Policy
-senate,AZ,2016-10-12,45.0,48.0,3.12,SurveyMonkey
-senate,AZ,2016-10-23,40.0,50.0,4.99,Monmouth University Polling Institute
-senate,AZ,2016-10-27,38.0,43.0,3.17,YouGov
-senate,AZ,2016-10-29,39.0,49.0,4.26,Data Orbital
-senate,AZ,2016-10-28,46.0,49.0,2.62,SurveyMonkey
-senate,AZ,2016-10-30,40.0,46.0,3.78,Emerson College
-senate,AZ,2016-10-31,39.0,55.0,3.73,Marist College
-senate,AZ,2016-10-30,40.0,52.0,3.0,Lucid
-senate,AZ,2016-10-29,41.0,54.0,3.61,Big Village
-senate,AZ,2016-11-01,41.0,52.0,4.26,Data Orbital
-senate,AZ,2016-11-05,44.0,56.0,4.26,Data Orbital
-senate,AZ,2016-11-05,42.0,50.0,5,Leger
-senate,AZ,2016-11-04,45.0,50.0,1.96,SurveyMonkey
-senate,GA,2016-09-11,32.0,48.0,4.08,Emerson College
-senate,GA,2016-09-14,34.1,47.0,4.2,InsiderAdvantage
-senate,GA,2016-09-17,34.0,50.0,4.99,Monmouth University Polling Institute
-senate,GA,2016-09-17,34.0,55.0,3.96,Quinnipiac University
-senate,GA,2016-09-21,28.0,41.0,4.08,JMC Analytics
-senate,GA,2016-10-11,36.8,50.4,2.67,Landmark Communications
-senate,GA,2016-10-12,46.0,50.0,3.36,SurveyMonkey
-senate,GA,2016-10-17,39.0,49.0,3.52,Lucid
-senate,GA,2016-10-20,41.6,51.0,4.19,InsiderAdvantage
-senate,GA,2016-10-19,32.0,47.0,3.45,Abt Associates
-senate,GA,2016-10-23,40.0,54.0,3.76,Quinnipiac University
-senate,GA,2016-10-28,41.0,50.0,1.94,SurveyMonkey
-senate,GA,2016-10-30,40.0,48.0,3.92,Emerson College
-senate,GA,2016-10-31,37.0,48.0,3.76,Marist College
-senate,GA,2016-11-03,39.6,49.6,3.16,Landmark Communications/Rosetta Stone Communications
-senate,GA,2016-11-02,39.2,50.0,4.31,InsiderAdvantage
-senate,GA,2016-11-04,41.0,48.0,3.17,YouGov
-senate,GA,2016-11-06,41.0,52.0,2.89,Landmark Communications/Rosetta Stone Communications
-senate,GA,2016-11-04,41.0,47.0,2.03,SurveyMonkey
-senate,GA,2016-11-04,44.0,51.0,4.3,20/20 Insight
-senate,CT,2016-10-28,59.0,38.0,4.25,SurveyMonkey
-senate,CT,2016-11-04,63.0,34.0,2.69,SurveyMonkey
-senate,IA,2016-09-13,39.0,56.0,4.98,Monmouth University Polling Institute
-senate,IA,2016-09-17,43.0,55.0,4.04,Quinnipiac University
-senate,IA,2016-09-21,36.7,53.8,4.51,Loras College Public Opinion Survey Center
-senate,IA,2016-10-05,36.0,53.0,3.95,Selzer & Co.
-senate,IA,2016-10-09,39.0,51.0,3.3,Lucid
-senate,IA,2016-10-12,40.0,56.0,2.97,SurveyMonkey
-senate,IA,2016-10-23,38.0,56.0,3.56,Quinnipiac University
-senate,IA,2016-10-28,41.0,56.0,3.19,SurveyMonkey
-senate,IA,2016-11-02,32.0,60.0,3.78,Emerson College
-senate,IA,2016-11-02,37.2,53.4,4.47,Loras College Public Opinion Survey Center
-senate,IA,2016-11-03,33.0,56.0,3.54,Selzer & Co.
-senate,IA,2016-11-04,39.0,57.0,2.37,SurveyMonkey
-senate,FL,2016-09-08,45.0,47.0,3.54,Global Strategy Group
-senate,FL,2016-09-09,43.0,54.0,3.56,Big Village
-senate,FL,2016-09-12,42.0,48.0,3.4,The New York Times/Siena College
-senate,FL,2016-09-13,34.7,44.2,4.59,Saint Leo University Polling Institute
-senate,FL,2016-09-18,45.0,47.0,5,Monmouth University Polling Institute
-senate,FL,2016-09-17,42.0,46.0,4.03,Cherry Communications
-senate,FL,2016-09-20,34.0,43.0,4.47,Suffolk University
-senate,FL,2016-09-27,35.0,42.0,3.48,Public Policy Polling
-senate,FL,2016-09-28,42.9,47.1,4.02,InsiderAdvantage
-senate,FL,2016-09-28,40.0,47.0,3.49,Mason-Dixon Polling & Strategy
-senate,FL,2016-09-29,44.0,48.0,4.28,Quinnipiac University
-senate,FL,2016-10-04,40.0,44.0,3.49,Gravis Marketing
-senate,FL,2016-10-03,39.2,46.7,4.08,Emerson College
-senate,FL,2016-10-01,41.0,48.0,3.87,University of North Florida Public Opinion Research Lab
-senate,FL,2016-10-04,46.0,48.0,3.78,Marist College
-senate,FL,2016-10-04,41.0,49.0,3.16,The Tyson Group
-senate,FL,2016-10-10,44.0,47.6,4.33,InsiderAdvantage
-senate,FL,2016-10-12,38.0,44.0,3.19,Public Policy Polling
-senate,FL,2016-10-12,36.0,44.0,2.36,Gravis Marketing
-senate,FL,2016-10-13,47.0,49.0,3.89,Quinnipiac University
-senate,FL,2016-10-12,45.0,51.0,2.42,SurveyMonkey
-senate,FL,2016-10-17,44.0,45.0,3.35,Lucid
-senate,FL,2016-10-19,38.0,43.0,3.16,The Tyson Group
-senate,FL,2016-10-18,37.0,51.0,4.44,Cherry Communications
-senate,FL,2016-10-20,46.2,46.2,4.31,InsiderAdvantage
-senate,FL,2016-10-20,42.0,44.0,3.1,YouGov
-senate,FL,2016-10-22,42.3,45.8,4.47,Florida Atlantic University Business and Economics Polling Initiative
-senate,FL,2016-10-21,41.0,48.0,3.38,Rasmussen Reports
-senate,FL,2016-10-23,41.0,51.0,3.52,Selzer & Co.
-senate,FL,2016-10-22,41.0,45.0,2.83,SurveyUSA
-senate,FL,2016-10-22,43.0,49.0,3.46,University of North Florida Public Opinion Research Lab
-senate,FL,2016-10-25,43.0,48.6,3.79,Dixie Strategies
-senate,FL,2016-10-25,46.0,46.0,3.67,Public Policy Polling
-senate,FL,2016-10-25,46.0,46.0,2.77,Gravis Marketing
-senate,FL,2016-10-25,43.0,51.0,3.58,Marist College
-senate,FL,2016-10-24,47.6,52.5,3.12,Saint Leo University Polling Institute
-senate,FL,2016-10-26,42.0,49.0,4.36,Rasmussen Reports
-senate,FL,2016-10-26,47.0,49.0,4.47,Emerson College
-senate,FL,2016-10-26,42.0,51.0,3.5,The New York Times/Siena College
-senate,FL,2016-10-27,43.0,49.0,3.73,TargetSmart
-senate,FL,2016-10-28,47.0,49.0,1.89,SurveyMonkey
-senate,FL,2016-10-31,42.0,49.0,4.36,Rasmussen Reports
-senate,FL,2016-10-29,48.0,49.0,3.6,Big Village
-senate,FL,2016-10-29,44.0,50.0,4.0,Quinnipiac University
-senate,FL,2016-11-01,46.0,49.6,4.07,InsiderAdvantage
-senate,FL,2016-11-01,46.0,47.0,2.86,Gravis Marketing
-senate,FL,2016-11-03,44.0,47.0,2.9,YouGov
-senate,FL,2016-11-04,38.0,52.0,4.36,Rasmussen Reports
-senate,FL,2016-11-05,43.0,50.0,3.36,Quinnipiac University
-senate,FL,2016-11-04,49.0,48.0,1.56,SurveyMonkey
-president,AK,2016-09-14,31.0,39.0,4.47,Moore Information Group
-president,AK,2016-09-30,30.6,36.1,3.89,Alaska Survey Research
-president,AK,2016-10-05,34.0,37.0,4.47,Moore Information Group
-president,AK,2016-10-12,36.0,37.0,4.47,Lake Research Partners
-president,AK,2016-10-23,47.0,43.0,5,Craciun Research Group
-president,AK,2016-10-28,38.0,46.0,5,SurveyMonkey
-president,AK,2016-11-05,41.0,44.0,4.03,Gravis Marketing
-president,AK,2016-10-20,37.4,37.7,5,YouGov
-president,AK,2016-11-04,31.0,48.0,4.94,SurveyMonkey
-president,AL,2016-09-27,32.0,48.0,1.83,Strategy Research
-president,AL,2016-09-22,37.02,55.52,5,Ipsos
-president,AL,2016-10-10,38.4,52.39,4.55,Ipsos
-president,AL,2016-10-28,35.0,55.0,4.54,SurveyMonkey
-president,AL,2016-10-30,38.06,54.15,5,Ipsos
-president,AL,2016-10-20,31.6,52.6,2.68,YouGov
-president,AL,2016-11-04,36.0,55.0,2.97,SurveyMonkey
-president,AR,2016-09-11,29.0,57.0,4.08,Emerson College
-president,AR,2016-09-16,34.0,55.0,3.47,Hendrix College
-president,AR,2016-09-12,41.08,49.15,5,Ipsos
-president,AR,2016-10-03,35.6,52.44,5,Ipsos
-president,AR,2016-10-21,32.5,56.0,4.65,Hendrix College
-president,AR,2016-10-22,31.3,51.1,4.13,University of Arkansas Department of Political Science
-president,AR,2016-10-28,39.0,52.0,4.55,SurveyMonkey
-president,AR,2016-10-27,38.14,53.35,5,Ipsos
-president,AR,2016-10-20,30.5,48.0,3.69,YouGov
-president,AR,2016-11-04,32.0,56.0,3.28,SurveyMonkey
-president,AZ,2016-09-13,33.0,37.0,4.55,Leger
-president,AZ,2016-09-15,41.65,47.86,4.83,Ipsos
-president,AZ,2016-09-21,38.0,40.0,4.26,Data Orbital
-president,AZ,2016-09-29,42.0,42.0,3.73,Noble Predictive Insights
-president,AZ,2016-10-03,44.0,42.0,4.08,Emerson College
-president,AZ,2016-09-29,42.22,49.06,4.03,Ipsos
-president,AZ,2016-10-11,43.0,42.0,4.26,Data Orbital
-president,AZ,2016-10-10,38.92,44.56,3.37,Ipsos
-president,AZ,2016-10-14,38.5,36.5,5,HighGround Inc.
-president,AZ,2016-10-12,43.4,37.8,3.75,Arizona State University Morrison Institute for Public Policy
-president,AZ,2016-10-12,41.0,44.0,3.12,SurveyMonkey
-president,AZ,2016-10-17,41.0,41.0,4.26,Data Orbital
-president,AZ,2016-10-17,42.59,44.59,5,Ipsos
-president,AZ,2016-10-23,48.0,46.0,2.05,Uplift Campaigns
-president,AZ,2016-10-23,45.0,46.0,4.99,Monmouth University Polling Institute
-president,AZ,2016-10-26,40.0,42.0,4.26,Data Orbital
-president,AZ,2016-10-27,42.0,44.0,3.17,YouGov
-president,AZ,2016-10-29,41.0,45.0,4.26,Data Orbital
-president,AZ,2016-10-28,43.0,44.0,2.62,SurveyMonkey
-president,AZ,2016-10-30,45.0,44.0,2.12,Uplift Campaigns
-president,AZ,2016-10-30,43.0,47.0,3.78,Emerson College
-president,AZ,2016-10-31,40.0,45.0,3.73,Marist College
-president,AZ,2016-10-30,41.0,42.0,3.0,Lucid
-president,AZ,2016-10-29,44.0,49.0,3.61,Big Village
-president,AZ,2016-11-01,39.0,47.0,4.26,Data Orbital
-president,AZ,2016-10-30,42.38,47.1,4.11,Ipsos
-president,AZ,2016-11-05,44.0,47.0,4.26,Data Orbital
-president,AZ,2016-11-05,45.0,47.0,5,Leger
-president,AZ,2016-11-05,43.0,45.0,2.62,Gravis Marketing
-president,AZ,2016-10-20,37.8,46.3,2.53,YouGov
-president,AZ,2016-11-04,45.0,42.0,1.96,SurveyMonkey
-president,CA,2016-09-10,57.0,32.0,3.84,SurveyUSA
-president,CA,2016-09-10,50.0,33.0,2.65,YouGov
-president,CA,2016-09-13,57.0,30.0,4.41,Leger
-president,CA,2016-09-12,62.5,24.22,4.16,Ipsos
-president,CA,2016-09-13,47.0,31.0,3.08,Public Policy Institute of California
-president,CA,2016-09-19,60.01,28.38,3.77,Ipsos
-president,CA,2016-09-27,59.0,33.0,3.72,SurveyUSA
-president,CA,2016-09-26,63.67,23.74,3.56,Ipsos
-president,CA,2016-10-03,61.26,27.86,3.2,Ipsos
-president,CA,2016-10-10,65.89,22.37,4.25,Ipsos
-president,CA,2016-10-10,61.0,25.0,4.01,"California State University, Sacramento"
-president,CA,2016-10-09,54.0,30.0,2.83,YouGov
-president,CA,2016-10-14,56.0,30.0,3.71,SurveyUSA
-president,CA,2016-10-17,63.82,25.62,4.46,Ipsos
-president,CA,2016-10-18,54.0,28.0,3.12,Public Policy Institute of California
-president,CA,2016-10-24,65.14,26.16,3.75,Ipsos
-president,CA,2016-10-26,54.0,30.0,2.69,Greenberg Quinlan Rosner/American Viewpoint
-president,CA,2016-10-28,55.0,30.0,2.0,SurveyMonkey
-president,CA,2016-10-30,56.0,35.0,3.66,SurveyUSA
-president,CA,2016-10-28,53.0,33.0,2.58,YouGov
-president,CA,2016-11-03,58.85,31.74,3.71,Ipsos
-president,CA,2016-11-05,58.0,35.0,4.99,Leger
-president,CA,2016-10-20,51.8,30.4,1.07,YouGov
-president,CA,2016-11-04,56.0,31.0,1.92,SurveyMonkey
-president,CO,2016-09-11,38.0,42.0,4.08,Emerson College
-president,CO,2016-09-16,41.0,34.0,5,Franklin & Marshall College Center for Opinion Research
-president,CO,2016-09-17,44.0,42.0,3.94,Quinnipiac University
-president,CO,2016-09-15,42.05,43.82,5,Ipsos
-president,CO,2016-09-22,37.0,41.0,3.54,Gravis Marketing
-president,CO,2016-09-22,40.0,39.0,3.18,YouGov
-president,CO,2016-09-22,41.0,42.0,3.57,Big Village
-president,CO,2016-09-27,46.0,40.0,3.8,Public Policy Polling
-president,CO,2016-09-28,44.0,33.0,4.08,Keating Research
-president,CO,2016-10-01,49.0,38.0,5,Monmouth University Polling Institute
-president,CO,2016-10-03,40.0,40.0,2.83,Gravis Marketing
-president,CO,2016-09-29,44.77,44.86,4.26,Ipsos
-president,CO,2016-10-12,44.0,39.0,2.86,Gravis Marketing
-president,CO,2016-10-12,40.0,35.0,4.47,Magellan Strategies
-president,CO,2016-10-13,45.0,37.0,3.82,Quinnipiac University
-president,CO,2016-10-12,44.0,37.0,3.23,SurveyMonkey
-president,CO,2016-10-13,45.01,41.24,4.74,Ipsos
-president,CO,2016-10-21,45.0,43.0,2.51,Remington Research Group
-president,CO,2016-10-21,44.0,34.0,3.16,University of Colorado American Politics Research Lab
-president,CO,2016-10-27,42.0,39.0,3.17,YouGov
-president,CO,2016-10-30,45.0,44.0,3.24,Remington Research Group
-president,CO,2016-10-28,43.0,39.0,2.55,SurveyMonkey
-president,CO,2016-10-30,39.0,39.0,4.26,Ciruli Associates
-president,CO,2016-10-30,44.0,41.0,3.65,Emerson College
-president,CO,2016-10-30,44.0,37.0,3.21,Lucid
-president,CO,2016-11-01,44.1,37.6,4.47,Magellan Strategies
-president,CO,2016-11-01,40.0,40.0,2.98,Gravis Marketing
-president,CO,2016-11-01,42.0,41.0,2.32,Remington Research Group
-president,CO,2016-11-02,43.0,38.0,4.07,Keating Research
-president,CO,2016-11-02,44.77,44.33,2.95,Trafalgar Group
-president,CO,2016-11-03,48.0,43.0,3.77,Public Policy Polling
-president,CO,2016-10-30,47.71,42.33,4.32,Ipsos
-president,CO,2016-11-05,44.0,43.0,2.69,Gravis Marketing
-president,CO,2016-10-20,42.1,36.9,2.54,YouGov
-president,CO,2016-11-04,43.0,40.0,1.9,SurveyMonkey
-president,CT,2016-09-19,52.01,34.09,4.69,Ipsos
-president,CT,2016-10-10,52.56,34.83,4.78,Ipsos
-president,CT,2016-10-28,51.0,39.0,4.25,SurveyMonkey
-president,CT,2016-10-30,49.76,39.7,5,Ipsos
-president,CT,2016-10-20,46.6,35.8,3.24,YouGov
-president,CT,2016-11-04,52.0,36.0,2.69,SurveyMonkey
-president,DC,2016-10-28,88.0,4.0,5,SurveyMonkey
-president,DC,2016-10-20,79.8,6.8,5,YouGov
-president,DC,2016-11-04,85.0,7.0,5,SurveyMonkey
-president,DE,2016-09-22,51.0,30.0,3.62,University of Delaware Center for Political Communication
-president,DE,2016-09-19,43.16,35.28,5,Ipsos
-president,DE,2016-10-10,47.83,33.89,5,Ipsos
-president,DE,2016-10-28,50.0,38.0,4.67,SurveyMonkey
-president,DE,2016-10-30,52.03,36.42,5,Ipsos
-president,DE,2016-10-20,50.7,31.6,5,YouGov
-president,DE,2016-11-04,50.0,39.0,5,SurveyMonkey
-president,FL,2016-09-08,46.0,43.0,3.54,Global Strategy Group
-president,FL,2016-09-09,44.0,47.0,3.56,Big Village
-president,FL,2016-09-12,41.0,40.0,3.4,The New York Times/Siena College
-president,FL,2016-09-12,46.33,49.84,3.72,Ipsos
-president,FL,2016-09-13,49.4,43.6,4.59,Saint Leo University Polling Institute
-president,FL,2016-09-18,46.0,41.0,5,Monmouth University Polling Institute
-president,FL,2016-09-17,43.0,41.0,4.03,Cherry Communications
-president,FL,2016-09-20,44.0,45.0,4.47,Suffolk University
-president,FL,2016-09-19,49.08,45.16,3.51,Ipsos
-president,FL,2016-09-27,45.0,43.0,3.48,Public Policy Polling
-president,FL,2016-09-26,47.55,46.4,3.78,Ipsos
-president,FL,2016-09-28,46.6,46.3,4.02,InsiderAdvantage
-president,FL,2016-09-28,46.0,42.0,3.49,Mason-Dixon Polling & Strategy
-president,FL,2016-09-29,46.0,41.0,4.28,Quinnipiac University
-president,FL,2016-10-04,47.0,45.0,3.49,Gravis Marketing
-president,FL,2016-10-03,44.0,45.0,4.08,Emerson College
-president,FL,2016-10-01,41.0,38.0,3.82,University of North Florida Public Opinion Research Lab
-president,FL,2016-10-04,45.0,42.0,3.78,Marist College
-president,FL,2016-10-04,44.0,41.0,3.16,The Tyson Group
-president,FL,2016-10-03,48.55,43.74,3.2,Ipsos
-president,FL,2016-10-07,48.6,42.9,5,Florida Atlantic University Business and Economics Polling Initiative
-president,FL,2016-10-10,46.9,44.1,4.33,InsiderAdvantage
-president,FL,2016-10-10,47.57,41.81,3.13,Ipsos
-president,FL,2016-10-12,46.0,42.0,3.19,Public Policy Polling
-president,FL,2016-10-12,46.0,42.0,2.36,Gravis Marketing
-president,FL,2016-10-13,48.0,44.0,3.89,Quinnipiac University
-president,FL,2016-10-12,43.0,45.0,2.42,SurveyMonkey
-president,FL,2016-10-17,45.0,39.0,3.35,Lucid
-president,FL,2016-10-19,44.0,41.0,3.16,The Tyson Group
-president,FL,2016-10-18,46.0,42.0,4.44,Cherry Communications
-president,FL,2016-10-17,48.01,44.38,3.98,Ipsos
-president,FL,2016-10-20,49.0,45.0,4.31,InsiderAdvantage
-president,FL,2016-10-20,46.0,43.0,3.1,YouGov
-president,FL,2016-10-21,46.0,46.0,2.46,Remington Research Group
-president,FL,2016-10-22,46.2,43.3,4.47,Florida Atlantic University Business and Economics Polling Initiative
-president,FL,2016-10-21,46.0,43.0,3.38,Rasmussen Reports
-president,FL,2016-10-23,43.0,45.0,3.52,Selzer & Co.
-president,FL,2016-10-22,48.0,45.0,2.83,SurveyUSA
-president,FL,2016-10-22,43.0,39.0,3.49,University of North Florida Public Opinion Research Lab
-president,FL,2016-10-25,42.4,45.7,3.79,Dixie Strategies
-president,FL,2016-10-25,48.0,44.0,3.67,Public Policy Polling
-president,FL,2016-10-25,48.0,47.0,2.77,Gravis Marketing
-president,FL,2016-10-25,45.0,44.0,3.58,Marist College
-president,FL,2016-10-24,48.8,34.5,3.12,Saint Leo University Polling Institute
-president,FL,2016-10-24,48.51,44.61,3.53,Ipsos
-president,FL,2016-10-26,42.0,48.0,4.36,Rasmussen Reports
-president,FL,2016-10-26,46.0,45.0,4.47,Emerson College
-president,FL,2016-10-26,42.0,46.0,3.5,The New York Times/Siena College
-president,FL,2016-10-30,44.0,48.0,3.18,Remington Research Group
-president,FL,2016-10-27,48.0,40.0,3.73,TargetSmart
-president,FL,2016-10-28,46.0,45.0,1.89,SurveyMonkey
-president,FL,2016-10-31,49.0,46.0,2.89,Gravis Marketing
-president,FL,2016-10-29,44.82,48.68,2.95,Trafalgar Group
-president,FL,2016-10-31,46.0,46.0,4.36,Rasmussen Reports
-president,FL,2016-10-29,49.0,47.0,3.6,Big Village
-president,FL,2016-10-29,46.0,45.0,4.0,Quinnipiac University
-president,FL,2016-11-01,49.3,45.0,4.07,InsiderAdvantage
-president,FL,2016-11-01,45.0,48.0,2.06,Remington Research Group
-president,FL,2016-11-01,46.0,45.0,2.86,Gravis Marketing
-president,FL,2016-11-03,45.0,45.0,2.9,YouGov
-president,FL,2016-11-03,47.66,46.77,3.36,Ipsos
-president,FL,2016-11-04,47.0,45.0,4.36,Rasmussen Reports
-president,FL,2016-11-06,46.13,49.72,3.02,Trafalgar Group
-president,FL,2016-11-05,48.4,46.4,3.44,InsiderAdvantage
-president,FL,2016-11-05,46.0,45.0,3.36,Quinnipiac University
-president,FL,2016-10-20,44.0,42.9,1.36,YouGov
-president,FL,2016-11-04,47.0,45.0,1.56,SurveyMonkey
-president,GA,2016-09-11,39.0,45.0,4.08,Emerson College
-president,GA,2016-09-14,42.0,46.3,4.2,InsiderAdvantage
-president,GA,2016-09-17,42.0,45.0,4.99,Monmouth University Polling Institute
-president,GA,2016-09-17,40.0,47.0,3.96,Quinnipiac University
-president,GA,2016-09-15,42.71,46.04,4.04,Ipsos
-president,GA,2016-09-21,42.9,46.5,4.08,Landmark Communications/Rosetta Stone Communications
-president,GA,2016-09-21,38.0,44.0,4.08,JMC Analytics
-president,GA,2016-09-26,38.11,50.98,5,Ipsos
-president,GA,2016-10-11,42.3,47.8,2.67,Landmark Communications
-president,GA,2016-10-06,41.51,50.04,3.94,Ipsos
-president,GA,2016-10-12,45.0,41.0,3.36,SurveyMonkey
-president,GA,2016-10-17,44.0,40.0,3.52,Lucid
-president,GA,2016-10-17,43.1,45.8,3.99,Clout Research
-president,GA,2016-10-20,46.1,50.1,4.19,InsiderAdvantage
-president,GA,2016-10-20,43.0,47.0,4.08,Landmark Communications
-president,GA,2016-10-19,42.0,44.0,3.45,Abt Associates
-president,GA,2016-10-23,43.0,44.0,3.76,Quinnipiac University
-president,GA,2016-10-20,43.11,47.84,4.14,Ipsos
-president,GA,2016-10-26,42.0,49.0,3.83,SurveyUSA
-president,GA,2016-10-28,44.0,46.0,1.94,SurveyMonkey
-president,GA,2016-10-30,42.0,51.0,3.92,Emerson College
-president,GA,2016-10-31,44.0,45.0,3.76,Marist College
-president,GA,2016-11-03,46.0,48.0,3.16,Landmark Communications/Rosetta Stone Communications
-president,GA,2016-11-02,44.7,48.5,4.31,InsiderAdvantage
-president,GA,2016-11-04,43.0,49.0,3.17,YouGov
-president,GA,2016-11-03,42.38,47.79,4.9,Ipsos
-president,GA,2016-11-06,46.0,49.0,2.89,Landmark Communications/Rosetta Stone Communications
-president,GA,2016-11-06,45.11,51.58,2.83,Trafalgar Group
-president,GA,2016-11-05,44.0,48.0,2.23,Gravis Marketing
-president,GA,2016-10-20,40.5,45.4,1.94,YouGov
-president,GA,2016-11-04,45.0,45.0,2.03,SurveyMonkey
-president,GA,2016-11-04,45.0,48.0,4.3,20/20 Insight
-president,HI,2016-10-28,51.0,32.0,4.63,SurveyMonkey
-president,HI,2016-10-30,47.31,28.75,5,Ipsos
-president,HI,2016-10-20,50.3,27.9,5,YouGov
-president,HI,2016-11-04,52.0,28.0,4.85,SurveyMonkey
-president,IA,2016-09-13,37.0,45.0,4.98,Monmouth University Polling Institute
-president,IA,2016-09-17,37.0,44.0,4.04,Quinnipiac University
-president,IA,2016-09-12,40.51,50.74,5,Ipsos
-president,IA,2016-09-21,37.7,38.3,4.51,Loras College Public Opinion Survey Center
-president,IA,2016-10-05,39.0,43.0,3.95,Selzer & Co.
-president,IA,2016-10-09,41.0,37.0,3.3,Lucid
-president,IA,2016-10-03,44.74,44.49,5,Ipsos
-president,IA,2016-10-12,40.0,45.0,2.97,SurveyMonkey
-president,IA,2016-10-23,44.0,44.0,3.56,Quinnipiac University
-president,IA,2016-10-28,40.0,45.0,3.19,SurveyMonkey
-president,IA,2016-11-01,41.0,44.0,3.05,RABA Research
-president,IA,2016-11-02,41.3,44.0,3.78,Emerson College
-president,IA,2016-11-02,44.2,43.4,4.47,Loras College Public Opinion Survey Center
-president,IA,2016-11-03,39.0,46.0,3.54,Selzer & Co.
-president,IA,2016-10-27,44.07,43.87,4.9,Ipsos
-president,IA,2016-10-20,40.4,37.3,3.21,YouGov
-president,IA,2016-11-04,38.0,47.0,2.37,SurveyMonkey
-president,ID,2016-09-19,27.39,59.62,5,Ipsos
-president,ID,2016-10-04,30.0,40.0,4.06,Dan Jones & Associates
-president,ID,2016-10-10,35.13,50.7,5,Ipsos
-president,ID,2016-10-22,23.3,52.3,3.13,Emerson College
-president,ID,2016-10-23,29.0,48.0,3.65,Rasmussen Reports
-president,ID,2016-10-28,31.0,49.0,4.73,SurveyMonkey
-president,ID,2016-10-30,30.06,53.26,5,Ipsos
-president,ID,2016-10-20,25.3,44.8,4.9,YouGov
-president,ID,2016-11-04,29.0,47.0,4.04,SurveyMonkey
-president,IL,2016-09-12,51.24,32.71,3.24,We Ask America
-president,IL,2016-09-12,51.5,36.18,4.81,Ipsos
-president,IL,2016-09-15,43.0,30.0,4.08,Loras College Public Opinion Survey Center
-president,IL,2016-09-20,44.5,38.7,3.78,Emerson College
-president,IL,2016-09-19,53.43,30.81,4.85,Ipsos
-president,IL,2016-09-23,48.6,35.1,2.89,Victory Research
-president,IL,2016-09-26,52.71,33.37,4.87,Ipsos
-president,IL,2016-09-28,52.0,35.0,4.08,"Normington, Petts & Associates"
-president,IL,2016-09-29,53.2,28.4,3.4,Southern Illinois University Paul Simon Public Policy Institute
-president,IL,2016-10-04,50.0,33.0,4.08,GS Strategy Group
-president,IL,2016-10-03,57.49,31.29,4.08,Ipsos
-president,IL,2016-10-10,60.31,27.44,4.94,Ipsos
-president,IL,2016-10-13,50.0,31.5,3.94,Illinois Public Opinion
-president,IL,2016-10-17,51.2,36.1,2.89,Victory Research
-president,IL,2016-10-17,57.33,27.64,5,Ipsos
-president,IL,2016-10-24,55.55,34.57,4.59,Ipsos
-president,IL,2016-10-26,45.0,34.0,4.08,Loras College Public Opinion Survey Center
-president,IL,2016-10-29,53.0,41.0,4.47,Emerson College
-president,IL,2016-10-28,52.0,35.0,3.16,SurveyMonkey
-president,IL,2016-11-03,51.3,39.08,4.55,Ipsos
-president,IL,2016-10-20,48.3,33.1,1.7,YouGov
-president,IL,2016-11-04,52.0,35.0,2.43,SurveyMonkey
-president,IN,2016-09-08,33.33,53.13,5,Ipsos
-president,IN,2016-09-22,35.88,53.16,5,Ipsos
-president,IN,2016-10-04,38.0,43.0,4.08,Public Opinion Strategies
-president,IN,2016-10-09,37.0,43.0,2.98,Lucid
-president,IN,2016-10-06,38.27,47.14,4.8,Ipsos
-president,IN,2016-10-12,41.0,45.0,4.99,Monmouth University Polling Institute
-president,IN,2016-10-13,37.0,43.0,4.29,Ball State University Bowen Center for Public Affairs
-president,IN,2016-10-23,38.0,49.0,4.1,Gravis Marketing
-president,IN,2016-10-20,38.9,53.54,5,Ipsos
-president,IN,2016-10-29,39.0,50.0,4.99,Monmouth University Polling Institute
-president,IN,2016-10-28,37.0,51.0,3.85,SurveyMonkey
-president,IN,2016-10-31,39.0,49.0,5,Gravis Marketing
-president,IN,2016-11-02,37.0,48.0,4.08,Public Opinion Strategies
-president,IN,2016-11-03,37.79,53.68,5,Ipsos
-president,IN,2016-10-20,36.6,43.8,2.4,YouGov
-president,IN,2016-11-04,35.0,52.0,2.34,SurveyMonkey
-president,KS,2016-09-08,36.0,48.0,4.1,SurveyUSA
-president,KS,2016-09-12,35.91,50.8,5,Ipsos
-president,KS,2016-10-03,37.9,50.27,5,Ipsos
-president,KS,2016-09-22,39.0,47.0,3.47,Fort Hays State University Docking Institute of Public Affairs
-president,KS,2016-10-13,36.0,47.0,4.15,SurveyUSA
-president,KS,2016-10-28,38.0,49.0,4.0,SurveyUSA
-president,KS,2016-10-28,36.0,47.0,2.8,SurveyMonkey
-president,KS,2016-11-02,34.0,58.0,5,Fort Hays State University Docking Institute of Public Affairs
-president,KS,2016-10-27,38.22,54.45,5,Ipsos
-president,KS,2016-10-20,31.6,47.5,3.59,YouGov
-president,KS,2016-11-04,36.0,49.0,2.76,SurveyMonkey
-president,KY,2016-09-22,37.76,56.38,5,Ipsos
-president,KY,2016-10-10,41.04,51.6,4.67,Ipsos
-president,KY,2016-10-27,32.0,56.0,3.51,Cygnal
-president,KY,2016-10-27,37.0,54.0,4.08,Western Kentucky University Social Science Research Center
-president,KY,2016-10-28,31.0,58.0,4.86,SurveyMonkey
-president,KY,2016-10-30,37.64,58.29,5,Ipsos
-president,KY,2016-10-20,32.2,52.2,2.85,YouGov
-president,KY,2016-11-04,35.0,54.0,2.76,SurveyMonkey
-president,LA,2016-09-16,32.6,48.9,4.47,Southern Media & Opinion Research
-president,LA,2016-09-12,35.79,51.87,5,Ipsos
-president,LA,2016-09-23,35.0,45.0,3.32,JMC Analytics
-president,LA,2016-09-29,35.0,52.0,4.08,Market Research Insight
-president,LA,2016-10-03,35.98,49.16,4.6,Ipsos
-president,LA,2016-10-13,38.0,45.0,3.54,JMC Analytics
-president,LA,2016-10-18,34.0,54.0,4.0,Mason-Dixon Polling & Strategy
-president,LA,2016-10-18,36.0,43.0,4.08,Market Research Insight
-president,LA,2016-10-20,35.0,50.0,4.47,Southern Media & Opinion Research
-president,LA,2016-10-18,35.0,49.0,4.07,University of New Orleans Survey Research Center
-president,LA,2016-10-18,40.0,43.0,4.04,Lucid
-president,LA,2016-10-28,38.0,51.0,4.86,SurveyMonkey
-president,LA,2016-10-27,36.12,51.56,4.66,Ipsos
-president,LA,2016-10-20,35.9,47.3,2.72,YouGov
-president,LA,2016-11-04,38.0,52.0,3.19,SurveyMonkey
-president,MA,2016-09-09,54.0,28.0,4.45,MassINC Polling Group
-president,MA,2016-09-08,53.07,31.09,4.53,Ipsos
-president,MA,2016-09-17,47.0,34.0,3.78,YouGov
-president,MA,2016-09-22,50.12,28.38,4.12,Ipsos
-president,MA,2016-09-28,58.0,26.0,4.98,Western New England University Polling Institute
-president,MA,2016-10-06,54.07,28.57,4.09,Ipsos
-president,MA,2016-10-15,54.0,28.0,4.46,MassINC Polling Group
-president,MA,2016-10-25,57.0,25.0,4.47,Suffolk University
-president,MA,2016-10-20,56.14,26.81,4.5,Ipsos
-president,MA,2016-10-28,58.0,29.0,3.54,SurveyMonkey
-president,MA,2016-10-28,56.0,26.0,4.9,Western New England University Polling Institute
-president,MA,2016-11-03,53.14,35.79,5,Ipsos
-president,MA,2016-10-20,51.3,28.6,2.26,YouGov
-president,MA,2016-11-04,56.0,30.0,2.69,SurveyMonkey
-president,MD,2016-09-19,58.0,25.0,4.41,Goucher College Sarah T. Hughes Center for Politics
-president,MD,2016-09-15,50.27,33.88,4.79,Ipsos
-president,MD,2016-09-29,63.0,27.0,3.76,The Washington Post/University of Maryland Center for Democracy and Civic Engagement
-president,MD,2016-09-29,53.07,31.74,4.44,Ipsos
-president,MD,2016-10-13,53.03,28.62,5,Ipsos
-president,MD,2016-10-28,63.0,27.0,3.68,SurveyMonkey
-president,MD,2016-10-30,55.69,33.6,4.6,Ipsos
-president,MD,2016-10-20,55.0,29.2,2.46,YouGov
-president,MD,2016-11-04,59.0,28.0,2.87,SurveyMonkey
-president,ME,2016-09-16,37.0,36.7,3.46,Maine People's Resource Center
-president,ME,2016-09-17,40.0,36.0,4.42,University of New Hampshire Survey Center
-president,ME,2016-09-19,45.01,33.56,5,Ipsos
-president,ME,2016-10-08,44.0,36.1,3.35,Maine People's Resource Center
-president,ME,2016-10-14,42.0,36.0,3.35,Maine People's Resource Center
-president,ME,2016-10-10,47.76,38.69,5,Ipsos
-president,ME,2016-10-22,48.0,37.0,3.86,University of New Hampshire Survey Center
-president,ME,2016-10-25,42.0,37.0,3.51,Maine People's Resource Center
-president,ME,2016-10-29,46.0,42.0,3.65,Emerson College
-president,ME,2016-10-28,49.0,37.0,4.81,SurveyMonkey
-president,ME,2016-10-30,42.33,35.08,5,Ipsos
-president,ME,2016-10-20,38.7,34.0,4.78,YouGov
-president,ME,2016-11-04,46.0,38.0,3.58,SurveyMonkey
-president,MI,2016-09-12,38.0,35.0,4.08,EPIC-MRA
-president,MI,2016-09-15,42.97,41.67,3.98,Ipsos
-president,MI,2016-09-21,46.0,41.0,4.08,Target Insyght
-president,MI,2016-09-27,46.0,41.0,2.26,Mitchell Research & Communications
-president,MI,2016-09-27,42.0,35.0,4.08,Glengariff Group
-president,MI,2016-09-26,39.35,39.05,5,Ipsos
-president,MI,2016-10-02,43.0,32.0,4.08,EPIC-MRA
-president,MI,2016-10-03,44.75,38.18,4.89,Ipsos
-president,MI,2016-10-11,47.0,37.0,2.65,Mitchell Research & Communications
-president,MI,2016-10-10,42.2,30.6,4.08,Glengariff Group
-president,MI,2016-10-10,43.78,37.33,2.93,Ipsos
-president,MI,2016-10-12,45.0,37.0,2.74,SurveyMonkey
-president,MI,2016-10-18,51.0,38.0,3.01,Mitchell Research & Communications
-president,MI,2016-10-18,41.0,36.0,4.08,Marketing Resource Group (MRG)
-president,MI,2016-10-17,45.18,40.82,4.76,Ipsos
-president,MI,2016-10-23,49.0,41.0,2.84,Mitchell Research & Communications
-president,MI,2016-10-23,41.0,34.0,4.08,EPIC-MRA
-president,MI,2016-10-25,48.0,42.0,3.12,Mitchell Research & Communications
-president,MI,2016-10-25,50.0,43.0,4.47,Emerson College
-president,MI,2016-10-24,41.34,37.11,5,Ipsos
-president,MI,2016-10-30,47.0,41.0,3.24,Mitchell Research & Communications
-president,MI,2016-10-29,45.0,44.0,4.47,Strategic National
-president,MI,2016-10-01,47.0,28.0,3.66,Michigan State University Institute for Public Policy and Social Research
-president,MI,2016-10-28,43.0,42.0,2.46,SurveyMonkey
-president,MI,2016-10-31,50.0,43.0,3.68,Mitchell Research & Communications
-president,MI,2016-11-01,47.0,44.0,3.36,Mitchell Research & Communications
-president,MI,2016-11-02,47.0,44.0,2.95,Mitchell Research & Communications
-president,MI,2016-11-03,44.0,44.0,4.18,Strategic National
-president,MI,2016-11-03,46.0,41.0,3.15,Mitchell Research & Communications
-president,MI,2016-11-02,42.0,38.0,4.08,EPIC-MRA
-president,MI,2016-11-03,46.0,41.0,3.23,Public Policy Polling
-president,MI,2016-11-03,46.0,41.0,3.04,Gravis Marketing
-president,MI,2016-11-03,45.95,44.53,5,Ipsos
-president,MI,2016-11-06,46.82,48.52,2.89,Trafalgar Group
-president,MI,2016-11-06,47.0,41.0,3.15,Mitchell Research & Communications
-president,MI,2016-10-20,42.0,36.0,1.82,YouGov
-president,MI,2016-11-04,44.0,42.0,1.78,SurveyMonkey
-president,MN,2016-09-13,44.0,38.0,4.0,Mason-Dixon Polling & Strategy
-president,MN,2016-09-18,46.0,39.0,4.0,SurveyUSA
-president,MN,2016-09-15,42.86,35.94,4.43,Ipsos
-president,MN,2016-09-23,43.0,43.0,3.32,Gravis Marketing
-president,MN,2016-09-29,42.03,37.57,3.94,Ipsos
-president,MN,2016-10-13,44.14,32.36,4.48,Ipsos
-president,MN,2016-10-21,47.0,39.0,4.0,Mason-Dixon Polling & Strategy
-president,MN,2016-10-24,49.0,39.0,3.9,SurveyUSA
-president,MN,2016-10-25,47.0,36.0,3.76,St. Cloud State University
-president,MN,2016-10-28,46.0,37.0,3.6,SurveyMonkey
-president,MN,2016-10-30,43.9,36.0,3.93,Ipsos
-president,MN,2016-10-20,42.3,35.9,2.4,YouGov
-president,MN,2016-11-04,46.0,39.0,2.78,SurveyMonkey
-president,MO,2016-09-11,34.0,47.0,4.08,Emerson College
-president,MO,2016-09-15,35.23,50.79,5,Ipsos
-president,MO,2016-09-22,37.0,46.0,3.03,YouGov
-president,MO,2016-09-26,39.0,49.0,2.8,Remington Research Group
-president,MO,2016-09-29,37.05,48.7,4.57,Ipsos
-president,MO,2016-10-10,41.0,46.0,4.96,Monmouth University Polling Institute
-president,MO,2016-10-10,42.0,47.0,2.15,Remington Research Group
-president,MO,2016-10-18,39.0,47.0,4.08,Emerson College
-president,MO,2016-10-13,37.03,48.14,5,Ipsos
-president,MO,2016-10-24,39.0,50.0,1.98,Remington Research Group
-president,MO,2016-10-25,42.0,47.0,4.0,Mason-Dixon Polling & Strategy
-president,MO,2016-10-27,39.0,53.0,2.43,BK Strategies
-president,MO,2016-10-28,39.0,46.0,3.86,SurveyMonkey
-president,MO,2016-10-30,38.0,52.0,4.97,Monmouth University Polling Institute
-president,MO,2016-10-30,37.0,52.0,3.92,Emerson College
-president,MO,2016-10-31,37.0,50.0,3.04,Public Policy Polling
-president,MO,2016-10-31,39.0,52.0,2.41,Remington Research Group
-president,MO,2016-10-29,38.0,47.0,4.44,DFM Research
-president,MO,2016-11-01,38.0,54.0,3.11,Clarity Campaign Labs
-president,MO,2016-11-01,37.0,50.0,3.39,Public Policy Polling
-president,MO,2016-11-04,40.5,46.5,3.65,Emerson College
-president,MO,2016-10-30,39.73,48.01,4.99,Ipsos
-president,MO,2016-10-20,35.8,43.3,2.35,YouGov
-president,MO,2016-11-04,40.0,48.0,2.7,SurveyMonkey
-president,MS,2016-09-19,38.2,49.22,5,Ipsos
-president,MS,2016-10-10,37.3,52.08,5,Ipsos
-president,MS,2016-10-28,41.0,48.0,3.93,SurveyMonkey
-president,MS,2016-10-30,35.93,53.09,5,Ipsos
-president,MS,2016-10-20,39.5,45.5,3.41,YouGov
-president,MS,2016-11-04,42.0,50.0,3.73,SurveyMonkey
-president,MT,2016-09-19,39.76,53.47,5,Ipsos
-president,MT,2016-10-07,27.0,43.0,4.12,Montana State University Billings
-president,MT,2016-10-11,36.0,46.0,3.16,Mason-Dixon Polling & Strategy
-president,MT,2016-10-10,31.74,50.8,5,Ipsos
-president,MT,2016-10-28,36.0,49.0,4.97,SurveyMonkey
-president,MT,2016-10-30,34.75,53.66,5,Ipsos
-president,MT,2016-10-20,31.7,44.1,5,YouGov
-president,MT,2016-11-04,30.0,52.0,4.72,SurveyMonkey
-president,NC,2016-09-11,42.0,42.0,4.08,National Research
-president,NC,2016-09-08,46.37,43.72,4.46,Ipsos
-president,NC,2016-09-14,43.0,44.0,3.94,Elon University
-president,NC,2016-09-18,41.0,41.0,3.58,The New York Times/Siena College
-president,NC,2016-09-14,44.0,40.0,5,GQR
-president,NC,2016-09-19,43.0,45.0,3.12,Public Policy Polling
-president,NC,2016-09-19,40.0,45.0,3.69,Beacon Research/Shaw & Co. Research
-president,NC,2016-09-20,38.0,35.0,4.53,"Meredith College Department of History, Political Science, and International Studies"
-president,NC,2016-09-19,43.0,42.0,4.98,High Point University Survey Research Center
-president,NC,2016-09-23,44.0,43.0,3.8,Gravis Marketing
-president,NC,2016-09-27,44.0,42.0,3.41,Public Policy Polling
-president,NC,2016-09-22,48.07,43.58,4.39,Ipsos
-president,NC,2016-09-29,44.5,39.0,3.89,Elon University
-president,NC,2016-10-01,44.0,43.0,3.52,Selzer & Co.
-president,NC,2016-09-29,46.0,43.0,4.44,Quinnipiac University
-president,NC,2016-10-01,46.0,44.0,3.9,SurveyUSA
-president,NC,2016-10-03,44.16,43.09,5,Ipsos
-president,NC,2016-10-03,43.0,42.0,4.57,High Point University Survey Research Center
-president,NC,2016-10-11,44.8,43.4,4.47,Suffolk University
-president,NC,2016-10-11,45.0,41.0,3.67,Marist College
-president,NC,2016-10-11,46.0,42.0,4.08,Emerson College
-president,NC,2016-10-10,46.33,42.42,3.08,Ipsos
-president,NC,2016-10-12,48.0,47.0,3.56,Big Village
-president,NC,2016-10-12,46.0,40.0,2.9,SurveyMonkey
-president,NC,2016-10-16,46.0,44.0,3.92,SurveyUSA
-president,NC,2016-10-16,44.0,42.0,4.08,National Research
-president,NC,2016-10-17,42.0,41.0,3.29,Lucid
-president,NC,2016-10-21,47.0,44.0,3.38,Public Policy Polling
-president,NC,2016-10-21,44.0,47.0,2.38,Remington Research Group
-president,NC,2016-10-22,47.0,46.0,4.99,Monmouth University Polling Institute
-president,NC,2016-10-22,46.0,39.0,3.55,The New York Times/Siena College
-president,NC,2016-10-21,46.0,43.0,3.38,Rasmussen Reports
-president,NC,2016-10-25,49.0,47.0,2.8,Gravis Marketing
-president,NC,2016-10-25,47.0,41.0,3.58,Marist College
-president,NC,2016-10-23,47.0,43.0,3.77,Quinnipiac University
-president,NC,2016-10-20,47.99,43.77,3.94,Ipsos
-president,NC,2016-10-26,47.0,44.0,4.36,Rasmussen Reports
-president,NC,2016-10-26,48.0,45.0,3.92,Emerson College
-president,NC,2016-10-25,42.0,41.2,3.75,Elon University
-president,NC,2016-10-27,48.0,45.0,3.18,YouGov
-president,NC,2016-10-30,45.0,47.0,2.92,Remington Research Group
-president,NC,2016-10-28,47.0,44.0,2.52,SurveyMonkey
-president,NC,2016-10-30,44.0,51.0,3.9,SurveyUSA
-president,NC,2016-10-31,47.0,44.0,4.36,Rasmussen Reports
-president,NC,2016-10-31,49.0,47.0,2.92,Public Policy Polling
-president,NC,2016-10-29,47.0,44.0,4.08,Quinnipiac University
-president,NC,2016-10-29,44.16,49.13,2.95,Trafalgar Group
-president,NC,2016-11-01,45.0,48.0,1.96,Remington Research Group
-president,NC,2016-11-03,46.0,45.0,2.83,Gravis Marketing
-president,NC,2016-11-03,46.0,46.9,5,Ipsos
-president,NC,2016-11-04,49.0,43.0,4.36,Rasmussen Reports
-president,NC,2016-11-05,44.0,44.0,3.54,The New York Times/Siena College
-president,NC,2016-11-05,47.0,45.0,3.39,Quinnipiac University
-president,NC,2016-10-20,43.5,41.3,1.85,YouGov
-president,NC,2016-11-04,48.0,41.0,1.79,SurveyMonkey
-president,ND,2016-09-14,32.0,43.0,5,DFM Research
-president,ND,2016-10-03,34.67,44.9,5,Ipsos
-president,ND,2016-10-28,31.0,53.0,5,SurveyMonkey
-president,ND,2016-10-30,26.18,49.74,5,Ipsos
-president,ND,2016-10-20,32.3,44.8,5,YouGov
-president,ND,2016-11-04,29.0,57.0,5,SurveyMonkey
-president,NE,2016-09-25,29.3,55.7,3.78,Emerson College
-president,NE,2016-09-19,32.71,51.19,5,Ipsos
-president,NE,2016-10-10,34.73,46.81,5,Ipsos
-president,NE,2016-10-28,32.0,52.0,4.93,SurveyMonkey
-president,NE,2016-10-30,31.62,53.27,5,Ipsos
-president,NE,2016-10-20,32.3,44.9,4.45,YouGov
-president,NE,2016-11-04,35.0,52.0,3.18,SurveyMonkey
-president,NH,2016-09-19,47.0,38.0,5,Monmouth University Polling Institute
-president,NH,2016-09-22,46.0,42.0,4.38,American Research Group
-president,NH,2016-09-26,43.0,37.0,4.08,GBAO
-president,NH,2016-09-19,47.21,41.25,5,Ipsos
-president,NH,2016-09-28,42.0,35.0,4.46,MassINC Polling Group
-president,NH,2016-10-01,46.0,38.0,4.47,GQR
-president,NH,2016-10-04,44.0,42.0,4.47,Suffolk University
-president,NH,2016-10-08,48.0,37.0,4.08,Public Policy Polling
-president,NH,2016-10-09,45.0,39.0,4.4,University of Massachusetts Lowell Center for Public Opinion
-president,NH,2016-10-11,41.0,38.0,4.47,MassINC Polling Group
-president,NH,2016-10-12,47.0,36.0,4.19,SurveyMonkey
-president,NH,2016-10-14,49.0,34.0,3.64,University of New Hampshire Survey Center
-president,NH,2016-10-18,44.0,36.0,3.33,Emerson College
-president,NH,2016-10-10,45.11,39.21,5,Ipsos
-president,NH,2016-10-19,43.0,38.0,3.6,YouGov
-president,NH,2016-10-22,45.0,36.0,3.61,Marist College
-president,NH,2016-10-24,46.0,43.0,4.08,Emerson College
-president,NH,2016-10-24,46.0,42.0,4.99,Monmouth University Polling Institute
-president,NH,2016-10-26,47.0,39.0,4.36,Rasmussen Reports
-president,NH,2016-10-27,42.9,44.6,4.95,Praecones Analytica
-president,NH,2016-10-28,46.0,38.0,4.4,University of New Hampshire Survey Center
-president,NH,2016-10-28,48.0,35.0,3.9,SurveyMonkey
-president,NH,2016-10-31,45.0,41.0,4.36,Rasmussen Reports
-president,NH,2016-10-31,48.0,43.0,3.58,Public Policy Polling
-president,NH,2016-10-31,39.0,40.0,4.47,MassINC Polling Group
-president,NH,2016-11-01,47.0,40.0,4.63,University of New Hampshire Survey Center
-president,NH,2016-11-01,41.0,43.0,3.16,Gravis Marketing
-president,NH,2016-11-01,43.0,48.0,4.08,American Research Group
-president,NH,2016-11-01,41.8,42.2,4.47,Suffolk University
-president,NH,2016-10-30,44.0,44.0,3.79,University of Massachusetts Lowell Center for Public Opinion
-president,NH,2016-11-04,45.4,43.8,3.16,Emerson College
-president,NH,2016-10-30,44.42,41.81,5,Ipsos
-president,NH,2016-11-04,46.0,40.0,4.36,Rasmussen Reports
-president,NH,2016-11-05,49.0,38.0,3.8,University of New Hampshire Survey Center
-president,NH,2016-10-20,43.0,34.4,4.82,YouGov
-president,NH,2016-11-04,47.0,38.0,3.79,SurveyMonkey
-president,NJ,2016-09-15,50.49,32.22,3.42,Ipsos
-president,NJ,2016-09-26,46.68,34.18,4.28,Ipsos
-president,NJ,2016-09-26,46.2,39.8,3.96,Stockton University William J. Hughes Center for Public Policy
-president,NJ,2016-10-06,49.93,32.23,3.24,Ipsos
-president,NJ,2016-10-14,49.0,35.0,5,Fairleigh Dickinson University
-president,NJ,2016-10-20,50.95,34.25,3.54,Ipsos
-president,NJ,2016-10-28,55.0,35.0,3.72,SurveyMonkey
-president,NJ,2016-10-30,51.0,40.0,3.84,Stockton University William J. Hughes Center for Public Policy
-president,NJ,2016-11-03,47.78,37.86,4.26,Ipsos
-president,NJ,2016-10-20,47.7,35.7,2.05,YouGov
-president,NJ,2016-11-04,52.0,37.0,2.69,SurveyMonkey
-president,NM,2016-09-24,41.8,36.6,2.66,Zia Poll
-president,NM,2016-09-19,48.94,39.69,5,Ipsos
-president,NM,2016-09-28,35.0,31.0,4.47,Research & Polling Inc.
-president,NM,2016-09-30,46.0,33.0,4.1,SurveyUSA
-president,NM,2016-10-11,46.0,36.0,2.55,Zia Poll
-president,NM,2016-10-12,41.0,33.0,3.35,SurveyMonkey
-president,NM,2016-10-10,51.28,35.11,5,Ipsos
-president,NM,2016-10-24,45.0,40.0,2.29,Zia Poll
-president,NM,2016-10-28,44.0,34.0,3.18,SurveyMonkey
-president,NM,2016-10-30,39.0,31.0,4.2,Lucid
-president,NM,2016-11-01,46.0,43.0,3.01,Zia Poll
-president,NM,2016-11-01,45.0,37.0,2.75,Gravis Marketing
-president,NM,2016-11-02,45.0,40.0,4.45,Research & Polling Inc.
-president,NM,2016-10-30,40.94,38.34,5,Ipsos
-president,NM,2016-11-06,46.0,44.0,1.09,Zia Poll
-president,NM,2016-10-20,41.7,34.6,4.44,YouGov
-president,NM,2016-11-04,40.0,38.0,3.65,SurveyMonkey
-president,NV,2016-09-12,42.0,44.0,4.96,Monmouth University Polling Institute
-president,NV,2016-09-13,40.0,42.0,5,Leger
-president,NV,2016-09-17,39.0,42.0,3.54,Rasmussen Reports
-president,NV,2016-09-14,42.0,42.0,5,GQR
-president,NV,2016-09-19,40.0,43.0,3.77,Beacon Research/Shaw & Co. Research
-president,NV,2016-09-12,45.03,45.02,5,Ipsos
-president,NV,2016-09-28,44.2,38.2,4.47,Suffolk University
-president,NV,2016-09-28,45.0,44.0,3.54,Bendixen & Amandi International
-president,NV,2016-09-29,44.0,41.0,3.78,Garin-Hart-Yang Research Group
-president,NV,2016-10-03,43.0,43.0,3.78,Emerson College
-president,NV,2016-10-10,47.0,43.0,3.18,Public Policy Polling
-president,NV,2016-10-10,43.0,43.0,3.15,Clarity Campaign Labs
-president,NV,2016-10-11,45.0,39.0,4.08,Public Opinion Strategies
-president,NV,2016-10-03,40.77,38.73,5,Ipsos
-president,NV,2016-10-12,43.0,41.0,4.08,JMC Analytics
-president,NV,2016-10-13,46.0,40.0,3.17,YouGov
-president,NV,2016-10-12,46.0,44.0,3.79,Big Village
-president,NV,2016-10-12,40.0,44.0,3.36,SurveyMonkey
-president,NV,2016-10-16,47.0,40.0,4.92,Monmouth University Polling Institute
-president,NV,2016-10-21,46.0,42.0,3.48,Rasmussen Reports
-president,NV,2016-10-21,44.0,47.0,2.74,Remington Research Group
-president,NV,2016-10-22,48.0,41.0,3.54,Bendixen & Amandi International
-president,NV,2016-10-22,43.0,43.0,3.76,Marist College
-president,NV,2016-10-25,46.0,46.0,3.38,Gravis Marketing
-president,NV,2016-10-26,43.0,42.0,4.36,Rasmussen Reports
-president,NV,2016-10-26,44.0,42.0,4.26,Emerson College
-president,NV,2016-10-30,44.0,48.0,3.56,Remington Research Group
-president,NV,2016-10-28,43.0,42.0,3.15,SurveyMonkey
-president,NV,2016-10-31,44.0,44.0,4.36,Rasmussen Reports
-president,NV,2016-10-31,48.0,45.0,3.81,Public Policy Polling
-president,NV,2016-10-30,45.0,45.0,4.08,JMC Analytics
-president,NV,2016-10-30,45.0,38.0,3.35,Lucid
-president,NV,2016-10-29,43.0,49.0,3.56,Big Village
-president,NV,2016-11-01,45.0,46.0,2.36,Remington Research Group
-president,NV,2016-11-03,45.01,49.61,3.02,Trafalgar Group
-president,NV,2016-11-04,46.8,45.6,4.08,Emerson College
-president,NV,2016-10-27,45.39,42.15,5,Ipsos
-president,NV,2016-11-04,44.0,44.0,4.36,Rasmussen Reports
-president,NV,2016-11-05,42.0,42.0,5,Leger
-president,NV,2016-11-05,45.0,43.0,2.94,Gravis Marketing
-president,NV,2016-10-20,42.5,40.9,3.9,YouGov
-president,NV,2016-11-04,45.0,43.0,2.88,SurveyMonkey
-president,NY,2016-09-12,53.44,29.97,4.29,Ipsos
-president,NY,2016-09-13,51.0,30.0,4.08,Siena College
-president,NY,2016-09-19,52.85,34.06,4.32,Ipsos
-president,NY,2016-09-22,52.0,31.0,3.85,Marist College
-president,NY,2016-09-26,49.34,29.05,3.92,Ipsos
-president,NY,2016-10-03,54.76,31.07,3.74,Ipsos
-president,NY,2016-10-10,52.61,26.67,4.8,Ipsos
-president,NY,2016-10-15,54.0,30.0,4.05,Siena College
-president,NY,2016-10-17,53.73,30.1,5,Ipsos
-president,NY,2016-10-24,51.97,30.28,4.48,Ipsos
-president,NY,2016-10-28,49.0,38.0,4.08,McLaughlin & Associates
-president,NY,2016-10-28,56.0,33.0,2.4,SurveyMonkey
-president,NY,2016-11-03,51.0,34.0,4.03,Siena College
-president,NY,2016-11-03,51.49,33.0,4.26,Ipsos
-president,NY,2016-11-05,55.0,36.0,2.44,Gravis Marketing
-president,NY,2016-10-20,52.7,31.4,1.46,YouGov
-president,NY,2016-11-04,57.0,32.0,2.13,SurveyMonkey
-president,OH,2016-09-11,39.0,44.0,3.53,Selzer & Co.
-president,OH,2016-09-09,41.0,46.0,3.61,Big Village
-president,OH,2016-09-13,39.0,42.0,4.47,Suffolk University
-president,OH,2016-09-12,47.21,43.52,4.71,Ipsos
-president,OH,2016-09-14,39.0,41.0,5,GQR
-president,OH,2016-09-19,37.0,42.0,3.68,Beacon Research/Shaw & Co. Research
-president,OH,2016-09-19,46.34,42.88,4.96,Ipsos
-president,OH,2016-09-19,40.0,37.0,3.92,TargetSmart
-president,OH,2016-09-22,42.0,43.0,3.43,Gravis Marketing
-president,OH,2016-09-26,44.36,42.81,4.24,Ipsos
-president,OH,2016-09-29,42.0,47.0,4.49,Quinnipiac University
-president,OH,2016-09-29,44.0,42.0,3.54,Impact Research
-president,OH,2016-10-03,44.0,42.0,4.97,Monmouth University Polling Institute
-president,OH,2016-10-03,46.21,42.56,4.05,Ipsos
-president,OH,2016-10-05,44.0,43.0,3.58,Public Policy Polling
-president,OH,2016-10-05,43.2,40.3,3.51,TargetSmart
-president,OH,2016-10-06,46.0,42.0,3.17,YouGov
-president,OH,2016-10-09,44.0,39.0,2.77,Lucid
-president,OH,2016-10-10,43.2,34.4,2.95,Baldwin Wallace University Community Research Institute
-president,OH,2016-10-11,41.0,42.0,3.72,Marist College
-president,OH,2016-10-11,45.0,43.0,4.08,Emerson College
-president,OH,2016-10-02,41.0,38.0,3.16,University of Akron Ray C. Bliss Institute of Applied Politics
-president,OH,2016-10-12,44.0,48.0,3.59,Big Village
-president,OH,2016-10-13,45.0,45.0,4.0,Quinnipiac University
-president,OH,2016-10-12,41.0,44.0,2.77,SurveyMonkey
-president,OH,2016-10-18,45.0,45.0,4.47,Suffolk University
-president,OH,2016-10-13,43.41,42.75,2.33,Ipsos
-president,OH,2016-10-21,42.0,46.0,2.25,Remington Research Group
-president,OH,2016-10-21,42.0,44.0,3.38,Rasmussen Reports
-president,OH,2016-10-25,44.15,48.54,2.95,Trafalgar Group
-president,OH,2016-10-24,44.85,45.17,4.44,Ipsos
-president,OH,2016-10-26,46.0,42.0,4.36,Rasmussen Reports
-president,OH,2016-10-26,45.0,45.0,3.54,Emerson College
-president,OH,2016-10-30,43.0,48.0,2.9,Remington Research Group
-president,OH,2016-10-28,40.0,45.0,2.34,SurveyMonkey
-president,OH,2016-10-31,46.0,43.0,4.36,Rasmussen Reports
-president,OH,2016-10-29,41.0,46.0,4.12,Quinnipiac University
-president,OH,2016-11-01,44.0,45.0,1.98,Remington Research Group
-president,OH,2016-11-02,40.0,43.0,3.44,TargetSmart
-president,OH,2016-11-03,45.0,46.0,2.9,YouGov
-president,OH,2016-11-04,38.9,45.6,3.33,Emerson College
-president,OH,2016-10-31,48.0,47.0,2.95,Columbus Dispatch
-president,OH,2016-11-03,47.04,46.0,4.26,Ipsos
-president,OH,2016-11-04,44.0,43.0,4.36,Rasmussen Reports
-president,OH,2016-11-05,42.0,48.0,2.37,Gravis Marketing
-president,OH,2016-10-20,43.2,41.5,1.7,YouGov
-president,OH,2016-11-04,42.0,45.0,1.87,SurveyMonkey
-president,OK,2016-09-14,35.6,50.9,4.41,SoonerPoll.com
-president,OK,2016-09-12,29.57,54.94,5,Ipsos
-president,OK,2016-10-03,36.0,51.26,4.81,Ipsos
-president,OK,2016-10-19,29.6,59.6,4.34,SoonerPoll.com
-president,OK,2016-10-28,31.0,54.0,4.6,SurveyMonkey
-president,OK,2016-10-27,29.85,60.78,4.81,Ipsos
-president,OK,2016-10-20,26.8,53.4,3.25,YouGov
-president,OK,2016-11-04,32.0,57.0,2.8,SurveyMonkey
-president,OR,2016-09-22,48.42,37.65,4.79,Ipsos
-president,OR,2016-09-30,45.0,33.0,4.07,Hoffman Research Group
-president,OR,2016-10-04,47.0,39.0,2.83,Gravis Marketing
-president,OR,2016-10-11,48.0,38.0,3.91,SurveyUSA
-president,OR,2016-10-10,43.0,36.0,4.08,DHM Research
-president,OR,2016-10-09,46.0,36.0,4.06,Riley Research Associates
-president,OR,2016-10-10,46.28,37.24,3.94,Ipsos
-president,OR,2016-10-27,41.0,34.0,4.45,DHM Research
-president,OR,2016-10-28,51.0,36.0,3.67,SurveyMonkey
-president,OR,2016-10-30,46.72,37.04,4.64,Ipsos
-president,OR,2016-11-05,44.0,40.0,2.26,Gravis Marketing
-president,OR,2016-10-20,43.8,36.0,3.0,YouGov
-president,OR,2016-11-04,50.0,35.0,2.5,SurveyMonkey
-president,PA,2016-09-12,46.11,43.81,4.86,Ipsos
-president,PA,2016-09-14,40.0,32.0,4.97,Muhlenberg College Institute of Public Opinion
-president,PA,2016-09-14,46.0,38.0,5,GQR
-president,PA,2016-09-19,45.69,46.46,5,Ipsos
-president,PA,2016-09-21,45.0,43.0,4.47,Harper Polling
-president,PA,2016-09-23,46.0,43.0,3.25,Gravis Marketing
-president,PA,2016-09-21,40.0,38.0,4.54,Muhlenberg College Institute of Public Opinion
-president,PA,2016-09-18,42.0,41.0,4.88,Mercyhurst University Center for Applied Politics
-president,PA,2016-09-22,45.0,44.0,3.6,Big Village
-president,PA,2016-09-27,45.0,39.0,3.36,Public Policy Polling
-president,PA,2016-09-26,45.23,42.35,4.47,Ipsos
-president,PA,2016-09-30,47.0,38.0,4.49,Franklin & Marshall College Center for Opinion Research
-president,PA,2016-09-29,45.0,41.0,4.32,Quinnipiac University
-president,PA,2016-10-02,50.0,40.0,4.99,Monmouth University Polling Institute
-president,PA,2016-10-03,49.34,42.79,4.62,Ipsos
-president,PA,2016-10-05,49.0,37.0,3.76,Marist College
-president,PA,2016-10-06,48.0,40.0,3.17,YouGov
-president,PA,2016-10-06,44.0,40.0,3.62,Susquehanna Polling & Research Inc.
-president,PA,2016-10-09,47.0,38.0,2.62,Lucid
-president,PA,2016-10-09,48.0,39.0,3.52,Selzer & Co.
-president,PA,2016-10-10,46.13,41.91,2.95,Ipsos
-president,PA,2016-10-13,47.0,41.0,3.89,Quinnipiac University
-president,PA,2016-10-12,46.0,40.0,2.63,SurveyMonkey
-president,PA,2016-10-18,45.0,41.0,3.54,Emerson College
-president,PA,2016-10-17,49.13,38.7,4.25,Ipsos
-president,PA,2016-10-21,45.0,42.0,2.24,Remington Research Group
-president,PA,2016-10-21,45.0,40.0,3.38,Rasmussen Reports
-president,PA,2016-10-24,46.0,39.0,3.48,The New York Times/Siena College
-president,PA,2016-10-25,48.0,43.0,4.26,Emerson College
-president,PA,2016-10-23,45.0,39.0,4.88,Muhlenberg College Institute of Public Opinion
-president,PA,2016-10-24,48.03,45.87,4.74,Ipsos
-president,PA,2016-10-26,47.0,40.0,4.36,Rasmussen Reports
-president,PA,2016-10-27,48.0,40.0,3.03,YouGov
-president,PA,2016-10-30,45.0,43.0,2.83,Remington Research Group
-president,PA,2016-10-28,49.0,38.0,3.92,Franklin & Marshall College Center for Opinion Research
-president,PA,2016-10-27,47.0,44.0,1.76,Gravis Marketing
-president,PA,2016-10-28,49.0,41.0,2.11,SurveyMonkey
-president,PA,2016-10-31,47.0,46.0,1.96,Gravis Marketing
-president,PA,2016-10-31,45.0,44.0,4.36,Rasmussen Reports
-president,PA,2016-10-31,45.0,43.0,3.83,Susquehanna Polling & Research Inc.
-president,PA,2016-10-31,48.0,44.0,3.09,Public Policy Polling
-president,PA,2016-10-31,48.0,44.0,4.98,Monmouth University Polling Institute
-president,PA,2016-10-29,48.0,44.0,3.54,Big Village
-president,PA,2016-10-29,48.0,43.0,4.04,Quinnipiac University
-president,PA,2016-11-01,47.0,45.0,3.14,Gravis Marketing
-president,PA,2016-11-01,46.0,45.0,1.93,Remington Research Group
-president,PA,2016-11-02,46.0,46.0,4.45,Harper Polling
-president,PA,2016-11-03,47.0,43.0,3.11,Clarity Campaign Labs
-president,PA,2016-11-01,44.0,40.0,4.97,Muhlenberg College Institute of Public Opinion
-president,PA,2016-11-04,46.51,48.43,2.77,Trafalgar Group
-president,PA,2016-11-04,45.0,43.0,3.28,YouGov
-president,PA,2016-11-03,48.2,45.19,4.48,Ipsos
-president,PA,2016-11-04,44.0,46.0,4.36,Rasmussen Reports
-president,PA,2016-11-05,46.0,40.0,2.86,Gravis Marketing
-president,PA,2016-10-20,42.7,41.2,1.64,YouGov
-president,PA,2016-11-04,46.0,43.0,1.87,SurveyMonkey
-president,RI,2016-10-03,52.0,32.0,4.08,Emerson College
-president,RI,2016-10-28,49.0,36.0,4.89,SurveyMonkey
-president,RI,2016-10-20,47.0,29.2,5,YouGov
-president,RI,2016-11-04,48.0,36.0,4.91,SurveyMonkey
-president,SC,2016-09-09,37.57,53.0,2.83,Trafalgar Group
-president,SC,2016-09-22,38.0,42.0,4.59,Winthrop University Center for Public Opinion & Policy Research
-president,SC,2016-09-22,44.41,49.0,5,Ipsos
-president,SC,2016-10-10,43.67,50.89,5,Ipsos
-president,SC,2016-10-28,43.0,45.0,2.38,SurveyMonkey
-president,SC,2016-10-30,36.0,47.0,4.08,Starboard Communications
-president,SC,2016-10-30,43.61,49.43,5,Ipsos
-president,SC,2016-11-05,43.0,48.0,2.39,Gravis Marketing
-president,SC,2016-10-20,35.6,46.6,2.78,YouGov
-president,SC,2016-11-04,43.0,47.0,2.43,SurveyMonkey
-president,SD,2016-09-19,31.67,46.8,5,Ipsos
-president,SD,2016-10-10,32.76,49.64,5,Ipsos
-president,SD,2016-10-19,37.0,44.0,5,Mason-Dixon Polling & Strategy
-president,SD,2016-10-20,37.0,48.0,2.99,Remington Research Group
-president,SD,2016-10-25,35.0,49.0,4.08,Nielson Brothers Polling
-president,SD,2016-10-28,27.0,53.0,5,SurveyMonkey
-president,SD,2016-10-30,29.45,52.16,5,Ipsos
-president,SD,2016-10-20,31.3,49.6,5,YouGov
-president,SD,2016-11-04,32.0,53.0,4.67,SurveyMonkey
-president,TN,2016-09-15,33.39,47.02,4.73,Ipsos
-president,TN,2016-09-30,38.0,50.0,4.6,Middle Tennessee State University
-president,TN,2016-09-25,33.0,44.0,3.16,SSRS
-president,TN,2016-09-29,33.86,48.57,4.24,Ipsos
-president,TN,2016-10-16,34.0,44.0,4.44,icitizen
-president,TN,2016-10-13,34.69,44.35,4.81,Ipsos
-president,TN,2016-10-28,38.0,51.0,4.26,SurveyMonkey
-president,TN,2016-10-30,36.33,49.76,4.31,Ipsos
-president,TN,2016-10-20,33.9,48.3,2.4,YouGov
-president,TN,2016-11-04,41.0,49.0,2.64,SurveyMonkey
-president,TX,2016-09-09,36.1,42.4,3.78,Emerson College
-president,TX,2016-09-12,28.51,51.13,4.65,Ipsos
-president,TX,2016-09-19,32.6,48.1,4.65,Ipsos
-president,TX,2016-09-26,32.9,48.31,4.64,Ipsos
-president,TX,2016-09-30,37.95,44.87,3.58,Dixie Strategies
-president,TX,2016-10-03,33.59,50.14,4.14,Ipsos
-president,TX,2016-10-11,43.0,47.0,3.96,SurveyUSA
-president,TX,2016-10-10,31.57,57.0,4.87,Ipsos
-president,TX,2016-10-11,38.0,41.0,3.16,University of Houston Hobby School of Public Affairs
-president,TX,2016-10-12,42.0,44.0,2.74,SurveyMonkey
-president,TX,2016-10-17,39.04,52.23,4.97,Ipsos
-president,TX,2016-10-21,43.0,46.0,3.11,YouGov
-president,TX,2016-10-18,42.0,45.0,3.23,YouGov
-president,TX,2016-10-23,38.0,45.0,3.54,Rasmussen Reports
-president,TX,2016-10-24,33.95,48.36,4.45,Ipsos
-president,TX,2016-10-28,39.39,51.53,3.19,Dixie Strategies
-president,TX,2016-10-28,41.0,47.0,2.21,SurveyMonkey
-president,TX,2016-10-31,40.0,49.0,3.84,Marist College
-president,TX,2016-11-01,34.5,49.2,3.78,Emerson College
-president,TX,2016-11-03,39.3,48.75,3.93,Ipsos
-president,TX,2016-10-20,36.8,44.7,1.3,YouGov
-president,TX,2016-11-04,43.0,46.0,1.82,SurveyMonkey
-president,UT,2016-09-16,25.0,34.0,3.49,Dan Jones & Associates
-president,UT,2016-09-12,31.24,47.96,5,Ipsos
-president,UT,2016-10-10,26.0,26.0,4.47,Y2 Analytics
-president,UT,2016-10-11,28.0,34.0,4.98,Monmouth University Polling Institute
-president,UT,2016-10-03,35.0,41.45,5,Ipsos
-president,UT,2016-10-13,20.0,37.0,3.24,YouGov
-president,UT,2016-10-15,28.0,30.0,3.65,Rasmussen Reports
-president,UT,2016-10-15,25.0,30.0,3.5,Dan Jones & Associates
-president,UT,2016-10-18,24.4,27.0,3.78,Emerson College
-president,UT,2016-10-23,28.0,32.0,3.65,Rasmussen Reports
-president,UT,2016-10-24,24.0,32.0,3.49,Dan Jones & Associates
-president,UT,2016-10-28,30.0,33.0,3.05,SurveyMonkey
-president,UT,2016-10-30,29.0,35.0,2.65,Gravis Marketing
-president,UT,2016-10-30,31.0,42.0,3.65,Rasmussen Reports
-president,UT,2016-11-01,19.6,39.8,3.16,Emerson College
-president,UT,2016-11-01,31.0,37.0,4.99,Monmouth University Polling Institute
-president,UT,2016-11-02,24.0,33.0,4.47,Y2 Analytics
-president,UT,2016-11-04,29.52,39.95,2.72,Trafalgar Group
-president,UT,2016-11-04,23.0,40.0,3.62,YouGov
-president,UT,2016-10-27,32.9,39.66,5,Ipsos
-president,UT,2016-10-20,23.7,32.8,3.85,YouGov
-president,UT,2016-11-04,31.0,34.0,2.6,SurveyMonkey
-president,VA,2016-09-10,45.0,39.0,3.37,Public Policy Polling
-president,VA,2016-09-09,40.0,37.0,3.82,Princeton Survey Research Associates International
-president,VA,2016-09-12,47.35,37.51,4.79,Ipsos
-president,VA,2016-09-15,44.0,37.0,3.45,Roanoke College Institute for Policy and Opinion Research
-president,VA,2016-09-17,45.0,39.0,3.9,Quinnipiac University
-president,VA,2016-09-22,45.0,37.0,2.84,YouGov
-president,VA,2016-09-19,39.0,33.0,3.16,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-09-27,46.0,40.0,3.51,Public Policy Polling
-president,VA,2016-09-22,48.26,40.35,3.43,Ipsos
-president,VA,2016-09-29,42.0,35.0,3.35,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-09-30,46.0,34.0,3.54,Hampton University Center for Public Policy
-president,VA,2016-10-04,45.0,36.0,3.5,Roanoke College Institute for Policy and Opinion Research
-president,VA,2016-10-11,46.1,43.4,4.08,Emerson College
-president,VA,2016-10-06,49.22,38.8,3.36,Ipsos
-president,VA,2016-10-13,44.0,29.0,3.52,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-10-14,47.0,38.0,4.47,Tarrance Group
-president,VA,2016-10-12,49.0,38.0,2.47,SurveyMonkey
-president,VA,2016-10-17,43.0,38.0,3.53,Lucid
-president,VA,2016-10-18,45.0,33.0,3.46,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-10-21,48.0,43.0,2.37,Remington Research Group
-president,VA,2016-10-25,46.0,39.0,3.5,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-10-23,50.0,38.0,3.65,Quinnipiac University
-president,VA,2016-10-20,48.11,39.3,3.79,Ipsos
-president,VA,2016-10-27,50.0,32.0,3.61,Roanoke College Institute for Policy and Opinion Research
-president,VA,2016-10-30,47.0,43.0,3.01,Remington Research Group
-president,VA,2016-10-29,49.0,45.0,3.54,Emerson College
-president,VA,2016-10-29,48.0,42.0,3.12,The Washington Post/George Mason University Schar School of Policy and Government
-president,VA,2016-10-28,41.0,44.0,3.53,Hampton University Center for Public Policy
-president,VA,2016-10-27,44.0,39.0,3.75,Winthrop University Center for Public Opinion & Policy Research
-president,VA,2016-10-28,48.0,38.0,2.19,SurveyMonkey
-president,VA,2016-10-31,45.0,38.0,3.91,Roanoke College Institute for Policy and Opinion Research
-president,VA,2016-11-01,46.0,44.0,1.8,Remington Research Group
-president,VA,2016-11-03,48.0,43.0,2.84,Public Policy Polling
-president,VA,2016-11-03,47.0,42.0,2.71,Gravis Marketing
-president,VA,2016-11-03,45.9,41.11,4.33,Ipsos
-president,VA,2016-11-04,45.0,41.0,3.53,Hampton University Center for Public Policy
-president,VA,2016-11-03,48.0,42.0,2.9,Christopher Newport University Wason Center for Civic Leadership
-president,VA,2016-10-20,46.1,37.0,2.02,YouGov
-president,VA,2016-11-04,49.0,41.0,2.14,SurveyMonkey
-president,VT,2016-09-26,46.34,21.29,5,Ipsos
-president,VT,2016-10-07,45.0,17.0,4.16,The Castleton Polling Institute
-president,VT,2016-10-21,50.0,22.0,4.07,Braun Research
-president,VT,2016-10-25,52.0,26.0,3.08,RRH Elections
-president,VT,2016-10-28,53.0,25.0,4.79,SurveyMonkey
-president,VT,2016-10-30,48.27,23.4,5,Ipsos
-president,VT,2016-10-20,40.5,24.5,5,YouGov
-president,VT,2016-11-04,61.0,25.0,4.69,SurveyMonkey
-president,WA,2016-09-13,38.0,28.0,4.45,Leger
-president,WA,2016-09-08,46.81,36.92,4.66,Ipsos
-president,WA,2016-09-26,44.2,38.4,3.78,Emerson College
-president,WA,2016-09-22,48.94,35.28,4.49,Ipsos
-president,WA,2016-10-01,47.0,31.0,4.47,Strategies 360
-president,WA,2016-10-03,50.9,33.29,5,Ipsos
-president,WA,2016-10-10,53.0,39.0,3.65,YouGov
-president,WA,2016-10-13,46.14,42.36,4.53,Ipsos
-president,WA,2016-10-21,48.0,31.0,4.46,Elway Research
-president,WA,2016-10-28,53.0,34.0,3.66,SurveyMonkey
-president,WA,2016-11-01,50.0,38.0,3.83,SurveyUSA
-president,WA,2016-10-30,46.72,38.48,4.22,Ipsos
-president,WA,2016-11-05,51.0,36.0,4.99,Leger
-president,WA,2016-10-20,47.4,31.7,2.24,YouGov
-president,WA,2016-11-04,51.0,33.0,2.63,SurveyMonkey
-president,WI,2016-09-17,41.0,38.0,3.84,Marquette University Law School
-president,WI,2016-09-19,44.5,38.4,3.78,Emerson College
-president,WI,2016-09-15,41.12,41.09,4.36,Ipsos
-president,WI,2016-10-04,48.0,40.0,3.01,Gravis Marketing
-president,WI,2016-10-04,43.2,34.6,4.47,Loras College Public Opinion Survey Center
-president,WI,2016-09-29,45.72,42.28,3.82,Ipsos
-president,WI,2016-10-06,43.0,39.0,3.17,YouGov
-president,WI,2016-10-08,44.0,37.0,3.37,Marquette University Law School
-president,WI,2016-10-15,47.0,39.0,3.88,St. Norbert College Strategic Research Institute
-president,WI,2016-10-12,43.0,38.0,3.05,SurveyMonkey
-president,WI,2016-10-17,47.0,40.0,4.98,Monmouth University Polling Institute
-president,WI,2016-10-18,50.0,38.0,3.53,Public Policy Polling
-president,WI,2016-10-13,45.38,41.86,4.61,Ipsos
-president,WI,2016-10-19,48.0,43.0,4.08,McLaughlin & Associates
-president,WI,2016-10-21,46.0,41.0,2.36,Remington Research Group
-president,WI,2016-10-27,48.0,42.0,5,Emerson College
-president,WI,2016-10-30,46.0,42.0,2.92,Remington Research Group
-president,WI,2016-10-28,44.0,42.0,2.89,SurveyMonkey
-president,WI,2016-10-28,46.0,40.0,2.82,Marquette University Law School
-president,WI,2016-10-31,48.0,41.0,3.35,Public Policy Polling
-president,WI,2016-10-31,43.9,37.9,4.47,Loras College Public Opinion Survey Center
-president,WI,2016-11-01,49.0,41.0,1.92,Remington Research Group
-president,WI,2016-11-01,47.0,43.0,2.98,Clarity Campaign Labs
-president,WI,2016-10-30,45.92,39.99,4.0,Ipsos
-president,WI,2016-11-05,47.0,44.0,2.91,Gravis Marketing
-president,WI,2016-10-20,42.2,37.7,2.36,YouGov
-president,WI,2016-11-04,44.0,42.0,2.11,SurveyMonkey
-president,WV,2016-09-09,30.0,57.0,4.08,Just Win Strategies
-president,WV,2016-09-15,28.0,60.0,4.47,Garin-Hart-Yang Research Group
-president,WV,2016-09-19,33.12,52.74,5,Ipsos
-president,WV,2016-10-14,31.0,58.0,4.08,Global Strategy Group
-president,WV,2016-10-10,39.5,55.84,5,Ipsos
-president,WV,2016-10-28,27.0,58.0,5,SurveyMonkey
-president,WV,2016-10-30,34.22,58.04,5,Ipsos
-president,WV,2016-10-20,25.7,54.0,4.6,YouGov
-president,WV,2016-11-04,29.0,56.0,4.6,SurveyMonkey
-president,WY,2016-09-08,19.0,54.0,4.99,DFM Research
-president,WY,2016-10-08,20.0,58.0,3.72,University of Wyoming Survey & Analysis Center
-president,WY,2016-10-28,22.0,62.0,5,SurveyMonkey
-president,WY,2016-10-20,26.2,59.0,5,YouGov
-president,WY,2016-11-04,21.0,60.0,5,SurveyMonkey
-senate,LA,2016-11-16,35.26,58.33,2.13,Trafalgar Group
-senate,LA,2016-11-13,40.2,59.8,3.23,Lucid
-senate,LA,2016-11-29,33.0,51.0,5,Emerson College
-senate,LA,2016-11-29,38.0,52.0,4.47,Southern Media & Opinion Research
-senate,LA,2016-12-06,33.0,62.0,3.59,University of New Orleans Survey Research Center
-senate,LA,2016-12-05,39.77,55.88,2.0,Trafalgar Group
-president,N1,2016-09-25,29.0,53.0,3.78,Emerson College
-president,N2,2016-09-25,40.0,49.0,3.78,Emerson College
-president,N2,2016-10-23,40.0,44.0,5,North Star Opinion Research
-president,N3,2016-09-25,20.0,65.0,3.78,Emerson College
-president,M1,2016-09-16,40.5,29.8,4.77,Maine People's Resource Center
-president,M1,2016-09-17,50.0,28.0,5,University of New Hampshire Survey Center
-president,M1,2016-10-08,48.7,32.3,4.62,Maine People's Resource Center
-president,M1,2016-10-14,45.5,35.5,4.62,Maine People's Resource Center
-president,M1,2016-10-22,54.0,34.0,5,University of New Hampshire Survey Center
-president,M1,2016-10-25,44.9,33.4,4.83,Maine People's Resource Center
-president,M1,2016-10-29,48.8,42.5,5,Emerson College
-president,M2,2016-09-16,33.2,44.3,5,Maine People's Resource Center
-president,M2,2016-09-17,34.0,48.0,5,University of New Hampshire Survey Center
-president,M2,2016-09-21,40.0,44.0,5,"Normington, Petts & Associates"
-president,M2,2016-10-02,44.0,40.0,5,"Normington, Petts & Associates"
-president,M2,2016-10-08,38.8,40.4,4.86,Maine People's Resource Center
-president,M2,2016-10-10,39.0,39.0,3.28,Clarity Campaign Labs
-president,M2,2016-10-14,38.2,37.0,4.88,Maine People's Resource Center
-president,M2,2016-10-22,43.0,40.0,5,University of New Hampshire Survey Center
-president,M2,2016-10-25,38.0,41.4,5,Maine People's Resource Center
-president,M2,2016-10-29,43.6,42.2,5,Emerson College
+mode,state,date,dem,rep,pollster,sigma
+governor,IN,2016-10-12,50.0,38.0,Monmouth University Polling Institute,3
+governor,IN,2016-10-23,42.0,38.0,Gravis Marketing,3
+governor,IN,2016-10-29,48.0,42.0,Monmouth University Polling Institute,3
+governor,IN,2016-10-31,42.0,38.0,Gravis Marketing,3
+governor,MO,2016-09-12,49.0,41.0,Gravis Marketing,3
+governor,MO,2016-09-19,47.0,38.0,Remington Research Group,3
+governor,MO,2016-09-26,51.0,35.0,Remington Research Group,3
+governor,MO,2016-10-04,44.0,41.0,Remington Research Group,3
+governor,MO,2016-10-10,46.0,43.0,Monmouth University Polling Institute,3
+governor,MO,2016-10-10,48.0,42.0,Remington Research Group,3
+governor,MO,2016-10-24,47.0,45.0,Remington Research Group,3
+governor,MO,2016-10-25,46.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,MO,2016-10-30,46.0,46.0,Monmouth University Polling Institute,3
+governor,MO,2016-10-31,45.0,46.0,Remington Research Group,3
+governor,MO,2016-11-01,47.0,44.0,Public Policy Polling,3
+governor,MT,2016-10-11,47.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,NC,2016-09-11,43.0,45.0,National Research,3
+governor,NC,2016-09-18,50.0,42.0,The New York Times/Siena College,3
+governor,NC,2016-09-19,46.0,41.0,Public Policy Polling,3
+governor,NC,2016-09-19,43.0,46.0,Beacon Research/Shaw & Co. Research,3
+governor,NC,2016-09-27,45.0,42.0,Public Policy Polling,3
+governor,NC,2016-09-29,48.0,46.0,Quinnipiac University,3
+governor,NC,2016-10-01,50.0,44.0,Selzer & Co.,3
+governor,NC,2016-10-01,48.0,44.0,SurveyUSA,3
+governor,NC,2016-10-11,49.0,48.0,Marist College,3
+governor,NC,2016-10-12,49.0,48.0,Big Village,3
+governor,NC,2016-10-12,47.0,45.0,Ipsos,3
+governor,NC,2016-10-16,47.0,45.0,SurveyUSA,3
+governor,NC,2016-10-16,42.0,46.0,National Research,3
+governor,NC,2016-10-21,46.0,44.0,Public Policy Polling,3
+governor,NC,2016-10-22,47.0,48.0,Monmouth University Polling Institute,3
+governor,NC,2016-10-22,51.0,45.0,The New York Times/Siena College,3
+governor,NC,2016-10-23,49.0,47.0,Quinnipiac University,3
+governor,NC,2016-10-25,51.0,45.0,Marist College,3
+governor,NC,2016-10-27,46.0,44.0,YouGov,3
+governor,NC,2016-10-29,49.0,47.0,Quinnipiac University,3
+governor,NC,2016-10-30,48.0,47.0,SurveyUSA,3
+governor,NC,2016-11-05,47.0,46.0,The New York Times/Siena College,3
+governor,NC,2016-11-05,50.0,47.0,Quinnipiac University,3
+governor,NH,2016-09-19,43.0,49.0,Monmouth University Polling Institute,3
+governor,NH,2016-09-22,44.0,45.0,American Research Group,3
+governor,NH,2016-09-28,44.0,47.0,MassINC Polling Group,3
+governor,NH,2016-10-04,36.0,40.0,Suffolk University,3
+governor,NH,2016-10-09,39.0,41.0,University of Massachusetts Lowell Center for Public Opinion,3
+governor,NH,2016-10-11,47.0,44.0,MassINC Polling Group,3
+governor,NH,2016-10-14,44.0,38.0,University of New Hampshire Survey Center,3
+governor,NH,2016-10-19,44.0,43.0,YouGov,3
+governor,NH,2016-10-22,47.0,46.0,Marist College,3
+governor,NH,2016-10-24,48.0,43.0,Monmouth University Polling Institute,3
+governor,NH,2016-10-28,42.0,41.0,University of New Hampshire Survey Center,3
+governor,NH,2016-10-30,43.0,47.0,University of Massachusetts Lowell Center for Public Opinion,3
+governor,NH,2016-10-31,47.0,44.0,Public Policy Polling,3
+governor,NH,2016-10-31,44.0,49.0,MassINC Polling Group,3
+governor,NH,2016-11-01,46.0,38.0,University of New Hampshire Survey Center,3
+governor,NH,2016-11-01,44.0,48.0,American Research Group,3
+governor,NH,2016-11-01,37.0,41.0,Suffolk University,3
+governor,NH,2016-11-05,48.0,37.0,University of New Hampshire Survey Center,3
+governor,OR,2016-10-10,46.0,33.0,DHM Research,3
+governor,OR,2016-10-11,46.0,42.0,SurveyUSA,3
+governor,OR,2016-10-27,42.0,33.0,DHM Research,3
+governor,UT,2016-10-11,30.0,63.0,Monmouth University Polling Institute,3
+governor,UT,2016-10-15,25.0,64.0,Dan Jones & Associates,3
+governor,UT,2016-11-01,30.0,63.0,Monmouth University Polling Institute,3
+governor,WA,2016-10-10,51.0,45.0,YouGov,3
+governor,WA,2016-10-21,51.0,39.0,Elway Research,3
+governor,WA,2016-11-01,50.0,43.0,SurveyUSA,3
+governor,WA,2016-11-05,49.0,40.0,Leger,3
+president,AK,2016-09-14,31.0,39.0,Moore Information Group,3
+president,AK,2016-09-30,30.6,36.1,Alaska Survey Research,3
+president,AK,2016-10-05,34.0,37.0,Moore Information Group,3
+president,AK,2016-10-20,37.4,37.7,YouGov,3
+president,AK,2016-11-05,41.0,44.0,Gravis Marketing,3
+president,AL,2016-09-22,37.02,55.52,Ipsos,3
+president,AL,2016-10-10,38.4,52.39,Ipsos,3
+president,AL,2016-10-20,31.6,52.6,YouGov,3
+president,AL,2016-10-30,38.06,54.15,Ipsos,3
+president,AR,2016-09-11,29.0,57.0,Emerson College,3
+president,AR,2016-09-12,41.08,49.15,Ipsos,3
+president,AR,2016-10-03,35.6,52.44,Ipsos,3
+president,AR,2016-10-20,30.5,48.0,YouGov,3
+president,AR,2016-10-27,38.14,53.35,Ipsos,3
+president,AZ,2016-09-13,33.0,37.0,Leger,3
+president,AZ,2016-09-15,41.65,47.86,Ipsos,3
+president,AZ,2016-09-29,42.0,42.0,Noble Predictive Insights,3
+president,AZ,2016-09-29,42.22,49.06,Ipsos,3
+president,AZ,2016-10-03,44.0,42.0,Emerson College,3
+president,AZ,2016-10-10,38.92,44.56,Ipsos,3
+president,AZ,2016-10-17,42.59,44.59,Ipsos,3
+president,AZ,2016-10-20,37.8,46.3,YouGov,3
+president,AZ,2016-10-23,45.0,46.0,Monmouth University Polling Institute,3
+president,AZ,2016-10-27,42.0,44.0,YouGov,3
+president,AZ,2016-10-29,44.0,49.0,Big Village,3
+president,AZ,2016-10-30,43.0,47.0,Emerson College,3
+president,AZ,2016-10-30,42.38,47.1,Ipsos,3
+president,AZ,2016-10-31,40.0,45.0,Marist College,3
+president,AZ,2016-11-05,45.0,47.0,Leger,3
+president,AZ,2016-11-05,43.0,45.0,Gravis Marketing,3
+president,CA,2016-09-10,57.0,32.0,SurveyUSA,3
+president,CA,2016-09-10,50.0,33.0,YouGov,3
+president,CA,2016-09-12,62.5,24.22,Ipsos,3
+president,CA,2016-09-13,57.0,30.0,Leger,3
+president,CA,2016-09-13,47.0,31.0,Public Policy Institute of California,3
+president,CA,2016-09-19,60.01,28.38,Ipsos,3
+president,CA,2016-09-26,63.67,23.74,Ipsos,3
+president,CA,2016-09-27,59.0,33.0,SurveyUSA,3
+president,CA,2016-10-03,61.26,27.86,Ipsos,3
+president,CA,2016-10-09,54.0,30.0,YouGov,3
+president,CA,2016-10-10,65.89,22.37,Ipsos,3
+president,CA,2016-10-14,56.0,30.0,SurveyUSA,3
+president,CA,2016-10-17,63.82,25.62,Ipsos,3
+president,CA,2016-10-18,54.0,28.0,Public Policy Institute of California,3
+president,CA,2016-10-20,51.8,30.4,YouGov,3
+president,CA,2016-10-24,65.14,26.16,Ipsos,3
+president,CA,2016-10-28,53.0,33.0,YouGov,3
+president,CA,2016-10-30,56.0,35.0,SurveyUSA,3
+president,CA,2016-11-03,58.85,31.74,Ipsos,3
+president,CA,2016-11-05,58.0,35.0,Leger,3
+president,CO,2016-09-11,38.0,42.0,Emerson College,3
+president,CO,2016-09-15,42.05,43.82,Ipsos,3
+president,CO,2016-09-16,41.0,34.0,Franklin & Marshall College Center for Opinion Research,3
+president,CO,2016-09-17,44.0,42.0,Quinnipiac University,3
+president,CO,2016-09-22,37.0,41.0,Gravis Marketing,3
+president,CO,2016-09-22,40.0,39.0,YouGov,3
+president,CO,2016-09-22,41.0,42.0,Big Village,3
+president,CO,2016-09-27,46.0,40.0,Public Policy Polling,3
+president,CO,2016-09-29,44.77,44.86,Ipsos,3
+president,CO,2016-10-01,49.0,38.0,Monmouth University Polling Institute,3
+president,CO,2016-10-03,40.0,40.0,Gravis Marketing,3
+president,CO,2016-10-12,44.0,39.0,Gravis Marketing,3
+president,CO,2016-10-12,40.0,35.0,Magellan Strategies,3
+president,CO,2016-10-13,45.0,37.0,Quinnipiac University,3
+president,CO,2016-10-13,45.01,41.24,Ipsos,3
+president,CO,2016-10-20,42.1,36.9,YouGov,3
+president,CO,2016-10-21,45.0,43.0,Remington Research Group,3
+president,CO,2016-10-27,42.0,39.0,YouGov,3
+president,CO,2016-10-30,45.0,44.0,Remington Research Group,3
+president,CO,2016-10-30,39.0,39.0,Ciruli Associates,3
+president,CO,2016-10-30,44.0,41.0,Emerson College,3
+president,CO,2016-10-30,47.71,42.33,Ipsos,3
+president,CO,2016-11-01,44.1,37.6,Magellan Strategies,3
+president,CO,2016-11-01,40.0,40.0,Gravis Marketing,3
+president,CO,2016-11-01,42.0,41.0,Remington Research Group,3
+president,CO,2016-11-03,48.0,43.0,Public Policy Polling,3
+president,CO,2016-11-05,44.0,43.0,Gravis Marketing,3
+president,CT,2016-09-19,52.01,34.09,Ipsos,3
+president,CT,2016-10-10,52.56,34.83,Ipsos,3
+president,CT,2016-10-20,46.6,35.8,YouGov,3
+president,CT,2016-10-30,49.76,39.7,Ipsos,3
+president,DC,2016-10-20,79.8,6.8,YouGov,3
+president,DE,2016-09-19,43.16,35.28,Ipsos,3
+president,DE,2016-10-10,47.83,33.89,Ipsos,3
+president,DE,2016-10-20,50.7,31.6,YouGov,3
+president,DE,2016-10-30,52.03,36.42,Ipsos,3
+president,FL,2016-09-09,44.0,47.0,Big Village,3
+president,FL,2016-09-12,41.0,40.0,The New York Times/Siena College,3
+president,FL,2016-09-12,46.33,49.84,Ipsos,3
+president,FL,2016-09-18,46.0,41.0,Monmouth University Polling Institute,3
+president,FL,2016-09-19,49.08,45.16,Ipsos,3
+president,FL,2016-09-20,44.0,45.0,Suffolk University,3
+president,FL,2016-09-26,47.55,46.4,Ipsos,3
+president,FL,2016-09-27,45.0,43.0,Public Policy Polling,3
+president,FL,2016-09-28,46.0,42.0,Mason-Dixon Polling & Strategy,3
+president,FL,2016-09-29,46.0,41.0,Quinnipiac University,3
+president,FL,2016-10-03,44.0,45.0,Emerson College,3
+president,FL,2016-10-03,48.55,43.74,Ipsos,3
+president,FL,2016-10-04,47.0,45.0,Gravis Marketing,3
+president,FL,2016-10-04,45.0,42.0,Marist College,3
+president,FL,2016-10-04,44.0,41.0,The Tyson Group,3
+president,FL,2016-10-10,47.57,41.81,Ipsos,3
+president,FL,2016-10-12,46.0,42.0,Public Policy Polling,3
+president,FL,2016-10-12,46.0,42.0,Gravis Marketing,3
+president,FL,2016-10-13,48.0,44.0,Quinnipiac University,3
+president,FL,2016-10-17,48.01,44.38,Ipsos,3
+president,FL,2016-10-19,44.0,41.0,The Tyson Group,3
+president,FL,2016-10-20,46.0,43.0,YouGov,3
+president,FL,2016-10-20,44.0,42.9,YouGov,3
+president,FL,2016-10-21,46.0,46.0,Remington Research Group,3
+president,FL,2016-10-22,48.0,45.0,SurveyUSA,3
+president,FL,2016-10-23,43.0,45.0,Selzer & Co.,3
+president,FL,2016-10-24,48.51,44.61,Ipsos,3
+president,FL,2016-10-25,48.0,44.0,Public Policy Polling,3
+president,FL,2016-10-25,48.0,47.0,Gravis Marketing,3
+president,FL,2016-10-25,45.0,44.0,Marist College,3
+president,FL,2016-10-26,46.0,45.0,Emerson College,3
+president,FL,2016-10-26,42.0,46.0,The New York Times/Siena College,3
+president,FL,2016-10-29,49.0,47.0,Big Village,3
+president,FL,2016-10-29,46.0,45.0,Quinnipiac University,3
+president,FL,2016-10-30,44.0,48.0,Remington Research Group,3
+president,FL,2016-10-31,49.0,46.0,Gravis Marketing,3
+president,FL,2016-11-01,45.0,48.0,Remington Research Group,3
+president,FL,2016-11-01,46.0,45.0,Gravis Marketing,3
+president,FL,2016-11-03,45.0,45.0,YouGov,3
+president,FL,2016-11-03,47.66,46.77,Ipsos,3
+president,FL,2016-11-05,46.0,45.0,Quinnipiac University,3
+president,GA,2016-09-11,39.0,45.0,Emerson College,3
+president,GA,2016-09-15,42.71,46.04,Ipsos,3
+president,GA,2016-09-17,42.0,45.0,Monmouth University Polling Institute,3
+president,GA,2016-09-17,40.0,47.0,Quinnipiac University,3
+president,GA,2016-09-21,38.0,44.0,JMC Analytics,3
+president,GA,2016-09-26,38.11,50.98,Ipsos,3
+president,GA,2016-10-06,41.51,50.04,Ipsos,3
+president,GA,2016-10-11,42.3,47.8,Landmark Communications,3
+president,GA,2016-10-20,43.0,47.0,Landmark Communications,3
+president,GA,2016-10-20,43.11,47.84,Ipsos,3
+president,GA,2016-10-20,40.5,45.4,YouGov,3
+president,GA,2016-10-23,43.0,44.0,Quinnipiac University,3
+president,GA,2016-10-26,42.0,49.0,SurveyUSA,3
+president,GA,2016-10-30,42.0,51.0,Emerson College,3
+president,GA,2016-10-31,44.0,45.0,Marist College,3
+president,GA,2016-11-03,42.38,47.79,Ipsos,3
+president,GA,2016-11-04,43.0,49.0,YouGov,3
+president,GA,2016-11-05,44.0,48.0,Gravis Marketing,3
+president,HI,2016-10-20,50.3,27.9,YouGov,3
+president,HI,2016-10-30,47.31,28.75,Ipsos,3
+president,IA,2016-09-12,40.51,50.74,Ipsos,3
+president,IA,2016-09-13,37.0,45.0,Monmouth University Polling Institute,3
+president,IA,2016-09-17,37.0,44.0,Quinnipiac University,3
+president,IA,2016-10-03,44.74,44.49,Ipsos,3
+president,IA,2016-10-05,39.0,43.0,Selzer & Co.,3
+president,IA,2016-10-20,40.4,37.3,YouGov,3
+president,IA,2016-10-23,44.0,44.0,Quinnipiac University,3
+president,IA,2016-10-27,44.07,43.87,Ipsos,3
+president,IA,2016-11-02,41.3,44.0,Emerson College,3
+president,IA,2016-11-03,39.0,46.0,Selzer & Co.,3
+president,ID,2016-09-19,27.39,59.62,Ipsos,3
+president,ID,2016-10-04,30.0,40.0,Dan Jones & Associates,3
+president,ID,2016-10-10,35.13,50.7,Ipsos,3
+president,ID,2016-10-20,25.3,44.8,YouGov,3
+president,ID,2016-10-22,23.3,52.3,Emerson College,3
+president,ID,2016-10-30,30.06,53.26,Ipsos,3
+president,IL,2016-09-12,51.24,32.71,We Ask America,3
+president,IL,2016-09-12,51.5,36.18,Ipsos,3
+president,IL,2016-09-19,53.43,30.81,Ipsos,3
+president,IL,2016-09-20,44.5,38.7,Emerson College,3
+president,IL,2016-09-26,52.71,33.37,Ipsos,3
+president,IL,2016-10-03,57.49,31.29,Ipsos,3
+president,IL,2016-10-10,60.31,27.44,Ipsos,3
+president,IL,2016-10-17,57.33,27.64,Ipsos,3
+president,IL,2016-10-20,48.3,33.1,YouGov,3
+president,IL,2016-10-24,55.55,34.57,Ipsos,3
+president,IL,2016-10-29,53.0,41.0,Emerson College,3
+president,IL,2016-11-03,51.3,39.08,Ipsos,3
+president,IN,2016-09-08,33.33,53.13,Ipsos,3
+president,IN,2016-09-22,35.88,53.16,Ipsos,3
+president,IN,2016-10-06,38.27,47.14,Ipsos,3
+president,IN,2016-10-12,41.0,45.0,Monmouth University Polling Institute,3
+president,IN,2016-10-20,38.9,53.54,Ipsos,3
+president,IN,2016-10-20,36.6,43.8,YouGov,3
+president,IN,2016-10-23,38.0,49.0,Gravis Marketing,3
+president,IN,2016-10-29,39.0,50.0,Monmouth University Polling Institute,3
+president,IN,2016-10-31,39.0,49.0,Gravis Marketing,3
+president,IN,2016-11-03,37.79,53.68,Ipsos,3
+president,KS,2016-09-08,36.0,48.0,SurveyUSA,3
+president,KS,2016-09-12,35.91,50.8,Ipsos,3
+president,KS,2016-10-03,37.9,50.27,Ipsos,3
+president,KS,2016-10-13,36.0,47.0,SurveyUSA,3
+president,KS,2016-10-20,31.6,47.5,YouGov,3
+president,KS,2016-10-27,38.22,54.45,Ipsos,3
+president,KS,2016-10-28,38.0,49.0,SurveyUSA,3
+president,KY,2016-09-22,37.76,56.38,Ipsos,3
+president,KY,2016-10-10,41.04,51.6,Ipsos,3
+president,KY,2016-10-20,32.2,52.2,YouGov,3
+president,KY,2016-10-27,32.0,56.0,Cygnal,3
+president,KY,2016-10-30,37.64,58.29,Ipsos,3
+president,LA,2016-09-12,35.79,51.87,Ipsos,3
+president,LA,2016-09-23,35.0,45.0,JMC Analytics,3
+president,LA,2016-09-29,35.0,52.0,Market Research Insight,3
+president,LA,2016-10-03,35.98,49.16,Ipsos,3
+president,LA,2016-10-13,38.0,45.0,JMC Analytics,3
+president,LA,2016-10-18,34.0,54.0,Mason-Dixon Polling & Strategy,3
+president,LA,2016-10-18,36.0,43.0,Market Research Insight,3
+president,LA,2016-10-20,35.9,47.3,YouGov,3
+president,LA,2016-10-27,36.12,51.56,Ipsos,3
+president,MA,2016-09-08,53.07,31.09,Ipsos,3
+president,MA,2016-09-09,54.0,28.0,MassINC Polling Group,3
+president,MA,2016-09-17,47.0,34.0,YouGov,3
+president,MA,2016-09-22,50.12,28.38,Ipsos,3
+president,MA,2016-10-06,54.07,28.57,Ipsos,3
+president,MA,2016-10-15,54.0,28.0,MassINC Polling Group,3
+president,MA,2016-10-20,56.14,26.81,Ipsos,3
+president,MA,2016-10-20,51.3,28.6,YouGov,3
+president,MA,2016-10-25,57.0,25.0,Suffolk University,3
+president,MA,2016-11-03,53.14,35.79,Ipsos,3
+president,MD,2016-09-15,50.27,33.88,Ipsos,3
+president,MD,2016-09-29,53.07,31.74,Ipsos,3
+president,MD,2016-10-13,53.03,28.62,Ipsos,3
+president,MD,2016-10-20,55.0,29.2,YouGov,3
+president,MD,2016-10-30,55.69,33.6,Ipsos,3
+president,ME,2016-09-16,37.0,36.7,Maine People's Resource Center,3
+president,ME,2016-09-17,40.0,36.0,University of New Hampshire Survey Center,3
+president,ME,2016-09-19,45.01,33.56,Ipsos,3
+president,ME,2016-10-08,44.0,36.1,Maine People's Resource Center,3
+president,ME,2016-10-10,47.76,38.69,Ipsos,3
+president,ME,2016-10-14,42.0,36.0,Maine People's Resource Center,3
+president,ME,2016-10-20,38.7,34.0,YouGov,3
+president,ME,2016-10-22,48.0,37.0,University of New Hampshire Survey Center,3
+president,ME,2016-10-25,42.0,37.0,Maine People's Resource Center,3
+president,ME,2016-10-29,46.0,42.0,Emerson College,3
+president,ME,2016-10-30,42.33,35.08,Ipsos,3
+president,MI,2016-09-12,38.0,35.0,EPIC-MRA,3
+president,MI,2016-09-15,42.97,41.67,Ipsos,3
+president,MI,2016-09-26,39.35,39.05,Ipsos,3
+president,MI,2016-09-27,46.0,41.0,Mitchell Research & Communications,3
+president,MI,2016-09-27,42.0,35.0,Glengariff Group,3
+president,MI,2016-10-02,43.0,32.0,EPIC-MRA,3
+president,MI,2016-10-03,44.75,38.18,Ipsos,3
+president,MI,2016-10-10,42.2,30.6,Glengariff Group,3
+president,MI,2016-10-10,43.78,37.33,Ipsos,3
+president,MI,2016-10-11,47.0,37.0,Mitchell Research & Communications,3
+president,MI,2016-10-17,45.18,40.82,Ipsos,3
+president,MI,2016-10-18,51.0,38.0,Mitchell Research & Communications,3
+president,MI,2016-10-20,42.0,36.0,YouGov,3
+president,MI,2016-10-23,49.0,41.0,Mitchell Research & Communications,3
+president,MI,2016-10-23,41.0,34.0,EPIC-MRA,3
+president,MI,2016-10-24,41.34,37.11,Ipsos,3
+president,MI,2016-10-25,48.0,42.0,Mitchell Research & Communications,3
+president,MI,2016-10-25,50.0,43.0,Emerson College,3
+president,MI,2016-10-30,47.0,41.0,Mitchell Research & Communications,3
+president,MI,2016-10-31,50.0,43.0,Mitchell Research & Communications,3
+president,MI,2016-11-01,47.0,44.0,Mitchell Research & Communications,3
+president,MI,2016-11-02,47.0,44.0,Mitchell Research & Communications,3
+president,MI,2016-11-02,42.0,38.0,EPIC-MRA,3
+president,MI,2016-11-03,46.0,41.0,Mitchell Research & Communications,3
+president,MI,2016-11-03,46.0,41.0,Public Policy Polling,3
+president,MI,2016-11-03,46.0,41.0,Gravis Marketing,3
+president,MI,2016-11-03,45.95,44.53,Ipsos,3
+president,MI,2016-11-06,47.0,41.0,Mitchell Research & Communications,3
+president,MN,2016-09-13,44.0,38.0,Mason-Dixon Polling & Strategy,3
+president,MN,2016-09-15,42.86,35.94,Ipsos,3
+president,MN,2016-09-18,46.0,39.0,SurveyUSA,3
+president,MN,2016-09-23,43.0,43.0,Gravis Marketing,3
+president,MN,2016-09-29,42.03,37.57,Ipsos,3
+president,MN,2016-10-13,44.14,32.36,Ipsos,3
+president,MN,2016-10-20,42.3,35.9,YouGov,3
+president,MN,2016-10-21,47.0,39.0,Mason-Dixon Polling & Strategy,3
+president,MN,2016-10-24,49.0,39.0,SurveyUSA,3
+president,MN,2016-10-30,43.9,36.0,Ipsos,3
+president,MO,2016-09-11,34.0,47.0,Emerson College,3
+president,MO,2016-09-15,35.23,50.79,Ipsos,3
+president,MO,2016-09-22,37.0,46.0,YouGov,3
+president,MO,2016-09-26,39.0,49.0,Remington Research Group,3
+president,MO,2016-09-29,37.05,48.7,Ipsos,3
+president,MO,2016-10-10,41.0,46.0,Monmouth University Polling Institute,3
+president,MO,2016-10-10,42.0,47.0,Remington Research Group,3
+president,MO,2016-10-13,37.03,48.14,Ipsos,3
+president,MO,2016-10-18,39.0,47.0,Emerson College,3
+president,MO,2016-10-20,35.8,43.3,YouGov,3
+president,MO,2016-10-24,39.0,50.0,Remington Research Group,3
+president,MO,2016-10-25,42.0,47.0,Mason-Dixon Polling & Strategy,3
+president,MO,2016-10-30,38.0,52.0,Monmouth University Polling Institute,3
+president,MO,2016-10-30,37.0,52.0,Emerson College,3
+president,MO,2016-10-30,39.73,48.01,Ipsos,3
+president,MO,2016-10-31,37.0,50.0,Public Policy Polling,3
+president,MO,2016-10-31,39.0,52.0,Remington Research Group,3
+president,MO,2016-11-01,37.0,50.0,Public Policy Polling,3
+president,MO,2016-11-04,40.5,46.5,Emerson College,3
+president,MS,2016-09-19,38.2,49.22,Ipsos,3
+president,MS,2016-10-10,37.3,52.08,Ipsos,3
+president,MS,2016-10-20,39.5,45.5,YouGov,3
+president,MS,2016-10-30,35.93,53.09,Ipsos,3
+president,MT,2016-09-19,39.76,53.47,Ipsos,3
+president,MT,2016-10-10,31.74,50.8,Ipsos,3
+president,MT,2016-10-11,36.0,46.0,Mason-Dixon Polling & Strategy,3
+president,MT,2016-10-20,31.7,44.1,YouGov,3
+president,MT,2016-10-30,34.75,53.66,Ipsos,3
+president,NC,2016-09-08,46.37,43.72,Ipsos,3
+president,NC,2016-09-11,42.0,42.0,National Research,3
+president,NC,2016-09-18,41.0,41.0,The New York Times/Siena College,3
+president,NC,2016-09-19,43.0,45.0,Public Policy Polling,3
+president,NC,2016-09-19,40.0,45.0,Beacon Research/Shaw & Co. Research,3
+president,NC,2016-09-22,48.07,43.58,Ipsos,3
+president,NC,2016-09-23,44.0,43.0,Gravis Marketing,3
+president,NC,2016-09-27,44.0,42.0,Public Policy Polling,3
+president,NC,2016-09-29,46.0,43.0,Quinnipiac University,3
+president,NC,2016-10-01,44.0,43.0,Selzer & Co.,3
+president,NC,2016-10-01,46.0,44.0,SurveyUSA,3
+president,NC,2016-10-03,44.16,43.09,Ipsos,3
+president,NC,2016-10-10,46.33,42.42,Ipsos,3
+president,NC,2016-10-11,44.8,43.4,Suffolk University,3
+president,NC,2016-10-11,45.0,41.0,Marist College,3
+president,NC,2016-10-11,46.0,42.0,Emerson College,3
+president,NC,2016-10-12,48.0,47.0,Big Village,3
+president,NC,2016-10-16,46.0,44.0,SurveyUSA,3
+president,NC,2016-10-16,44.0,42.0,National Research,3
+president,NC,2016-10-20,47.99,43.77,Ipsos,3
+president,NC,2016-10-20,43.5,41.3,YouGov,3
+president,NC,2016-10-21,47.0,44.0,Public Policy Polling,3
+president,NC,2016-10-21,44.0,47.0,Remington Research Group,3
+president,NC,2016-10-22,47.0,46.0,Monmouth University Polling Institute,3
+president,NC,2016-10-22,46.0,39.0,The New York Times/Siena College,3
+president,NC,2016-10-23,47.0,43.0,Quinnipiac University,3
+president,NC,2016-10-25,49.0,47.0,Gravis Marketing,3
+president,NC,2016-10-25,47.0,41.0,Marist College,3
+president,NC,2016-10-26,48.0,45.0,Emerson College,3
+president,NC,2016-10-27,48.0,45.0,YouGov,3
+president,NC,2016-10-29,47.0,44.0,Quinnipiac University,3
+president,NC,2016-10-30,45.0,47.0,Remington Research Group,3
+president,NC,2016-10-30,44.0,51.0,SurveyUSA,3
+president,NC,2016-10-31,49.0,47.0,Public Policy Polling,3
+president,NC,2016-11-01,45.0,48.0,Remington Research Group,3
+president,NC,2016-11-03,46.0,45.0,Gravis Marketing,3
+president,NC,2016-11-03,46.0,46.9,Ipsos,3
+president,NC,2016-11-05,44.0,44.0,The New York Times/Siena College,3
+president,NC,2016-11-05,47.0,45.0,Quinnipiac University,3
+president,ND,2016-10-03,34.67,44.9,Ipsos,3
+president,ND,2016-10-20,32.3,44.8,YouGov,3
+president,ND,2016-10-30,26.18,49.74,Ipsos,3
+president,NE,2016-09-19,32.71,51.19,Ipsos,3
+president,NE,2016-09-25,29.3,55.7,Emerson College,3
+president,NE,2016-10-10,34.73,46.81,Ipsos,3
+president,NE,2016-10-20,32.3,44.9,YouGov,3
+president,NE,2016-10-30,31.62,53.27,Ipsos,3
+president,NH,2016-09-19,47.0,38.0,Monmouth University Polling Institute,3
+president,NH,2016-09-19,47.21,41.25,Ipsos,3
+president,NH,2016-09-22,46.0,42.0,American Research Group,3
+president,NH,2016-09-28,42.0,35.0,MassINC Polling Group,3
+president,NH,2016-10-04,44.0,42.0,Suffolk University,3
+president,NH,2016-10-08,48.0,37.0,Public Policy Polling,3
+president,NH,2016-10-09,45.0,39.0,University of Massachusetts Lowell Center for Public Opinion,3
+president,NH,2016-10-10,45.11,39.21,Ipsos,3
+president,NH,2016-10-11,41.0,38.0,MassINC Polling Group,3
+president,NH,2016-10-14,49.0,34.0,University of New Hampshire Survey Center,3
+president,NH,2016-10-18,44.0,36.0,Emerson College,3
+president,NH,2016-10-19,43.0,38.0,YouGov,3
+president,NH,2016-10-20,43.0,34.4,YouGov,3
+president,NH,2016-10-22,45.0,36.0,Marist College,3
+president,NH,2016-10-24,46.0,43.0,Emerson College,3
+president,NH,2016-10-24,46.0,42.0,Monmouth University Polling Institute,3
+president,NH,2016-10-28,46.0,38.0,University of New Hampshire Survey Center,3
+president,NH,2016-10-30,44.0,44.0,University of Massachusetts Lowell Center for Public Opinion,3
+president,NH,2016-10-30,44.42,41.81,Ipsos,3
+president,NH,2016-10-31,48.0,43.0,Public Policy Polling,3
+president,NH,2016-10-31,39.0,40.0,MassINC Polling Group,3
+president,NH,2016-11-01,47.0,40.0,University of New Hampshire Survey Center,3
+president,NH,2016-11-01,41.0,43.0,Gravis Marketing,3
+president,NH,2016-11-01,43.0,48.0,American Research Group,3
+president,NH,2016-11-01,41.8,42.2,Suffolk University,3
+president,NH,2016-11-04,45.4,43.8,Emerson College,3
+president,NH,2016-11-05,49.0,38.0,University of New Hampshire Survey Center,3
+president,NJ,2016-09-15,50.49,32.22,Ipsos,3
+president,NJ,2016-09-26,46.68,34.18,Ipsos,3
+president,NJ,2016-09-26,46.2,39.8,Stockton University William J. Hughes Center for Public Policy,3
+president,NJ,2016-10-06,49.93,32.23,Ipsos,3
+president,NJ,2016-10-14,49.0,35.0,Fairleigh Dickinson University,3
+president,NJ,2016-10-20,50.95,34.25,Ipsos,3
+president,NJ,2016-10-20,47.7,35.7,YouGov,3
+president,NJ,2016-10-30,51.0,40.0,Stockton University William J. Hughes Center for Public Policy,3
+president,NJ,2016-11-03,47.78,37.86,Ipsos,3
+president,NM,2016-09-19,48.94,39.69,Ipsos,3
+president,NM,2016-09-28,35.0,31.0,Research & Polling Inc.,3
+president,NM,2016-09-30,46.0,33.0,SurveyUSA,3
+president,NM,2016-10-10,51.28,35.11,Ipsos,3
+president,NM,2016-10-20,41.7,34.6,YouGov,3
+president,NM,2016-10-30,40.94,38.34,Ipsos,3
+president,NM,2016-11-01,45.0,37.0,Gravis Marketing,3
+president,NM,2016-11-02,45.0,40.0,Research & Polling Inc.,3
+president,NV,2016-09-12,42.0,44.0,Monmouth University Polling Institute,3
+president,NV,2016-09-12,45.03,45.02,Ipsos,3
+president,NV,2016-09-13,40.0,42.0,Leger,3
+president,NV,2016-09-19,40.0,43.0,Beacon Research/Shaw & Co. Research,3
+president,NV,2016-09-28,44.2,38.2,Suffolk University,3
+president,NV,2016-10-03,43.0,43.0,Emerson College,3
+president,NV,2016-10-03,40.77,38.73,Ipsos,3
+president,NV,2016-10-10,47.0,43.0,Public Policy Polling,3
+president,NV,2016-10-12,43.0,41.0,JMC Analytics,3
+president,NV,2016-10-12,46.0,44.0,Big Village,3
+president,NV,2016-10-13,46.0,40.0,YouGov,3
+president,NV,2016-10-16,47.0,40.0,Monmouth University Polling Institute,3
+president,NV,2016-10-20,42.5,40.9,YouGov,3
+president,NV,2016-10-21,44.0,47.0,Remington Research Group,3
+president,NV,2016-10-22,43.0,43.0,Marist College,3
+president,NV,2016-10-25,46.0,46.0,Gravis Marketing,3
+president,NV,2016-10-26,44.0,42.0,Emerson College,3
+president,NV,2016-10-27,45.39,42.15,Ipsos,3
+president,NV,2016-10-29,43.0,49.0,Big Village,3
+president,NV,2016-10-30,44.0,48.0,Remington Research Group,3
+president,NV,2016-10-30,45.0,45.0,JMC Analytics,3
+president,NV,2016-10-31,48.0,45.0,Public Policy Polling,3
+president,NV,2016-11-01,45.0,46.0,Remington Research Group,3
+president,NV,2016-11-04,46.8,45.6,Emerson College,3
+president,NV,2016-11-05,42.0,42.0,Leger,3
+president,NV,2016-11-05,45.0,43.0,Gravis Marketing,3
+president,NY,2016-09-12,53.44,29.97,Ipsos,3
+president,NY,2016-09-13,51.0,30.0,Siena College,3
+president,NY,2016-09-19,52.85,34.06,Ipsos,3
+president,NY,2016-09-22,52.0,31.0,Marist College,3
+president,NY,2016-09-26,49.34,29.05,Ipsos,3
+president,NY,2016-10-03,54.76,31.07,Ipsos,3
+president,NY,2016-10-10,52.61,26.67,Ipsos,3
+president,NY,2016-10-15,54.0,30.0,Siena College,3
+president,NY,2016-10-17,53.73,30.1,Ipsos,3
+president,NY,2016-10-20,52.7,31.4,YouGov,3
+president,NY,2016-10-24,51.97,30.28,Ipsos,3
+president,NY,2016-11-03,51.0,34.0,Siena College,3
+president,NY,2016-11-03,51.49,33.0,Ipsos,3
+president,NY,2016-11-05,55.0,36.0,Gravis Marketing,3
+president,OH,2016-09-09,41.0,46.0,Big Village,3
+president,OH,2016-09-11,39.0,44.0,Selzer & Co.,3
+president,OH,2016-09-12,47.21,43.52,Ipsos,3
+president,OH,2016-09-13,39.0,42.0,Suffolk University,3
+president,OH,2016-09-19,37.0,42.0,Beacon Research/Shaw & Co. Research,3
+president,OH,2016-09-19,46.34,42.88,Ipsos,3
+president,OH,2016-09-22,42.0,43.0,Gravis Marketing,3
+president,OH,2016-09-26,44.36,42.81,Ipsos,3
+president,OH,2016-09-29,42.0,47.0,Quinnipiac University,3
+president,OH,2016-10-03,44.0,42.0,Monmouth University Polling Institute,3
+president,OH,2016-10-03,46.21,42.56,Ipsos,3
+president,OH,2016-10-05,44.0,43.0,Public Policy Polling,3
+president,OH,2016-10-06,46.0,42.0,YouGov,3
+president,OH,2016-10-11,41.0,42.0,Marist College,3
+president,OH,2016-10-11,45.0,43.0,Emerson College,3
+president,OH,2016-10-12,44.0,48.0,Big Village,3
+president,OH,2016-10-13,45.0,45.0,Quinnipiac University,3
+president,OH,2016-10-13,43.41,42.75,Ipsos,3
+president,OH,2016-10-18,45.0,45.0,Suffolk University,3
+president,OH,2016-10-20,43.2,41.5,YouGov,3
+president,OH,2016-10-21,42.0,46.0,Remington Research Group,3
+president,OH,2016-10-24,44.85,45.17,Ipsos,3
+president,OH,2016-10-26,45.0,45.0,Emerson College,3
+president,OH,2016-10-29,41.0,46.0,Quinnipiac University,3
+president,OH,2016-10-30,43.0,48.0,Remington Research Group,3
+president,OH,2016-11-01,44.0,45.0,Remington Research Group,3
+president,OH,2016-11-03,45.0,46.0,YouGov,3
+president,OH,2016-11-03,47.04,46.0,Ipsos,3
+president,OH,2016-11-04,38.9,45.6,Emerson College,3
+president,OH,2016-11-05,42.0,48.0,Gravis Marketing,3
+president,OK,2016-09-12,29.57,54.94,Ipsos,3
+president,OK,2016-10-03,36.0,51.26,Ipsos,3
+president,OK,2016-10-20,26.8,53.4,YouGov,3
+president,OK,2016-10-27,29.85,60.78,Ipsos,3
+president,OR,2016-09-22,48.42,37.65,Ipsos,3
+president,OR,2016-10-04,47.0,39.0,Gravis Marketing,3
+president,OR,2016-10-10,43.0,36.0,DHM Research,3
+president,OR,2016-10-10,46.28,37.24,Ipsos,3
+president,OR,2016-10-11,48.0,38.0,SurveyUSA,3
+president,OR,2016-10-20,43.8,36.0,YouGov,3
+president,OR,2016-10-27,41.0,34.0,DHM Research,3
+president,OR,2016-10-30,46.72,37.04,Ipsos,3
+president,OR,2016-11-05,44.0,40.0,Gravis Marketing,3
+president,PA,2016-09-12,46.11,43.81,Ipsos,3
+president,PA,2016-09-14,40.0,32.0,Muhlenberg College Institute of Public Opinion,3
+president,PA,2016-09-19,45.69,46.46,Ipsos,3
+president,PA,2016-09-21,40.0,38.0,Muhlenberg College Institute of Public Opinion,3
+president,PA,2016-09-22,45.0,44.0,Big Village,3
+president,PA,2016-09-23,46.0,43.0,Gravis Marketing,3
+president,PA,2016-09-26,45.23,42.35,Ipsos,3
+president,PA,2016-09-27,45.0,39.0,Public Policy Polling,3
+president,PA,2016-09-29,45.0,41.0,Quinnipiac University,3
+president,PA,2016-09-30,47.0,38.0,Franklin & Marshall College Center for Opinion Research,3
+president,PA,2016-10-02,50.0,40.0,Monmouth University Polling Institute,3
+president,PA,2016-10-03,49.34,42.79,Ipsos,3
+president,PA,2016-10-05,49.0,37.0,Marist College,3
+president,PA,2016-10-06,48.0,40.0,YouGov,3
+president,PA,2016-10-06,44.0,40.0,Susquehanna Polling & Research Inc.,3
+president,PA,2016-10-09,48.0,39.0,Selzer & Co.,3
+president,PA,2016-10-10,46.13,41.91,Ipsos,3
+president,PA,2016-10-13,47.0,41.0,Quinnipiac University,3
+president,PA,2016-10-17,49.13,38.7,Ipsos,3
+president,PA,2016-10-18,45.0,41.0,Emerson College,3
+president,PA,2016-10-20,42.7,41.2,YouGov,3
+president,PA,2016-10-21,45.0,42.0,Remington Research Group,3
+president,PA,2016-10-23,45.0,39.0,Muhlenberg College Institute of Public Opinion,3
+president,PA,2016-10-24,46.0,39.0,The New York Times/Siena College,3
+president,PA,2016-10-24,48.03,45.87,Ipsos,3
+president,PA,2016-10-25,48.0,43.0,Emerson College,3
+president,PA,2016-10-27,48.0,40.0,YouGov,3
+president,PA,2016-10-27,47.0,44.0,Gravis Marketing,3
+president,PA,2016-10-28,49.0,38.0,Franklin & Marshall College Center for Opinion Research,3
+president,PA,2016-10-29,48.0,44.0,Big Village,3
+president,PA,2016-10-29,48.0,43.0,Quinnipiac University,3
+president,PA,2016-10-30,45.0,43.0,Remington Research Group,3
+president,PA,2016-10-31,47.0,46.0,Gravis Marketing,3
+president,PA,2016-10-31,45.0,43.0,Susquehanna Polling & Research Inc.,3
+president,PA,2016-10-31,48.0,44.0,Public Policy Polling,3
+president,PA,2016-10-31,48.0,44.0,Monmouth University Polling Institute,3
+president,PA,2016-11-01,47.0,45.0,Gravis Marketing,3
+president,PA,2016-11-01,46.0,45.0,Remington Research Group,3
+president,PA,2016-11-01,44.0,40.0,Muhlenberg College Institute of Public Opinion,3
+president,PA,2016-11-03,48.2,45.19,Ipsos,3
+president,PA,2016-11-04,45.0,43.0,YouGov,3
+president,PA,2016-11-05,46.0,40.0,Gravis Marketing,3
+president,RI,2016-10-03,52.0,32.0,Emerson College,3
+president,RI,2016-10-20,47.0,29.2,YouGov,3
+president,SC,2016-09-22,44.41,49.0,Ipsos,3
+president,SC,2016-10-10,43.67,50.89,Ipsos,3
+president,SC,2016-10-20,35.6,46.6,YouGov,3
+president,SC,2016-10-30,43.61,49.43,Ipsos,3
+president,SC,2016-11-05,43.0,48.0,Gravis Marketing,3
+president,SD,2016-09-19,31.67,46.8,Ipsos,3
+president,SD,2016-10-10,32.76,49.64,Ipsos,3
+president,SD,2016-10-19,37.0,44.0,Mason-Dixon Polling & Strategy,3
+president,SD,2016-10-20,37.0,48.0,Remington Research Group,3
+president,SD,2016-10-20,31.3,49.6,YouGov,3
+president,SD,2016-10-30,29.45,52.16,Ipsos,3
+president,TN,2016-09-15,33.39,47.02,Ipsos,3
+president,TN,2016-09-25,33.0,44.0,SSRS,3
+president,TN,2016-09-29,33.86,48.57,Ipsos,3
+president,TN,2016-10-13,34.69,44.35,Ipsos,3
+president,TN,2016-10-20,33.9,48.3,YouGov,3
+president,TN,2016-10-30,36.33,49.76,Ipsos,3
+president,TX,2016-09-09,36.1,42.4,Emerson College,3
+president,TX,2016-09-12,28.51,51.13,Ipsos,3
+president,TX,2016-09-19,32.6,48.1,Ipsos,3
+president,TX,2016-09-26,32.9,48.31,Ipsos,3
+president,TX,2016-10-03,33.59,50.14,Ipsos,3
+president,TX,2016-10-10,31.57,57.0,Ipsos,3
+president,TX,2016-10-11,43.0,47.0,SurveyUSA,3
+president,TX,2016-10-17,39.04,52.23,Ipsos,3
+president,TX,2016-10-18,42.0,45.0,YouGov,3
+president,TX,2016-10-20,36.8,44.7,YouGov,3
+president,TX,2016-10-21,43.0,46.0,YouGov,3
+president,TX,2016-10-24,33.95,48.36,Ipsos,3
+president,TX,2016-10-31,40.0,49.0,Marist College,3
+president,TX,2016-11-01,34.5,49.2,Emerson College,3
+president,TX,2016-11-03,39.3,48.75,Ipsos,3
+president,UT,2016-09-12,31.24,47.96,Ipsos,3
+president,UT,2016-09-16,25.0,34.0,Dan Jones & Associates,3
+president,UT,2016-10-03,35.0,41.45,Ipsos,3
+president,UT,2016-10-11,28.0,34.0,Monmouth University Polling Institute,3
+president,UT,2016-10-13,20.0,37.0,YouGov,3
+president,UT,2016-10-15,25.0,30.0,Dan Jones & Associates,3
+president,UT,2016-10-18,24.4,27.0,Emerson College,3
+president,UT,2016-10-20,23.7,32.8,YouGov,3
+president,UT,2016-10-24,24.0,32.0,Dan Jones & Associates,3
+president,UT,2016-10-27,32.9,39.66,Ipsos,3
+president,UT,2016-10-30,29.0,35.0,Gravis Marketing,3
+president,UT,2016-11-01,19.6,39.8,Emerson College,3
+president,UT,2016-11-01,31.0,37.0,Monmouth University Polling Institute,3
+president,UT,2016-11-04,23.0,40.0,YouGov,3
+president,VA,2016-09-09,40.0,37.0,Princeton Survey Research Associates International,3
+president,VA,2016-09-10,45.0,39.0,Public Policy Polling,3
+president,VA,2016-09-12,47.35,37.51,Ipsos,3
+president,VA,2016-09-17,45.0,39.0,Quinnipiac University,3
+president,VA,2016-09-19,39.0,33.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VA,2016-09-22,45.0,37.0,YouGov,3
+president,VA,2016-09-22,48.26,40.35,Ipsos,3
+president,VA,2016-09-27,46.0,40.0,Public Policy Polling,3
+president,VA,2016-09-29,42.0,35.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VA,2016-10-06,49.22,38.8,Ipsos,3
+president,VA,2016-10-11,46.1,43.4,Emerson College,3
+president,VA,2016-10-13,44.0,29.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VA,2016-10-14,47.0,38.0,Tarrance Group,3
+president,VA,2016-10-18,45.0,33.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VA,2016-10-20,48.11,39.3,Ipsos,3
+president,VA,2016-10-20,46.1,37.0,YouGov,3
+president,VA,2016-10-21,48.0,43.0,Remington Research Group,3
+president,VA,2016-10-23,50.0,38.0,Quinnipiac University,3
+president,VA,2016-10-25,46.0,39.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VA,2016-10-29,49.0,45.0,Emerson College,3
+president,VA,2016-10-30,47.0,43.0,Remington Research Group,3
+president,VA,2016-11-01,46.0,44.0,Remington Research Group,3
+president,VA,2016-11-03,48.0,43.0,Public Policy Polling,3
+president,VA,2016-11-03,47.0,42.0,Gravis Marketing,3
+president,VA,2016-11-03,45.9,41.11,Ipsos,3
+president,VA,2016-11-03,48.0,42.0,Christopher Newport University Wason Center for Civic Leadership,3
+president,VT,2016-09-26,46.34,21.29,Ipsos,3
+president,VT,2016-10-20,40.5,24.5,YouGov,3
+president,VT,2016-10-30,48.27,23.4,Ipsos,3
+president,WA,2016-09-08,46.81,36.92,Ipsos,3
+president,WA,2016-09-13,38.0,28.0,Leger,3
+president,WA,2016-09-22,48.94,35.28,Ipsos,3
+president,WA,2016-09-26,44.2,38.4,Emerson College,3
+president,WA,2016-10-03,50.9,33.29,Ipsos,3
+president,WA,2016-10-10,53.0,39.0,YouGov,3
+president,WA,2016-10-13,46.14,42.36,Ipsos,3
+president,WA,2016-10-20,47.4,31.7,YouGov,3
+president,WA,2016-10-21,48.0,31.0,Elway Research,3
+president,WA,2016-10-30,46.72,38.48,Ipsos,3
+president,WA,2016-11-01,50.0,38.0,SurveyUSA,3
+president,WA,2016-11-05,51.0,36.0,Leger,3
+president,WI,2016-09-15,41.12,41.09,Ipsos,3
+president,WI,2016-09-17,41.0,38.0,Marquette University Law School,3
+president,WI,2016-09-19,44.5,38.4,Emerson College,3
+president,WI,2016-09-29,45.72,42.28,Ipsos,3
+president,WI,2016-10-04,48.0,40.0,Gravis Marketing,3
+president,WI,2016-10-06,43.0,39.0,YouGov,3
+president,WI,2016-10-08,44.0,37.0,Marquette University Law School,3
+president,WI,2016-10-13,45.38,41.86,Ipsos,3
+president,WI,2016-10-17,47.0,40.0,Monmouth University Polling Institute,3
+president,WI,2016-10-18,50.0,38.0,Public Policy Polling,3
+president,WI,2016-10-20,42.2,37.7,YouGov,3
+president,WI,2016-10-21,46.0,41.0,Remington Research Group,3
+president,WI,2016-10-27,48.0,42.0,Emerson College,3
+president,WI,2016-10-28,46.0,40.0,Marquette University Law School,3
+president,WI,2016-10-30,46.0,42.0,Remington Research Group,3
+president,WI,2016-10-30,45.92,39.99,Ipsos,3
+president,WI,2016-10-31,48.0,41.0,Public Policy Polling,3
+president,WI,2016-11-01,49.0,41.0,Remington Research Group,3
+president,WI,2016-11-05,47.0,44.0,Gravis Marketing,3
+president,WV,2016-09-19,33.12,52.74,Ipsos,3
+president,WV,2016-10-10,39.5,55.84,Ipsos,3
+president,WV,2016-10-20,25.7,54.0,YouGov,3
+president,WV,2016-10-30,34.22,58.04,Ipsos,3
+president,WY,2016-10-20,26.2,59.0,YouGov,3
+senate,AK,2016-09-14,15.0,48.0,Moore Information Group,3
+senate,AK,2016-09-30,12.3,50.0,Alaska Survey Research,3
+senate,AK,2016-10-05,9.0,49.0,Moore Information Group,3
+senate,AR,2016-09-11,30.0,44.0,Emerson College,3
+senate,AZ,2016-09-13,35.0,53.0,Leger,3
+senate,AZ,2016-10-03,36.2,51.6,Emerson College,3
+senate,AZ,2016-10-23,40.0,50.0,Monmouth University Polling Institute,3
+senate,AZ,2016-10-27,38.0,43.0,YouGov,3
+senate,AZ,2016-10-29,41.0,54.0,Big Village,3
+senate,AZ,2016-10-30,40.0,46.0,Emerson College,3
+senate,AZ,2016-10-31,39.0,55.0,Marist College,3
+senate,AZ,2016-11-05,42.0,50.0,Leger,3
+senate,CA,2016-09-10,44.0,27.0,SurveyUSA,3
+senate,CA,2016-09-10,42.0,20.0,YouGov,3
+senate,CA,2016-09-13,42.0,28.0,Leger,3
+senate,CA,2016-09-13,32.0,25.0,Public Policy Institute of California,3
+senate,CA,2016-09-27,40.0,29.0,SurveyUSA,3
+senate,CA,2016-10-09,41.0,22.0,YouGov,3
+senate,CA,2016-10-14,45.0,24.0,SurveyUSA,3
+senate,CA,2016-10-18,42.0,20.0,Public Policy Institute of California,3
+senate,CA,2016-10-28,47.0,23.0,YouGov,3
+senate,CA,2016-10-30,47.0,27.0,SurveyUSA,3
+senate,CA,2016-11-05,50.0,28.0,Leger,3
+senate,CO,2016-09-11,46.0,39.0,Emerson College,3
+senate,CO,2016-09-16,42.0,31.0,Franklin & Marshall College Center for Opinion Research,3
+senate,CO,2016-09-17,52.0,43.0,Quinnipiac University,3
+senate,CO,2016-09-22,43.0,45.0,Gravis Marketing,3
+senate,CO,2016-09-22,53.0,43.0,Big Village,3
+senate,CO,2016-09-27,44.0,34.0,Public Policy Polling,3
+senate,CO,2016-10-01,53.0,35.0,Monmouth University Polling Institute,3
+senate,CO,2016-10-03,47.0,39.0,Gravis Marketing,3
+senate,CO,2016-10-12,48.0,38.0,Gravis Marketing,3
+senate,CO,2016-10-12,47.0,32.0,Magellan Strategies,3
+senate,CO,2016-10-13,56.0,38.0,Quinnipiac University,3
+senate,CO,2016-10-27,46.0,41.0,YouGov,3
+senate,CO,2016-10-30,48.0,40.0,Ciruli Associates,3
+senate,CO,2016-10-30,47.0,42.0,Emerson College,3
+senate,CO,2016-11-01,47.0,44.0,Gravis Marketing,3
+senate,CO,2016-11-03,50.0,40.0,Public Policy Polling,3
+senate,FL,2016-09-09,43.0,54.0,Big Village,3
+senate,FL,2016-09-12,42.0,48.0,The New York Times/Siena College,3
+senate,FL,2016-09-18,45.0,47.0,Monmouth University Polling Institute,3
+senate,FL,2016-09-20,34.0,43.0,Suffolk University,3
+senate,FL,2016-09-27,35.0,42.0,Public Policy Polling,3
+senate,FL,2016-09-28,40.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,FL,2016-09-29,44.0,48.0,Quinnipiac University,3
+senate,FL,2016-10-03,39.2,46.7,Emerson College,3
+senate,FL,2016-10-04,40.0,44.0,Gravis Marketing,3
+senate,FL,2016-10-04,46.0,48.0,Marist College,3
+senate,FL,2016-10-04,41.0,49.0,The Tyson Group,3
+senate,FL,2016-10-12,38.0,44.0,Public Policy Polling,3
+senate,FL,2016-10-12,36.0,44.0,Gravis Marketing,3
+senate,FL,2016-10-13,47.0,49.0,Quinnipiac University,3
+senate,FL,2016-10-19,38.0,43.0,The Tyson Group,3
+senate,FL,2016-10-20,42.0,44.0,YouGov,3
+senate,FL,2016-10-22,41.0,45.0,SurveyUSA,3
+senate,FL,2016-10-23,41.0,51.0,Selzer & Co.,3
+senate,FL,2016-10-25,46.0,46.0,Public Policy Polling,3
+senate,FL,2016-10-25,46.0,46.0,Gravis Marketing,3
+senate,FL,2016-10-25,43.0,51.0,Marist College,3
+senate,FL,2016-10-26,47.0,49.0,Emerson College,3
+senate,FL,2016-10-26,42.0,51.0,The New York Times/Siena College,3
+senate,FL,2016-10-29,48.0,49.0,Big Village,3
+senate,FL,2016-10-29,44.0,50.0,Quinnipiac University,3
+senate,FL,2016-11-01,46.0,47.0,Gravis Marketing,3
+senate,FL,2016-11-03,44.0,47.0,YouGov,3
+senate,FL,2016-11-05,43.0,50.0,Quinnipiac University,3
+senate,GA,2016-09-11,32.0,48.0,Emerson College,3
+senate,GA,2016-09-17,34.0,50.0,Monmouth University Polling Institute,3
+senate,GA,2016-09-17,34.0,55.0,Quinnipiac University,3
+senate,GA,2016-09-21,28.0,41.0,JMC Analytics,3
+senate,GA,2016-10-11,36.8,50.4,Landmark Communications,3
+senate,GA,2016-10-23,40.0,54.0,Quinnipiac University,3
+senate,GA,2016-10-30,40.0,48.0,Emerson College,3
+senate,GA,2016-10-31,37.0,48.0,Marist College,3
+senate,GA,2016-11-04,41.0,48.0,YouGov,3
+senate,IA,2016-09-13,39.0,56.0,Monmouth University Polling Institute,3
+senate,IA,2016-09-17,43.0,55.0,Quinnipiac University,3
+senate,IA,2016-10-05,36.0,53.0,Selzer & Co.,3
+senate,IA,2016-10-23,38.0,56.0,Quinnipiac University,3
+senate,IA,2016-11-02,32.0,60.0,Emerson College,3
+senate,IA,2016-11-03,33.0,56.0,Selzer & Co.,3
+senate,ID,2016-10-22,24.0,57.0,Emerson College,3
+senate,IL,2016-09-20,40.9,39.2,Emerson College,3
+senate,IL,2016-10-29,53.7,36.2,Emerson College,3
+senate,IN,2016-10-12,48.0,42.0,Monmouth University Polling Institute,3
+senate,IN,2016-10-23,39.0,37.0,Gravis Marketing,3
+senate,IN,2016-10-29,45.0,45.0,Monmouth University Polling Institute,3
+senate,IN,2016-10-31,40.0,37.0,Gravis Marketing,3
+senate,KS,2016-09-08,34.0,50.0,SurveyUSA,3
+senate,KS,2016-10-13,31.0,56.0,SurveyUSA,3
+senate,KS,2016-10-28,31.0,55.0,SurveyUSA,3
+senate,KY,2016-10-27,41.8,51.5,Cygnal,3
+senate,LA,2016-11-29,33.0,51.0,Emerson College,3
+senate,MO,2016-09-11,42.0,40.0,Emerson College,3
+senate,MO,2016-10-10,44.0,46.0,Monmouth University Polling Institute,3
+senate,MO,2016-10-18,44.4,44.0,Emerson College,3
+senate,MO,2016-10-25,46.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,MO,2016-10-30,46.0,47.0,Monmouth University Polling Institute,3
+senate,MO,2016-10-30,45.0,45.0,Emerson College,3
+senate,MO,2016-10-31,44.0,46.0,Public Policy Polling,3
+senate,MO,2016-10-31,44.0,48.0,Remington Research Group,3
+senate,MO,2016-11-04,45.5,44.8,Emerson College,3
+senate,NC,2016-09-11,39.0,44.0,National Research,3
+senate,NC,2016-09-18,46.0,42.0,The New York Times/Siena College,3
+senate,NC,2016-09-19,41.0,41.0,Public Policy Polling,3
+senate,NC,2016-09-19,37.0,43.0,Beacon Research/Shaw & Co. Research,3
+senate,NC,2016-09-23,48.0,39.0,Gravis Marketing,3
+senate,NC,2016-09-27,39.0,41.0,Public Policy Polling,3
+senate,NC,2016-09-29,46.0,46.0,Quinnipiac University,3
+senate,NC,2016-10-01,46.0,44.0,Selzer & Co.,3
+senate,NC,2016-10-01,44.0,46.0,SurveyUSA,3
+senate,NC,2016-10-11,36.0,40.0,Suffolk University,3
+senate,NC,2016-10-11,46.0,46.0,Marist College,3
+senate,NC,2016-10-11,43.3,45.1,Emerson College,3
+senate,NC,2016-10-12,47.0,48.0,Big Village,3
+senate,NC,2016-10-16,43.0,45.0,SurveyUSA,3
+senate,NC,2016-10-16,37.0,44.0,National Research,3
+senate,NC,2016-10-21,41.0,42.0,Public Policy Polling,3
+senate,NC,2016-10-22,43.0,49.0,Monmouth University Polling Institute,3
+senate,NC,2016-10-22,47.0,46.0,The New York Times/Siena College,3
+senate,NC,2016-10-23,47.0,48.0,Quinnipiac University,3
+senate,NC,2016-10-25,48.0,45.0,Gravis Marketing,3
+senate,NC,2016-10-25,48.0,48.0,Marist College,3
+senate,NC,2016-10-26,44.0,48.0,Emerson College,3
+senate,NC,2016-10-27,44.0,44.0,YouGov,3
+senate,NC,2016-10-29,49.0,45.0,Quinnipiac University,3
+senate,NC,2016-10-30,43.0,49.0,SurveyUSA,3
+senate,NC,2016-10-31,45.0,48.0,Public Policy Polling,3
+senate,NC,2016-11-03,48.0,47.0,Gravis Marketing,3
+senate,NC,2016-11-05,45.0,46.0,The New York Times/Siena College,3
+senate,NC,2016-11-05,47.0,47.0,Quinnipiac University,3
+senate,NH,2016-09-19,45.0,47.0,Monmouth University Polling Institute,3
+senate,NH,2016-09-22,47.0,47.0,American Research Group,3
+senate,NH,2016-09-28,48.0,46.0,MassINC Polling Group,3
+senate,NH,2016-10-04,41.0,47.0,Suffolk University,3
+senate,NH,2016-10-08,44.0,43.0,Public Policy Polling,3
+senate,NH,2016-10-09,44.0,45.0,University of Massachusetts Lowell Center for Public Opinion,3
+senate,NH,2016-10-11,47.0,47.0,MassINC Polling Group,3
+senate,NH,2016-10-14,48.0,39.0,University of New Hampshire Survey Center,3
+senate,NH,2016-10-18,44.9,45.0,Emerson College,3
+senate,NH,2016-10-19,44.0,48.0,YouGov,3
+senate,NH,2016-10-22,47.0,48.0,Marist College,3
+senate,NH,2016-10-24,44.0,50.0,Emerson College,3
+senate,NH,2016-10-24,46.0,46.0,Monmouth University Polling Institute,3
+senate,NH,2016-10-28,45.0,44.0,University of New Hampshire Survey Center,3
+senate,NH,2016-10-30,47.0,46.0,University of Massachusetts Lowell Center for Public Opinion,3
+senate,NH,2016-10-31,48.0,45.0,Public Policy Polling,3
+senate,NH,2016-10-31,45.0,51.0,MassINC Polling Group,3
+senate,NH,2016-11-01,48.0,41.0,University of New Hampshire Survey Center,3
+senate,NH,2016-11-01,44.0,46.0,Gravis Marketing,3
+senate,NH,2016-11-01,46.0,49.0,American Research Group,3
+senate,NH,2016-11-01,41.6,44.4,Suffolk University,3
+senate,NH,2016-11-04,45.6,48.8,Emerson College,3
+senate,NH,2016-11-05,49.0,45.0,University of New Hampshire Survey Center,3
+senate,NV,2016-09-12,43.0,46.0,Monmouth University Polling Institute,3
+senate,NV,2016-09-13,39.0,43.0,Leger,3
+senate,NV,2016-09-19,36.0,43.0,Beacon Research/Shaw & Co. Research,3
+senate,NV,2016-09-28,35.2,37.6,Suffolk University,3
+senate,NV,2016-10-03,40.5,45.4,Emerson College,3
+senate,NV,2016-10-10,43.0,39.0,Public Policy Polling,3
+senate,NV,2016-10-12,40.0,35.0,JMC Analytics,3
+senate,NV,2016-10-12,52.0,45.0,Big Village,3
+senate,NV,2016-10-13,39.0,39.0,YouGov,3
+senate,NV,2016-10-16,42.0,45.0,Monmouth University Polling Institute,3
+senate,NV,2016-10-22,42.0,49.0,Marist College,3
+senate,NV,2016-10-25,50.0,44.0,Gravis Marketing,3
+senate,NV,2016-10-26,44.0,48.0,Emerson College,3
+senate,NV,2016-10-29,47.0,49.0,Big Village,3
+senate,NV,2016-10-30,45.0,43.0,JMC Analytics,3
+senate,NV,2016-10-31,47.0,44.0,Public Policy Polling,3
+senate,NV,2016-11-04,48.4,47.3,Emerson College,3
+senate,NV,2016-11-05,49.0,43.0,Gravis Marketing,3
+senate,NY,2016-09-13,69.0,23.0,Siena College,3
+senate,NY,2016-09-22,70.0,24.0,Marist College,3
+senate,NY,2016-10-15,66.0,27.0,Siena College,3
+senate,NY,2016-11-03,67.0,25.0,Siena College,3
+senate,OH,2016-09-09,37.0,58.0,Big Village,3
+senate,OH,2016-09-11,36.0,53.0,Selzer & Co.,3
+senate,OH,2016-09-13,31.0,39.0,Suffolk University,3
+senate,OH,2016-09-19,37.0,51.0,Beacon Research/Shaw & Co. Research,3
+senate,OH,2016-09-22,36.0,44.0,Gravis Marketing,3
+senate,OH,2016-09-29,38.0,55.0,Quinnipiac University,3
+senate,OH,2016-10-03,39.0,54.0,Monmouth University Polling Institute,3
+senate,OH,2016-10-05,36.0,51.0,Public Policy Polling,3
+senate,OH,2016-10-06,38.0,49.0,YouGov,3
+senate,OH,2016-10-11,37.0,55.0,Marist College,3
+senate,OH,2016-10-11,30.1,47.1,Emerson College,3
+senate,OH,2016-10-12,40.0,56.0,Big Village,3
+senate,OH,2016-10-13,41.0,54.0,Quinnipiac University,3
+senate,OH,2016-10-18,30.8,45.8,Suffolk University,3
+senate,OH,2016-10-26,35.0,49.0,Emerson College,3
+senate,OH,2016-10-29,38.0,56.0,Quinnipiac University,3
+senate,OH,2016-11-03,39.0,52.0,YouGov,3
+senate,OH,2016-11-04,28.3,48.8,Emerson College,3
+senate,OR,2016-10-04,52.0,33.0,Gravis Marketing,3
+senate,OR,2016-10-11,54.0,32.0,SurveyUSA,3
+senate,PA,2016-09-14,43.0,38.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2016-09-21,40.0,41.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2016-09-22,49.0,46.0,Big Village,3
+senate,PA,2016-09-23,43.0,39.0,Gravis Marketing,3
+senate,PA,2016-09-27,40.0,35.0,Public Policy Polling,3
+senate,PA,2016-09-29,42.0,50.0,Quinnipiac University,3
+senate,PA,2016-09-30,41.0,35.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2016-10-02,46.0,46.0,Monmouth University Polling Institute,3
+senate,PA,2016-10-05,48.0,44.0,Marist College,3
+senate,PA,2016-10-06,42.0,42.0,YouGov,3
+senate,PA,2016-10-06,38.0,42.0,Susquehanna Polling & Research Inc.,3
+senate,PA,2016-10-09,47.0,45.0,Selzer & Co.,3
+senate,PA,2016-10-13,45.0,49.0,Quinnipiac University,3
+senate,PA,2016-10-18,42.6,45.8,Emerson College,3
+senate,PA,2016-10-23,41.0,41.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2016-10-24,47.0,44.0,The New York Times/Siena College,3
+senate,PA,2016-10-25,45.0,43.0,Emerson College,3
+senate,PA,2016-10-27,44.0,41.0,YouGov,3
+senate,PA,2016-10-27,45.0,41.0,Gravis Marketing,3
+senate,PA,2016-10-28,47.0,35.0,Franklin & Marshall College Center for Opinion Research,3
+senate,PA,2016-10-29,51.0,46.0,Big Village,3
+senate,PA,2016-10-29,48.0,47.0,Quinnipiac University,3
+senate,PA,2016-10-31,47.0,41.0,Susquehanna Polling & Research Inc.,3
+senate,PA,2016-10-31,46.0,44.0,Public Policy Polling,3
+senate,PA,2016-10-31,47.0,44.0,Monmouth University Polling Institute,3
+senate,PA,2016-11-01,45.0,43.0,Gravis Marketing,3
+senate,PA,2016-11-01,42.0,43.0,Muhlenberg College Institute of Public Opinion,3
+senate,PA,2016-11-04,47.0,46.0,YouGov,3
+senate,SD,2016-10-19,27.0,65.0,Mason-Dixon Polling & Strategy,3
+senate,SD,2016-10-20,36.0,57.0,Remington Research Group,3
+senate,UT,2016-10-11,31.0,60.0,Monmouth University Polling Institute,3
+senate,UT,2016-11-01,28.0,61.0,Monmouth University Polling Institute,3
+senate,UT,2016-11-04,23.0,69.0,YouGov,3
+senate,WA,2016-09-13,46.0,25.0,Leger,3
+senate,WA,2016-09-26,47.6,41.2,Emerson College,3
+senate,WA,2016-10-10,55.0,39.0,YouGov,3
+senate,WA,2016-10-21,58.0,34.0,Elway Research,3
+senate,WA,2016-11-01,53.0,41.0,SurveyUSA,3
+senate,WA,2016-11-05,53.0,37.0,Leger,3
+senate,WI,2016-09-17,44.0,39.0,Marquette University Law School,3
+senate,WI,2016-09-19,51.5,41.6,Emerson College,3
+senate,WI,2016-10-04,53.0,41.0,Gravis Marketing,3
+senate,WI,2016-10-06,45.0,42.0,YouGov,3
+senate,WI,2016-10-08,46.0,44.0,Marquette University Law School,3
+senate,WI,2016-10-17,52.0,44.0,Monmouth University Polling Institute,3
+senate,WI,2016-10-18,47.0,41.0,Public Policy Polling,3
+senate,WI,2016-10-19,45.0,42.0,WPA Intelligence,3
+senate,WI,2016-10-27,49.0,44.0,Emerson College,3
+senate,WI,2016-10-28,45.0,44.0,Marquette University Law School,3
+senate,WI,2016-10-31,49.0,44.0,Public Policy Polling,3

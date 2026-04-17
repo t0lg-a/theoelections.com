@@ -1,568 +1,357 @@
-mode,state,date,dem,rep,sigma,pollster
-governor,AL,2002-09-11,43.0,45.0,4.08,University of Alabama at Birmingham
-governor,AL,2002-09-11,43.0,45.0,3.87,University of Alabama at Birmingham
-governor,AL,2002-10-16,41.0,42.0,3.33,North Star Opinion Research
-governor,AL,2002-10-20,44.0,42.0,4.11,Capital Survey Research Center
-governor,AL,2002-10-23,40.0,44.0,3.29,University of South Alabama Polling Group
-governor,AL,2002-10-30,39.0,47.0,4.08,University of Alabama at Birmingham
-governor,AK,2002-09-17,46.0,43.0,4.47,Lake Research Partners/Ivan Moore
-governor,AK,2002-10-12,46.0,43.0,5,Craciun Research Group
-governor,AK,2002-10-15,34.0,50.0,5,Moore Information Group
-governor,AZ,2002-09-20,37.0,43.0,3.87,Arizona State University Morrison Institute for Public Policy
-governor,AZ,2002-09-26,35.0,36.0,4.27,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2002-09-26,43.0,42.0,3.89,SurveyUSA
-governor,AZ,2002-09-28,38.0,41.0,4.23,Northern Arizona University Social Research Laboratory
-governor,AZ,2002-10-02,41.0,35.0,3.87,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2002-10-09,44.0,40.0,3.89,SurveyUSA
-governor,AZ,2002-10-10,40.0,36.0,3.87,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2002-10-17,48.0,32.0,3.87,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2002-10-20,46.0,38.0,5,Arizona State University Morrison Institute for Public Policy
-governor,AZ,2002-10-23,42.0,43.0,3.89,SurveyUSA
-governor,AZ,2002-10-26,42.0,37.0,4.08,Analytical Group
-governor,AZ,2002-10-25,46.0,36.0,3.87,Behavior Research Center (Rocky Mountain Poll)
-governor,AZ,2002-10-30,43.0,41.0,3.89,SurveyUSA
-governor,AZ,2002-10-31,42.0,39.0,3.87,Behavior Research Center (Rocky Mountain Poll)
-governor,AR,2002-09-19,37.0,49.0,4.44,Zogby Analytics
-governor,AR,2002-09-18,42.0,51.0,4.47,Opinion Research Associates
-governor,AR,2002-10-10,40.0,50.0,4.44,Zogby Analytics
-governor,AR,2002-10-18,44.0,46.0,4.47,Opinion Research Associates
-governor,AR,2002-10-25,43.0,49.0,4.47,Opinion Research Associates
-governor,AR,2002-11-01,40.0,55.0,4.03,Gallup
-governor,AR,2002-11-03,41.0,50.0,4.44,Zogby Analytics
-governor,CA,2002-09-07,41.0,35.0,3.54,Public Opinion Strategies
-governor,CA,2002-09-16,40.0,32.0,3.16,Public Policy Institute of California
-governor,CA,2002-09-22,47.0,35.0,4.21,SurveyUSA
-governor,CA,2002-09-27,45.0,35.0,3.37,Los Angeles Times
-governor,CA,2002-10-05,44.0,37.0,4.21,SurveyUSA
-governor,CA,2002-10-12,48.0,33.0,4.21,SurveyUSA
-governor,CA,2002-10-11,41.0,31.0,3.16,Public Policy Institute of California
-governor,CA,2002-10-17,34.2,33.7,3.87,Voter/Consumer Research
-governor,CA,2002-10-19,47.0,36.0,4.21,SurveyUSA
-governor,CA,2002-10-26,48.0,37.0,4.21,SurveyUSA
-governor,CA,2002-10-24,45.0,36.0,3.37,Los Angeles Times
-governor,CA,2002-10-28,42.0,39.0,4.47,Tarrance Group
-governor,CA,2002-10-27,41.0,34.0,3.68,Field Research Corp. (Field Poll)
-governor,CA,2002-11-02,45.0,39.0,4.21,SurveyUSA
-governor,CO,2002-09-17,20.0,58.0,4.47,Zogby Analytics
-governor,CO,2002-10-06,26.0,54.0,4.47,"Drake Research & Strategy, Inc."
-governor,CO,2002-10-11,21.0,64.0,4.47,Ciruli Associates
-governor,CO,2002-10-10,18.0,60.0,4.47,Zogby Analytics
-governor,CO,2002-10-21,28.0,56.0,3.87,Ciruli Associates
-governor,CO,2002-10-22,25.0,62.0,5,Ciruli Associates
-governor,CO,2002-10-24,27.0,54.0,4.47,"Drake Research & Strategy, Inc."
-governor,CO,2002-10-27,24.0,60.0,5,Ciruli Associates
-governor,CO,2002-10-30,28.0,52.0,4.47,"Drake Research & Strategy, Inc."
-governor,CO,2002-10-31,26.0,62.0,5,Ciruli Associates
-governor,CO,2002-11-01,28.0,60.0,4.47,Zogby Analytics
-governor,CO,2002-11-01,32.0,62.0,4.02,Gallup
-governor,CT,2002-09-15,31.0,44.0,4.06,University of Connecticut
-governor,CT,2002-09-23,31.0,47.0,4.06,University of Connecticut
-governor,CT,2002-09-27,37.0,59.0,3.96,Quinnipiac University
-governor,CT,2002-09-30,34.0,48.0,4.06,University of Connecticut
-governor,CT,2002-10-06,31.0,49.0,4.06,University of Connecticut
-governor,CT,2002-10-17,34.0,49.0,4.06,University of Connecticut
-governor,CT,2002-10-24,38.0,55.0,3.96,Quinnipiac University
-governor,FL,2002-09-14,43.0,48.0,4.08,EMC Research
-governor,FL,2002-09-20,39.0,49.0,4.47,Zogby Analytics
-governor,FL,2002-09-23,43.0,49.0,3.54,Mason-Dixon Polling & Strategy
-governor,FL,2002-09-25,44.0,50.0,3.54,SEA Polling & Strategic Design
-governor,FL,2002-09-25,48.0,49.0,3.55,SurveyUSA
-governor,FL,2002-10-04,42.0,47.0,5,Marketing Workshop
-governor,FL,2002-10-09,45.0,48.0,4.47,Zogby Analytics
-governor,FL,2002-10-09,47.0,50.0,3.55,SurveyUSA
-governor,FL,2002-10-09,43.0,45.0,5,Marketing Workshop
-governor,FL,2002-10-13,47.0,47.0,4.08,Garin-Hart-Yang Research Group
-governor,FL,2002-10-16,41.0,49.0,4.08,McLaughlin & Associates
-governor,FL,2002-10-16,49.0,45.0,5,Marketing Workshop
-governor,FL,2002-10-19,44.0,49.0,3.54,Mason-Dixon Polling & Strategy
-governor,FL,2002-10-24,43.0,49.0,4.08,Fleming & Associates
-governor,FL,2002-10-23,45.0,52.0,3.55,SurveyUSA
-governor,FL,2002-10-24,43.0,51.0,3.54,SEA Polling & Strategic Design
-governor,FL,2002-10-29,43.0,49.0,3.74,The Florida Poll
-governor,FL,2002-10-29,43.0,51.0,3.54,Mason-Dixon Polling & Strategy
-governor,FL,2002-10-28,45.0,48.0,4.07,Garin-Hart-Yang Research Group
-governor,FL,2002-10-26,43.0,47.0,5,Marketing Workshop
-governor,FL,2002-11-01,39.0,55.0,4.47,Zogby Analytics
-governor,FL,2002-11-03,46.0,51.0,3.55,SurveyUSA
-governor,GA,2002-09-28,49.0,42.0,3.54,Marketing Workshop
-governor,GA,2002-10-16,48.0,39.0,4.0,Mason-Dixon Polling & Strategy
-governor,GA,2002-10-27,51.0,40.0,3.54,Marketing Workshop
-governor,HI,2002-09-25,39.0,47.0,3.65,Ward Research
-governor,HI,2002-10-21,40.0,44.0,3.65,Ward Research
-governor,HI,2002-10-21,40.0,40.0,4.08,Market Trends Pacific
-governor,HI,2002-10-28,43.0,44.0,3.65,Ward Research
-governor,ID,2002-10-28,40.0,48.0,5,Greg Smith & Associates
-governor,IL,2002-09-11,57.0,33.0,4.32,SurveyUSA
-governor,IL,2002-09-16,47.0,42.0,4.01,Mason-Dixon Polling & Strategy
-governor,IL,2002-09-18,51.0,32.0,3.54,Zogby Analytics
-governor,IL,2002-09-25,56.0,37.0,4.32,SurveyUSA
-governor,IL,2002-09-29,51.0,35.0,3.78,Market Shares Corp.
-governor,IL,2002-10-08,48.0,37.0,3.53,Zogby Analytics
-governor,IL,2002-10-08,55.0,36.0,4.32,SurveyUSA
-governor,IL,2002-10-21,46.0,40.0,4.49,Illinois Wesleyan University Department of Political Science
-governor,IL,2002-10-22,49.0,40.0,4.0,Mason-Dixon Polling & Strategy
-governor,IL,2002-10-22,52.0,40.0,4.32,SurveyUSA
-governor,IL,2002-10-20,50.0,41.0,3.54,Richard Day Research
-governor,IL,2002-10-23,50.0,38.0,5,KRC Research
-governor,IL,2002-10-26,51.0,36.0,4.08,Scott Rasmussen (Rasmussen Reports)
-governor,IL,2002-10-26,47.0,37.0,3.78,Market Shares Corp.
-governor,IL,2002-10-28,52.0,36.0,4.06,Garin-Hart-Yang Research Group
-governor,IL,2002-10-28,45.0,39.0,5,Escalent
-governor,IL,2002-10-29,53.0,39.0,4.32,SurveyUSA
-governor,IL,2002-10-31,43.2,43.5,3.53,Zogby Analytics
-governor,IA,2002-09-24,50.0,46.0,4.07,SurveyUSA
-governor,IA,2002-09-23,51.0,33.0,3.52,Selzer & Co.
-governor,IA,2002-10-07,50.0,46.0,4.07,SurveyUSA
-governor,IA,2002-10-21,55.0,41.0,4.04,SurveyUSA
-governor,IA,2002-10-28,56.0,42.0,4.04,SurveyUSA
-governor,IA,2002-10-29,46.5,33.8,3.04,Gazette Communications
-governor,IA,2002-10-31,52.0,40.0,3.52,Selzer & Co.
-governor,KS,2002-09-14,55.0,38.0,3.77,SurveyUSA
-governor,KS,2002-09-28,57.0,37.0,3.77,SurveyUSA
-governor,KS,2002-10-05,55.0,37.0,3.77,SurveyUSA
-governor,KS,2002-10-06,46.0,37.0,4.47,Cole Hargrave Snodgrass & Associates
-governor,KS,2002-10-12,55.0,38.0,3.77,SurveyUSA
-governor,KS,2002-10-19,53.0,34.0,4.99,MarketAide Services Inc.
-governor,KS,2002-10-26,53.0,38.0,3.77,SurveyUSA
-governor,KS,2002-10-26,46.0,37.0,4.08,Market Research Institute Inc.
-governor,KS,2002-10-29,49.0,42.0,4.0,Mason-Dixon Polling & Strategy
-governor,KS,2002-11-01,51.0,44.0,3.77,SurveyUSA
-governor,ME,2002-09-09,57.0,26.0,4.37,RKM Research and Communications Inc.
-governor,ME,2002-09-19,54.0,25.0,4.47,Pan Atlantic Research
-governor,ME,2002-09-19,49.0,30.0,4.43,Digital Research
-governor,ME,2002-10-25,46.0,36.0,5,RKM Research and Communications Inc.
-governor,ME,2002-10-26,50.0,29.0,4.47,Pan Atlantic Research
-governor,MD,2002-09-14,46.0,47.0,3.45,Gonzales Research & Marketing Strategies Inc.
-governor,MD,2002-09-13,43.0,46.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2002-09-15,48.0,48.0,3.54,SurveyUSA
-governor,MD,2002-09-26,45.0,43.0,3.39,Potomac Incorporated
-governor,MD,2002-10-06,47.0,51.0,3.54,SurveyUSA
-governor,MD,2002-10-12,47.0,49.0,3.54,SurveyUSA
-governor,MD,2002-10-12,46.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2002-10-19,48.0,48.0,3.54,SurveyUSA
-governor,MD,2002-10-17,45.0,46.0,3.45,Gonzales Research & Marketing Strategies Inc.
-governor,MD,2002-10-24,47.0,47.0,2.56,ABC News/The Washington Post
-governor,MD,2002-10-26,49.0,48.0,3.54,SurveyUSA
-governor,MD,2002-10-27,44.0,48.0,3.39,Potomac Incorporated
-governor,MD,2002-10-29,46.0,47.0,4.0,Mason-Dixon Polling & Strategy
-governor,MD,2002-11-01,46.0,51.0,3.54,SurveyUSA
-governor,MA,2002-09-18,45.0,42.0,4.89,RKM Research and Communications Inc.
-governor,MA,2002-09-25,42.0,36.0,5,KRC Research
-governor,MA,2002-10-01,40.0,40.0,3.87,Harvard University
-governor,MA,2002-10-02,43.0,42.0,4.96,RKM Research and Communications Inc.
-governor,MA,2002-10-05,42.0,30.0,4.47,Suffolk University
-governor,MA,2002-10-08,42.0,40.0,3.16,Zogby Analytics
-governor,MA,2002-10-21,36.7,37.2,4.47,Suffolk University
-governor,MA,2002-10-26,44.0,38.0,4.64,RKM Research and Communications Inc.
-governor,MA,2002-10-26,41.0,39.0,5,Harvard University
-governor,MA,2002-10-29,41.0,40.0,5,KRC Research
-governor,MA,2002-10-31,42.0,41.0,4.64,RKM Research and Communications Inc.
-governor,MA,2002-11-01,38.0,40.0,5,KRC Research
-governor,MA,2002-11-03,38.0,41.0,4.47,Suffolk University
-governor,MI,2002-09-16,50.0,38.0,4.08,EPIC-MRA
-governor,MI,2002-09-28,47.0,36.0,4.08,Marketing Resource Group (MRG)
-governor,MI,2002-10-05,55.0,41.0,3.7,SurveyUSA
-governor,MI,2002-10-04,53.0,41.0,4.47,EPIC-MRA
-governor,MI,2002-10-14,50.0,40.0,4.47,EPIC-MRA
-governor,MI,2002-10-15,47.0,35.0,4.08,Mitchell Research & Communications
-governor,MI,2002-10-19,54.0,41.0,3.7,SurveyUSA
-governor,MI,2002-10-21,51.0,37.0,4.47,EPIC-MRA
-governor,MI,2002-10-22,47.0,39.0,4.08,Mitchell Research & Communications
-governor,MI,2002-10-26,55.0,42.0,3.7,SurveyUSA
-governor,MI,2002-10-28,54.0,41.0,4.42,Detroit Free Press
-governor,MI,2002-10-29,50.0,39.0,4.47,EPIC-MRA
-governor,MI,2002-10-29,51.0,38.0,4.08,Mitchell Research & Communications
-governor,MI,2002-11-02,52.0,46.0,3.7,SurveyUSA
-governor,MI,2002-11-01,48.0,39.0,4.47,EPIC-MRA
-governor,MN,2002-09-13,27.0,28.0,4.0,Mason-Dixon Polling & Strategy
-governor,MN,2002-09-15,30.0,28.0,3.1,Minneapolis Star Tribune
-governor,MN,2002-09-18,23.0,28.0,4.47,Zogby Analytics
-governor,MN,2002-10-10,25.0,30.0,4.08,Zogby Analytics
-governor,MN,2002-10-13,29.0,29.0,3.09,Minneapolis Star Tribune
-governor,MN,2002-10-28,29.0,33.0,3.28,Minneapolis Star Tribune
-governor,MN,2002-10-31,32.0,36.0,4.0,Mason-Dixon Polling & Strategy
-governor,MN,2002-10-31,32.0,35.0,3.28,Minneapolis Star Tribune
-governor,MN,2002-11-01,34.0,35.0,4.08,Zogby Analytics
-governor,MN,2002-11-03,36.0,36.0,4.08,Zogby Analytics
-governor,NE,2002-10-25,20.0,70.0,4.07,MSR Group
-governor,NV,2002-09-23,26.0,61.0,4.22,SurveyUSA
-governor,NV,2002-10-14,26.0,62.0,3.87,SurveyUSA
-governor,NV,2002-10-22,21.0,65.0,4.0,Mason-Dixon Polling & Strategy
-governor,NV,2002-10-28,28.0,63.0,4.37,SurveyUSA
-governor,NH,2002-09-16,30.0,55.0,4.08,American Research Group
-governor,NH,2002-09-20,40.0,40.0,5,Bannon Communications Research
-governor,NH,2002-10-01,30.0,59.0,4.08,American Research Group
-governor,NH,2002-10-05,33.0,49.0,3.92,University of New Hampshire Survey Center
-governor,NH,2002-10-15,28.0,57.0,4.08,American Research Group
-governor,NH,2002-10-20,35.0,43.0,5,Bannon Communications Research
-governor,NH,2002-10-21,33.0,52.0,4.08,American Research Group
-governor,NH,2002-10-22,32.0,52.0,4.99,Becker Institute
-governor,NH,2002-10-26,37.0,49.0,3.92,University of New Hampshire Survey Center
-governor,NH,2002-10-29,36.0,52.0,4.08,American Research Group
-governor,NH,2002-10-29,36.0,44.0,3.27,Franklin Pierce University Marlin Fitzwater Center for Communication
-governor,NH,2002-11-01,38.0,52.0,3.95,University of New Hampshire Survey Center
-governor,NH,2002-11-02,38.0,53.0,4.08,American Research Group
-governor,NM,2002-09-10,50.0,36.0,3.69,Research & Polling Inc.
-governor,NM,2002-09-25,46.0,37.0,4.87,Mason-Dixon Polling & Strategy
-governor,NM,2002-10-09,50.0,32.0,3.32,Research & Polling Inc.
-governor,NM,2002-10-28,51.0,37.0,4.97,Mason-Dixon Polling & Strategy
-governor,NM,2002-10-30,52.0,34.0,3.32,Research & Polling Inc.
-governor,NY,2002-09-19,37.0,48.0,4.2,SurveyUSA
-governor,NY,2002-09-20,34.0,45.0,3.27,Quinnipiac University
-governor,NY,2002-09-25,32.0,48.0,3.51,Marist College
-governor,NY,2002-10-02,29.0,51.0,4.2,SurveyUSA
-governor,NY,2002-10-07,26.0,43.0,2.87,Siena College
-governor,NY,2002-10-08,33.0,46.0,4.2,SurveyUSA
-governor,NY,2002-10-07,32.0,41.0,3.08,Blum & Weprin Associates
-governor,NY,2002-10-11,31.0,47.0,4.0,Quinnipiac University
-governor,NY,2002-10-15,29.0,45.0,4.2,SurveyUSA
-governor,NY,2002-10-14,31.0,42.0,3.87,The New York Times
-governor,NY,2002-10-17,25.0,44.0,2.87,Siena College
-governor,NY,2002-10-22,29.0,44.0,4.2,SurveyUSA
-governor,NY,2002-10-28,27.0,48.0,4.81,Marist College
-governor,NY,2002-10-29,32.0,47.0,4.2,SurveyUSA
-governor,NY,2002-10-30,27.0,43.0,3.08,Blum & Weprin Associates
-governor,NY,2002-11-02,27.0,48.0,4.59,Marist College
-governor,NY,2002-10-31,29.0,45.0,4.0,Quinnipiac University
-governor,OH,2002-09-11,37.0,48.0,3.52,Mason-Dixon Polling & Strategy
-governor,OH,2002-09-10,35.0,53.0,4.32,University of Cincinnati (Ohio Poll)
-governor,OH,2002-10-01,40.0,51.0,2.65,Columbus Dispatch
-governor,OH,2002-10-17,44.0,51.0,2.76,SurveyUSA
-governor,OH,2002-10-15,38.0,54.0,4.61,University of Cincinnati (Ohio Poll)
-governor,OH,2002-10-22,38.0,50.0,3.54,Mason-Dixon Polling & Strategy
-governor,OH,2002-10-25,35.0,49.0,4.08,Zogby Analytics
-governor,OH,2002-10-30,39.0,57.0,3.71,SurveyUSA
-governor,OH,2002-10-28,40.0,58.0,2.21,Columbus Dispatch
-governor,OH,2002-11-01,39.3,58.0,3.87,University of Cincinnati (Ohio Poll)
-governor,OK,2002-09-23,34.0,42.0,4.47,Cole Hargrave Snodgrass & Associates
-governor,OK,2002-09-25,39.0,45.0,3.75,SurveyUSA
-governor,OK,2002-10-01,37.0,43.0,4.24,SurveyUSA
-governor,OK,2002-10-07,39.0,45.0,3.87,SurveyUSA
-governor,OK,2002-10-11,35.0,41.0,3.65,Consumer Logic
-governor,OK,2002-10-15,38.0,43.0,3.75,SurveyUSA
-governor,OK,2002-10-30,39.0,37.0,3.72,SurveyUSA
-governor,OK,2002-11-02,42.0,38.0,3.75,SurveyUSA
-governor,OR,2002-09-25,42.0,36.0,4.08,Riley Research Associates
-governor,OR,2002-10-04,45.0,41.0,4.06,DHM Research
-governor,OR,2002-10-16,41.0,35.0,4.07,Riley Research Associates
-governor,OR,2002-10-25,46.0,42.0,4.07,Riley Research Associates
-governor,OR,2002-10-27,48.0,42.0,4.06,DHM Research
-governor,PA,2002-09-09,53.0,40.0,3.87,SurveyUSA
-governor,PA,2002-09-13,48.0,41.0,2.8,Quinnipiac University
-governor,PA,2002-09-21,46.0,35.0,5,Muhlenberg College Institute of Public Opinion
-governor,PA,2002-09-28,52.0,35.0,4.55,Millersville University Center for Politics and Public Affairs
-governor,PA,2002-09-30,58.0,35.0,3.87,SurveyUSA
-governor,PA,2002-10-02,47.0,33.0,3.52,Mason-Dixon Polling & Strategy
-governor,PA,2002-10-06,57.0,36.0,3.87,SurveyUSA
-governor,PA,2002-10-11,49.0,31.0,4.6,West Chester University
-governor,PA,2002-10-14,57.0,36.0,3.87,SurveyUSA
-governor,PA,2002-10-12,56.0,36.0,3.97,Quinnipiac University
-governor,PA,2002-10-20,55.0,37.0,3.87,SurveyUSA
-governor,PA,2002-10-24,54.0,35.0,3.97,Quinnipiac University
-governor,PA,2002-10-26,52.0,33.0,4.55,Millersville University Center for Politics and Public Affairs
-governor,PA,2002-10-26,49.0,32.0,4.6,West Chester University
-governor,PA,2002-10-28,56.0,37.0,3.87,SurveyUSA
-governor,PA,2002-10-30,53.0,36.0,3.52,Mason-Dixon Polling & Strategy
-governor,RI,2002-09-14,49.0,35.0,4.97,Fleming & Associates
-governor,RI,2002-09-24,48.0,44.0,4.11,SurveyUSA
-governor,RI,2002-10-15,48.0,45.0,4.11,SurveyUSA
-governor,RI,2002-10-20,41.0,34.0,4.89,Brown University A. Alfred Taubman Center for American Politics and Policy
-governor,RI,2002-10-22,46.0,48.0,4.11,SurveyUSA
-governor,RI,2002-10-28,40.0,43.0,4.99,Fleming & Associates
-governor,RI,2002-10-29,45.0,48.0,4.11,SurveyUSA
-governor,SC,2002-09-14,51.0,46.0,3.62,SurveyUSA
-governor,SC,2002-09-29,49.0,49.0,3.62,SurveyUSA
-governor,SC,2002-10-09,45.0,43.0,4.47,Zogby Analytics
-governor,SC,2002-10-12,51.0,45.0,3.62,SurveyUSA
-governor,SC,2002-10-15,41.0,45.0,4.0,Mason-Dixon Polling & Strategy
-governor,SC,2002-10-19,51.0,46.0,3.62,SurveyUSA
-governor,SC,2002-10-26,50.0,47.0,3.62,SurveyUSA
-governor,SC,2002-10-28,42.0,49.0,4.0,Mason-Dixon Polling & Strategy
-governor,SC,2002-11-02,52.0,46.0,3.62,SurveyUSA
-governor,SD,2002-09-18,32.0,51.0,3.52,Mason-Dixon Polling & Strategy
-governor,SD,2002-10-04,35.0,45.0,4.08,Jim Meader (KELOLAND-TV)
-governor,SD,2002-10-10,35.0,45.0,3.87,Jim Meader (KELOLAND-TV)
-governor,SD,2002-10-21,39.0,46.0,4.08,Jim Meader (KELOLAND-TV)
-governor,SD,2002-10-26,36.0,55.0,3.52,Mason-Dixon Polling & Strategy
-governor,SD,2002-11-01,40.0,54.0,3.82,Gallup
-governor,TN,2002-09-07,37.0,29.0,4.45,University of Tennessee
-governor,TN,2002-09-12,39.2,38.6,4.47,OnMessage Inc.
-governor,TN,2002-09-18,44.0,42.0,4.0,Mason-Dixon Polling & Strategy
-governor,TN,2002-09-19,47.0,39.0,4.07,Garin-Hart-Yang Research Group
-governor,TN,2002-09-24,48.0,44.0,3.71,SurveyUSA
-governor,TN,2002-10-06,47.0,41.0,3.71,SurveyUSA
-governor,TN,2002-10-10,35.0,35.0,4.45,University of Tennessee
-governor,TN,2002-10-19,49.0,43.0,4.08,Mellman Group
-governor,TN,2002-10-20,48.0,42.0,3.71,SurveyUSA
-governor,TN,2002-10-20,39.0,41.0,3.49,Ethridge & Associates LLC
-governor,TN,2002-10-22,45.0,42.0,4.0,Mason-Dixon Polling & Strategy
-governor,TN,2002-10-27,48.0,44.0,3.71,SurveyUSA
-governor,TX,2002-09-09,46.0,37.0,3.9,Rice University
-governor,TX,2002-09-18,53.0,42.0,3.83,SurveyUSA
-governor,TX,2002-09-17,32.0,44.0,4.08,Zogby Analytics
-governor,TX,2002-10-01,44.0,51.0,3.87,SurveyUSA
-governor,TX,2002-10-03,29.0,56.0,4.26,Frank N. Magid Associates Inc.
-governor,TX,2002-10-09,41.0,44.0,3.87,FM3 Research
-governor,TX,2002-10-10,30.0,52.0,4.08,Zogby Analytics
-governor,TX,2002-10-10,34.0,48.0,4.26,Frank N. Magid Associates Inc.
-governor,TX,2002-10-15,43.0,52.0,3.83,SurveyUSA
-governor,TX,2002-10-15,35.0,50.0,3.16,Blum & Weprin Associates
-governor,TX,2002-10-18,41.0,44.0,3.33,FM3 Research
-governor,TX,2002-10-17,34.0,49.0,4.26,Frank N. Magid Associates Inc.
-governor,TX,2002-10-22,42.0,53.0,3.83,SurveyUSA
-governor,TX,2002-10-24,38.0,51.0,4.26,Frank N. Magid Associates Inc.
-governor,TX,2002-10-18,35.0,50.0,3.55,Scripps Howard
-governor,TX,2002-10-27,37.0,49.0,3.9,Rice University
-governor,TX,2002-10-31,38.0,50.0,3.16,Blum & Weprin Associates
-governor,TX,2002-10-31,43.0,53.0,3.83,SurveyUSA
-governor,TX,2002-11-01,36.0,50.0,4.08,Zogby Analytics
-governor,TX,2002-11-03,34.0,52.0,4.08,Zogby Analytics
-governor,VT,2002-10-24,42.0,35.0,4.0,Mason-Dixon Polling & Strategy
-governor,VT,2002-10-31,46.0,36.0,4.0,Mason-Dixon Polling & Strategy
-governor,WI,2002-09-21,43.0,35.0,4.31,University of Wisconsin Survey Center
-governor,WI,2002-09-28,40.0,31.0,3.16,Harris Insights & Analytics
-governor,WI,2002-10-23,38.0,36.0,4.89,University of Wisconsin-Milwaukee Center for Urban Initiatives and Research
-governor,WI,2002-10-26,38.0,36.0,4.71,Market Shares Corp.
-governor,WI,2002-10-22,41.0,33.0,5,St. Norbert College Strategic Research Institute
-governor,WI,2002-10-26,41.0,34.0,4.47,University of Wisconsin Survey Center
-governor,WY,2002-10-21,36.0,44.0,5,A&A Research
-senate,AL,2002-09-09,38.0,46.0,4.47,Lake Research Partners
-senate,AL,2002-09-11,27.0,55.0,4.08,University of Alabama at Birmingham
-senate,AL,2002-10-23,30.0,60.0,3.29,University of South Alabama Polling Group
-senate,AL,2002-10-30,26.0,61.0,4.08,University of Alabama at Birmingham
-senate,AR,2002-09-19,45.0,43.0,4.44,Zogby Analytics
-senate,AR,2002-09-18,50.0,40.0,4.45,Opinion Research Associates
-senate,AR,2002-10-10,45.4,45.2,3.84,Zogby Analytics
-senate,AR,2002-10-18,48.0,43.0,4.47,Opinion Research Associates
-senate,AR,2002-10-25,51.0,43.0,4.47,Opinion Research Associates
-senate,AR,2002-11-01,51.0,43.0,4.03,Gallup
-senate,AR,2002-11-01,53.0,42.0,3.84,Zogby Analytics
-senate,AR,2002-11-03,53.0,41.0,4.44,Zogby Analytics
-senate,CO,2002-09-07,36.0,38.0,4.08,Garin-Hart-Yang Research Group
-senate,CO,2002-09-17,42.0,42.0,4.47,Zogby Analytics
-senate,CO,2002-10-08,43.0,52.0,3.84,SurveyUSA
-senate,CO,2002-10-06,35.0,39.0,3.84,"Drake Research & Strategy, Inc."
-senate,CO,2002-10-10,41.0,40.0,4.47,Zogby Analytics
-senate,CO,2002-10-11,38.0,41.0,4.47,Ciruli Associates
-senate,CO,2002-10-22,46.0,48.0,3.68,SurveyUSA
-senate,CO,2002-10-23,36.0,44.0,5,Ciruli Associates
-senate,CO,2002-10-23,39.0,38.0,4.47,"Drake Research & Strategy, Inc."
-senate,CO,2002-10-26,41.0,41.0,4.47,"Drake Research & Strategy, Inc."
-senate,CO,2002-10-27,39.0,41.0,5,Ciruli Associates
-senate,CO,2002-10-30,42.0,38.0,4.47,"Drake Research & Strategy, Inc."
-senate,CO,2002-10-31,42.0,38.0,3.84,Ciruli Associates
-senate,CO,2002-10-31,42.0,41.0,5,Ciruli Associates
-senate,CO,2002-11-01,50.0,43.0,3.84,Zogby Analytics
-senate,CO,2002-11-01,44.0,50.0,5,Hill Research Consultants
-senate,CO,2002-11-01,46.0,50.0,3.68,SurveyUSA
-senate,CO,2002-11-01,45.0,47.0,4.02,Gallup
-senate,CO,2002-11-03,44.0,50.0,5,Tarrance Group
-senate,CO,2002-11-03,49.0,44.0,4.44,Zogby Analytics
-senate,GA,2002-09-30,45.0,41.0,3.16,Public Opinion Strategies
-senate,GA,2002-09-28,51.0,42.0,3.54,Marketing Workshop
-senate,GA,2002-10-03,43.0,41.0,3.84,Public Opinion Strategies
-senate,GA,2002-10-10,52.0,40.0,3.54,EMC Research
-senate,GA,2002-10-16,47.0,41.0,4.0,Mason-Dixon Polling & Strategy
-senate,GA,2002-10-27,49.0,44.0,3.54,Marketing Workshop
-senate,GA,2002-11-01,43.0,44.0,4.08,Zogby Analytics
-senate,GA,2002-11-03,46.0,44.0,4.08,Zogby Analytics
-senate,ID,2002-10-28,30.0,61.0,5,Greg Smith & Associates
-senate,IL,2002-09-16,57.0,28.0,4.01,Mason-Dixon Polling & Strategy
-senate,IL,2002-09-18,54.0,29.0,3.54,Zogby Analytics
-senate,IL,2002-09-29,51.0,26.0,3.78,Market Shares Corp.
-senate,IL,2002-10-08,57.0,27.0,3.84,Zogby Analytics
-senate,IL,2002-10-21,51.0,33.0,4.49,Illinois Wesleyan University Department of Political Science
-senate,IL,2002-10-22,56.0,32.0,4.0,Mason-Dixon Polling & Strategy
-senate,IL,2002-10-22,56.0,36.0,4.35,SurveyUSA
-senate,IL,2002-10-20,54.0,33.0,3.54,Richard Day Research
-senate,IL,2002-10-26,47.0,27.0,3.78,Market Shares Corp.
-senate,IL,2002-10-29,56.0,37.0,4.35,SurveyUSA
-senate,IL,2002-10-31,55.0,31.0,3.53,Zogby Analytics
-senate,IA,2002-09-18,45.0,41.0,5,Public Opinion Strategies
-senate,IA,2002-09-23,54.0,34.0,3.52,Selzer & Co.
-senate,IA,2002-10-07,53.0,44.0,3.84,SurveyUSA
-senate,IA,2002-10-21,57.0,40.0,4.07,SurveyUSA
-senate,IA,2002-10-28,60.0,38.0,4.07,SurveyUSA
-senate,IA,2002-10-29,50.6,28.6,3.04,Gazette Communications
-senate,IA,2002-10-31,50.0,41.0,3.52,Selzer & Co.
-senate,KY,2002-10-01,34.0,62.0,3.84,SurveyUSA
-senate,KY,2002-10-15,31.0,66.0,3.77,SurveyUSA
-senate,KY,2002-10-29,29.0,66.0,3.77,SurveyUSA
-senate,LA,2002-11-11,51.4,36.4,3.84,Southeastern Louisiana University Social Science Research Center
-senate,LA,2002-11-11,40.0,48.0,4.46,WPA Intelligence
-senate,LA,2002-11-20,45.0,49.0,3.54,Marketing Research Institute
-senate,LA,2002-11-20,50.0,34.0,4.08,Southern Media & Opinion Research
-senate,LA,2002-11-26,44.0,43.0,3.78,University of New Orleans Survey Research Center
-senate,LA,2002-12-03,47.0,45.0,4.0,Mason-Dixon Polling & Strategy
-senate,ME,2002-09-09,28.0,60.0,4.37,RKM Research and Communications Inc.
-senate,ME,2002-09-19,31.0,56.0,4.47,Pan Atlantic Research
-senate,ME,2002-09-19,30.0,59.0,4.43,Digital Research
-senate,ME,2002-09-23,40.0,49.0,5,Lake Research Partners
-senate,ME,2002-09-22,31.0,55.0,4.08,Pan Atlantic Research
-senate,ME,2002-10-25,31.0,59.0,5,RKM Research and Communications Inc.
-senate,ME,2002-10-26,36.0,55.0,4.47,Pan Atlantic Research
-senate,MI,2002-10-14,57.0,30.0,3.84,EPIC-MRA
-senate,MI,2002-10-15,58.0,32.0,3.84,Mitchell Research & Communications
-senate,MI,2002-10-22,61.0,27.0,3.84,Mitchell Research & Communications
-senate,MI,2002-10-29,63.0,31.0,4.47,EPIC-MRA
-senate,MI,2002-10-29,60.0,30.0,4.08,Mitchell Research & Communications
-senate,MI,2002-11-01,61.0,31.0,4.47,EPIC-MRA
-senate,MN,2002-10-26,45.0,43.0,4.08,Public Opinion Strategies
-senate,MN,2002-10-28,47.0,39.0,3.28,Minneapolis Star Tribune
-senate,MN,2002-10-31,41.0,47.0,4.0,Mason-Dixon Polling & Strategy
-senate,MN,2002-10-31,46.0,41.0,3.28,Minneapolis Star Tribune
-senate,MN,2002-11-01,47.0,44.0,4.08,Zogby Analytics
-senate,MN,2002-11-03,48.1,47.9,3.84,Public Opinion Strategies
-senate,MN,2002-11-03,49.0,44.0,4.08,Zogby Analytics
-senate,MO,2002-09-17,48.0,40.0,4.08,Zogby Analytics
-senate,MO,2002-09-26,51.0,43.0,3.84,SurveyUSA
-senate,MO,2002-10-05,48.0,48.0,3.84,SurveyUSA
-senate,MO,2002-10-10,41.0,47.0,4.08,Zogby Analytics
-senate,MO,2002-10-16,41.0,49.0,4.08,American Viewpoint
-senate,MO,2002-10-16,50.0,47.0,3.23,SurveyUSA
-senate,MO,2002-10-28,42.0,49.0,4.08,American Viewpoint
-senate,MO,2002-10-27,41.0,46.0,4.08,Market Research Institute Inc.
-senate,MO,2002-10-31,46.0,46.0,4.08,Zogby Analytics
-senate,MO,2002-11-01,44.0,48.0,4.07,Gallup
-senate,MO,2002-11-02,49.0,47.0,3.23,SurveyUSA
-senate,MO,2002-11-03,43.0,50.0,4.08,Zogby Analytics
-senate,MT,2002-09-25,54.0,35.0,4.0,Mason-Dixon Polling & Strategy
-senate,MT,2002-10-12,54.7,21.7,4.91,Montana State University Billings
-senate,MT,2002-10-23,59.0,28.0,4.0,Mason-Dixon Polling & Strategy
-senate,NE,2002-10-25,10.0,82.0,4.07,MSR Group
-senate,NH,2002-09-16,40.0,49.0,4.47,Public Opinion Strategies
-senate,NH,2002-09-16,38.0,47.0,4.08,American Research Group
-senate,NH,2002-09-18,43.0,46.0,4.47,GQR
-senate,NH,2002-10-02,46.0,44.0,3.84,GQR
-senate,NH,2002-10-01,34.0,55.0,4.08,American Research Group
-senate,NH,2002-10-07,45.0,45.0,3.84,"Fabrizio, Lee & Associates/McLaughlin & Associates"
-senate,NH,2002-10-05,47.0,44.0,3.92,University of New Hampshire Survey Center
-senate,NH,2002-10-15,45.0,43.0,4.47,GQR
-senate,NH,2002-10-15,43.0,51.0,4.08,American Research Group
-senate,NH,2002-10-21,46.0,48.0,4.08,American Research Group
-senate,NH,2002-10-22,48.0,42.0,4.99,Becker Institute
-senate,NH,2002-10-26,46.0,42.0,3.93,University of New Hampshire Survey Center
-senate,NH,2002-10-29,46.0,48.0,4.08,American Research Group
-senate,NH,2002-10-29,45.0,40.0,3.27,Franklin Pierce University Marlin Fitzwater Center for Communication
-senate,NH,2002-11-01,45.0,46.0,3.94,University of New Hampshire Survey Center
-senate,NH,2002-11-03,47.3,45.5,3.84,Public Opinion Strategies
-senate,NH,2002-11-02,44.0,48.0,4.08,American Research Group
-senate,NJ,2002-09-05,39.0,44.0,3.84,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2002-09-22,34.0,47.0,4.28,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2002-10-03,44.0,33.0,5,Mellman Group
-senate,NJ,2002-10-04,49.0,45.0,3.84,SurveyUSA
-senate,NJ,2002-10-04,52.0,45.0,3.84,A&A Research
-senate,NJ,2002-10-05,44.0,44.0,3.84,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2002-10-04,49.0,45.0,4.41,Quinnipiac University
-senate,NJ,2002-10-09,50.0,41.0,3.84,SurveyUSA
-senate,NJ,2002-10-10,48.0,36.0,3.84,Zogby Analytics
-senate,NJ,2002-10-12,48.0,41.0,3.84,Fairleigh Dickinson University
-senate,NJ,2002-10-15,47.0,42.0,3.84,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2002-10-18,52.0,43.0,4.07,Quinnipiac University
-senate,NJ,2002-10-18,42.0,32.0,4.98,West Chester University
-senate,NJ,2002-10-21,51.0,40.0,3.84,SurveyUSA
-senate,NJ,2002-10-22,47.0,40.0,3.54,Mason-Dixon Polling & Strategy
-senate,NJ,2002-10-21,52.0,39.0,3.66,CBS News/The New York Times
-senate,NJ,2002-10-28,51.0,41.0,3.7,SurveyUSA
-senate,NJ,2002-10-30,47.0,37.0,3.84,Fairleigh Dickinson University
-senate,NJ,2002-10-29,52.0,40.0,4.67,Rutgers University Eagleton Center for Public Interest Polling
-senate,NJ,2002-11-01,49.0,36.0,3.84,Zogby Analytics
-senate,NJ,2002-11-01,42.0,37.0,4.05,Gannett New Jersey
-senate,NJ,2002-10-31,47.0,38.0,3.3,Fairleigh Dickinson University
-senate,NJ,2002-10-31,50.0,39.0,4.17,Quinnipiac University
-senate,NJ,2002-11-03,49.0,38.0,4.36,Zogby Analytics
-senate,NM,2002-09-10,23.0,66.0,3.69,Research & Polling Inc.
-senate,NM,2002-10-09,24.0,67.0,3.32,Research & Polling Inc.
-senate,NM,2002-10-28,28.0,61.0,4.97,Mason-Dixon Polling & Strategy
-senate,NM,2002-10-30,27.0,65.0,3.32,Research & Polling Inc.
-senate,NC,2002-09-13,35.0,49.0,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2002-09-17,32.0,55.0,4.36,Zogby Analytics
-senate,NC,2002-10-07,41.0,47.0,3.84,Garin-Hart-Yang Research Group
-senate,NC,2002-10-08,45.0,49.0,3.84,SurveyUSA
-senate,NC,2002-10-13,40.0,50.0,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2002-10-22,41.0,45.0,4.07,Garin-Hart-Yang Research Group
-senate,NC,2002-10-22,44.0,50.0,4.05,SurveyUSA
-senate,NC,2002-10-28,42.0,48.0,4.0,Mason-Dixon Polling & Strategy
-senate,NC,2002-10-28,42.0,45.0,3.84,Garin-Hart-Yang Research Group
-senate,NC,2002-10-29,46.0,50.0,4.05,SurveyUSA
-senate,NC,2002-10-29,40.0,47.0,4.23,Ethridge & Associates LLC
-senate,NC,2002-11-01,42.0,46.0,4.36,Zogby Analytics
-senate,NC,2002-11-03,39.0,46.0,4.36,Zogby Analytics
-senate,OK,2002-09-18,31.0,55.0,4.47,Cole Hargrave Snodgrass & Associates
-senate,OK,2002-10-01,37.0,54.0,3.75,SurveyUSA
-senate,OK,2002-10-11,38.0,51.0,3.65,Consumer Logic
-senate,OK,2002-10-15,37.0,53.0,3.75,SurveyUSA
-senate,OK,2002-10-30,35.0,52.0,3.75,SurveyUSA
-senate,OK,2002-11-02,36.0,53.0,3.75,SurveyUSA
-senate,OR,2002-09-22,33.0,50.0,4.47,Moore Information Group
-senate,OR,2002-09-25,28.0,49.0,4.08,Riley Research Associates
-senate,OR,2002-10-04,34.0,55.0,4.06,DHM Research
-senate,OR,2002-10-16,34.0,52.0,4.08,Riley Research Associates
-senate,OR,2002-10-25,34.0,56.0,4.07,Riley Research Associates
-senate,OR,2002-10-27,36.0,55.0,4.06,DHM Research
-senate,RI,2002-09-14,73.0,14.0,4.97,Fleming & Associates
-senate,RI,2002-10-20,61.0,14.0,4.89,Brown University A. Alfred Taubman Center for American Politics and Policy
-senate,SC,2002-09-14,47.0,49.0,3.62,SurveyUSA
-senate,SC,2002-09-18,38.0,46.0,4.08,Garin-Hart-Yang Research Group
-senate,SC,2002-10-09,35.0,47.0,4.47,Zogby Analytics
-senate,SC,2002-10-12,46.0,50.0,3.62,SurveyUSA
-senate,SC,2002-10-15,34.0,51.0,4.0,Mason-Dixon Polling & Strategy
-senate,SC,2002-10-19,44.0,53.0,3.62,SurveyUSA
-senate,SC,2002-10-26,48.0,49.0,3.62,SurveyUSA
-senate,SC,2002-10-28,36.0,53.0,4.0,Mason-Dixon Polling & Strategy
-senate,SC,2002-11-02,48.0,49.0,3.62,SurveyUSA
-senate,SD,2002-09-16,46.0,43.0,4.47,Zogby Analytics
-senate,SD,2002-09-18,44.0,43.0,3.52,Mason-Dixon Polling & Strategy
-senate,SD,2002-09-26,43.0,48.0,5,Public Opinion Strategies
-senate,SD,2002-10-01,42.0,47.0,3.84,OnMessage Inc.
-senate,SD,2002-10-04,43.0,40.0,4.08,Jim Meader (KELOLAND-TV)
-senate,SD,2002-10-10,43.0,45.0,4.47,Zogby Analytics
-senate,SD,2002-10-10,40.0,43.0,3.38,CBS News
-senate,SD,2002-10-22,46.0,44.0,4.25,GQR
-senate,SD,2002-10-21,45.0,42.0,4.08,Jim Meader (KELOLAND-TV)
-senate,SD,2002-10-26,47.0,45.0,3.52,Mason-Dixon Polling & Strategy
-senate,SD,2002-10-25,45.0,48.0,4.47,Public Opinion Strategies
-senate,SD,2002-10-28,45.0,48.0,4.47,Public Opinion Strategies
-senate,SD,2002-11-01,48.0,44.0,4.47,Zogby Analytics
-senate,SD,2002-11-01,45.0,48.0,3.82,Gallup
-senate,SD,2002-11-03,47.4,47.5,3.84,Public Opinion Strategies
-senate,SD,2002-11-03,44.0,48.0,4.47,Zogby Analytics
-senate,TN,2002-09-09,42.0,49.0,4.08,Garin-Hart-Yang Research Group
-senate,TN,2002-09-07,27.0,45.0,4.45,University of Tennessee
-senate,TN,2002-09-16,37.0,45.0,4.47,Zogby Analytics
-senate,TN,2002-09-18,35.0,54.0,4.0,Mason-Dixon Polling & Strategy
-senate,TN,2002-10-01,43.0,50.0,4.08,Mellman Group
-senate,TN,2002-10-02,33.0,52.0,4.08,North Star Opinion Research
-senate,TN,2002-10-06,42.0,50.0,3.71,SurveyUSA
-senate,TN,2002-10-07,36.0,49.0,4.47,Zogby Analytics
-senate,TN,2002-10-10,33.0,45.0,4.45,University of Tennessee
-senate,TN,2002-10-08,39.0,53.0,3.84,North Star Opinion Research
-senate,TN,2002-10-16,34.0,50.0,4.08,North Star Opinion Research
-senate,TN,2002-10-19,44.0,50.0,4.08,Mellman Group
-senate,TN,2002-10-20,45.0,49.0,3.71,SurveyUSA
-senate,TN,2002-10-20,36.0,45.0,3.49,Ethridge & Associates LLC
-senate,TN,2002-10-22,40.0,50.0,4.0,Mason-Dixon Polling & Strategy
-senate,TN,2002-10-27,41.0,52.0,3.71,SurveyUSA
-senate,TX,2002-09-09,36.0,42.0,3.16,Rice University
-senate,TX,2002-09-17,30.0,42.0,4.08,Zogby Analytics
-senate,TX,2002-09-23,39.0,35.0,3.33,FM3 Research
-senate,TX,2002-10-01,42.0,54.0,3.83,SurveyUSA
-senate,TX,2002-10-03,30.0,56.0,4.26,Frank N. Magid Associates Inc.
-senate,TX,2002-10-10,37.0,45.0,4.08,Zogby Analytics
-senate,TX,2002-10-10,36.0,46.0,4.26,Frank N. Magid Associates Inc.
-senate,TX,2002-10-15,42.0,54.0,3.83,SurveyUSA
-senate,TX,2002-10-15,42.0,40.0,3.84,FM3 Research
-senate,TX,2002-10-16,44.0,46.0,4.08,"Normington, Petts & Associates"
-senate,TX,2002-10-15,37.0,47.0,3.84,Blum & Weprin Associates
-senate,TX,2002-10-18,42.0,41.0,3.33,FM3 Research
-senate,TX,2002-10-17,36.0,46.0,4.26,Frank N. Magid Associates Inc.
-senate,TX,2002-10-22,45.0,52.0,3.83,SurveyUSA
-senate,TX,2002-10-24,40.0,43.0,4.26,Frank N. Magid Associates Inc.
-senate,TX,2002-10-18,35.0,44.0,3.55,Scripps Howard
-senate,TX,2002-10-27,39.0,45.0,3.9,Rice University
-senate,TX,2002-10-31,41.0,50.0,3.16,Blum & Weprin Associates
-senate,TX,2002-10-31,45.0,53.0,3.83,SurveyUSA
-senate,TX,2002-11-01,44.0,43.0,4.26,Frank N. Magid Associates Inc.
-senate,TX,2002-11-01,44.0,44.0,4.08,Zogby Analytics
-senate,TX,2002-11-03,42.0,46.0,4.08,Zogby Analytics
-senate,WV,2002-10-23,72.0,17.0,5,RMS Research
+mode,state,date,dem,rep,pollster,sigma
+governor,AK,2002-10-15,34.0,50.0,Moore Information Group,3
+governor,AR,2002-09-19,37.0,49.0,Zogby Analytics,3
+governor,AR,2002-10-10,40.0,50.0,Zogby Analytics,3
+governor,AR,2002-11-01,40.0,55.0,Gallup,3
+governor,AR,2002-11-03,41.0,50.0,Zogby Analytics,3
+governor,AZ,2002-09-26,43.0,42.0,SurveyUSA,3
+governor,AZ,2002-10-09,44.0,40.0,SurveyUSA,3
+governor,AZ,2002-10-23,42.0,43.0,SurveyUSA,3
+governor,AZ,2002-10-30,43.0,41.0,SurveyUSA,3
+governor,CA,2002-09-16,40.0,32.0,Public Policy Institute of California,3
+governor,CA,2002-09-22,47.0,35.0,SurveyUSA,3
+governor,CA,2002-09-27,45.0,35.0,Los Angeles Times,3
+governor,CA,2002-10-05,44.0,37.0,SurveyUSA,3
+governor,CA,2002-10-11,41.0,31.0,Public Policy Institute of California,3
+governor,CA,2002-10-12,48.0,33.0,SurveyUSA,3
+governor,CA,2002-10-19,47.0,36.0,SurveyUSA,3
+governor,CA,2002-10-24,45.0,36.0,Los Angeles Times,3
+governor,CA,2002-10-26,48.0,37.0,SurveyUSA,3
+governor,CA,2002-10-27,41.0,34.0,Field Research Corp. (Field Poll),3
+governor,CA,2002-10-28,42.0,39.0,Tarrance Group,3
+governor,CA,2002-11-02,45.0,39.0,SurveyUSA,3
+governor,CO,2002-09-17,20.0,58.0,Zogby Analytics,3
+governor,CO,2002-10-10,18.0,60.0,Zogby Analytics,3
+governor,CO,2002-10-11,21.0,64.0,Ciruli Associates,3
+governor,CO,2002-10-21,28.0,56.0,Ciruli Associates,3
+governor,CO,2002-10-22,25.0,62.0,Ciruli Associates,3
+governor,CO,2002-10-27,24.0,60.0,Ciruli Associates,3
+governor,CO,2002-10-31,26.0,62.0,Ciruli Associates,3
+governor,CO,2002-11-01,28.0,60.0,Zogby Analytics,3
+governor,CO,2002-11-01,32.0,62.0,Gallup,3
+governor,CT,2002-09-15,31.0,44.0,University of Connecticut,3
+governor,CT,2002-09-23,31.0,47.0,University of Connecticut,3
+governor,CT,2002-09-27,37.0,59.0,Quinnipiac University,3
+governor,CT,2002-09-30,34.0,48.0,University of Connecticut,3
+governor,CT,2002-10-06,31.0,49.0,University of Connecticut,3
+governor,CT,2002-10-17,34.0,49.0,University of Connecticut,3
+governor,CT,2002-10-24,38.0,55.0,Quinnipiac University,3
+governor,FL,2002-09-20,39.0,49.0,Zogby Analytics,3
+governor,FL,2002-09-23,43.0,49.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2002-09-25,48.0,49.0,SurveyUSA,3
+governor,FL,2002-10-09,45.0,48.0,Zogby Analytics,3
+governor,FL,2002-10-09,47.0,50.0,SurveyUSA,3
+governor,FL,2002-10-19,44.0,49.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2002-10-23,45.0,52.0,SurveyUSA,3
+governor,FL,2002-10-24,43.0,49.0,Fleming & Associates,3
+governor,FL,2002-10-29,43.0,51.0,Mason-Dixon Polling & Strategy,3
+governor,FL,2002-11-01,39.0,55.0,Zogby Analytics,3
+governor,FL,2002-11-03,46.0,51.0,SurveyUSA,3
+governor,GA,2002-10-16,48.0,39.0,Mason-Dixon Polling & Strategy,3
+governor,IA,2002-09-23,51.0,33.0,Selzer & Co.,3
+governor,IA,2002-09-24,50.0,46.0,SurveyUSA,3
+governor,IA,2002-10-07,50.0,46.0,SurveyUSA,3
+governor,IA,2002-10-21,55.0,41.0,SurveyUSA,3
+governor,IA,2002-10-28,56.0,42.0,SurveyUSA,3
+governor,IA,2002-10-31,52.0,40.0,Selzer & Co.,3
+governor,IL,2002-09-11,57.0,33.0,SurveyUSA,3
+governor,IL,2002-09-16,47.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2002-09-18,51.0,32.0,Zogby Analytics,3
+governor,IL,2002-09-25,56.0,37.0,SurveyUSA,3
+governor,IL,2002-09-29,51.0,35.0,Market Shares Corp.,3
+governor,IL,2002-10-08,48.0,37.0,Zogby Analytics,3
+governor,IL,2002-10-08,55.0,36.0,SurveyUSA,3
+governor,IL,2002-10-22,49.0,40.0,Mason-Dixon Polling & Strategy,3
+governor,IL,2002-10-22,52.0,40.0,SurveyUSA,3
+governor,IL,2002-10-23,50.0,38.0,KRC Research,3
+governor,IL,2002-10-26,47.0,37.0,Market Shares Corp.,3
+governor,IL,2002-10-29,53.0,39.0,SurveyUSA,3
+governor,IL,2002-10-31,43.2,43.5,Zogby Analytics,3
+governor,KS,2002-09-14,55.0,38.0,SurveyUSA,3
+governor,KS,2002-09-28,57.0,37.0,SurveyUSA,3
+governor,KS,2002-10-05,55.0,37.0,SurveyUSA,3
+governor,KS,2002-10-12,55.0,38.0,SurveyUSA,3
+governor,KS,2002-10-26,53.0,38.0,SurveyUSA,3
+governor,KS,2002-10-29,49.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,KS,2002-11-01,51.0,44.0,SurveyUSA,3
+governor,MA,2002-09-18,45.0,42.0,RKM Research and Communications Inc.,3
+governor,MA,2002-09-25,42.0,36.0,KRC Research,3
+governor,MA,2002-10-02,43.0,42.0,RKM Research and Communications Inc.,3
+governor,MA,2002-10-05,42.0,30.0,Suffolk University,3
+governor,MA,2002-10-08,42.0,40.0,Zogby Analytics,3
+governor,MA,2002-10-21,36.7,37.2,Suffolk University,3
+governor,MA,2002-10-26,44.0,38.0,RKM Research and Communications Inc.,3
+governor,MA,2002-10-29,41.0,40.0,KRC Research,3
+governor,MA,2002-10-31,42.0,41.0,RKM Research and Communications Inc.,3
+governor,MA,2002-11-01,38.0,40.0,KRC Research,3
+governor,MA,2002-11-03,38.0,41.0,Suffolk University,3
+governor,MD,2002-09-13,43.0,46.0,Mason-Dixon Polling & Strategy,3
+governor,MD,2002-09-15,48.0,48.0,SurveyUSA,3
+governor,MD,2002-10-06,47.0,51.0,SurveyUSA,3
+governor,MD,2002-10-12,47.0,49.0,SurveyUSA,3
+governor,MD,2002-10-12,46.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,MD,2002-10-19,48.0,48.0,SurveyUSA,3
+governor,MD,2002-10-24,47.0,47.0,ABC News/The Washington Post,3
+governor,MD,2002-10-26,49.0,48.0,SurveyUSA,3
+governor,MD,2002-10-29,46.0,47.0,Mason-Dixon Polling & Strategy,3
+governor,MD,2002-11-01,46.0,51.0,SurveyUSA,3
+governor,ME,2002-09-09,57.0,26.0,RKM Research and Communications Inc.,3
+governor,ME,2002-10-25,46.0,36.0,RKM Research and Communications Inc.,3
+governor,MI,2002-09-16,50.0,38.0,EPIC-MRA,3
+governor,MI,2002-10-04,53.0,41.0,EPIC-MRA,3
+governor,MI,2002-10-05,55.0,41.0,SurveyUSA,3
+governor,MI,2002-10-14,50.0,40.0,EPIC-MRA,3
+governor,MI,2002-10-15,47.0,35.0,Mitchell Research & Communications,3
+governor,MI,2002-10-19,54.0,41.0,SurveyUSA,3
+governor,MI,2002-10-21,51.0,37.0,EPIC-MRA,3
+governor,MI,2002-10-22,47.0,39.0,Mitchell Research & Communications,3
+governor,MI,2002-10-26,55.0,42.0,SurveyUSA,3
+governor,MI,2002-10-29,50.0,39.0,EPIC-MRA,3
+governor,MI,2002-10-29,51.0,38.0,Mitchell Research & Communications,3
+governor,MI,2002-11-01,48.0,39.0,EPIC-MRA,3
+governor,MI,2002-11-02,52.0,46.0,SurveyUSA,3
+governor,MN,2002-09-13,27.0,28.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2002-09-18,23.0,28.0,Zogby Analytics,3
+governor,MN,2002-10-10,25.0,30.0,Zogby Analytics,3
+governor,MN,2002-10-31,32.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,MN,2002-11-01,34.0,35.0,Zogby Analytics,3
+governor,MN,2002-11-03,36.0,36.0,Zogby Analytics,3
+governor,NH,2002-09-16,30.0,55.0,American Research Group,3
+governor,NH,2002-10-01,30.0,59.0,American Research Group,3
+governor,NH,2002-10-05,33.0,49.0,University of New Hampshire Survey Center,3
+governor,NH,2002-10-15,28.0,57.0,American Research Group,3
+governor,NH,2002-10-21,33.0,52.0,American Research Group,3
+governor,NH,2002-10-26,37.0,49.0,University of New Hampshire Survey Center,3
+governor,NH,2002-10-29,36.0,52.0,American Research Group,3
+governor,NH,2002-11-01,38.0,52.0,University of New Hampshire Survey Center,3
+governor,NH,2002-11-02,38.0,53.0,American Research Group,3
+governor,NM,2002-09-10,50.0,36.0,Research & Polling Inc.,3
+governor,NM,2002-09-25,46.0,37.0,Mason-Dixon Polling & Strategy,3
+governor,NM,2002-10-09,50.0,32.0,Research & Polling Inc.,3
+governor,NM,2002-10-28,51.0,37.0,Mason-Dixon Polling & Strategy,3
+governor,NM,2002-10-30,52.0,34.0,Research & Polling Inc.,3
+governor,NV,2002-09-23,26.0,61.0,SurveyUSA,3
+governor,NV,2002-10-14,26.0,62.0,SurveyUSA,3
+governor,NV,2002-10-22,21.0,65.0,Mason-Dixon Polling & Strategy,3
+governor,NV,2002-10-28,28.0,63.0,SurveyUSA,3
+governor,NY,2002-09-19,37.0,48.0,SurveyUSA,3
+governor,NY,2002-09-20,34.0,45.0,Quinnipiac University,3
+governor,NY,2002-09-25,32.0,48.0,Marist College,3
+governor,NY,2002-10-02,29.0,51.0,SurveyUSA,3
+governor,NY,2002-10-07,26.0,43.0,Siena College,3
+governor,NY,2002-10-08,33.0,46.0,SurveyUSA,3
+governor,NY,2002-10-11,31.0,47.0,Quinnipiac University,3
+governor,NY,2002-10-15,29.0,45.0,SurveyUSA,3
+governor,NY,2002-10-17,25.0,44.0,Siena College,3
+governor,NY,2002-10-22,29.0,44.0,SurveyUSA,3
+governor,NY,2002-10-28,27.0,48.0,Marist College,3
+governor,NY,2002-10-29,32.0,47.0,SurveyUSA,3
+governor,NY,2002-10-31,29.0,45.0,Quinnipiac University,3
+governor,NY,2002-11-02,27.0,48.0,Marist College,3
+governor,OH,2002-09-11,37.0,48.0,Mason-Dixon Polling & Strategy,3
+governor,OH,2002-10-17,44.0,51.0,SurveyUSA,3
+governor,OH,2002-10-22,38.0,50.0,Mason-Dixon Polling & Strategy,3
+governor,OH,2002-10-25,35.0,49.0,Zogby Analytics,3
+governor,OH,2002-10-30,39.0,57.0,SurveyUSA,3
+governor,OK,2002-09-25,39.0,45.0,SurveyUSA,3
+governor,OK,2002-10-01,37.0,43.0,SurveyUSA,3
+governor,OK,2002-10-07,39.0,45.0,SurveyUSA,3
+governor,OK,2002-10-15,38.0,43.0,SurveyUSA,3
+governor,OK,2002-10-30,39.0,37.0,SurveyUSA,3
+governor,OK,2002-11-02,42.0,38.0,SurveyUSA,3
+governor,OR,2002-10-04,45.0,41.0,DHM Research,3
+governor,OR,2002-10-27,48.0,42.0,DHM Research,3
+governor,PA,2002-09-09,53.0,40.0,SurveyUSA,3
+governor,PA,2002-09-13,48.0,41.0,Quinnipiac University,3
+governor,PA,2002-09-21,46.0,35.0,Muhlenberg College Institute of Public Opinion,3
+governor,PA,2002-09-30,58.0,35.0,SurveyUSA,3
+governor,PA,2002-10-02,47.0,33.0,Mason-Dixon Polling & Strategy,3
+governor,PA,2002-10-06,57.0,36.0,SurveyUSA,3
+governor,PA,2002-10-12,56.0,36.0,Quinnipiac University,3
+governor,PA,2002-10-14,57.0,36.0,SurveyUSA,3
+governor,PA,2002-10-20,55.0,37.0,SurveyUSA,3
+governor,PA,2002-10-24,54.0,35.0,Quinnipiac University,3
+governor,PA,2002-10-28,56.0,37.0,SurveyUSA,3
+governor,PA,2002-10-30,53.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,RI,2002-09-14,49.0,35.0,Fleming & Associates,3
+governor,RI,2002-09-24,48.0,44.0,SurveyUSA,3
+governor,RI,2002-10-15,48.0,45.0,SurveyUSA,3
+governor,RI,2002-10-22,46.0,48.0,SurveyUSA,3
+governor,RI,2002-10-28,40.0,43.0,Fleming & Associates,3
+governor,RI,2002-10-29,45.0,48.0,SurveyUSA,3
+governor,SC,2002-09-14,51.0,46.0,SurveyUSA,3
+governor,SC,2002-09-29,49.0,49.0,SurveyUSA,3
+governor,SC,2002-10-09,45.0,43.0,Zogby Analytics,3
+governor,SC,2002-10-12,51.0,45.0,SurveyUSA,3
+governor,SC,2002-10-15,41.0,45.0,Mason-Dixon Polling & Strategy,3
+governor,SC,2002-10-19,51.0,46.0,SurveyUSA,3
+governor,SC,2002-10-26,50.0,47.0,SurveyUSA,3
+governor,SC,2002-10-28,42.0,49.0,Mason-Dixon Polling & Strategy,3
+governor,SC,2002-11-02,52.0,46.0,SurveyUSA,3
+governor,SD,2002-09-18,32.0,51.0,Mason-Dixon Polling & Strategy,3
+governor,SD,2002-10-26,36.0,55.0,Mason-Dixon Polling & Strategy,3
+governor,SD,2002-11-01,40.0,54.0,Gallup,3
+governor,TN,2002-09-18,44.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2002-09-24,48.0,44.0,SurveyUSA,3
+governor,TN,2002-10-06,47.0,41.0,SurveyUSA,3
+governor,TN,2002-10-20,48.0,42.0,SurveyUSA,3
+governor,TN,2002-10-22,45.0,42.0,Mason-Dixon Polling & Strategy,3
+governor,TN,2002-10-27,48.0,44.0,SurveyUSA,3
+governor,TX,2002-09-17,32.0,44.0,Zogby Analytics,3
+governor,TX,2002-09-18,53.0,42.0,SurveyUSA,3
+governor,TX,2002-10-01,44.0,51.0,SurveyUSA,3
+governor,TX,2002-10-10,30.0,52.0,Zogby Analytics,3
+governor,TX,2002-10-15,43.0,52.0,SurveyUSA,3
+governor,TX,2002-10-22,42.0,53.0,SurveyUSA,3
+governor,TX,2002-10-31,43.0,53.0,SurveyUSA,3
+governor,TX,2002-11-01,36.0,50.0,Zogby Analytics,3
+governor,TX,2002-11-03,34.0,52.0,Zogby Analytics,3
+governor,VT,2002-10-24,42.0,35.0,Mason-Dixon Polling & Strategy,3
+governor,VT,2002-10-31,46.0,36.0,Mason-Dixon Polling & Strategy,3
+governor,WI,2002-09-28,40.0,31.0,Harris Insights & Analytics,3
+governor,WI,2002-10-26,38.0,36.0,Market Shares Corp.,3
+senate,AR,2002-09-19,45.0,43.0,Zogby Analytics,3
+senate,AR,2002-10-10,45.4,45.2,Zogby Analytics,3
+senate,AR,2002-11-01,51.0,43.0,Gallup,3
+senate,AR,2002-11-01,53.0,42.0,Zogby Analytics,3
+senate,AR,2002-11-03,53.0,41.0,Zogby Analytics,3
+senate,CO,2002-09-17,42.0,42.0,Zogby Analytics,3
+senate,CO,2002-10-08,43.0,52.0,SurveyUSA,3
+senate,CO,2002-10-10,41.0,40.0,Zogby Analytics,3
+senate,CO,2002-10-11,38.0,41.0,Ciruli Associates,3
+senate,CO,2002-10-22,46.0,48.0,SurveyUSA,3
+senate,CO,2002-10-23,36.0,44.0,Ciruli Associates,3
+senate,CO,2002-10-27,39.0,41.0,Ciruli Associates,3
+senate,CO,2002-10-31,42.0,38.0,Ciruli Associates,3
+senate,CO,2002-10-31,42.0,41.0,Ciruli Associates,3
+senate,CO,2002-11-01,50.0,43.0,Zogby Analytics,3
+senate,CO,2002-11-01,46.0,50.0,SurveyUSA,3
+senate,CO,2002-11-01,45.0,47.0,Gallup,3
+senate,CO,2002-11-03,44.0,50.0,Tarrance Group,3
+senate,CO,2002-11-03,49.0,44.0,Zogby Analytics,3
+senate,GA,2002-10-16,47.0,41.0,Mason-Dixon Polling & Strategy,3
+senate,GA,2002-11-01,43.0,44.0,Zogby Analytics,3
+senate,GA,2002-11-03,46.0,44.0,Zogby Analytics,3
+senate,IA,2002-09-23,54.0,34.0,Selzer & Co.,3
+senate,IA,2002-10-07,53.0,44.0,SurveyUSA,3
+senate,IA,2002-10-21,57.0,40.0,SurveyUSA,3
+senate,IA,2002-10-28,60.0,38.0,SurveyUSA,3
+senate,IA,2002-10-31,50.0,41.0,Selzer & Co.,3
+senate,IL,2002-09-16,57.0,28.0,Mason-Dixon Polling & Strategy,3
+senate,IL,2002-09-18,54.0,29.0,Zogby Analytics,3
+senate,IL,2002-09-29,51.0,26.0,Market Shares Corp.,3
+senate,IL,2002-10-08,57.0,27.0,Zogby Analytics,3
+senate,IL,2002-10-22,56.0,32.0,Mason-Dixon Polling & Strategy,3
+senate,IL,2002-10-22,56.0,36.0,SurveyUSA,3
+senate,IL,2002-10-26,47.0,27.0,Market Shares Corp.,3
+senate,IL,2002-10-29,56.0,37.0,SurveyUSA,3
+senate,IL,2002-10-31,55.0,31.0,Zogby Analytics,3
+senate,KY,2002-10-01,34.0,62.0,SurveyUSA,3
+senate,KY,2002-10-15,31.0,66.0,SurveyUSA,3
+senate,KY,2002-10-29,29.0,66.0,SurveyUSA,3
+senate,LA,2002-11-11,40.0,48.0,WPA Intelligence,3
+senate,LA,2002-12-03,47.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,ME,2002-09-09,28.0,60.0,RKM Research and Communications Inc.,3
+senate,ME,2002-10-25,31.0,59.0,RKM Research and Communications Inc.,3
+senate,MI,2002-10-14,57.0,30.0,EPIC-MRA,3
+senate,MI,2002-10-15,58.0,32.0,Mitchell Research & Communications,3
+senate,MI,2002-10-22,61.0,27.0,Mitchell Research & Communications,3
+senate,MI,2002-10-29,63.0,31.0,EPIC-MRA,3
+senate,MI,2002-10-29,60.0,30.0,Mitchell Research & Communications,3
+senate,MI,2002-11-01,61.0,31.0,EPIC-MRA,3
+senate,MN,2002-10-31,41.0,47.0,Mason-Dixon Polling & Strategy,3
+senate,MN,2002-11-01,47.0,44.0,Zogby Analytics,3
+senate,MN,2002-11-03,49.0,44.0,Zogby Analytics,3
+senate,MO,2002-09-17,48.0,40.0,Zogby Analytics,3
+senate,MO,2002-09-26,51.0,43.0,SurveyUSA,3
+senate,MO,2002-10-05,48.0,48.0,SurveyUSA,3
+senate,MO,2002-10-10,41.0,47.0,Zogby Analytics,3
+senate,MO,2002-10-16,50.0,47.0,SurveyUSA,3
+senate,MO,2002-10-31,46.0,46.0,Zogby Analytics,3
+senate,MO,2002-11-01,44.0,48.0,Gallup,3
+senate,MO,2002-11-02,49.0,47.0,SurveyUSA,3
+senate,MO,2002-11-03,43.0,50.0,Zogby Analytics,3
+senate,MT,2002-09-25,54.0,35.0,Mason-Dixon Polling & Strategy,3
+senate,MT,2002-10-23,59.0,28.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2002-09-13,35.0,49.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2002-09-17,32.0,55.0,Zogby Analytics,3
+senate,NC,2002-10-08,45.0,49.0,SurveyUSA,3
+senate,NC,2002-10-13,40.0,50.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2002-10-22,44.0,50.0,SurveyUSA,3
+senate,NC,2002-10-28,42.0,48.0,Mason-Dixon Polling & Strategy,3
+senate,NC,2002-10-29,46.0,50.0,SurveyUSA,3
+senate,NC,2002-11-01,42.0,46.0,Zogby Analytics,3
+senate,NC,2002-11-03,39.0,46.0,Zogby Analytics,3
+senate,NH,2002-09-16,38.0,47.0,American Research Group,3
+senate,NH,2002-10-01,34.0,55.0,American Research Group,3
+senate,NH,2002-10-05,47.0,44.0,University of New Hampshire Survey Center,3
+senate,NH,2002-10-15,43.0,51.0,American Research Group,3
+senate,NH,2002-10-21,46.0,48.0,American Research Group,3
+senate,NH,2002-10-26,46.0,42.0,University of New Hampshire Survey Center,3
+senate,NH,2002-10-29,46.0,48.0,American Research Group,3
+senate,NH,2002-11-01,45.0,46.0,University of New Hampshire Survey Center,3
+senate,NH,2002-11-02,44.0,48.0,American Research Group,3
+senate,NJ,2002-09-05,39.0,44.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2002-09-22,34.0,47.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2002-10-04,49.0,45.0,SurveyUSA,3
+senate,NJ,2002-10-04,49.0,45.0,Quinnipiac University,3
+senate,NJ,2002-10-05,44.0,44.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2002-10-09,50.0,41.0,SurveyUSA,3
+senate,NJ,2002-10-10,48.0,36.0,Zogby Analytics,3
+senate,NJ,2002-10-12,48.0,41.0,Fairleigh Dickinson University,3
+senate,NJ,2002-10-15,47.0,42.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2002-10-18,52.0,43.0,Quinnipiac University,3
+senate,NJ,2002-10-21,51.0,40.0,SurveyUSA,3
+senate,NJ,2002-10-21,52.0,39.0,CBS News/The New York Times,3
+senate,NJ,2002-10-22,47.0,40.0,Mason-Dixon Polling & Strategy,3
+senate,NJ,2002-10-28,51.0,41.0,SurveyUSA,3
+senate,NJ,2002-10-29,52.0,40.0,Rutgers University Eagleton Center for Public Interest Polling,3
+senate,NJ,2002-10-30,47.0,37.0,Fairleigh Dickinson University,3
+senate,NJ,2002-10-31,47.0,38.0,Fairleigh Dickinson University,3
+senate,NJ,2002-10-31,50.0,39.0,Quinnipiac University,3
+senate,NJ,2002-11-01,49.0,36.0,Zogby Analytics,3
+senate,NJ,2002-11-03,49.0,38.0,Zogby Analytics,3
+senate,NM,2002-09-10,23.0,66.0,Research & Polling Inc.,3
+senate,NM,2002-10-09,24.0,67.0,Research & Polling Inc.,3
+senate,NM,2002-10-28,28.0,61.0,Mason-Dixon Polling & Strategy,3
+senate,NM,2002-10-30,27.0,65.0,Research & Polling Inc.,3
+senate,OK,2002-10-01,37.0,54.0,SurveyUSA,3
+senate,OK,2002-10-15,37.0,53.0,SurveyUSA,3
+senate,OK,2002-10-30,35.0,52.0,SurveyUSA,3
+senate,OK,2002-11-02,36.0,53.0,SurveyUSA,3
+senate,OR,2002-09-22,33.0,50.0,Moore Information Group,3
+senate,OR,2002-10-04,34.0,55.0,DHM Research,3
+senate,OR,2002-10-27,36.0,55.0,DHM Research,3
+senate,RI,2002-09-14,73.0,14.0,Fleming & Associates,3
+senate,SC,2002-09-14,47.0,49.0,SurveyUSA,3
+senate,SC,2002-10-09,35.0,47.0,Zogby Analytics,3
+senate,SC,2002-10-12,46.0,50.0,SurveyUSA,3
+senate,SC,2002-10-15,34.0,51.0,Mason-Dixon Polling & Strategy,3
+senate,SC,2002-10-19,44.0,53.0,SurveyUSA,3
+senate,SC,2002-10-26,48.0,49.0,SurveyUSA,3
+senate,SC,2002-10-28,36.0,53.0,Mason-Dixon Polling & Strategy,3
+senate,SC,2002-11-02,48.0,49.0,SurveyUSA,3
+senate,SD,2002-09-16,46.0,43.0,Zogby Analytics,3
+senate,SD,2002-09-18,44.0,43.0,Mason-Dixon Polling & Strategy,3
+senate,SD,2002-10-10,43.0,45.0,Zogby Analytics,3
+senate,SD,2002-10-10,40.0,43.0,CBS News,3
+senate,SD,2002-10-26,47.0,45.0,Mason-Dixon Polling & Strategy,3
+senate,SD,2002-11-01,48.0,44.0,Zogby Analytics,3
+senate,SD,2002-11-01,45.0,48.0,Gallup,3
+senate,SD,2002-11-03,44.0,48.0,Zogby Analytics,3
+senate,TN,2002-09-16,37.0,45.0,Zogby Analytics,3
+senate,TN,2002-09-18,35.0,54.0,Mason-Dixon Polling & Strategy,3
+senate,TN,2002-10-06,42.0,50.0,SurveyUSA,3
+senate,TN,2002-10-07,36.0,49.0,Zogby Analytics,3
+senate,TN,2002-10-20,45.0,49.0,SurveyUSA,3
+senate,TN,2002-10-22,40.0,50.0,Mason-Dixon Polling & Strategy,3
+senate,TN,2002-10-27,41.0,52.0,SurveyUSA,3
+senate,TX,2002-09-17,30.0,42.0,Zogby Analytics,3
+senate,TX,2002-10-01,42.0,54.0,SurveyUSA,3
+senate,TX,2002-10-10,37.0,45.0,Zogby Analytics,3
+senate,TX,2002-10-15,42.0,54.0,SurveyUSA,3
+senate,TX,2002-10-22,45.0,52.0,SurveyUSA,3
+senate,TX,2002-10-31,45.0,53.0,SurveyUSA,3
+senate,TX,2002-11-01,44.0,44.0,Zogby Analytics,3
+senate,TX,2002-11-03,42.0,46.0,Zogby Analytics,3
+senate,VA,2002-10-27,5.0,76.0,Mason-Dixon Polling & Strategy,3

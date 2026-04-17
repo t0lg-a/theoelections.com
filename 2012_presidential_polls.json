@@ -1,1 +1,872 @@
-{"polls": [{"end_date": "2012-09-08", "dem": 50.0, "rep": 45.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-08", "dem": 51.0, "rep": 43.0, "pollster": "Big Village", "sample": "709"}, {"end_date": "2012-09-08", "dem": 49.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "710"}, {"end_date": "2012-09-08", "dem": 50.0, "rep": 44.0, "pollster": "Public Policy Polling", "sample": "1000"}, {"end_date": "2012-09-06", "dem": 46.0, "rep": 44.0, "pollster": "TIPP Insights", "sample": "808"}, {"end_date": "2012-09-07", "dem": 48.58, "rep": 44.92, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-09-09", "dem": 50.0, "rep": 46.0, "pollster": "ABC News/The Washington Post", "sample": "384"}, {"end_date": "2012-09-09", "dem": 48.0, "rep": 45.0, "pollster": "Ipsos", "sample": "873"}, {"end_date": "2012-09-10", "dem": 48.0, "rep": 43.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1056"}, {"end_date": "2012-09-11", "dem": 47.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-11", "dem": 48.0, "rep": 42.0, "pollster": "Zogby Analytics", "sample": "1014"}, {"end_date": "2012-09-10", "dem": 50.0, "rep": 45.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2012-09-10", "dem": 49.0, "rep": 46.0, "pollster": "CBS News/The New York Times", "sample": "1162"}, {"end_date": "2012-09-11", "dem": 48.0, "rep": 41.0, "pollster": "Ipsos", "sample": "990"}, {"end_date": "2012-09-11", "dem": 49.0, "rep": 45.0, "pollster": "CVOTER", "sample": "1036"}, {"end_date": "2012-09-13", "dem": 48.0, "rep": 46.0, "pollster": "The Winston Group", "sample": "1000"}, {"end_date": "2012-09-14", "dem": 49.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-13", "dem": 48.0, "rep": 45.0, "pollster": "Gallup", "sample": "3050"}, {"end_date": "2012-09-15", "dem": 48.0, "rep": 45.0, "pollster": "Monmouth University Polling Institute", "sample": "1344"}, {"end_date": "2012-09-15", "dem": 50.0, "rep": 46.0, "pollster": "Public Policy Polling", "sample": "1000"}, {"end_date": "2012-09-14", "dem": 50.0, "rep": 45.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "736"}, {"end_date": "2012-09-14", "dem": 51.0, "rep": 43.0, "pollster": "Pew Research Center", "sample": "2192"}, {"end_date": "2012-09-14", "dem": 48.25, "rep": 44.87, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-09-16", "dem": 49.0, "rep": 44.0, "pollster": "YouGov", "sample": "943"}, {"end_date": "2012-09-15", "dem": 47.0, "rep": 46.0, "pollster": "GfK Group", "sample": "807"}, {"end_date": "2012-09-15", "dem": 49.0, "rep": 42.0, "pollster": "Princeton Survey Research Associates International", "sample": "787"}, {"end_date": "2012-09-17", "dem": 48.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-15", "dem": 46.0, "rep": 43.0, "pollster": "University of Connecticut", "sample": "1186"}, {"end_date": "2012-09-17", "dem": 50.0, "rep": 43.0, "pollster": "FTI Consulting", "sample": "1055"}, {"end_date": "2012-09-19", "dem": 48.0, "rep": 46.0, "pollster": "Angus Reid Global", "sample": "865"}, {"end_date": "2012-09-19", "dem": 49.0, "rep": 47.0, "pollster": "American Research Group", "sample": "761"}, {"end_date": "2012-09-18", "dem": 50.0, "rep": 46.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-09-19", "dem": 48.0, "rep": 42.0, "pollster": "Ipsos", "sample": "1616"}, {"end_date": "2012-09-20", "dem": 48.0, "rep": 47.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-19", "dem": 49.0, "rep": 46.0, "pollster": "CVOTER", "sample": "761"}, {"end_date": "2012-09-21", "dem": 49.0, "rep": 41.0, "pollster": "Zogby Analytics", "sample": "860"}, {"end_date": "2012-09-20", "dem": 48.0, "rep": 46.0, "pollster": "Gallup", "sample": "3050"}, {"end_date": "2012-09-22", "dem": 50.0, "rep": 45.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-09-21", "dem": 49.71, "rep": 43.47, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-09-23", "dem": 47.0, "rep": 47.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-23", "dem": 48.0, "rep": 43.0, "pollster": "YouGov", "sample": "896"}, {"end_date": "2012-09-23", "dem": 49.0, "rep": 43.0, "pollster": "Selzer & Co.", "sample": "789"}, {"end_date": "2012-09-25", "dem": 48.0, "rep": 43.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1092"}, {"end_date": "2012-09-26", "dem": 48.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-26", "dem": 49.0, "rep": 47.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-09-26", "dem": 46.0, "rep": 43.0, "pollster": "MRG Research", "sample": "981"}, {"end_date": "2012-09-26", "dem": 47.0, "rep": 42.0, "pollster": "Ipsos", "sample": "855"}, {"end_date": "2012-09-26", "dem": 49.0, "rep": 46.0, "pollster": "CVOTER", "sample": "855"}, {"end_date": "2012-09-28", "dem": 50.0, "rep": 41.0, "pollster": "Zogby Analytics", "sample": "800"}, {"end_date": "2012-09-28", "dem": 49.0, "rep": 47.0, "pollster": "ABC News/The Washington Post", "sample": "813"}, {"end_date": "2012-09-27", "dem": 49.0, "rep": 45.0, "pollster": "Gallup", "sample": "3050"}, {"end_date": "2012-09-29", "dem": 50.0, "rep": 47.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-09-29", "dem": 47.0, "rep": 44.0, "pollster": "Big Village", "sample": "783"}, {"end_date": "2012-09-29", "dem": 49.0, "rep": 46.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-09-29", "dem": 49.0, "rep": 45.0, "pollster": "Public Policy Polling", "sample": "1100"}, {"end_date": "2012-09-29", "dem": 47.0, "rep": 47.0, "pollster": "Princeton Survey Research Associates International", "sample": "789"}, {"end_date": "2012-09-28", "dem": 48.0, "rep": 43.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "832"}, {"end_date": "2012-09-28", "dem": 51.0, "rep": 44.0, "pollster": "GQR", "sample": "800"}, {"end_date": "2012-09-27", "dem": 49.0, "rep": 45.0, "pollster": "Quinnipiac University", "sample": "1912"}, {"end_date": "2012-09-21", "dem": 50.0, "rep": 46.0, "pollster": "Public Religion Research Institute", "sample": "1862"}, {"end_date": "2012-09-28", "dem": 50.05, "rep": 44.1, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-09-30", "dem": 49.0, "rep": 44.0, "pollster": "YouGov", "sample": "785"}, {"end_date": "2012-10-02", "dem": 49.0, "rep": 45.0, "pollster": "Clarus Research Group", "sample": "590"}, {"end_date": "2012-10-01", "dem": 49.0, "rep": 45.0, "pollster": "McLaughlin & Associates", "sample": "1000"}, {"end_date": "2012-10-02", "dem": 49.0, "rep": 47.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-04", "dem": 46.0, "rep": 47.0, "pollster": "Clarus Research Group", "sample": "590"}, {"end_date": "2012-10-03", "dem": 50.0, "rep": 48.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-10-03", "dem": 46.0, "rep": 44.0, "pollster": "Ipsos", "sample": "1434"}, {"end_date": "2012-10-03", "dem": 45.0, "rep": 41.0, "pollster": "Ipsos", "sample": "1728"}, {"end_date": "2012-10-05", "dem": 47.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-04", "dem": 50.0, "rep": 45.0, "pollster": "Gallup", "sample": "3050"}, {"end_date": "2012-10-04", "dem": 48.0, "rep": 48.0, "pollster": "Gallup", "sample": "2700"}, {"end_date": "2012-10-06", "dem": 45.5, "rep": 45.0, "pollster": "Zogby Analytics", "sample": "800"}, {"end_date": "2012-10-06", "dem": 47.0, "rep": 49.0, "pollster": "Public Policy Polling", "sample": "1300"}, {"end_date": "2012-10-06", "dem": 45.0, "rep": 49.0, "pollster": "Pew Research Center", "sample": "1112"}, {"end_date": "2012-10-05", "dem": 49.07, "rep": 45.24, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-10-07", "dem": 49.0, "rep": 46.0, "pollster": "YouGov", "sample": "763"}, {"end_date": "2012-10-07", "dem": 47.0, "rep": 48.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-10-06", "dem": 44.0, "rep": 49.0, "pollster": "TIPP Insights", "sample": "757"}, {"end_date": "2012-10-08", "dem": 47.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-08", "dem": 47.0, "rep": 48.0, "pollster": "The Winston Group", "sample": "1000"}, {"end_date": "2012-10-08", "dem": 45.0, "rep": 46.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1109"}, {"end_date": "2012-10-07", "dem": 46.0, "rep": 49.0, "pollster": "CVOTER", "sample": "1110"}, {"end_date": "2012-10-08", "dem": 44.0, "rep": 45.0, "pollster": "Ipsos", "sample": "1027"}, {"end_date": "2012-10-09", "dem": 46.0, "rep": 47.0, "pollster": "Monmouth University Polling Institute", "sample": "1360"}, {"end_date": "2012-10-10", "dem": 47.0, "rep": 47.0, "pollster": "Angus Reid Global", "sample": "906"}, {"end_date": "2012-10-09", "dem": 49.0, "rep": 48.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-10-12", "dem": 47.0, "rep": 49.0, "pollster": "Public Policy Polling", "sample": "608"}, {"end_date": "2012-10-11", "dem": 48.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-13", "dem": 49.0, "rep": 47.0, "pollster": "Public Policy Polling", "sample": "624"}, {"end_date": "2012-10-12", "dem": 49.0, "rep": 46.0, "pollster": "ABC News/The Washington Post", "sample": "923"}, {"end_date": "2012-10-11", "dem": 47.0, "rep": 49.0, "pollster": "Gallup", "sample": "2700"}, {"end_date": "2012-10-14", "dem": 40.0, "rep": 56.0, "pollster": "Public Policy Polling", "sample": "384"}, {"end_date": "2012-10-13", "dem": 47.0, "rep": 48.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-10-12", "dem": 47.3, "rep": 45.7, "pollster": "TIPP Insights", "sample": "931"}, {"end_date": "2012-10-13", "dem": 47.0, "rep": 45.0, "pollster": "Ipsos", "sample": "1864"}, {"end_date": "2012-10-13", "dem": 46.0, "rep": 42.0, "pollster": "Ipsos", "sample": "2106"}, {"end_date": "2012-10-12", "dem": 49.66, "rep": 44.51, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-10-14", "dem": 47.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-14", "dem": 47.0, "rep": 46.0, "pollster": "YouGov", "sample": "826"}, {"end_date": "2012-10-13", "dem": 48.0, "rep": 45.0, "pollster": "University of Connecticut", "sample": "1023"}, {"end_date": "2012-10-15", "dem": 46.0, "rep": 48.0, "pollster": "CVOTER", "sample": "1254"}, {"end_date": "2012-10-17", "dem": 48.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-18", "dem": 44.0, "rep": 46.0, "pollster": "Gravis Marketing", "sample": "805"}, {"end_date": "2012-10-16", "dem": 47.0, "rep": 49.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-10-18", "dem": 49.0, "rep": 47.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-18", "dem": 46.0, "rep": 45.0, "pollster": "Ipsos", "sample": "1368"}, {"end_date": "2012-10-19", "dem": 49.7, "rep": 47.3, "pollster": "Zogby Analytics", "sample": "800"}, {"end_date": "2012-10-19", "dem": 48.0, "rep": 48.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-19", "dem": 47.0, "rep": 47.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "816"}, {"end_date": "2012-10-19", "dem": 48.0, "rep": 46.0, "pollster": "CBS News", "sample": "790"}, {"end_date": "2012-10-18", "dem": 45.0, "rep": 51.0, "pollster": "Gallup", "sample": "2700"}, {"end_date": "2012-10-18", "dem": 47.4, "rep": 43.4, "pollster": "TIPP Insights", "sample": "885"}, {"end_date": "2012-10-20", "dem": 47.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-20", "dem": 45.0, "rep": 48.0, "pollster": "Monmouth University Polling Institute", "sample": "1402"}, {"end_date": "2012-10-20", "dem": 47.0, "rep": 49.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-10-20", "dem": 49.0, "rep": 46.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2012-10-21", "dem": 47.0, "rep": 49.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-19", "dem": 48.26, "rep": 46.36, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-10-21", "dem": 48.0, "rep": 46.0, "pollster": "YouGov", "sample": "803"}, {"end_date": "2012-10-22", "dem": 48.0, "rep": 49.0, "pollster": "ABC News/The Washington Post", "sample": "1394"}, {"end_date": "2012-10-21", "dem": 45.0, "rep": 47.0, "pollster": "GfK Group", "sample": "839"}, {"end_date": "2012-10-23", "dem": 47.0, "rep": 50.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-22", "dem": 48.0, "rep": 47.0, "pollster": "CVOTER", "sample": "1179"}, {"end_date": "2012-10-24", "dem": 48.0, "rep": 48.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-24", "dem": 47.0, "rep": 48.0, "pollster": "North Star Opinion Research", "sample": "1000"}, {"end_date": "2012-10-24", "dem": 49.0, "rep": 48.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-10-24", "dem": 47.0, "rep": 46.0, "pollster": "Ipsos", "sample": "1237"}, {"end_date": "2012-10-24", "dem": 46.0, "rep": 42.0, "pollster": "Ipsos", "sample": "1610"}, {"end_date": "2012-10-26", "dem": 48.0, "rep": 49.0, "pollster": "ABC News/The Washington Post", "sample": "1278"}, {"end_date": "2012-10-24", "dem": 45.4, "rep": 44.1, "pollster": "TIPP Insights", "sample": "942"}, {"end_date": "2012-10-26", "dem": 47.0, "rep": 50.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-25", "dem": 46.0, "rep": 51.0, "pollster": "Gallup", "sample": "2700"}, {"end_date": "2012-10-27", "dem": 48.0, "rep": 49.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-27", "dem": 49.0, "rep": 49.0, "pollster": "Public Policy Polling", "sample": "1400"}, {"end_date": "2012-10-27", "dem": 48.0, "rep": 48.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-10-27", "dem": 48.0, "rep": 47.0, "pollster": "CBS News/The New York Times", "sample": "563"}, {"end_date": "2012-10-27", "dem": 50.0, "rep": 45.0, "pollster": "Princeton Survey Research Associates International", "sample": "713"}, {"end_date": "2012-10-26", "dem": 47.0, "rep": 47.0, "pollster": "Pew Research Center", "sample": "1495"}, {"end_date": "2012-10-26", "dem": 50.36, "rep": 45.29, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-10-28", "dem": 48.0, "rep": 47.0, "pollster": "YouGov", "sample": "688"}, {"end_date": "2012-10-29", "dem": 44.7, "rep": 46.6, "pollster": "Zogby Analytics", "sample": "1015"}, {"end_date": "2012-10-29", "dem": 47.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "1500"}, {"end_date": "2012-10-29", "dem": 46.0, "rep": 46.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1128"}, {"end_date": "2012-10-26", "dem": 46.0, "rep": 43.0, "pollster": "High Point University Survey Research Center", "sample": "805"}, {"end_date": "2012-10-30", "dem": 49.0, "rep": 48.0, "pollster": "ABC News/The Washington Post", "sample": "1293"}, {"end_date": "2012-10-29", "dem": 47.0, "rep": 46.0, "pollster": "Ipsos", "sample": "4085"}, {"end_date": "2012-10-30", "dem": 48.7, "rep": 48.5, "pollster": "Zogby Analytics", "sample": "800"}, {"end_date": "2012-10-31", "dem": 49.0, "rep": 48.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-10-31", "dem": 47.0, "rep": 46.0, "pollster": "Purple Strategies", "sample": "1000"}, {"end_date": "2012-10-31", "dem": 48.0, "rep": 48.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-10-30", "dem": 49.0, "rep": 48.0, "pollster": "CVOTER", "sample": "1074"}, {"end_date": "2012-11-01", "dem": 46.3, "rep": 45.1, "pollster": "Zogby Analytics", "sample": "709"}, {"end_date": "2012-11-01", "dem": 48.0, "rep": 48.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2012-11-02", "dem": 48.0, "rep": 47.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1475"}, {"end_date": "2012-11-02", "dem": 51.0, "rep": 48.0, "pollster": "Angus Reid Global", "sample": "1019"}, {"end_date": "2012-11-02", "dem": 48.0, "rep": 45.0, "pollster": "Pew Research Center", "sample": "2709"}, {"end_date": "2012-11-02", "dem": 48.5, "rep": 46.5, "pollster": "YouGov", "sample": "36472"}, {"end_date": "2012-11-03", "dem": 50.0, "rep": 47.0, "pollster": "ABC News/The Washington Post", "sample": "2345"}, {"end_date": "2012-11-03", "dem": 48.0, "rep": 49.0, "pollster": "Gallup", "sample": "2551"}, {"end_date": "2012-11-03", "dem": 49.0, "rep": 46.0, "pollster": "Gallup", "sample": "3050"}, {"end_date": "2012-11-03", "dem": 50.0, "rep": 48.0, "pollster": "Public Policy Polling", "sample": "1200"}, {"end_date": "2012-11-03", "dem": 50.0, "rep": 48.0, "pollster": "Public Policy Polling", "sample": "1300"}, {"end_date": "2012-11-03", "dem": 48.0, "rep": 48.0, "pollster": "Gravis Marketing", "sample": "872"}, {"end_date": "2012-11-03", "dem": 48.0, "rep": 48.0, "pollster": "Big Village", "sample": "693"}, {"end_date": "2012-11-03", "dem": 49.0, "rep": 49.0, "pollster": "American Research Group", "sample": "1200"}, {"end_date": "2012-11-03", "dem": 48.0, "rep": 48.0, "pollster": "Monmouth University Polling Institute", "sample": "1417"}, {"end_date": "2012-11-03", "dem": 49.0, "rep": 45.0, "pollster": "GQR", "sample": "1080"}, {"end_date": "2012-11-04", "dem": 49.0, "rep": 48.0, "pollster": "CVOTER", "sample": "3000"}, {"end_date": "2012-11-03", "dem": 48.0, "rep": 46.0, "pollster": "Ipsos", "sample": "4725"}, {"end_date": "2012-11-02", "dem": 49.5, "rep": 46.18, "pollster": "RAND (American Life Panel)", "sample": "3500"}, {"end_date": "2012-11-04", "dem": 46.9, "rep": 47.2, "pollster": "Zogby Analytics", "sample": "1041"}, {"end_date": "2012-11-04", "dem": 48.0, "rep": 49.0, "pollster": "Scott Rasmussen (Rasmussen Reports)", "sample": "3000"}, {"end_date": "2012-11-04", "dem": 47.0, "rep": 47.0, "pollster": "Lake Research Partners/The Tarrance Group", "sample": "1000"}, {"end_date": "2012-11-04", "dem": 50.3, "rep": 48.7, "pollster": "TIPP Insights", "sample": "712"}, {"end_date": "2012-11-04", "dem": 49.0, "rep": 47.0, "pollster": "YouGov", "sample": "740"}]}
+{
+  "polls": [
+    {
+      "end_date": "2012-09-06",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "TIPP Insights",
+      "sample": "808"
+    },
+    {
+      "end_date": "2012-09-08",
+      "dem": 51.0,
+      "rep": 43.0,
+      "pollster": "Big Village",
+      "sample": "709"
+    },
+    {
+      "end_date": "2012-09-08",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "710"
+    },
+    {
+      "end_date": "2012-09-08",
+      "dem": 50.0,
+      "rep": 44.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-09-09",
+      "dem": 50.0,
+      "rep": 46.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "384"
+    },
+    {
+      "end_date": "2012-09-09",
+      "dem": 48.0,
+      "rep": 45.0,
+      "pollster": "Ipsos",
+      "sample": "873"
+    },
+    {
+      "end_date": "2012-09-10",
+      "dem": 48.0,
+      "rep": 43.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1056"
+    },
+    {
+      "end_date": "2012-09-10",
+      "dem": 49.0,
+      "rep": 46.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "1162"
+    },
+    {
+      "end_date": "2012-09-11",
+      "dem": 48.0,
+      "rep": 42.0,
+      "pollster": "Zogby Analytics",
+      "sample": "1014"
+    },
+    {
+      "end_date": "2012-09-11",
+      "dem": 48.0,
+      "rep": 41.0,
+      "pollster": "Ipsos",
+      "sample": "990"
+    },
+    {
+      "end_date": "2012-09-13",
+      "dem": 48.0,
+      "rep": 45.0,
+      "pollster": "Gallup",
+      "sample": "3050"
+    },
+    {
+      "end_date": "2012-09-14",
+      "dem": 50.0,
+      "rep": 45.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "736"
+    },
+    {
+      "end_date": "2012-09-14",
+      "dem": 51.0,
+      "rep": 43.0,
+      "pollster": "Pew Research Center",
+      "sample": "2192"
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 48.0,
+      "rep": 45.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "1344"
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 50.0,
+      "rep": 46.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "GfK Group",
+      "sample": "807"
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 49.0,
+      "rep": 42.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "787"
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 46.0,
+      "rep": 43.0,
+      "pollster": "University of Connecticut",
+      "sample": "1186"
+    },
+    {
+      "end_date": "2012-09-16",
+      "dem": 49.0,
+      "rep": 44.0,
+      "pollster": "YouGov",
+      "sample": "943"
+    },
+    {
+      "end_date": "2012-09-18",
+      "dem": 50.0,
+      "rep": 46.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-09-19",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "Angus Reid Global",
+      "sample": "865"
+    },
+    {
+      "end_date": "2012-09-19",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "American Research Group",
+      "sample": "761"
+    },
+    {
+      "end_date": "2012-09-19",
+      "dem": 48.0,
+      "rep": 42.0,
+      "pollster": "Ipsos",
+      "sample": "1616"
+    },
+    {
+      "end_date": "2012-09-20",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "Gallup",
+      "sample": "3050"
+    },
+    {
+      "end_date": "2012-09-21",
+      "dem": 49.0,
+      "rep": 41.0,
+      "pollster": "Zogby Analytics",
+      "sample": "860"
+    },
+    {
+      "end_date": "2012-09-22",
+      "dem": 50.0,
+      "rep": 45.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-09-23",
+      "dem": 48.0,
+      "rep": 43.0,
+      "pollster": "YouGov",
+      "sample": "896"
+    },
+    {
+      "end_date": "2012-09-23",
+      "dem": 49.0,
+      "rep": 43.0,
+      "pollster": "Selzer & Co.",
+      "sample": "789"
+    },
+    {
+      "end_date": "2012-09-25",
+      "dem": 48.0,
+      "rep": 43.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1092"
+    },
+    {
+      "end_date": "2012-09-26",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-09-26",
+      "dem": 47.0,
+      "rep": 42.0,
+      "pollster": "Ipsos",
+      "sample": "855"
+    },
+    {
+      "end_date": "2012-09-27",
+      "dem": 49.0,
+      "rep": 45.0,
+      "pollster": "Gallup",
+      "sample": "3050"
+    },
+    {
+      "end_date": "2012-09-27",
+      "dem": 49.0,
+      "rep": 45.0,
+      "pollster": "Quinnipiac University",
+      "sample": "1912"
+    },
+    {
+      "end_date": "2012-09-28",
+      "dem": 50.0,
+      "rep": 41.0,
+      "pollster": "Zogby Analytics",
+      "sample": "800"
+    },
+    {
+      "end_date": "2012-09-28",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "813"
+    },
+    {
+      "end_date": "2012-09-28",
+      "dem": 48.0,
+      "rep": 43.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "832"
+    },
+    {
+      "end_date": "2012-09-29",
+      "dem": 47.0,
+      "rep": 44.0,
+      "pollster": "Big Village",
+      "sample": "783"
+    },
+    {
+      "end_date": "2012-09-29",
+      "dem": 49.0,
+      "rep": 46.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-09-29",
+      "dem": 49.0,
+      "rep": 45.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1100"
+    },
+    {
+      "end_date": "2012-09-29",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "789"
+    },
+    {
+      "end_date": "2012-09-30",
+      "dem": 49.0,
+      "rep": 44.0,
+      "pollster": "YouGov",
+      "sample": "785"
+    },
+    {
+      "end_date": "2012-10-03",
+      "dem": 50.0,
+      "rep": 48.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-10-03",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "Ipsos",
+      "sample": "1434"
+    },
+    {
+      "end_date": "2012-10-03",
+      "dem": 45.0,
+      "rep": 41.0,
+      "pollster": "Ipsos",
+      "sample": "1728"
+    },
+    {
+      "end_date": "2012-10-04",
+      "dem": 50.0,
+      "rep": 45.0,
+      "pollster": "Gallup",
+      "sample": "3050"
+    },
+    {
+      "end_date": "2012-10-04",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Gallup",
+      "sample": "2700"
+    },
+    {
+      "end_date": "2012-10-06",
+      "dem": 45.5,
+      "rep": 45.0,
+      "pollster": "Zogby Analytics",
+      "sample": "800"
+    },
+    {
+      "end_date": "2012-10-06",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1300"
+    },
+    {
+      "end_date": "2012-10-06",
+      "dem": 45.0,
+      "rep": 49.0,
+      "pollster": "Pew Research Center",
+      "sample": "1112"
+    },
+    {
+      "end_date": "2012-10-06",
+      "dem": 44.0,
+      "rep": 49.0,
+      "pollster": "TIPP Insights",
+      "sample": "757"
+    },
+    {
+      "end_date": "2012-10-07",
+      "dem": 49.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "763"
+    },
+    {
+      "end_date": "2012-10-07",
+      "dem": 47.0,
+      "rep": 48.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-08",
+      "dem": 45.0,
+      "rep": 46.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1109"
+    },
+    {
+      "end_date": "2012-10-08",
+      "dem": 44.0,
+      "rep": 45.0,
+      "pollster": "Ipsos",
+      "sample": "1027"
+    },
+    {
+      "end_date": "2012-10-09",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "1360"
+    },
+    {
+      "end_date": "2012-10-09",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-10-10",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Angus Reid Global",
+      "sample": "906"
+    },
+    {
+      "end_date": "2012-10-11",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Gallup",
+      "sample": "2700"
+    },
+    {
+      "end_date": "2012-10-12",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Public Policy Polling",
+      "sample": "608"
+    },
+    {
+      "end_date": "2012-10-12",
+      "dem": 49.0,
+      "rep": 46.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "923"
+    },
+    {
+      "end_date": "2012-10-12",
+      "dem": 47.3,
+      "rep": 45.7,
+      "pollster": "TIPP Insights",
+      "sample": "931"
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "Public Policy Polling",
+      "sample": "624"
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 47.0,
+      "rep": 48.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 47.0,
+      "rep": 45.0,
+      "pollster": "Ipsos",
+      "sample": "1864"
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 46.0,
+      "rep": 42.0,
+      "pollster": "Ipsos",
+      "sample": "2106"
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 48.0,
+      "rep": 45.0,
+      "pollster": "University of Connecticut",
+      "sample": "1023"
+    },
+    {
+      "end_date": "2012-10-14",
+      "dem": 40.0,
+      "rep": 56.0,
+      "pollster": "Public Policy Polling",
+      "sample": "384"
+    },
+    {
+      "end_date": "2012-10-14",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "826"
+    },
+    {
+      "end_date": "2012-10-16",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 44.0,
+      "rep": 46.0,
+      "pollster": "Gravis Marketing",
+      "sample": "805"
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 46.0,
+      "rep": 45.0,
+      "pollster": "Ipsos",
+      "sample": "1368"
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 45.0,
+      "rep": 51.0,
+      "pollster": "Gallup",
+      "sample": "2700"
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 47.4,
+      "rep": 43.4,
+      "pollster": "TIPP Insights",
+      "sample": "885"
+    },
+    {
+      "end_date": "2012-10-19",
+      "dem": 49.7,
+      "rep": 47.3,
+      "pollster": "Zogby Analytics",
+      "sample": "800"
+    },
+    {
+      "end_date": "2012-10-19",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-19",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "816"
+    },
+    {
+      "end_date": "2012-10-19",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "CBS News",
+      "sample": "790"
+    },
+    {
+      "end_date": "2012-10-20",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "1402"
+    },
+    {
+      "end_date": "2012-10-20",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-21",
+      "dem": 47.0,
+      "rep": 49.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-21",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "803"
+    },
+    {
+      "end_date": "2012-10-21",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "GfK Group",
+      "sample": "839"
+    },
+    {
+      "end_date": "2012-10-22",
+      "dem": 48.0,
+      "rep": 49.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1394"
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "Ipsos",
+      "sample": "1237"
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 46.0,
+      "rep": 42.0,
+      "pollster": "Ipsos",
+      "sample": "1610"
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 45.4,
+      "rep": 44.1,
+      "pollster": "TIPP Insights",
+      "sample": "942"
+    },
+    {
+      "end_date": "2012-10-25",
+      "dem": 46.0,
+      "rep": 51.0,
+      "pollster": "Gallup",
+      "sample": "2700"
+    },
+    {
+      "end_date": "2012-10-26",
+      "dem": 48.0,
+      "rep": 49.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1278"
+    },
+    {
+      "end_date": "2012-10-26",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Pew Research Center",
+      "sample": "1495"
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 48.0,
+      "rep": 49.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 49.0,
+      "rep": 49.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1400"
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 48.0,
+      "rep": 47.0,
+      "pollster": "CBS News/The New York Times",
+      "sample": "563"
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 50.0,
+      "rep": 45.0,
+      "pollster": "Princeton Survey Research Associates International",
+      "sample": "713"
+    },
+    {
+      "end_date": "2012-10-28",
+      "dem": 48.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "688"
+    },
+    {
+      "end_date": "2012-10-29",
+      "dem": 44.7,
+      "rep": 46.6,
+      "pollster": "Zogby Analytics",
+      "sample": "1015"
+    },
+    {
+      "end_date": "2012-10-29",
+      "dem": 46.0,
+      "rep": 46.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1128"
+    },
+    {
+      "end_date": "2012-10-29",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "Ipsos",
+      "sample": "4085"
+    },
+    {
+      "end_date": "2012-10-30",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1293"
+    },
+    {
+      "end_date": "2012-10-30",
+      "dem": 48.7,
+      "rep": 48.5,
+      "pollster": "Zogby Analytics",
+      "sample": "800"
+    },
+    {
+      "end_date": "2012-10-31",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-10-31",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-11-01",
+      "dem": 46.3,
+      "rep": 45.1,
+      "pollster": "Zogby Analytics",
+      "sample": "709"
+    },
+    {
+      "end_date": "2012-11-02",
+      "dem": 48.0,
+      "rep": 47.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "1475"
+    },
+    {
+      "end_date": "2012-11-02",
+      "dem": 51.0,
+      "rep": 48.0,
+      "pollster": "Angus Reid Global",
+      "sample": "1019"
+    },
+    {
+      "end_date": "2012-11-02",
+      "dem": 48.0,
+      "rep": 45.0,
+      "pollster": "Pew Research Center",
+      "sample": "2709"
+    },
+    {
+      "end_date": "2012-11-02",
+      "dem": 48.5,
+      "rep": 46.5,
+      "pollster": "YouGov",
+      "sample": "36472"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 50.0,
+      "rep": 47.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "2345"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 48.0,
+      "rep": 49.0,
+      "pollster": "Gallup",
+      "sample": "2551"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 49.0,
+      "rep": 46.0,
+      "pollster": "Gallup",
+      "sample": "3050"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 50.0,
+      "rep": 48.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 50.0,
+      "rep": 48.0,
+      "pollster": "Public Policy Polling",
+      "sample": "1300"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Gravis Marketing",
+      "sample": "872"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Big Village",
+      "sample": "693"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 49.0,
+      "rep": 49.0,
+      "pollster": "American Research Group",
+      "sample": "1200"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "1417"
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "Ipsos",
+      "sample": "4725"
+    },
+    {
+      "end_date": "2012-11-04",
+      "dem": 46.9,
+      "rep": 47.2,
+      "pollster": "Zogby Analytics",
+      "sample": "1041"
+    },
+    {
+      "end_date": "2012-11-04",
+      "dem": 47.0,
+      "rep": 47.0,
+      "pollster": "Lake Research Partners/The Tarrance Group",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2012-11-04",
+      "dem": 50.3,
+      "rep": 48.7,
+      "pollster": "TIPP Insights",
+      "sample": "712"
+    },
+    {
+      "end_date": "2012-11-04",
+      "dem": 49.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "740"
+    }
+  ]
+}

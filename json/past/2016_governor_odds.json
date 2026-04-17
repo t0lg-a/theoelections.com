@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-17T07:54:39.115Z",
+  "updatedAt": "2026-04-17T17:15:40.694Z",
   "config": {
     "sims": 10000,
     "swingRange": 7,
@@ -15,12 +15,12 @@
     {
       "date": "2016-01-02",
       "pDem": 0,
-      "expDem": 16.69
+      "expDem": 16.7
     },
     {
       "date": "2016-01-03",
       "pDem": 0,
-      "expDem": 16.71
+      "expDem": 16.69
     },
     {
       "date": "2016-01-04",
@@ -30,17 +30,17 @@
     {
       "date": "2016-01-05",
       "pDem": 0,
-      "expDem": 16.76
+      "expDem": 16.73
     },
     {
       "date": "2016-01-06",
       "pDem": 0,
-      "expDem": 16.77
+      "expDem": 16.76
     },
     {
       "date": "2016-01-07",
       "pDem": 0,
-      "expDem": 16.8
+      "expDem": 16.77
     },
     {
       "date": "2016-01-08",
@@ -55,17 +55,17 @@
     {
       "date": "2016-01-10",
       "pDem": 0,
-      "expDem": 16.86
+      "expDem": 16.84
     },
     {
       "date": "2016-01-11",
       "pDem": 0,
-      "expDem": 16.88
+      "expDem": 16.89
     },
     {
       "date": "2016-01-12",
       "pDem": 0,
-      "expDem": 16.93
+      "expDem": 16.94
     },
     {
       "date": "2016-01-13",
@@ -75,27 +75,27 @@
     {
       "date": "2016-01-14",
       "pDem": 0,
-      "expDem": 16.97
+      "expDem": 16.98
     },
     {
       "date": "2016-01-15",
       "pDem": 0,
-      "expDem": 16.99
+      "expDem": 17.01
     },
     {
       "date": "2016-01-16",
       "pDem": 0,
-      "expDem": 17.02
+      "expDem": 17.01
     },
     {
       "date": "2016-01-17",
       "pDem": 0,
-      "expDem": 17.02
+      "expDem": 17.03
     },
     {
       "date": "2016-01-18",
       "pDem": 0,
-      "expDem": 17.05
+      "expDem": 17.03
     },
     {
       "date": "2016-01-19",
@@ -105,7 +105,7 @@
     {
       "date": "2016-01-20",
       "pDem": 0,
-      "expDem": 17.05
+      "expDem": 17.06
     },
     {
       "date": "2016-01-21",
@@ -115,7 +115,7 @@
     {
       "date": "2016-01-22",
       "pDem": 0,
-      "expDem": 17.08
+      "expDem": 17.09
     },
     {
       "date": "2016-01-23",
@@ -125,12 +125,12 @@
     {
       "date": "2016-01-24",
       "pDem": 0,
-      "expDem": 17.07
+      "expDem": 17.08
     },
     {
       "date": "2016-01-25",
       "pDem": 0,
-      "expDem": 17.08
+      "expDem": 17.1
     },
     {
       "date": "2016-01-26",
@@ -140,17 +140,17 @@
     {
       "date": "2016-01-27",
       "pDem": 0,
-      "expDem": 17.14
+      "expDem": 17.15
     },
     {
       "date": "2016-01-28",
       "pDem": 0,
-      "expDem": 17.17
+      "expDem": 17.19
     },
     {
       "date": "2016-01-29",
       "pDem": 0,
-      "expDem": 17.19
+      "expDem": 17.2
     },
     {
       "date": "2016-01-30",
@@ -160,67 +160,67 @@
     {
       "date": "2016-01-31",
       "pDem": 0,
-      "expDem": 17.23
+      "expDem": 17.22
     },
     {
       "date": "2016-02-01",
       "pDem": 0,
-      "expDem": 17.25
+      "expDem": 17.24
     },
     {
       "date": "2016-02-02",
       "pDem": 0,
-      "expDem": 17.26
+      "expDem": 17.24
     },
     {
       "date": "2016-02-03",
       "pDem": 0,
-      "expDem": 17.26
+      "expDem": 17.27
     },
     {
       "date": "2016-02-04",
       "pDem": 0,
-      "expDem": 17.29
+      "expDem": 17.27
     },
     {
       "date": "2016-02-05",
       "pDem": 0,
-      "expDem": 17.27
+      "expDem": 17.28
     },
     {
       "date": "2016-02-06",
       "pDem": 0,
-      "expDem": 17.28
+      "expDem": 17.3
     },
     {
       "date": "2016-02-07",
       "pDem": 0,
-      "expDem": 17.28
+      "expDem": 17.3
     },
     {
       "date": "2016-02-08",
       "pDem": 0,
-      "expDem": 17.3
+      "expDem": 17.28
     },
     {
       "date": "2016-02-09",
       "pDem": 0,
-      "expDem": 17.32
+      "expDem": 17.33
     },
     {
       "date": "2016-02-10",
       "pDem": 0,
-      "expDem": 17.3
+      "expDem": 17.29
     },
     {
       "date": "2016-02-11",
       "pDem": 0,
-      "expDem": 17.34
+      "expDem": 17.32
     },
     {
       "date": "2016-02-12",
       "pDem": 0,
-      "expDem": 17.35
+      "expDem": 17.33
     },
     {
       "date": "2016-02-13",
@@ -230,17 +230,17 @@
     {
       "date": "2016-02-14",
       "pDem": 0,
-      "expDem": 17.36
+      "expDem": 17.38
     },
     {
       "date": "2016-02-15",
       "pDem": 0,
-      "expDem": 17.39
+      "expDem": 17.4
     },
     {
       "date": "2016-02-16",
       "pDem": 0,
-      "expDem": 17.41
+      "expDem": 17.4
     },
     {
       "date": "2016-02-17",
@@ -250,17 +250,17 @@
     {
       "date": "2016-02-18",
       "pDem": 0,
-      "expDem": 17.44
+      "expDem": 17.43
     },
     {
       "date": "2016-02-19",
       "pDem": 0,
-      "expDem": 17.44
+      "expDem": 17.43
     },
     {
       "date": "2016-02-20",
       "pDem": 0,
-      "expDem": 17.45
+      "expDem": 17.48
     },
     {
       "date": "2016-02-21",
@@ -275,27 +275,27 @@
     {
       "date": "2016-02-23",
       "pDem": 0,
-      "expDem": 17.47
+      "expDem": 17.49
     },
     {
       "date": "2016-02-24",
       "pDem": 0,
-      "expDem": 17.51
+      "expDem": 17.5
     },
     {
       "date": "2016-02-25",
       "pDem": 0,
-      "expDem": 17.51
+      "expDem": 17.52
     },
     {
       "date": "2016-02-26",
       "pDem": 0,
-      "expDem": 17.49
+      "expDem": 17.52
     },
     {
       "date": "2016-02-27",
       "pDem": 0,
-      "expDem": 17.51
+      "expDem": 17.53
     },
     {
       "date": "2016-02-28",
@@ -305,7 +305,7 @@
     {
       "date": "2016-02-29",
       "pDem": 0,
-      "expDem": 17.55
+      "expDem": 17.54
     },
     {
       "date": "2016-03-01",
@@ -335,22 +335,22 @@
     {
       "date": "2016-03-06",
       "pDem": 0,
-      "expDem": 17.56
+      "expDem": 17.59
     },
     {
       "date": "2016-03-07",
       "pDem": 0,
-      "expDem": 17.59
+      "expDem": 17.58
     },
     {
       "date": "2016-03-08",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.57
     },
     {
       "date": "2016-03-09",
       "pDem": 0,
-      "expDem": 17.56
+      "expDem": 17.58
     },
     {
       "date": "2016-03-10",
@@ -360,37 +360,37 @@
     {
       "date": "2016-03-11",
       "pDem": 0,
-      "expDem": 17.61
+      "expDem": 17.6
     },
     {
       "date": "2016-03-12",
       "pDem": 0,
-      "expDem": 17.61
+      "expDem": 17.59
     },
     {
       "date": "2016-03-13",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.59
     },
     {
       "date": "2016-03-14",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.6
     },
     {
       "date": "2016-03-15",
       "pDem": 0,
-      "expDem": 17.61
+      "expDem": 17.6
     },
     {
       "date": "2016-03-16",
       "pDem": 0,
-      "expDem": 17.6
+      "expDem": 17.62
     },
     {
       "date": "2016-03-17",
       "pDem": 0,
-      "expDem": 17.6
+      "expDem": 17.62
     },
     {
       "date": "2016-03-18",
@@ -400,7 +400,7 @@
     {
       "date": "2016-03-19",
       "pDem": 0,
-      "expDem": 17.62
+      "expDem": 17.64
     },
     {
       "date": "2016-03-20",
@@ -410,27 +410,27 @@
     {
       "date": "2016-03-21",
       "pDem": 0,
-      "expDem": 17.6
+      "expDem": 17.63
     },
     {
       "date": "2016-03-22",
       "pDem": 0,
-      "expDem": 17.64
+      "expDem": 17.63
     },
     {
       "date": "2016-03-23",
       "pDem": 0,
-      "expDem": 17.63
+      "expDem": 17.65
     },
     {
       "date": "2016-03-24",
       "pDem": 0,
-      "expDem": 17.66
+      "expDem": 17.65
     },
     {
       "date": "2016-03-25",
       "pDem": 0,
-      "expDem": 17.67
+      "expDem": 17.68
     },
     {
       "date": "2016-03-26",
@@ -440,27 +440,27 @@
     {
       "date": "2016-03-27",
       "pDem": 0,
-      "expDem": 17.67
+      "expDem": 17.66
     },
     {
       "date": "2016-03-28",
       "pDem": 0,
-      "expDem": 17.67
+      "expDem": 17.65
     },
     {
       "date": "2016-03-29",
       "pDem": 0,
-      "expDem": 17.63
+      "expDem": 17.64
     },
     {
       "date": "2016-03-30",
       "pDem": 0,
-      "expDem": 17.65
+      "expDem": 17.64
     },
     {
       "date": "2016-03-31",
       "pDem": 0,
-      "expDem": 17.63
+      "expDem": 17.65
     },
     {
       "date": "2016-04-01",
@@ -470,22 +470,22 @@
     {
       "date": "2016-04-02",
       "pDem": 0,
-      "expDem": 17.62
+      "expDem": 17.65
     },
     {
       "date": "2016-04-03",
       "pDem": 0,
-      "expDem": 17.6
+      "expDem": 17.62
     },
     {
       "date": "2016-04-04",
       "pDem": 0,
-      "expDem": 17.61
+      "expDem": 17.65
     },
     {
       "date": "2016-04-05",
       "pDem": 0,
-      "expDem": 17.61
+      "expDem": 17.63
     },
     {
       "date": "2016-04-06",
@@ -500,7 +500,7 @@
     {
       "date": "2016-04-08",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.6
     },
     {
       "date": "2016-04-09",
@@ -510,22 +510,22 @@
     {
       "date": "2016-04-10",
       "pDem": 0,
-      "expDem": 17.57
+      "expDem": 17.59
     },
     {
       "date": "2016-04-11",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.59
     },
     {
       "date": "2016-04-12",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.56
     },
     {
       "date": "2016-04-13",
       "pDem": 0,
-      "expDem": 17.57
+      "expDem": 17.58
     },
     {
       "date": "2016-04-14",
@@ -535,27 +535,27 @@
     {
       "date": "2016-04-15",
       "pDem": 0,
-      "expDem": 17.56
+      "expDem": 17.55
     },
     {
       "date": "2016-04-16",
       "pDem": 0,
-      "expDem": 17.55
+      "expDem": 17.54
     },
     {
       "date": "2016-04-17",
       "pDem": 0,
-      "expDem": 17.53
+      "expDem": 17.54
     },
     {
       "date": "2016-04-18",
       "pDem": 0,
-      "expDem": 17.54
+      "expDem": 17.52
     },
     {
       "date": "2016-04-19",
       "pDem": 0,
-      "expDem": 17.53
+      "expDem": 17.51
     },
     {
       "date": "2016-04-20",
@@ -565,12 +565,12 @@
     {
       "date": "2016-04-21",
       "pDem": 0,
-      "expDem": 17.52
+      "expDem": 17.53
     },
     {
       "date": "2016-04-22",
       "pDem": 0,
-      "expDem": 17.54
+      "expDem": 17.55
     },
     {
       "date": "2016-04-23",
@@ -580,17 +580,17 @@
     {
       "date": "2016-04-24",
       "pDem": 0,
-      "expDem": 17.56
+      "expDem": 17.57
     },
     {
       "date": "2016-04-25",
       "pDem": 0,
-      "expDem": 17.59
+      "expDem": 17.56
     },
     {
       "date": "2016-04-26",
       "pDem": 0,
-      "expDem": 17.58
+      "expDem": 17.61
     },
     {
       "date": "2016-04-27",
@@ -600,7 +600,7 @@
     {
       "date": "2016-04-28",
       "pDem": 0,
-      "expDem": 17.6
+      "expDem": 17.62
     },
     {
       "date": "2016-04-29",
@@ -610,7 +610,7 @@
     {
       "date": "2016-04-30",
       "pDem": 0,
-      "expDem": 17.66
+      "expDem": 17.65
     },
     {
       "date": "2016-05-01",
@@ -640,47 +640,47 @@
     {
       "date": "2016-05-06",
       "pDem": 0,
-      "expDem": 17.7
+      "expDem": 17.72
     },
     {
       "date": "2016-05-07",
       "pDem": 0,
-      "expDem": 17.72
+      "expDem": 17.71
     },
     {
       "date": "2016-05-08",
       "pDem": 0,
-      "expDem": 17.72
+      "expDem": 17.73
     },
     {
       "date": "2016-05-09",
       "pDem": 0,
-      "expDem": 17.75
+      "expDem": 17.72
     },
     {
       "date": "2016-05-10",
       "pDem": 0,
-      "expDem": 17.76
+      "expDem": 17.74
     },
     {
       "date": "2016-05-11",
       "pDem": 0,
-      "expDem": 17.76
+      "expDem": 17.78
     },
     {
       "date": "2016-05-12",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.78
     },
     {
       "date": "2016-05-13",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.77
     },
     {
       "date": "2016-05-14",
       "pDem": 0,
-      "expDem": 17.84
+      "expDem": 17.81
     },
     {
       "date": "2016-05-15",
@@ -690,52 +690,52 @@
     {
       "date": "2016-05-16",
       "pDem": 0,
-      "expDem": 17.79
+      "expDem": 17.81
     },
     {
       "date": "2016-05-17",
       "pDem": 0,
-      "expDem": 17.82
+      "expDem": 17.81
     },
     {
       "date": "2016-05-18",
       "pDem": 0,
-      "expDem": 17.81
+      "expDem": 17.84
     },
     {
       "date": "2016-05-19",
       "pDem": 0,
-      "expDem": 17.82
+      "expDem": 17.81
     },
     {
       "date": "2016-05-20",
       "pDem": 0,
-      "expDem": 17.81
+      "expDem": 17.83
     },
     {
       "date": "2016-05-21",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.82
     },
     {
       "date": "2016-05-22",
       "pDem": 0,
-      "expDem": 17.81
+      "expDem": 17.83
     },
     {
       "date": "2016-05-23",
       "pDem": 0,
-      "expDem": 17.81
+      "expDem": 17.79
     },
     {
       "date": "2016-05-24",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.81
     },
     {
       "date": "2016-05-25",
       "pDem": 0,
-      "expDem": 17.81
+      "expDem": 17.79
     },
     {
       "date": "2016-05-26",
@@ -755,27 +755,27 @@
     {
       "date": "2016-05-29",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-05-30",
       "pDem": 0,
-      "expDem": 17.79
+      "expDem": 17.77
     },
     {
       "date": "2016-05-31",
       "pDem": 0,
-      "expDem": 17.79
+      "expDem": 17.78
     },
     {
       "date": "2016-06-01",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-06-02",
       "pDem": 0,
-      "expDem": 17.76
+      "expDem": 17.78
     },
     {
       "date": "2016-06-03",
@@ -785,17 +785,17 @@
     {
       "date": "2016-06-04",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-06-05",
       "pDem": 0,
-      "expDem": 17.76
+      "expDem": 17.79
     },
     {
       "date": "2016-06-06",
       "pDem": 0,
-      "expDem": 17.79
+      "expDem": 17.77
     },
     {
       "date": "2016-06-07",
@@ -805,62 +805,62 @@
     {
       "date": "2016-06-08",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-06-09",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-06-10",
       "pDem": 0,
-      "expDem": 17.76
+      "expDem": 17.77
     },
     {
       "date": "2016-06-11",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.77
     },
     {
       "date": "2016-06-12",
       "pDem": 0,
-      "expDem": 17.79
+      "expDem": 17.78
     },
     {
       "date": "2016-06-13",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.79
     },
     {
       "date": "2016-06-14",
       "pDem": 0,
-      "expDem": 17.83
+      "expDem": 17.81
     },
     {
       "date": "2016-06-15",
       "pDem": 0,
-      "expDem": 17.83
+      "expDem": 17.84
     },
     {
       "date": "2016-06-16",
       "pDem": 0,
-      "expDem": 17.83
+      "expDem": 17.85
     },
     {
       "date": "2016-06-17",
       "pDem": 0,
-      "expDem": 17.84
+      "expDem": 17.87
     },
     {
       "date": "2016-06-18",
       "pDem": 0,
-      "expDem": 17.88
+      "expDem": 17.85
     },
     {
       "date": "2016-06-19",
       "pDem": 0,
-      "expDem": 17.9
+      "expDem": 17.89
     },
     {
       "date": "2016-06-20",
@@ -870,47 +870,47 @@
     {
       "date": "2016-06-21",
       "pDem": 0,
-      "expDem": 17.93
+      "expDem": 17.91
     },
     {
       "date": "2016-06-22",
       "pDem": 0,
-      "expDem": 17.93
+      "expDem": 17.94
     },
     {
       "date": "2016-06-23",
       "pDem": 0,
-      "expDem": 17.96
+      "expDem": 17.97
     },
     {
       "date": "2016-06-24",
       "pDem": 0,
-      "expDem": 17.93
+      "expDem": 17.94
     },
     {
       "date": "2016-06-25",
       "pDem": 0,
-      "expDem": 17.95
+      "expDem": 17.96
     },
     {
       "date": "2016-06-26",
       "pDem": 0,
-      "expDem": 17.97
+      "expDem": 17.95
     },
     {
       "date": "2016-06-27",
       "pDem": 0,
-      "expDem": 17.98
+      "expDem": 17.99
     },
     {
       "date": "2016-06-28",
       "pDem": 0,
-      "expDem": 17.96
+      "expDem": 17.98
     },
     {
       "date": "2016-06-29",
       "pDem": 0,
-      "expDem": 17.98
+      "expDem": 17.97
     },
     {
       "date": "2016-06-30",
@@ -920,37 +920,37 @@
     {
       "date": "2016-07-01",
       "pDem": 0,
-      "expDem": 17.97
+      "expDem": 18
     },
     {
       "date": "2016-07-02",
       "pDem": 0,
-      "expDem": 17.96
+      "expDem": 17.97
     },
     {
       "date": "2016-07-03",
       "pDem": 0,
-      "expDem": 18
+      "expDem": 17.98
     },
     {
       "date": "2016-07-04",
       "pDem": 0,
-      "expDem": 17.98
+      "expDem": 17.97
     },
     {
       "date": "2016-07-05",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 17.98
     },
     {
       "date": "2016-07-06",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 17.98
     },
     {
       "date": "2016-07-07",
       "pDem": 0,
-      "expDem": 18
+      "expDem": 17.98
     },
     {
       "date": "2016-07-08",
@@ -970,12 +970,12 @@
     {
       "date": "2016-07-11",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 18
     },
     {
       "date": "2016-07-12",
       "pDem": 0,
-      "expDem": 18
+      "expDem": 17.99
     },
     {
       "date": "2016-07-13",
@@ -995,17 +995,17 @@
     {
       "date": "2016-07-16",
       "pDem": 0,
-      "expDem": 17.97
+      "expDem": 17.96
     },
     {
       "date": "2016-07-17",
       "pDem": 0,
-      "expDem": 17.98
+      "expDem": 17.97
     },
     {
       "date": "2016-07-18",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 17.97
     },
     {
       "date": "2016-07-19",
@@ -1020,37 +1020,37 @@
     {
       "date": "2016-07-21",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 18
     },
     {
       "date": "2016-07-22",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 18
     },
     {
       "date": "2016-07-23",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 18.01
     },
     {
       "date": "2016-07-24",
       "pDem": 0,
-      "expDem": 18
+      "expDem": 17.99
     },
     {
       "date": "2016-07-25",
       "pDem": 0,
-      "expDem": 17.97
+      "expDem": 18
     },
     {
       "date": "2016-07-26",
       "pDem": 0,
-      "expDem": 17.99
+      "expDem": 17.97
     },
     {
       "date": "2016-07-27",
       "pDem": 0,
-      "expDem": 17.97
+      "expDem": 17.96
     },
     {
       "date": "2016-07-28",
@@ -1065,17 +1065,17 @@
     {
       "date": "2016-07-30",
       "pDem": 0,
-      "expDem": 17.91
+      "expDem": 17.94
     },
     {
       "date": "2016-07-31",
       "pDem": 0,
-      "expDem": 17.91
+      "expDem": 17.92
     },
     {
       "date": "2016-08-01",
       "pDem": 0,
-      "expDem": 17.91
+      "expDem": 17.88
     },
     {
       "date": "2016-08-02",
@@ -1085,12 +1085,12 @@
     {
       "date": "2016-08-03",
       "pDem": 0,
-      "expDem": 17.86
+      "expDem": 17.84
     },
     {
       "date": "2016-08-04",
       "pDem": 0,
-      "expDem": 17.84
+      "expDem": 17.86
     },
     {
       "date": "2016-08-05",
@@ -1100,17 +1100,17 @@
     {
       "date": "2016-08-06",
       "pDem": 0,
-      "expDem": 17.82
+      "expDem": 17.83
     },
     {
       "date": "2016-08-07",
       "pDem": 0,
-      "expDem": 17.82
+      "expDem": 17.81
     },
     {
       "date": "2016-08-08",
       "pDem": 0,
-      "expDem": 17.8
+      "expDem": 17.81
     },
     {
       "date": "2016-08-09",
@@ -1120,17 +1120,17 @@
     {
       "date": "2016-08-10",
       "pDem": 0,
-      "expDem": 17.77
+      "expDem": 17.78
     },
     {
       "date": "2016-08-11",
       "pDem": 0,
-      "expDem": 17.78
+      "expDem": 17.76
     },
     {
       "date": "2016-08-12",
       "pDem": 0,
-      "expDem": 17.75
+      "expDem": 17.76
     },
     {
       "date": "2016-08-13",
@@ -1140,37 +1140,37 @@
     {
       "date": "2016-08-14",
       "pDem": 0,
-      "expDem": 17.72
+      "expDem": 17.73
     },
     {
       "date": "2016-08-15",
       "pDem": 0,
-      "expDem": 17.73
+      "expDem": 17.72
     },
     {
       "date": "2016-08-16",
       "pDem": 0,
-      "expDem": 17.71
+      "expDem": 17.69
     },
     {
       "date": "2016-08-17",
       "pDem": 0,
-      "expDem": 17.68
+      "expDem": 17.69
     },
     {
       "date": "2016-08-18",
       "pDem": 0,
-      "expDem": 17.68
+      "expDem": 17.7
     },
     {
       "date": "2016-08-19",
       "pDem": 0,
-      "expDem": 17.69
+      "expDem": 17.7
     },
     {
       "date": "2016-08-20",
       "pDem": 0,
-      "expDem": 17.69
+      "expDem": 17.7
     },
     {
       "date": "2016-08-21",
@@ -1180,7 +1180,7 @@
     {
       "date": "2016-08-22",
       "pDem": 0,
-      "expDem": 17.69
+      "expDem": 17.7
     },
     {
       "date": "2016-08-23",
@@ -1190,27 +1190,27 @@
     {
       "date": "2016-08-24",
       "pDem": 0,
-      "expDem": 17.69
+      "expDem": 17.68
     },
     {
       "date": "2016-08-25",
       "pDem": 0,
-      "expDem": 17.7
+      "expDem": 17.71
     },
     {
       "date": "2016-08-26",
       "pDem": 0,
-      "expDem": 17.72
+      "expDem": 17.7
     },
     {
       "date": "2016-08-27",
       "pDem": 0,
-      "expDem": 17.72
+      "expDem": 17.71
     },
     {
       "date": "2016-08-28",
       "pDem": 0,
-      "expDem": 17.71
+      "expDem": 17.72
     },
     {
       "date": "2016-08-29",
@@ -1220,32 +1220,32 @@
     {
       "date": "2016-08-30",
       "pDem": 0,
-      "expDem": 17.69
+      "expDem": 17.7
     },
     {
       "date": "2016-08-31",
       "pDem": 0,
-      "expDem": 17.7
+      "expDem": 17.67
     },
     {
       "date": "2016-09-01",
       "pDem": 0,
-      "expDem": 17.67
+      "expDem": 17.68
     },
     {
       "date": "2016-09-02",
       "pDem": 0,
-      "expDem": 17.63
+      "expDem": 17.64
     },
     {
       "date": "2016-09-03",
       "pDem": 0,
-      "expDem": 17.65
+      "expDem": 17.64
     },
     {
       "date": "2016-09-04",
       "pDem": 0,
-      "expDem": 17.63
+      "expDem": 17.65
     },
     {
       "date": "2016-09-05",
@@ -1255,293 +1255,293 @@
     {
       "date": "2016-09-06",
       "pDem": 0,
-      "expDem": 17.57
+      "expDem": 17.59
     },
     {
       "date": "2016-09-07",
       "pDem": 0,
-      "expDem": 17.57
+      "expDem": 17.56
     },
     {
       "date": "2016-09-08",
       "pDem": 0,
-      "expDem": 17.53
+      "expDem": 17.56
     },
     {
       "date": "2016-09-09",
       "pDem": 0,
-      "expDem": 19.3
+      "expDem": 17.54
     },
     {
       "date": "2016-09-10",
       "pDem": 0,
-      "expDem": 19.29
+      "expDem": 17.51
     },
     {
       "date": "2016-09-11",
       "pDem": 0,
-      "expDem": 18.21
+      "expDem": 17.43
     },
     {
       "date": "2016-09-12",
       "pDem": 0,
-      "expDem": 18.69
+      "expDem": 18.17
     },
     {
       "date": "2016-09-13",
       "pDem": 0,
-      "expDem": 18.68
+      "expDem": 18.14
     },
     {
       "date": "2016-09-14",
       "pDem": 0,
-      "expDem": 18.64
+      "expDem": 18.13
     },
     {
       "date": "2016-09-15",
       "pDem": 0,
-      "expDem": 18.72
+      "expDem": 18.14
     },
     {
       "date": "2016-09-16",
       "pDem": 0,
-      "expDem": 18.7
+      "expDem": 18.11
     },
     {
       "date": "2016-09-17",
       "pDem": 0,
-      "expDem": 18.68
+      "expDem": 18.1
     },
     {
       "date": "2016-09-18",
       "pDem": 0,
-      "expDem": 18.77
+      "expDem": 18.35
     },
     {
       "date": "2016-09-19",
       "pDem": 0,
-      "expDem": 18.17
+      "expDem": 17.7
     },
     {
       "date": "2016-09-20",
       "pDem": 0,
-      "expDem": 18.19
+      "expDem": 17.68
     },
     {
       "date": "2016-09-21",
       "pDem": 0,
-      "expDem": 18.17
+      "expDem": 17.7
     },
     {
       "date": "2016-09-22",
       "pDem": 0,
-      "expDem": 18.47
+      "expDem": 17.77
     },
     {
       "date": "2016-09-23",
       "pDem": 0,
-      "expDem": 18.47
+      "expDem": 17.74
     },
     {
       "date": "2016-09-24",
       "pDem": 0,
-      "expDem": 18.46
+      "expDem": 17.73
     },
     {
       "date": "2016-09-25",
       "pDem": 0,
-      "expDem": 18.47
+      "expDem": 17.74
     },
     {
       "date": "2016-09-26",
       "pDem": 0,
-      "expDem": 18.56
+      "expDem": 17.79
     },
     {
       "date": "2016-09-27",
       "pDem": 0,
-      "expDem": 18.62
+      "expDem": 17.79
     },
     {
       "date": "2016-09-28",
       "pDem": 0,
-      "expDem": 18.6
+      "expDem": 17.8
     },
     {
       "date": "2016-09-29",
       "pDem": 0,
-      "expDem": 18.59
+      "expDem": 17.8
     },
     {
       "date": "2016-09-30",
       "pDem": 0,
-      "expDem": 18.56
+      "expDem": 17.79
     },
     {
       "date": "2016-10-01",
       "pDem": 0,
-      "expDem": 18.29
+      "expDem": 17.85
     },
     {
       "date": "2016-10-02",
       "pDem": 0,
-      "expDem": 18.25
+      "expDem": 17.84
     },
     {
       "date": "2016-10-03",
       "pDem": 0,
-      "expDem": 18.37
+      "expDem": 17.85
     },
     {
       "date": "2016-10-04",
       "pDem": 0,
-      "expDem": 18.48
+      "expDem": 17.78
     },
     {
       "date": "2016-10-05",
       "pDem": 0,
-      "expDem": 18.51
+      "expDem": 17.79
     },
     {
       "date": "2016-10-06",
       "pDem": 0,
-      "expDem": 18.49
+      "expDem": 17.81
     },
     {
       "date": "2016-10-07",
       "pDem": 0,
-      "expDem": 19.04
+      "expDem": 17.82
     },
     {
       "date": "2016-10-08",
       "pDem": 0,
-      "expDem": 19.05
+      "expDem": 17.81
     },
     {
       "date": "2016-10-09",
       "pDem": 0,
-      "expDem": 19.04
+      "expDem": 17.83
     },
     {
       "date": "2016-10-10",
       "pDem": 0,
-      "expDem": 18.98
+      "expDem": 17.45
     },
     {
       "date": "2016-10-11",
       "pDem": 0,
-      "expDem": 18.84
+      "expDem": 18.07
     },
     {
       "date": "2016-10-12",
       "pDem": 0,
-      "expDem": 19.14
+      "expDem": 18.75
     },
     {
       "date": "2016-10-13",
       "pDem": 0,
-      "expDem": 19.12
+      "expDem": 18.75
     },
     {
       "date": "2016-10-14",
       "pDem": 0,
-      "expDem": 19.18
+      "expDem": 18.83
     },
     {
       "date": "2016-10-15",
       "pDem": 0,
-      "expDem": 19.15
+      "expDem": 18.76
     },
     {
       "date": "2016-10-16",
       "pDem": 0,
-      "expDem": 19.13
+      "expDem": 18.7
     },
     {
       "date": "2016-10-17",
       "pDem": 0,
-      "expDem": 19.17
+      "expDem": 18.72
     },
     {
       "date": "2016-10-18",
       "pDem": 0,
-      "expDem": 19.14
+      "expDem": 18.75
     },
     {
       "date": "2016-10-19",
       "pDem": 0,
-      "expDem": 19.18
+      "expDem": 18.73
     },
     {
       "date": "2016-10-20",
       "pDem": 0,
-      "expDem": 19.19
+      "expDem": 18.76
     },
     {
       "date": "2016-10-21",
       "pDem": 0,
-      "expDem": 19.2
+      "expDem": 18.74
     },
     {
       "date": "2016-10-22",
       "pDem": 0,
-      "expDem": 19.17
+      "expDem": 18.81
     },
     {
       "date": "2016-10-23",
       "pDem": 0,
-      "expDem": 19.17
+      "expDem": 18.74
     },
     {
       "date": "2016-10-24",
       "pDem": 0,
-      "expDem": 19.16
+      "expDem": 18.74
     },
     {
       "date": "2016-10-25",
       "pDem": 0,
-      "expDem": 19.12
+      "expDem": 18.69
     },
     {
       "date": "2016-10-26",
       "pDem": 0,
-      "expDem": 19.12
+      "expDem": 18.71
     },
     {
       "date": "2016-10-27",
       "pDem": 0,
-      "expDem": 18.97
+      "expDem": 18.72
     },
     {
       "date": "2016-10-28",
       "pDem": 0,
-      "expDem": 18.9
+      "expDem": 18.72
     },
     {
       "date": "2016-10-29",
       "pDem": 0,
-      "expDem": 18.89
+      "expDem": 18.69
     },
     {
       "date": "2016-10-30",
       "pDem": 0,
-      "expDem": 18.87
+      "expDem": 18.58
     },
     {
       "date": "2016-10-31",
       "pDem": 0,
-      "expDem": 18.81
+      "expDem": 18.48
     },
     {
       "date": "2016-11-01",
       "pDem": 0,
-      "expDem": 18.78
+      "expDem": 18.47
     }
   ],
   "latestHist": {
     "counts": [
-      1234,
-      343,
+      772,
+      28,
       0,
       0,
       0,

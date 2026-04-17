@@ -1,1 +1,508 @@
-{"genericBallot": [{"end_date": "2022-09-10", "dem": 47.0, "rep": 42.0, "pollster": "Morning Consult", "sample": "2006"}, {"end_date": "2022-09-10", "dem": 45.0, "rep": 45.0, "pollster": "The Winston Group", "sample": "1000"}, {"end_date": "2022-09-10", "dem": 48.0, "rep": 42.0, "pollster": "Global Strategy Group/GBAO (Navigator Research)", "sample": "1001"}, {"end_date": "2022-09-11", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-11", "dem": 44.0, "rep": 41.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1201"}, {"end_date": "2022-09-09", "dem": 37.0, "rep": 34.0, "pollster": "Ipsos", "sample": "4411"}, {"end_date": "2022-09-09", "dem": 42.0, "rep": 33.0, "pollster": "Opinium", "sample": "1832"}, {"end_date": "2022-09-12", "dem": 41.67, "rep": 42.89, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-09-12", "dem": 43.2, "rep": 39.3, "pollster": "YouGov", "sample": "1307"}, {"end_date": "2022-09-11", "dem": 46.0, "rep": 46.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "1000"}, {"end_date": "2022-09-11", "dem": 47.0, "rep": 41.0, "pollster": "Marquette University Law School", "sample": "1282"}, {"end_date": "2022-09-10", "dem": 47.0, "rep": 46.0, "pollster": "The New York Times/Siena College", "sample": "1399"}, {"end_date": "2022-09-14", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-14", "dem": 43.0, "rep": 46.0, "pollster": "OnMessage Inc.", "sample": "1600"}, {"end_date": "2022-09-13", "dem": 42.0, "rep": 43.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-09-12", "dem": 50.0, "rep": 47.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2022-09-15", "dem": 47.1, "rep": 46.9, "pollster": "Cygnal", "sample": "5196"}, {"end_date": "2022-09-17", "dem": 48.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "8430"}, {"end_date": "2022-09-17", "dem": 46.0, "rep": 41.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-09-18", "dem": 49.0, "rep": 44.0, "pollster": "Echelon Insights", "sample": "1056"}, {"end_date": "2022-09-18", "dem": 46.0, "rep": 34.0, "pollster": "Premise", "sample": "1703"}, {"end_date": "2022-09-12", "dem": 41.0, "rep": 41.0, "pollster": "Ipsos", "sample": "930"}, {"end_date": "2022-09-19", "dem": 41.8, "rep": 42.26, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-09-19", "dem": 45.5, "rep": 40.5, "pollster": "YouGov", "sample": "1318"}, {"end_date": "2022-09-20", "dem": 47.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-20", "dem": 45.2, "rep": 44.8, "pollster": "Emerson College", "sample": "1368"}, {"end_date": "2022-09-20", "dem": 46.0, "rep": 51.0, "pollster": "ABC News/The Washington Post", "sample": "1038"}, {"end_date": "2022-09-20", "dem": 42.0, "rep": 44.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-09-19", "dem": 44.0, "rep": 48.0, "pollster": "McLaughlin & Associates", "sample": "1000"}, {"end_date": "2022-09-22", "dem": 45.6, "rep": 41.3, "pollster": "Big Village", "sample": "821"}, {"end_date": "2022-09-22", "dem": 45.0, "rep": 46.0, "pollster": "YouGov", "sample": "1954"}, {"end_date": "2022-09-23", "dem": 48.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-23", "dem": 47.0, "rep": 41.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-09-24", "dem": 46.0, "rep": 41.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-09-24", "dem": 45.0, "rep": 43.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-09-23", "dem": 45.0, "rep": 47.0, "pollster": "Monmouth University Polling Institute", "sample": "750"}, {"end_date": "2022-09-22", "dem": 46.0, "rep": 42.0, "pollster": "Selzer & Co.", "sample": "563"}, {"end_date": "2022-09-24", "dem": 49.0, "rep": 43.0, "pollster": "Global Strategy Group/GBAO (Navigator Research)", "sample": "997"}, {"end_date": "2022-09-21", "dem": 47.0, "rep": 43.0, "pollster": "KFF", "sample": "1291"}, {"end_date": "2022-09-26", "dem": 48.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-26", "dem": 43.93, "rep": 42.96, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-09-26", "dem": 45.6, "rep": 51.3, "pollster": "Trafalgar Group", "sample": "1084"}, {"end_date": "2022-09-26", "dem": 46.0, "rep": 47.0, "pollster": "YouGov", "sample": "1055"}, {"end_date": "2022-09-25", "dem": 45.0, "rep": 41.0, "pollster": "YouGov", "sample": "1138"}, {"end_date": "2022-09-24", "dem": 43.0, "rep": 44.0, "pollster": "Susquehanna Polling & Research Inc.", "sample": "881"}, {"end_date": "2022-09-27", "dem": 45.0, "rep": 42.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-09-28", "dem": 46.0, "rep": 44.0, "pollster": "Marist College", "sample": "1562"}, {"end_date": "2022-09-28", "dem": 44.8, "rep": 43.79, "pollster": "NewsNation", "sample": "1017"}, {"end_date": "2022-09-27", "dem": 44.0, "rep": 45.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-09-29", "dem": 49.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-09-27", "dem": 50.0, "rep": 46.0, "pollster": "GQR", "sample": "2000"}, {"end_date": "2022-10-01", "dem": 46.0, "rep": 43.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-10-02", "dem": 49.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-03", "dem": 44.4, "rep": 46.5, "pollster": "InsiderAdvantage", "sample": "750"}, {"end_date": "2022-10-01", "dem": 37.0, "rep": 34.0, "pollster": "Ipsos", "sample": "4415"}, {"end_date": "2022-09-24", "dem": 45.0, "rep": 47.0, "pollster": "Data for Progress", "sample": "7380"}, {"end_date": "2022-10-03", "dem": 46.79, "rep": 40.1, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-10-03", "dem": 47.0, "rep": 46.0, "pollster": "YouGov", "sample": "1042"}, {"end_date": "2022-10-05", "dem": 44.8, "rep": 42.7, "pollster": "John Zogby Strategies", "sample": "1006"}, {"end_date": "2022-09-19", "dem": 50.0, "rep": 47.0, "pollster": "SSRS", "sample": "1198"}, {"end_date": "2022-10-05", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-04", "dem": 43.0, "rep": 47.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-10-06", "dem": 50.5, "rep": 45.1, "pollster": "Big Village", "sample": "708"}, {"end_date": "2022-10-06", "dem": 43.0, "rep": 42.0, "pollster": "TIPP Insights", "sample": "1158"}, {"end_date": "2022-10-08", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "8381"}, {"end_date": "2022-10-08", "dem": 46.0, "rep": 42.0, "pollster": "Morning Consult", "sample": "2006"}, {"end_date": "2022-10-09", "dem": 46.0, "rep": 47.0, "pollster": "Pioneer Polling/Tarrance Group", "sample": "1208"}, {"end_date": "2022-10-08", "dem": 41.0, "rep": 34.0, "pollster": "AP-NORC", "sample": "1121"}, {"end_date": "2022-10-08", "dem": 49.0, "rep": 44.0, "pollster": "Global Strategy Group/GBAO (Navigator Research)", "sample": "1000"}, {"end_date": "2022-10-10", "dem": 42.31, "rep": 42.56, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-10-10", "dem": 48.0, "rep": 46.0, "pollster": "YouGov", "sample": "1030"}, {"end_date": "2022-10-09", "dem": 45.0, "rep": 43.0, "pollster": "Public Opinion Strategies", "sample": "2000"}, {"end_date": "2022-10-08", "dem": 48.0, "rep": 48.0, "pollster": "Susquehanna Polling & Research Inc.", "sample": "800"}, {"end_date": "2022-10-11", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-11", "dem": 42.9, "rep": 48.2, "pollster": "Trafalgar Group", "sample": "1079"}, {"end_date": "2022-10-11", "dem": 44.0, "rep": 41.0, "pollster": "Beacon Research/Shaw & Co. Research", "sample": "1206"}, {"end_date": "2022-10-11", "dem": 45.47, "rep": 48.51, "pollster": "The New York Times/Siena College", "sample": "792"}, {"end_date": "2022-10-12", "dem": 47.0, "rep": 53.0, "pollster": "Harris Insights & Analytics", "sample": "1038"}, {"end_date": "2022-10-11", "dem": 41.0, "rep": 48.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-10-13", "dem": 45.0, "rep": 47.0, "pollster": "YouGov", "sample": "1753"}, {"end_date": "2022-10-13", "dem": 43.0, "rep": 35.0, "pollster": "Opinium", "sample": "2000"}, {"end_date": "2022-10-14", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-15", "dem": 45.0, "rep": 44.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-10-15", "dem": 46.0, "rep": 48.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "800"}, {"end_date": "2022-10-13", "dem": 41.0, "rep": 40.0, "pollster": "Pew Research Center", "sample": "3993"}, {"end_date": "2022-10-15", "dem": 46.0, "rep": 44.0, "pollster": "YouGov", "sample": "1209"}, {"end_date": "2022-10-15", "dem": 44.0, "rep": 50.0, "pollster": "Monmouth University Polling Institute", "sample": "756"}, {"end_date": "2022-10-14", "dem": 43.0, "rep": 49.0, "pollster": "McLaughlin & Associates", "sample": "1000"}, {"end_date": "2022-10-17", "dem": 48.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-17", "dem": 42.21, "rep": 45.08, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-10-17", "dem": 46.0, "rep": 47.0, "pollster": "YouGov", "sample": "1110"}, {"end_date": "2022-10-16", "dem": 47.0, "rep": 48.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "797"}, {"end_date": "2022-10-12", "dem": 45.0, "rep": 48.0, "pollster": "Data for Progress", "sample": "4576"}, {"end_date": "2022-10-01", "dem": 49.0, "rep": 51.0, "pollster": "SurveyMonkey", "sample": "108206"}, {"end_date": "2022-10-18", "dem": 40.7, "rep": 45.6, "pollster": "Emerson College", "sample": "1000"}, {"end_date": "2022-10-18", "dem": 43.0, "rep": 40.0, "pollster": "YouGov", "sample": "1000"}, {"end_date": "2022-10-18", "dem": 46.0, "rep": 44.0, "pollster": "The Winston Group", "sample": "1300"}, {"end_date": "2022-10-18", "dem": 43.0, "rep": 47.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-10-20", "dem": 47.0, "rep": 45.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-20", "dem": 46.9, "rep": 48.6, "pollster": "Cygnal", "sample": "5502"}, {"end_date": "2022-10-22", "dem": 47.0, "rep": 42.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-10-21", "dem": 49.0, "rep": 49.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2022-10-18", "dem": 49.0, "rep": 48.0, "pollster": "Ipsos", "sample": "937"}, {"end_date": "2022-10-23", "dem": 48.0, "rep": 46.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-22", "dem": 48.0, "rep": 45.0, "pollster": "Global Strategy Group/GBAO (Navigator Research)", "sample": "1000"}, {"end_date": "2022-10-21", "dem": 44.9, "rep": 49.4, "pollster": "Suffolk University", "sample": "1000"}, {"end_date": "2022-10-21", "dem": 37.0, "rep": 34.0, "pollster": "Ipsos", "sample": "4413"}, {"end_date": "2022-10-25", "dem": 43.5, "rep": 48.2, "pollster": "InsiderAdvantage", "sample": "750"}, {"end_date": "2022-10-24", "dem": 45.62, "rep": 44.33, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-10-24", "dem": 49.0, "rep": 45.0, "pollster": "YouGov", "sample": "1114"}, {"end_date": "2022-10-25", "dem": 50.3, "rep": 46.0, "pollster": "Big Village", "sample": "713"}, {"end_date": "2022-10-25", "dem": 48.0, "rep": 46.0, "pollster": "Echelon Insights", "sample": "1014"}, {"end_date": "2022-10-24", "dem": 44.0, "rep": 46.0, "pollster": "Fabrizio Lee & Associates/Impact Research", "sample": "1500"}, {"end_date": "2022-10-26", "dem": 47.0, "rep": 46.0, "pollster": "Morning Consult", "sample": "7947"}, {"end_date": "2022-10-26", "dem": 45.0, "rep": 49.0, "pollster": "Data for Progress", "sample": "1217"}, {"end_date": "2022-10-26", "dem": 48.0, "rep": 47.0, "pollster": "Tufts University Public Opinion Lab", "sample": "642"}, {"end_date": "2022-10-26", "dem": 42.4, "rep": 48.2, "pollster": "Trafalgar Group", "sample": "1089"}, {"end_date": "2022-10-26", "dem": 46.0, "rep": 46.0, "pollster": "Marist College", "sample": "1469"}, {"end_date": "2022-10-26", "dem": 53.0, "rep": 47.0, "pollster": "Public Opinion Strategies", "sample": "1000"}, {"end_date": "2022-10-26", "dem": 46.0, "rep": 48.0, "pollster": "WPA Intelligence", "sample": "1434"}, {"end_date": "2022-10-25", "dem": 42.0, "rep": 49.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-10-27", "dem": 45.0, "rep": 47.0, "pollster": "YouGov", "sample": "1899"}, {"end_date": "2022-10-25", "dem": 38.0, "rep": 40.0, "pollster": "Impact Research", "sample": "800"}, {"end_date": "2022-10-29", "dem": 46.0, "rep": 46.0, "pollster": "Morning Consult", "sample": "6974"}, {"end_date": "2022-10-29", "dem": 46.9, "rep": 50.0, "pollster": "Cygnal", "sample": "2015"}, {"end_date": "2022-10-29", "dem": 42.0, "rep": 44.0, "pollster": "Benenson Strategy Group", "sample": "1000"}, {"end_date": "2022-10-28", "dem": 44.0, "rep": 48.0, "pollster": "Quinnipiac University", "sample": "2010"}, {"end_date": "2022-10-30", "dem": 47.0, "rep": 42.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-10-30", "dem": 43.44, "rep": 44.67, "pollster": "NewsNation", "sample": "1017"}, {"end_date": "2022-10-30", "dem": 47.0, "rep": 51.0, "pollster": "Data for Progress", "sample": "1276"}, {"end_date": "2022-10-29", "dem": 46.0, "rep": 44.0, "pollster": "YouGov", "sample": "1172"}, {"end_date": "2022-10-28", "dem": 47.0, "rep": 51.0, "pollster": "SSRS", "sample": "992"}, {"end_date": "2022-10-31", "dem": 48.35, "rep": 45.82, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-10-31", "dem": 49.0, "rep": 49.0, "pollster": "YouGov", "sample": "1101"}, {"end_date": "2022-11-01", "dem": 51.5, "rep": 44.9, "pollster": "Big Village", "sample": "702"}, {"end_date": "2022-11-01", "dem": 44.0, "rep": 42.0, "pollster": "Premise", "sample": "1211"}, {"end_date": "2022-11-01", "dem": 48.0, "rep": 50.0, "pollster": "ABC News/The Washington Post", "sample": "688"}, {"end_date": "2022-11-01", "dem": 43.0, "rep": 48.0, "pollster": "Rasmussen Reports", "sample": "2500"}, {"end_date": "2022-11-03", "dem": 50.0, "rep": 46.2, "pollster": "Big Village", "sample": "702"}, {"end_date": "2022-11-04", "dem": 48.0, "rep": 43.0, "pollster": "Morning Consult", "sample": "2005"}, {"end_date": "2022-11-04", "dem": 48.0, "rep": 47.0, "pollster": "Hart Research Associates/Public Opinion Strategies", "sample": "786"}, {"end_date": "2022-11-05", "dem": 42.7, "rep": 48.4, "pollster": "Trafalgar Group", "sample": "1099"}, {"end_date": "2022-11-05", "dem": 48.0, "rep": 49.0, "pollster": "YouGov", "sample": "1071"}, {"end_date": "2022-11-05", "dem": 48.0, "rep": 52.0, "pollster": "Data for Progress", "sample": "1130"}, {"end_date": "2022-11-06", "dem": 46.6, "rep": 49.7, "pollster": "AtlasIntel", "sample": "863"}, {"end_date": "2022-11-06", "dem": 45.76, "rep": 44.55, "pollster": "Ipsos", "sample": "452"}, {"end_date": "2022-11-01", "dem": 49.0, "rep": 49.0, "pollster": "African American Research Collaborative", "sample": "12208"}, {"end_date": "2022-11-07", "dem": 49.0, "rep": 51.0, "pollster": "GQR", "sample": "1000"}, {"end_date": "2022-11-03", "dem": 47.0, "rep": 48.0, "pollster": "Change Research", "sample": "3201"}]}
+{
+  "genericBallot": [
+    {
+      "end_date": "2022-09-09",
+      "dem": 37.0,
+      "rep": 34.0,
+      "pollster": "Ipsos",
+      "sample": "4411"
+    },
+    {
+      "end_date": "2022-09-10",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "The New York Times/Siena College",
+      "sample": "1399"
+    },
+    {
+      "end_date": "2022-09-11",
+      "dem": 44.0,
+      "rep": 41.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1201"
+    },
+    {
+      "end_date": "2022-09-11",
+      "dem": 46.0,
+      "rep": 46.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2022-09-11",
+      "dem": 47.0,
+      "rep": 41.0,
+      "pollster": "Marquette University Law School",
+      "sample": "1282"
+    },
+    {
+      "end_date": "2022-09-12",
+      "dem": 41.67,
+      "rep": 42.89,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-09-12",
+      "dem": 43.2,
+      "rep": 39.3,
+      "pollster": "YouGov",
+      "sample": "1307"
+    },
+    {
+      "end_date": "2022-09-12",
+      "dem": 41.0,
+      "rep": 41.0,
+      "pollster": "Ipsos",
+      "sample": "930"
+    },
+    {
+      "end_date": "2022-09-15",
+      "dem": 47.1,
+      "rep": 46.9,
+      "pollster": "Cygnal",
+      "sample": "5196"
+    },
+    {
+      "end_date": "2022-09-19",
+      "dem": 41.8,
+      "rep": 42.26,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-09-19",
+      "dem": 45.5,
+      "rep": 40.5,
+      "pollster": "YouGov",
+      "sample": "1318"
+    },
+    {
+      "end_date": "2022-09-19",
+      "dem": 50.0,
+      "rep": 47.0,
+      "pollster": "SSRS",
+      "sample": "1198"
+    },
+    {
+      "end_date": "2022-09-20",
+      "dem": 45.2,
+      "rep": 44.8,
+      "pollster": "Emerson College",
+      "sample": "1368"
+    },
+    {
+      "end_date": "2022-09-20",
+      "dem": 46.0,
+      "rep": 51.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "1038"
+    },
+    {
+      "end_date": "2022-09-22",
+      "dem": 45.6,
+      "rep": 41.3,
+      "pollster": "Big Village",
+      "sample": "821"
+    },
+    {
+      "end_date": "2022-09-22",
+      "dem": 45.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "1954"
+    },
+    {
+      "end_date": "2022-09-22",
+      "dem": 46.0,
+      "rep": 42.0,
+      "pollster": "Selzer & Co.",
+      "sample": "563"
+    },
+    {
+      "end_date": "2022-09-23",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "750"
+    },
+    {
+      "end_date": "2022-09-24",
+      "dem": 43.0,
+      "rep": 44.0,
+      "pollster": "Susquehanna Polling & Research Inc.",
+      "sample": "881"
+    },
+    {
+      "end_date": "2022-09-24",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "Data for Progress",
+      "sample": "7380"
+    },
+    {
+      "end_date": "2022-09-25",
+      "dem": 45.0,
+      "rep": 41.0,
+      "pollster": "YouGov",
+      "sample": "1138"
+    },
+    {
+      "end_date": "2022-09-26",
+      "dem": 43.93,
+      "rep": 42.96,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-09-26",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "1055"
+    },
+    {
+      "end_date": "2022-09-28",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "Marist College",
+      "sample": "1562"
+    },
+    {
+      "end_date": "2022-10-01",
+      "dem": 37.0,
+      "rep": 34.0,
+      "pollster": "Ipsos",
+      "sample": "4415"
+    },
+    {
+      "end_date": "2022-10-03",
+      "dem": 46.79,
+      "rep": 40.1,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-10-03",
+      "dem": 47.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "1042"
+    },
+    {
+      "end_date": "2022-10-06",
+      "dem": 50.5,
+      "rep": 45.1,
+      "pollster": "Big Village",
+      "sample": "708"
+    },
+    {
+      "end_date": "2022-10-06",
+      "dem": 43.0,
+      "rep": 42.0,
+      "pollster": "TIPP Insights",
+      "sample": "1158"
+    },
+    {
+      "end_date": "2022-10-08",
+      "dem": 48.0,
+      "rep": 48.0,
+      "pollster": "Susquehanna Polling & Research Inc.",
+      "sample": "800"
+    },
+    {
+      "end_date": "2022-10-10",
+      "dem": 42.31,
+      "rep": 42.56,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-10-10",
+      "dem": 48.0,
+      "rep": 46.0,
+      "pollster": "YouGov",
+      "sample": "1030"
+    },
+    {
+      "end_date": "2022-10-11",
+      "dem": 44.0,
+      "rep": 41.0,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sample": "1206"
+    },
+    {
+      "end_date": "2022-10-11",
+      "dem": 45.47,
+      "rep": 48.51,
+      "pollster": "The New York Times/Siena College",
+      "sample": "792"
+    },
+    {
+      "end_date": "2022-10-12",
+      "dem": 47.0,
+      "rep": 53.0,
+      "pollster": "Harris Insights & Analytics",
+      "sample": "1038"
+    },
+    {
+      "end_date": "2022-10-12",
+      "dem": 45.0,
+      "rep": 48.0,
+      "pollster": "Data for Progress",
+      "sample": "4576"
+    },
+    {
+      "end_date": "2022-10-13",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "1753"
+    },
+    {
+      "end_date": "2022-10-13",
+      "dem": 41.0,
+      "rep": 40.0,
+      "pollster": "Pew Research Center",
+      "sample": "3993"
+    },
+    {
+      "end_date": "2022-10-15",
+      "dem": 46.0,
+      "rep": 48.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "800"
+    },
+    {
+      "end_date": "2022-10-15",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "YouGov",
+      "sample": "1209"
+    },
+    {
+      "end_date": "2022-10-15",
+      "dem": 44.0,
+      "rep": 50.0,
+      "pollster": "Monmouth University Polling Institute",
+      "sample": "756"
+    },
+    {
+      "end_date": "2022-10-16",
+      "dem": 47.0,
+      "rep": 48.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "797"
+    },
+    {
+      "end_date": "2022-10-17",
+      "dem": 42.21,
+      "rep": 45.08,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-10-17",
+      "dem": 46.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "1110"
+    },
+    {
+      "end_date": "2022-10-18",
+      "dem": 40.7,
+      "rep": 45.6,
+      "pollster": "Emerson College",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2022-10-18",
+      "dem": 43.0,
+      "rep": 40.0,
+      "pollster": "YouGov",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2022-10-18",
+      "dem": 49.0,
+      "rep": 48.0,
+      "pollster": "Ipsos",
+      "sample": "937"
+    },
+    {
+      "end_date": "2022-10-20",
+      "dem": 46.9,
+      "rep": 48.6,
+      "pollster": "Cygnal",
+      "sample": "5502"
+    },
+    {
+      "end_date": "2022-10-21",
+      "dem": 44.9,
+      "rep": 49.4,
+      "pollster": "Suffolk University",
+      "sample": "1000"
+    },
+    {
+      "end_date": "2022-10-21",
+      "dem": 37.0,
+      "rep": 34.0,
+      "pollster": "Ipsos",
+      "sample": "4413"
+    },
+    {
+      "end_date": "2022-10-24",
+      "dem": 45.62,
+      "rep": 44.33,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-10-24",
+      "dem": 49.0,
+      "rep": 45.0,
+      "pollster": "YouGov",
+      "sample": "1114"
+    },
+    {
+      "end_date": "2022-10-25",
+      "dem": 50.3,
+      "rep": 46.0,
+      "pollster": "Big Village",
+      "sample": "713"
+    },
+    {
+      "end_date": "2022-10-26",
+      "dem": 45.0,
+      "rep": 49.0,
+      "pollster": "Data for Progress",
+      "sample": "1217"
+    },
+    {
+      "end_date": "2022-10-26",
+      "dem": 46.0,
+      "rep": 46.0,
+      "pollster": "Marist College",
+      "sample": "1469"
+    },
+    {
+      "end_date": "2022-10-26",
+      "dem": 46.0,
+      "rep": 48.0,
+      "pollster": "WPA Intelligence",
+      "sample": "1434"
+    },
+    {
+      "end_date": "2022-10-27",
+      "dem": 45.0,
+      "rep": 47.0,
+      "pollster": "YouGov",
+      "sample": "1899"
+    },
+    {
+      "end_date": "2022-10-28",
+      "dem": 44.0,
+      "rep": 48.0,
+      "pollster": "Quinnipiac University",
+      "sample": "2010"
+    },
+    {
+      "end_date": "2022-10-28",
+      "dem": 47.0,
+      "rep": 51.0,
+      "pollster": "SSRS",
+      "sample": "992"
+    },
+    {
+      "end_date": "2022-10-29",
+      "dem": 46.9,
+      "rep": 50.0,
+      "pollster": "Cygnal",
+      "sample": "2015"
+    },
+    {
+      "end_date": "2022-10-29",
+      "dem": 46.0,
+      "rep": 44.0,
+      "pollster": "YouGov",
+      "sample": "1172"
+    },
+    {
+      "end_date": "2022-10-30",
+      "dem": 47.0,
+      "rep": 51.0,
+      "pollster": "Data for Progress",
+      "sample": "1276"
+    },
+    {
+      "end_date": "2022-10-31",
+      "dem": 48.35,
+      "rep": 45.82,
+      "pollster": "Ipsos",
+      "sample": "452"
+    },
+    {
+      "end_date": "2022-10-31",
+      "dem": 49.0,
+      "rep": 49.0,
+      "pollster": "YouGov",
+      "sample": "1101"
+    },
+    {
+      "end_date": "2022-11-01",
+      "dem": 51.5,
+      "rep": 44.9,
+      "pollster": "Big Village",
+      "sample": "702"
+    },
+    {
+      "end_date": "2022-11-01",
+      "dem": 48.0,
+      "rep": 50.0,
+      "pollster": "ABC News/The Washington Post",
+      "sample": "688"
+    },
+    {
+      "end_date": "2022-11-03",
+      "dem": 50.0,
+      "rep": 46.2,
+      "pollster": "Big Village",
+      "sample": "702"
+    },
+    {
+      "end_date": "2022-11-04",
+      "dem": 48.0,
+      "rep": 47.0,
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "sample": "786"
+    },
+    {
+      "end_date": "2022-11-05",
+      "dem": 48.0,
+      "rep": 49.0,
+      "pollster": "YouGov",
+      "sample": "1071"
+    },
+    {
+      "end_date": "2022-11-05",
+      "dem": 48.0,
+      "rep": 52.0,
+      "pollster": "Data for Progress",
+      "sample": "1130"
+    },
+    {
+      "end_date": "2022-11-06",
+      "dem": 46.6,
+      "rep": 49.7,
+      "pollster": "AtlasIntel",
+      "sample": "863"
+    },
+    {
+      "end_date": "2022-11-06",
+      "dem": 45.76,
+      "rep": 44.55,
+      "pollster": "Ipsos",
+      "sample": "452"
+    }
+  ]
+}
