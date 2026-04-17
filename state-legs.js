@@ -167,17 +167,11 @@
     for (const f of feats){ const p = f.properties; if (p) p._ratio = buildRatio(p, chamber); }
   }
 
-  const STATE_LEG_BIAS = { ME: +3 };
-
   function applyProjection(chamber){
     const feats = CS(chamber).features; if (!feats) return;
     for (const f of feats){
       const p = f.properties; if (!p) continue;
-      let m = projectMarginFromRatio(p._ratio);
-      if (m != null && isFinite(m)){
-        const bias = STATE_LEG_BIAS[p.state_abbr] || 0;
-        if (bias) m += bias;
-      }
+      const m = projectMarginFromRatio(p._ratio);
       p._projMargin = m;
     }
 
@@ -308,6 +302,101 @@
     return s;
   };
 
+  // Per-district stagger: for states where only half the senate is up
+  // and the districts can be partitioned by parity of district number,
+  // encode whether odd or even districts are up in 2026. Districts
+  // not matching this parity render gray on the map.
+  //
+  // Sources: each state's Wikipedia 2026 election page and Ballotpedia
+  // senate-district stagger rules. States not listed here fall back
+  // to aggregate stagger (no per-district gray — v10 behavior).
+  const DISTRICT_PARITY_UP_2026_SLDU = {
+    // Midterm-Class-2 standard pattern: odd-numbered districts up
+    TX: 'odd',  // "All 16 odd-numbered seats" (Wikipedia 2026 TX elections)
+    OH: 'odd',  // "17 odd-numbered districts" (Wikipedia 2026 OH senate)
+    WI: 'odd',  // "17 odd-numbered districts" (Wikipedia 2026 WI senate)
+    IA: 'odd',  // "25 odd-numbered districts" (Wikipedia 2026 IA senate)
+    MO: 'odd',
+    NV: 'odd',
+    IN: 'odd',
+    KY: 'odd',
+    MT: 'odd',
+    TN: 'odd',
+    UT: 'odd',
+    WV: 'odd',
+    OK: 'odd',
+    WY: 'odd',
+    PA: 'odd',
+    WA: 'odd',
+    OR: 'odd',
+    ND: 'odd',
+    HI: 'odd', // "13 seats contested in 2026—covering odd-numbered districts"
+    // Presidential-cycle-offset: even-numbered districts up in midterms
+    CA: 'even', // Ballotpedia: "senators from even-numbered districts elected in intervening even years"
+    FL: 'even', // Wikipedia 2026 FL senate: "Only even-numbered seats will be up for election in 2026"
+    // States using 2-4-4 systems with flat district lists (see below): AR, IL, DE
+    // Still untouched: AK only (letter-based districts can't use numeric rules)
+  };
+
+  // Flat up-districts lists for states that can't be expressed as a simple
+  // odd/even parity rule. Takes precedence over parity rules if both exist.
+  // Source: Wikipedia 2022 and 2026 state senate election pages.
+  const DISTRICT_UP_2026_SET_SLDU = {
+    // Colorado: verified against Wikipedia 2022 Colorado Senate election
+    // (4-year term districts elected 2022 → up again 2026)
+    CO: new Set([1,3,4,7,8,9,11,15,20,22,24,25,27,30,32,34,35]),
+    // Arkansas: 17 districts on 2026 ballot + 1 special (district 26).
+    // Source: Wikipedia 2026 Arkansas Senate election page results table.
+    AR: new Set([2,7,9,10,11,13,14,15,16,21,24,26,27,28,30,31,32,35]),
+    // Illinois: 39 of 59 districts up in 2026 (groups 1 and 2 per IL constitution).
+    // Source: Wikipedia Illinois Senate article, "State senators will be elected..."
+    //   Group 1 (4-4-2 cycle, 4-yr term in 2026): 2,5,8,11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,56,59
+    //   Group 2 (4-2-4 cycle, 2-yr term in 2026): 3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57
+    //   Group 3 (2-4-4 cycle, NOT up 2026): 1,4,7,10,13,16,19,22,25,28,31,34,37,40,43,46,49,52,55,58
+    IL: new Set([2,3,5,6,8,9,11,12,14,15,17,18,20,21,23,24,26,27,29,30,32,33,35,36,38,39,41,42,44,45,47,48,50,51,53,54,56,57,59]),
+    // Delaware: 11 of 21 districts up in 2026 (4-yr-term winners from 2022).
+    // Derived by subtracting 2024 up-districts from all 21. In 2022 (post-
+    // reapportionment), 10 districts drew 2-yr terms (up in 2024, then 4-yr
+    // in 2028) and 11 drew 4-yr terms (up in 2026 with 2-yr term this time).
+    // Source: Wikipedia 2024 Delaware Senate election, 10 up-districts table;
+    // cross-referenced against Delaware Dept. of Elections 2026-2034 schedule.
+    //   2024 up (NOT up 2026): 2, 3, 4, 6, 10, 11, 16, 17, 18, 21
+    //   2026 up:               1, 5, 7, 8, 9, 12, 13, 14, 15, 19, 20
+    DE: new Set([1,5,7,8,9,12,13,14,15,19,20]),
+  };
+
+  function isDistrictUp2026(chamber, props){
+    if (chamber !== 'sldu') return true;  // SLDL parity rule TBD
+    const st = props && props.state_abbr;
+    if (!st) return true;
+    // Whole-chamber not-up states: already handled elsewhere
+    if (NOT_UP_SET('sldu').has(st)) return false;
+    const geoid = props.GEOID; if (!geoid || geoid.length < 3) return true;
+    const dnum = parseInt(geoid.slice(-3), 10);
+    if (!isFinite(dnum)) return true;
+
+    // Flat up-districts lists (e.g. CO) take precedence over parity.
+    const upSet = DISTRICT_UP_2026_SET_SLDU[st];
+    if (upSet) return upSet.has(dnum);
+
+    const parity = DISTRICT_PARITY_UP_2026_SLDU[st];
+    if (!parity) return true;  // no stagger rule → treat as up-able
+
+    // Per-state exceptions: specific districts that override the parity rule
+    // because of vacancy-fill two-year terms or other special cases.
+    const exceptionsUp = DISTRICT_EXCEPTIONS_UP_2026_SLDU[st];
+    if (exceptionsUp && exceptionsUp.has(dnum)) return true;
+
+    return parity === 'odd' ? (dnum % 2 === 1) : (dnum % 2 === 0);
+  }
+
+  // Districts that are up in 2026 despite their parity indicating otherwise
+  // (typically due to mid-term vacancy appointments needing special election).
+  // Source: state legislature publications and local news (e.g. ND Monitor 2026).
+  const DISTRICT_EXCEPTIONS_UP_2026_SLDU = {
+    ND: new Set([26, 42]),  // Two-year terms filling vacancies per ND Monitor
+  };
+
   function seatsUp2026(chamber, st, featureCount){
     const frac = SEATS_UP_FRAC_2026(chamber)[st];
     if (frac === 0) return 0;
@@ -342,12 +431,27 @@
       return { total, up:0, notUp:true };
     }
 
-    // Partition into up + locked, sorted by competitiveness.
-    const items = s.features
-      .map(f => ({ f, m: mOf(f.properties) }))
-      .sort((a,b) => Math.abs(a.m ?? 999) - Math.abs(b.m ?? 999));
-    const upItems = items.slice(0, up);
-    const lockedItems = items.slice(up);
+    // Partition into up + locked.
+    //
+    // If we have a district-parity rule for this state (odd/even up),
+    // use it to split exactly — each physical district is assigned to
+    // the bucket matching whether its seat is on the ballot in 2026.
+    // Otherwise fall back to the aggregate approach: take the `up`
+    // most-competitive districts as the "up" pool (v10/v11 behavior).
+    const allItems = s.features.map(f => ({ f, m: mOf(f.properties) }));
+    let upItems, lockedItems;
+    if (chamber === 'sldu' && (DISTRICT_PARITY_UP_2026_SLDU[stateAbbr] || DISTRICT_UP_2026_SET_SLDU[stateAbbr])){
+      upItems = [];
+      lockedItems = [];
+      for (const it of allItems){
+        if (isDistrictUp2026(chamber, it.f.properties)) upItems.push(it);
+        else lockedItems.push(it);
+      }
+    } else {
+      const sorted = allItems.slice().sort((a,b) => Math.abs(a.m ?? 999) - Math.abs(b.m ?? 999));
+      upItems = sorted.slice(0, up);
+      lockedItems = sorted.slice(up);
+    }
 
     // For SLDU: use real current holders to back into a locked D count
     // that honors the chamber's true composition. Gap between baseline-
@@ -946,6 +1050,8 @@
     if (props){
       const notUp = NOT_UP_SET(chamber);
       if (notUp.has(props.state_abbr)) return '#e5e7eb';
+      // Per-district stagger gray — individual seats not up this cycle
+      if (!isDistrictUp2026(chamber, props)) return '#e5e7eb';
     }
     if (m == null || !isFinite(m)) return '#d0d0d0';
     return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
@@ -1079,9 +1185,10 @@
     }
 
     const o = chamberOdds(chamber, stateAbbr);
+    const isNotUp = !!(o && o.notUp);
 
     // Seat line: baseline projection for up states, current composition for not-up
-    if (chamber === 'sldu' && o && o.notUp && o.lockedD != null){
+    if (chamber === 'sldu' && isNotUp && o.lockedD != null){
       p.querySelector('[data-seats-d]').textContent = o.lockedD;
       p.querySelector('[data-seats-r]').textContent = o.lockedR;
     } else {
@@ -1091,20 +1198,27 @@
 
     const bar = p.querySelector('[data-rating-bar]');
     const labels = p.querySelector('[data-rating-labels]');
-    let barHTML = '', lblHTML = '';
-    for (const r of RATINGS){
-      const n = s.ratings[r.key] || 0;
-      if (n === 0) continue;
-      barHTML += `<div class="seg ${r.light?'light':''}" style="flex:${n};background:${r.color};" title="${r.label}: ${n}">${n}</div>`;
-      lblHTML += `<div class="lbl" style="flex:${n};">${r.label}</div>`;
+    // For whole-chamber not-up states, there's no election this cycle,
+    // so rating projections are meaningless — clear the bar entirely.
+    if (isNotUp){
+      bar.innerHTML = '';
+      labels.innerHTML = '';
+    } else {
+      let barHTML = '', lblHTML = '';
+      for (const r of RATINGS){
+        const n = s.ratings[r.key] || 0;
+        if (n === 0) continue;
+        barHTML += `<div class="seg ${r.light?'light':''}" style="flex:${n};background:${r.color};" title="${r.label}: ${n}">${n}</div>`;
+        lblHTML += `<div class="lbl" style="flex:${n};">${r.label}</div>`;
+      }
+      bar.innerHTML = barHTML;
+      labels.innerHTML = lblHTML;
     }
-    bar.innerHTML = barHTML;
-    labels.innerHTML = lblHTML;
 
     const oddsEl = p.querySelector('[data-odds-row]');
     if (oddsEl){
       if (!o) { oddsEl.innerHTML = ''; }
-      else if (o.notUp){
+      else if (isNotUp){
         const why = stateAbbr === 'NE' ? 'unicameral'
                   : (chamber === 'sldu' && ['KS','NM','SC'].includes(stateAbbr)) ? 'presidential-year senate'
                   : 'odd-year state';
@@ -1140,7 +1254,7 @@
     const wpDPct = wpD != null ? Math.round(wpD * 100) : null;
     const wpRPct = wpDPct != null ? (100 - wpDPct) : null;
     const spark = buildSparkline(props._ratio);
-    const notUp = NOT_UP_SET(chamber).has(props.state_abbr);
+    const notUp = NOT_UP_SET(chamber).has(props.state_abbr) || !isDistrictUp2026(chamber, props);
     const wpBlock = notUp
       ? '<div class="dstWpLabel" style="color:var(--muted);">Seat not up in 2026</div>'
       : (wpD != null
