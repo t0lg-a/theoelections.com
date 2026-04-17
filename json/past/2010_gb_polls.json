@@ -1,0 +1,2146 @@
+{
+  "genericBallot": [
+    {
+      "end_date": "2010-01-01",
+      "dem": 42.3456,
+      "rep": 41.94115,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-02",
+      "dem": 42.33749,
+      "rep": 41.9567,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-03",
+      "dem": 42.19715,
+      "rep": 42.04174,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-04",
+      "dem": 42.07956,
+      "rep": 42.08917,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-05",
+      "dem": 42.06791,
+      "rep": 42.1039,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-06",
+      "dem": 42.0543,
+      "rep": 42.11867,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-07",
+      "dem": 42.0414,
+      "rep": 42.13095,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-08",
+      "dem": 42.02942,
+      "rep": 42.14175,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-09",
+      "dem": 42.01586,
+      "rep": 42.15704,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-10",
+      "dem": 42.00751,
+      "rep": 42.16833,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-11",
+      "dem": 41.94309,
+      "rep": 42.61563,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-12",
+      "dem": 41.99968,
+      "rep": 42.5873,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-13",
+      "dem": 41.99099,
+      "rep": 42.60753,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-14",
+      "dem": 41.98436,
+      "rep": 42.62638,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-15",
+      "dem": 41.97665,
+      "rep": 42.64643,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-16",
+      "dem": 41.96818,
+      "rep": 42.6682,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-17",
+      "dem": 41.96156,
+      "rep": 42.68496,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-18",
+      "dem": 41.91972,
+      "rep": 42.73724,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-19",
+      "dem": 41.91233,
+      "rep": 42.75628,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-20",
+      "dem": 41.81865,
+      "rep": 42.8989,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-21",
+      "dem": 41.65727,
+      "rep": 42.92725,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-22",
+      "dem": 41.64643,
+      "rep": 42.95123,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-23",
+      "dem": 41.6344,
+      "rep": 42.97593,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-24",
+      "dem": 41.35095,
+      "rep": 42.98772,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-25",
+      "dem": 41.31469,
+      "rep": 43.05319,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-26",
+      "dem": 41.30015,
+      "rep": 43.07439,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-27",
+      "dem": 41.28655,
+      "rep": 43.09547,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-28",
+      "dem": 41.27034,
+      "rep": 43.11888,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-29",
+      "dem": 41.2547,
+      "rep": 43.13985,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-30",
+      "dem": 41.2439,
+      "rep": 43.15358,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-01-31",
+      "dem": 41.22996,
+      "rep": 43.17298,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-01",
+      "dem": 41.06889,
+      "rep": 43.10303,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-02",
+      "dem": 41.05173,
+      "rep": 43.1232,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-03",
+      "dem": 41.03289,
+      "rep": 43.14322,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-04",
+      "dem": 41.08773,
+      "rep": 42.8452,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-05",
+      "dem": 41.28161,
+      "rep": 42.72856,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-06",
+      "dem": 41.26904,
+      "rep": 42.7422,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-07",
+      "dem": 41.25731,
+      "rep": 42.75239,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-08",
+      "dem": 41.19881,
+      "rep": 42.76754,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-09",
+      "dem": 41.1896,
+      "rep": 42.77543,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-10",
+      "dem": 41.20948,
+      "rep": 42.53928,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-11",
+      "dem": 41.20094,
+      "rep": 42.54456,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-12",
+      "dem": 41.1917,
+      "rep": 42.54839,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-13",
+      "dem": 41.18268,
+      "rep": 42.55107,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-14",
+      "dem": 41.17452,
+      "rep": 42.5536,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-15",
+      "dem": 41.11457,
+      "rep": 42.59374,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-16",
+      "dem": 41.14662,
+      "rep": 42.81208,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-17",
+      "dem": 41.1371,
+      "rep": 42.82046,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-18",
+      "dem": 41.12954,
+      "rep": 42.82566,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-19",
+      "dem": 41.49218,
+      "rep": 42.43436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-20",
+      "dem": 41.4893,
+      "rep": 42.43663,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-21",
+      "dem": 41.48804,
+      "rep": 42.43746,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-22",
+      "dem": 41.42159,
+      "rep": 42.45082,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-23",
+      "dem": 41.4185,
+      "rep": 42.45294,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-24",
+      "dem": 41.41275,
+      "rep": 42.4565,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-25",
+      "dem": 41.51907,
+      "rep": 42.69667,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-26",
+      "dem": 41.37672,
+      "rep": 42.72748,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-27",
+      "dem": 41.37051,
+      "rep": 42.73436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-02-28",
+      "dem": 41.36396,
+      "rep": 42.74005,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-01",
+      "dem": 41.69884,
+      "rep": 42.73663,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-02",
+      "dem": 41.69577,
+      "rep": 42.74339,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-03",
+      "dem": 41.69276,
+      "rep": 42.74845,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-04",
+      "dem": 41.68971,
+      "rep": 42.75353,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-05",
+      "dem": 41.68741,
+      "rep": 42.75794,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-06",
+      "dem": 41.68687,
+      "rep": 42.76224,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-07",
+      "dem": 41.6854,
+      "rep": 42.76368,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-08",
+      "dem": 41.80671,
+      "rep": 42.55447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-09",
+      "dem": 41.80532,
+      "rep": 42.55467,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-10",
+      "dem": 41.80669,
+      "rep": 42.55285,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-11",
+      "dem": 41.81133,
+      "rep": 42.55051,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-12",
+      "dem": 41.81301,
+      "rep": 42.54713,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-13",
+      "dem": 41.81887,
+      "rep": 42.54472,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-14",
+      "dem": 41.82253,
+      "rep": 42.54039,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-15",
+      "dem": 41.86585,
+      "rep": 42.68476,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-16",
+      "dem": 41.86883,
+      "rep": 42.68379,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-17",
+      "dem": 41.87405,
+      "rep": 42.6814,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-18",
+      "dem": 41.73367,
+      "rep": 42.60049,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-19",
+      "dem": 41.67971,
+      "rep": 42.37973,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-20",
+      "dem": 41.68048,
+      "rep": 42.37437,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-21",
+      "dem": 41.67932,
+      "rep": 42.36921,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-22",
+      "dem": 41.41665,
+      "rep": 42.79785,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-23",
+      "dem": 41.41368,
+      "rep": 42.79891,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-24",
+      "dem": 41.4094,
+      "rep": 42.79969,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-25",
+      "dem": 41.40601,
+      "rep": 42.80107,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-26",
+      "dem": 41.40308,
+      "rep": 42.8046,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-27",
+      "dem": 41.40048,
+      "rep": 42.80883,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-28",
+      "dem": 41.39839,
+      "rep": 42.81134,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-29",
+      "dem": 41.31541,
+      "rep": 43.10711,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-30",
+      "dem": 41.31019,
+      "rep": 43.1113,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-03-31",
+      "dem": 41.3063,
+      "rep": 43.11682,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-01",
+      "dem": 41.30395,
+      "rep": 43.12257,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-02",
+      "dem": 41.30055,
+      "rep": 43.12949,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-03",
+      "dem": 41.29736,
+      "rep": 43.13709,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-04",
+      "dem": 41.29549,
+      "rep": 43.14159,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-05",
+      "dem": 41.30619,
+      "rep": 43.19573,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-06",
+      "dem": 41.40197,
+      "rep": 43.36885,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-07",
+      "dem": 41.40054,
+      "rep": 43.37748,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-08",
+      "dem": 41.45649,
+      "rep": 43.36765,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-09",
+      "dem": 41.48787,
+      "rep": 43.05684,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-10",
+      "dem": 41.48777,
+      "rep": 43.06157,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-11",
+      "dem": 41.48737,
+      "rep": 43.06494,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-12",
+      "dem": 41.658,
+      "rep": 43.23305,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-13",
+      "dem": 41.66012,
+      "rep": 43.2398,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-14",
+      "dem": 41.66219,
+      "rep": 43.24605,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-15",
+      "dem": 41.66473,
+      "rep": 43.25175,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-16",
+      "dem": 41.6686,
+      "rep": 43.25995,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-17",
+      "dem": 41.67304,
+      "rep": 43.26934,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-18",
+      "dem": 41.67571,
+      "rep": 43.27499,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-19",
+      "dem": 41.56327,
+      "rep": 43.28774,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-20",
+      "dem": 41.5652,
+      "rep": 43.29359,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-21",
+      "dem": 41.46265,
+      "rep": 43.22018,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-22",
+      "dem": 41.41034,
+      "rep": 43.13885,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-23",
+      "dem": 41.40953,
+      "rep": 43.14181,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-24",
+      "dem": 41.40734,
+      "rep": 43.14539,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-25",
+      "dem": 41.40681,
+      "rep": 43.1493,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-26",
+      "dem": 41.40095,
+      "rep": 43.09372,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-27",
+      "dem": 41.17373,
+      "rep": 42.33335,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-28",
+      "dem": 41.16921,
+      "rep": 42.32629,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-29",
+      "dem": 41.16635,
+      "rep": 42.32095,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-04-30",
+      "dem": 41.16344,
+      "rep": 42.31166,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-01",
+      "dem": 41.15971,
+      "rep": 42.30411,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-02",
+      "dem": 41.15766,
+      "rep": 42.29587,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-03",
+      "dem": 41.13128,
+      "rep": 42.25925,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-04",
+      "dem": 41.12859,
+      "rep": 42.24894,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-05",
+      "dem": 41.12325,
+      "rep": 42.23841,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-06",
+      "dem": 41.25648,
+      "rep": 42.2179,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-07",
+      "dem": 41.25639,
+      "rep": 42.20139,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-08",
+      "dem": 41.25602,
+      "rep": 42.18528,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-09",
+      "dem": 41.28542,
+      "rep": 42.19361,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-10",
+      "dem": 41.40569,
+      "rep": 42.12568,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-11",
+      "dem": 41.40948,
+      "rep": 42.11009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-12",
+      "dem": 41.41111,
+      "rep": 42.09961,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-13",
+      "dem": 41.41258,
+      "rep": 42.08509,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-14",
+      "dem": 41.41365,
+      "rep": 42.07096,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-15",
+      "dem": 41.41571,
+      "rep": 42.05665,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-16",
+      "dem": 41.41788,
+      "rep": 42.04205,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-17",
+      "dem": 41.3973,
+      "rep": 42.03228,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-18",
+      "dem": 41.39919,
+      "rep": 42.01749,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-19",
+      "dem": 41.2961,
+      "rep": 42.09282,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-20",
+      "dem": 41.50828,
+      "rep": 42.0052,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-21",
+      "dem": 41.51148,
+      "rep": 41.99126,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-22",
+      "dem": 41.51553,
+      "rep": 41.97788,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-23",
+      "dem": 41.52032,
+      "rep": 41.96125,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-24",
+      "dem": 41.52344,
+      "rep": 41.98786,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-25",
+      "dem": 41.6208,
+      "rep": 41.36341,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-26",
+      "dem": 41.62812,
+      "rep": 41.34022,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-27",
+      "dem": 41.63274,
+      "rep": 41.32492,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-28",
+      "dem": 41.63728,
+      "rep": 41.31135,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-29",
+      "dem": 41.64767,
+      "rep": 41.29231,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-30",
+      "dem": 41.65168,
+      "rep": 41.27873,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-05-31",
+      "dem": 41.5107,
+      "rep": 41.44028,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-01",
+      "dem": 41.51374,
+      "rep": 41.42694,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-02",
+      "dem": 41.52176,
+      "rep": 41.41245,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-03",
+      "dem": 41.52359,
+      "rep": 41.40041,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-04",
+      "dem": 41.52606,
+      "rep": 41.38848,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-05",
+      "dem": 41.52847,
+      "rep": 41.37482,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-06",
+      "dem": 41.53098,
+      "rep": 41.36246,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-07",
+      "dem": 41.45757,
+      "rep": 41.39754,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-08",
+      "dem": 41.52481,
+      "rep": 41.20102,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-09",
+      "dem": 41.52616,
+      "rep": 41.1875,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-10",
+      "dem": 41.74915,
+      "rep": 40.85162,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-11",
+      "dem": 41.75555,
+      "rep": 40.83522,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-12",
+      "dem": 41.77059,
+      "rep": 40.81213,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-13",
+      "dem": 41.77974,
+      "rep": 40.79123,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-14",
+      "dem": 41.62654,
+      "rep": 41.08314,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-15",
+      "dem": 41.63239,
+      "rep": 41.06923,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-16",
+      "dem": 41.63799,
+      "rep": 41.05647,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-17",
+      "dem": 41.64312,
+      "rep": 41.04232,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-18",
+      "dem": 41.64705,
+      "rep": 41.02882,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-19",
+      "dem": 41.65268,
+      "rep": 41.01704,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-20",
+      "dem": 41.65562,
+      "rep": 41.00717,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-21",
+      "dem": 41.60609,
+      "rep": 41.22446,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-22",
+      "dem": 41.6097,
+      "rep": 41.21509,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-23",
+      "dem": 41.38076,
+      "rep": 41.56048,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-24",
+      "dem": 41.37873,
+      "rep": 41.56332,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-25",
+      "dem": 41.37638,
+      "rep": 41.56434,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-26",
+      "dem": 41.37241,
+      "rep": 41.56652,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-27",
+      "dem": 41.36737,
+      "rep": 41.56664,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-28",
+      "dem": 41.38278,
+      "rep": 41.57013,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-29",
+      "dem": 41.37778,
+      "rep": 41.57055,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-06-30",
+      "dem": 41.37159,
+      "rep": 41.57447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-01",
+      "dem": 41.51919,
+      "rep": 41.66315,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-02",
+      "dem": 41.51671,
+      "rep": 41.66623,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-03",
+      "dem": 41.51489,
+      "rep": 41.66973,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-04",
+      "dem": 41.45021,
+      "rep": 41.66837,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-05",
+      "dem": 41.44907,
+      "rep": 41.66721,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-06",
+      "dem": 41.44682,
+      "rep": 41.66957,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-07",
+      "dem": 41.44639,
+      "rep": 41.67234,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-08",
+      "dem": 41.44496,
+      "rep": 41.67844,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-09",
+      "dem": 41.4446,
+      "rep": 41.68197,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-10",
+      "dem": 41.44369,
+      "rep": 41.68501,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-11",
+      "dem": 41.44367,
+      "rep": 41.69255,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-12",
+      "dem": 41.51638,
+      "rep": 41.75676,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-13",
+      "dem": 41.46069,
+      "rep": 43.65748,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-14",
+      "dem": 41.52279,
+      "rep": 43.41756,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-15",
+      "dem": 41.34373,
+      "rep": 43.23473,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-16",
+      "dem": 41.3423,
+      "rep": 43.25554,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-17",
+      "dem": 41.3407,
+      "rep": 43.27349,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-18",
+      "dem": 41.33837,
+      "rep": 43.29519,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-19",
+      "dem": 41.39927,
+      "rep": 43.17939,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-20",
+      "dem": 41.05832,
+      "rep": 43.28338,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-21",
+      "dem": 41.05219,
+      "rep": 43.30209,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-22",
+      "dem": 40.95182,
+      "rep": 43.67537,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-23",
+      "dem": 40.94314,
+      "rep": 43.70367,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-24",
+      "dem": 40.93671,
+      "rep": 43.72627,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-25",
+      "dem": 40.9295,
+      "rep": 43.74826,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-26",
+      "dem": 41.08716,
+      "rep": 43.83136,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-27",
+      "dem": 41.08328,
+      "rep": 43.8531,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-28",
+      "dem": 41.07938,
+      "rep": 43.87816,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-29",
+      "dem": 40.86593,
+      "rep": 44.22809,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-30",
+      "dem": 40.8568,
+      "rep": 44.26089,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-07-31",
+      "dem": 40.8492,
+      "rep": 44.29319,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-01",
+      "dem": 40.84213,
+      "rep": 44.32367,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-02",
+      "dem": 40.73259,
+      "rep": 44.394,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-03",
+      "dem": 40.72345,
+      "rep": 44.42568,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-04",
+      "dem": 40.71078,
+      "rep": 44.45933,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-05",
+      "dem": 40.70087,
+      "rep": 44.48307,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-06",
+      "dem": 40.78024,
+      "rep": 44.20729,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-07",
+      "dem": 40.77243,
+      "rep": 44.22311,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-08",
+      "dem": 40.76234,
+      "rep": 44.23868,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-09",
+      "dem": 40.69,
+      "rep": 44.35436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-10",
+      "dem": 40.71388,
+      "rep": 44.35928,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-11",
+      "dem": 40.79424,
+      "rep": 44.44096,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-12",
+      "dem": 40.70837,
+      "rep": 44.38971,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-13",
+      "dem": 40.69736,
+      "rep": 44.40808,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-14",
+      "dem": 40.68718,
+      "rep": 44.42595,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-15",
+      "dem": 40.68045,
+      "rep": 44.44517,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-16",
+      "dem": 40.52738,
+      "rep": 44.62766,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-17",
+      "dem": 40.73952,
+      "rep": 44.94329,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-18",
+      "dem": 40.06555,
+      "rep": 44.66023,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-19",
+      "dem": 40.04749,
+      "rep": 44.68441,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-20",
+      "dem": 40.02795,
+      "rep": 44.70816,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-21",
+      "dem": 40.00819,
+      "rep": 44.73315,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-22",
+      "dem": 39.99436,
+      "rep": 44.74851,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-23",
+      "dem": 40.1857,
+      "rep": 44.67776,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-24",
+      "dem": 40.174,
+      "rep": 44.69327,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-25",
+      "dem": 40.16364,
+      "rep": 44.7103,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-26",
+      "dem": 40.15225,
+      "rep": 44.72567,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-27",
+      "dem": 40.61861,
+      "rep": 44.48322,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-28",
+      "dem": 40.62269,
+      "rep": 44.48975,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-29",
+      "dem": 40.62479,
+      "rep": 44.49489,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-30",
+      "dem": 40.47015,
+      "rep": 44.62197,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-08-31",
+      "dem": 40.15952,
+      "rep": 43.59406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-01",
+      "dem": 40.14951,
+      "rep": 43.58086,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-02",
+      "dem": 40.13945,
+      "rep": 43.54977,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-03",
+      "dem": 40.12971,
+      "rep": 44.55194,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-04",
+      "dem": 40.11984,
+      "rep": 44.5617,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-05",
+      "dem": 40.1103,
+      "rep": 44.56685,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-06",
+      "dem": 40.144,
+      "rep": 44.52687,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-07",
+      "dem": 40.10257,
+      "rep": 44.7108,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-08",
+      "dem": 39.82339,
+      "rep": 44.53231,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-09",
+      "dem": 39.81506,
+      "rep": 44.53338,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-10",
+      "dem": 40.42429,
+      "rep": 44.25832,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-11",
+      "dem": 40.42757,
+      "rep": 44.25252,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-12",
+      "dem": 40.43553,
+      "rep": 44.24476,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-13",
+      "dem": 40.39254,
+      "rep": 44.27068,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-14",
+      "dem": 40.76702,
+      "rep": 44.6361,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-15",
+      "dem": 40.35453,
+      "rep": 44.55785,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-16",
+      "dem": 40.35722,
+      "rep": 44.5612,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-17",
+      "dem": 41.02067,
+      "rep": 44.64999,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-18",
+      "dem": 41.03725,
+      "rep": 44.65506,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-19",
+      "dem": 41.052,
+      "rep": 44.65586,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-20",
+      "dem": 41.23689,
+      "rep": 44.5075,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-21",
+      "dem": 41.26065,
+      "rep": 44.50864,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-22",
+      "dem": 41.27609,
+      "rep": 44.51,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-23",
+      "dem": 41.51472,
+      "rep": 44.73083,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-24",
+      "dem": 41.41546,
+      "rep": 45.22096,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-25",
+      "dem": 41.43741,
+      "rep": 45.24191,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-26",
+      "dem": 41.46806,
+      "rep": 45.27105,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-27",
+      "dem": 41.54313,
+      "rep": 45.12582,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-28",
+      "dem": 41.56955,
+      "rep": 45.13909,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-29",
+      "dem": 41.59304,
+      "rep": 45.15374,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-09-30",
+      "dem": 41.51892,
+      "rep": 45.02702,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-01",
+      "dem": 42.08447,
+      "rep": 44.5069,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-02",
+      "dem": 42.12788,
+      "rep": 44.49342,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-03",
+      "dem": 42.16413,
+      "rep": 44.48574,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-04",
+      "dem": 41.98523,
+      "rep": 44.54945,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-05",
+      "dem": 41.84185,
+      "rep": 44.63376,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-06",
+      "dem": 41.58321,
+      "rep": 44.76162,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-07",
+      "dem": 41.58543,
+      "rep": 44.76076,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-08",
+      "dem": 41.55696,
+      "rep": 45.19466,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-09",
+      "dem": 41.55322,
+      "rep": 45.22055,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-10",
+      "dem": 41.55732,
+      "rep": 45.24104,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-11",
+      "dem": 41.80063,
+      "rep": 44.6314,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-12",
+      "dem": 41.83944,
+      "rep": 44.81907,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-13",
+      "dem": 41.85582,
+      "rep": 44.82763,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-14",
+      "dem": 41.86343,
+      "rep": 45.19223,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-15",
+      "dem": 41.87395,
+      "rep": 45.21791,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-16",
+      "dem": 41.88254,
+      "rep": 45.23471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-17",
+      "dem": 41.88591,
+      "rep": 45.24862,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-18",
+      "dem": 41.86648,
+      "rep": 45.38416,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-19",
+      "dem": 41.38867,
+      "rep": 46.01346,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-20",
+      "dem": 41.38691,
+      "rep": 46.03252,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-21",
+      "dem": 41.74388,
+      "rep": 46.09784,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-22",
+      "dem": 42.33838,
+      "rep": 45.70583,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-23",
+      "dem": 42.36478,
+      "rep": 45.72269,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-24",
+      "dem": 42.37832,
+      "rep": 45.73469,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-25",
+      "dem": 42.33992,
+      "rep": 45.97453,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-26",
+      "dem": 42.34776,
+      "rep": 45.99591,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-27",
+      "dem": 42.95702,
+      "rep": 46.95773,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-28",
+      "dem": 42.98194,
+      "rep": 47.00309,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-29",
+      "dem": 42.48535,
+      "rep": 47.29415,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-30",
+      "dem": 42.49296,
+      "rep": 47.33617,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-10-31",
+      "dem": 41.73409,
+      "rep": 47.36733,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-11-01",
+      "dem": 41.22741,
+      "rep": 47.86021,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2010-11-02",
+      "dem": 41.19596,
+      "rep": 47.91311,
+      "pollster": "538 trendline",
+      "sample": ""
+    }
+  ]
+}

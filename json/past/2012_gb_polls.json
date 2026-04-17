@@ -1,0 +1,2181 @@
+{
+  "genericBallot": [
+    {
+      "end_date": "2012-01-01",
+      "dem": 43.88125,
+      "rep": 41.18003,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-02",
+      "dem": 43.88683,
+      "rep": 41.18809,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-03",
+      "dem": 43.89226,
+      "rep": 41.19631,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-04",
+      "dem": 43.89848,
+      "rep": 41.20477,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-05",
+      "dem": 43.90277,
+      "rep": 41.21054,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-06",
+      "dem": 43.90672,
+      "rep": 41.21999,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-07",
+      "dem": 43.91217,
+      "rep": 41.22731,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-08",
+      "dem": 43.91893,
+      "rep": 41.23373,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-09",
+      "dem": 43.80822,
+      "rep": 41.30076,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-10",
+      "dem": 43.97562,
+      "rep": 41.50658,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-11",
+      "dem": 43.98159,
+      "rep": 41.51863,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-12",
+      "dem": 44.02317,
+      "rep": 41.28723,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-13",
+      "dem": 44.02898,
+      "rep": 41.29533,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-14",
+      "dem": 44.0354,
+      "rep": 41.30386,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-15",
+      "dem": 44.04411,
+      "rep": 41.31229,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-16",
+      "dem": 43.95347,
+      "rep": 41.37009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-17",
+      "dem": 43.96162,
+      "rep": 41.38138,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-18",
+      "dem": 43.96758,
+      "rep": 41.39132,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-19",
+      "dem": 43.79337,
+      "rep": 42.2271,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-20",
+      "dem": 43.79472,
+      "rep": 42.24792,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-21",
+      "dem": 43.79762,
+      "rep": 42.26922,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-22",
+      "dem": 43.80085,
+      "rep": 42.29016,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-23",
+      "dem": 43.76252,
+      "rep": 42.25805,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-24",
+      "dem": 43.76666,
+      "rep": 42.28111,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-25",
+      "dem": 44.07195,
+      "rep": 42.23705,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-26",
+      "dem": 44.08031,
+      "rep": 42.25518,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-27",
+      "dem": 44.09025,
+      "rep": 42.27505,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-28",
+      "dem": 44.09871,
+      "rep": 42.29345,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-29",
+      "dem": 44.10709,
+      "rep": 42.31075,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-30",
+      "dem": 44.14414,
+      "rep": 42.18938,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-01-31",
+      "dem": 44.15278,
+      "rep": 42.20581,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-01",
+      "dem": 44.15979,
+      "rep": 42.22269,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-02",
+      "dem": 44.16632,
+      "rep": 42.23927,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-03",
+      "dem": 44.17202,
+      "rep": 42.25365,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-04",
+      "dem": 44.17606,
+      "rep": 42.27184,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-05",
+      "dem": 44.18052,
+      "rep": 42.28764,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-06",
+      "dem": 44.22696,
+      "rep": 42.18037,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-07",
+      "dem": 44.17307,
+      "rep": 42.24613,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-08",
+      "dem": 44.18138,
+      "rep": 42.26279,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-09",
+      "dem": 44.19139,
+      "rep": 42.28014,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-10",
+      "dem": 44.20203,
+      "rep": 42.30029,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-11",
+      "dem": 44.2118,
+      "rep": 42.32044,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-12",
+      "dem": 44.21665,
+      "rep": 42.33413,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-13",
+      "dem": 44.22048,
+      "rep": 42.33842,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-14",
+      "dem": 43.42494,
+      "rep": 41.1864,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-15",
+      "dem": 43.51593,
+      "rep": 41.22208,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-16",
+      "dem": 43.51272,
+      "rep": 41.21982,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-17",
+      "dem": 43.50842,
+      "rep": 41.2163,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-18",
+      "dem": 43.50566,
+      "rep": 41.21648,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-19",
+      "dem": 43.49776,
+      "rep": 41.21099,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-20",
+      "dem": 43.52935,
+      "rep": 41.07007,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-21",
+      "dem": 42.78849,
+      "rep": 41.16846,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-22",
+      "dem": 42.77695,
+      "rep": 41.16391,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-23",
+      "dem": 43.33466,
+      "rep": 41.53481,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-24",
+      "dem": 43.33,
+      "rep": 41.53436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-25",
+      "dem": 43.32401,
+      "rep": 41.53163,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-26",
+      "dem": 43.32048,
+      "rep": 41.53159,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-27",
+      "dem": 43.33983,
+      "rep": 41.62994,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-28",
+      "dem": 43.33496,
+      "rep": 41.63084,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-02-29",
+      "dem": 43.33178,
+      "rep": 41.63433,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-01",
+      "dem": 43.32803,
+      "rep": 41.63678,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-02",
+      "dem": 43.32594,
+      "rep": 41.64017,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-03",
+      "dem": 43.32273,
+      "rep": 41.64311,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-04",
+      "dem": 43.46518,
+      "rep": 41.66429,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-05",
+      "dem": 43.4036,
+      "rep": 41.83011,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-06",
+      "dem": 43.40194,
+      "rep": 41.83575,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-07",
+      "dem": 43.40072,
+      "rep": 41.8405,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-08",
+      "dem": 43.40071,
+      "rep": 41.84598,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-09",
+      "dem": 43.40082,
+      "rep": 41.85166,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-10",
+      "dem": 43.40132,
+      "rep": 41.8564,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-11",
+      "dem": 43.40228,
+      "rep": 41.86056,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-12",
+      "dem": 43.60141,
+      "rep": 42.70519,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-13",
+      "dem": 43.60352,
+      "rep": 42.71929,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-14",
+      "dem": 43.6062,
+      "rep": 42.73273,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-15",
+      "dem": 43.60855,
+      "rep": 42.74374,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-16",
+      "dem": 43.73193,
+      "rep": 42.66617,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-17",
+      "dem": 43.73768,
+      "rep": 42.68084,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-18",
+      "dem": 43.74276,
+      "rep": 42.69429,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-19",
+      "dem": 43.73985,
+      "rep": 42.71688,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-20",
+      "dem": 43.74417,
+      "rep": 42.72829,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-21",
+      "dem": 43.74923,
+      "rep": 42.74208,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-22",
+      "dem": 43.75628,
+      "rep": 42.75891,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-23",
+      "dem": 43.65271,
+      "rep": 43.19123,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-24",
+      "dem": 43.6565,
+      "rep": 43.21036,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-25",
+      "dem": 43.66047,
+      "rep": 43.23039,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-26",
+      "dem": 43.66367,
+      "rep": 43.24617,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-27",
+      "dem": 43.60114,
+      "rep": 43.23128,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-28",
+      "dem": 43.60229,
+      "rep": 43.24728,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-29",
+      "dem": 43.60255,
+      "rep": 43.26028,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-30",
+      "dem": 43.60424,
+      "rep": 43.27739,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-03-31",
+      "dem": 43.60455,
+      "rep": 43.29018,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-01",
+      "dem": 43.60458,
+      "rep": 43.30647,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-02",
+      "dem": 43.57428,
+      "rep": 43.34494,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-03",
+      "dem": 43.57579,
+      "rep": 43.361,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-04",
+      "dem": 43.67342,
+      "rep": 43.40627,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-05",
+      "dem": 43.67562,
+      "rep": 43.42365,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-06",
+      "dem": 43.67768,
+      "rep": 43.44092,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-07",
+      "dem": 43.68024,
+      "rep": 43.4606,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-08",
+      "dem": 43.6835,
+      "rep": 43.47719,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-09",
+      "dem": 43.68252,
+      "rep": 43.51797,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-10",
+      "dem": 43.6873,
+      "rep": 43.5384,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-11",
+      "dem": 43.6904,
+      "rep": 43.55726,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-12",
+      "dem": 43.69561,
+      "rep": 43.58048,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-13",
+      "dem": 43.69911,
+      "rep": 43.59935,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-14",
+      "dem": 43.70207,
+      "rep": 43.62047,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-15",
+      "dem": 43.70615,
+      "rep": 43.64083,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-16",
+      "dem": 43.53859,
+      "rep": 43.26646,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-17",
+      "dem": 43.53906,
+      "rep": 43.28048,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-18",
+      "dem": 43.42731,
+      "rep": 42.87714,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-19",
+      "dem": 43.42578,
+      "rep": 42.88346,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-20",
+      "dem": 43.42599,
+      "rep": 42.89064,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-21",
+      "dem": 43.42408,
+      "rep": 42.89724,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-22",
+      "dem": 43.42365,
+      "rep": 42.90423,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-23",
+      "dem": 43.42965,
+      "rep": 42.87975,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-24",
+      "dem": 43.42884,
+      "rep": 42.88499,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-25",
+      "dem": 43.42649,
+      "rep": 42.88919,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-26",
+      "dem": 43.42496,
+      "rep": 42.8937,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-27",
+      "dem": 43.42254,
+      "rep": 42.89644,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-28",
+      "dem": 43.4183,
+      "rep": 42.90098,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-29",
+      "dem": 43.41634,
+      "rep": 42.90478,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-04-30",
+      "dem": 43.53234,
+      "rep": 42.75078,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-01",
+      "dem": 43.53272,
+      "rep": 42.75059,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-02",
+      "dem": 43.50737,
+      "rep": 42.60316,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-03",
+      "dem": 43.50763,
+      "rep": 42.60042,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-04",
+      "dem": 43.7902,
+      "rep": 42.65105,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-05",
+      "dem": 43.7939,
+      "rep": 42.65009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-06",
+      "dem": 43.79849,
+      "rep": 42.64808,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-07",
+      "dem": 43.81792,
+      "rep": 42.65675,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-08",
+      "dem": 43.86805,
+      "rep": 42.71145,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-09",
+      "dem": 43.87205,
+      "rep": 42.71079,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-10",
+      "dem": 43.87333,
+      "rep": 42.70824,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-11",
+      "dem": 43.87487,
+      "rep": 42.70312,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-12",
+      "dem": 43.87731,
+      "rep": 42.69935,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-13",
+      "dem": 43.82179,
+      "rep": 42.7229,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-14",
+      "dem": 43.41079,
+      "rep": 43.06081,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-15",
+      "dem": 43.40377,
+      "rep": 43.05946,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-16",
+      "dem": 43.39558,
+      "rep": 43.06042,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-17",
+      "dem": 43.38939,
+      "rep": 43.06052,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-18",
+      "dem": 43.38351,
+      "rep": 43.06094,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-19",
+      "dem": 43.3781,
+      "rep": 43.06032,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-20",
+      "dem": 43.37757,
+      "rep": 43.06301,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-21",
+      "dem": 43.40733,
+      "rep": 43.08947,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-22",
+      "dem": 43.40902,
+      "rep": 43.095,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-23",
+      "dem": 43.4076,
+      "rep": 43.09996,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-24",
+      "dem": 43.40625,
+      "rep": 43.10487,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-25",
+      "dem": 43.40551,
+      "rep": 43.10981,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-26",
+      "dem": 43.40519,
+      "rep": 43.11483,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-27",
+      "dem": 43.40296,
+      "rep": 43.12096,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-28",
+      "dem": 43.4781,
+      "rep": 43.06646,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-29",
+      "dem": 43.48189,
+      "rep": 43.07449,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-30",
+      "dem": 43.48259,
+      "rep": 43.08263,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-05-31",
+      "dem": 43.48372,
+      "rep": 43.09027,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-01",
+      "dem": 43.61505,
+      "rep": 42.90784,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-02",
+      "dem": 43.61906,
+      "rep": 42.91312,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-03",
+      "dem": 43.62342,
+      "rep": 42.91913,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-04",
+      "dem": 43.77975,
+      "rep": 42.69891,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-05",
+      "dem": 43.78601,
+      "rep": 42.69738,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-06",
+      "dem": 43.79045,
+      "rep": 42.69578,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-07",
+      "dem": 42.8406,
+      "rep": 42.25295,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-08",
+      "dem": 42.83186,
+      "rep": 42.24429,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-09",
+      "dem": 42.8236,
+      "rep": 42.23687,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-10",
+      "dem": 42.8084,
+      "rep": 42.23123,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-11",
+      "dem": 42.7932,
+      "rep": 42.27689,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-12",
+      "dem": 42.94506,
+      "rep": 42.33684,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-13",
+      "dem": 42.93348,
+      "rep": 42.33197,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-14",
+      "dem": 42.92848,
+      "rep": 42.32397,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-15",
+      "dem": 42.92147,
+      "rep": 42.31575,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-16",
+      "dem": 42.91658,
+      "rep": 42.30859,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-17",
+      "dem": 42.91027,
+      "rep": 42.29961,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-18",
+      "dem": 43.11016,
+      "rep": 42.35136,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-19",
+      "dem": 43.42425,
+      "rep": 41.77639,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-20",
+      "dem": 43.42567,
+      "rep": 41.76358,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-21",
+      "dem": 43.42759,
+      "rep": 41.75292,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-22",
+      "dem": 43.42949,
+      "rep": 41.7393,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-23",
+      "dem": 43.43069,
+      "rep": 41.7249,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-24",
+      "dem": 43.43175,
+      "rep": 41.7141,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-25",
+      "dem": 43.51653,
+      "rep": 41.86496,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-26",
+      "dem": 43.3465,
+      "rep": 41.60752,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-27",
+      "dem": 43.34609,
+      "rep": 41.59045,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-28",
+      "dem": 43.22246,
+      "rep": 41.6601,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-29",
+      "dem": 42.36232,
+      "rep": 41.19436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-06-30",
+      "dem": 42.34134,
+      "rep": 41.16598,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-01",
+      "dem": 42.32654,
+      "rep": 41.14454,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-02",
+      "dem": 42.32638,
+      "rep": 41.0815,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-03",
+      "dem": 42.22705,
+      "rep": 41.01095,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-04",
+      "dem": 42.20661,
+      "rep": 40.98238,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-05",
+      "dem": 42.18852,
+      "rep": 40.95705,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-06",
+      "dem": 42.173,
+      "rep": 40.93481,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-07",
+      "dem": 42.15291,
+      "rep": 40.90915,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-08",
+      "dem": 42.13768,
+      "rep": 40.89016,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-09",
+      "dem": 42.65073,
+      "rep": 41.04778,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-10",
+      "dem": 42.68349,
+      "rep": 41.47668,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-11",
+      "dem": 42.67862,
+      "rep": 41.47054,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-12",
+      "dem": 42.81003,
+      "rep": 41.63503,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-13",
+      "dem": 42.76867,
+      "rep": 41.51264,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-14",
+      "dem": 42.7654,
+      "rep": 41.51207,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-15",
+      "dem": 42.76194,
+      "rep": 41.51001,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-16",
+      "dem": 42.76233,
+      "rep": 41.52105,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-17",
+      "dem": 42.81176,
+      "rep": 41.62896,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-18",
+      "dem": 42.80725,
+      "rep": 41.63238,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-19",
+      "dem": 42.80361,
+      "rep": 41.63389,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-20",
+      "dem": 42.79957,
+      "rep": 41.6358,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-21",
+      "dem": 42.79694,
+      "rep": 41.63407,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-22",
+      "dem": 42.79447,
+      "rep": 41.63198,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-23",
+      "dem": 43.04145,
+      "rep": 42.15074,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-24",
+      "dem": 43.0486,
+      "rep": 42.31878,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-25",
+      "dem": 43.05155,
+      "rep": 42.33239,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-26",
+      "dem": 43.06793,
+      "rep": 42.33149,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-27",
+      "dem": 43.07054,
+      "rep": 42.34134,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-28",
+      "dem": 43.07318,
+      "rep": 42.34869,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-29",
+      "dem": 43.07624,
+      "rep": 42.35888,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-30",
+      "dem": 43.07399,
+      "rep": 42.35758,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-07-31",
+      "dem": 43.04488,
+      "rep": 42.41227,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-01",
+      "dem": 43.0467,
+      "rep": 42.42306,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-02",
+      "dem": 43.04905,
+      "rep": 42.43581,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-03",
+      "dem": 43.05198,
+      "rep": 42.44999,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-04",
+      "dem": 43.05524,
+      "rep": 42.46421,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-05",
+      "dem": 43.05786,
+      "rep": 42.48042,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-06",
+      "dem": 43.12565,
+      "rep": 42.5931,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-07",
+      "dem": 43.16769,
+      "rep": 42.76073,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-08",
+      "dem": 43.17333,
+      "rep": 42.78213,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-09",
+      "dem": 42.84636,
+      "rep": 41.64945,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-10",
+      "dem": 43.04916,
+      "rep": 41.99671,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-11",
+      "dem": 43.05442,
+      "rep": 41.99873,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-12",
+      "dem": 43.06054,
+      "rep": 42.00335,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-13",
+      "dem": 43.01617,
+      "rep": 42.07602,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-14",
+      "dem": 43.06631,
+      "rep": 42.0875,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-15",
+      "dem": 43.07413,
+      "rep": 42.09541,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-16",
+      "dem": 43.078,
+      "rep": 42.10461,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-17",
+      "dem": 43.08086,
+      "rep": 42.11225,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-18",
+      "dem": 43.08213,
+      "rep": 42.11865,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-19",
+      "dem": 43.08108,
+      "rep": 42.12254,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-20",
+      "dem": 43.31085,
+      "rep": 42.17252,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-21",
+      "dem": 43.5904,
+      "rep": 42.30013,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-22",
+      "dem": 43.5976,
+      "rep": 42.31009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-23",
+      "dem": 43.66569,
+      "rep": 42.2011,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-24",
+      "dem": 43.49615,
+      "rep": 42.50659,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-25",
+      "dem": 43.50366,
+      "rep": 42.51827,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-26",
+      "dem": 43.5123,
+      "rep": 42.53193,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-27",
+      "dem": 43.82354,
+      "rep": 42.40754,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-28",
+      "dem": 43.68401,
+      "rep": 42.57644,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-29",
+      "dem": 43.69851,
+      "rep": 42.59184,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-30",
+      "dem": 43.71193,
+      "rep": 42.60626,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-08-31",
+      "dem": 43.72464,
+      "rep": 42.61978,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-01",
+      "dem": 43.73806,
+      "rep": 42.63387,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-02",
+      "dem": 43.75187,
+      "rep": 42.64851,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-03",
+      "dem": 43.82379,
+      "rep": 42.63317,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-04",
+      "dem": 43.96375,
+      "rep": 42.50675,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-05",
+      "dem": 43.98344,
+      "rep": 42.51815,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-06",
+      "dem": 44.00297,
+      "rep": 42.5308,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-07",
+      "dem": 44.0218,
+      "rep": 42.54301,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-08",
+      "dem": 44.04378,
+      "rep": 42.55713,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-09",
+      "dem": 44.063,
+      "rep": 42.56913,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-10",
+      "dem": 44.58588,
+      "rep": 42.4052,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-11",
+      "dem": 44.98611,
+      "rep": 42.39666,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-12",
+      "dem": 45.0347,
+      "rep": 42.40537,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-13",
+      "dem": 45.06489,
+      "rep": 42.37066,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-14",
+      "dem": 45.11012,
+      "rep": 42.3785,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-15",
+      "dem": 45.15646,
+      "rep": 42.34185,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-16",
+      "dem": 45.18907,
+      "rep": 42.34562,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-17",
+      "dem": 45.23783,
+      "rep": 42.52293,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-18",
+      "dem": 45.26151,
+      "rep": 42.52782,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-19",
+      "dem": 45.29089,
+      "rep": 42.53157,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-20",
+      "dem": 45.31492,
+      "rep": 42.53324,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-21",
+      "dem": 45.6702,
+      "rep": 42.80662,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-22",
+      "dem": 45.70617,
+      "rep": 42.8113,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-23",
+      "dem": 45.74086,
+      "rep": 42.82203,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-24",
+      "dem": 45.76389,
+      "rep": 42.85945,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-25",
+      "dem": 45.23002,
+      "rep": 43.37942,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-26",
+      "dem": 45.25347,
+      "rep": 43.40302,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-27",
+      "dem": 45.26905,
+      "rep": 43.42765,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-28",
+      "dem": 45.47887,
+      "rep": 43.38688,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-29",
+      "dem": 45.50223,
+      "rep": 43.41017,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-09-30",
+      "dem": 45.51968,
+      "rep": 43.44069,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-01",
+      "dem": 45.51764,
+      "rep": 43.26116,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-02",
+      "dem": 45.49194,
+      "rep": 43.44039,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-03",
+      "dem": 45.49987,
+      "rep": 43.46607,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-04",
+      "dem": 45.50932,
+      "rep": 43.48381,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-05",
+      "dem": 45.70218,
+      "rep": 43.746,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-06",
+      "dem": 45.72321,
+      "rep": 43.76992,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-07",
+      "dem": 45.73391,
+      "rep": 43.7846,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-08",
+      "dem": 45.49964,
+      "rep": 43.94609,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-09",
+      "dem": 45.66187,
+      "rep": 43.93259,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-10",
+      "dem": 45.66848,
+      "rep": 43.95313,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-11",
+      "dem": 45.67859,
+      "rep": 43.9728,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-12",
+      "dem": 45.84373,
+      "rep": 43.85444,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-13",
+      "dem": 45.8636,
+      "rep": 43.87171,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-14",
+      "dem": 45.87637,
+      "rep": 43.88634,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-15",
+      "dem": 45.38592,
+      "rep": 44.24537,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-16",
+      "dem": 45.22708,
+      "rep": 44.37605,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-17",
+      "dem": 45.21534,
+      "rep": 44.40734,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-18",
+      "dem": 45.20791,
+      "rep": 44.43369,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-19",
+      "dem": 45.4345,
+      "rep": 44.56978,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-20",
+      "dem": 45.43357,
+      "rep": 44.59308,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-21",
+      "dem": 45.49022,
+      "rep": 44.5522,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-22",
+      "dem": 45.23042,
+      "rep": 43.90997,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-23",
+      "dem": 45.27057,
+      "rep": 43.93114,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-24",
+      "dem": 45.26138,
+      "rep": 43.93901,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-25",
+      "dem": 45.25439,
+      "rep": 43.9437,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-26",
+      "dem": 44.99345,
+      "rep": 43.82887,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-27",
+      "dem": 44.98577,
+      "rep": 43.83067,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-28",
+      "dem": 44.97343,
+      "rep": 43.83054,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-29",
+      "dem": 45.0415,
+      "rep": 43.96858,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-30",
+      "dem": 44.87568,
+      "rep": 44.18008,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-10-31",
+      "dem": 44.86294,
+      "rep": 44.18106,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-01",
+      "dem": 44.85063,
+      "rep": 44.18346,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-02",
+      "dem": 45.1347,
+      "rep": 44.34264,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-03",
+      "dem": 45.13236,
+      "rep": 44.3472,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-04",
+      "dem": 46.54086,
+      "rep": 44.06878,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-05",
+      "dem": 46.69628,
+      "rep": 44.26309,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2012-11-06",
+      "dem": 46.72237,
+      "rep": 44.26809,
+      "pollster": "538 trendline",
+      "sample": ""
+    }
+  ]
+}

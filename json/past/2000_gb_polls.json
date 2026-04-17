@@ -1,0 +1,2188 @@
+{
+  "genericBallot": [
+    {
+      "end_date": "2000-01-01",
+      "dem": 41.67526,
+      "rep": 38.83903,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-02",
+      "dem": 41.67375,
+      "rep": 38.83504,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-03",
+      "dem": 41.67227,
+      "rep": 38.83141,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-04",
+      "dem": 41.67053,
+      "rep": 38.82708,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-05",
+      "dem": 41.66887,
+      "rep": 38.82314,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-06",
+      "dem": 41.25668,
+      "rep": 38.93623,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-07",
+      "dem": 41.78074,
+      "rep": 39.45451,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-08",
+      "dem": 41.77907,
+      "rep": 39.45391,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-09",
+      "dem": 41.77785,
+      "rep": 39.45363,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-10",
+      "dem": 41.77717,
+      "rep": 39.453,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-11",
+      "dem": 42.22812,
+      "rep": 39.86981,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-12",
+      "dem": 42.22967,
+      "rep": 39.87116,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-13",
+      "dem": 42.23106,
+      "rep": 39.87272,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-14",
+      "dem": 42.25653,
+      "rep": 39.69385,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-15",
+      "dem": 42.25678,
+      "rep": 39.69467,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-16",
+      "dem": 42.25821,
+      "rep": 39.69495,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-17",
+      "dem": 41.83987,
+      "rep": 40.13932,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-18",
+      "dem": 41.84172,
+      "rep": 40.14818,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-19",
+      "dem": 41.84153,
+      "rep": 40.15252,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-20",
+      "dem": 41.87339,
+      "rep": 40.19263,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-21",
+      "dem": 41.87392,
+      "rep": 40.198,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-22",
+      "dem": 41.8706,
+      "rep": 40.19584,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-23",
+      "dem": 41.87009,
+      "rep": 40.19921,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-24",
+      "dem": 41.86899,
+      "rep": 40.20544,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-25",
+      "dem": 41.86808,
+      "rep": 40.20717,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-26",
+      "dem": 42.14732,
+      "rep": 40.10476,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-27",
+      "dem": 42.14803,
+      "rep": 40.10853,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-28",
+      "dem": 42.14896,
+      "rep": 40.11197,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-29",
+      "dem": 42.14909,
+      "rep": 40.1161,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-30",
+      "dem": 42.1498,
+      "rep": 40.11825,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-01-31",
+      "dem": 42.15166,
+      "rep": 40.11954,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-01",
+      "dem": 42.14998,
+      "rep": 40.12647,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-02",
+      "dem": 42.15079,
+      "rep": 40.1304,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-03",
+      "dem": 42.15168,
+      "rep": 40.13475,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-04",
+      "dem": 42.15387,
+      "rep": 40.13889,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-05",
+      "dem": 42.15388,
+      "rep": 40.14393,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-06",
+      "dem": 42.15256,
+      "rep": 40.14837,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-07",
+      "dem": 42.22419,
+      "rep": 40.44554,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-08",
+      "dem": 42.22631,
+      "rep": 40.45471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-09",
+      "dem": 42.22635,
+      "rep": 40.46128,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-10",
+      "dem": 42.22642,
+      "rep": 40.4682,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-11",
+      "dem": 42.22636,
+      "rep": 40.47795,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-12",
+      "dem": 42.2268,
+      "rep": 40.48485,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-13",
+      "dem": 42.22763,
+      "rep": 40.4907,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-14",
+      "dem": 42.22417,
+      "rep": 40.50197,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-15",
+      "dem": 42.4399,
+      "rep": 40.05482,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-16",
+      "dem": 42.44352,
+      "rep": 40.05799,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-17",
+      "dem": 42.44432,
+      "rep": 40.06409,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-18",
+      "dem": 42.44558,
+      "rep": 40.06854,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-19",
+      "dem": 42.44651,
+      "rep": 40.07556,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-20",
+      "dem": 42.4481,
+      "rep": 40.0792,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-21",
+      "dem": 42.45181,
+      "rep": 40.07791,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-22",
+      "dem": 42.451,
+      "rep": 40.08599,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-23",
+      "dem": 42.45377,
+      "rep": 40.09056,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-24",
+      "dem": 42.45641,
+      "rep": 40.09481,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-25",
+      "dem": 42.45955,
+      "rep": 40.1005,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-26",
+      "dem": 42.46212,
+      "rep": 40.10727,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-27",
+      "dem": 42.46555,
+      "rep": 40.11308,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-28",
+      "dem": 42.2742,
+      "rep": 40.44665,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-02-29",
+      "dem": 42.27467,
+      "rep": 40.45491,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-01",
+      "dem": 42.2761,
+      "rep": 40.46236,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-02",
+      "dem": 42.27737,
+      "rep": 40.46892,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-03",
+      "dem": 42.27938,
+      "rep": 40.47738,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-04",
+      "dem": 42.28165,
+      "rep": 40.48475,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-05",
+      "dem": 42.28544,
+      "rep": 40.48898,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-06",
+      "dem": 42.28493,
+      "rep": 40.50031,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-07",
+      "dem": 42.28718,
+      "rep": 40.50919,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-08",
+      "dem": 42.28742,
+      "rep": 40.52183,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-09",
+      "dem": 42.28882,
+      "rep": 40.5299,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-10",
+      "dem": 43.25695,
+      "rep": 41.08425,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-11",
+      "dem": 43.14985,
+      "rep": 40.98312,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-12",
+      "dem": 43.15891,
+      "rep": 40.99379,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-13",
+      "dem": 42.95071,
+      "rep": 41.36497,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-14",
+      "dem": 43.45612,
+      "rep": 41.64647,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-15",
+      "dem": 43.46464,
+      "rep": 41.6599,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-16",
+      "dem": 43.57642,
+      "rep": 41.58873,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-17",
+      "dem": 43.59147,
+      "rep": 41.60638,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-18",
+      "dem": 43.60209,
+      "rep": 41.62099,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-19",
+      "dem": 43.6146,
+      "rep": 41.63707,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-20",
+      "dem": 43.62676,
+      "rep": 41.65386,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-21",
+      "dem": 43.63647,
+      "rep": 41.66451,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-22",
+      "dem": 43.39778,
+      "rep": 41.67135,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-23",
+      "dem": 43.40932,
+      "rep": 41.68661,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-24",
+      "dem": 43.41935,
+      "rep": 41.7003,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-25",
+      "dem": 43.42656,
+      "rep": 41.71075,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-26",
+      "dem": 43.43526,
+      "rep": 41.72297,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-27",
+      "dem": 43.44286,
+      "rep": 41.73202,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-28",
+      "dem": 43.45195,
+      "rep": 41.7396,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-29",
+      "dem": 43.45023,
+      "rep": 41.74485,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-30",
+      "dem": 43.45752,
+      "rep": 41.75359,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-03-31",
+      "dem": 43.46595,
+      "rep": 41.76247,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-01",
+      "dem": 43.47175,
+      "rep": 41.77179,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-02",
+      "dem": 43.47848,
+      "rep": 41.78114,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-03",
+      "dem": 43.48755,
+      "rep": 41.79009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-04",
+      "dem": 43.49405,
+      "rep": 41.79897,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-05",
+      "dem": 43.45325,
+      "rep": 41.50018,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-06",
+      "dem": 43.46332,
+      "rep": 41.50799,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-07",
+      "dem": 43.47234,
+      "rep": 41.51542,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-08",
+      "dem": 43.48098,
+      "rep": 41.52266,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-09",
+      "dem": 43.49038,
+      "rep": 41.52996,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-10",
+      "dem": 42.49589,
+      "rep": 41.27263,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-11",
+      "dem": 42.4873,
+      "rep": 41.27398,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-12",
+      "dem": 42.48236,
+      "rep": 41.2762,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-13",
+      "dem": 42.46954,
+      "rep": 41.27506,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-14",
+      "dem": 42.46593,
+      "rep": 41.27691,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-15",
+      "dem": 42.46864,
+      "rep": 41.27965,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-16",
+      "dem": 42.46634,
+      "rep": 41.28749,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-17",
+      "dem": 42.46968,
+      "rep": 41.29374,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-18",
+      "dem": 42.46963,
+      "rep": 41.29898,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-19",
+      "dem": 42.2621,
+      "rep": 41.33567,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-20",
+      "dem": 42.2563,
+      "rep": 41.33988,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-21",
+      "dem": 42.25705,
+      "rep": 41.34673,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-22",
+      "dem": 42.2552,
+      "rep": 41.35103,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-23",
+      "dem": 42.25343,
+      "rep": 41.3568,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-24",
+      "dem": 42.25125,
+      "rep": 41.36075,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-25",
+      "dem": 42.24971,
+      "rep": 41.36332,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-26",
+      "dem": 42.26234,
+      "rep": 41.37929,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-27",
+      "dem": 42.25992,
+      "rep": 41.38412,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-28",
+      "dem": 42.25654,
+      "rep": 41.38963,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-29",
+      "dem": 42.25242,
+      "rep": 41.39613,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-04-30",
+      "dem": 42.24712,
+      "rep": 41.40182,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-01",
+      "dem": 42.24417,
+      "rep": 41.40408,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-02",
+      "dem": 42.23836,
+      "rep": 41.40746,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-03",
+      "dem": 42.23312,
+      "rep": 41.41027,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-04",
+      "dem": 42.57814,
+      "rep": 41.31795,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-05",
+      "dem": 42.57937,
+      "rep": 41.32415,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-06",
+      "dem": 42.57776,
+      "rep": 41.32653,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-07",
+      "dem": 42.57691,
+      "rep": 41.32978,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-08",
+      "dem": 42.57187,
+      "rep": 41.33672,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-09",
+      "dem": 42.56768,
+      "rep": 41.34049,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-10",
+      "dem": 42.56393,
+      "rep": 41.34273,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-11",
+      "dem": 42.55935,
+      "rep": 41.34435,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-12",
+      "dem": 42.55462,
+      "rep": 41.34578,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-13",
+      "dem": 42.55207,
+      "rep": 41.34542,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-14",
+      "dem": 42.25349,
+      "rep": 40.97191,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-15",
+      "dem": 42.24581,
+      "rep": 40.96759,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-16",
+      "dem": 42.23502,
+      "rep": 40.9666,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-17",
+      "dem": 42.22635,
+      "rep": 40.96098,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-18",
+      "dem": 42.21978,
+      "rep": 40.95993,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-19",
+      "dem": 42.21563,
+      "rep": 40.95914,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-20",
+      "dem": 42.21434,
+      "rep": 40.95723,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-21",
+      "dem": 42.21053,
+      "rep": 40.95317,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-22",
+      "dem": 42.20575,
+      "rep": 40.94665,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-23",
+      "dem": 42.21025,
+      "rep": 40.9478,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-24",
+      "dem": 42.20808,
+      "rep": 40.94395,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-25",
+      "dem": 42.12935,
+      "rep": 39.90864,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-26",
+      "dem": 42.21783,
+      "rep": 40.19667,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-27",
+      "dem": 42.21301,
+      "rep": 40.1876,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-28",
+      "dem": 42.20848,
+      "rep": 40.1745,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-29",
+      "dem": 42.20809,
+      "rep": 40.18088,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-30",
+      "dem": 42.20738,
+      "rep": 40.16953,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-05-31",
+      "dem": 42.2048,
+      "rep": 40.15945,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-01",
+      "dem": 42.71751,
+      "rep": 40.05626,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-02",
+      "dem": 42.71862,
+      "rep": 40.0434,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-03",
+      "dem": 42.72297,
+      "rep": 40.03069,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-04",
+      "dem": 42.72294,
+      "rep": 40.01711,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-05",
+      "dem": 42.21389,
+      "rep": 39.08815,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-06",
+      "dem": 41.81845,
+      "rep": 39.29398,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-07",
+      "dem": 41.81194,
+      "rep": 39.27721,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-08",
+      "dem": 42.13139,
+      "rep": 39.78543,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-09",
+      "dem": 42.12977,
+      "rep": 39.77471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-10",
+      "dem": 42.12569,
+      "rep": 39.76254,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-11",
+      "dem": 42.12031,
+      "rep": 39.75006,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-12",
+      "dem": 42.1143,
+      "rep": 39.73605,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-13",
+      "dem": 41.90193,
+      "rep": 39.63882,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-14",
+      "dem": 42.29514,
+      "rep": 40.49635,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-15",
+      "dem": 42.29267,
+      "rep": 40.49261,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-16",
+      "dem": 41.80728,
+      "rep": 41.64776,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-17",
+      "dem": 41.80147,
+      "rep": 41.65403,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-18",
+      "dem": 41.79489,
+      "rep": 41.66055,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-19",
+      "dem": 41.78881,
+      "rep": 41.66643,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-20",
+      "dem": 41.78397,
+      "rep": 41.67393,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-21",
+      "dem": 41.67881,
+      "rep": 41.57268,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-22",
+      "dem": 41.67194,
+      "rep": 41.57629,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-23",
+      "dem": 41.66457,
+      "rep": 41.57943,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-24",
+      "dem": 41.65797,
+      "rep": 41.58566,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-25",
+      "dem": 41.65214,
+      "rep": 41.58947,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-26",
+      "dem": 41.64693,
+      "rep": 41.59444,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-27",
+      "dem": 41.64143,
+      "rep": 41.59837,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-28",
+      "dem": 41.63732,
+      "rep": 41.60161,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-29",
+      "dem": 41.63286,
+      "rep": 41.60632,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-06-30",
+      "dem": 41.62946,
+      "rep": 41.61272,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-01",
+      "dem": 41.62592,
+      "rep": 41.61747,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-02",
+      "dem": 41.62394,
+      "rep": 41.62992,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-03",
+      "dem": 41.6199,
+      "rep": 41.63571,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-04",
+      "dem": 41.6152,
+      "rep": 41.64186,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-05",
+      "dem": 41.61036,
+      "rep": 41.64936,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-06",
+      "dem": 41.60598,
+      "rep": 41.65696,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-07",
+      "dem": 41.60098,
+      "rep": 41.66498,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-08",
+      "dem": 41.59674,
+      "rep": 41.6734,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-09",
+      "dem": 41.5948,
+      "rep": 41.68399,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-10",
+      "dem": 41.59225,
+      "rep": 41.69387,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-11",
+      "dem": 41.53556,
+      "rep": 41.35353,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-12",
+      "dem": 41.53041,
+      "rep": 41.36061,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-13",
+      "dem": 41.52677,
+      "rep": 41.3695,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-14",
+      "dem": 41.5258,
+      "rep": 41.37855,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-15",
+      "dem": 41.52411,
+      "rep": 41.38864,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-16",
+      "dem": 41.52475,
+      "rep": 41.40178,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-17",
+      "dem": 41.5294,
+      "rep": 41.41693,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-18",
+      "dem": 42.18372,
+      "rep": 39.62712,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-19",
+      "dem": 42.20053,
+      "rep": 39.59644,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-20",
+      "dem": 42.21627,
+      "rep": 39.57013,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-21",
+      "dem": 42.23223,
+      "rep": 39.55805,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-22",
+      "dem": 42.23576,
+      "rep": 39.53761,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-23",
+      "dem": 42.23865,
+      "rep": 39.52229,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-24",
+      "dem": 42.1669,
+      "rep": 39.65947,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-25",
+      "dem": 42.16818,
+      "rep": 39.64262,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-26",
+      "dem": 41.55192,
+      "rep": 39.53485,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-27",
+      "dem": 41.74219,
+      "rep": 40.0247,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-28",
+      "dem": 41.7115,
+      "rep": 40.95497,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-29",
+      "dem": 41.70929,
+      "rep": 40.95749,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-30",
+      "dem": 41.70779,
+      "rep": 40.95991,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-07-31",
+      "dem": 41.64614,
+      "rep": 40.98161,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-01",
+      "dem": 41.50919,
+      "rep": 40.41695,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-02",
+      "dem": 41.53283,
+      "rep": 40.24099,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-03",
+      "dem": 41.54991,
+      "rep": 39.98717,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-04",
+      "dem": 41.55912,
+      "rep": 39.80694,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-05",
+      "dem": 41.55434,
+      "rep": 39.79955,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-06",
+      "dem": 41.65397,
+      "rep": 40.12734,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-07",
+      "dem": 41.23779,
+      "rep": 40.17853,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-08",
+      "dem": 41.22906,
+      "rep": 40.19116,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-09",
+      "dem": 41.22308,
+      "rep": 40.19688,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-10",
+      "dem": 41.21049,
+      "rep": 40.21807,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-11",
+      "dem": 41.24236,
+      "rep": 40.94551,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-12",
+      "dem": 41.36765,
+      "rep": 41.32949,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-13",
+      "dem": 41.36168,
+      "rep": 41.38085,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-14",
+      "dem": 41.41451,
+      "rep": 41.32965,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-15",
+      "dem": 41.30708,
+      "rep": 41.22066,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-16",
+      "dem": 41.3329,
+      "rep": 41.14166,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-17",
+      "dem": 41.3581,
+      "rep": 41.0766,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-18",
+      "dem": 41.33439,
+      "rep": 40.97647,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-19",
+      "dem": 42.11299,
+      "rep": 40.67583,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-20",
+      "dem": 42.25215,
+      "rep": 40.76345,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-21",
+      "dem": 42.49579,
+      "rep": 40.55661,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-22",
+      "dem": 42.5173,
+      "rep": 40.55585,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-23",
+      "dem": 42.74377,
+      "rep": 41.02887,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-24",
+      "dem": 42.76122,
+      "rep": 41.02821,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-25",
+      "dem": 42.7746,
+      "rep": 41.02896,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-26",
+      "dem": 42.79202,
+      "rep": 41.02763,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-27",
+      "dem": 42.80592,
+      "rep": 41.02719,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-28",
+      "dem": 42.82275,
+      "rep": 41.02679,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-29",
+      "dem": 42.84641,
+      "rep": 41.02397,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-30",
+      "dem": 42.86737,
+      "rep": 41.02302,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-08-31",
+      "dem": 42.88682,
+      "rep": 41.0216,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-01",
+      "dem": 42.9082,
+      "rep": 41.02036,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-02",
+      "dem": 42.92799,
+      "rep": 41.02046,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-03",
+      "dem": 42.94842,
+      "rep": 41.02309,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-04",
+      "dem": 42.97248,
+      "rep": 41.02648,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-05",
+      "dem": 43.00026,
+      "rep": 41.03051,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-06",
+      "dem": 43.03022,
+      "rep": 41.03279,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-07",
+      "dem": 42.90957,
+      "rep": 41.36189,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-08",
+      "dem": 42.78794,
+      "rep": 40.47556,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-09",
+      "dem": 42.79924,
+      "rep": 40.47456,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-10",
+      "dem": 42.9676,
+      "rep": 40.52022,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-11",
+      "dem": 42.97537,
+      "rep": 40.39198,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-12",
+      "dem": 42.98297,
+      "rep": 40.02317,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-13",
+      "dem": 43.13904,
+      "rep": 39.58785,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-14",
+      "dem": 43.11022,
+      "rep": 39.53828,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-15",
+      "dem": 43.05029,
+      "rep": 39.48407,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-16",
+      "dem": 43.05361,
+      "rep": 39.46491,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-17",
+      "dem": 43.05505,
+      "rep": 39.43677,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-18",
+      "dem": 43.18935,
+      "rep": 39.80929,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-19",
+      "dem": 43.17436,
+      "rep": 39.7689,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-20",
+      "dem": 43.15263,
+      "rep": 39.72928,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-21",
+      "dem": 43.06754,
+      "rep": 39.68518,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-22",
+      "dem": 42.94654,
+      "rep": 39.70873,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-23",
+      "dem": 43.0337,
+      "rep": 40.35452,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-24",
+      "dem": 43.03175,
+      "rep": 40.36053,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-25",
+      "dem": 42.98292,
+      "rep": 40.3661,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-26",
+      "dem": 43.19705,
+      "rep": 41.05427,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-27",
+      "dem": 43.20226,
+      "rep": 41.05571,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-28",
+      "dem": 43.23709,
+      "rep": 41.0145,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-29",
+      "dem": 43.24118,
+      "rep": 41.00201,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-09-30",
+      "dem": 43.25313,
+      "rep": 41.02087,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-01",
+      "dem": 43.62078,
+      "rep": 41.03442,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-02",
+      "dem": 43.61955,
+      "rep": 40.94526,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-03",
+      "dem": 43.63396,
+      "rep": 40.85202,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-04",
+      "dem": 43.61199,
+      "rep": 40.83068,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-05",
+      "dem": 43.58858,
+      "rep": 40.76974,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-06",
+      "dem": 43.09642,
+      "rep": 40.75353,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-07",
+      "dem": 43.0803,
+      "rep": 40.76237,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-08",
+      "dem": 43.06749,
+      "rep": 40.76683,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-09",
+      "dem": 43.09321,
+      "rep": 40.73553,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-10",
+      "dem": 42.83986,
+      "rep": 40.44196,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-11",
+      "dem": 43.1142,
+      "rep": 40.36074,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-12",
+      "dem": 43.14913,
+      "rep": 40.32204,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-13",
+      "dem": 43.21432,
+      "rep": 40.28838,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-14",
+      "dem": 42.94161,
+      "rep": 41.31638,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-15",
+      "dem": 42.92702,
+      "rep": 41.33496,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-16",
+      "dem": 42.9944,
+      "rep": 41.44192,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-17",
+      "dem": 43.06805,
+      "rep": 41.42466,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-18",
+      "dem": 43.14212,
+      "rep": 41.40065,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-19",
+      "dem": 43.05813,
+      "rep": 41.83704,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-20",
+      "dem": 43.13794,
+      "rep": 41.82659,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-21",
+      "dem": 43.32622,
+      "rep": 41.80223,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-22",
+      "dem": 43.06199,
+      "rep": 41.69438,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-23",
+      "dem": 42.97771,
+      "rep": 41.65997,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-24",
+      "dem": 43.01389,
+      "rep": 41.659,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-25",
+      "dem": 43.24773,
+      "rep": 41.51494,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-26",
+      "dem": 43.08957,
+      "rep": 41.56183,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-27",
+      "dem": 43.25788,
+      "rep": 41.74032,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-28",
+      "dem": 43.16622,
+      "rep": 41.53799,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-29",
+      "dem": 43.08931,
+      "rep": 41.74239,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-30",
+      "dem": 43.0826,
+      "rep": 41.33704,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-10-31",
+      "dem": 43.08962,
+      "rep": 41.30543,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-01",
+      "dem": 43.5031,
+      "rep": 41.22859,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-02",
+      "dem": 43.58377,
+      "rep": 41.24146,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-03",
+      "dem": 44.28704,
+      "rep": 41.25109,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-04",
+      "dem": 44.34841,
+      "rep": 41.23053,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-05",
+      "dem": 44.15617,
+      "rep": 41.13103,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-06",
+      "dem": 44.21487,
+      "rep": 41.17567,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2000-11-07",
+      "dem": 44.41748,
+      "rep": 41.1847,
+      "pollster": "538 trendline",
+      "sample": ""
+    }
+  ]
+}

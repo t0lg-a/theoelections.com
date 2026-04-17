@@ -1,0 +1,2146 @@
+{
+  "genericBallot": [
+    {
+      "end_date": "2016-01-01",
+      "dem": 41.53334,
+      "rep": 42.10762,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-02",
+      "dem": 41.53334,
+      "rep": 42.10762,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-03",
+      "dem": 41.53403,
+      "rep": 42.10719,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-04",
+      "dem": 41.53403,
+      "rep": 42.10719,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-05",
+      "dem": 42.17561,
+      "rep": 41.28119,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-06",
+      "dem": 41.12992,
+      "rep": 40.86138,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-07",
+      "dem": 41.30507,
+      "rep": 40.40953,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-08",
+      "dem": 41.16754,
+      "rep": 40.40367,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-09",
+      "dem": 41.31297,
+      "rep": 40.27888,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-10",
+      "dem": 41.39696,
+      "rep": 39.80193,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-11",
+      "dem": 42.06885,
+      "rep": 39.31178,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-12",
+      "dem": 42.15559,
+      "rep": 39.05811,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-13",
+      "dem": 42.2739,
+      "rep": 39.09308,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-14",
+      "dem": 42.13684,
+      "rep": 39.09306,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-15",
+      "dem": 41.85784,
+      "rep": 39.25268,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-16",
+      "dem": 41.70047,
+      "rep": 39.22723,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-17",
+      "dem": 41.62069,
+      "rep": 39.20769,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-18",
+      "dem": 41.75585,
+      "rep": 38.93848,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-19",
+      "dem": 41.7335,
+      "rep": 38.94298,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-20",
+      "dem": 41.55859,
+      "rep": 39.03984,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-21",
+      "dem": 41.44175,
+      "rep": 39.21535,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-22",
+      "dem": 41.40422,
+      "rep": 39.00919,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-23",
+      "dem": 41.16162,
+      "rep": 39.15408,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-24",
+      "dem": 41.0992,
+      "rep": 39.19282,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-25",
+      "dem": 41.4527,
+      "rep": 39.01942,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-26",
+      "dem": 41.5904,
+      "rep": 38.78277,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-27",
+      "dem": 41.55538,
+      "rep": 39.02569,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-28",
+      "dem": 41.62573,
+      "rep": 38.99235,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-29",
+      "dem": 41.69131,
+      "rep": 38.9538,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-30",
+      "dem": 41.791,
+      "rep": 38.80536,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-01-31",
+      "dem": 41.78888,
+      "rep": 38.85713,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-01",
+      "dem": 41.72072,
+      "rep": 38.78801,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-02",
+      "dem": 41.60797,
+      "rep": 38.83672,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-03",
+      "dem": 41.68562,
+      "rep": 38.72606,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-04",
+      "dem": 42.47258,
+      "rep": 38.8886,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-05",
+      "dem": 42.37463,
+      "rep": 39.03994,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-06",
+      "dem": 42.41721,
+      "rep": 38.98779,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-07",
+      "dem": 42.50408,
+      "rep": 38.95145,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-08",
+      "dem": 42.56151,
+      "rep": 38.91179,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-09",
+      "dem": 42.5824,
+      "rep": 38.78782,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-10",
+      "dem": 42.75563,
+      "rep": 38.58825,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-11",
+      "dem": 42.79428,
+      "rep": 38.65973,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-12",
+      "dem": 42.78968,
+      "rep": 38.68289,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-13",
+      "dem": 42.87494,
+      "rep": 38.64778,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-14",
+      "dem": 42.88707,
+      "rep": 38.65914,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-15",
+      "dem": 42.93492,
+      "rep": 38.60491,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-16",
+      "dem": 42.90699,
+      "rep": 38.6106,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-17",
+      "dem": 42.89031,
+      "rep": 38.58836,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-18",
+      "dem": 42.86766,
+      "rep": 38.50834,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-19",
+      "dem": 42.80837,
+      "rep": 38.60132,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-20",
+      "dem": 42.67358,
+      "rep": 38.73251,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-21",
+      "dem": 42.70248,
+      "rep": 38.68856,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-22",
+      "dem": 42.69326,
+      "rep": 38.70979,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-23",
+      "dem": 42.63269,
+      "rep": 38.76513,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-24",
+      "dem": 42.75421,
+      "rep": 38.58531,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-25",
+      "dem": 42.77687,
+      "rep": 38.59163,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-26",
+      "dem": 42.78824,
+      "rep": 38.5885,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-27",
+      "dem": 42.82394,
+      "rep": 38.55851,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-28",
+      "dem": 42.86351,
+      "rep": 38.54566,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-02-29",
+      "dem": 42.85299,
+      "rep": 38.52975,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-01",
+      "dem": 42.97256,
+      "rep": 38.42624,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-02",
+      "dem": 42.94357,
+      "rep": 38.45705,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-03",
+      "dem": 42.93452,
+      "rep": 38.46542,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-04",
+      "dem": 42.94245,
+      "rep": 38.46867,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-05",
+      "dem": 42.94731,
+      "rep": 38.43819,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-06",
+      "dem": 42.87611,
+      "rep": 38.48999,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-07",
+      "dem": 42.94263,
+      "rep": 38.4514,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-08",
+      "dem": 42.9212,
+      "rep": 38.47502,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-09",
+      "dem": 42.89935,
+      "rep": 38.4888,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-10",
+      "dem": 43.00761,
+      "rep": 38.38942,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-11",
+      "dem": 42.97772,
+      "rep": 38.38892,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-12",
+      "dem": 42.93502,
+      "rep": 38.40524,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-13",
+      "dem": 42.93007,
+      "rep": 38.3536,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-14",
+      "dem": 42.95514,
+      "rep": 38.35466,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-15",
+      "dem": 42.93016,
+      "rep": 38.30164,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-16",
+      "dem": 43.003,
+      "rep": 38.24651,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-17",
+      "dem": 42.94605,
+      "rep": 38.25435,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-18",
+      "dem": 42.85816,
+      "rep": 38.29447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-19",
+      "dem": 42.82305,
+      "rep": 38.29108,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-20",
+      "dem": 42.6511,
+      "rep": 37.72779,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-21",
+      "dem": 42.57698,
+      "rep": 37.74261,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-22",
+      "dem": 42.60417,
+      "rep": 37.74044,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-23",
+      "dem": 42.70203,
+      "rep": 37.67564,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-24",
+      "dem": 42.75666,
+      "rep": 37.62494,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-25",
+      "dem": 42.77684,
+      "rep": 37.3759,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-26",
+      "dem": 42.67977,
+      "rep": 37.39565,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-27",
+      "dem": 42.1549,
+      "rep": 38.79495,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-28",
+      "dem": 42.2301,
+      "rep": 38.73893,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-29",
+      "dem": 42.2803,
+      "rep": 38.61613,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-30",
+      "dem": 42.33347,
+      "rep": 38.4977,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-03-31",
+      "dem": 42.45866,
+      "rep": 38.40977,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-01",
+      "dem": 42.42786,
+      "rep": 38.3688,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-02",
+      "dem": 42.30786,
+      "rep": 38.38608,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-03",
+      "dem": 42.19394,
+      "rep": 38.61004,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-04",
+      "dem": 42.19436,
+      "rep": 38.65437,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-05",
+      "dem": 42.21014,
+      "rep": 38.60438,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-06",
+      "dem": 42.12769,
+      "rep": 38.62721,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-07",
+      "dem": 42.19894,
+      "rep": 38.58887,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-08",
+      "dem": 42.32703,
+      "rep": 38.29769,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-09",
+      "dem": 42.37088,
+      "rep": 38.1707,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-10",
+      "dem": 42.38157,
+      "rep": 38.13946,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-11",
+      "dem": 42.46286,
+      "rep": 38.0121,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-12",
+      "dem": 42.54233,
+      "rep": 37.95182,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-13",
+      "dem": 42.47554,
+      "rep": 38.14538,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-14",
+      "dem": 42.43594,
+      "rep": 38.15486,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-15",
+      "dem": 43.60518,
+      "rep": 39.71371,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-16",
+      "dem": 43.57933,
+      "rep": 39.69643,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-17",
+      "dem": 43.60453,
+      "rep": 39.66653,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-18",
+      "dem": 43.6463,
+      "rep": 39.52072,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-19",
+      "dem": 43.64428,
+      "rep": 39.5168,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-20",
+      "dem": 43.63726,
+      "rep": 39.47515,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-21",
+      "dem": 44.80498,
+      "rep": 39.58366,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-22",
+      "dem": 44.86657,
+      "rep": 39.47894,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-23",
+      "dem": 44.85194,
+      "rep": 39.48544,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-24",
+      "dem": 44.90636,
+      "rep": 39.40998,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-25",
+      "dem": 44.9258,
+      "rep": 39.31172,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-26",
+      "dem": 44.85519,
+      "rep": 39.32117,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-27",
+      "dem": 44.80317,
+      "rep": 39.35547,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-28",
+      "dem": 44.85692,
+      "rep": 39.30798,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-29",
+      "dem": 44.84243,
+      "rep": 39.31007,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-04-30",
+      "dem": 44.80314,
+      "rep": 39.41468,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-01",
+      "dem": 44.83139,
+      "rep": 39.42426,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-02",
+      "dem": 44.84027,
+      "rep": 39.48677,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-03",
+      "dem": 44.86597,
+      "rep": 39.45516,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-04",
+      "dem": 44.90652,
+      "rep": 39.4715,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-05",
+      "dem": 45.00393,
+      "rep": 39.36004,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-06",
+      "dem": 45.01676,
+      "rep": 39.31814,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-07",
+      "dem": 44.9783,
+      "rep": 39.29736,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-08",
+      "dem": 44.99431,
+      "rep": 39.26585,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-09",
+      "dem": 44.99964,
+      "rep": 39.21012,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-10",
+      "dem": 44.90457,
+      "rep": 39.30698,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-11",
+      "dem": 44.92253,
+      "rep": 39.35065,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-12",
+      "dem": 45.03015,
+      "rep": 39.27757,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-13",
+      "dem": 44.99743,
+      "rep": 39.31701,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-14",
+      "dem": 44.99132,
+      "rep": 39.33447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-15",
+      "dem": 45.02368,
+      "rep": 39.26884,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-16",
+      "dem": 45.04111,
+      "rep": 39.14748,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-17",
+      "dem": 45.70736,
+      "rep": 39.73024,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-18",
+      "dem": 45.69427,
+      "rep": 39.66089,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-19",
+      "dem": 45.75357,
+      "rep": 39.52319,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-20",
+      "dem": 45.18658,
+      "rep": 40.2473,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-21",
+      "dem": 45.14841,
+      "rep": 40.24323,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-22",
+      "dem": 45.18265,
+      "rep": 40.188,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-23",
+      "dem": 45.19954,
+      "rep": 40.15605,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-24",
+      "dem": 45.13794,
+      "rep": 40.18271,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-25",
+      "dem": 45.12713,
+      "rep": 40.11729,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-26",
+      "dem": 45.2016,
+      "rep": 40.0819,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-27",
+      "dem": 45.13151,
+      "rep": 40.12247,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-28",
+      "dem": 45.17145,
+      "rep": 40.03841,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-29",
+      "dem": 45.25278,
+      "rep": 39.97757,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-30",
+      "dem": 45.30191,
+      "rep": 39.9569,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-05-31",
+      "dem": 45.37318,
+      "rep": 39.92958,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-01",
+      "dem": 45.42327,
+      "rep": 39.87268,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-02",
+      "dem": 45.41973,
+      "rep": 39.90308,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-03",
+      "dem": 45.48518,
+      "rep": 39.82178,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-04",
+      "dem": 45.54946,
+      "rep": 39.75325,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-05",
+      "dem": 45.51054,
+      "rep": 39.69712,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-06",
+      "dem": 45.53249,
+      "rep": 39.62382,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-07",
+      "dem": 45.49093,
+      "rep": 39.57321,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-08",
+      "dem": 45.4268,
+      "rep": 39.60255,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-09",
+      "dem": 45.46725,
+      "rep": 39.55613,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-10",
+      "dem": 45.55234,
+      "rep": 39.45697,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-11",
+      "dem": 45.66137,
+      "rep": 39.35924,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-12",
+      "dem": 45.68607,
+      "rep": 39.28236,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-13",
+      "dem": 45.69028,
+      "rep": 39.13273,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-14",
+      "dem": 45.63034,
+      "rep": 39.0456,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-15",
+      "dem": 45.58271,
+      "rep": 39.00837,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-16",
+      "dem": 45.55308,
+      "rep": 38.96494,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-17",
+      "dem": 45.61313,
+      "rep": 38.85784,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-18",
+      "dem": 45.54811,
+      "rep": 38.86406,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-19",
+      "dem": 45.62016,
+      "rep": 38.82009,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-20",
+      "dem": 45.59223,
+      "rep": 38.79382,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-21",
+      "dem": 45.61808,
+      "rep": 38.6929,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-22",
+      "dem": 45.60462,
+      "rep": 38.66954,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-23",
+      "dem": 45.70963,
+      "rep": 38.54722,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-24",
+      "dem": 45.7074,
+      "rep": 39.50481,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-25",
+      "dem": 45.70734,
+      "rep": 39.48606,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-26",
+      "dem": 45.71083,
+      "rep": 39.49912,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-27",
+      "dem": 45.71254,
+      "rep": 39.43337,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-28",
+      "dem": 45.13157,
+      "rep": 39.60466,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-29",
+      "dem": 45.48874,
+      "rep": 39.26186,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-06-30",
+      "dem": 45.44724,
+      "rep": 39.23618,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-01",
+      "dem": 45.44186,
+      "rep": 39.19409,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-02",
+      "dem": 45.38417,
+      "rep": 39.18375,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-03",
+      "dem": 45.40898,
+      "rep": 39.17804,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-04",
+      "dem": 45.33932,
+      "rep": 39.19284,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-05",
+      "dem": 45.41005,
+      "rep": 38.95107,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-06",
+      "dem": 45.39865,
+      "rep": 38.93364,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-07",
+      "dem": 45.395,
+      "rep": 38.96757,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-08",
+      "dem": 45.42873,
+      "rep": 38.9229,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-09",
+      "dem": 45.45436,
+      "rep": 38.94355,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-10",
+      "dem": 45.45798,
+      "rep": 38.88618,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-11",
+      "dem": 45.52077,
+      "rep": 38.74609,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-12",
+      "dem": 45.29866,
+      "rep": 38.7499,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-13",
+      "dem": 45.28926,
+      "rep": 38.71233,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-14",
+      "dem": 45.30231,
+      "rep": 38.61267,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-15",
+      "dem": 45.28183,
+      "rep": 38.61721,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-16",
+      "dem": 45.24459,
+      "rep": 38.6455,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-17",
+      "dem": 45.26459,
+      "rep": 38.67736,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-18",
+      "dem": 45.2332,
+      "rep": 38.6638,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-19",
+      "dem": 45.17209,
+      "rep": 38.67202,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-20",
+      "dem": 45.13876,
+      "rep": 38.65872,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-21",
+      "dem": 45.10084,
+      "rep": 38.60505,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-22",
+      "dem": 45.01605,
+      "rep": 38.58807,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-23",
+      "dem": 44.7957,
+      "rep": 38.74534,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-24",
+      "dem": 44.60754,
+      "rep": 38.75687,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-25",
+      "dem": 44.21179,
+      "rep": 39.05351,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-26",
+      "dem": 43.98412,
+      "rep": 39.05493,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-27",
+      "dem": 43.84175,
+      "rep": 39.00195,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-28",
+      "dem": 43.79109,
+      "rep": 38.93768,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-29",
+      "dem": 43.72585,
+      "rep": 38.88652,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-30",
+      "dem": 43.65083,
+      "rep": 38.88055,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-07-31",
+      "dem": 44.17506,
+      "rep": 39.7618,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-01",
+      "dem": 44.15927,
+      "rep": 39.72984,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-02",
+      "dem": 44.26543,
+      "rep": 39.67753,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-03",
+      "dem": 44.26003,
+      "rep": 39.68803,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-04",
+      "dem": 45.18009,
+      "rep": 39.77463,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-05",
+      "dem": 45.12162,
+      "rep": 39.79226,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-06",
+      "dem": 45.10555,
+      "rep": 39.74401,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-07",
+      "dem": 45.08118,
+      "rep": 39.69441,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-08",
+      "dem": 45.05244,
+      "rep": 39.653,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-09",
+      "dem": 45.02002,
+      "rep": 39.63784,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-10",
+      "dem": 44.90403,
+      "rep": 39.76267,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-11",
+      "dem": 44.84137,
+      "rep": 39.78133,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-12",
+      "dem": 44.84565,
+      "rep": 39.74633,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-13",
+      "dem": 44.8156,
+      "rep": 39.76637,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-14",
+      "dem": 44.80415,
+      "rep": 39.77549,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-15",
+      "dem": 44.6784,
+      "rep": 39.76411,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-16",
+      "dem": 44.62934,
+      "rep": 39.7628,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-17",
+      "dem": 44.66576,
+      "rep": 39.70082,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-18",
+      "dem": 44.62282,
+      "rep": 39.67428,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-19",
+      "dem": 44.57614,
+      "rep": 39.63436,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-20",
+      "dem": 44.51343,
+      "rep": 39.59765,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-21",
+      "dem": 44.47212,
+      "rep": 39.48442,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-22",
+      "dem": 44.45893,
+      "rep": 39.38115,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-23",
+      "dem": 44.4027,
+      "rep": 39.31541,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-24",
+      "dem": 44.50125,
+      "rep": 39.34323,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-25",
+      "dem": 44.44436,
+      "rep": 39.3447,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-26",
+      "dem": 44.38282,
+      "rep": 39.32442,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-27",
+      "dem": 44.11948,
+      "rep": 39.35868,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-28",
+      "dem": 43.95442,
+      "rep": 39.36542,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-29",
+      "dem": 43.85165,
+      "rep": 39.27242,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-30",
+      "dem": 43.72349,
+      "rep": 39.58068,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-08-31",
+      "dem": 43.53215,
+      "rep": 39.55997,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-01",
+      "dem": 43.51025,
+      "rep": 39.58272,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-02",
+      "dem": 44.17603,
+      "rep": 40.18895,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-03",
+      "dem": 43.34317,
+      "rep": 39.87196,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-04",
+      "dem": 43.29507,
+      "rep": 39.77943,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-05",
+      "dem": 43.24512,
+      "rep": 40.86894,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-06",
+      "dem": 43.1699,
+      "rep": 40.86992,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-07",
+      "dem": 43.19545,
+      "rep": 40.6705,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-08",
+      "dem": 43.14097,
+      "rep": 40.62916,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-09",
+      "dem": 43.11518,
+      "rep": 40.66637,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-10",
+      "dem": 42.94917,
+      "rep": 40.76606,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-11",
+      "dem": 42.92978,
+      "rep": 40.72744,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-12",
+      "dem": 42.89388,
+      "rep": 40.71696,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-13",
+      "dem": 42.81797,
+      "rep": 40.74188,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-14",
+      "dem": 43.09014,
+      "rep": 40.72101,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-15",
+      "dem": 43.09816,
+      "rep": 40.7357,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-16",
+      "dem": 43.02914,
+      "rep": 40.81961,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-17",
+      "dem": 42.78093,
+      "rep": 40.7094,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-18",
+      "dem": 42.69398,
+      "rep": 40.71748,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-19",
+      "dem": 42.54596,
+      "rep": 40.72941,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-20",
+      "dem": 44.06038,
+      "rep": 41.60463,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-21",
+      "dem": 44.63657,
+      "rep": 41.79405,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-22",
+      "dem": 44.5956,
+      "rep": 41.79137,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-23",
+      "dem": 44.60397,
+      "rep": 41.71388,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-24",
+      "dem": 44.52044,
+      "rep": 41.78274,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-25",
+      "dem": 44.87389,
+      "rep": 42.50951,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-26",
+      "dem": 44.94807,
+      "rep": 42.46687,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-27",
+      "dem": 44.96492,
+      "rep": 42.40441,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-28",
+      "dem": 44.63004,
+      "rep": 41.8674,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-29",
+      "dem": 44.55505,
+      "rep": 41.58204,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-09-30",
+      "dem": 44.41327,
+      "rep": 41.55886,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-01",
+      "dem": 44.18338,
+      "rep": 41.4445,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-02",
+      "dem": 44.12817,
+      "rep": 41.43723,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-03",
+      "dem": 44.23856,
+      "rep": 41.36596,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-04",
+      "dem": 44.22543,
+      "rep": 41.32355,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-05",
+      "dem": 44.16407,
+      "rep": 41.28184,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-06",
+      "dem": 44.16183,
+      "rep": 41.24262,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-07",
+      "dem": 44.0767,
+      "rep": 41.16194,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-08",
+      "dem": 44.03289,
+      "rep": 41.17354,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-09",
+      "dem": 43.96347,
+      "rep": 41.26534,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-10",
+      "dem": 43.94574,
+      "rep": 41.18925,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-11",
+      "dem": 43.50163,
+      "rep": 40.18145,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-12",
+      "dem": 43.50951,
+      "rep": 40.05471,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-13",
+      "dem": 44.09286,
+      "rep": 40.07425,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-14",
+      "dem": 44.49282,
+      "rep": 40.32885,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-15",
+      "dem": 44.3041,
+      "rep": 40.22887,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-16",
+      "dem": 44.26929,
+      "rep": 40.20341,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-17",
+      "dem": 44.43138,
+      "rep": 40.32382,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-18",
+      "dem": 45.28374,
+      "rep": 40.90352,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-19",
+      "dem": 45.23566,
+      "rep": 40.98907,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-20",
+      "dem": 45.23329,
+      "rep": 40.95541,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-21",
+      "dem": 45.2607,
+      "rep": 40.93742,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-22",
+      "dem": 45.2387,
+      "rep": 40.9482,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-23",
+      "dem": 45.26516,
+      "rep": 40.92372,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-24",
+      "dem": 45.34852,
+      "rep": 41.29462,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-25",
+      "dem": 44.40981,
+      "rep": 40.90529,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-26",
+      "dem": 44.64019,
+      "rep": 41.1833,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-27",
+      "dem": 44.71535,
+      "rep": 41.29575,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-28",
+      "dem": 44.69613,
+      "rep": 41.27523,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-29",
+      "dem": 44.57994,
+      "rep": 41.31168,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-30",
+      "dem": 44.48158,
+      "rep": 41.27972,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-10-31",
+      "dem": 44.49443,
+      "rep": 41.39026,
+      "pollster": "538 trendline",
+      "sample": ""
+    },
+    {
+      "end_date": "2016-11-01",
+      "dem": 44.38182,
+      "rep": 41.38434,
+      "pollster": "538 trendline",
+      "sample": ""
+    }
+  ]
+}
