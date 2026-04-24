@@ -2934,6 +2934,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <nav class="pageTabs" aria-label="Page navigation">
   <button class="pageTab active" data-page="model">Model</button>
   <button class="pageTab" data-page="ratings">Ratings</button>
+  <button class="pageTab" data-page="redistricting">Redistricting</button>
   <button class="pageTab" data-page="polls">Polls</button>
   <button class="pageTab" data-page="swingometer">Swingometer</button>
   <button class="pageTab" data-page="past-elections">Past Elections</button>
@@ -4082,6 +4083,184 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   }
 </style>
 
+<!-- REDISTRICTING PAGE -->
+<div class="triGrid" id="redistrictingPage" style="display:none" aria-label="Redistricting War">
+
+  <!-- Forecast / Nowcast Toggle (syncs with model tab) -->
+  <div class="forecastToggleWrap">
+    <div class="forecastToggle fcToggleSync">
+      <button class="fcBtn active" data-fc="forecast">Forecast</button>
+      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
+    </div>
+  </div>
+
+  <!-- BEFORE (2024 maps) -->
+  <section class="modeCol" data-redist-era="2024">
+    <section class="card topCard">
+      <div class="panelHeaderRow">
+        <div class="panelTitleWrap">
+          <div class="panelTitle">Before</div>
+          <div class="panelSub">2024 maps — pre-redistricting</div>
+        </div>
+        <div class="pillRow" aria-label="National baseline">
+          <div class="metricPill blue" aria-label="Dem baseline">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="val" data-pill-d>50.0</span>
+          </div>
+          <div class="metricPill red" aria-label="GOP baseline">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="val" data-pill-r>50.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card seatsCard" aria-label="Seats (2024 maps)">
+      <div class="seatsSummary">
+        <div class="seatsLine">
+          <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d>—</span></div>
+          <div class="seatsDivider" aria-hidden="true"></div>
+          <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r>—</span></div>
+        </div>
+        <div class="simMini" aria-label="Seat distribution — 2024 maps">
+          <canvas class="simCanvas" data-sim-canvas></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="card mapCard" aria-label="Map — 2024 districts">
+      <div class="mapGrid">
+        <div class="mapStage">
+          <svg class="mapSvg" aria-label="2024 congressional districts"></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="mapControlBar" data-map-controls>
+      <span class="mapCtrlLabel">CA · MO · NC · TX · UT · VA · (127 districts)</span>
+    </div>
+  </section>
+
+  <!-- AFTER (2026 maps) -->
+  <section class="modeCol" data-redist-era="2026">
+    <section class="card topCard">
+      <div class="panelHeaderRow">
+        <div class="panelTitleWrap">
+          <div class="panelTitle">After</div>
+          <div class="panelSub">2026 maps — post-redistricting</div>
+        </div>
+        <div class="pillRow" aria-label="National baseline">
+          <div class="metricPill blue" aria-label="Dem baseline">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="val" data-pill-d>50.0</span>
+          </div>
+          <div class="metricPill red" aria-label="GOP baseline">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="val" data-pill-r>50.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card seatsCard" aria-label="Seats (2026 maps)">
+      <div class="seatsSummary">
+        <div class="seatsLine">
+          <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d>—</span></div>
+          <div class="seatsDivider" aria-hidden="true"></div>
+          <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r>—</span></div>
+        </div>
+        <div class="simMini" aria-label="Seat distribution — 2026 maps">
+          <canvas class="simCanvas" data-sim-canvas></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="card mapCard" aria-label="Map — 2026 districts">
+      <div class="mapGrid">
+        <div class="mapStage">
+          <svg class="mapSvg" aria-label="2026 congressional districts"></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="mapControlBar" data-map-controls>
+      <span class="mapCtrlLabel">Scroll / drag to zoom · double-click to reset</span>
+    </div>
+  </section>
+
+  <!-- FULL-WIDTH: Who is winning the redistricting war? -->
+  <section class="card oddsCard redistWarCard" aria-label="Redistricting war chart">
+    <div class="oddsHead">
+      <div>
+        <div class="oddsTitle">Who is winning the redistricting war?</div>
+        <div class="panelSub" style="margin-top:2px;">Net R seat gain from mid-decade redistricting, by state effective date</div>
+      </div>
+      <div class="chartTabs">
+        <button class="chartTab active" data-redist-chart-tab="prob">Gain Probability</button>
+        <button class="chartTab" data-redist-chart-tab="seats">Gain Number</button>
+      </div>
+    </div>
+    <div class="oddsChartWrap">
+      <svg class="comboSvg" data-redist-war-svg></svg>
+      <div class="oddsStatus" data-redist-war-status></div>
+    </div>
+  </section>
+
+</div>
+
+<style>
+  /* Redistricting page: 2-column grid; war chart spans both columns. */
+  @media (min-width: 980px){
+    #redistrictingPage.triGrid{
+      grid-template-columns: 1fr 1fr !important;
+    }
+    #redistrictingPage .redistWarCard{
+      grid-column: 1 / -1;
+    }
+  }
+  #redistrictingPage .mapSvg{
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    display: block;
+  }
+  #redistrictingPage .mapSvg:active{ cursor: grabbing; }
+  #redistrictingPage .mapCard{ flex:1; min-height:0; }
+  #redistrictingPage .mapGrid,
+  #redistrictingPage .mapStage{ height:100%; min-height:340px; }
+  #redistrictingPage .district{
+    stroke: rgba(17,24,39,0.35);
+    stroke-width: 0.4;
+    vector-effect: non-scaling-stroke;
+    transition: fill 0.15s;
+    cursor: pointer;
+  }
+  #redistrictingPage .district.hovered{
+    stroke: var(--ink);
+    stroke-width: 1.2;
+  }
+  #redistrictingPage .redistWarCard .oddsChartWrap{
+    min-height: 240px;
+  }
+  #redistrictingPage .redistWarCard svg.comboSvg{
+    width: 100%;
+    height: 240px;
+    display: block;
+  }
+  #redistrictingPage .oddsStatus{
+    font-size: 11px;
+    color: var(--muted);
+    padding: 6px 10px 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  /* Riso look: flat fills, offset shadow on cards is handled by global .card styles */
+  html[data-look="riso"] #redistrictingPage .district{
+    stroke: var(--ink);
+    stroke-width: 0.5;
+  }
+</style>
+
 </div>
 
   <div id="tip" role="dialog" aria-label="State details tooltip"></div>
@@ -4094,6 +4273,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
 <script src="state-legs.js?v=12a"></script>
+<script src="redistricting.js?v=1"></script>
 
 
 <script>
@@ -4133,7 +4313,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
       var allMainPageIds = [
         'triGrid','ratingsPage','pollsPage','swingometerPage',
-        'pastElectionsPage','stateLegsPage','methodologyPage','projectsPage'
+        'pastElectionsPage','stateLegsPage','methodologyPage','projectsPage',
+        'redistrictingPage'
       ];
 
       nav.addEventListener('click', function(ev){
