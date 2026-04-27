@@ -616,32 +616,72 @@ function redistInitMap(era){
 /* ---------- Per-era viewBox auto-fit ----------
    Each era's SVG fits to its OWN content bbox.
 
-   gRoot has been pruned in redistInitMap to contain exactly the tagged
-   district paths (no stray rects, decorative elements, or out-of-frame
-   geometry). So a plain gRoot.getBBox() gives the clean union bbox in
-   gRoot's local user-space — which is what the SVG's viewBox attribute
-   needs. No CTM math required. */
+   We compute the bbox from each tagged district path's `getBoundingClientRect()`
+   (the rendered screen-pixel rectangle, which already accounts for every
+   transform in the chain) and then map those screen-space corners back into
+   SVG user space via the inverse of the SVG element's `getScreenCTM()`.
+
+   Why this approach over `gRoot.getBBox()`: stray geometry hiding inside the
+   imported source SVG — empty `<g>` wrappers with transforms, decorative
+   `<path>`s without `data-name`, elements at out-of-frame coordinates — gets
+   included in `gRoot.getBBox()` and pushes the bbox far beyond the visible
+   content. With this approach we explicitly enumerate only the tagged paths,
+   so there's no opportunity for stray geometry to leak in.
+
+   The screen-CTM-based conversion is deterministic because it's against the
+   SVG element (which is stable), unlike per-path `getCTM()` which depends on
+   the SVG's current viewBox and was producing different values on each call. */
 function redistFitViewBoxes(){
   for (const era of ["2024","2026"]){
     const m = REDIST_MAP[era];
     if (!m || !m.gRoot) continue;
 
-    // Reset zoom transform first so user pan/zoom doesn\'t poison the bbox
+    // Reset any active zoom transform first
     if (m.zoom){
       try { m.svg.call(m.zoom.transform, d3.zoomIdentity); } catch(e){}
     }
 
-    let bb;
-    try { bb = m.gRoot.node().getBBox(); } catch(e){ bb = null; }
-    if (!bb || bb.width <= 0 || bb.height <= 0){
-      console.warn(`${era} fit: gRoot bbox empty \u2014 skipping`);
+    const svgEl = m.svg.node();
+    const screenCTM = svgEl.getScreenCTM();
+    if (!screenCTM){
+      console.warn(`${era} fit: SVG has no screen CTM (not laid out yet?)`);
+      continue;
+    }
+    const invCTM = screenCTM.inverse();
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    let cnt = 0;
+
+    m.gRoot.selectAll("path[data-did]").each(function(){
+      const r = this.getBoundingClientRect();
+      if (r.width <= 0 || r.height <= 0) return;
+      const corners = [
+        new DOMPoint(r.left, r.top).matrixTransform(invCTM),
+        new DOMPoint(r.right, r.top).matrixTransform(invCTM),
+        new DOMPoint(r.right, r.bottom).matrixTransform(invCTM),
+        new DOMPoint(r.left, r.bottom).matrixTransform(invCTM),
+      ];
+      for (const c of corners){
+        if (c.x < minX) minX = c.x;
+        if (c.y < minY) minY = c.y;
+        if (c.x > maxX) maxX = c.x;
+        if (c.y > maxY) maxY = c.y;
+      }
+      cnt++;
+    });
+
+    if (cnt === 0 || !isFinite(minX)){
+      console.warn(`${era} fit: no tagged paths produced valid client rects`);
       continue;
     }
 
-    const padX = bb.width * 0.025, padY = bb.height * 0.025;
-    const vb = `${(bb.x - padX).toFixed(1)} ${(bb.y - padY).toFixed(1)} ${(bb.width + 2*padX).toFixed(1)} ${(bb.height + 2*padY).toFixed(1)}`;
+    const w = maxX - minX, h = maxY - minY;
+    if (w <= 0 || h <= 0) continue;
+
+    const padX = w * 0.025, padY = h * 0.025;
+    const vb = `${(minX - padX).toFixed(1)} ${(minY - padY).toFixed(1)} ${(w + 2*padX).toFixed(1)} ${(h + 2*padY).toFixed(1)}`;
     m.svg.attr("viewBox", vb);
-    console.log(`${era} fit: viewBox=${vb}`);
+    console.log(`${era} fit: ${cnt} paths, viewBox=${vb}`);
   }
 }
 
@@ -989,28 +1029,37 @@ function redistSetupChartTabs(){
   });
 }
 
+/* Force max-width and centering directly as inline style with !important.
+   CSS rules can be beaten by other CSS rules with higher specificity OR by
+   late-applied inline styles. Inline `setProperty(..., 'important')` wins
+   against everything except other inline !important styles, so this is the
+   lock that actually holds. Theo saw cards stretching to full width AFTER
+   data loaded; something else in the pipeline was overriding the @media
+   rule. This bypasses that fight entirely. */
+function redistLockPageWidth(){
+  const pg = document.getElementById('redistrictingPage');
+  if (!pg) return;
+  pg.style.setProperty('max-width', '1500px', 'important');
+  pg.style.setProperty('margin-left', 'auto', 'important');
+  pg.style.setProperty('margin-right', 'auto', 'important');
+}
+
 async function initRedistrictingPage(){
   if (!REDIST_LOADED) await redistLoadAll();
   if (REDIST_INITED) {
     redistRenderAll();
-    // No refit on tab re-activation. gRoot contents don't change after init,
-    // so the viewBox set during the first init is already correct. Refitting
-    // here was producing different bbox values across calls (the bug Theo
-    // saw: layout starts correct, then "goes back" after later code runs).
+    redistLockPageWidth(); // re-apply in case anything wiped the inline style
     return;
   }
   REDIST_UI = redistInitUI();
   if (!REDIST_UI) return;
+  redistLockPageWidth(); // before any rendering
   redistInitMap("2024");
   redistInitMap("2026");
   redistSetupChartTabs();
   redistUpdateMapLegend();
   redistRenderAll();
-  // No rAF refit. The synchronous fit at the end of redistInitMap ran with
-  // a clean pruned gRoot, and SVG getBBox doesn't depend on CSS layout
-  // (it's pure path geometry), so adding a delayed refit only introduced
-  // instability — it would re-measure with different transient state and
-  // overwrite the correct viewBox.
+  redistLockPageWidth(); // after rendering, in case render path nudged style
   REDIST_INITED = true;
 }
 window.initRedistrictingPage = initRedistrictingPage;
