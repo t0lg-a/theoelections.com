@@ -58,6 +58,40 @@ const FL_PLACEMENT = {
   hFrac: 0.18,   // FL footprint height fraction
 };
 
+/* ---------- Label remap ----------
+   Use this when an SVG path's data-name attribute doesn't correspond to the
+   actual geographic district it represents (typically because the SVG kept
+   old district numbering after the geometry was redrawn for redistricting).
+   Format: REDIST_LABEL_REMAP[era][raw-data-name] = correct-ratio-code.
+
+   Example for VA 2026 (if the path labeled "VA-3" in the new SVG is actually
+   the new VA-01 geography):
+     REDIST_LABEL_REMAP["2026"]["VA-3"] = "VA-01";
+
+   Use window.redistDumpLabels() in the console to see all current path
+   labels per era; cross-reference with the rendered map to identify
+   mis-labeled districts, then add the corrections here.
+
+   Codes on the right side may use either "VA-1" or "VA-01" — the loader
+   normalizes both to "VA-01" form. */
+const REDIST_LABEL_REMAP = {
+  "2024": {
+    // (none currently)
+  },
+  "2026": {
+    // VA: pending Theo's hover-cross-reference. Add entries like:
+    //   "VA-1": "VA-05",
+    //   "VA-3": "VA-01",
+    //   etc.
+  },
+};
+
+function redistNormalizeCode(s){
+  const m = String(s||"").match(/^([A-Za-z]{2})-?(\d+)$/);
+  if (!m) return null;
+  return `${m[1].toUpperCase()}-${String(parseInt(m[2],10)).padStart(2,"0")}`;
+}
+
 let REDIST_INITED = false;        // rendered once flag
 let REDIST_LOADED = false;        // data loaded flag
 let REDIST_LOAD_PROMISE = null;
@@ -505,17 +539,28 @@ function redistInitMap(era){
 
   // Tag SVG-imported district paths
   let taggedCount = 0;
+  const unrecognized = []; // data-names that don't resolve to a known ratio
   gRoot.selectAll("path").each(function(){
     const dn = this.getAttribute("data-name") || "";
-    const code = redistCodeFromDataName(dn);
+    if (!dn) return;
+    // Resolve to ratio code: REDIST_LABEL_REMAP override → regex extraction
+    const remap = REDIST_LABEL_REMAP[era][dn];
+    let code = remap ? redistNormalizeCode(remap) : redistCodeFromDataName(dn);
     if (!code) return;
-    if (!REDIST_DATA[era].ratios[code]) return;
+    if (!REDIST_DATA[era].ratios[code]){
+      unrecognized.push({ dataName: dn, resolvedTo: code });
+      return;
+    }
     this.setAttribute("data-did", code);
+    if (remap) this.setAttribute("data-remap-src", dn);
     this.classList.add("district","active");
     try{ this.style.fill = ""; }catch(e){}
     taggedCount++;
   });
   console.log(`${era} source SVG: tagged ${taggedCount} district paths`);
+  if (unrecognized.length){
+    console.warn(`${era}: ${unrecognized.length} paths with unrecognized data-names:`, unrecognized);
+  }
 
   // Layer in FL geojson districts (using parsed source viewBox, not getBBox)
   const flN = redistInjectFLDistricts(era, gRoot, sourceVB);
@@ -548,30 +593,92 @@ function redistInitMap(era){
   });
 
   REDIST_MAP[era] = { svg: svgHost, gRoot, gZoom, zoom };
+
+  // Synchronous initial fit. getBBox/getCTM on SVG elements work as soon as
+  // the elements are in the DOM (they don't require full layout, since SVG
+  // bboxes are derived from path geometry, not CSS). Doing this synchronously
+  // means the map is correctly framed on first paint, not after a rAF flicker.
+  // The rAF call from initRedistrictingPage is kept as a backup for any case
+  // where the SVG isn't yet attached when init runs.
+  try { redistFitViewBoxes(); } catch(e){ console.warn(`${era} initial fit failed:`, e); }
 }
 
 /* ---------- Visual fix: per-era viewBox auto-fit ----------
-   Each era's SVG fits to its OWN content bbox. The previous union-across-eras
-   approach broke when the two source SVGs had different coordinate spaces
-   (the union viewBox was much wider than either era's content, leaving
-   one or both maps with most of the content offscreen or tiny). Side-by-side
-   comparability is carried by the seat counts above the maps; pixel-aligning
-   the maps was a nice-to-have that was actively breaking things. */
+   Each era's SVG fits to its OWN content bbox.
+
+   IMPORTANT: bbox is computed over ONLY tagged district paths (those with a
+   `data-did` attribute), NOT the entire gRoot. Source SVGs sometimes contain
+   stray elements — invisible background rects, decorative marks, paths with
+   extreme out-of-frame coordinates — that, if included via gRoot.getBBox(),
+   blow up the bbox and shove the actual map content into a tiny corner.
+
+   Each tagged path's local bbox is multiplied by its CTM (transform from
+   local coords to the SVG's user space, accounting for any transform
+   chain through ancestor groups), and we union the resulting corner
+   points. The union rectangle becomes the SVG's viewBox. */
 function redistFitViewBoxes(){
   for (const era of ["2024","2026"]){
     const m = REDIST_MAP[era];
     if (!m || !m.gRoot) continue;
-    let bb;
-    try {
-      bb = m.gRoot.node().getBBox();
-    } catch(e){ bb = null; }
-    if (!bb || bb.width <= 0 || bb.height <= 0) continue;
 
-    const padX = bb.width * 0.025;
-    const padY = bb.height * 0.025;
-    const vb = `${(bb.x - padX).toFixed(1)} ${(bb.y - padY).toFixed(1)} ${(bb.width + 2*padX).toFixed(1)} ${(bb.height + 2*padY).toFixed(1)}`;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    let cnt = 0;
+
+    m.gRoot.selectAll("path[data-did]").each(function(){
+      let lb;
+      try { lb = this.getBBox(); } catch(e){ return; }
+      if (!lb || lb.width <= 0 || lb.height <= 0) return;
+
+      let ctm = null;
+      try { ctm = this.getCTM(); } catch(e){ ctm = null; }
+
+      const corners = ctm ? [
+        new DOMPoint(lb.x, lb.y).matrixTransform(ctm),
+        new DOMPoint(lb.x + lb.width, lb.y).matrixTransform(ctm),
+        new DOMPoint(lb.x + lb.width, lb.y + lb.height).matrixTransform(ctm),
+        new DOMPoint(lb.x, lb.y + lb.height).matrixTransform(ctm),
+      ] : [
+        { x: lb.x, y: lb.y },
+        { x: lb.x + lb.width, y: lb.y },
+        { x: lb.x + lb.width, y: lb.y + lb.height },
+        { x: lb.x, y: lb.y + lb.height },
+      ];
+
+      for (const c of corners){
+        if (c.x < minX) minX = c.x;
+        if (c.y < minY) minY = c.y;
+        if (c.x > maxX) maxX = c.x;
+        if (c.y > maxY) maxY = c.y;
+      }
+      cnt++;
+    });
+
+    // Fallback: if no tagged paths produced a bbox, try gRoot
+    if (cnt === 0 || !isFinite(minX)){
+      try {
+        const gbb = m.gRoot.node().getBBox();
+        if (gbb && gbb.width > 0 && gbb.height > 0){
+          minX = gbb.x; minY = gbb.y;
+          maxX = gbb.x + gbb.width; maxY = gbb.y + gbb.height;
+        } else {
+          console.warn(`${era} fit: no tagged paths AND gRoot bbox empty — skipping`);
+          continue;
+        }
+      } catch(e){
+        console.warn(`${era} fit: getBBox failed`, e);
+        continue;
+      }
+    }
+
+    const w = maxX - minX, h = maxY - minY;
+    if (w <= 0 || h <= 0) continue;
+
+    const padX = w * 0.025, padY = h * 0.025;
+    const vb = `${(minX - padX).toFixed(1)} ${(minY - padY).toFixed(1)} ${(w + 2*padX).toFixed(1)} ${(h + 2*padY).toFixed(1)}`;
     m.svg.attr("viewBox", vb);
     if (m.zoom) m.svg.call(m.zoom.transform, d3.zoomIdentity);
+
+    console.log(`${era} fit: ${cnt} tagged paths, viewBox=${vb}`);
   }
 }
 
@@ -970,6 +1077,86 @@ window.initRedistrictingPage = initRedistrictingPage;
 window.refreshRedistrictingForForecast = function(){
   if (!REDIST_INITED) return;
   try { redistRenderAll(); } catch(e){ console.warn(e); }
+};
+
+/* ---------- Dev diagnostics ----------
+   In the console:
+     redistDumpLabels()        — table of every path's data-name and resolved
+                                 data-did (per era). Use to verify each path
+                                 ends up labeled with the correct district.
+     redistDumpLabels("VA")    — filter to one state.
+     redistDiffEras()          — list states whose 2024 and 2026 paths share
+                                 identical d-attribute geometry (i.e. the
+                                 era-specific SVG is duplicated content).
+*/
+window.redistDumpLabels = function(stateFilter){
+  const filt = stateFilter ? String(stateFilter).toUpperCase() : null;
+  for (const era of ["2024","2026"]){
+    const m = REDIST_MAP[era];
+    if (!m?.gRoot){ console.log(`${era}: not initialized`); continue; }
+    const rows = [];
+    m.gRoot.selectAll("path").each(function(){
+      const dn = this.getAttribute("data-name") || "";
+      const did = this.getAttribute("data-did") || "(untagged)";
+      const remapSrc = this.getAttribute("data-remap-src") || "";
+      if (!dn) return;
+      if (filt){
+        const stMatch = dn.match(/^([A-Za-z]{2})/);
+        if (!stMatch || stMatch[1].toUpperCase() !== filt) return;
+      }
+      rows.push({ "data-name": dn, "data-did": did, "remap-from": remapSrc });
+    });
+    console.group(`${era} labels${filt ? " ("+filt+")" : ""} — ${rows.length} paths`);
+    if (typeof console.table === "function") console.table(rows);
+    else console.log(rows);
+    console.groupEnd();
+  }
+};
+
+window.redistDiffEras = function(){
+  const m24 = REDIST_MAP["2024"], m26 = REDIST_MAP["2026"];
+  if (!m24?.gRoot || !m26?.gRoot){ console.log("Both eras not initialized"); return; }
+  const collect = (gRoot) => {
+    const out = {};
+    gRoot.selectAll("path").each(function(){
+      const dn = this.getAttribute("data-name") || "";
+      if (!dn) return;
+      const stMatch = dn.match(/^([A-Za-z]{2})/);
+      if (!stMatch) return;
+      const st = stMatch[1].toUpperCase();
+      const d = this.getAttribute("d") || "";
+      if (!out[st]) out[st] = [];
+      out[st].push(d);
+    });
+    for (const k of Object.keys(out)) out[k].sort();
+    return out;
+  };
+  const a = collect(m24.gRoot), b = collect(m26.gRoot);
+  const states = new Set([...Object.keys(a), ...Object.keys(b)]);
+  const report = [];
+  for (const st of states){
+    const A = a[st] || [], B = b[st] || [];
+    const sameLen = A.length === B.length;
+    const sameContent = sameLen && A.every((d,i) => d === B[i]);
+    report.push({
+      state: st,
+      "n_2024": A.length,
+      "n_2026": B.length,
+      identical: sameContent,
+    });
+  }
+  console.group("Era geometry diff");
+  if (typeof console.table === "function") console.table(report);
+  else console.log(report);
+  console.groupEnd();
+  const dupes = report.filter(r => r.identical);
+  if (dupes.length){
+    console.warn(
+      `States with identical 2024 vs 2026 geometry (likely duplicated source data): ${dupes.map(d=>d.state).join(", ")}`
+    );
+  } else {
+    console.log("No states have identical geometry across eras.");
+  }
 };
 
 (function(){
