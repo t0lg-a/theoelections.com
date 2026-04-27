@@ -993,8 +993,10 @@ async function initRedistrictingPage(){
   if (!REDIST_LOADED) await redistLoadAll();
   if (REDIST_INITED) {
     redistRenderAll();
-    // Re-fit after re-render in case the layout changed
-    requestAnimationFrame(redistFitViewBoxes);
+    // No refit on tab re-activation. gRoot contents don't change after init,
+    // so the viewBox set during the first init is already correct. Refitting
+    // here was producing different bbox values across calls (the bug Theo
+    // saw: layout starts correct, then "goes back" after later code runs).
     return;
   }
   REDIST_UI = redistInitUI();
@@ -1004,14 +1006,11 @@ async function initRedistrictingPage(){
   redistSetupChartTabs();
   redistUpdateMapLegend();
   redistRenderAll();
-
-  // Auto-fit after paint so getBBox returns real dimensions. Two rAFs because
-  // the redistricting page has just been display-toggled; one frame for the
-  // browser to apply display, another for the SVG to lay out.
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(redistFitViewBoxes);
-  });
-
+  // No rAF refit. The synchronous fit at the end of redistInitMap ran with
+  // a clean pruned gRoot, and SVG getBBox doesn't depend on CSS layout
+  // (it's pure path geometry), so adding a delayed refit only introduced
+  // instability — it would re-measure with different transient state and
+  // overwrite the correct viewBox.
   REDIST_INITED = true;
 }
 window.initRedistrictingPage = initRedistrictingPage;
@@ -1137,6 +1136,8 @@ window.addEventListener("resize", ()=>{
     redistRenderSeatsFor("2024");
     redistRenderSeatsFor("2026");
   } catch(e){}
-  // Re-fit on resize so the map keeps filling its container
-  requestAnimationFrame(redistFitViewBoxes);
+  // No map refit on resize. SVG preserveAspectRatio="xMidYMid meet" (default)
+  // automatically letterboxes the existing viewBox into whatever container
+  // size the resize produced. Refitting was changing the viewBox itself,
+  // which is the bug.
 }, {passive:true});
