@@ -2934,7 +2934,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <nav class="pageTabs" aria-label="Page navigation">
   <button class="pageTab active" data-page="model">Model</button>
   <button class="pageTab" data-page="ratings">Ratings</button>
-  <button class="pageTab" data-page="redistricting">Redistricting</button>
+  <button class="pageTab" data-page="fl-redistricting">Florida Redistricting</button>
   <button class="pageTab" data-page="polls">Polls</button>
   <button class="pageTab" data-page="swingometer">Swingometer</button>
   <button class="pageTab" data-page="past-elections">Past Elections</button>
@@ -4083,8 +4083,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   }
 </style>
 
-<!-- REDISTRICTING PAGE -->
-<div class="triGrid" id="redistrictingPage" style="display:none" aria-label="Redistricting War">
+<!-- FLORIDA REDISTRICTING PAGE -->
+<div id="flRedistrictingPage" style="display:none" aria-label="Florida Redistricting">
 
   <!-- Forecast / Nowcast Toggle (syncs with model tab) -->
   <div class="forecastToggleWrap">
@@ -4094,175 +4094,355 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </div>
   </div>
 
-  <!-- BEFORE (2024 maps) -->
-  <section class="modeCol" data-redist-era="2024">
-    <section class="card topCard">
-      <div class="panelHeaderRow">
-        <div class="panelTitleWrap">
-          <div class="panelTitle">Before</div>
-          <div class="panelSub">2024 maps — pre-redistricting</div>
+  <div class="flrGrid">
+
+    <!-- ===== Card 1: Old Forecast ===== -->
+    <section class="flrCard" data-flr-card="oldForecast">
+      <div class="flrHeader">
+        <div class="flrTitleWrap">
+          <div class="flrTitle">Old map · Forecast</div>
+          <div class="flrSub">Pre-redistricting · national GB</div>
         </div>
-        <div class="pillRow" aria-label="National baseline">
-          <div class="metricPill blue" aria-label="Dem baseline">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="val" data-pill-d>50.0</span>
-          </div>
-          <div class="metricPill red" aria-label="GOP baseline">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="val" data-pill-r>50.0</span>
-          </div>
+        <div class="flrPills">
+          <div class="metricPill blue"><span class="dot"></span><span class="val" data-pill-d>50.0</span></div>
+          <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r>50.0</span></div>
         </div>
+      </div>
+      <div class="flrSeats">
+        <div class="flrSeatNums">
+          <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d>—</span>
+          <span class="flrSeatDivider"></span>
+          <span class="flrSeatLabel r">R</span><span class="flrSeatNum r" data-seats-r>—</span>
+        </div>
+        <canvas data-sim-canvas class="flrSimCanvas"></canvas>
+      </div>
+      <div class="flrMapWrap">
+        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </section>
 
-    <section class="card seatsCard" aria-label="Seats (2024 maps)">
-      <div class="seatsSummary">
-        <div class="seatsLine">
-          <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d>—</span></div>
-          <div class="seatsDivider" aria-hidden="true"></div>
-          <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r>—</span></div>
+    <!-- ===== Card 2: New Forecast ===== -->
+    <section class="flrCard" data-flr-card="newForecast">
+      <div class="flrHeader">
+        <div class="flrTitleWrap">
+          <div class="flrTitle">New map · Forecast</div>
+          <div class="flrSub">Post-redistricting · national GB</div>
         </div>
-        <div class="simMini" aria-label="Seat distribution — 2024 maps">
-          <canvas class="simCanvas" data-sim-canvas></canvas>
+        <div class="flrPills">
+          <div class="metricPill blue"><span class="dot"></span><span class="val" data-pill-d>50.0</span></div>
+          <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r>50.0</span></div>
         </div>
+      </div>
+      <div class="flrSeats">
+        <div class="flrSeatNums">
+          <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d>—</span>
+          <span class="flrSeatDivider"></span>
+          <span class="flrSeatLabel r">R</span><span class="flrSeatNum r" data-seats-r>—</span>
+        </div>
+        <canvas data-sim-canvas class="flrSimCanvas"></canvas>
+      </div>
+      <div class="flrMapWrap">
+        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </section>
 
-    <section class="card mapCard" aria-label="Map — 2024 districts">
-      <div class="mapGrid">
-        <div class="mapStage">
-          <svg class="mapSvg" aria-label="2024 congressional districts"></svg>
+    <!-- ===== Card 3: Old Swingometer ===== -->
+    <section class="flrCard" data-flr-card="oldSwing">
+      <div class="flrHeader">
+        <div class="flrTitleWrap">
+          <div class="flrTitle">Old map · Swingometer</div>
+          <div class="flrSub">Pre-redistricting · custom inputs</div>
         </div>
+        <div class="flrPills">
+          <div class="metricPill blue"><span class="dot"></span><span class="val" data-pill-d>—</span></div>
+          <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r>—</span></div>
+        </div>
+      </div>
+      <div class="flrSliders">
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl d">D</span>
+          <input type="range" min="30" max="70" step="0.1" data-slider-gb-d />
+          <span class="flrSliderVal" data-val-gb-d>—</span>
+        </div>
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl r">R</span>
+          <input type="range" min="30" max="70" step="0.1" data-slider-gb-r />
+          <span class="flrSliderVal" data-val-gb-r>—</span>
+        </div>
+        <div class="flrSliderRow flrHispRow">
+          <span class="flrSliderLbl d">Hisp&nbsp;D</span>
+          <input type="range" min="20" max="90" step="1" data-slider-hisp-d />
+          <span class="flrSliderVal" data-val-hisp-d>—</span>
+        </div>
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl r">Hisp&nbsp;R</span>
+          <input type="range" min="10" max="80" step="1" data-slider-hisp-r />
+          <span class="flrSliderVal" data-val-hisp-r>—</span>
+        </div>
+      </div>
+      <div class="flrSeats">
+        <div class="flrSeatNums">
+          <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d>—</span>
+          <span class="flrSeatDivider"></span>
+          <span class="flrSeatLabel r">R</span><span class="flrSeatNum r" data-seats-r>—</span>
+        </div>
+        <canvas data-sim-canvas class="flrSimCanvas"></canvas>
+      </div>
+      <div class="flrMapWrap">
+        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </section>
 
-    <div class="mapControlBar" data-map-controls>
-      <span class="mapCtrlLabel">CA · MO · NC · TX · UT · VA · (127 districts)</span>
-    </div>
-  </section>
-
-  <!-- AFTER (2026 maps) -->
-  <section class="modeCol" data-redist-era="2026">
-    <section class="card topCard">
-      <div class="panelHeaderRow">
-        <div class="panelTitleWrap">
-          <div class="panelTitle">After</div>
-          <div class="panelSub">2026 maps — post-redistricting</div>
+    <!-- ===== Card 4: New Swingometer ===== -->
+    <section class="flrCard" data-flr-card="newSwing">
+      <div class="flrHeader">
+        <div class="flrTitleWrap">
+          <div class="flrTitle">New map · Swingometer</div>
+          <div class="flrSub">Post-redistricting · custom inputs</div>
         </div>
-        <div class="pillRow" aria-label="National baseline">
-          <div class="metricPill blue" aria-label="Dem baseline">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="val" data-pill-d>50.0</span>
-          </div>
-          <div class="metricPill red" aria-label="GOP baseline">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="val" data-pill-r>50.0</span>
-          </div>
+        <div class="flrPills">
+          <div class="metricPill blue"><span class="dot"></span><span class="val" data-pill-d>—</span></div>
+          <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r>—</span></div>
         </div>
+      </div>
+      <div class="flrSliders">
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl d">D</span>
+          <input type="range" min="30" max="70" step="0.1" data-slider-gb-d />
+          <span class="flrSliderVal" data-val-gb-d>—</span>
+        </div>
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl r">R</span>
+          <input type="range" min="30" max="70" step="0.1" data-slider-gb-r />
+          <span class="flrSliderVal" data-val-gb-r>—</span>
+        </div>
+        <div class="flrSliderRow flrHispRow">
+          <span class="flrSliderLbl d">Hisp&nbsp;D</span>
+          <input type="range" min="20" max="90" step="1" data-slider-hisp-d />
+          <span class="flrSliderVal" data-val-hisp-d>—</span>
+        </div>
+        <div class="flrSliderRow">
+          <span class="flrSliderLbl r">Hisp&nbsp;R</span>
+          <input type="range" min="10" max="80" step="1" data-slider-hisp-r />
+          <span class="flrSliderVal" data-val-hisp-r>—</span>
+        </div>
+      </div>
+      <div class="flrSeats">
+        <div class="flrSeatNums">
+          <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d>—</span>
+          <span class="flrSeatDivider"></span>
+          <span class="flrSeatLabel r">R</span><span class="flrSeatNum r" data-seats-r>—</span>
+        </div>
+        <canvas data-sim-canvas class="flrSimCanvas"></canvas>
+      </div>
+      <div class="flrMapWrap">
+        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </section>
 
-    <section class="card seatsCard" aria-label="Seats (2026 maps)">
-      <div class="seatsSummary">
-        <div class="seatsLine">
-          <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d>—</span></div>
-          <div class="seatsDivider" aria-hidden="true"></div>
-          <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r>—</span></div>
-        </div>
-        <div class="simMini" aria-label="Seat distribution — 2026 maps">
-          <canvas class="simCanvas" data-sim-canvas></canvas>
-        </div>
-      </div>
-    </section>
-
-    <section class="card mapCard" aria-label="Map — 2026 districts">
-      <div class="mapGrid">
-        <div class="mapStage">
-          <svg class="mapSvg" aria-label="2026 congressional districts"></svg>
-        </div>
-      </div>
-    </section>
-
-    <div class="mapControlBar" data-map-controls>
-      <span class="mapCtrlLabel">Scroll / drag to zoom · double-click to reset</span>
-    </div>
-  </section>
-
-  <!-- FULL-WIDTH: Who is winning the redistricting war? -->
-  <section class="card oddsCard redistWarCard" aria-label="Redistricting war chart">
-    <div class="oddsHead">
-      <div>
-        <div class="oddsTitle">Who is winning the redistricting war?</div>
-        <div class="panelSub" style="margin-top:2px;">Net R seat gain from mid-decade redistricting, by state effective date</div>
-      </div>
-      <div class="chartTabs">
-        <button class="chartTab active" data-redist-chart-tab="prob">Gain Probability</button>
-        <button class="chartTab" data-redist-chart-tab="seats">Gain Number</button>
-      </div>
-    </div>
-    <div class="oddsChartWrap">
-      <svg class="comboSvg" data-redist-war-svg></svg>
-      <div class="oddsStatus" data-redist-war-status></div>
-    </div>
-  </section>
-
+  </div>
 </div>
 
 <style>
-  /* Redistricting page: 2-column grid; war chart spans both columns. */
-  @media (min-width: 980px){
-    #redistrictingPage.triGrid{
-      grid-template-columns: 1fr 1fr !important;
-      max-width: 1500px !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-    #redistrictingPage .redistWarCard{
-      grid-column: 1 / -1;
-    }
-  }
-  #redistrictingPage .mapSvg{
-    cursor: grab;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 360px !important;
-    display: block;
-  }
-  #redistrictingPage .mapSvg:active{ cursor: grabbing; }
-  #redistrictingPage .mapCard{ flex:1; min-height:0; }
-  #redistrictingPage .mapGrid,
-  #redistrictingPage .mapStage{ height:100% !important; min-height:360px !important; }
-  #redistrictingPage .district{
-    stroke: rgba(17,24,39,0.35);
-    stroke-width: 0.4;
-    vector-effect: non-scaling-stroke;
-    transition: fill 0.15s;
-    cursor: pointer;
-  }
-  #redistrictingPage .district.hovered{
-    stroke: var(--ink);
-    stroke-width: 1.2;
-  }
-  #redistrictingPage .redistWarCard .oddsChartWrap{
-    min-height: 240px;
-  }
-  #redistrictingPage .redistWarCard svg.comboSvg{
+  /* ----- Florida Redistricting page ----- */
+  #flRedistrictingPage{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 4px;
+    flex: none;
+    max-width: 1500px;
+    margin: 0 auto;
     width: 100%;
-    height: 240px;
-    display: block;
   }
-  #redistrictingPage .oddsStatus{
+  #flRedistrictingPage .flrGrid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  @media (max-width: 1100px){
+    #flRedistrictingPage .flrGrid{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 600px){
+    #flRedistrictingPage .flrGrid{
+      grid-template-columns: 1fr;
+    }
+  }
+  #flRedistrictingPage .flrCard{
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--ink, #0a0e1a);
+    box-shadow: 4px 4px 0 var(--ink, #0a0e1a);
+    border-radius: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+  }
+  #flRedistrictingPage .flrHeader{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    border-bottom: 1px solid var(--line, rgba(0,0,0,0.1));
+    padding-bottom: 8px;
+  }
+  #flRedistrictingPage .flrTitle{
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--ink, #0a0e1a);
+    letter-spacing: -0.01em;
+  }
+  #flRedistrictingPage .flrSub{
+    font-size: 10px;
+    color: var(--muted, #6b7280);
+    margin-top: 2px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  #flRedistrictingPage .flrPills{
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  #flRedistrictingPage .flrPills .metricPill{
+    padding: 2px 6px;
     font-size: 11px;
-    color: var(--muted);
-    padding: 6px 10px 2px;
     font-variant-numeric: tabular-nums;
   }
-  /* Riso look: flat fills, offset shadow on cards is handled by global .card styles */
-  html[data-look="riso"] #redistrictingPage .district{
+
+  /* Sliders */
+  #flRedistrictingPage .flrSliders{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 0;
+  }
+  #flRedistrictingPage .flrSliderRow{
+    display: grid;
+    grid-template-columns: 44px 1fr 38px;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+  }
+  #flRedistrictingPage .flrSliderRow.flrHispRow{
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px dashed var(--line, rgba(0,0,0,0.1));
+  }
+  #flRedistrictingPage .flrSliderLbl{
+    font-weight: 800;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+  #flRedistrictingPage .flrSliderLbl.d{ color: var(--blue, #1e40af); }
+  #flRedistrictingPage .flrSliderLbl.r{ color: var(--red, #b91c1c); }
+  #flRedistrictingPage .flrSliderVal{
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--ink, #0a0e1a);
+    text-align: right;
+  }
+  #flRedistrictingPage input[type="range"]{
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    background: var(--line, rgba(0,0,0,0.15));
+    border-radius: 2px;
+    outline: none;
+  }
+  #flRedistrictingPage input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ink, #0a0e1a);
+    cursor: pointer;
+    border: 2px solid #fff;
+  }
+  #flRedistrictingPage input[type="range"]::-moz-range-thumb{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ink, #0a0e1a);
+    cursor: pointer;
+    border: 2px solid #fff;
+  }
+
+  /* Seats + histogram */
+  #flRedistrictingPage .flrSeats{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 0 4px;
+  }
+  #flRedistrictingPage .flrSeatNums{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  #flRedistrictingPage .flrSeatLabel{
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  #flRedistrictingPage .flrSeatLabel.d{ color: var(--blue, #1e40af); }
+  #flRedistrictingPage .flrSeatLabel.r{ color: var(--red, #b91c1c); }
+  #flRedistrictingPage .flrSeatNum{
+    font-size: 22px;
+    font-weight: 800;
+  }
+  #flRedistrictingPage .flrSeatNum.d{ color: var(--blue, #1e40af); }
+  #flRedistrictingPage .flrSeatNum.r{ color: var(--red, #b91c1c); }
+  #flRedistrictingPage .flrSeatDivider{
+    width: 1px;
+    height: 20px;
+    background: var(--line, rgba(0,0,0,0.15));
+  }
+  #flRedistrictingPage .flrSimCanvas{
+    width: 100%;
+    height: 38px;
+    display: block;
+  }
+
+  /* Map */
+  #flRedistrictingPage .flrMapWrap{
+    flex: 1;
+    min-height: 240px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background: var(--card-bg-soft, #fafafa);
+    border: 1px solid var(--line, rgba(0,0,0,0.1));
+  }
+  #flRedistrictingPage .flrMap{
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    cursor: default;
+    display: block;
+  }
+  #flRedistrictingPage .district{
+    stroke: var(--ink, #0a0e1a);
+    stroke-width: 0.6;
+    transition: stroke-width 0.1s ease;
+  }
+  #flRedistrictingPage .district.hovered{
+    stroke-width: 1.6;
+  }
+  html[data-look="riso"] #flRedistrictingPage .district{
     stroke: var(--ink);
     stroke-width: 0.5;
   }
 </style>
+
 
 </div>
 
@@ -4276,7 +4456,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
 <script src="state-legs.js?v=12a"></script>
-<script src="redistricting.js?v=8"></script>
+<script src="fl_redistricting.js?v=1"></script>
 
 
 <script>
