@@ -49,12 +49,14 @@ const REDIST_DATA = {
 // FL geojson cache (one file used for both eras until separate "before" data exists)
 let REDIST_FL_GEOJSON = null;
 
-// FL projection — d3.geoAlbersUsa scaled to roughly match the existing SVGs'
-// coordinate space. Auto-fit handles final framing; these just need to put FL
-// somewhere in the southeast region of the projected canvas. If FL ends up
-// overlapping with TX, bump FL_PROJ_SCALE down or shift FL_PROJ_TRANSLATE east.
-const FL_PROJ_SCALE = 2200;
-const FL_PROJ_TRANSLATE = [950, 590];
+// FL placement within the existing imported-states bbox (relative coords).
+// southeast quadrant — under NC, east of TX. Tunable if it overlaps anything.
+const FL_PLACEMENT = {
+  xFrac: 0.80,   // left edge as fraction of imported-content bbox width
+  yFrac: 0.62,   // top edge as fraction of imported-content bbox height
+  wFrac: 0.16,   // FL footprint width fraction
+  hFrac: 0.18,   // FL footprint height fraction
+};
 
 let REDIST_INITED = false;        // rendered once flag
 let REDIST_LOADED = false;        // data loaded flag
@@ -395,14 +397,39 @@ function redistCodeFromDataName(dn){
 
 /* Inject FL geojson features as <path> children of gRoot, matching the
    data-name + data-did + class structure of the imported SVG paths so the
-   rest of the system (tooltip, recolor, hover) treats them identically. */
+   rest of the system (tooltip, recolor, hover) treats them identically.
+
+   Uses d3.geoIdentity().reflectY(true).fitExtent — NOT d3.geoAlbersUsa.
+   Spherical projections like AlbersUsa do CCW-vs-CW winding inference, and
+   when a geojson source has inverted ring winding (extremely common — most
+   GIS exports get this wrong), d3.geoPath fills the COMPLEMENT of the
+   polygon, producing a giant square covering the whole canvas. geoIdentity
+   treats coords as planar so it doesn't care about winding; reflectY flips
+   geographic Y (north=up) to SVG Y (down=positive); fitExtent scales/
+   translates the data into a target rectangle, no manual scale/translate
+   tuning needed. */
 function redistInjectFLDistricts(era, gRoot){
   if (!REDIST_FL_GEOJSON || !REDIST_FL_GEOJSON.features) return 0;
-  if (typeof d3 === "undefined" || !d3.geoAlbersUsa) return 0;
+  if (typeof d3 === "undefined" || !d3.geoIdentity) return 0;
 
-  const projection = d3.geoAlbersUsa()
-    .scale(FL_PROJ_SCALE)
-    .translate(FL_PROJ_TRANSLATE);
+  // Measure where the imported state groups landed so FL is anchored
+  // relative to them (works regardless of source SVG viewBox).
+  let bb;
+  try {
+    bb = gRoot.node().getBBox();
+  } catch(e){ bb = null; }
+  if (!bb || bb.width <= 0 || bb.height <= 0){
+    bb = { x: 0, y: 0, width: 1900, height: 1180 };
+  }
+
+  const flX0 = bb.x + bb.width  * FL_PLACEMENT.xFrac;
+  const flY0 = bb.y + bb.height * FL_PLACEMENT.yFrac;
+  const flX1 = flX0 + bb.width  * FL_PLACEMENT.wFrac;
+  const flY1 = flY0 + bb.height * FL_PLACEMENT.hFrac;
+
+  const projection = d3.geoIdentity()
+    .reflectY(true)
+    .fitExtent([[flX0, flY0], [flX1, flY1]], REDIST_FL_GEOJSON);
   const path = d3.geoPath(projection);
 
   // FL districts go in their own <g> so they're easy to identify in DevTools.
