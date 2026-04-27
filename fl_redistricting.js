@@ -373,29 +373,81 @@ function flWireSwingCard(cardKey){
     hispR:  cardEl.querySelector("[data-val-hisp-r]"),
   };
 
+  // Inject section headers so the user knows the D/R sliders apply to the
+  // national generic ballot (not Florida-specific) — and the Hispanic pair
+  // controls the national Hispanic vote share. Idempotent: only injects on
+  // first wire-up (when [data-flr-section-hdr] is absent).
+  if (inputs.gbD && !cardEl.querySelector("[data-flr-section-hdr]")){
+    const gbHeader = document.createElement("div");
+    gbHeader.className = "flrSliderSection";
+    gbHeader.setAttribute("data-flr-section-hdr", "gb");
+    gbHeader.textContent = "National generic ballot";
+    inputs.gbD.closest(".flrSliderRow").before(gbHeader);
+
+    const hispRow = cardEl.querySelector(".flrHispRow");
+    if (hispRow){
+      const hispHeader = document.createElement("div");
+      hispHeader.className = "flrSliderSection";
+      hispHeader.setAttribute("data-flr-section-hdr", "hisp");
+      hispHeader.textContent = "National Hispanic vote";
+      hispRow.before(hispHeader);
+    }
+  }
+
+  // Frozen pair-sums establish the coupling: moving D inversely moves R, so
+  // D + R stays constant within each pair. Initial state: D + R as configured
+  // (defaults to 48.3 + 49.8 = 98.1 for GB, 52 + 46 = 98 for Hispanic — the
+  // small remainder represents third-party / undecided support).
+  const sumGB   = c.gbD + c.gbR;
+  const sumHisp = c.hispD + c.hispR;
+
   flSetSliderUI(inputs.gbD,   vals.gbD,   c.gbD);
   flSetSliderUI(inputs.gbR,   vals.gbR,   c.gbR);
   flSetSliderUI(inputs.hispD, vals.hispD, c.hispD, v=>(+v).toFixed(0));
   flSetSliderUI(inputs.hispR, vals.hispR, c.hispR, v=>(+v).toFixed(0));
 
+  // Helper to enforce slider min/max when computing the partner's value
+  function clampToRange(input, v){
+    if (!input) return v;
+    const lo = parseFloat(input.min), hi = parseFloat(input.max);
+    if (isFinite(lo) && v < lo) return lo;
+    if (isFinite(hi) && v > hi) return hi;
+    return v;
+  }
+
+  // GB pair: D moved → R = sumGB - D; R moved → D = sumGB - R
   if (inputs.gbD) inputs.gbD.addEventListener("input", ()=>{
     c.gbD = parseFloat(inputs.gbD.value);
+    c.gbR = clampToRange(inputs.gbR, sumGB - c.gbD);
     if (vals.gbD) vals.gbD.textContent = c.gbD.toFixed(1);
+    if (inputs.gbR) inputs.gbR.value = c.gbR;
+    if (vals.gbR) vals.gbR.textContent = c.gbR.toFixed(1);
     flRenderCard(cardKey);
   });
   if (inputs.gbR) inputs.gbR.addEventListener("input", ()=>{
     c.gbR = parseFloat(inputs.gbR.value);
+    c.gbD = clampToRange(inputs.gbD, sumGB - c.gbR);
     if (vals.gbR) vals.gbR.textContent = c.gbR.toFixed(1);
+    if (inputs.gbD) inputs.gbD.value = c.gbD;
+    if (vals.gbD) vals.gbD.textContent = c.gbD.toFixed(1);
     flRenderCard(cardKey);
   });
+
+  // Hispanic GB pair: same coupling, integer step
   if (inputs.hispD) inputs.hispD.addEventListener("input", ()=>{
     c.hispD = parseFloat(inputs.hispD.value);
+    c.hispR = clampToRange(inputs.hispR, sumHisp - c.hispD);
     if (vals.hispD) vals.hispD.textContent = c.hispD.toFixed(0);
+    if (inputs.hispR) inputs.hispR.value = c.hispR;
+    if (vals.hispR) vals.hispR.textContent = c.hispR.toFixed(0);
     flRenderCard(cardKey);
   });
   if (inputs.hispR) inputs.hispR.addEventListener("input", ()=>{
     c.hispR = parseFloat(inputs.hispR.value);
+    c.hispD = clampToRange(inputs.hispD, sumHisp - c.hispR);
     if (vals.hispR) vals.hispR.textContent = c.hispR.toFixed(0);
+    if (inputs.hispD) inputs.hispD.value = c.hispD;
+    if (vals.hispD) vals.hispD.textContent = c.hispD.toFixed(0);
     flRenderCard(cardKey);
   });
 }

@@ -4320,6 +4320,24 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     gap: 4px;
     padding: 4px 0;
   }
+  #flRedistrictingPage .flrSliderSection{
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted, #6b7280);
+    padding: 2px 0 0;
+  }
+  #flRedistrictingPage .flrSliderSection + .flrSliderRow{
+    margin-top: 0;
+  }
+  /* Hispanic header gets the dashed top divider that previously sat on the
+     first hispanic slider row; remove it from the row itself. */
+  #flRedistrictingPage .flrSliderSection[data-flr-section-hdr="hisp"]{
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--line, rgba(0,0,0,0.1));
+  }
   #flRedistrictingPage .flrSliderRow{
     display: grid;
     grid-template-columns: 44px 1fr 38px;
@@ -4328,9 +4346,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     font-size: 11px;
   }
   #flRedistrictingPage .flrSliderRow.flrHispRow{
-    margin-top: 4px;
-    padding-top: 4px;
-    border-top: 1px dashed var(--line, rgba(0,0,0,0.1));
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
   }
   #flRedistrictingPage .flrSliderLbl{
     font-weight: 800;
@@ -4456,7 +4474,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 <script src="swingometer.js?v=1"></script>
 <script src="past-elections.js?v=1"></script>
 <script src="state-legs.js?v=12a"></script>
-<script src="fl_redistricting.js?v=1"></script>
+<script src="fl_redistricting.js?v=3"></script>
 
 
 <script>
