@@ -395,44 +395,43 @@ function redistCodeFromDataName(dn){
   return `${m[1].toUpperCase()}-${String(parseInt(m[2],10)).padStart(2,"0")}`;
 }
 
+/* Parse "minX minY width height" viewBox string into [x,y,w,h] tuple.
+   Falls back to [0,0,1900,1180] for missing/malformed input. */
+function redistParseViewBox(vbStr){
+  if (!vbStr) return [0, 0, 1900, 1180];
+  const parts = String(vbStr).trim().split(/[\s,]+/).map(parseFloat);
+  if (parts.length !== 4 || parts.some(n => !isFinite(n)) || parts[2] <= 0 || parts[3] <= 0){
+    return [0, 0, 1900, 1180];
+  }
+  return parts;
+}
+
 /* Inject FL geojson features as <path> children of gRoot, matching the
    data-name + data-did + class structure of the imported SVG paths so the
    rest of the system (tooltip, recolor, hover) treats them identically.
 
-   Uses d3.geoIdentity().reflectY(true).fitExtent — NOT d3.geoAlbersUsa.
-   Spherical projections like AlbersUsa do CCW-vs-CW winding inference, and
-   when a geojson source has inverted ring winding (extremely common — most
-   GIS exports get this wrong), d3.geoPath fills the COMPLEMENT of the
-   polygon, producing a giant square covering the whole canvas. geoIdentity
-   treats coords as planar so it doesn't care about winding; reflectY flips
-   geographic Y (north=up) to SVG Y (down=positive); fitExtent scales/
-   translates the data into a target rectangle, no manual scale/translate
-   tuning needed. */
-function redistInjectFLDistricts(era, gRoot){
+   Uses d3.geoIdentity().reflectY(true).fitExtent — NOT d3.geoAlbersUsa —
+   to avoid the spherical-projection winding-order bug that produces a
+   giant filled square when geojson rings are wound the "wrong" way.
+
+   Placement is anchored to the source SVG's parsed viewBox tuple
+   (not getBBox), so FL lands deterministically even while the page is
+   still display:none during init. */
+function redistInjectFLDistricts(era, gRoot, sourceVB){
   if (!REDIST_FL_GEOJSON || !REDIST_FL_GEOJSON.features) return 0;
   if (typeof d3 === "undefined" || !d3.geoIdentity) return 0;
 
-  // Measure where the imported state groups landed so FL is anchored
-  // relative to them (works regardless of source SVG viewBox).
-  let bb;
-  try {
-    bb = gRoot.node().getBBox();
-  } catch(e){ bb = null; }
-  if (!bb || bb.width <= 0 || bb.height <= 0){
-    bb = { x: 0, y: 0, width: 1900, height: 1180 };
-  }
-
-  const flX0 = bb.x + bb.width  * FL_PLACEMENT.xFrac;
-  const flY0 = bb.y + bb.height * FL_PLACEMENT.yFrac;
-  const flX1 = flX0 + bb.width  * FL_PLACEMENT.wFrac;
-  const flY1 = flY0 + bb.height * FL_PLACEMENT.hFrac;
+  const [vbX, vbY, vbW, vbH] = sourceVB;
+  const flX0 = vbX + vbW * FL_PLACEMENT.xFrac;
+  const flY0 = vbY + vbH * FL_PLACEMENT.yFrac;
+  const flX1 = flX0 + vbW * FL_PLACEMENT.wFrac;
+  const flY1 = flY0 + vbH * FL_PLACEMENT.hFrac;
 
   const projection = d3.geoIdentity()
     .reflectY(true)
     .fitExtent([[flX0, flY0], [flX1, flY1]], REDIST_FL_GEOJSON);
   const path = d3.geoPath(projection);
 
-  // FL districts go in their own <g> so they're easy to identify in DevTools.
   const flG = gRoot.append("g").attr("id", `fl-${era}`).attr("class", "flDistricts");
   let n = 0;
   for (const feat of REDIST_FL_GEOJSON.features){
@@ -457,29 +456,55 @@ function redistInitMap(era){
   const ui = REDIST_UI;
   if (!ui) return;
   const col = ui.cols[era];
-  if (!col?.svgEl || !REDIST_SVG_TEXT[era]) return;
+  if (!col?.svgEl) return;
 
   const svgHost = d3.select(col.svgEl);
   svgHost.selectAll("*").remove();
 
-  // Source SVG viewBox is preserved as an INITIAL hint; auto-fit overrides later.
-  const doc = new DOMParser().parseFromString(REDIST_SVG_TEXT[era], "image/svg+xml");
-  const srcSvg = doc.querySelector("svg");
-  if (!srcSvg) return;
-  const vb = srcSvg.getAttribute("viewBox") || "0 0 1900 1180";
-  svgHost.attr("viewBox", vb);
+  // Parse source viewBox up front — we need it both as an initial display hint
+  // AND as the coordinate frame for FL placement. Falls back to a sane default
+  // if the source SVG is missing or malformed.
+  let srcSvg = null;
+  if (REDIST_SVG_TEXT[era]){
+    const doc = new DOMParser().parseFromString(REDIST_SVG_TEXT[era], "image/svg+xml");
+    srcSvg = doc.querySelector("svg");
+    if (!srcSvg){
+      console.warn(`${era} source SVG: parse failed or no <svg> element — proceeding with FL only`);
+    }
+  } else {
+    console.warn(`${era} source SVG not loaded — proceeding with FL only`);
+  }
+  const vbStr = (srcSvg && srcSvg.getAttribute("viewBox")) || "0 0 1900 1180";
+  const sourceVB = redistParseViewBox(vbStr);
+  svgHost.attr("viewBox", vbStr);
 
   // Zoom wrapper
   const gZoom = svgHost.append("g").attr("class","redistZoomG");
   const gRoot = gZoom.append("g");
 
-  // Import all state <g> groups from the source SVG (CA, MO, NC, TX, UT, VA)
-  srcSvg.querySelectorAll("g[id]").forEach(g => {
-    const imported = document.importNode(g, true);
-    gRoot.node().appendChild(imported);
-  });
+  // Import state content. Try <g id="..."> wrappers first (the common case);
+  // fall back to standalone <path data-name="..."> at root if the SVG doesn't
+  // use group wrappers.
+  let importedNodes = 0;
+  if (srcSvg){
+    const groups = srcSvg.querySelectorAll("g[id]");
+    if (groups.length){
+      groups.forEach(g => {
+        gRoot.node().appendChild(document.importNode(g, true));
+        importedNodes++;
+      });
+    } else {
+      const paths = srcSvg.querySelectorAll("path[data-name]");
+      paths.forEach(p => {
+        gRoot.node().appendChild(document.importNode(p, true));
+        importedNodes++;
+      });
+    }
+  }
+  console.log(`${era} source SVG: imported ${importedNodes} top-level nodes`);
 
   // Tag SVG-imported district paths
+  let taggedCount = 0;
   gRoot.selectAll("path").each(function(){
     const dn = this.getAttribute("data-name") || "";
     const code = redistCodeFromDataName(dn);
@@ -488,10 +513,12 @@ function redistInitMap(era){
     this.setAttribute("data-did", code);
     this.classList.add("district","active");
     try{ this.style.fill = ""; }catch(e){}
+    taggedCount++;
   });
+  console.log(`${era} source SVG: tagged ${taggedCount} district paths`);
 
-  // Layer in FL geojson districts
-  const flN = redistInjectFLDistricts(era, gRoot);
+  // Layer in FL geojson districts (using parsed source viewBox, not getBBox)
+  const flN = redistInjectFLDistricts(era, gRoot, sourceVB);
   if (flN) console.log(`FL districts injected into ${era} map: ${flN}`);
 
   // Hover tooltips
@@ -523,40 +550,27 @@ function redistInitMap(era){
   REDIST_MAP[era] = { svg: svgHost, gRoot, gZoom, zoom };
 }
 
-/* ---------- Visual fix: unified viewBox auto-fit ----------
-   Source SVGs for 2024 and 2026 don't share a common viewBox (which is why the
-   maps were clipping CA/UT in Before and squeezing VA at the top of After).
-   After both eras are populated, compute the union bbox of all rendered paths
-   and apply ONE viewBox to both SVGs so they're visually directly comparable. */
+/* ---------- Visual fix: per-era viewBox auto-fit ----------
+   Each era's SVG fits to its OWN content bbox. The previous union-across-eras
+   approach broke when the two source SVGs had different coordinate spaces
+   (the union viewBox was much wider than either era's content, leaving
+   one or both maps with most of the content offscreen or tiny). Side-by-side
+   comparability is carried by the seat counts above the maps; pixel-aligning
+   the maps was a nice-to-have that was actively breaking things. */
 function redistFitViewBoxes(){
-  const eras = ["2024","2026"];
-  const maps = eras.map(e => REDIST_MAP[e]).filter(m => m && m.gRoot);
-  if (!maps.length) return;
-
-  const bboxes = [];
-  for (const m of maps){
+  for (const era of ["2024","2026"]){
+    const m = REDIST_MAP[era];
+    if (!m || !m.gRoot) continue;
+    let bb;
     try {
-      const bb = m.gRoot.node().getBBox();
-      if (bb && bb.width > 0 && bb.height > 0){
-        bboxes.push(bb);
-      }
-    } catch(e){ /* SVG not laid out yet */ }
-  }
-  if (!bboxes.length) return;
+      bb = m.gRoot.node().getBBox();
+    } catch(e){ bb = null; }
+    if (!bb || bb.width <= 0 || bb.height <= 0) continue;
 
-  const minX = Math.min(...bboxes.map(b => b.x));
-  const minY = Math.min(...bboxes.map(b => b.y));
-  const maxX = Math.max(...bboxes.map(b => b.x + b.width));
-  const maxY = Math.max(...bboxes.map(b => b.y + b.height));
-
-  const w = maxX - minX, h = maxY - minY;
-  const padX = w * 0.025, padY = h * 0.025;
-
-  const vb = `${(minX - padX).toFixed(1)} ${(minY - padY).toFixed(1)} ${(w + 2*padX).toFixed(1)} ${(h + 2*padY).toFixed(1)}`;
-
-  for (const m of maps){
+    const padX = bb.width * 0.025;
+    const padY = bb.height * 0.025;
+    const vb = `${(bb.x - padX).toFixed(1)} ${(bb.y - padY).toFixed(1)} ${(bb.width + 2*padX).toFixed(1)} ${(bb.height + 2*padY).toFixed(1)}`;
     m.svg.attr("viewBox", vb);
-    // Reset any active zoom transform so the new viewBox shows everything
     if (m.zoom) m.svg.call(m.zoom.transform, d3.zoomIdentity);
   }
 }
