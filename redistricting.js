@@ -566,6 +566,16 @@ function redistInitMap(era){
   const flN = redistInjectFLDistricts(era, gRoot, sourceVB);
   if (flN) console.log(`FL districts injected into ${era} map: ${flN}`);
 
+  // Aggressive prune: gRoot now contains exactly the district geometry we
+  // want to see. Source SVGs sometimes ship with invisible <rect> backgrounds,
+  // decorative paths, or elements with extreme coordinates that, if left in,
+  // dominate gRoot.getBBox() and push the actual districts into a tiny corner.
+  // We strip everything that isn't a tagged district path. State group
+  // transforms are preserved (they're on the parent <g>, not the paths).
+  gRoot.selectAll("path:not([data-did])").remove();
+  gRoot.selectAll("rect, circle, ellipse, polygon, polyline, line, text, image, defs, style, use, symbol").remove();
+  console.log(`${era}: ${gRoot.selectAll("path").size()} paths remain after prune`);
+
   // Hover tooltips
   gRoot.selectAll("path.district.active")
     .on("mouseenter", (event)=>{
@@ -603,82 +613,35 @@ function redistInitMap(era){
   try { redistFitViewBoxes(); } catch(e){ console.warn(`${era} initial fit failed:`, e); }
 }
 
-/* ---------- Visual fix: per-era viewBox auto-fit ----------
+/* ---------- Per-era viewBox auto-fit ----------
    Each era's SVG fits to its OWN content bbox.
 
-   IMPORTANT: bbox is computed over ONLY tagged district paths (those with a
-   `data-did` attribute), NOT the entire gRoot. Source SVGs sometimes contain
-   stray elements — invisible background rects, decorative marks, paths with
-   extreme out-of-frame coordinates — that, if included via gRoot.getBBox(),
-   blow up the bbox and shove the actual map content into a tiny corner.
-
-   Each tagged path's local bbox is multiplied by its CTM (transform from
-   local coords to the SVG's user space, accounting for any transform
-   chain through ancestor groups), and we union the resulting corner
-   points. The union rectangle becomes the SVG's viewBox. */
+   gRoot has been pruned in redistInitMap to contain exactly the tagged
+   district paths (no stray rects, decorative elements, or out-of-frame
+   geometry). So a plain gRoot.getBBox() gives the clean union bbox in
+   gRoot's local user-space — which is what the SVG's viewBox attribute
+   needs. No CTM math required. */
 function redistFitViewBoxes(){
   for (const era of ["2024","2026"]){
     const m = REDIST_MAP[era];
     if (!m || !m.gRoot) continue;
 
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-    let cnt = 0;
-
-    m.gRoot.selectAll("path[data-did]").each(function(){
-      let lb;
-      try { lb = this.getBBox(); } catch(e){ return; }
-      if (!lb || lb.width <= 0 || lb.height <= 0) return;
-
-      let ctm = null;
-      try { ctm = this.getCTM(); } catch(e){ ctm = null; }
-
-      const corners = ctm ? [
-        new DOMPoint(lb.x, lb.y).matrixTransform(ctm),
-        new DOMPoint(lb.x + lb.width, lb.y).matrixTransform(ctm),
-        new DOMPoint(lb.x + lb.width, lb.y + lb.height).matrixTransform(ctm),
-        new DOMPoint(lb.x, lb.y + lb.height).matrixTransform(ctm),
-      ] : [
-        { x: lb.x, y: lb.y },
-        { x: lb.x + lb.width, y: lb.y },
-        { x: lb.x + lb.width, y: lb.y + lb.height },
-        { x: lb.x, y: lb.y + lb.height },
-      ];
-
-      for (const c of corners){
-        if (c.x < minX) minX = c.x;
-        if (c.y < minY) minY = c.y;
-        if (c.x > maxX) maxX = c.x;
-        if (c.y > maxY) maxY = c.y;
-      }
-      cnt++;
-    });
-
-    // Fallback: if no tagged paths produced a bbox, try gRoot
-    if (cnt === 0 || !isFinite(minX)){
-      try {
-        const gbb = m.gRoot.node().getBBox();
-        if (gbb && gbb.width > 0 && gbb.height > 0){
-          minX = gbb.x; minY = gbb.y;
-          maxX = gbb.x + gbb.width; maxY = gbb.y + gbb.height;
-        } else {
-          console.warn(`${era} fit: no tagged paths AND gRoot bbox empty — skipping`);
-          continue;
-        }
-      } catch(e){
-        console.warn(`${era} fit: getBBox failed`, e);
-        continue;
-      }
+    // Reset zoom transform first so user pan/zoom doesn\'t poison the bbox
+    if (m.zoom){
+      try { m.svg.call(m.zoom.transform, d3.zoomIdentity); } catch(e){}
     }
 
-    const w = maxX - minX, h = maxY - minY;
-    if (w <= 0 || h <= 0) continue;
+    let bb;
+    try { bb = m.gRoot.node().getBBox(); } catch(e){ bb = null; }
+    if (!bb || bb.width <= 0 || bb.height <= 0){
+      console.warn(`${era} fit: gRoot bbox empty \u2014 skipping`);
+      continue;
+    }
 
-    const padX = w * 0.025, padY = h * 0.025;
-    const vb = `${(minX - padX).toFixed(1)} ${(minY - padY).toFixed(1)} ${(w + 2*padX).toFixed(1)} ${(h + 2*padY).toFixed(1)}`;
+    const padX = bb.width * 0.025, padY = bb.height * 0.025;
+    const vb = `${(bb.x - padX).toFixed(1)} ${(bb.y - padY).toFixed(1)} ${(bb.width + 2*padX).toFixed(1)} ${(bb.height + 2*padY).toFixed(1)}`;
     m.svg.attr("viewBox", vb);
-    if (m.zoom) m.svg.call(m.zoom.transform, d3.zoomIdentity);
-
-    console.log(`${era} fit: ${cnt} tagged paths, viewBox=${vb}`);
+    console.log(`${era} fit: viewBox=${vb}`);
   }
 }
 
