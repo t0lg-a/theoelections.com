@@ -1,0 +1,42 @@
+name: "Compute Odds"
+
+on:
+  workflow_run:
+    workflows: ["Fetch Polls"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compute-odds:
+    runs-on: ubuntu-latest
+    # Only run if the upstream Fetch Polls workflow succeeded.
+    # workflow_dispatch passes through with conclusion == null.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Pull latest including the commit Fetch Polls just pushed
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
+          fetch-depth: 1
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build county ratios
+        run: node js/build_county_ratios.js
+
+      - name: Compute MC seat odds
+        run: node js/compute_odds.js
+
+      - name: Save changes
+        run: |
+          git config user.name "Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add json/county_ratios.json json/senate_odds.json json/governor_odds.json json/house_odds.json
+          git commit -m "Update odds $(date -u +%Y-%m-%d\ %H:%M)" || exit 0
+          git push
