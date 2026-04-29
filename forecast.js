@@ -624,8 +624,15 @@ function calcLastNPollsSeries(gbPolls, targetW){
   return out;
 }
 
-/* ---------- Generic ballot pollster allowlist (Strict Allowlist) ---------- */
-const AP=[{label:"YouGov",pattern:/yougov/},{label:"Verasight",pattern:/verasight/},{label:"Ipsos",pattern:/ipsos/},{label:"ARG",pattern:/americanresearchgroup|arg\b/},{label:"TIPP",pattern:/tipp/},{label:"Emerson",pattern:/emerson/},{label:"Gallup",pattern:/gallup/},{label:"Marist",pattern:/marist/},{label:"Quinnipiac",pattern:/quinnipiac/},{label:"AP-NORC",pattern:/apnorc|ap\-norc|norc/},{label:"Marquette",pattern:/marquette/},{label:"CNN/SSRS",pattern:/cnnssrs|cnn\/ssrs|ssrs/},{label:"AtlasIntel",pattern:/atlasintel|atlas/},{label:"Beacon/Shaw",pattern:/beaconresearch|shaw/},{label:"Hart/POS",pattern:/hartresearch|publicopinionstrategies/},{label:"Pew",pattern:/pewresearch|pew/},{label:"SurveyMonkey",pattern:/surveymonkey/},{label:"Leger",pattern:/leger/},{label:"UMass",pattern:/massachusetts|umass|departmentofpoliticalscience/},{label:"NYT/Siena",pattern:/siena|newyorktimes/},{label:"Fox News",pattern:/foxnews/},{label:"WSJ",pattern:/wallstreetjournal|wsj/}];
+/* ---------- Pollster allowlists (flat 1.0 weights, no tiers) ---------- */
+// Generic ballot allowlist: 20 pollsters. No YouGov, no Ipsos.
+const GB_AP=[{label:"Verasight",pattern:/verasight/},{label:"ARG",pattern:/americanresearchgroup|arg\b/},{label:"TIPP",pattern:/tipp/},{label:"Emerson",pattern:/emerson/},{label:"Gallup",pattern:/gallup/},{label:"Marist",pattern:/marist/},{label:"Quinnipiac",pattern:/quinnipiac/},{label:"AP-NORC",pattern:/apnorc|ap\-norc|norc/},{label:"Marquette",pattern:/marquette/},{label:"CNN/SSRS",pattern:/cnnssrs|cnn\/ssrs|ssrs/},{label:"AtlasIntel",pattern:/atlasintel|atlas/},{label:"Beacon/Shaw",pattern:/beaconresearch|shaw/},{label:"Hart/POS",pattern:/hartresearch|publicopinionstrategies/},{label:"Pew",pattern:/pewresearch|pew/},{label:"SurveyMonkey",pattern:/surveymonkey/},{label:"Leger",pattern:/leger/},{label:"UMass",pattern:/massachusetts|umass|departmentofpoliticalscience/},{label:"NYT/Siena",pattern:/siena|newyorktimes/},{label:"Fox News",pattern:/foxnews/},{label:"WSJ",pattern:/wallstreetjournal|wsj/}];
+
+// Approval allowlist: 22 pollsters. Adds YouGov + Ipsos on top of GB list.
+const APPROVAL_AP=[{label:"YouGov",pattern:/yougov/},{label:"Verasight",pattern:/verasight/},{label:"Ipsos",pattern:/ipsos/},{label:"ARG",pattern:/americanresearchgroup|arg\b/},{label:"TIPP",pattern:/tipp/},{label:"Emerson",pattern:/emerson/},{label:"Gallup",pattern:/gallup/},{label:"Marist",pattern:/marist/},{label:"Quinnipiac",pattern:/quinnipiac/},{label:"AP-NORC",pattern:/apnorc|ap\-norc|norc/},{label:"Marquette",pattern:/marquette/},{label:"CNN/SSRS",pattern:/cnnssrs|cnn\/ssrs|ssrs/},{label:"AtlasIntel",pattern:/atlasintel|atlas/},{label:"Beacon/Shaw",pattern:/beaconresearch|shaw/},{label:"Hart/POS",pattern:/hartresearch|publicopinionstrategies/},{label:"Pew",pattern:/pewresearch|pew/},{label:"SurveyMonkey",pattern:/surveymonkey/},{label:"Leger",pattern:/leger/},{label:"UMass",pattern:/massachusetts|umass|departmentofpoliticalscience/},{label:"NYT/Siena",pattern:/siena|newyorktimes/},{label:"Fox News",pattern:/foxnews/},{label:"WSJ",pattern:/wallstreetjournal|wsj/}];
+
+// Back-compat alias: anything still reading `AP` resolves to the GB allowlist.
+const AP = GB_AP;
 
 function normPollster(s){
   return String(s||"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"");
@@ -634,22 +641,20 @@ function isAllowedPollster(pollster, strict){
   if (!strict) return true;
   const n = normPollster(pollster);
   if (!n) return false;
-  return AP.some(x=>x.pattern.test(n));
+  return GB_AP.some(x=>x.pattern.test(n));
+}
+function isAllowedApprovalPollster(pollster){
+  const n = normPollster(pollster);
+  if (!n) return false;
+  return APPROVAL_AP.some(x=>x.pattern.test(n));
 }
 
-/* ---------- Pollster quality weights ---------- */
-const TIER_A_PAT = [/marquette/,/beaconresearch|shaw/,/echelon/,/hartresearch|publicopinionstrategies/,
-  /insideradvantage/,/marist/,/researchco/,/siena|newyorktimes/,/susquehanna/,
-  /eastcarolina/,/fabrizioimp/];
-const TIER_C_PAT = [/yougov/,/ipsos/];
+/* ---------- Generic ballot pollster weight (flat 1.0 allowlist) ---------- */
 function pollWeight(pollster){
-  if(!pollster) return 0.1;
+  if(!pollster) return 0;
   const n = normPollster(pollster);
-  if(!n) return 0.1;
-  if(TIER_A_PAT.some(p=>p.test(n))) return 1;
-  if(TIER_C_PAT.some(p=>p.test(n))) return 0.2;
-  if(AP.some(x=>x.pattern.test(n))) return 0.8;
-  return 0.1;
+  if(!n) return 0;
+  return GB_AP.some(x=>x.pattern.test(n)) ? 1 : 0;
 }
 
 function updateGbControlsMeta(){
