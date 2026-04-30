@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-29T21:17:11.064096Z",
+  "updatedAt": "2026-04-30T12:58:04.165Z",
   "approval": [
     {
       "id": "appdonyou99135acd",
@@ -114,23 +114,49 @@
       "subject": "Donald Trump"
     },
     {
-      "id": "appdtrumpemerson20260426",
+      "id": "appdoneme8f61c99a",
       "poll_type": "approval",
-      "sample_size": null,
+      "sample_size": 1000,
       "population": "lv",
-      "url": null,
-      "created_at": "2026-04-29",
+      "url": "https://docs.google.com/spreadsheets/d/1FsVoQjT-tHeejavmtPp3dWF2UpdwGBOe/edit?gid=148203681#gid=148203681",
+      "created_at": "2026-04-30",
       "start_date": "2026-04-24",
       "end_date": "2026-04-26",
       "pollster": "Emerson College",
       "answers": [
         {
           "choice": "Approve",
-          "pct": 40
+          "pct": 39.6
         },
         {
           "choice": "Disapprove",
-          "pct": 56
+          "pct": 55.9
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonthe111895cf",
+      "poll_type": "approval",
+      "sample_size": 1516,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/why-democrats-cant-win-more-trump",
+      "created_at": "2026-04-30",
+      "start_date": "2026-04-20",
+      "end_date": "2026-04-23",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 39
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 60
         }
       ],
       "seat_name": null,
@@ -330,12 +356,12 @@
       "subject": "Donald Trump"
     },
     {
-      "id": "appdtrumpleger20260420",
+      "id": "appdonlegb95852c7",
       "poll_type": "approval",
-      "sample_size": null,
-      "population": null,
-      "url": null,
-      "created_at": "2026-04-29",
+      "sample_size": 1004,
+      "population": "a",
+      "url": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/4.%20%C3%89M%20-%20Avril%202026/20260428%20-%20US%20Poll%20April%202026/US_POL_April_2026_338Canada_VF.pdf",
+      "created_at": "2026-04-30",
       "start_date": "2026-04-17",
       "end_date": "2026-04-20",
       "pollster": "Leger",
@@ -350,7 +376,10 @@
         }
       ],
       "seat_name": null,
-      "sponsors": [],
+      "sponsors": [
+        "338Canada",
+        "Maintenant Media"
+      ],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
@@ -10730,83 +10759,55 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
+    }
+  ],
+  "genericBallot": [
     {
-      "id": "appdonyougkrdhy3c",
-      "poll_type": "approval",
-      "sample_size": 1600,
+      "id": "gen202hara7z5ongq",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
       "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_o8LZals.pdf",
-      "created_at": "2025-03-26",
-      "start_date": "2025-03-22",
-      "end_date": "2025-03-25",
-      "pollster": "YouGov",
+      "url": "https://www.cnbc.com/video/2025/04/17/tariffs-weight-on-trump-approval-cnbc-survey-finds.html",
+      "created_at": "2025-04-17",
+      "start_date": "2025-04-09",
+      "end_date": "2025-04-13",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
       "answers": [
         {
-          "choice": "Approve",
+          "choice": "Dem",
           "pct": 48
         },
         {
-          "choice": "Disapprove",
+          "choice": "Rep",
           "pct": 46
         }
       ],
       "seat_name": null,
       "sponsors": [
-        "The Economist"
+        "CNBC"
       ],
       "internal": false,
       "partisan": null,
-      "subject": "Donald Trump"
+      "subject": "2026"
     },
     {
-      "id": "appdonyouyklhj5ni",
-      "poll_type": "approval",
-      "sample_size": 1440,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_o8LZals.pdf",
-      "created_at": "2025-03-26",
-      "start_date": "2025-03-22",
-      "end_date": "2025-03-25",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 48
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 50
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    }
-  ],
-  "genericBallot": [
-    {
-      "id": "gen2026emerson20260426",
+      "id": "gen202thebjaz89iw",
       "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": "lv",
-      "url": null,
-      "created_at": "2026-04-29",
-      "start_date": "2026-04-24",
-      "end_date": "2026-04-26",
-      "pollster": "Emerson College",
+      "sample_size": 913,
+      "population": "rv",
+      "url": "https://www.nytimes.com/interactive/2025/04/25/us/elections/times-siena-poll-crosstabs.html",
+      "created_at": "2025-04-25",
+      "start_date": "2025-04-21",
+      "end_date": "2025-04-24",
+      "pollster": "The New York Times/Siena College",
       "answers": [
         {
           "choice": "Dem",
-          "pct": 50
+          "pct": 47
         },
         {
           "choice": "Rep",
-          "pct": 40
+          "pct": 44
         }
       ],
       "seat_name": null,
@@ -10816,23 +10817,23 @@
       "subject": "2026"
     },
     {
-      "id": "gen202beab54fecf9",
+      "id": "gen202beaf9167992",
       "poll_type": "generic-ballot",
-      "sample_size": 1001,
+      "sample_size": 1104,
       "population": "rv",
-      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/04/fox_april-17-20-2026_national_topline_april-22-release.pdf",
-      "created_at": "2026-04-23",
-      "start_date": "2026-04-17",
-      "end_date": "2026-04-20",
+      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2025/04/fox_april-18-21-2025_complete_national_cross-tabs_april-25-release.pdf",
+      "created_at": "2025-04-26",
+      "start_date": "2025-04-18",
+      "end_date": "2025-04-21",
       "pollster": "Beacon Research/Shaw & Co. Research",
       "answers": [
         {
           "choice": "Dem",
-          "pct": 52
+          "pct": 49
         },
         {
           "choice": "Rep",
-          "pct": 47
+          "pct": 42
         }
       ],
       "seat_name": null,
@@ -10844,19 +10845,663 @@
       "subject": "2026"
     },
     {
-      "id": "gen2026leger20260420",
+      "id": "gen202verd5ikieo6",
       "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": null,
-      "url": null,
-      "created_at": "2026-04-29",
-      "start_date": "2026-04-17",
-      "end_date": "2026-04-20",
-      "pollster": "Leger",
+      "sample_size": 1000,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/new-poll-americans-oppose-trumps",
+      "created_at": "2025-05-15",
+      "start_date": "2025-05-01",
+      "end_date": "2025-05-06",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength in Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202atld6aqnb7h",
+      "poll_type": "generic-ballot",
+      "sample_size": 3469,
+      "population": "rv",
+      "url": "https://atlasintel.org/poll/usa-national-2025-05-30",
+      "created_at": "2025-05-31",
+      "start_date": "2025-05-21",
+      "end_date": "2025-05-27",
+      "pollster": "AtlasIntel",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50.9
+        },
+        {
+          "choice": "Rep",
+          "pct": 41.7
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verpqhwodpk",
+      "poll_type": "generic-ballot",
+      "sample_size": 1500,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/trump-approval-at-42-democrats-up",
+      "created_at": "2025-06-16",
+      "start_date": "2025-06-06",
+      "end_date": "2025-06-12",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 45
+        },
+        {
+          "choice": "Rep",
+          "pct": 37
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength in Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202emeq4b54wek",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://docs.google.com/spreadsheets/d/1cwlzwZ55-BHCkCuixS1F8QfAQItDbGpL/edit?gid=47272069#gid=47272069",
+      "created_at": "2025-06-27",
+      "start_date": "2025-06-24",
+      "end_date": "2025-06-25",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 42.5
+        },
+        {
+          "choice": "Rep",
+          "pct": 39.8
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202atlo0aotwuu",
+      "poll_type": "generic-ballot",
+      "sample_size": 1435,
+      "population": "a",
+      "url": "https://cdn.atlasintel.org/20e36f18-42bd-4a28-85f4-9f623905ba71.pdf?_gl=1*3tf2cu*_ga*Nzg1NTgxMTM2LjE3NTI4ODY1ODc.*_ga_W78QD5CNP1*czE3NTI4ODY1ODckbzEkZzAkdDE3NTI4ODY1OTQkajUzJGwwJGgw",
+      "created_at": "2025-07-19",
+      "start_date": "2025-07-13",
+      "end_date": "2025-07-18",
+      "pollster": "AtlasIntel",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 51.3
+        },
+        {
+          "choice": "Rep",
+          "pct": 42.7
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202vero2bmi16u",
+      "poll_type": "generic-ballot",
+      "sample_size": 1500,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/new-poll-dems-lead-house-generic#07-16-2025",
+      "created_at": "2025-07-22",
+      "start_date": "2025-07-14",
+      "end_date": "2025-07-16",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202emebeodreqf",
+      "poll_type": "generic-ballot",
+      "sample_size": 1400,
+      "population": "rv",
+      "url": "https://docs.google.com/spreadsheets/d/1iZsOtBWxln95TjYfOOGE6cfqX6WC86M8/edit?usp=drivesdk&ouid=114621343622731351074&rtpof=true&sd=true",
+      "created_at": "2025-07-25",
+      "start_date": "2025-07-21",
+      "end_date": "2025-07-22",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 44
+        },
+        {
+          "choice": "Rep",
+          "pct": 41.5
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Nexstar"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202har0make8oa",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "a",
+      "url": "https://pos.org/wp-content/uploads/2025/08/250178-CNBC-AAES-Q2-2025-Topline-8-7-2025-Release.pdf",
+      "created_at": "2025-08-07",
+      "start_date": "2025-07-29",
+      "end_date": "2025-08-03",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "CNBC"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202ver7h9q7ohb",
+      "poll_type": "generic-ballot",
+      "sample_size": 1562,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/when-americans-bite-their-tongues",
+      "created_at": "2025-08-28",
+      "start_date": "2025-08-08",
+      "end_date": "2025-08-17",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50.7
+        },
+        {
+          "choice": "Rep",
+          "pct": 49.3
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202emecljgqucw",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://docs.google.com/spreadsheets/d/11Pmwdv5G5pCF8yTyrQo6e2oIdwHB97rD/edit?usp=sharing&ouid=107857247170786005927&rtpof=true&sd=true",
+      "created_at": "2025-08-29",
+      "start_date": "2025-08-25",
+      "end_date": "2025-08-26",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 43.3
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verlm7t42sj",
+      "poll_type": "generic-ballot",
+      "sample_size": 1500,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/democrats-lead-the-us-house-generic",
+      "created_at": "2025-08-29",
+      "start_date": "2025-08-18",
+      "end_date": "2025-08-21",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202atlrgkgae5p",
+      "poll_type": "generic-ballot",
+      "sample_size": 1066,
+      "population": "a",
+      "url": "https://cdn.atlasintel.org/e734ffb6-e175-4467-b745-bd32bf1aca9a.pdf",
+      "created_at": "2025-09-20",
+      "start_date": "2025-09-12",
+      "end_date": "2025-09-16",
+      "pollster": "AtlasIntel",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 51.8
+        },
+        {
+          "choice": "Rep",
+          "pct": 43.5
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verx9vhr5vb",
+      "poll_type": "generic-ballot",
+      "sample_size": 1500,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/new-poll-voters-to-blame-republicans-for-shutdown",
+      "created_at": "2025-09-23",
+      "start_date": "2025-09-15",
+      "end_date": "2025-09-19",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202cnnf4eemdg0",
+      "poll_type": "generic-ballot",
+      "sample_size": 1768,
+      "population": "rv",
+      "url": "https://s3.documentcloud.org/documents/26157888/cnn-poll-of-political-independents.pdf",
+      "created_at": "2025-09-26",
+      "start_date": "2025-08-21",
+      "end_date": "2025-09-01",
+      "pollster": "CNN/SSRS",
       "answers": [
         {
           "choice": "Dem",
           "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 48
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202cnnz5gr05wh",
+      "poll_type": "generic-ballot",
+      "sample_size": 2077,
+      "population": "a",
+      "url": "https://s3.documentcloud.org/documents/26157888/cnn-poll-of-political-independents.pdf",
+      "created_at": "2025-09-26",
+      "start_date": "2025-08-21",
+      "end_date": "2025-09-01",
+      "pollster": "CNN/SSRS",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thesffydwfg",
+      "poll_type": "generic-ballot",
+      "sample_size": 1541,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/chatgpt-and-the-end-of-learning",
+      "created_at": "2025-09-30",
+      "start_date": "2025-09-15",
+      "end_date": "2025-09-18",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202the5q6hvdvt",
+      "poll_type": "generic-ballot",
+      "sample_size": 1313,
+      "population": "rv",
+      "url": "https://www.nytimes.com/interactive/2025/09/30/polls/times-siena-poll-registered-voter-crosstabs.html",
+      "created_at": "2025-09-30",
+      "start_date": "2025-09-22",
+      "end_date": "2025-09-27",
+      "pollster": "The New York Times/Siena College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 45
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202eme09e7vdrr",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://docs.google.com/spreadsheets/d/1OH0jUjsnk6GYnBZgR648Qenu3UpslqAW/edit?gid=329128904#gid=329128904",
+      "created_at": "2025-10-17",
+      "start_date": "2025-10-13",
+      "end_date": "2025-10-14",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 43.9
+        },
+        {
+          "choice": "Rep",
+          "pct": 42.5
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202har96803jy9",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "a",
+      "url": "https://www.cnbc.com/2025/10/17/trumps-economic-approval-rating-drops-says-cnbc-survey.html",
+      "created_at": "2025-10-17",
+      "start_date": "2025-10-08",
+      "end_date": "2025-10-12",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 48
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "CNBC"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202quiuhrq4f2e",
+      "poll_type": "generic-ballot",
+      "sample_size": 1327,
+      "population": "rv",
+      "url": "https://poll.qu.edu/poll-release?releaseid=3938",
+      "created_at": "2025-10-22",
+      "start_date": "2025-10-16",
+      "end_date": "2025-10-20",
+      "pollster": "Quinnipiac University",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202theh0ygpmcw",
+      "poll_type": "generic-ballot",
+      "sample_size": 1530,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/the-immigration-problem-is-a-crime",
+      "created_at": "2025-10-27",
+      "start_date": "2025-10-10",
+      "end_date": "2025-10-16",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 51
+        },
+        {
+          "choice": "Rep",
+          "pct": 49
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202unibdng1eek",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "a",
+      "url": "https://www.uml.edu/news/press-releases/2025/national-poll-10292025.aspx",
+      "created_at": "2025-10-30",
+      "start_date": "2025-10-16",
+      "end_date": "2025-10-20",
+      "pollster": "University of Massachusetts Department of Political Science/YouGov",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 38
+        },
+        {
+          "choice": "Rep",
+          "pct": 35
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verl2j6ull5",
+      "poll_type": "generic-ballot",
+      "sample_size": 1567,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/new-poll-voters-want-democrats-to",
+      "created_at": "2025-10-31",
+      "start_date": "2025-10-24",
+      "end_date": "2025-10-29",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202har3fuscn8p",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://pos.org/wp-content/uploads/2025/11/NBC-News-October-2025-Poll-11-02-2025-Release.pdf",
+      "created_at": "2025-11-02",
+      "start_date": "2025-10-24",
+      "end_date": "2025-10-28",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "NBC News"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202cnn5odn7vb2",
+      "poll_type": "generic-ballot",
+      "sample_size": 954,
+      "population": "rv",
+      "url": "https://www.cnn.com/2025/11/03/politics/cnn-poll-democrats-trump-midterms",
+      "created_at": "2025-11-03",
+      "start_date": "2025-10-27",
+      "end_date": "2025-10-30",
+      "pollster": "CNN/SSRS",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
         },
         {
           "choice": "Rep",
@@ -10870,15 +11515,69 @@
       "subject": "2026"
     },
     {
-      "id": "gen202hare0f9b514",
+      "id": "gen202emer1qfrr9e",
       "poll_type": "generic-ballot",
       "sample_size": 1000,
       "population": "rv",
-      "url": "https://fm.cnbc.com/applications/cnbc.com/resources/editorialfiles/2026/04/23/Toplines_260142_CNBC_AAES_Q1_2026_Topline.pdf",
-      "created_at": "2026-04-23",
-      "start_date": "2026-04-15",
-      "end_date": "2026-04-19",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "url": "https://docs.google.com/spreadsheets/d/1-IAQE73c7vVIynxF_-FW_kdiPJrpUIrO/edit?usp=sharing&ouid=107857247170786005927&rtpof=true&sd=true",
+      "created_at": "2025-11-07",
+      "start_date": "2025-11-03",
+      "end_date": "2025-11-04",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 43.5
+        },
+        {
+          "choice": "Rep",
+          "pct": 40.1
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verrjoxe39u",
+      "poll_type": "generic-ballot",
+      "sample_size": 1004,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/new-poll-democrats-lead-the-2026",
+      "created_at": "2025-11-18",
+      "start_date": "2025-11-12",
+      "end_date": "2025-11-14",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202ver5jr9xwy7",
+      "poll_type": "generic-ballot",
+      "sample_size": 896,
+      "population": "rv",
+      "url": "https://www.gelliottmorris.com/p/new-poll-democrats-lead-the-2026",
+      "created_at": "2025-11-18",
+      "start_date": "2025-11-12",
+      "end_date": "2025-11-14",
+      "pollster": "Verasight",
       "answers": [
         {
           "choice": "Dem",
@@ -10886,12 +11585,995 @@
         },
         {
           "choice": "Rep",
-          "pct": 45
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202maroindbw0q",
+      "poll_type": "generic-ballot",
+      "sample_size": 1052,
+      "population": "a",
+      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-12",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 46
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202marsb7pbzop",
+      "poll_type": "generic-ballot",
+      "sample_size": 903,
+      "population": "rv",
+      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-12",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202marmf1y26jw",
+      "poll_type": "generic-ballot",
+      "sample_size": 602,
+      "population": "lv",
+      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-12",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mart725c1lc",
+      "poll_type": "generic-ballot",
+      "sample_size": 1291,
+      "population": "rv",
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2025/11/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202511141156-1.pdf",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-10",
+      "end_date": "2025-11-13",
+      "pollster": "Marist College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 55
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thelkg0oyr4",
+      "poll_type": "generic-ballot",
+      "sample_size": 1508,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/2026-is-looking-terrible-for-republicans",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-10",
+      "end_date": "2025-11-17",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202theoqmu5rw8",
+      "poll_type": "generic-ballot",
+      "sample_size": null,
+      "population": "lv",
+      "url": "https://www.theargumentmag.com/p/2026-is-looking-terrible-for-republicans",
+      "created_at": "2025-11-19",
+      "start_date": "2025-11-10",
+      "end_date": "2025-11-17",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53.8
+        },
+        {
+          "choice": "Rep",
+          "pct": 46.2
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202theit3vqxax",
+      "poll_type": "generic-ballot",
+      "sample_size": 1521,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/have-democrats-lost-their-education",
+      "created_at": "2025-12-17",
+      "start_date": "2025-12-05",
+      "end_date": "2025-12-11",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50.6
+        },
+        {
+          "choice": "Rep",
+          "pct": 49.4
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thet8h94b7k",
+      "poll_type": "generic-ballot",
+      "sample_size": null,
+      "population": "lv",
+      "url": "https://www.theargumentmag.com/p/have-democrats-lost-their-education",
+      "created_at": "2025-12-17",
+      "start_date": "2025-12-05",
+      "end_date": "2025-12-11",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52.4
+        },
+        {
+          "choice": "Rep",
+          "pct": 47.6
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202quisv6i8kb4",
+      "poll_type": "generic-ballot",
+      "sample_size": 1035,
+      "population": "rv",
+      "url": "https://poll.qu.edu/images/polling/us/us12172025_ugli25.pdf",
+      "created_at": "2025-12-18",
+      "start_date": "2025-12-11",
+      "end_date": "2025-12-15",
+      "pollster": "Quinnipiac University",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 47
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202harf7u1dop3",
+      "poll_type": "generic-ballot",
+      "sample_size": 800,
+      "population": "rv",
+      "url": "https://fm.cnbc.com/applications/cnbc.com/resources/editorialfiles/2025/12/16/TOPLINES_250313_CNBC_AAES_Q4_2025_new.pdf",
+      "created_at": "2025-12-18",
+      "start_date": "2025-12-04",
+      "end_date": "2025-12-08",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 46
         }
       ],
       "seat_name": null,
       "sponsors": [
         "CNBC"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202atli98ny44e",
+      "poll_type": "generic-ballot",
+      "sample_size": 2315,
+      "population": "a",
+      "url": "https://cdn.atlasintel.org/b04a7568-81b3-478f-a785-d5e5902941d4.pdf?_gl=1*1fyq2oz*_ga*MTM0MTUwMDU0My4xNzY2MTk1NTU4*_ga_W78QD5CNP1*czE3NjYxOTU1NTckbzEkZzAkdDE3NjYxOTU5MzckajYwJGwwJGgw",
+      "created_at": "2025-12-20",
+      "start_date": "2025-12-15",
+      "end_date": "2025-12-19",
+      "pollster": "AtlasIntel",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 54.4
+        },
+        {
+          "choice": "Rep",
+          "pct": 38.4
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202cnnv1jpahum",
+      "poll_type": "generic-ballot",
+      "sample_size": 968,
+      "population": "rv",
+      "url": "https://s3.documentcloud.org/documents/26491962/cnn-poll-conducted-by-ssrs-2026-midterms-congress.pdf",
+      "created_at": "2026-01-18",
+      "start_date": "2026-01-09",
+      "end_date": "2026-01-12",
+      "pollster": "CNN/SSRS",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 46
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202eme0v5i59it",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "lv",
+      "url": "https://docs.google.com/spreadsheets/d/1JN0akF_-HHyL8gVAeNm-y7r4cmyJqRsB/edit?rtpof=true&sd=true&gid=1734735931#gid=1734735931",
+      "created_at": "2026-01-22",
+      "start_date": "2026-01-17",
+      "end_date": "2026-01-19",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 48.1
+        },
+        {
+          "choice": "Rep",
+          "pct": 41.7
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thebetxq9n0",
+      "poll_type": "generic-ballot",
+      "sample_size": 1625,
+      "population": "rv",
+      "url": "https://www.nytimes.com/interactive/2026/01/22/polls/times-siena-national-poll-crosstabs.html",
+      "created_at": "2026-01-22",
+      "start_date": "2026-01-12",
+      "end_date": "2026-01-17",
+      "pollster": "The New York Times/Siena College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 48
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verd43ch8uz",
+      "poll_type": "generic-ballot",
+      "sample_size": null,
+      "population": "rv",
+      "url": "https://www.gelliottmorris.com/p/new-poll-trump-slips-on-immigration",
+      "created_at": "2026-01-22",
+      "start_date": "2026-01-14",
+      "end_date": "2026-01-20",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 51
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202bea1zjzpg64",
+      "poll_type": "generic-ballot",
+      "sample_size": 1005,
+      "population": "rv",
+      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/01/fox_january-23-26_national_topline_january-28-release.pdf",
+      "created_at": "2026-01-30",
+      "start_date": "2026-01-23",
+      "end_date": "2026-01-26",
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 46
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Fox News"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thew0pr38sc",
+      "poll_type": "generic-ballot",
+      "sample_size": null,
+      "population": "lv",
+      "url": "https://www.theargumentmag.com/p/immigration-is-turning-into-a-disaster",
+      "created_at": "2026-01-29",
+      "start_date": "2026-01-26",
+      "end_date": "2026-01-27",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 55
+        },
+        {
+          "choice": "Rep",
+          "pct": 45
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202theea14xh0m",
+      "poll_type": "generic-ballot",
+      "sample_size": 1515,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/immigration-is-turning-into-a-disaster",
+      "created_at": "2026-01-29",
+      "start_date": "2026-01-26",
+      "end_date": "2026-01-27",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Rep",
+          "pct": 48
+        },
+        {
+          "choice": "Dem",
+          "pct": 52
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mar1mmhk54j",
+      "poll_type": "generic-ballot",
+      "sample_size": 1003,
+      "population": "a",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
+      "created_at": "2026-02-04",
+      "start_date": "2026-01-21",
+      "end_date": "2026-01-28",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 45
+        },
+        {
+          "choice": "Rep",
+          "pct": 39
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202marfa6kqh0m",
+      "poll_type": "generic-ballot",
+      "sample_size": 869,
+      "population": "rv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
+      "created_at": "2026-02-04",
+      "start_date": "2026-01-21",
+      "end_date": "2026-01-28",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 48
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202maro1vul0lx",
+      "poll_type": "generic-ballot",
+      "sample_size": 577,
+      "population": "lv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
+      "created_at": "2026-02-04",
+      "start_date": "2026-01-21",
+      "end_date": "2026-01-28",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 45
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202tip00f8b387",
+      "poll_type": "generic-ballot",
+      "sample_size": 1126,
+      "population": "rv",
+      "url": "https://issuesinsights.com/2026/02/16/who-leads-in-2028-presidential-race-and-in-2026-midterm-elections-ii-tipp-poll",
+      "created_at": "2026-02-16",
+      "start_date": "2026-01-27",
+      "end_date": "2026-01-29",
+      "pollster": "TIPP Insights",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 45
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Issues & Insights"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202thea1c3940a",
+      "poll_type": "generic-ballot",
+      "sample_size": 3003,
+      "population": "rv",
+      "url": "https://www.theargumentmag.com/p/the-trans-rights-backlash-is-real",
+      "created_at": "2026-02-17",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-10",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202the46f080ee",
+      "poll_type": "generic-ballot",
+      "sample_size": null,
+      "population": "lv",
+      "url": "https://www.theargumentmag.com/p/the-trans-rights-backlash-is-real",
+      "created_at": "2026-02-17",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-10",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 47
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verb7bf02d2",
+      "poll_type": "generic-ballot",
+      "sample_size": 1401,
+      "population": "rv",
+      "url": "https://www.gelliottmorris.com/p/ahead-of-state-of-the-union-address",
+      "created_at": "2026-02-25",
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-20",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202verb8fa684b",
+      "poll_type": "generic-ballot",
+      "sample_size": 1566,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/ahead-of-state-of-the-union-address",
+      "created_at": "2026-02-25",
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-20",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 40
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202emed204ed40",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "lv",
+      "url": "https://docs.google.com/spreadsheets/d/1SS_Vfa-SArcPFS60SmvpIB-kd_sakjcX/edit?rtpof=true&sd=true",
+      "created_at": "2026-02-26",
+      "start_date": "2026-02-21",
+      "end_date": "2026-02-22",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50.4
+        },
+        {
+          "choice": "Rep",
+          "pct": 42.4
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202hard90e1273",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://s3.documentcloud.org/documents/27777984/nbc-news-march-2026-poll-03-08-2024-release-final.pdf",
+      "created_at": "2026-03-08",
+      "start_date": "2026-02-27",
+      "end_date": "2026-03-03",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "NBC News"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mar4e24ed15",
+      "poll_type": "generic-ballot",
+      "sample_size": 1392,
+      "population": "rv",
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2026/03/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202603091024.pdf",
+      "created_at": "2026-03-11",
+      "start_date": "2026-03-02",
+      "end_date": "2026-03-04",
+      "pollster": "Marist University",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 53
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "NPR",
+        "PBS News"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202tipce47db1a",
+      "poll_type": "generic-ballot",
+      "sample_size": 1264,
+      "population": "rv",
+      "url": "https://tippinsights.com/americas-stalemate",
+      "created_at": "2026-03-14",
+      "start_date": "2026-02-24",
+      "end_date": "2026-02-27",
+      "pollster": "TIPP Insights",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 46
+        },
+        {
+          "choice": "Rep",
+          "pct": 44
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202eme59d14015",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "lv",
+      "url": "https://docs.google.com/spreadsheets/d/1EfOmL-oir8Qp12WCByOuqB2fRRqtrr11/edit?rtpof=true&sd=true&gid=586600673#gid=586600673",
+      "created_at": "2026-03-20",
+      "start_date": "2026-03-16",
+      "end_date": "2026-03-17",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49.2
+        },
+        {
+          "choice": "Rep",
+          "pct": 41.5
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202theebe8cac7",
+      "poll_type": "generic-ballot",
+      "sample_size": 1519,
+      "population": "rv",
+      "url": "https://substack.com/inbox/post/191802614",
+      "created_at": "2026-03-23",
+      "start_date": "2026-03-12",
+      "end_date": "2026-03-17",
+      "pollster": "The Argument/Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 54
+        },
+        {
+          "choice": "Rep",
+          "pct": 46
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202qui1a373f46",
+      "poll_type": "generic-ballot",
+      "sample_size": 1191,
+      "population": "rv",
+      "url": "https://poll.qu.edu/images/polling/us/us03252026_ueek31.pdf",
+      "created_at": "2026-03-26",
+      "start_date": "2026-03-19",
+      "end_date": "2026-03-23",
+      "pollster": "Quinnipiac University",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 51
+        },
+        {
+          "choice": "Rep",
+          "pct": 40
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202cnn96858d5d",
+      "poll_type": "generic-ballot",
+      "sample_size": 951,
+      "population": "rv",
+      "url": "https://embed.documentcloud.org/documents/28014525-cnn-poll-conducted-by-ssrs-2026-midterms-parties/?embed=1&responsive=1&title=1&onlyshoworg=1",
+      "created_at": "2026-04-03",
+      "start_date": "2026-03-26",
+      "end_date": "2026-03-30",
+      "pollster": "CNN/SSRS",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 48
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202uniab038bd7",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "a",
+      "url": "https://www.uml.edu/docs/2026-Nat-Pol-March-Topline_tcm18-417813.pdf",
+      "created_at": "2026-04-10",
+      "start_date": "2026-03-26",
+      "end_date": "2026-03-30",
+      "pollster": "University of Massachusetts Lowell Center for Public Opinion/YouGov",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 38
+        },
+        {
+          "choice": "Rep",
+          "pct": 35
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202ver9645121a",
+      "poll_type": "generic-ballot",
+      "sample_size": 1386,
+      "population": "rv",
+      "url": "https://www.gelliottmorris.com/p/2026-04-21-april-strength-in-numbers-verasight-poll",
+      "created_at": "2026-04-21",
+      "start_date": "2026-04-10",
+      "end_date": "2026-04-14",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 50
+        },
+        {
+          "choice": "Rep",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202ver06de9dc4",
+      "poll_type": "generic-ballot",
+      "sample_size": 1514,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/2026-04-21-april-strength-in-numbers-verasight-poll",
+      "created_at": "2026-04-21",
+      "start_date": "2026-04-10",
+      "end_date": "2026-04-14",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength In Numbers"
       ],
       "internal": false,
       "partisan": null,
@@ -10976,43 +12658,15 @@
       "subject": "2026"
     },
     {
-      "id": "gen202ver9645121a",
+      "id": "gen202hare0f9b514",
       "poll_type": "generic-ballot",
-      "sample_size": 1386,
+      "sample_size": 1000,
       "population": "rv",
-      "url": "https://www.gelliottmorris.com/p/2026-04-21-april-strength-in-numbers-verasight-poll",
-      "created_at": "2026-04-21",
-      "start_date": "2026-04-10",
-      "end_date": "2026-04-14",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202ver06de9dc4",
-      "poll_type": "generic-ballot",
-      "sample_size": 1514,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/2026-04-21-april-strength-in-numbers-verasight-poll",
-      "created_at": "2026-04-21",
-      "start_date": "2026-04-10",
-      "end_date": "2026-04-14",
-      "pollster": "Verasight",
+      "url": "https://fm.cnbc.com/applications/cnbc.com/resources/editorialfiles/2026/04/23/Toplines_260142_CNBC_AAES_Q1_2026_Topline.pdf",
+      "created_at": "2026-04-23",
+      "start_date": "2026-04-15",
+      "end_date": "2026-04-19",
+      "pollster": "Hart Research Associates/Public Opinion Strategies",
       "answers": [
         {
           "choice": "Dem",
@@ -11020,778 +12674,7 @@
         },
         {
           "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202cnn96858d5d",
-      "poll_type": "generic-ballot",
-      "sample_size": 951,
-      "population": "rv",
-      "url": "https://embed.documentcloud.org/documents/28014525-cnn-poll-conducted-by-ssrs-2026-midterms-parties/?embed=1&responsive=1&title=1&onlyshoworg=1",
-      "created_at": "2026-04-03",
-      "start_date": "2026-03-26",
-      "end_date": "2026-03-30",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202uniab038bd7",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.uml.edu/docs/2026-Nat-Pol-March-Topline_tcm18-417813.pdf",
-      "created_at": "2026-04-10",
-      "start_date": "2026-03-26",
-      "end_date": "2026-03-30",
-      "pollster": "University of Massachusetts Lowell Center for Public Opinion/YouGov",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 38
-        },
-        {
-          "choice": "Rep",
-          "pct": 35
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202qui1a373f46",
-      "poll_type": "generic-ballot",
-      "sample_size": 1191,
-      "population": "rv",
-      "url": "https://poll.qu.edu/images/polling/us/us03252026_ueek31.pdf",
-      "created_at": "2026-03-26",
-      "start_date": "2026-03-19",
-      "end_date": "2026-03-23",
-      "pollster": "Quinnipiac University",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 51
-        },
-        {
-          "choice": "Rep",
-          "pct": 40
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202eme59d14015",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "lv",
-      "url": "https://docs.google.com/spreadsheets/d/1EfOmL-oir8Qp12WCByOuqB2fRRqtrr11/edit?rtpof=true&sd=true&gid=586600673#gid=586600673",
-      "created_at": "2026-03-20",
-      "start_date": "2026-03-16",
-      "end_date": "2026-03-17",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49.2
-        },
-        {
-          "choice": "Rep",
-          "pct": 41.5
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202theebe8cac7",
-      "poll_type": "generic-ballot",
-      "sample_size": 1519,
-      "population": "rv",
-      "url": "https://substack.com/inbox/post/191802614",
-      "created_at": "2026-03-23",
-      "start_date": "2026-03-12",
-      "end_date": "2026-03-17",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 54
-        },
-        {
-          "choice": "Rep",
-          "pct": 46
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202mar4e24ed15",
-      "poll_type": "generic-ballot",
-      "sample_size": 1392,
-      "population": "rv",
-      "url": "https://maristpoll.marist.edu/wp-content/uploads/2026/03/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202603091024.pdf",
-      "created_at": "2026-03-11",
-      "start_date": "2026-03-02",
-      "end_date": "2026-03-04",
-      "pollster": "Marist University",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 53
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "NPR",
-        "PBS News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202hard90e1273",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://s3.documentcloud.org/documents/27777984/nbc-news-march-2026-poll-03-08-2024-release-final.pdf",
-      "created_at": "2026-03-08",
-      "start_date": "2026-02-27",
-      "end_date": "2026-03-03",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "NBC News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202tipce47db1a",
-      "poll_type": "generic-ballot",
-      "sample_size": 1264,
-      "population": "rv",
-      "url": "https://tippinsights.com/americas-stalemate",
-      "created_at": "2026-03-14",
-      "start_date": "2026-02-24",
-      "end_date": "2026-02-27",
-      "pollster": "TIPP Insights",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 46
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202emed204ed40",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "lv",
-      "url": "https://docs.google.com/spreadsheets/d/1SS_Vfa-SArcPFS60SmvpIB-kd_sakjcX/edit?rtpof=true&sd=true",
-      "created_at": "2026-02-26",
-      "start_date": "2026-02-21",
-      "end_date": "2026-02-22",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50.4
-        },
-        {
-          "choice": "Rep",
-          "pct": 42.4
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verb7bf02d2",
-      "poll_type": "generic-ballot",
-      "sample_size": 1401,
-      "population": "rv",
-      "url": "https://www.gelliottmorris.com/p/ahead-of-state-of-the-union-address",
-      "created_at": "2026-02-25",
-      "start_date": "2026-02-18",
-      "end_date": "2026-02-20",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verb8fa684b",
-      "poll_type": "generic-ballot",
-      "sample_size": 1566,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/ahead-of-state-of-the-union-address",
-      "created_at": "2026-02-25",
-      "start_date": "2026-02-18",
-      "end_date": "2026-02-20",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 40
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thea1c3940a",
-      "poll_type": "generic-ballot",
-      "sample_size": 3003,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/the-trans-rights-backlash-is-real",
-      "created_at": "2026-02-17",
-      "start_date": "2026-02-04",
-      "end_date": "2026-02-10",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 53
-        },
-        {
-          "choice": "Rep",
-          "pct": 47
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202the46f080ee",
-      "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": "lv",
-      "url": "https://www.theargumentmag.com/p/the-trans-rights-backlash-is-real",
-      "created_at": "2026-02-17",
-      "start_date": "2026-02-04",
-      "end_date": "2026-02-10",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 53
-        },
-        {
-          "choice": "Rep",
-          "pct": 47
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202tip00f8b387",
-      "poll_type": "generic-ballot",
-      "sample_size": 1126,
-      "population": "rv",
-      "url": "https://issuesinsights.com/2026/02/16/who-leads-in-2028-presidential-race-and-in-2026-midterm-elections-ii-tipp-poll",
-      "created_at": "2026-02-16",
-      "start_date": "2026-01-27",
-      "end_date": "2026-01-29",
-      "pollster": "TIPP Insights",
-      "answers": [
-        {
-          "choice": "Dem",
           "pct": 45
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Issues & Insights"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202mar1mmhk54j",
-      "poll_type": "generic-ballot",
-      "sample_size": 1003,
-      "population": "a",
-      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
-      "created_at": "2026-02-04",
-      "start_date": "2026-01-21",
-      "end_date": "2026-01-28",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 45
-        },
-        {
-          "choice": "Rep",
-          "pct": 39
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202marfa6kqh0m",
-      "poll_type": "generic-ballot",
-      "sample_size": 869,
-      "population": "rv",
-      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
-      "created_at": "2026-02-04",
-      "start_date": "2026-01-21",
-      "end_date": "2026-01-28",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202maro1vul0lx",
-      "poll_type": "generic-ballot",
-      "sample_size": 577,
-      "population": "lv",
-      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC30/MLSPSC30Crosstabs_NationalIssues.html",
-      "created_at": "2026-02-04",
-      "start_date": "2026-01-21",
-      "end_date": "2026-01-28",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52
-        },
-        {
-          "choice": "Rep",
-          "pct": 45
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thew0pr38sc",
-      "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": "lv",
-      "url": "https://www.theargumentmag.com/p/immigration-is-turning-into-a-disaster",
-      "created_at": "2026-01-29",
-      "start_date": "2026-01-26",
-      "end_date": "2026-01-27",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 55
-        },
-        {
-          "choice": "Rep",
-          "pct": 45
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202theea14xh0m",
-      "poll_type": "generic-ballot",
-      "sample_size": 1515,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/immigration-is-turning-into-a-disaster",
-      "created_at": "2026-01-29",
-      "start_date": "2026-01-26",
-      "end_date": "2026-01-27",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Rep",
-          "pct": 48
-        },
-        {
-          "choice": "Dem",
-          "pct": 52
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202bea1zjzpg64",
-      "poll_type": "generic-ballot",
-      "sample_size": 1005,
-      "population": "rv",
-      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/01/fox_january-23-26_national_topline_january-28-release.pdf",
-      "created_at": "2026-01-30",
-      "start_date": "2026-01-23",
-      "end_date": "2026-01-26",
-      "pollster": "Beacon Research/Shaw & Co. Research",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52
-        },
-        {
-          "choice": "Rep",
-          "pct": 46
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Fox News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verd43ch8uz",
-      "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": "rv",
-      "url": "https://www.gelliottmorris.com/p/new-poll-trump-slips-on-immigration",
-      "created_at": "2026-01-22",
-      "start_date": "2026-01-14",
-      "end_date": "2026-01-20",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 51
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202eme0v5i59it",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "lv",
-      "url": "https://docs.google.com/spreadsheets/d/1JN0akF_-HHyL8gVAeNm-y7r4cmyJqRsB/edit?rtpof=true&sd=true&gid=1734735931#gid=1734735931",
-      "created_at": "2026-01-22",
-      "start_date": "2026-01-17",
-      "end_date": "2026-01-19",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48.1
-        },
-        {
-          "choice": "Rep",
-          "pct": 41.7
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thebetxq9n0",
-      "poll_type": "generic-ballot",
-      "sample_size": 1625,
-      "population": "rv",
-      "url": "https://www.nytimes.com/interactive/2026/01/22/polls/times-siena-national-poll-crosstabs.html",
-      "created_at": "2026-01-22",
-      "start_date": "2026-01-12",
-      "end_date": "2026-01-17",
-      "pollster": "The New York Times/Siena College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202cnnv1jpahum",
-      "poll_type": "generic-ballot",
-      "sample_size": 968,
-      "population": "rv",
-      "url": "https://s3.documentcloud.org/documents/26491962/cnn-poll-conducted-by-ssrs-2026-midterms-congress.pdf",
-      "created_at": "2026-01-18",
-      "start_date": "2026-01-09",
-      "end_date": "2026-01-12",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 46
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202atli98ny44e",
-      "poll_type": "generic-ballot",
-      "sample_size": 2315,
-      "population": "a",
-      "url": "https://cdn.atlasintel.org/b04a7568-81b3-478f-a785-d5e5902941d4.pdf?_gl=1*1fyq2oz*_ga*MTM0MTUwMDU0My4xNzY2MTk1NTU4*_ga_W78QD5CNP1*czE3NjYxOTU1NTckbzEkZzAkdDE3NjYxOTU5MzckajYwJGwwJGgw",
-      "created_at": "2025-12-20",
-      "start_date": "2025-12-15",
-      "end_date": "2025-12-19",
-      "pollster": "AtlasIntel",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 54.4
-        },
-        {
-          "choice": "Rep",
-          "pct": 38.4
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202quisv6i8kb4",
-      "poll_type": "generic-ballot",
-      "sample_size": 1035,
-      "population": "rv",
-      "url": "https://poll.qu.edu/images/polling/us/us12172025_ugli25.pdf",
-      "created_at": "2025-12-18",
-      "start_date": "2025-12-11",
-      "end_date": "2025-12-15",
-      "pollster": "Quinnipiac University",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202theit3vqxax",
-      "poll_type": "generic-ballot",
-      "sample_size": 1521,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/have-democrats-lost-their-education",
-      "created_at": "2025-12-17",
-      "start_date": "2025-12-05",
-      "end_date": "2025-12-11",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50.6
-        },
-        {
-          "choice": "Rep",
-          "pct": 49.4
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thet8h94b7k",
-      "poll_type": "generic-ballot",
-      "sample_size": null,
-      "population": "lv",
-      "url": "https://www.theargumentmag.com/p/have-democrats-lost-their-education",
-      "created_at": "2025-12-17",
-      "start_date": "2025-12-05",
-      "end_date": "2025-12-11",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52.4
-        },
-        {
-          "choice": "Rep",
-          "pct": 47.6
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202harf7u1dop3",
-      "poll_type": "generic-ballot",
-      "sample_size": 800,
-      "population": "rv",
-      "url": "https://fm.cnbc.com/applications/cnbc.com/resources/editorialfiles/2025/12/16/TOPLINES_250313_CNBC_AAES_Q4_2025_new.pdf",
-      "created_at": "2025-12-18",
-      "start_date": "2025-12-04",
-      "end_date": "2025-12-08",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 46
         }
       ],
       "seat_name": null,
@@ -11803,19 +12686,19 @@
       "subject": "2026"
     },
     {
-      "id": "gen202thelkg0oyr4",
+      "id": "gen202beab54fecf9",
       "poll_type": "generic-ballot",
-      "sample_size": 1508,
+      "sample_size": 1001,
       "population": "rv",
-      "url": "https://www.theargumentmag.com/p/2026-is-looking-terrible-for-republicans",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-10",
-      "end_date": "2025-11-17",
-      "pollster": "The Argument/Verasight",
+      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/04/fox_april-17-20-2026_national_topline_april-22-release.pdf",
+      "created_at": "2026-04-23",
+      "start_date": "2026-04-17",
+      "end_date": "2026-04-20",
+      "pollster": "Beacon Research/Shaw & Co. Research",
       "answers": [
         {
           "choice": "Dem",
-          "pct": 53
+          "pct": 52
         },
         {
           "choice": "Rep",
@@ -11823,29 +12706,31 @@
         }
       ],
       "seat_name": null,
-      "sponsors": [],
+      "sponsors": [
+        "Fox News"
+      ],
       "internal": false,
       "partisan": null,
       "subject": "2026"
     },
     {
-      "id": "gen202theoqmu5rw8",
+      "id": "gen202eme52b01f0e",
       "poll_type": "generic-ballot",
-      "sample_size": null,
+      "sample_size": 1000,
       "population": "lv",
-      "url": "https://www.theargumentmag.com/p/2026-is-looking-terrible-for-republicans",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-10",
-      "end_date": "2025-11-17",
-      "pollster": "The Argument/Verasight",
+      "url": "https://docs.google.com/spreadsheets/d/1FsVoQjT-tHeejavmtPp3dWF2UpdwGBOe/edit?gid=148203681#gid=148203681",
+      "created_at": "2026-04-30",
+      "start_date": "2026-04-24",
+      "end_date": "2026-04-26",
+      "pollster": "Emerson College",
       "answers": [
         {
           "choice": "Dem",
-          "pct": 53.8
+          "pct": 50.3
         },
         {
           "choice": "Rep",
-          "pct": 46.2
+          "pct": 40.2
         }
       ],
       "seat_name": null,
@@ -11855,19 +12740,19 @@
       "subject": "2026"
     },
     {
-      "id": "gen202verrjoxe39u",
+      "id": "gen202leg6734532b",
       "poll_type": "generic-ballot",
       "sample_size": 1004,
       "population": "a",
-      "url": "https://www.gelliottmorris.com/p/new-poll-democrats-lead-the-2026",
-      "created_at": "2025-11-18",
-      "start_date": "2025-11-12",
-      "end_date": "2025-11-14",
-      "pollster": "Verasight",
+      "url": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/4.%20%C3%89M%20-%20Avril%202026/20260428%20-%20US%20Poll%20April%202026/US_POL_April_2026_338Canada_VF.pdf",
+      "created_at": "2026-04-30",
+      "start_date": "2026-04-17",
+      "end_date": "2026-04-20",
+      "pollster": "Leger",
       "answers": [
         {
           "choice": "Dem",
-          "pct": 47
+          "pct": 52
         },
         {
           "choice": "Rep",
@@ -11876,447 +12761,22 @@
       ],
       "seat_name": null,
       "sponsors": [
-        "Strength In Numbers"
+        "338Canada",
+        "Maintenant Media"
       ],
       "internal": false,
       "partisan": null,
       "subject": "2026"
     },
     {
-      "id": "gen202ver5jr9xwy7",
+      "id": "gen202the055f2404",
       "poll_type": "generic-ballot",
-      "sample_size": 896,
-      "population": "rv",
-      "url": "https://www.gelliottmorris.com/p/new-poll-democrats-lead-the-2026",
-      "created_at": "2025-11-18",
-      "start_date": "2025-11-12",
-      "end_date": "2025-11-14",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202mart725c1lc",
-      "poll_type": "generic-ballot",
-      "sample_size": 1291,
-      "population": "rv",
-      "url": "https://maristpoll.marist.edu/wp-content/uploads/2025/11/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202511141156-1.pdf",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-10",
-      "end_date": "2025-11-13",
-      "pollster": "Marist College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 55
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202maroindbw0q",
-      "poll_type": "generic-ballot",
-      "sample_size": 1052,
-      "population": "a",
-      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-05",
-      "end_date": "2025-11-12",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 46
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202marsb7pbzop",
-      "poll_type": "generic-ballot",
-      "sample_size": 903,
-      "population": "rv",
-      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-05",
-      "end_date": "2025-11-12",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202marmf1y26jw",
-      "poll_type": "generic-ballot",
-      "sample_size": 602,
+      "sample_size": 1000,
       "population": "lv",
-      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/11/MLSPSC29Toplines_NationalIssues.html",
-      "created_at": "2025-11-19",
-      "start_date": "2025-11-05",
-      "end_date": "2025-11-12",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 53
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202emer1qfrr9e",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://docs.google.com/spreadsheets/d/1-IAQE73c7vVIynxF_-FW_kdiPJrpUIrO/edit?usp=sharing&ouid=107857247170786005927&rtpof=true&sd=true",
-      "created_at": "2025-11-07",
-      "start_date": "2025-11-03",
-      "end_date": "2025-11-04",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 43.5
-        },
-        {
-          "choice": "Rep",
-          "pct": 40.1
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202cnn5odn7vb2",
-      "poll_type": "generic-ballot",
-      "sample_size": 954,
-      "population": "rv",
-      "url": "https://www.cnn.com/2025/11/03/politics/cnn-poll-democrats-trump-midterms",
-      "created_at": "2025-11-03",
-      "start_date": "2025-10-27",
-      "end_date": "2025-10-30",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verl2j6ull5",
-      "poll_type": "generic-ballot",
-      "sample_size": 1567,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/new-poll-voters-want-democrats-to",
-      "created_at": "2025-10-31",
-      "start_date": "2025-10-24",
-      "end_date": "2025-10-29",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202har3fuscn8p",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://pos.org/wp-content/uploads/2025/11/NBC-News-October-2025-Poll-11-02-2025-Release.pdf",
-      "created_at": "2025-11-02",
-      "start_date": "2025-10-24",
-      "end_date": "2025-10-28",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "NBC News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202quiuhrq4f2e",
-      "poll_type": "generic-ballot",
-      "sample_size": 1327,
-      "population": "rv",
-      "url": "https://poll.qu.edu/poll-release?releaseid=3938",
-      "created_at": "2025-10-22",
-      "start_date": "2025-10-16",
-      "end_date": "2025-10-20",
-      "pollster": "Quinnipiac University",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202unibdng1eek",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.uml.edu/news/press-releases/2025/national-poll-10292025.aspx",
-      "created_at": "2025-10-30",
-      "start_date": "2025-10-16",
-      "end_date": "2025-10-20",
-      "pollster": "University of Massachusetts Department of Political Science/YouGov",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 38
-        },
-        {
-          "choice": "Rep",
-          "pct": 35
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202theh0ygpmcw",
-      "poll_type": "generic-ballot",
-      "sample_size": 1530,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/the-immigration-problem-is-a-crime",
-      "created_at": "2025-10-27",
-      "start_date": "2025-10-10",
-      "end_date": "2025-10-16",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 51
-        },
-        {
-          "choice": "Rep",
-          "pct": 49
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202eme09e7vdrr",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://docs.google.com/spreadsheets/d/1OH0jUjsnk6GYnBZgR648Qenu3UpslqAW/edit?gid=329128904#gid=329128904",
-      "created_at": "2025-10-17",
-      "start_date": "2025-10-13",
-      "end_date": "2025-10-14",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 43.9
-        },
-        {
-          "choice": "Rep",
-          "pct": 42.5
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202har96803jy9",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.cnbc.com/2025/10/17/trumps-economic-approval-rating-drops-says-cnbc-survey.html",
-      "created_at": "2025-10-17",
-      "start_date": "2025-10-08",
-      "end_date": "2025-10-12",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 47
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "CNBC"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202the5q6hvdvt",
-      "poll_type": "generic-ballot",
-      "sample_size": 1313,
-      "population": "rv",
-      "url": "https://www.nytimes.com/interactive/2025/09/30/polls/times-siena-poll-registered-voter-crosstabs.html",
-      "created_at": "2025-09-30",
-      "start_date": "2025-09-22",
-      "end_date": "2025-09-27",
-      "pollster": "The New York Times/Siena College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 45
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verx9vhr5vb",
-      "poll_type": "generic-ballot",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/new-poll-voters-to-blame-republicans-for-shutdown",
-      "created_at": "2025-09-23",
-      "start_date": "2025-09-15",
-      "end_date": "2025-09-19",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thesffydwfg",
-      "poll_type": "generic-ballot",
-      "sample_size": 1541,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/chatgpt-and-the-end-of-learning",
-      "created_at": "2025-09-30",
-      "start_date": "2025-09-15",
-      "end_date": "2025-09-18",
+      "url": "https://www.theargumentmag.com/p/why-democrats-cant-win-more-trump",
+      "created_at": "2026-04-30",
+      "start_date": "2026-04-20",
+      "end_date": "2026-04-23",
       "pollster": "The Argument/Verasight",
       "answers": [
         {
@@ -12330,464 +12790,6 @@
       ],
       "seat_name": null,
       "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202atlrgkgae5p",
-      "poll_type": "generic-ballot",
-      "sample_size": 1066,
-      "population": "a",
-      "url": "https://cdn.atlasintel.org/e734ffb6-e175-4467-b745-bd32bf1aca9a.pdf",
-      "created_at": "2025-09-20",
-      "start_date": "2025-09-12",
-      "end_date": "2025-09-16",
-      "pollster": "AtlasIntel",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 51.8
-        },
-        {
-          "choice": "Rep",
-          "pct": 43.5
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202cnnf4eemdg0",
-      "poll_type": "generic-ballot",
-      "sample_size": 1768,
-      "population": "rv",
-      "url": "https://s3.documentcloud.org/documents/26157888/cnn-poll-of-political-independents.pdf",
-      "created_at": "2025-09-26",
-      "start_date": "2025-08-21",
-      "end_date": "2025-09-01",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52
-        },
-        {
-          "choice": "Rep",
-          "pct": 48
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202cnnz5gr05wh",
-      "poll_type": "generic-ballot",
-      "sample_size": 2077,
-      "population": "a",
-      "url": "https://s3.documentcloud.org/documents/26157888/cnn-poll-of-political-independents.pdf",
-      "created_at": "2025-09-26",
-      "start_date": "2025-08-21",
-      "end_date": "2025-09-01",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 52
-        },
-        {
-          "choice": "Rep",
-          "pct": 47
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202emecljgqucw",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://docs.google.com/spreadsheets/d/11Pmwdv5G5pCF8yTyrQo6e2oIdwHB97rD/edit?usp=sharing&ouid=107857247170786005927&rtpof=true&sd=true",
-      "created_at": "2025-08-29",
-      "start_date": "2025-08-25",
-      "end_date": "2025-08-26",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 43.3
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verlm7t42sj",
-      "poll_type": "generic-ballot",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/democrats-lead-the-us-house-generic",
-      "created_at": "2025-08-29",
-      "start_date": "2025-08-18",
-      "end_date": "2025-08-21",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202ver7h9q7ohb",
-      "poll_type": "generic-ballot",
-      "sample_size": 1562,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/when-americans-bite-their-tongues",
-      "created_at": "2025-08-28",
-      "start_date": "2025-08-08",
-      "end_date": "2025-08-17",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50.7
-        },
-        {
-          "choice": "Rep",
-          "pct": 49.3
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202har0make8oa",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://pos.org/wp-content/uploads/2025/08/250178-CNBC-AAES-Q2-2025-Topline-8-7-2025-Release.pdf",
-      "created_at": "2025-08-07",
-      "start_date": "2025-07-29",
-      "end_date": "2025-08-03",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "CNBC"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202emebeodreqf",
-      "poll_type": "generic-ballot",
-      "sample_size": 1400,
-      "population": "rv",
-      "url": "https://docs.google.com/spreadsheets/d/1iZsOtBWxln95TjYfOOGE6cfqX6WC86M8/edit?usp=drivesdk&ouid=114621343622731351074&rtpof=true&sd=true",
-      "created_at": "2025-07-25",
-      "start_date": "2025-07-21",
-      "end_date": "2025-07-22",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 44
-        },
-        {
-          "choice": "Rep",
-          "pct": 41.5
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Nexstar"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202atlo0aotwuu",
-      "poll_type": "generic-ballot",
-      "sample_size": 1435,
-      "population": "a",
-      "url": "https://cdn.atlasintel.org/20e36f18-42bd-4a28-85f4-9f623905ba71.pdf?_gl=1*3tf2cu*_ga*Nzg1NTgxMTM2LjE3NTI4ODY1ODc.*_ga_W78QD5CNP1*czE3NTI4ODY1ODckbzEkZzAkdDE3NTI4ODY1OTQkajUzJGwwJGgw",
-      "created_at": "2025-07-19",
-      "start_date": "2025-07-13",
-      "end_date": "2025-07-18",
-      "pollster": "AtlasIntel",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 51.3
-        },
-        {
-          "choice": "Rep",
-          "pct": 42.7
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202vero2bmi16u",
-      "poll_type": "generic-ballot",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/new-poll-dems-lead-house-generic#07-16-2025",
-      "created_at": "2025-07-22",
-      "start_date": "2025-07-14",
-      "end_date": "2025-07-16",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 43
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength In Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202emeq4b54wek",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://docs.google.com/spreadsheets/d/1cwlzwZ55-BHCkCuixS1F8QfAQItDbGpL/edit?gid=47272069#gid=47272069",
-      "created_at": "2025-06-27",
-      "start_date": "2025-06-24",
-      "end_date": "2025-06-25",
-      "pollster": "Emerson College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 42.5
-        },
-        {
-          "choice": "Rep",
-          "pct": 39.8
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verpqhwodpk",
-      "poll_type": "generic-ballot",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/trump-approval-at-42-democrats-up",
-      "created_at": "2025-06-16",
-      "start_date": "2025-06-06",
-      "end_date": "2025-06-12",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 45
-        },
-        {
-          "choice": "Rep",
-          "pct": 37
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength in Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202atld6aqnb7h",
-      "poll_type": "generic-ballot",
-      "sample_size": 3469,
-      "population": "rv",
-      "url": "https://atlasintel.org/poll/usa-national-2025-05-30",
-      "created_at": "2025-05-31",
-      "start_date": "2025-05-21",
-      "end_date": "2025-05-27",
-      "pollster": "AtlasIntel",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50.9
-        },
-        {
-          "choice": "Rep",
-          "pct": 41.7
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202verd5ikieo6",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/new-poll-americans-oppose-trumps",
-      "created_at": "2025-05-15",
-      "start_date": "2025-05-01",
-      "end_date": "2025-05-06",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 41
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength in Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202thebjaz89iw",
-      "poll_type": "generic-ballot",
-      "sample_size": 913,
-      "population": "rv",
-      "url": "https://www.nytimes.com/interactive/2025/04/25/us/elections/times-siena-poll-crosstabs.html",
-      "created_at": "2025-04-25",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-24",
-      "pollster": "The New York Times/Siena College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202beaf9167992",
-      "poll_type": "generic-ballot",
-      "sample_size": 1104,
-      "population": "rv",
-      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2025/04/fox_april-18-21-2025_complete_national_cross-tabs_april-25-release.pdf",
-      "created_at": "2025-04-26",
-      "start_date": "2025-04-18",
-      "end_date": "2025-04-21",
-      "pollster": "Beacon Research/Shaw & Co. Research",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 49
-        },
-        {
-          "choice": "Rep",
-          "pct": 42
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Fox News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
-    {
-      "id": "gen202hara7z5ongq",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.cnbc.com/video/2025/04/17/tariffs-weight-on-trump-approval-cnbc-survey-finds.html",
-      "created_at": "2025-04-17",
-      "start_date": "2025-04-09",
-      "end_date": "2025-04-13",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 46
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "CNBC"
-      ],
       "internal": false,
       "partisan": null,
       "subject": "2026"
@@ -12798,6 +12800,117 @@
     "lookbackDays": 400,
     "okSlices": 14,
     "failedSlices": 0,
-    "skippedDays": []
+    "skippedDays": [],
+    "gbDroppedPollsters": [
+      "A2 Insights",
+      "American Pulse Research & Polling",
+      "Big Data Poll",
+      "Bowling Green State University/YouGov",
+      "Clarity Campaign Labs",
+      "Cygnal",
+      "Echelon Insights",
+      "Echelon Insights/GBAO",
+      "Fabrizio Ward",
+      "Fabrizio, Lee & Associates",
+      "Fabrizio, Lee & Associates/Impact Research",
+      "Focaldata",
+      "GBAO Strategies",
+      "Grayhouse",
+      "HarrisX/Harris",
+      "HarrisX/Harris Poll",
+      "High Point University Survey Research Center",
+      "Impact Research/BSP Research",
+      "Impact Research/National Research",
+      "Ipsos",
+      "J.L. Partners",
+      "John Zogby Strategies",
+      "KFF",
+      "Manhattan Institute",
+      "McLaughlin & Associates",
+      "Morning Consult",
+      "NewsNation/Decision Desk HQ",
+      "Noble Predictive Insights",
+      "Normington, Petts & Associates",
+      "Pennsylvania State University McCourtney Institute for Democracy/YouGov",
+      "Public Policy Polling",
+      "Public Religion Research Institute",
+      "Quantus Insights",
+      "RMG Research",
+      "Rasmussen Reports",
+      "RealClear Opinion Research",
+      "Research Co.",
+      "SoCal Strategies",
+      "Survey 160",
+      "Talker Research",
+      "The Bullfinch Group",
+      "The Public Sentiment Institute",
+      "The Winston Group",
+      "TrueDot.ai",
+      "Washington Post/ABC News/Ipsos",
+      "Yale University Institution for Social and Policy Studies",
+      "Yale Youth Poll",
+      "YouGov",
+      "YouGov Blue",
+      "co/efficient"
+    ],
+    "approvalDroppedPollsters": [
+      "A2 Insights",
+      "ActiVote",
+      "American Pulse Research & Polling",
+      "Angus Reid Global",
+      "Big Data Poll",
+      "Change Research",
+      "Civiqs",
+      "Clarity Campaign Labs",
+      "Cygnal",
+      "Echelon Insights",
+      "Echelon Insights/GBAO",
+      "Fabrizio Ward",
+      "Fabrizio, Lee & Associates/Impact Research",
+      "Focaldata",
+      "GBAO Strategies",
+      "Global Strategy Group",
+      "Grayhouse",
+      "HarrisX",
+      "HarrisX/Harris",
+      "HarrisX/Harris Poll",
+      "High Point University Survey Research Center",
+      "Impact Research/National Research",
+      "InsiderAdvantage",
+      "J.L. Partners",
+      "John Zogby Strategies",
+      "Lake Research Partners",
+      "Lord Ashcroft Polls",
+      "McLaughlin & Associates",
+      "Morning Consult",
+      "NewsNation/Decision Desk HQ",
+      "Noble Predictive Insights",
+      "Normington, Petts & Associates",
+      "OnMessage",
+      "Overton Insights/Targoz Market Research",
+      "Public Policy Polling",
+      "Public Religion Research Institute",
+      "Quantus Insights",
+      "RMG Research",
+      "RealClear Opinion Research",
+      "Research Co.",
+      "Schoen Cooperman Research",
+      "SoCal Strategies",
+      "Survey 160",
+      "Susquehanna Polling & Research",
+      "Talker Research",
+      "Targoz Market Research",
+      "Tavern Research",
+      "The Bullfinch Group",
+      "The Public Sentiment Institute",
+      "The Tyson Group",
+      "The Winston Group",
+      "Trafalgar Group",
+      "Trafalgar Group/InsiderAdvantage",
+      "TrueDot.ai",
+      "Yale Youth Poll",
+      "Zogby Analytics",
+      "co/efficient"
+    ]
   }
 }
