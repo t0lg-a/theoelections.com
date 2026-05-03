@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-02T12:03:21.652Z",
+  "updatedAt": "2026-05-03T12:00:01.115Z",
   "approval": [
     {
       "id": "appdonyou99135acd",
@@ -10676,32 +10676,6 @@
       "sponsors": [
         "The Economist"
       ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdontip2fqwep7k",
-      "poll_type": "approval",
-      "sample_size": 1425,
-      "population": "a",
-      "url": "https://tippinsights.com/alls-well-that-begins-well-tipp-poll-confirms-trumps-solid-start/",
-      "created_at": "2025-04-03",
-      "start_date": "2025-03-26",
-      "end_date": "2025-03-28",
-      "pollster": "TIPP Insights",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 44
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 45
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
