@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-04T13:00:43.947Z",
+  "updatedAt": "2026-05-05T12:15:24.696Z",
   "approval": [
     {
       "id": "appdonipsec6c8943",
@@ -12771,6 +12771,34 @@
       "internal": false,
       "partisan": null,
       "subject": "2026"
+    },
+    {
+      "id": "gen202pub024ad9fb",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "rv",
+      "url": "https://www.coindesk.com/policy/2026/05/03/crypto-is-at-the-bottom-of-u-s-voters-priorities-heading-into-the-midterm-coindesk-survey-shows",
+      "created_at": "2026-05-05",
+      "start_date": "2026-04-21",
+      "end_date": "2026-04-27",
+      "pollster": "Public Opinion Strategies",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 44
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "CoinDesk"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
     }
   ],
   "debug": {
@@ -12784,6 +12812,7 @@
       "American Pulse Research & Polling",
       "Big Data Poll",
       "Bowling Green State University/YouGov",
+      "Change Research",
       "Clarity Campaign Labs",
       "Cygnal",
       "Echelon Insights",
