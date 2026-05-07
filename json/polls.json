@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-06T13:08:07.754Z",
+  "updatedAt": "2026-05-07T13:09:22.034Z",
   "approval": [
     {
       "id": "appdonyou8f1ff472",
@@ -52,6 +52,89 @@
       "seat_name": null,
       "sponsors": [
         "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdontip898fd8f9",
+      "poll_type": "approval",
+      "sample_size": 1464,
+      "population": "a",
+      "url": "https://tippinsights.com/for-trump-approval-is-all-about-the-base-as-dems-independent-voters-cool-i-i-tipp-poll",
+      "created_at": "2026-05-06",
+      "start_date": "2026-04-28",
+      "end_date": "2026-05-01",
+      "pollster": "TIPP Insights",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 38
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 54
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Issues & Insights"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmare64b25a2",
+      "poll_type": "approval",
+      "sample_size": 1155,
+      "population": "rv",
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2026/05/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202605011058.pdf",
+      "created_at": "2026-05-06",
+      "start_date": "2026-04-27",
+      "end_date": "2026-04-30",
+      "pollster": "Marist University",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 39
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 59
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmar6c005649",
+      "poll_type": "approval",
+      "sample_size": 1322,
+      "population": "a",
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2026/05/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202605011058.pdf",
+      "created_at": "2026-05-06",
+      "start_date": "2026-04-27",
+      "end_date": "2026-04-30",
+      "pollster": "Marist University",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 37
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 59
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "NPR",
+        "PBS News"
       ],
       "internal": false,
       "partisan": null,
@@ -10737,62 +10820,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouy3wach8g",
-      "poll_type": "approval",
-      "sample_size": 1626,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_S1a74K0.pdf",
-      "created_at": "2025-04-03",
-      "start_date": "2025-03-30",
-      "end_date": "2025-04-01",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 49
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouchzxq6se",
-      "poll_type": "approval",
-      "sample_size": 1465,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econtoplines_S1a74K0.pdf",
-      "created_at": "2025-04-03",
-      "start_date": "2025-03-30",
-      "end_date": "2025-04-01",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 51
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -12855,6 +12882,32 @@
       "internal": false,
       "partisan": null,
       "subject": "2026"
+    },
+    {
+      "id": "gen202mar4b14738d",
+      "poll_type": "generic-ballot",
+      "sample_size": 1155,
+      "population": "rv",
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2026/05/NPR_PBS-News_Marist-Poll_USA-NOS-and-Tables_202605011058.pdf",
+      "created_at": "2026-05-06",
+      "start_date": "2026-04-27",
+      "end_date": "2026-04-30",
+      "pollster": "Marist University",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 52
+        },
+        {
+          "choice": "Rep",
+          "pct": 42
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
     }
   ],
   "debug": {
@@ -12879,6 +12932,7 @@
       "Focaldata",
       "GBAO Strategies",
       "Grayhouse",
+      "HarrisX",
       "HarrisX/Harris",
       "HarrisX/Harris Poll",
       "High Point University Survey Research Center",
