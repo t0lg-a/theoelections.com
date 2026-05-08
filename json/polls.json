@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-07T13:11:19.511Z",
+  "updatedAt": "2026-05-08T12:49:54.387Z",
   "approval": [
     {
       "id": "appdonyou8f1ff472",
@@ -10783,32 +10783,6 @@
         {
           "choice": "Approve",
           "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 53
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonips2wznxzc7",
-      "poll_type": "approval",
-      "sample_size": 1486,
-      "population": "a",
-      "url": "https://www.reuters.com/default/trump-approval-falls-43-lowest-since-returning-office-reutersipsos-poll-finds-2025-04-02/",
-      "created_at": "2025-04-03",
-      "start_date": "2025-03-31",
-      "end_date": "2025-04-02",
-      "pollster": "Ipsos",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
         },
         {
           "choice": "Disapprove",
