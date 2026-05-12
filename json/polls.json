@@ -1,6 +1,34 @@
 {
-  "updatedAt": "2026-05-11T14:00:48.049Z",
+  "updatedAt": "2026-05-12T13:17:07.942Z",
   "approval": [
+    {
+      "id": "appdonipsafb8544e",
+      "poll_type": "approval",
+      "sample_size": 1254,
+      "population": "a",
+      "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-05/Reuters%20Ipsos%20May%20Political%20Update%20Poll%20Topline.pdf",
+      "created_at": "2026-05-12",
+      "start_date": "2026-05-08",
+      "end_date": "2026-05-11",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 36
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 63
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdonyou8f1ff472",
       "poll_type": "approval",
@@ -12933,6 +12961,7 @@
       "SoCal Strategies",
       "Survey 160",
       "Talker Research",
+      "Tavern Research",
       "The Bullfinch Group",
       "The Public Sentiment Institute",
       "The Winston Group",
