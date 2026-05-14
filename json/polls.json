@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-13T13:32:41.810Z",
+  "updatedAt": "2026-05-14T13:09:51.431Z",
   "approval": [
     {
       "id": "appdonipsafb8544e",
@@ -10870,62 +10870,6 @@
       "seat_name": null,
       "sponsors": [
         "WCVB-TV"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouaj3lmfkl",
-      "poll_type": "approval",
-      "sample_size": 1563,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_pXJ0PxA.pdf#page31",
-      "created_at": "2025-04-09",
-      "start_date": "2025-04-05",
-      "end_date": "2025-04-08",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 45
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 52
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyou52b8fj1w",
-      "poll_type": "approval",
-      "sample_size": 1741,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_pXJ0PxA.pdf#page31",
-      "created_at": "2025-04-09",
-      "start_date": "2025-04-05",
-      "end_date": "2025-04-08",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 51
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
       ],
       "internal": false,
       "partisan": null,
