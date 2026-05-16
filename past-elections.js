@@ -1294,8 +1294,8 @@ async function renderPastCountyMap(year, mode, st, d){
       }
       return isFinite(stateMargin) ? marginColor(stateMargin) : "#ead9b5";
     })
-    .attr("stroke", "rgba(255,255,255,0.7)")
-    .attr("stroke-width", 0.5)
+    .attr("stroke", "var(--ink)")
+    .attr("stroke-width", 0.3)
     .attr("vector-effect", "non-scaling-stroke")
     .on("mouseenter", (event, feat) => {
       d3.select(event.currentTarget).attr("stroke","var(--ink)").attr("stroke-width",1.5);
@@ -1331,7 +1331,7 @@ async function renderPastCountyMap(year, mode, st, d){
     })
     .on("mousemove", (event) => positionPastTip(event))
     .on("mouseleave", (event) => {
-      d3.select(event.currentTarget).attr("stroke","rgba(255,255,255,0.7)").attr("stroke-width",0.5);
+      d3.select(event.currentTarget).attr("stroke","var(--ink)").attr("stroke-width",0.3);
       hidePastTip();
     });
 }

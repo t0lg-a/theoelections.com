@@ -31,12 +31,12 @@ function classifyMargin(m){
   return m < 0 ? "Safe D" : "Safe R";
 }
 function classifyColorAttr(cls){
-  if (cls.includes("Safe D"))   return "bg:#182e4d;color:#fff";
-  if (cls.includes("Likely D")) return "bg:#2a4570;color:#fff";
+  if (cls.includes("Safe D"))   return "bg:#182e4d;color:#f4eccf";
+  if (cls.includes("Likely D")) return "bg:#2a4570;color:#f4eccf";
   if (cls.includes("Lean D"))   return "bg:#cfd6e0;color:#182e4d";
   if (cls === "Tossup")         return "bg:#c89c2c;color:#3a2f1f";
   if (cls.includes("Lean R"))   return "bg:#e0c3b8;color:#61201a";
-  if (cls.includes("Likely R")) return "bg:#903629;color:#fff";
+  if (cls.includes("Likely R")) return "bg:#903629;color:#f4eccf";
   return "bg:#61201a;color:#f4eccf";
 }
 
@@ -66,25 +66,23 @@ function winArcSVG(pD, size){
   [0,0.25,0.5,0.75,1].forEach(frac => {
     const ang = -Math.PI + frac * Math.PI;
     const inner = r - 2, outer = r + (frac===0.5?5:3);
-    const s = frac===0.5 ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.1)";
-    const w = frac===0.5 ? 1.2 : 0.8;
-    ticks += `<line x1="${cx+inner*Math.cos(ang)}" y1="${cy+inner*Math.sin(ang)}" x2="${cx+outer*Math.cos(ang)}" y2="${cy+outer*Math.sin(ang)}" stroke="${s}" stroke-width="${w}" stroke-linecap="round"/>`;
+    const s = frac===0.5 ? "var(--ink)" : "var(--rule-soft)";
+    const w = frac===0.5 ? 1 : 0.5;
+    ticks += `<line x1="${cx+inner*Math.cos(ang)}" y1="${cy+inner*Math.sin(ang)}" x2="${cx+outer*Math.cos(ang)}" y2="${cy+outer*Math.sin(ang)}" stroke="${s}" stroke-width="${w}"/>`;
   });
 
   return `<svg viewBox="0 0 ${size} ${totalH}" width="${size}" height="${totalH}" style="overflow:visible">
     <defs>
       <linearGradient id="gaR" x1="0%" y1="50%" x2="50%" y2="50%"><stop offset="0%" stop-color="#e0c3b8"/><stop offset="100%" stop-color="#903629"/></linearGradient>
       <linearGradient id="gaB" x1="50%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#2a4570"/><stop offset="100%" stop-color="#cfd6e0"/></linearGradient>
-      <filter id="nSh"><feDropShadow dx="0" dy="0.5" stdDeviation="1" flood-opacity="0.18"/></filter>
-      <filter id="sGl"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     </defs>
-    <path d="${pathD}" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="${strokeW}" stroke-linecap="round"/>
-    ${seg(rLen)>0?`<path d="${pathD}" fill="none" stroke="url(#gaR)" stroke-width="${strokeW}" stroke-linecap="round" stroke-dasharray="${seg(rLen)} ${sc}" stroke-dashoffset="0" filter="url(#sGl)" opacity="0.85"/>`:""}
-    ${seg(dLen)>0?`<path d="${pathD}" fill="none" stroke="url(#gaB)" stroke-width="${strokeW}" stroke-linecap="round" stroke-dasharray="${seg(dLen)} ${sc}" stroke-dashoffset="${-(rLen+gap/2)}" filter="url(#sGl)" opacity="0.85"/>`:""}
+    <path d="${pathD}" fill="none" stroke="var(--rule-soft)" stroke-width="${strokeW}"/>
+    ${seg(rLen)>0?`<path d="${pathD}" fill="none" stroke="url(#gaR)" stroke-width="${strokeW}" stroke-dasharray="${seg(rLen)} ${sc}" stroke-dashoffset="0"/>`:""}
+    ${seg(dLen)>0?`<path d="${pathD}" fill="none" stroke="url(#gaB)" stroke-width="${strokeW}" stroke-dasharray="${seg(dLen)} ${sc}" stroke-dashoffset="${-(rLen+gap/2)}"/>`:""}
     ${ticks}
-    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" filter="url(#nSh)"/>
-    <circle cx="${cx}" cy="${cy}" r="3.5" fill="var(--ink)"/><circle cx="${cx}" cy="${cy}" r="1.8" fill="white"/>
-    <text x="${cx}" y="${cy+16}" text-anchor="middle" style="font-size:16px;font-weight:900;letter-spacing:-0.04em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;fill:${pctColor}">${pct}%</text>
+    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--ink)" stroke-width="1.5"/>
+    <circle cx="${cx}" cy="${cy}" r="3" fill="var(--ink)"/><circle cx="${cx}" cy="${cy}" r="1.5" fill="var(--paper)"/>
+    <text x="${cx}" y="${cy+16}" text-anchor="middle" style="font-size:18px;font-weight:800;letter-spacing:-0.02em;font-family:'Eczar',Georgia,serif;font-variant-numeric:tabular-nums;fill:${pctColor}">${pct}%</text>
   </svg>`;
 }
 
@@ -1099,10 +1097,8 @@ function miniMeterHTML(label, m, note=null, isFinal=false){
   const left = overflow ? 0 : Math.min(50, p);
   const width = overflow ? 100 : Math.abs(p - 50);
 
-  // Fill rounded end: left side rounded if Dem, right side if Rep
-  const fillRound = (m < 0)
-    ? "border-radius:9999px 0 0 9999px"
-    : "border-radius:0 9999px 9999px 0";
+  // Almanac is paper-flat: square bar ends, no pill rounding.
+  const fillRound = "border-radius:0";
 
   return `
     <div class="${rowCls}">
@@ -1258,7 +1254,7 @@ function drawProbSpark(canvas, values){
   const rootStyle = getComputedStyle(document.documentElement);
   const blue = rootStyle.getPropertyValue("--blue").trim() || "#2a4570";
   const red  = rootStyle.getPropertyValue("--red").trim()  || "#903629";
-  const grid = "rgba(0,0,0,0.08)";
+  const grid = rootStyle.getPropertyValue("--rule-soft").trim() || "#c1ad84";
 
   // grid: 25/50/75%
   ctx.strokeStyle = grid;
@@ -1441,7 +1437,7 @@ function showTooltip(evt, modeKey, key, cachedIndNat){
     <div class="panelHeader">
       <div class="panelNameRow">
         <span class="panelName">${title} <span class="panelUsps">${subtitle}</span></span>
-        <span class="panelClassify" style="background:${clsBg};color:${clsCol};box-shadow:0 1px 3px ${clsBg}44">${cls}</span>
+        <span class="panelClassify" style="background:${clsBg};color:${clsCol};border-radius:0;border:1px solid ${clsBg};box-shadow:none">${cls}</span>
       </div>
       <div class="panelShareBar">
         <div class="panelShareLabels">
@@ -2258,7 +2254,7 @@ function showStateInfoPanel(modeKey, usps){
     <div class="panelHeader">
       <div class="panelNameRow">
         <span class="panelName">${name} <span class="panelUsps">${usps}</span></span>
-        <span class="panelClassify" style="background:${clsBg};color:${clsCol};box-shadow:0 1px 3px ${clsBg}44">${cls}</span>
+        <span class="panelClassify" style="background:${clsBg};color:${clsCol};border-radius:0;border:1px solid ${clsBg};box-shadow:none">${cls}</span>
       </div>
       <div class="panelShareBar">
         <div class="panelShareLabels">
@@ -2361,10 +2357,10 @@ function showCountyTooltip(event, modeKey, usps, countyName){
     if (h.sen18)  rows.push(["'18 Sen",  h.sen18[0],  h.sen18[1]]);
     if (rows.length){
       histHTML = `
-        <div style="margin-top:6px;border-top:1px solid rgba(0,0,0,0.05);padding-top:6px;">
-          <div style="font-size:7px;font-weight:700;color:var(--muted-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Historical</div>
+        <div style="margin-top:6px;border-top:1px solid var(--rule-soft);padding-top:6px;">
+          <div style="font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:3px;">Historical</div>
           <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:2px 8px;font-size:10px;font-variant-numeric:tabular-nums;font-family:var(--mono);">
-            ${rows.map(([label,d,r])=>`<span style="color:var(--muted);font-weight:700;">${label}</span><span style="color:var(--blue);font-weight:700;">${Number(d).toFixed(1)}</span><span style="color:var(--red);font-weight:700;">${Number(r).toFixed(1)}</span>`).join("")}
+            ${rows.map(([label,d,r])=>`<span style="color:var(--muted);">${label}</span><span style="color:var(--blue);font-weight:500;">${Number(d).toFixed(1)}</span><span style="color:var(--red);font-weight:500;">${Number(r).toFixed(1)}</span>`).join("")}
           </div>
         </div>
       `;
