@@ -5576,6 +5576,40 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   var floridaInitDone = false;
   var pollsInitDone = false;
 
+  /* Auto-restore borrowed offscreen nodes.
+     React mounts page components, calls get*Svg() to grab elements from
+     .__legacy_offscreen, and appendChild them into its host. When React
+     unmounts the host (e.g. tab switch), the borrowed nodes vanish with it
+     — so the next mount finds nothing in offscreen and renders blank.
+     Strategy: remember every borrowed node by its source selector. If the
+     node is missing from the document (orphaned with React's old host) on
+     the next call, restore it to its original offscreen parent first. */
+  var __borrowCache = {};       // selectorKey -> { el, parent, next }
+  function __tagBorrow(el, key){
+    if (!el || el.nodeType !== 1) return el;
+    var info = __borrowCache[key];
+    if (!info){
+      var p = el.parentNode;
+      if (p && p.closest && p.closest('.__legacy_offscreen')){
+        __borrowCache[key] = { el: el, parent: p, next: el.nextSibling };
+      }
+    }
+    return el;
+  }
+  function __recoverBorrow(key){
+    var info = __borrowCache[key];
+    if (!info) return null;
+    if (info.el.isConnected) return info.el;
+    if (info.parent && info.parent.isConnected){
+      var ref = (info.next && info.next.parentNode === info.parent) ? info.next : null;
+      try { info.parent.insertBefore(info.el, ref); return info.el; } catch (e) {}
+    }
+    return null;
+  }
+  function __borrow(selector){
+    return __tagBorrow(document.querySelector(selector), selector) || __recoverBorrow(selector);
+  }
+
   function dataReady(){
     if (typeof PRECOMPUTED_ODDS === "undefined") return false;
     var o = PRECOMPUTED_ODDS;
@@ -5632,19 +5666,19 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       marginsByMode[mode] = m; return m;
     }
 
-    function getMapSvg(mode){     return q(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] svg.mapSvg"); }
-    function getComboSvg(mode){   return q(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-combo-svg]"); }
-    function getMapBackBtn(mode){ return q(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-map-back]"); }
-    function getRatingsMapSvg(mode){   return q(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-map]"); }
-    function getRatingsChartSvg(mode){ return q(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-chart]"); }
+    function getMapSvg(mode){     return __borrow(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] svg.mapSvg"); }
+    function getComboSvg(mode){   return __borrow(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-combo-svg]"); }
+    function getMapBackBtn(mode){ return __borrow(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-map-back]"); }
+    function getRatingsMapSvg(mode){   return __borrow(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-map]"); }
+    function getRatingsChartSvg(mode){ return __borrow(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-chart]"); }
 
     /* === v9: Past Elections === */
     function getPastMapSvg(mode){
       // past-elections.js renders into <svg class="mapSvg"> inside [data-past-mode='X']
-      return q(".__legacy_offscreen [data-past-mode='" + mode + "'] svg.mapSvg");
+      return __borrow(".__legacy_offscreen [data-past-mode='" + mode + "'] svg.mapSvg");
     }
     function getPastComboSvg(mode){
-      return q(".__legacy_offscreen [data-past-mode='" + mode + "'] [data-past-combo]");
+      return __borrow(".__legacy_offscreen [data-past-mode='" + mode + "'] [data-past-combo]");
     }
     function setPastChartTab(mode, tab){
       var btn = q(".__legacy_offscreen [data-past-mode='" + mode + "'] [data-past-chart-tab='" + tab + "']");
@@ -5721,10 +5755,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     /* === v10: Swingometer === */
     function getSwingMapSvg(mode){
-      return q(".__legacy_offscreen [data-swing-mode='" + mode + "'] svg.mapSvg");
+      return __borrow(".__legacy_offscreen [data-swing-mode='" + mode + "'] svg.mapSvg");
     }
     function getSwingSimCanvas(mode){
-      return q(".__legacy_offscreen [data-swing-mode='" + mode + "'] [data-swing-sim]");
+      return __borrow(".__legacy_offscreen [data-swing-mode='" + mode + "'] [data-swing-sim]");
     }
     function getSwingSnapshot(mode){
       var col = q(".__legacy_offscreen [data-swing-mode='" + mode + "']");
@@ -5781,7 +5815,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     /* === v11: State Legislatures === */
     function getStateLegsPage(){
-      return document.getElementById("stateLegsPage");
+      return __borrow("#stateLegsPage");
     }
     function ensureStateLegsInited(){
       // state-legs.js auto-inits on DOMContentLoaded; we just need to trigger
@@ -5795,7 +5829,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     /* === v12: Florida Redistricting === */
     function getFloridaPage(){
-      return document.getElementById("flRedistrictingPage");
+      return __borrow("#flRedistrictingPage");
     }
     function ensureFloridaInited(){
       if (floridaInitDone) {
@@ -5822,27 +5856,23 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       return document.getElementById("pollsPage");
     }
     function pollsCard(mode){
-      return q(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "']");
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "']");
     }
     function getPollsCanvas(mode){
       // [data-polls-hist] only exists on the seatsCard row
-      var canvases = document.querySelectorAll(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-hist]");
-      return canvases.length ? canvases[0] : null;
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-hist]");
     }
     function getPollsChartSvg(mode){
-      var svgs = document.querySelectorAll(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-chart]");
-      return svgs.length ? svgs[0] : null;
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-chart]");
     }
     function getPollsMapSvg(mode){
-      var svgs = document.querySelectorAll(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-map]");
-      return svgs.length ? svgs[0] : null;
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-map]");
     }
     function getPollsStateChartSvg(mode){
-      var svgs = document.querySelectorAll(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-state-chart]");
-      return svgs.length ? svgs[0] : null;
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-mode='" + mode + "'] [data-polls-state-chart]");
     }
     function getPollsListEl(){
-      return q(".__legacy_offscreen #pollsPage [data-polls-list]");
+      return __borrow(".__legacy_offscreen #pollsPage [data-polls-list]");
     }
     function setPollsToggle(tab){
       // Toggle buttons are on the GB card; clicking them sets LMODE and re-renders.
