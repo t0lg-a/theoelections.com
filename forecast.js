@@ -31,13 +31,13 @@ function classifyMargin(m){
   return m < 0 ? "Safe D" : "Safe R";
 }
 function classifyColorAttr(cls){
-  if (cls.includes("Safe D"))   return "bg:#1e40af;color:#fff";
-  if (cls.includes("Likely D")) return "bg:#3b82f6;color:#fff";
-  if (cls.includes("Lean D"))   return "bg:#93c5fd;color:#1e3a5f";
-  if (cls === "Tossup")         return "bg:#fbbf24;color:#78350f";
-  if (cls.includes("Lean R"))   return "bg:#fca5a5;color:#7f1d1d";
-  if (cls.includes("Likely R")) return "bg:#ef4444;color:#fff";
-  return "bg:#991b1b;color:#fff";
+  if (cls.includes("Safe D"))   return "bg:#182e4d;color:#fff";
+  if (cls.includes("Likely D")) return "bg:#2a4570;color:#fff";
+  if (cls.includes("Lean D"))   return "bg:#cfd6e0;color:#182e4d";
+  if (cls === "Tossup")         return "bg:#c89c2c;color:#3a2f1f";
+  if (cls.includes("Lean R"))   return "bg:#e0c3b8;color:#61201a";
+  if (cls.includes("Likely R")) return "bg:#903629;color:#fff";
+  return "bg:#61201a;color:#f4eccf";
 }
 
 function winArcSVG(pD, size){
@@ -60,7 +60,7 @@ function winArcSVG(pD, size){
   const ny = cy + nLen * Math.sin(bRad);
   const pathD = `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${cx+r} ${cy}`;
   const totalH = size/2 + strokeW + 22;
-  const pctColor = favored === "D" ? "var(--blue-dark,#1d4ed8)" : "var(--red,#dc2626)";
+  const pctColor = favored === "D" ? "var(--blue-deep, #182e4d)" : "var(--red, #903629)";
 
   let ticks = "";
   [0,0.25,0.5,0.75,1].forEach(frac => {
@@ -73,8 +73,8 @@ function winArcSVG(pD, size){
 
   return `<svg viewBox="0 0 ${size} ${totalH}" width="${size}" height="${totalH}" style="overflow:visible">
     <defs>
-      <linearGradient id="gaR" x1="0%" y1="50%" x2="50%" y2="50%"><stop offset="0%" stop-color="#fca5a5"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
-      <linearGradient id="gaB" x1="50%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#93c5fd"/></linearGradient>
+      <linearGradient id="gaR" x1="0%" y1="50%" x2="50%" y2="50%"><stop offset="0%" stop-color="#e0c3b8"/><stop offset="100%" stop-color="#903629"/></linearGradient>
+      <linearGradient id="gaB" x1="50%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#2a4570"/><stop offset="100%" stop-color="#cfd6e0"/></linearGradient>
       <filter id="nSh"><feDropShadow dx="0" dy="0.5" stdDeviation="1" flood-opacity="0.18"/></filter>
       <filter id="sGl"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     </defs>
@@ -193,13 +193,13 @@ function winProbD_fast(m){
 
 /* ---------- Color ---------- */
 function interpColor(m){
-  if (!isFinite(m)) return "#e5e7eb";
+  if (!isFinite(m)) return "#ead9b5";
 
   const max = 25;
   const a = Math.abs(m);
 
   // Under 2 pts: highlight as "ultra-close" (yellow)
-  if (a < 2.0) return "rgb(253,224,71)"; // ~#fde047
+  if (a < 2.0) return "rgb(200, 156, 44)"; // ~#c89c2c
 
   const t = clamp(a/max, 0, 1);
 
@@ -1256,8 +1256,8 @@ function drawProbSpark(canvas, values){
   }
 
   const rootStyle = getComputedStyle(document.documentElement);
-  const blue = rootStyle.getPropertyValue("--blue").trim() || "#2563eb";
-  const red  = rootStyle.getPropertyValue("--red").trim()  || "#dc2626";
+  const blue = rootStyle.getPropertyValue("--blue").trim() || "#2a4570";
+  const red  = rootStyle.getPropertyValue("--red").trim()  || "#903629";
   const grid = "rgba(0,0,0,0.08)";
 
   // grid: 25/50/75%
@@ -1847,8 +1847,8 @@ function drawSeatSimMini(canvas, hist, controlThreshold){
   const barW = w / n;
 
   const cs = getComputedStyle(document.documentElement);
-  const blue = cs.getPropertyValue("--blue").trim() || "#2563eb";
-  const red  = cs.getPropertyValue("--red").trim()  || "#dc2626";
+  const blue = cs.getPropertyValue("--blue").trim() || "#2a4570";
+  const red  = cs.getPropertyValue("--red").trim()  || "#903629";
   const lineCol = "rgba(31,41,55,0.35)";
   const neutral = "rgba(156,163,175,0.9)";
 
@@ -2169,7 +2169,7 @@ async function zoomToStateCounties(modeKey, usps, stateFips){
         const s = rawD + rawR;
         if (s > 0) return interpColor(100 * rawR / s - 100 * rawD / s);
       }
-      return isFinite(stateMargin) ? interpColor(stateMargin) : "#e5e7eb";
+      return isFinite(stateMargin) ? interpColor(stateMargin) : "#ead9b5";
     })
     .attr("stroke", "white")
     .attr("stroke-width", 0.3)
@@ -2664,7 +2664,7 @@ function recolorMapForMode(modeKey){
 
       if (!ratio){
         this.removeAttribute("display");
-        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
         this.classList.remove("filtered");
         return;
       }
@@ -2672,7 +2672,7 @@ function recolorMapForMode(modeKey){
       const model = getHouseModel(did);
       if (!model){
         this.removeAttribute("display");
-        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
         this.classList.add("filtered");
         return;
       }
@@ -2691,8 +2691,8 @@ function recolorMapForMode(modeKey){
 
     if (!ratio){
       this.removeAttribute("display");
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
-      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb");
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5");
       this.classList.remove("active","filtered");
       return;
     }
@@ -2702,8 +2702,8 @@ function recolorMapForMode(modeKey){
     const model = getStateModel(modeKey, st, IND_CACHE[modeKey]);
     if (!model){
       this.removeAttribute("display");
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
-      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb");
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5");
       this.classList.add("filtered");
       return;
     }
@@ -2983,10 +2983,10 @@ function renderComboChart(modeKey, data, chartMode){
     if (fcS.length){
       const bridgeS = obsS.length ? [obsS[obsS.length-1], ...fcS] : fcS;
       svg.append("path").datum(bridgeS).attr("d",sLineDGen)
-        .attr("fill","none").attr("stroke","#93c5fd").attr("stroke-width",2)
+        .attr("fill","none").attr("stroke","#cfd6e0").attr("stroke-width",2)
         .attr("stroke-dasharray","6 3").attr("opacity",0.85);
       if (sLineRGen) svg.append("path").datum(bridgeS).attr("d",sLineRGen)
-        .attr("fill","none").attr("stroke","#fca5a5").attr("stroke-width",2)
+        .attr("fill","none").attr("stroke","#e0c3b8").attr("stroke-width",2)
         .attr("stroke-dasharray","6 3").attr("opacity",0.85);
 
       const divXs = x(obsS[obsS.length-1].date);
@@ -3052,10 +3052,10 @@ function renderComboChart(modeKey, data, chartMode){
     if (fcP.length){
       const bridgeP = obsP.length ? [obsP[obsP.length-1], ...fcP] : fcP;
       svg.append("path").datum(bridgeP).attr("d",pLineDGen)
-        .attr("fill","none").attr("stroke","#93c5fd").attr("stroke-width",2)
+        .attr("fill","none").attr("stroke","#cfd6e0").attr("stroke-width",2)
         .attr("stroke-dasharray","6 3").attr("opacity",0.85);
       svg.append("path").datum(bridgeP).attr("d",pLineRGen)
-        .attr("fill","none").attr("stroke","#fca5a5").attr("stroke-width",2)
+        .attr("fill","none").attr("stroke","#e0c3b8").attr("stroke-width",2)
         .attr("stroke-dasharray","6 3").attr("opacity",0.85);
 
       const divXp = x(obsP[obsP.length-1].date);

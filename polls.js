@@ -2,7 +2,7 @@
 (function(){
 "use strict";
 
-const FONT = "'Inter',system-ui,-apple-system,sans-serif";
+const FONT = "'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace";
 let pollsInited = false;
 const PUI = {};          // per-mode UI refs
 const PMAP = {};         // per-mode map handles
@@ -215,8 +215,8 @@ function renderApproval(ui){
   const strict=!!GB_SRC.filterStrict;
   const polls=APP_RAW.filter(p=>isAllowedPollster(p.pollster,strict));
   drawMarginTimeline(ui.hist, APP_SERIES.map(d=>({date:d.date,margin:d.a-d.b})));
-  dualScatter(ui.chart, polls.map(p=>({date:p.date,a:p.approve,b:p.disapprove})), APP_SERIES, "App","Dis","#16a34a","var(--red)");
-  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.approve,b:p.disapprove})),"App","Dis","#16a34a","#dc2626");
+  dualScatter(ui.chart, polls.map(p=>({date:p.date,a:p.approve,b:p.disapprove})), APP_SERIES, "App","Dis","var(--approve, #4a7a3a)","var(--red, #903629)");
+  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.approve,b:p.disapprove})),"App","Dis","var(--approve, #4a7a3a)","var(--red, #903629)");
 }
 
 function setNum(ui,a,b,lA,lB){
@@ -238,9 +238,10 @@ function resetPillColor(ui){
   const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color="";
 }
 function greenPill(ui){
+  const APPROVE = "var(--approve, #4a7a3a)";
   const el=ui.dPill?.closest(".metricPill");
-  if(el){el.classList.remove("blue");el.querySelector(".dot").style.background="#16a34a";}
-  const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color="#16a34a";
+  if(el){el.classList.remove("blue");el.querySelector(".dot").style.background=APPROVE;}
+  const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color=APPROVE;
 }
 
 /* ======== MARGIN HISTOGRAM ======== */
@@ -266,8 +267,8 @@ function drawMarginTimeline(canvas,rawPolls){
   if(!days.length)return;
 
   const cs=getComputedStyle(document.documentElement);
-  const bl=cs.getPropertyValue("--blue").trim()||"#2563eb";
-  const rd=cs.getPropertyValue("--red").trim()||"#dc2626";
+  const bl=cs.getPropertyValue("--blue").trim()|| "#2a4570";
+  const rd=cs.getPropertyValue("--red").trim()|| "#903629";
   const mid=H/2;
   // Zero line
   ctx.strokeStyle="rgba(0,0,0,0.12)"; ctx.lineWidth=1;
@@ -306,8 +307,8 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
   const mg={l:38,r:10,t:10,b:26}, iw=W-mg.l-mg.r, ih=H-mg.t-mg.b;
   if(!polls.length)return;
   const cs=getComputedStyle(document.documentElement);
-  const blue=cA||cs.getPropertyValue("--blue").trim()||"#2563eb";
-  const red=cB||cs.getPropertyValue("--red").trim()||"#dc2626";
+  const blue=cA||cs.getPropertyValue("--blue").trim()|| "#2a4570";
+  const red=cB||cs.getPropertyValue("--red").trim()|| "#903629";
   const ad=polls.map(d=>d.date).concat(avg.map(d=>d.date)).filter(Boolean);
   const xE=d3.extent(ad), av=polls.flatMap(d=>[d.a,d.b]);
   const yMn=Math.max(0,d3.min(av)-3), yMx=Math.min(100,d3.max(av)+3);
@@ -338,7 +339,7 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
 function pollTable(el,rows,lA,lB,cA,cB){
   if(!el)return;
   if(!rows.length){el.innerHTML=`<div style="padding:16px;color:var(--muted);font:12px ${FONT}">No polls</div>`;return;}
-  const ca=cA||"#2563eb",cb=cB||"#dc2626";
+  const ca=cA|| "#2a4570",cb=cB|| "#903629";
   let h=`<table style="width:100%;border-collapse:collapse;font:600 11px/1.4 ${FONT};font-variant-numeric:tabular-nums">`;
   h+=`<thead><tr style="background:var(--neutral-bg);font:800 10px/1.4 ${FONT};text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">`;
   h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2">Date</th>`;
@@ -417,9 +418,9 @@ function recolorMap(mk){
   const m=PMAP[mk]; if(!m?.g)return;
   m.g.selectAll("path.state").each(function(){
     const st=this.getAttribute("data-st");
-    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";return;}
+    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";return;}
     const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st];
-    if(!pp||!pp.length){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#f3f4f6";return;}
+    if(!pp||!pp.length){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";return;}
     const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
     let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
     this.style.fill=interpColor((sR/w)-(sD/w));
@@ -467,7 +468,7 @@ function stateScatter(mk,usps){
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50) svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
   const cs=getComputedStyle(document.documentElement);
-  const blue=cs.getPropertyValue("--blue").trim()||"#2563eb",red=cs.getPropertyValue("--red").trim()||"#dc2626";
+  const blue=cs.getPropertyValue("--blue").trim()|| "#2a4570",red=cs.getPropertyValue("--red").trim()|| "#903629";
   svg.selectAll(".dD").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",3.5).attr("fill",blue).attr("opacity",.5);
   svg.selectAll(".dR").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",3.5).attr("fill",red).attr("opacity",.5);
   if(polls.length>=3){

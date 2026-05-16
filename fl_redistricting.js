@@ -58,9 +58,9 @@ async function flLoadCsv(path){
 }
 
 async function flLoadEra(era){
-  const ratiosRows = await flLoadCsv(`fl_ratios_${era}.csv`);
-  const hispRows   = await flLoadCsv(`fl_hispanic_${era}.csv`);
-  const geojson    = await fetch(`fl_districts_${era}.geojson`, {cache:"no-store"}).then(r=>{
+  const ratiosRows = await flLoadCsv(`data/florida/fl_ratios_${era}.csv`);
+  const hispRows   = await flLoadCsv(`data/florida/fl_hispanic_${era}.csv`);
+  const geojson    = await fetch(`data/florida/fl_districts_${era}.geojson`, {cache:"no-store"}).then(r=>{
     if (!r.ok) throw new Error(`fl_districts_${era}.geojson: HTTP ${r.status}`);
     return r.json();
   });
@@ -203,9 +203,9 @@ function flRenderMap(svgEl, projections, era){
     .attr("data-cd", d => d.properties.id)
     .attr("fill", d => {
       const p = projByCd.get(d.properties.id);
-      if (!p) return "var(--neutral-bg, #e5e7eb)";
+      if (!p) return "var(--bg-2, #ead9b5)";
       return (typeof interpColor === "function") ? interpColor(p.margin)
-                                                  : (p.margin < 0 ? "#3b82f6" : "#ef4444");
+                                                  : (p.margin < 0 ? "#2a4570" : "#903629");
     })
     .attr("vector-effect", "non-scaling-stroke")
     .style("cursor", "pointer")
@@ -306,7 +306,7 @@ function flDrawHistoFallback(canvas, dist){
   const max = Math.max(...dist);
   if (max <= 0) return;
   const barW = W / dist.length;
-  const blueColor = getComputedStyle(document.documentElement).getPropertyValue("--blue").trim() || "#2563eb";
+  const blueColor = getComputedStyle(document.documentElement).getPropertyValue("--blue").trim() || "#2a4570";
   ctx.fillStyle = blueColor;
   for (let i=0;i<dist.length;i++){
     const h = (dist[i] / max) * (H - 4);

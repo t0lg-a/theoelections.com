@@ -395,7 +395,7 @@ function swingRecolorHouseMap(gb){
     const ratio = ratios[did];
 
     if (!ratio){
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
       return;
     }
 

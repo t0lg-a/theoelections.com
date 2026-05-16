@@ -268,11 +268,11 @@ function formatMarginDR(m){
   return (m < 0) ? `D+${a.toFixed(1)}` : `R+${a.toFixed(1)}`;
 }
 function marginColor(m){
-  if (!isFinite(m)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+  if (!isFinite(m)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
   const max = 25;
   const a = Math.abs(m);
   // Under 2 pts: tossup yellow
-  if (a < 2.0) return "rgb(253,224,71)";
+  if (a < 2.0) return "rgb(200, 156, 44)";
   const t = clamp(a/max, 0, 1);
   if (m < 0){
     const r = Math.round(248*(1-t) + 37*t);
@@ -503,7 +503,7 @@ function rollingAvg(polls, n){
 }
 
 async function loadPastEntries(year){
-  const file = `${year}_entries.csv`;
+  const file = `data/past/${year}_entries.csv`;
 
 
   try {
@@ -544,7 +544,7 @@ async function loadPastEntries(year){
 }
 
 async function loadPastPresidentialPolls(year){
-  const file = `${year}_presidential_polls.json`;
+  const file = `data/past/${year}_presidential_polls.json`;
   try {
     const j = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
     const polls = (j.polls || []).map(p => ({
@@ -591,7 +591,7 @@ async function loadPastGBPolls(year){
   }
 
   // Fallback: load from file
-  const file = `${year}_gb_polls.json`;
+  const file = `data/past/${year}_gb_polls.json`;
   try {
     const j = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
     const polls = (j.genericBallot || []).map(p => ({
@@ -615,7 +615,7 @@ async function loadPastGBPolls(year){
 }
 
 async function loadPastStatePolls(year){
-  const file = `${year}_state_presidential_polls.csv`;
+  const file = `data/past/${year}_state_presidential_polls.csv`;
   try {
     const txt = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); });
     const rows = d3.csvParse(txt);
@@ -1057,8 +1057,8 @@ function renderPastSim(mode, histData, rule){
   const barW = w / n;
 
   const cs = getComputedStyle(document.documentElement);
-  const blue = cs.getPropertyValue("--blue").trim() || "#2563eb";
-  const red  = cs.getPropertyValue("--red").trim()  || "#dc2626";
+  const blue = cs.getPropertyValue("--blue").trim() || "#2a4570";
+  const red  = cs.getPropertyValue("--red").trim()  || "#903629";
   const lineCol = "rgba(31,41,55,0.35)";
 
   const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
@@ -1183,9 +1183,9 @@ async function renderPastMap(year, mode, d, rule, raceFilter){
     .attr("d", dd => pathGen(dd))
     .attr("fill", dd => {
       const st = _fips(dd.id);
-      if (!st || !d?.ratios[st] || !isContested(st)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+      if (!st || !d?.ratios[st] || !isContested(st)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
       const model = getStateModelPast(year, mode, st);
-      if (!model) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+      if (!model) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
       return marginColor(model.mFinal);
     })
     .on("mouseenter", (event, dd) => {
@@ -1292,7 +1292,7 @@ async function renderPastCountyMap(year, mode, st, d){
         const s = rawD + rawR;
         if (s > 0) return marginColor(100 * rawR / s - 100 * rawD / s);
       }
-      return isFinite(stateMargin) ? marginColor(stateMargin) : "#e5e7eb";
+      return isFinite(stateMargin) ? marginColor(stateMargin) : "#ead9b5";
     })
     .attr("stroke", "rgba(255,255,255,0.7)")
     .attr("stroke-width", 0.5)

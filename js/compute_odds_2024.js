@@ -136,7 +136,7 @@ const DATA = {
 };
 
 function loadEntries() {
-  const text = fs.readFileSync("2024_entries.csv", "utf8");
+  const text = fs.readFileSync("data/past/2024_entries.csv", "utf8");
   const rows = parseCSV(text);
   for (const row of rows) {
     const mode = String(row.mode || "").trim().toLowerCase();
@@ -156,7 +156,7 @@ function loadEntries() {
 
 // Presidential polls → GB series for "president" mode
 function loadPresidentialPolls() {
-  const j = JSON.parse(fs.readFileSync("2024_presidential_polls.json", "utf8"));
+  const j = JSON.parse(fs.readFileSync("data/past/2024_presidential_polls.json", "utf8"));
   const polls = (j.polls || []).map(p => ({
     date: parseDate(p.end_date),
     dem: +p.dem, rep: +p.rep
@@ -168,7 +168,7 @@ function loadPresidentialPolls() {
 
 // Generic ballot polls → GB series for senate/governor/house
 function loadGBPolls() {
-  const j = JSON.parse(fs.readFileSync("2024_gb_polls.json", "utf8"));
+  const j = JSON.parse(fs.readFileSync("data/past/2024_gb_polls.json", "utf8"));
   const polls = (j.genericBallot || []).map(p => ({
     date: parseDate(p.end_date),
     dem: +p.dem, rep: +p.rep
@@ -182,7 +182,7 @@ function loadGBPolls() {
 const STATE_POLLS = { president: {}, senate: {}, governor: {} };
 
 function loadStatePolls() {
-  const text = fs.readFileSync("2024_state_presidential_polls.csv", "utf8");
+  const text = fs.readFileSync("data/past/2024_state_presidential_polls.csv", "utf8");
   const rows = parseCSV(text);
   let count = 0;
   for (const r of rows) {

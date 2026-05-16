@@ -122,7 +122,7 @@ async function redistLoadRatios(path, target){
 
 async function redistLoadHispanic2024(){
   try {
-    const text = await fetch("cd_hispanic_share_2024.csv", {cache:"no-store"}).then(r=>{
+    const text = await fetch("data/house/cd_hispanic_share_2024.csv", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     });
@@ -146,7 +146,7 @@ async function redistLoadHispanic2024(){
    until a separate "before" baseline exists. */
 async function redistLoadHispanicFL(){
   try {
-    const text = await fetch("cd_hispanic_share_fl.csv", {cache:"no-store"}).then(r=>{
+    const text = await fetch("data/florida/cd_hispanic_share_fl.csv", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     });
@@ -170,9 +170,9 @@ async function redistLoadHispanicFL(){
 /* FL ratios loaded into both eras' ratio tables (same data, no "before" yet). */
 async function redistLoadRatiosFL(){
   try {
-    const n24 = await redistLoadRatios("ratios_fl.csv", REDIST_DATA["2024"].ratios);
+    const n24 = await redistLoadRatios("data/florida/ratios_fl.csv", REDIST_DATA["2024"].ratios);
     // Same file, second pass into 2026
-    const text = await fetch("ratios_fl.csv", {cache:"no-store"}).then(r=>r.text());
+    const text = await fetch("data/florida/ratios_fl.csv", {cache:"no-store"}).then(r=>r.text());
     const rows = d3.csvParse(text);
     let n26 = 0;
     for (const r of rows){
@@ -193,7 +193,7 @@ async function redistLoadRatiosFL(){
 
 async function redistLoadFLGeoJSON(){
   try {
-    REDIST_FL_GEOJSON = await fetch("fl_districts.geojson", {cache:"no-store"}).then(r=>{
+    REDIST_FL_GEOJSON = await fetch("data/florida/fl_districts.geojson", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     });
@@ -205,8 +205,8 @@ async function redistLoadFLGeoJSON(){
 
 async function redistLoadSVGs(){
   const [a, b] = await Promise.all([
-    fetch("2024h_filtered.svg", {cache:"no-store"}).then(r=>r.text()),
-    fetch("2026h_filtered.svg", {cache:"no-store"}).then(r=>r.text()),
+    fetch("svg/2024h_filtered.svg", {cache:"no-store"}).then(r=>r.text()),
+    fetch("svg/2026h_filtered.svg", {cache:"no-store"}).then(r=>r.text()),
   ]);
   REDIST_SVG_TEXT["2024"] = a;
   REDIST_SVG_TEXT["2026"] = b;
@@ -215,8 +215,8 @@ async function redistLoadSVGs(){
 async function redistLoadAll(){
   if (REDIST_LOAD_PROMISE) return REDIST_LOAD_PROMISE;
   REDIST_LOAD_PROMISE = (async () => {
-    const n24 = await redistLoadRatios("ratios_2024cd.csv", REDIST_DATA["2024"].ratios);
-    const n26 = await redistLoadRatios("ratios_2026cd.csv", REDIST_DATA["2026"].ratios);
+    const n24 = await redistLoadRatios("data/house/ratios_2024cd.csv", REDIST_DATA["2024"].ratios);
+    const n26 = await redistLoadRatios("data/house/ratios_2026cd.csv", REDIST_DATA["2026"].ratios);
     await redistLoadHispanic2024();
     await redistLoadRatiosFL();
     await redistLoadHispanicFL();

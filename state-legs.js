@@ -37,9 +37,9 @@
       short: 'House',
       sub:   'Lower chambers — district baselines',
       mapLabel: 'State House map',
-      topoUrl:     './sldl_national.topojson',
-      leanCsvUrl:  './national_district_results.csv',
-      hispCsvUrl:  './sldl_hispanic_share.csv',
+      topoUrl:     'data/state-legs/sldl_national.topojson',
+      leanCsvUrl:  'data/state-legs/national_district_results.csv',
+      hispCsvUrl:  'data/state-legs/sldl_hispanic_share.csv',
       topoObject:  'districts',
     },
     sldu: {
@@ -48,9 +48,9 @@
       short: 'Senate',
       sub:   'Upper chambers — district baselines',
       mapLabel: 'State Senate map',
-      topoUrl:     './sldu_with_data.topojson',
+      topoUrl:     'data/state-legs/sldu_with_data.topojson',
       leanCsvUrl:  null,       // data embedded on properties
-      hispCsvUrl:  './sldu_hispanic_share.csv',
+      hispCsvUrl:  'data/state-legs/sldu_hispanic_share.csv',
       topoObject:  'data',
     },
   };
@@ -99,13 +99,13 @@
 
   // --- Ratings + margin coloring ------------------------------
   const RATINGS = [
-    { key:'SD', label:'Safe D', color:'#1e40af', light:false },
-    { key:'LD', label:'Lkly D', color:'#3b82f6', light:false },
-    { key:'TD', label:'Lean D', color:'#93c5fd', light:true  },
-    { key:'TU', label:'Toss',   color:'#fbbf24', light:true  },
-    { key:'TR', label:'Lean R', color:'#fca5a5', light:true  },
-    { key:'LR', label:'Lkly R', color:'#ef4444', light:false },
-    { key:'SR', label:'Safe R', color:'#991b1b', light:false },
+    { key:'SD', label:'Safe D', color:'#182e4d', light:false },
+    { key:'LD', label:'Lkly D', color:'#2a4570', light:false },
+    { key:'TD', label:'Lean D', color:'#cfd6e0', light:true  },
+    { key:'TU', label:'Toss',   color:'#c89c2c', light:true  },
+    { key:'TR', label:'Lean R', color:'#e0c3b8', light:true  },
+    { key:'LR', label:'Lkly R', color:'#903629', light:false },
+    { key:'SR', label:'Safe R', color:'#61201a', light:false },
   ];
   function rateDistrict(m){
     if (m == null || !isFinite(m)) return null;
@@ -742,10 +742,10 @@
       #stateLegsPage .sldlStatePanel .sldlModeToggle button{pointer-events:auto;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
       #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid rgba(0,0,0,0.15);border-radius:4px;overflow:hidden;pointer-events:auto;}
-      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-size:9px;font-weight:800;color:var(--muted,#6b7280);letter-spacing:0.04em;text-transform:uppercase;}
+      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-size:9px;font-weight:800;color:var(--muted, #7a6a4c);letter-spacing:0.04em;text-transform:uppercase;}
       #stateLegsPage .sldlModeToggle button.active{background:var(--ink,#111);color:#fff;}
       #stateLegsPage .sldlMmNote{
-        display:none;font-size:9px;font-weight:700;color:var(--muted,#6b7280);
+        display:none;font-size:9px;font-weight:700;color:var(--muted, #7a6a4c);
         background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.35);
         border-radius:3px;padding:4px 6px;margin:4px 0 8px;letter-spacing:0.01em;
       }
@@ -754,15 +754,15 @@
       #stateLegsPage .sldlOddsRow .cell{background:rgba(0,0,0,0.03);border-radius:4px;padding:5px 6px;text-align:center;}
       #stateLegsPage .sldlOddsRow .lbl{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:1px;}
       #stateLegsPage .sldlOddsRow .val{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;}
-      #stateLegsPage .sldlOddsRow .val.d{color:var(--blue,#2563eb);}
-      #stateLegsPage .sldlOddsRow .val.r{color:var(--red,#dc2626);}
+      #stateLegsPage .sldlOddsRow .val.d{color:var(--blue, #2a4570);}
+      #stateLegsPage .sldlOddsRow .val.r{color:var(--red, #903629);}
       #stateLegsPage .sldlOddsNone{font-size:10px;color:var(--muted);text-align:center;padding:6px 0;font-style:italic;}
       #stateLegsPage .sldlPanelTitle{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;}
       #stateLegsPage .sldlPanelSub{font-size:9px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;}
       #stateLegsPage .sldlSeatLine{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;margin:4px 0 8px;}
-      #stateLegsPage .sldlSeatLine .dSide{color:var(--blue,#2563eb);font-size:12px;}
+      #stateLegsPage .sldlSeatLine .dSide{color:var(--blue, #2a4570);font-size:12px;}
       #stateLegsPage .sldlSeatLine .dSide b{font-size:19px;}
-      #stateLegsPage .sldlSeatLine .rSide{color:var(--red,#dc2626);font-size:12px;}
+      #stateLegsPage .sldlSeatLine .rSide{color:var(--red, #903629);font-size:12px;}
       #stateLegsPage .sldlSeatLine .rSide b{font-size:19px;}
       #stateLegsPage .sldlSeatLine .sep{color:var(--line,rgba(0,0,0,0.2));font-weight:400;}
       #stateLegsPage .sldlRatingBar{display:flex;height:20px;border-radius:3px;overflow:hidden;border:1px solid var(--line,rgba(0,0,0,0.12));}
@@ -776,16 +776,16 @@
       #stateLegsPage .dstName{font-size:11px;font-weight:800;color:var(--ink);margin-bottom:5px;}
       #stateLegsPage .dstRow{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--muted);padding:2px 0;}
       #stateLegsPage .dstRow .v{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:700;}
-      #stateLegsPage .dstRow .v.d{color:var(--blue,#2563eb);}
-      #stateLegsPage .dstRow .v.r{color:var(--red,#dc2626);}
+      #stateLegsPage .dstRow .v.d{color:var(--blue, #2a4570);}
+      #stateLegsPage .dstRow .v.r{color:var(--red, #903629);}
       #stateLegsPage .dstRating{display:inline-block;padding:2px 7px;border-radius:3px;color:#fff;font-weight:800;font-size:9px;letter-spacing:0.03em;text-transform:uppercase;}
       #stateLegsPage .dstRating.light{color:#1f2937;}
       #stateLegsPage .dstWpSection{margin-top:6px;}
       #stateLegsPage .dstWpHeader{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;}
       #stateLegsPage .dstWpLabel{font-size:8px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;}
       #stateLegsPage .dstWpNums{font-size:10px;font-weight:800;font-variant-numeric:tabular-nums;}
-      #stateLegsPage .dstWpNums .d{color:var(--blue,#2563eb);}
-      #stateLegsPage .dstWpNums .r{color:var(--red,#dc2626);margin-left:5px;}
+      #stateLegsPage .dstWpNums .d{color:var(--blue, #2a4570);}
+      #stateLegsPage .dstWpNums .r{color:var(--red, #903629);margin-left:5px;}
       #stateLegsPage .dstSpark{width:100%;height:32px;display:block;border:1px solid var(--line,rgba(0,0,0,0.08));border-radius:2px;}
       #stateLegsPage .modeCol .mapSvg path{cursor:pointer;}
       #stateLegsPage .sldlDataBanner{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:rgba(220,38,38,0.95);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;border-radius:4px;max-width:80%;text-align:center;z-index:10;}
@@ -862,7 +862,7 @@
       }
       #stateLegsPage .sldlStatePanel--senate{
         /* slight visual distinction so users can tell the panels apart at a glance */
-        border-top: 2px solid var(--red, #dc2626);
+        border-top: 2px solid var(--red, #903629);
       }
       html[data-look="riso"] #stateLegsPage .sldlStatePanel--senate{
         border-top: 2px solid var(--text-ink) !important;
@@ -1126,25 +1126,25 @@
   function hex(c){ if(!c) return '#888'; c=c.trim(); if(c.startsWith('#')) return c.length===4?'#'+[...c.slice(1)].map(x=>x+x).join(''):c; const m=c.match(/(\d+)[,\s]+(\d+)[,\s]+(\d+)/); return m?'#'+[m[1],m[2],m[3]].map(v=>(+v).toString(16).padStart(2,'0')).join(''):'#888'; }
   function mix(a,b,k){ const pa=a.match(/\w\w/g).map(h=>parseInt(h,16)); const pb=b.match(/\w\w/g).map(h=>parseInt(h,16)); return '#'+pa.map((v,i)=>Math.round(v+(pb[i]-v)*k).toString(16).padStart(2,'0')).join(''); }
   function marginColor(m){
-    if (m==null||!isFinite(m)) return '#d0d0d0';
-    if (Math.abs(m) <= 2.5) return '#fbbf24';
+    if (m==null||!isFinite(m)) return '#ead9b5';
+    if (Math.abs(m) <= 2.5) return '#c89c2c';
     const cs=getComputedStyle(document.documentElement);
-    const blue=hex(cs.getPropertyValue('--blue')||'#2563eb');
-    const red =hex(cs.getPropertyValue('--red') ||'#dc2626');
+    const blue=hex(cs.getPropertyValue('--blue')|| '#2a4570');
+    const red =hex(cs.getPropertyValue('--red') || '#903629');
     const t=Math.max(-1,Math.min(1,m/40));
     return t>=0?mix('#f4f4f4',blue,t):mix('#f4f4f4',red,-t);
   }
 
   let fillMode = 'model';
-  function ratingFillFor(m){ const r = rateDistrict(m); return r ? r.color : '#d0d0d0'; }
+  function ratingFillFor(m){ const r = rateDistrict(m); return r ? r.color : '#ead9b5'; }
   function fillForChamber(chamber, m, props){
     if (props){
       const notUp = NOT_UP_SET(chamber);
-      if (notUp.has(props.state_abbr)) return '#e5e7eb';
+      if (notUp.has(props.state_abbr)) return '#ead9b5';
       // Per-district stagger gray — individual seats not up this cycle
-      if (!isDistrictUp2026(chamber, props)) return '#e5e7eb';
+      if (!isDistrictUp2026(chamber, props)) return '#ead9b5';
     }
-    if (m == null || !isFinite(m)) return '#d0d0d0';
+    if (m == null || !isFinite(m)) return '#ead9b5';
     return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
   }
 
@@ -1182,7 +1182,7 @@
     const r = rateDistrict(m);
     const fm = fmtMargin(m);
     const wpD = Math.round(winProbD(m) * 100);
-    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue,#2563eb)' : 'var(--red,#dc2626)');
+    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue, #2a4570)' : 'var(--red, #903629)');
     el.innerHTML = `
       <div style="font-weight:800;font-size:12px;margin-bottom:4px;">
         ${props.state_abbr} · ${props.NAMELSAD || 'District'}
@@ -1242,14 +1242,14 @@
     demArea += `L ${W} ${H} Z`;
     const mid = yOf(0.5);
     const cs = getComputedStyle(document.documentElement);
-    const blueC = (cs.getPropertyValue('--blue')||'#2563eb').trim();
-    const redC  = (cs.getPropertyValue('--red') ||'#dc2626').trim();
+    const blueC = (cs.getPropertyValue('--blue')|| '#2a4570').trim();
+    const redC  = (cs.getPropertyValue('--red') || '#903629').trim();
     return `
       <svg class="dstSpark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
         <rect x="0" y="0" width="${W}" height="${H}" fill="${redC}" opacity="0.08"/>
         <rect x="0" y="0" width="${W}" height="${mid}" fill="${blueC}" opacity="0.10"/>
         <path d="${demArea}" fill="${blueC}" opacity="0.35"/>
-        <line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#9ca3af" stroke-width="0.5" stroke-dasharray="2,2"/>
+        <line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#a89773" stroke-width="0.5" stroke-dasharray="2,2"/>
         <path d="${line}" fill="none" stroke="${blueC}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
       </svg>`;
   }

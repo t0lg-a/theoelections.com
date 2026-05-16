@@ -2,13 +2,13 @@
 (function(){
 
 const RTG_COLORS = {
-  "Safe D":   "#1e40af",
-  "Likely D": "#2563eb",
-  "Lean D":   "#93c5fd",
-  "Tossup":   "#fde047",
-  "Lean R":   "#fca5a5",
-  "Likely R": "#dc2626",
-  "Safe R":   "#991b1b"
+  "Safe D":   "var(--blue-deep, #182e4d)",
+  "Likely D": "var(--blue, #2a4570)",
+  "Lean D":   "var(--blue-soft, #cfd6e0)",
+  "Tossup":   "var(--yellow, #c89c2c)",
+  "Lean R":   "var(--red-soft, #e0c3b8)",
+  "Likely R": "var(--red, #903629)",
+  "Safe R":   "var(--red-deep, #61201a)"
 };
 const RTG_ORDER = ["Safe D","Likely D","Lean D","Tossup","Lean R","Likely R","Safe R"];
 const RTG_LABELS = ["Safe D","Likely D","Lean D","Tossup","Lean R","Likely R","Safe R"];
@@ -102,12 +102,7 @@ function renderRatingBar(mode, counts){
   const baseD = rules?.baseD || 0;
   const baseR = rules?.baseR || 0;
 
-  const numColor = (k) => {
-    if (k === "Tossup") return "#a16207";
-    if (k === "Lean D") return "#60a5fa";
-    if (k === "Lean R") return "#f87171";
-    return RTG_COLORS[k];
-  };
+  const numColor = (k) => RTG_COLORS[k];
   const numSpan = (k) => {
     const n = counts[k] || 0;
     return `<span class="rtgNum" style="color:${numColor(k)}">${n}</span>`;
@@ -120,7 +115,7 @@ function renderRatingBar(mode, counts){
 
   const dPart = incD + dTiers.map(numSpan).join(sep);
   const rPart = rTiers.map(numSpan).join(sep) + incR;
-  const tPart = `<span class="rtgNum" style="color:#a16207">${counts["Tossup"]||0}</span>`;
+  const tPart = `<span class="rtgNum" style="color:${RTG_COLORS['Tossup']}">${counts["Tossup"]||0}</span>`;
 
   ui.countsEl.innerHTML = dPart + `<div class="divider"></div>` + tPart + `<div class="divider"></div>` + rPart;
 
@@ -140,7 +135,7 @@ function renderRatingBar(mode, counts){
       if (!n) return "";
       const pct = (n / total * 100);
       const shortLabel = k.replace("Likely ","Lkly ").replace("Tossup","Toss");
-      const lblColor = (k === "Safe D") ? "#1e40af" : (k === "Safe R") ? "#991b1b" : (k === "Tossup") ? "#a16207" : (k === "Lean D") ? "#3b82f6" : (k === "Lean R") ? "#ef4444" : RTG_COLORS[k];
+      const lblColor = RTG_COLORS[k];
       return `<div class="rlbl" style="flex:${pct};color:${lblColor}">${pct > 6 ? shortLabel : ""}</div>`;
     }).join("");
   }
@@ -444,13 +439,13 @@ function recolorRtgMap(modeKey, perRace){
     m.gRoot.selectAll(".district").each(function(){
       const did = this.getAttribute("data-did");
       const info = perRace[did];
-      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
     });
   } else {
     m.gRoot.selectAll("path.state").each(function(){
       const st = this.getAttribute("data-st");
       const info = perRace[st];
-      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()||"#e5e7eb";
+      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
     });
   }
 }
@@ -509,7 +504,7 @@ function renderRtgChart(modeKey, chartMode){
 
     const stack = d3.stack().keys(["D","T","R"]).value((d, key) => d[key] || 0);
     const stacked = stack(faceData);
-    const faceColors = { D: "var(--blue)", T: "#fde047", R: "var(--red)" };
+    const faceColors = { D: "var(--blue)", T: "#c89c2c", R: "var(--red)" };
 
     const area = d3.area()
       .x(d => x(d.data.date))
@@ -577,7 +572,7 @@ function renderRtgChart(modeKey, chartMode){
         const rC = (d.counts["Safe R"]||0)+(d.counts["Likely R"]||0)+(d.counts["Lean R"]||0);
         const tC = d.counts["Tossup"]||0;
         html += `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stLbl">D</span><span class="stVal">${dC}</span></div>`;
-        html += `<div class="stRow"><span class="stDot" style="background:#fde047"></span><span class="stLbl">T</span><span class="stVal">${tC}</span></div>`;
+        html += `<div class="stRow"><span class="stDot" style="background:#c89c2c"></span><span class="stLbl">T</span><span class="stVal">${tC}</span></div>`;
         html += `<div class="stRow"><span class="stDot" style="background:var(--red)"></span><span class="stLbl">R</span><span class="stVal">${rC}</span></div>`;
       } else {
         for (const k of RTG_ORDER){
