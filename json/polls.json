@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-15T13:10:06.472Z",
+  "updatedAt": "2026-05-16T12:09:47.041Z",
   "approval": [
     {
       "id": "appdonipsafb8544e",
@@ -10789,32 +10789,6 @@
       "sponsors": [
         "CBS News"
       ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouiy2gr1ux",
-      "poll_type": "approval",
-      "sample_size": 1151,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/Trump_s_Presidency_poll_results.pdf",
-      "created_at": "2025-04-10",
-      "start_date": "2025-04-07",
-      "end_date": "2025-04-10",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
