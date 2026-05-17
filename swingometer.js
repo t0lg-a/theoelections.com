@@ -262,7 +262,7 @@ async function initSwingHouseMap(ui){
   // Reuse cached SVG text from forecast.js, or load it
   if (!HOUSE_SVG_TEXT){
     try {
-      HOUSE_SVG_TEXT = await fetch("/svg/house.svg", {cache:"no-store"}).then(r=>{
+      HOUSE_SVG_TEXT = await fetch("svg/house.svg", {cache:"no-store"}).then(r=>{
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.text();
       });
