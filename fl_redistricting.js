@@ -58,9 +58,9 @@ async function flLoadCsv(path){
 }
 
 async function flLoadEra(era){
-  const ratiosRows = await flLoadCsv(`data/florida/fl_ratios_${era}.csv`);
-  const hispRows   = await flLoadCsv(`data/florida/fl_hispanic_${era}.csv`);
-  const geojson    = await fetch(`data/florida/fl_districts_${era}.geojson`, {cache:"no-store"}).then(r=>{
+  const ratiosRows = await flLoadCsv(`/data/florida/fl_ratios_${era}.csv`);
+  const hispRows   = await flLoadCsv(`/data/florida/fl_hispanic_${era}.csv`);
+  const geojson    = await fetch(`/data/florida/fl_districts_${era}.geojson`, {cache:"no-store"}).then(r=>{
     if (!r.ok) throw new Error(`fl_districts_${era}.geojson: HTTP ${r.status}`);
     return r.json();
   });
