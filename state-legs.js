@@ -37,9 +37,9 @@
       short: 'House',
       sub:   'Lower chambers — district baselines',
       mapLabel: 'State House map',
-      topoUrl:     'data/state-legs/sldl_national.topojson',
-      leanCsvUrl:  'data/state-legs/national_district_results.csv',
-      hispCsvUrl:  'data/state-legs/sldl_hispanic_share.csv',
+      topoUrl:     '/data/state-legs/sldl_national.topojson',
+      leanCsvUrl:  '/data/state-legs/national_district_results.csv',
+      hispCsvUrl:  '/data/state-legs/sldl_hispanic_share.csv',
       topoObject:  'districts',
     },
     sldu: {
@@ -48,9 +48,9 @@
       short: 'Senate',
       sub:   'Upper chambers — district baselines',
       mapLabel: 'State Senate map',
-      topoUrl:     'data/state-legs/sldu_with_data.topojson',
+      topoUrl:     '/data/state-legs/sldu_with_data.topojson',
       leanCsvUrl:  null,       // data embedded on properties
-      hispCsvUrl:  'data/state-legs/sldu_hispanic_share.csv',
+      hispCsvUrl:  '/data/state-legs/sldu_hispanic_share.csv',
       topoObject:  'data',
     },
   };
@@ -592,7 +592,7 @@
   async function loadGbHistory(){
     if (gbHistory) return;
     try {
-      const res = await fetch('json/polls.json', { cache:'no-store' });
+      const res = await fetch('/json/polls.json', { cache:'no-store' });
       if (!res.ok) throw new Error('gb ' + res.status);
       const j = await res.json();
       const gb = Array.isArray(j.genericBallot) ? j.genericBallot : [];
