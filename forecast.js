@@ -2228,6 +2228,42 @@ function setupMapControlBars(){
   }
 }
 
+function _visibleMapHostFor(modeKey){
+  // The visible React app renders three .mapHost slots in column order
+  // (senate, governor, house). Match by index since the visible DOM has no
+  // data-mode attribute.
+  const order = ["senate","governor","house"];
+  const idx = order.indexOf(modeKey);
+  if (idx < 0) return null;
+  const hosts = document.querySelectorAll("#app .mapHost, #app .mapHostWrap .mapHost");
+  return hosts[idx] || null;
+}
+
+function _mirrorStateInfoPanel(modeKey, panel){
+  const host = _visibleMapHostFor(modeKey);
+  if (!host) return;
+  const wrap = host.closest(".mapHostWrap") || host.parentElement;
+  if (!wrap) return;
+  if (getComputedStyle(wrap).position === "static") wrap.style.position = "relative";
+  let mirror = wrap.querySelector("[data-state-panel-mirror]");
+  if (!mirror) {
+    mirror = document.createElement("div");
+    mirror.className = "stateInfoPanel";
+    mirror.setAttribute("data-state-panel-mirror", modeKey);
+    wrap.appendChild(mirror);
+  }
+  mirror.innerHTML = panel.innerHTML;
+  mirror.classList.add("visible");
+}
+
+function _hideMirrorPanel(modeKey){
+  const host = _visibleMapHostFor(modeKey);
+  if (!host) return;
+  const wrap = host.closest(".mapHostWrap") || host.parentElement;
+  const mirror = wrap && wrap.querySelector("[data-state-panel-mirror]");
+  if (mirror) mirror.classList.remove("visible");
+}
+
 function showStateInfoPanel(modeKey, usps){
   const root = document.querySelector(`.modeCol[data-mode='${modeKey}']`);
   if (!root) return;
@@ -2291,6 +2327,11 @@ function showStateInfoPanel(modeKey, usps){
   `;
 
   panel.classList.add("visible");
+  // Mirror the panel into the visible React-rendered map host: the offscreen
+  // panel is rendered but lives at left:-100000px alongside the rest of the
+  // legacy DOM. The bridge teleports the SVG but not its sibling panel, so
+  // we duplicate the populated panel HTML into the visible map's wrapper.
+  _mirrorStateInfoPanel(modeKey, panel);
 
   requestAnimationFrame(() => {
     const canvas = panel.querySelector("[data-panel-spark]");
@@ -2298,6 +2339,8 @@ function showStateInfoPanel(modeKey, usps){
     const gbSub = (GB_SRC.series || []).slice();
     const vals = computeWinProbSeries(modeKey, usps, IND_CACHE[modeKey], gbSub);
     drawProbSpark(canvas, vals);
+    // Re-mirror so the freshly-drawn canvas is reflected in the visible copy.
+    _mirrorStateInfoPanel(modeKey, panel);
   });
 }
 
@@ -2306,6 +2349,7 @@ function hideStateInfoPanel(modeKey){
   if (!root) return;
   const panel = root.querySelector("[data-state-panel]");
   if (panel) panel.classList.remove("visible");
+  _hideMirrorPanel(modeKey);
 }
 
 function showCountyTooltip(event, modeKey, usps, countyName){
