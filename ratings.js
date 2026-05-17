@@ -192,7 +192,7 @@ async function initRtgMap(modeKey){
       const name = USPS_TO_NAME[st] || st;
       const rating = info ? info.rating : "—";
       const color = info ? RTG_COLORS[rating] : "var(--muted)";
-      showSimTip(event, `<span style="font-weight:900">${name}</span> <span style="color:${color};font-weight:800">${rating}</span>`);
+      showSimTip(event, `<span style="font-family:var(--display);font-weight:600">${name}</span> <span style="font-family:var(--mono);color:${color};font-weight:500;text-transform:uppercase;letter-spacing:0.14em">${rating}</span>`);
     })
     .on("mousemove", (event) => {
       const el = document.getElementById("simTip");
@@ -263,7 +263,7 @@ async function initRtgHouseMap(ui, modeKey){
       const name = meta ? houseDistrictName(meta.state, meta.cd) : did;
       const rating = info ? info.rating : "—";
       const color = info ? RTG_COLORS[rating] : "var(--muted)";
-      showSimTip(event, `<span style="font-weight:900">${name}</span> <span style="color:${color};font-weight:800">${rating}</span>`);
+      showSimTip(event, `<span style="font-family:var(--display);font-weight:600">${name}</span> <span style="font-family:var(--mono);color:${color};font-weight:500;text-transform:uppercase;letter-spacing:0.14em">${rating}</span>`);
     })
     .on("mousemove", (event) => {
       const el = document.getElementById("simTip");

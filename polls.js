@@ -271,7 +271,7 @@ function drawMarginTimeline(canvas,rawPolls){
   const rd=cs.getPropertyValue("--red").trim()|| "#903629";
   const mid=H/2;
   // Zero line
-  ctx.strokeStyle="rgba(0,0,0,0.12)"; ctx.lineWidth=1;
+  ctx.strokeStyle=cs.getPropertyValue("--rule-soft").trim()||"#c1ad84"; ctx.lineWidth=1;
   ctx.beginPath(); ctx.moveTo(0,mid); ctx.lineTo(W,mid); ctx.stroke();
   // Extend to today
   const minD=days[0].date;

@@ -226,7 +226,7 @@ function flShowTooltip(evt, proj, era){
   if (typeof tip === "undefined" || !tip || !proj) return;
   const isDem = proj.margin <= 0;
   const cls = (typeof classifyMargin === "function") ? classifyMargin(proj.margin) : "";
-  const clsStyle = (typeof classifyColorAttr === "function") ? classifyColorAttr(cls) : "bg:#999;color:#fff";
+  const clsStyle = (typeof classifyColorAttr === "function") ? classifyColorAttr(cls) : "bg:#7a6a4c;color:#f4eccf";
   const bgParts = clsStyle.split(";");
   const clsBg = (bgParts[0]||"").replace("bg:","");
   const clsCol = (bgParts[1]||"").replace("color:","");
@@ -243,7 +243,7 @@ function flShowTooltip(evt, proj, era){
     <div class="panelHeader">
       <div class="panelNameRow">
         <span class="panelName">FL-${String(proj.cd).padStart(2,"0")}</span>
-        <span class="panelClassify" style="background:${clsBg};color:${clsCol};box-shadow:0 1px 3px ${clsBg}44">${cls}</span>
+        <span class="panelClassify" style="background:${clsBg};color:${clsCol};border-radius:0;border:1px solid ${clsBg};box-shadow:none">${cls}</span>
       </div>
       <div style="margin-top:4px;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;">${eraLabel}</div>
       ${hispLine}
