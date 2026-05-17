@@ -1063,13 +1063,17 @@ function PastElectionsView() {
     };
     window.addEventListener("past-ready", onReady);
     window.addEventListener("past-year-changed", onReady);
-    // First-load: try once after a tick
+    // First-load: try once after a tick.
+    // Require the svg to have children — an empty svg means past-elections.js
+    // hasn't painted yet; teleporting it would defeat that paint.
     setTimeout(function () {
       var _window$__forecast21;
       // Maybe already-rendered from default 2025 init
       refreshSnapshots();
       var fn = (_window$__forecast21 = window.__forecast) === null || _window$__forecast21 === void 0 ? void 0 : _window$__forecast21.getPastMapSvg;
-      if (typeof fn === "function" && fn("president")) setReady(true);
+      if (typeof fn !== "function") return;
+      var s = fn("president");
+      if (s && s.children && s.children.length > 0) setReady(true);
     }, 300);
     return function () {
       window.removeEventListener("past-ready", onReady);
@@ -1357,12 +1361,16 @@ function SwingometerView() {
       setTimeout(refreshSnapshots, 50);
     };
     window.addEventListener("swing-ready", onReady);
-    // Maybe already-rendered (e.g., user came back to this tab)
+    // Maybe already-rendered (e.g., user came back to this tab).
+    // Require the svg to have children — an empty svg means initSwingMap
+    // hasn't painted yet; teleporting it would defeat that paint.
     setTimeout(function () {
       var _window$__forecast28;
       refreshSnapshots();
       var fn = (_window$__forecast28 = window.__forecast) === null || _window$__forecast28 === void 0 ? void 0 : _window$__forecast28.getSwingMapSvg;
-      if (typeof fn === "function" && fn("senate")) setReady(true);
+      if (typeof fn !== "function") return;
+      var s = fn("senate");
+      if (s && s.children && s.children.length > 0) setReady(true);
     }, 300);
     return function () {
       return window.removeEventListener("swing-ready", onReady);
@@ -1420,30 +1428,42 @@ function SwingometerView() {
 function StateLegsView() {
   var hostRef = useRef(null);
   useEffect(function () {
-    var _window$__forecast30, _window$__forecast30$, _window$__forecast31;
     if (!hostRef.current) return;
-    var page = (_window$__forecast30 = window.__forecast) === null || _window$__forecast30 === void 0 || (_window$__forecast30$ = _window$__forecast30.getStateLegsPage) === null || _window$__forecast30$ === void 0 ? void 0 : _window$__forecast30$.call(_window$__forecast30);
-    if (!page) return;
-    var originalParent = page.parentNode;
-    var originalNextSibling = page.nextSibling;
-    var originalDisplay = page.style.display;
-
-    // Teleport into Almanac
-    hostRef.current.appendChild(page);
-
-    // Trigger state-legs.js's load (sets display:'grid', loads chamber, renders)
-    if (typeof ((_window$__forecast31 = window.__forecast) === null || _window$__forecast31 === void 0 ? void 0 : _window$__forecast31.ensureStateLegsInited) === "function") {
-      window.__forecast.ensureStateLegsInited();
+    var cancelled = false;
+    var teleported = null, savedParent = null, savedNext = null, savedDisplay = null;
+    function attempt() {
+      if (cancelled || teleported || !hostRef.current) return false;
+      var F = window.__forecast;
+      var page = (F && typeof F.getStateLegsPage === "function") ? F.getStateLegsPage() : null;
+      if (!page) return false;
+      savedParent = page.parentNode;
+      savedNext = page.nextSibling;
+      savedDisplay = page.style.display;
+      hostRef.current.appendChild(page);
+      teleported = page;
+      if (typeof F.ensureStateLegsInited === "function") {
+        F.ensureStateLegsInited();
+      }
+      return true;
+    }
+    var intervalId = null;
+    if (!attempt()) {
+      var tries = 0;
+      intervalId = setInterval(function () {
+        if (cancelled) { clearInterval(intervalId); return; }
+        if (attempt() || ++tries > 80) clearInterval(intervalId);
+      }, 100);
     }
     return function () {
-      // Teleport back to offscreen on unmount
-      if (originalParent && page.parentNode !== originalParent) {
-        if (originalNextSibling && originalNextSibling.parentNode === originalParent) {
-          originalParent.insertBefore(page, originalNextSibling);
+      cancelled = true;
+      if (intervalId) clearInterval(intervalId);
+      if (teleported && savedParent && teleported.parentNode !== savedParent) {
+        if (savedNext && savedNext.parentNode === savedParent) {
+          savedParent.insertBefore(teleported, savedNext);
         } else {
-          originalParent.appendChild(page);
+          savedParent.appendChild(teleported);
         }
-        page.style.display = originalDisplay || "none";
+        teleported.style.display = savedDisplay || "none";
       }
     };
   }, []);
@@ -1462,30 +1482,47 @@ function StateLegsView() {
 function FloridaView() {
   var hostRef = useRef(null);
   useEffect(function () {
-    var _window$__forecast32, _window$__forecast32$, _window$__forecast33;
     if (!hostRef.current) return;
-    var page = (_window$__forecast32 = window.__forecast) === null || _window$__forecast32 === void 0 || (_window$__forecast32$ = _window$__forecast32.getFloridaPage) === null || _window$__forecast32$ === void 0 ? void 0 : _window$__forecast32$.call(_window$__forecast32);
-    if (!page) return;
-    var originalParent = page.parentNode;
-    var originalNextSibling = page.nextSibling;
-    hostRef.current.appendChild(page);
-    page.style.display = "";
-    if (typeof ((_window$__forecast33 = window.__forecast) === null || _window$__forecast33 === void 0 ? void 0 : _window$__forecast33.ensureFloridaInited) === "function") {
-      window.__forecast.ensureFloridaInited();
+    var cancelled = false;
+    var teleported = null, savedParent = null, savedNext = null;
+    function attempt() {
+      if (cancelled || teleported || !hostRef.current) return false;
+      var F = window.__forecast;
+      var page = (F && typeof F.getFloridaPage === "function") ? F.getFloridaPage() : null;
+      if (!page) return false;
+      savedParent = page.parentNode;
+      savedNext = page.nextSibling;
+      hostRef.current.appendChild(page);
+      teleported = page;
+      page.style.display = "";
+      if (typeof F.ensureFloridaInited === "function") {
+        F.ensureFloridaInited();
+      }
+      requestAnimationFrame(function () {
+        var F2 = window.__forecast;
+        if (F2 && typeof F2.triggerResize === "function") F2.triggerResize();
+        else window.dispatchEvent(new Event("resize"));
+      });
+      return true;
     }
-    // Nudge the FL resize observer so cards re-render at the new container size.
-    requestAnimationFrame(function () {
-      var _window$__forecast34;
-      if (typeof ((_window$__forecast34 = window.__forecast) === null || _window$__forecast34 === void 0 ? void 0 : _window$__forecast34.triggerResize) === "function") window.__forecast.triggerResize();else window.dispatchEvent(new Event("resize"));
-    });
+    var intervalId = null;
+    if (!attempt()) {
+      var tries = 0;
+      intervalId = setInterval(function () {
+        if (cancelled) { clearInterval(intervalId); return; }
+        if (attempt() || ++tries > 80) clearInterval(intervalId);
+      }, 100);
+    }
     return function () {
-      if (originalParent && page.parentNode !== originalParent) {
-        if (originalNextSibling && originalNextSibling.parentNode === originalParent) {
-          originalParent.insertBefore(page, originalNextSibling);
+      cancelled = true;
+      if (intervalId) clearInterval(intervalId);
+      if (teleported && savedParent && teleported.parentNode !== savedParent) {
+        if (savedNext && savedNext.parentNode === savedParent) {
+          savedParent.insertBefore(teleported, savedNext);
         } else {
-          originalParent.appendChild(page);
+          savedParent.appendChild(teleported);
         }
-        page.style.display = "none";
+        teleported.style.display = "none";
       }
     };
   }, []);
@@ -2119,6 +2156,27 @@ function ProjectsView() {
 }
 
 /* ========== TopBar + ForecastToggle ========== */
+var TAB_SLUGS = {
+  "Model": "model",
+  "Ratings": "ratings",
+  "Florida": "florida",
+  "Polls": "polls",
+  "Swingometer": "swingometer",
+  "Past Elections": "past-elections",
+  "State Legs.": "state-legs",
+  "Projects": "projects",
+  "Methodology": "methodology"
+};
+var TAB_BY_SLUG = (function () {
+  var m = {};
+  for (var k in TAB_SLUGS) m[TAB_SLUGS[k]] = k;
+  return m;
+})();
+function tabFromPathname() {
+  if (typeof window === "undefined") return null;
+  var path = String(window.location.pathname || "").replace(/^\/+|\/+$/g, "");
+  return TAB_BY_SLUG[path] || null;
+}
 function TopBar(_ref25) {
   var activeTab = _ref25.activeTab,
     setActiveTab = _ref25.setActiveTab;
@@ -2152,14 +2210,24 @@ function TopBar(_ref25) {
   }, "Election Forecast '26")), /*#__PURE__*/React.createElement("nav", {
     className: "nav"
   }, tabs.map(function (t, i) {
+    var slug = TAB_SLUGS[t] || "";
+    var href = slug ? "/" + slug + "/" : "#";
     return /*#__PURE__*/React.createElement(React.Fragment, {
       key: t
     }, i > 0 && /*#__PURE__*/React.createElement("span", {
       className: "dot"
     }, "\xB7"), /*#__PURE__*/React.createElement("a", {
       className: activeTab === t ? "active" : "",
-      onClick: function onClick() {
-        return setActiveTab(t);
+      href: href,
+      onClick: function onClick(e) {
+        if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1 || e.button === 2)) return;
+        if (e && typeof e.preventDefault === "function") e.preventDefault();
+        setActiveTab(t);
+        try {
+          if (typeof window !== "undefined" && !window.__PRERENDER_MODE && window.history && typeof window.history.pushState === "function") {
+            window.history.pushState({ tab: t }, "", href);
+          }
+        } catch (err) {}
       }
     }, t));
   })), /*#__PURE__*/React.createElement("div", {
@@ -2212,7 +2280,9 @@ function App() {
     _useTweaks2 = _slicedToArray(_useTweaks, 2),
     t = _useTweaks2[0],
     setTweak = _useTweaks2[1];
-  var _initialTab = (typeof window !== "undefined" && typeof window.__INITIAL_TAB === "string") ? window.__INITIAL_TAB : "Model";
+  var _initialTab = (typeof window !== "undefined" && typeof window.__INITIAL_TAB === "string" && TAB_SLUGS[window.__INITIAL_TAB])
+    ? window.__INITIAL_TAB
+    : (tabFromPathname() || "Model");
   var _useState37 = useState(_initialTab),
     _useState38 = _slicedToArray(_useState37, 2),
     activeTab = _useState38[0],
@@ -2313,22 +2383,75 @@ function App() {
   }, []);
   useEffect(function () {
     if (typeof window === "undefined") return;
+    var handler = function () {
+      var t = tabFromPathname();
+      if (t) setActiveTab(t);
+    };
+    window.addEventListener("popstate", handler);
+    return function () { window.removeEventListener("popstate", handler); };
+  }, []);
+  useEffect(function () {
+    if (typeof window === "undefined") return;
     window.__PRERENDER_READY__ = false;
-    var staticTabs = activeTab === "Methodology" || activeTab === "Projects";
-    if (!staticTabs && !ready) return;
     var cancelled = false;
-    var raf1 = requestAnimationFrame(function () {
-      var raf2 = requestAnimationFrame(function () {
-        var t = setTimeout(function () {
+    var cleanups = [];
+    function markReadyAfterPaint() {
+      if (cancelled) return;
+      var r1 = requestAnimationFrame(function () {
+        if (cancelled) return;
+        var r2 = requestAnimationFrame(function () {
           if (!cancelled) window.__PRERENDER_READY__ = true;
-        }, staticTabs ? 0 : 200);
-        if (cancelled) clearTimeout(t);
+        });
+        cleanups.push(function () { cancelAnimationFrame(r2); });
       });
-      if (cancelled) cancelAnimationFrame(raf2);
-    });
+      cleanups.push(function () { cancelAnimationFrame(r1); });
+    }
+    function onceEvent(name, fallbackFlag) {
+      if (fallbackFlag && window[fallbackFlag]) { markReadyAfterPaint(); return; }
+      var h = function () {
+        window.removeEventListener(name, h);
+        markReadyAfterPaint();
+      };
+      window.addEventListener(name, h);
+      cleanups.push(function () { window.removeEventListener(name, h); });
+    }
+    function waitForSelector(sel, maxTries) {
+      var tries = 0;
+      var id = setInterval(function () {
+        if (cancelled) { clearInterval(id); return; }
+        var el = document.querySelector(sel);
+        if (el) { clearInterval(id); markReadyAfterPaint(); return; }
+        if (++tries > maxTries) { clearInterval(id); markReadyAfterPaint(); }
+      }, 150);
+      cleanups.push(function () { clearInterval(id); });
+    }
+    if (activeTab === "Methodology" || activeTab === "Projects") {
+      markReadyAfterPaint();
+    } else if (!ready) {
+      // Wait for the app-level forecast-maps-ready before we can know anything else.
+    } else if (activeTab === "Model") {
+      markReadyAfterPaint();
+    } else if (activeTab === "Ratings") {
+      onceEvent("forecast-ratings-ready", "__forecastRatingsReady");
+    } else if (activeTab === "Past Elections") {
+      try { window.__forecast && window.__forecast.ensurePastInited && window.__forecast.ensurePastInited(); } catch (e) {}
+      waitForSelector(".pastView .mapHost svg path, .pastView svg.mapSvg path", 100);
+    } else if (activeTab === "Swingometer") {
+      try { window.__forecast && window.__forecast.ensureSwingInited && window.__forecast.ensureSwingInited(); } catch (e) {}
+      waitForSelector(".swingView .mapHost svg path, .swingView svg.mapSvg path", 100);
+    } else if (activeTab === "State Legs.") {
+      waitForSelector(".stateLegsHost #stateLegsPage svg.mapSvg path", 100);
+    } else if (activeTab === "Florida") {
+      waitForSelector(".floridaHost #flRedistrictingPage svg path", 100);
+    } else if (activeTab === "Polls") {
+      try { window.__forecast && window.__forecast.ensurePollsInited && window.__forecast.ensurePollsInited(); } catch (e) {}
+      waitForSelector(".pollsListHost [data-polls-list] *", 100);
+    } else {
+      markReadyAfterPaint();
+    }
     return function () {
       cancelled = true;
-      cancelAnimationFrame(raf1);
+      cleanups.forEach(function (fn) { try { fn(); } catch (e) {} });
     };
   }, [activeTab, ready]);
   var viewContent;
