@@ -236,7 +236,7 @@ function toNum(v){
 async function loadCSV(){
   const errBox = document.getElementById("loadError");
   try{
-    const csvText = await fetch("csv/entries_all.csv", {cache:"no-store"}).then(r=>{
+    const csvText = await fetch("/csv/entries_all.csv", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     });
@@ -298,7 +298,7 @@ async function loadCSV(){
 async function loadHouseRatios(){
   const errBox = document.getElementById("loadError");
   try{
-    const csvText = await fetch("csv/house_district_ratios_filled.csv", {cache:"no-store"}).then(r=>{
+    const csvText = await fetch("/csv/house_district_ratios_filled.csv", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     });
@@ -359,7 +359,7 @@ function parseDate(s){
 
 /* ---------- State polling by date (manual input) ---------- */
 const STATE_POLL_SRC = {
-  file: "csv/state_polls_by_date.csv",
+  file: "/csv/state_polls_by_date.csv",
   window: 6,
   byModeState: { senate:{}, governor:{}, house:{} }
 };
@@ -699,7 +699,7 @@ const GB_SRC = { windowPolls: 24, series: null, latest: null, updatedAt: null, f
 
 async function loadGenericBallotFromPollsJSON(){
   try{
-    const j = await fetch("json/polls.json", {cache:"no-store"}).then(r=>{
+    const j = await fetch("/json/polls.json", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     });
@@ -891,7 +891,7 @@ const HISPANIC_POLL_WINDOW = 12; // rolling last-N polls
 
 async function loadHispanicCDShare(){
   try{
-    const resp = await fetch("csv/cd_hispanic_share.csv", {cache:"no-store"});
+    const resp = await fetch("/csv/cd_hispanic_share.csv", {cache:"no-store"});
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const text = await resp.text();
     const lines = text.split(/\r?\n/);
@@ -915,7 +915,7 @@ async function loadHispanicCDShare(){
 
 async function loadHispanicPolls(){
   try{
-    const resp = await fetch("csv/trusted_hispanic_polls.csv", {cache:"no-store"});
+    const resp = await fetch("/csv/trusted_hispanic_polls.csv", {cache:"no-store"});
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const text = await resp.text();
     const lines = text.split(/\r?\n/);
@@ -2040,7 +2040,7 @@ let COUNTY_RATIOS = null; // loaded from json/county_ratios.json
 async function loadCountyRatios(){
   if (COUNTY_RATIOS) return COUNTY_RATIOS;
   try{
-    const resp = await fetch("json/county_ratios.json", {cache:"no-store"});
+    const resp = await fetch("/json/county_ratios.json", {cache:"no-store"});
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     COUNTY_RATIOS = await resp.json();
     console.log("County ratios loaded:", Object.keys(COUNTY_RATIOS).filter(k=>k!=="_TEMPLATE").join(", "));
@@ -2455,7 +2455,7 @@ async function initHouseMapForMode(ui){
   const gRoot = gZoom.append("g");
 
   if (!HOUSE_SVG_TEXT){
-    HOUSE_SVG_TEXT = await fetch("svg/house.svg", {cache:"no-store"}).then(r=>{
+    HOUSE_SVG_TEXT = await fetch("/svg/house.svg", {cache:"no-store"}).then(r=>{
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     });
@@ -2463,7 +2463,7 @@ async function initHouseMapForMode(ui){
 
   const doc = new DOMParser().parseFromString(HOUSE_SVG_TEXT, "image/svg+xml");
   const shapes = doc.getElementById("district-shapes");
-  if (!shapes) throw new Error("svg/house.svg missing #district-shapes");
+  if (!shapes) throw new Error("/svg/house.svg missing #district-shapes");
 
   const imported = document.importNode(shapes, true);
   gRoot.node().appendChild(imported);
@@ -2922,7 +2922,7 @@ function setOddsStatus(modeKey, msg){
 function setHouseOddsStatus(msg){ setOddsStatus("house", msg); }
 
 async function loadPrecomputedOdds(modeKey){
-  const file = `json/${modeKey}_odds.json`;
+  const file = `/json/${modeKey}_odds.json`;
   try{
     const resp = await fetch(file, {cache:"no-store"});
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);

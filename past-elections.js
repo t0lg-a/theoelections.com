@@ -503,7 +503,7 @@ function rollingAvg(polls, n){
 }
 
 async function loadPastEntries(year){
-  const file = `data/past/${year}_entries.csv`;
+  const file = `/data/past/${year}_entries.csv`;
 
 
   try {
@@ -544,7 +544,7 @@ async function loadPastEntries(year){
 }
 
 async function loadPastPresidentialPolls(year){
-  const file = `data/past/${year}_presidential_polls.json`;
+  const file = `/data/past/${year}_presidential_polls.json`;
   try {
     const j = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
     const polls = (j.polls || []).map(p => ({
@@ -591,7 +591,7 @@ async function loadPastGBPolls(year){
   }
 
   // Fallback: load from file
-  const file = `data/past/${year}_gb_polls.json`;
+  const file = `/data/past/${year}_gb_polls.json`;
   try {
     const j = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
     const polls = (j.genericBallot || []).map(p => ({
@@ -615,7 +615,7 @@ async function loadPastGBPolls(year){
 }
 
 async function loadPastStatePolls(year){
-  const file = `data/past/${year}_state_presidential_polls.csv`;
+  const file = `/data/past/${year}_state_presidential_polls.csv`;
   try {
     const txt = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); });
     const rows = d3.csvParse(txt);
@@ -677,7 +677,7 @@ async function loadPastStatePolls(year){
 async function loadPastOdds(year, mode){
 
 
-  const file = `json/past/${year}_${mode}_odds.json`;
+  const file = `/json/past/${year}_${mode}_odds.json`;
   try {
     const j = await fetch(file, {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
     if (!PAST_ODDS[year]) PAST_ODDS[year] = {};
@@ -1226,7 +1226,7 @@ async function loadPastCountyRatios(){
   if (PAST_COUNTY_RATIOS) return PAST_COUNTY_RATIOS;
   if (typeof COUNTY_RATIOS !== "undefined" && COUNTY_RATIOS){ PAST_COUNTY_RATIOS = COUNTY_RATIOS; return PAST_COUNTY_RATIOS; }
   try {
-    const resp = await fetch("json/county_ratios.json", {cache:"no-store"});
+    const resp = await fetch("/json/county_ratios.json", {cache:"no-store"});
     if (!resp.ok) throw new Error(resp.status);
     PAST_COUNTY_RATIOS = await resp.json();
   } catch(e){

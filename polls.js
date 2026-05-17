@@ -135,7 +135,7 @@ let LMODE="gb";
 async function initPollsPage(){
   console.log("initPollsPage v11");
   if(!APP_RAW.length){
-    try{const j=await fetch("json/polls.json",{cache:"no-store"}).then(r=>r.json());loadApproval(j);}catch(e){console.warn(e);}
+    try{const j=await fetch("/json/polls.json",{cache:"no-store"}).then(r=>r.json());loadApproval(j);}catch(e){console.warn(e);}
   }
   buildUI("gb"); buildUI("senate"); buildUI("governor");
   if(!pollsInited) wireToggle();
