@@ -2212,7 +2212,8 @@ function App() {
     _useTweaks2 = _slicedToArray(_useTweaks, 2),
     t = _useTweaks2[0],
     setTweak = _useTweaks2[1];
-  var _useState37 = useState("Model"),
+  var _initialTab = (typeof window !== "undefined" && typeof window.__INITIAL_TAB === "string") ? window.__INITIAL_TAB : "Model";
+  var _useState37 = useState(_initialTab),
     _useState38 = _slicedToArray(_useState37, 2),
     activeTab = _useState38[0],
     setActiveTab = _useState38[1];
@@ -2310,6 +2311,26 @@ function App() {
       window.removeEventListener("forecast-maps-ready", onMapsReady);
     };
   }, []);
+  useEffect(function () {
+    if (typeof window === "undefined") return;
+    window.__PRERENDER_READY__ = false;
+    var staticTabs = activeTab === "Methodology" || activeTab === "Projects";
+    if (!staticTabs && !ready) return;
+    var cancelled = false;
+    var raf1 = requestAnimationFrame(function () {
+      var raf2 = requestAnimationFrame(function () {
+        var t = setTimeout(function () {
+          if (!cancelled) window.__PRERENDER_READY__ = true;
+        }, staticTabs ? 0 : 200);
+        if (cancelled) clearTimeout(t);
+      });
+      if (cancelled) cancelAnimationFrame(raf2);
+    });
+    return function () {
+      cancelled = true;
+      cancelAnimationFrame(raf1);
+    };
+  }, [activeTab, ready]);
   var viewContent;
   if (activeTab === "Model") {
     viewContent = /*#__PURE__*/React.createElement("div", {
