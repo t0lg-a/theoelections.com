@@ -4212,7 +4212,168 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     --display: 'Eczar', 'Times New Roman', serif;
     --body:    'Eczar', Georgia, serif;
     --mono:    'JetBrains Mono', ui-monospace, monospace;
+
+    /* Almanac neutralization of legacy riso/Tailwind tokens. */
+    --bg-app: var(--bg);
+    --bg-gradient-1: var(--bg);
+    --bg-gradient-2: var(--bg);
+    --card-bg: var(--paper);
+    --card-border: var(--rule-soft);
+    --card-shadow: none;
+    --card-shadow-hover: none;
+    --line: var(--rule-soft);
+    --line-strong: var(--rule);
+    --neutral-bg: var(--bg-2);
+    --neutral-border: var(--rule-soft);
+    --blue-dark: var(--blue-deep);
+    --blue-border: var(--blue);
+    --red-dark: var(--red-deep);
+    --red-border: var(--red);
+    --muted-light: var(--muted-2);
+    --radius-lg: 0;
+    --radius-md: 0;
+    --radius-sm: 0;
+    --radius-pill: 0;
+    --focus-ring: 0 0 0 2px var(--ink);
   }
+  /* Almanac is paper-flat: kill rounded corners, shadows, and blur everywhere. */
+  .card, .cardDash, .topCard, .seatsCard, .mapCard, .chartCard,
+  .flrCard, .methCard, .projCard, .stateInfoPanel,
+  .tooltipBox, #tip, #simTip, #pastTip, #sldlCursorTip,
+  .pageTab, .donateBtn,
+  .forecastToggle, .forecastToggleWrap, .fcBtn,
+  .segmentedControl, .lookToggle, .themeToggle,
+  .pillRow .metricPill, .seatPill, .panelClassify,
+  .panelShareTrack, .panelShareFillD, .panelShareFillR, .panelShareGap,
+  .miniBar, .miniBarFinal, .miniFill, .miniFillFinal,
+  .miniTick, .miniTickFinal, .miniTickArrow,
+  .panelSparkPill, .panelArc, .tableScroll, .loadError, .loadError .mono,
+  .chip, .chipBtn, .zoomSelect, .yearBtnA, .yearBtn,
+  .rtgCountItem, .rtgBar, .rtgSeg, .methMono {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Cream paper, hairline borders on every container — no white SaaS cards. */
+  .card, .cardDash, .topCard, .seatsCard, .mapCard, .chartCard,
+  .flrCard, .methCard, .projCard, .stateInfoPanel,
+  #tip, #simTip, #pastTip, #sldlCursorTip, .tooltipBox {
+    background: var(--paper) !important;
+    border: 1px solid var(--rule-soft) !important;
+  }
+  /* Florida + Methodology cards: hairline rule instead of heavy ink border. */
+  #flRedistrictingPage .flrCard,
+  .methCard, .methPage .methCard {
+    background: var(--paper) !important;
+    border: 1px solid var(--rule-soft) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Methodology: emphasis is via a 2px ink rule under the hero, not card chrome. */
+  .methCard:first-child { border: none !important; border-bottom: 2px solid var(--ink) !important; padding-bottom: 24px; }
+  .methCard:not(:first-child) { border: none !important; border-top: 1px solid var(--rule-soft) !important; padding-top: 18px; }
+  .methCard:last-child { border-bottom: none !important; }
+  .methH1, .methH2 { font-family: var(--display) !important; font-weight: 700 !important; letter-spacing: -0.01em !important; color: var(--ink) !important; }
+  .methSub { font-family: var(--body) !important; font-style: italic !important; color: var(--muted) !important; font-weight: 400 !important; }
+  .methP { font-family: var(--body) !important; color: var(--ink-dim) !important; }
+  .methMono { background: var(--bg-2) !important; border: 1px solid var(--rule-soft) !important; }
+  /* Paper-flat body: no gradient mesh, no speckle, no radial bg. */
+  body, html { background: var(--bg) !important; }
+  body::before { display: none !important; }
+  /* State info panel docks on the left of the map, not as a floating tooltip. */
+  .mapStage { position: relative; }
+  .stateInfoPanel {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    right: auto !important;
+    width: 280px;
+    max-width: 38%;
+    background: var(--paper) !important;
+    border: 1px solid var(--ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    z-index: 30;
+    padding: 12px 14px;
+    font-family: var(--body);
+  }
+  .stateInfoPanel.visible { display: block; }
+  /* Panel share bar = flat segmented bar, no gradients, no pill rounding. */
+  .panelShareTrack, .panelShareFillD, .panelShareFillR {
+    background-image: none !important;
+  }
+  .panelShareFillD { background: var(--blue) !important; }
+  .panelShareFillR { background: var(--red)  !important; }
+  /* Win-probability dashed sparkline → solid hairline. */
+  .miniBar, .miniBarFinal { background: var(--bg-2) !important; border: 1px solid var(--rule-soft) !important; }
+  .miniFill { background: var(--blue) !important; }
+  .miniFill.red { background: var(--red) !important; }
+  /* Classify pill: hairline square badge, not rounded glow. */
+  .panelClassify {
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  /* Spark pills (D 23% / R 77%): hairline outlined, not rounded soft fill. */
+  .panelSparkPill {
+    background: transparent !important;
+    border: 1px solid currentColor !important;
+    border-radius: 0 !important;
+  }
+  .panelSparkPill.dem { color: var(--blue) !important; }
+  .panelSparkPill.rep { color: var(--red)  !important; }
+  /* Panel internal dividers: hairline rule-soft instead of rgba ink. */
+  .panelFactors, .panelSpark { border-top: 1px solid var(--rule-soft) !important; }
+  .stateInfoPanel .miniRowFinal { border-top: 1px solid var(--rule-soft) !important; }
+  /* Panel labels: muted mono caps. */
+  .panelMarginLabel, .panelSparkLabel, .panelUsps,
+  .stateInfoPanel .miniLbl {
+    color: var(--muted) !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+  }
+  .panelMarginNum { font-family: var(--display) !important; font-weight: 800 !important; }
+  .panelMarginNum.dem { color: var(--blue-deep) !important; }
+  .panelMarginNum.rep { color: var(--red-deep) !important; }
+  /* Top-bar dot separators in the page nav are riso — kill them. */
+  .pageTabs .pageTab + .pageTab::before,
+  .pageTabsWrap .pageTab + .pageTab::before { content: none !important; }
+  /* Card title rows + share row gradients → flat paper. */
+  .cardTitleRow, .topCard .panelHeaderRow, .cardSubtitle,
+  .modeCol .panelHeaderRow, .seatsSummary, .panelShareBar {
+    background: transparent !important;
+    background-image: none !important;
+  }
+  /* Panel name color: ink, not pastel gray. */
+  .panelName { color: var(--ink) !important; }
+  .panelUsps { color: var(--muted) !important; }
+  /* State info panel: the gauge SVG glow/shadow filters off, hairline lines only. */
+  .stateInfoPanel .panelArc svg filter { filter: none !important; }
+  .stateInfoPanel .panelArc svg [filter] { filter: none !important; }
+  /* Active page tab: ink box, not gradient pill. */
+  .pageTab.active {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    border: 1px solid var(--ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .pageTab {
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--ink) !important;
+    font-family: var(--display) !important;
+    font-weight: 500 !important;
+  }
+  .pageTab:hover:not(.active) { background: var(--bg-2) !important; }
   [data-palette="foundry"]{
     --bg: #ece2cf; --bg-2: #e5d8b9; --paper: #efe5cc;
     --ink: #1a1812; --ink-dim: #38311f; --muted: #6c6147; --muted-2: #9a8c6f;
