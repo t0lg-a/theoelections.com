@@ -53,7 +53,7 @@ from routes import ALMANAC_ROUTES, SITE_ORIGIN, STATIC_ROUTES
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SHELL_PATH = "baseline.html"
-READY_TIMEOUT_MS = 15_000
+READY_TIMEOUT_MS = 20_000
 
 
 class _QuietHandler(SimpleHTTPRequestHandler):
