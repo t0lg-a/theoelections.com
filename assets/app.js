@@ -193,7 +193,9 @@ function USMap(_ref) {
   }, "\u2190 US"), /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "") }
   }));
 }
 function Histogram(_ref2) {
@@ -239,7 +241,9 @@ function ChartHost(_ref3) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "") }
   });
 }
 var METRO_PRESETS = [{
@@ -465,7 +469,9 @@ function RatingMapHost(_ref6) {
     className: "mapHost",
     ref: hostRef,
     "data-mode": mode,
-    "data-rtg-host": "map"
+    "data-rtg-host": "map",
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "map") }
   });
 }
 function RatingChartHost(_ref7) {
@@ -496,7 +502,9 @@ function RatingChartHost(_ref7) {
     className: "chartHost",
     ref: hostRef,
     "data-mode": mode,
-    "data-rtg-host": "chart"
+    "data-rtg-host": "chart",
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "chart") }
   });
 }
 
@@ -724,15 +732,20 @@ function RatingsView(_ref1) {
   useEffect(function () {
     var _window$__forecast13;
     if (!dataReady) return;
+    // Register the listener BEFORE triggering ensureRatingsInited. When loaded
+    // from a prerendered route, the offscreen [data-rtg-bar] children already
+    // exist, so the bridge's ratingsDomReady() returns true synchronously and
+    // forecast-ratings-ready dispatches inside the same call — would miss a
+    // listener added after.
+    var onReady = function onReady() {
+      return setRatingsReady(true);
+    };
+    window.addEventListener("forecast-ratings-ready", onReady);
     if (window.__forecastRatingsReady) {
       setRatingsReady(true);
     } else if (typeof ((_window$__forecast13 = window.__forecast) === null || _window$__forecast13 === void 0 ? void 0 : _window$__forecast13.ensureRatingsInited) === "function") {
       window.__forecast.ensureRatingsInited();
     }
-    var onReady = function onReady() {
-      return setRatingsReady(true);
-    };
-    window.addEventListener("forecast-ratings-ready", onReady);
     return function () {
       return window.removeEventListener("forecast-ratings-ready", onReady);
     };
@@ -818,7 +831,9 @@ function PastMapHost(_ref10) {
     className: "mapHost",
     ref: hostRef,
     "data-past-host": "map",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "map") }
   });
 }
 function PastChartHost(_ref11) {
@@ -851,7 +866,9 @@ function PastChartHost(_ref11) {
     className: "chartHost",
     ref: hostRef,
     "data-past-host": "chart",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "chart") }
   });
 }
 function YearBarA(_ref12) {
@@ -1156,7 +1173,9 @@ function SwingMapHost(_ref14) {
     className: "mapHost",
     ref: hostRef,
     "data-swing-host": "map",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "map") }
   });
 }
 function SwingCanvasHost(_ref15) {
@@ -1187,7 +1206,9 @@ function SwingCanvasHost(_ref15) {
     className: "swingCanvasHost",
     ref: hostRef,
     "data-swing-host": "canvas",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("swingCanvasHost", mode, "canvas") }
   });
 }
 function SwingSection(_ref16) {
@@ -1469,7 +1490,9 @@ function StateLegsView() {
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "stateLegsHost",
-    ref: hostRef
+    ref: hostRef,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("stateLegsHost", "", "") }
   });
 }
 
@@ -1528,7 +1551,9 @@ function FloridaView() {
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "floridaHost",
-    ref: hostRef
+    ref: hostRef,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("floridaHost", "", "") }
   });
 }
 
@@ -1581,7 +1606,9 @@ function PollsCanvasHost(_ref17) {
     className: "pollsHistHost",
     ref: hostRef,
     "data-polls-host": "hist",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("pollsHistHost", mode, "hist") }
   });
 }
 function PollsChartHost(_ref18) {
@@ -1613,7 +1640,9 @@ function PollsChartHost(_ref18) {
     className: "chartHost",
     ref: hostRef,
     "data-polls-host": "chart",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "chart") }
   });
 }
 function PollsMapHost(_ref19) {
@@ -1641,7 +1670,9 @@ function PollsMapHost(_ref19) {
     className: "mapHost",
     ref: hostRef,
     "data-polls-host": "map",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "map") }
   });
 }
 function PollsStateChartHost(_ref20) {
@@ -1673,7 +1704,9 @@ function PollsStateChartHost(_ref20) {
     className: "chartHost",
     ref: hostRef,
     "data-polls-host": "stchart",
-    "data-mode": mode
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "stchart") }
   });
 }
 function PollsListHost(_ref21) {
@@ -1693,7 +1726,9 @@ function PollsListHost(_ref21) {
   }, [ready]);
   return /*#__PURE__*/React.createElement("div", {
     className: "pollsListHost",
-    ref: hostRef
+    ref: hostRef,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("pollsListHost", "", "") }
   });
 }
 function PollsGBSection(_ref22) {
@@ -2577,5 +2612,96 @@ function App() {
     }]
   }))));
 }
+
+/* ============================================================================
+   Prerender-DOM rehydration shim.
+   The prerender writes the legacy/d3-painted content INTO the React-managed
+   hosts (.stateLegsHost, .floridaHost, .mapHost[data-*-host], etc.). On the
+   live page, ReactDOM.createRoot replaces #app's children with a fresh React
+   tree, and legacy modules (forecast.js, state-legs.js, ...) look up their
+   elements via offscreen selectors like ".modeCol[data-mode='senate'] svg.mapSvg"
+   — both fail unless we restore the prerendered DOM to its pre-teleport
+   layout (children back to .__legacy_offscreen) BEFORE React mounts.
+
+   Each host's prerendered innerHTML is also stashed into _PRERENDERED_HOST_HTML
+   so the host can be re-seeded via dangerouslySetInnerHTML on first React
+   render — that way the user never sees an empty host gap between createRoot's
+   first commit and the useEffect that teleports the real (legacy-bound) SVG
+   back in (data-loading delay can be 500-1500ms).
+   Cold loads of /baseline.html no-op (hosts are already empty).
+   ============================================================================ */
+var _PRERENDERED_HOST_HTML = {};
+function _hostHtml(className, mode, hostAttrVal) {
+  var key = className + "|" + (mode || "") + "|" + (hostAttrVal || "");
+  return _PRERENDERED_HOST_HTML[key] || "";
+}
+function _restorePrerenderedHostsToOffscreen() {
+  if (typeof document === "undefined") return;
+  var offscreen = document.querySelector(".__legacy_offscreen");
+  if (!offscreen) return;
+  var offWrap = offscreen.querySelector(".wrap") || offscreen;
+  function moveChildren(hostSel, targetSel, hideMoved) {
+    var host = document.querySelector(hostSel);
+    if (!host || !host.firstChild) return;
+    var target = document.querySelector(targetSel);
+    if (!target) return;
+    // Stash the prerendered innerHTML keyed by host signature, so the React
+    // wrapper can seed dangerouslySetInnerHTML and avoid a paint gap.
+    var key = host.className + "|" + (host.getAttribute("data-mode") || "") + "|";
+    var hostAttr = host.getAttribute("data-rtg-host") || host.getAttribute("data-swing-host")
+                || host.getAttribute("data-past-host") || host.getAttribute("data-polls-host");
+    if (hostAttr) key += hostAttr;
+    if (host.innerHTML && !_PRERENDERED_HOST_HTML[key]) _PRERENDERED_HOST_HTML[key] = host.innerHTML;
+    while (host.firstChild) {
+      var child = host.firstChild;
+      if (hideMoved && child.nodeType === 1 && child.style) child.style.display = "none";
+      target.appendChild(child);
+    }
+  }
+  // 1. Whole-page hosts: #stateLegsPage and #flRedistrictingPage return to .__legacy_offscreen .wrap
+  moveChildren(".stateLegsHost", ".__legacy_offscreen .wrap", true);
+  moveChildren(".floridaHost",   ".__legacy_offscreen .wrap", true);
+  // 2. Per-mode SVG/canvas hosts: each child returns to its offscreen [data-*-mode] container
+  var senateGovHouse = ["senate", "governor", "house"];
+  var pastModes      = ["president", "senate", "governor", "house"];
+  var pollsModes     = ["gb", "senate", "governor"];
+  var modelNot = ':not([data-rtg-host]):not([data-swing-host]):not([data-past-host]):not([data-polls-host])';
+  for (var i = 0; i < senateGovHouse.length; i++) {
+    var m = senateGovHouse[i];
+    // Model map svg → .__legacy_offscreen .modeCol[data-mode] .mapStage
+    moveChildren('.mapHost[data-mode="'+m+'"]'+modelNot,
+                 '.__legacy_offscreen .modeCol[data-mode="'+m+'"] .mapStage');
+    // Model combo svg → .__legacy_offscreen .modeCol[data-mode] .oddsChartWrap (parent of [data-combo-svg])
+    moveChildren('.chartHost[data-mode="'+m+'"]'+modelNot,
+                 '.__legacy_offscreen .modeCol[data-mode="'+m+'"] .oddsChartWrap');
+    // Ratings
+    moveChildren('.mapHost[data-rtg-host="map"][data-mode="'+m+'"]',
+                 '.__legacy_offscreen [data-ratings-mode="'+m+'"]');
+    moveChildren('.chartHost[data-rtg-host="chart"][data-mode="'+m+'"]',
+                 '.__legacy_offscreen [data-ratings-mode="'+m+'"]');
+    // Swing
+    moveChildren('.mapHost[data-swing-host="map"][data-mode="'+m+'"]',
+                 '.__legacy_offscreen [data-swing-mode="'+m+'"]');
+    moveChildren('.swingCanvasHost[data-swing-host="canvas"][data-mode="'+m+'"]',
+                 '.__legacy_offscreen [data-swing-mode="'+m+'"]');
+  }
+  for (var j = 0; j < pastModes.length; j++) {
+    var pm = pastModes[j];
+    moveChildren('.mapHost[data-past-host="map"][data-mode="'+pm+'"]',
+                 '.__legacy_offscreen [data-past-mode="'+pm+'"]');
+    moveChildren('.chartHost[data-past-host="chart"][data-mode="'+pm+'"]',
+                 '.__legacy_offscreen [data-past-mode="'+pm+'"]');
+  }
+  for (var k = 0; k < pollsModes.length; k++) {
+    var pm2 = pollsModes[k];
+    var pollsTarget = '.__legacy_offscreen #pollsPage [data-polls-mode="'+pm2+'"]';
+    moveChildren('.pollsHistHost[data-polls-host="hist"][data-mode="'+pm2+'"]',  pollsTarget);
+    moveChildren('.chartHost[data-polls-host="chart"][data-mode="'+pm2+'"]',     pollsTarget);
+    moveChildren('.mapHost[data-polls-host="map"][data-mode="'+pm2+'"]',         pollsTarget);
+    moveChildren('.chartHost[data-polls-host="stchart"][data-mode="'+pm2+'"]',   pollsTarget);
+  }
+  moveChildren('.pollsListHost', '.__legacy_offscreen #pollsPage [data-polls-mode="gb"]');
+}
+_restorePrerenderedHostsToOffscreen();
 ReactDOM.createRoot(document.getElementById("app")).render(/*#__PURE__*/React.createElement(App, null));
 
