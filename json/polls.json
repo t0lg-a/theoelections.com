@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-18T14:39:54.199Z",
+  "updatedAt": "2026-05-19T14:06:53.490Z",
   "approval": [
     {
       "id": "appdonyouba622174",
@@ -10764,91 +10764,9 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonhar12g6k1eo",
-      "poll_type": "approval",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.cnbc.com/video/2025/04/17/tariffs-weight-on-trump-approval-cnbc-survey-finds.html",
-      "created_at": "2025-04-17",
-      "start_date": "2025-04-09",
-      "end_date": "2025-04-13",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 44
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 51
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "CNBC"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonpewcgbvmek4",
-      "poll_type": "approval",
-      "sample_size": 3589,
-      "population": "a",
-      "url": "https://www.pewresearch.org/politics/2025/04/23/trumps-job-rating-drops-key-policies-draw-majority-disapproval-as-he-nears-100-days/",
-      "created_at": "2025-04-23",
-      "start_date": "2025-04-07",
-      "end_date": "2025-04-13",
-      "pollster": "Pew Research Center",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 40
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
-    {
-      "id": "gen202hara7z5ongq",
-      "poll_type": "generic-ballot",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://www.cnbc.com/video/2025/04/17/tariffs-weight-on-trump-approval-cnbc-survey-finds.html",
-      "created_at": "2025-04-17",
-      "start_date": "2025-04-09",
-      "end_date": "2025-04-13",
-      "pollster": "Hart Research Associates/Public Opinion Strategies",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 48
-        },
-        {
-          "choice": "Rep",
-          "pct": 46
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "CNBC"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
     {
       "id": "gen202thebjaz89iw",
       "poll_type": "generic-ballot",
