@@ -1,6 +1,118 @@
 {
-  "updatedAt": "2026-05-19T14:06:53.490Z",
+  "updatedAt": "2026-05-20T13:49:19.953Z",
   "approval": [
+    {
+      "id": "appdonipsd8a11805",
+      "poll_type": "approval",
+      "sample_size": 984,
+      "population": "rv",
+      "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-05/Reuters%20Ipsos%20Core%20Political%20May%20Topline_1.pdf",
+      "created_at": "2026-05-19",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-18",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 38
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 61
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonipsf6138db7",
+      "poll_type": "approval",
+      "sample_size": 1271,
+      "population": "a",
+      "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-05/Reuters%20Ipsos%20Core%20Political%20May%20Topline_1.pdf",
+      "created_at": "2026-05-19",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-18",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 35
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 63
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyoua45b9fa2",
+      "poll_type": "approval",
+      "sample_size": 1380,
+      "population": "rv",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_YTE4G2g.pdf#page=11",
+      "created_at": "2026-05-19",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-18",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 41
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 57
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyouc9485003",
+      "poll_type": "approval",
+      "sample_size": 1549,
+      "population": "a",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_YTE4G2g.pdf#page=11",
+      "created_at": "2026-05-19",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-18",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 37
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 57
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdonyouba622174",
       "poll_type": "approval",
@@ -10709,58 +10821,6 @@
       "sponsors": [
         "The Economist"
       ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdongalqnio4njt",
-      "poll_type": "approval",
-      "sample_size": 1006,
-      "population": "a",
-      "url": "https://news.gallup.com/poll/659534/trump-first-quarter-approval-rating-below-average.aspx",
-      "created_at": "2025-04-17",
-      "start_date": "2025-04-01",
-      "end_date": "2025-04-14",
-      "pollster": "Gallup",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 44
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 53
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonatlxumvfmkf",
-      "poll_type": "approval",
-      "sample_size": 2347,
-      "population": "a",
-      "url": "https://cdn.atlasintel.org/e3edc86b-aac7-4ebe-9ef7-6a8346f658f6.pdf?_gl=1*1po007n*_ga*NjMxOTI2NjYxLjE3NDQ5Mjc1MzM.*_ga_W78QD5CNP1*MTc0NDkyNzUzMy4xLjAuMTc0NDkyNzUzMy4wLjAuMA",
-      "created_at": "2025-04-17",
-      "start_date": "2025-04-10",
-      "end_date": "2025-04-14",
-      "pollster": "AtlasIntel",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46.1
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 52.4
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
