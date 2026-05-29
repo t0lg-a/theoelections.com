@@ -1,6 +1,88 @@
 {
-  "updatedAt": "2026-05-28T14:50:26.521Z",
+  "updatedAt": "2026-05-29T14:15:43.728Z",
   "approval": [
+    {
+      "id": "appdonyou6cd5046b",
+      "poll_type": "approval",
+      "sample_size": 1397,
+      "population": "rv",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_aWdgoE7.pdf#page=34",
+      "created_at": "2026-05-29",
+      "start_date": "2026-05-22",
+      "end_date": "2026-05-26",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 38
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 60
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyou516e5441",
+      "poll_type": "approval",
+      "sample_size": 1520,
+      "population": "a",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_aWdgoE7.pdf#page=34",
+      "created_at": "2026-05-29",
+      "start_date": "2026-05-22",
+      "end_date": "2026-05-26",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 34
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 59
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdoneme217191a6",
+      "poll_type": "approval",
+      "sample_size": 1000,
+      "population": "lv",
+      "url": "https://docs.google.com/spreadsheets/d/1Tw_zIv2JLeRPiZVOfoLA82rZY_RpNY9-/edit?rtpof=true&sd=true&gid=1557082126#gid=1557082126",
+      "created_at": "2026-05-29",
+      "start_date": "2026-05-24",
+      "end_date": "2026-05-25",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 39.3
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 55.2
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdoname41936218",
       "poll_type": "approval",
@@ -10627,91 +10709,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyoud3nwcis6",
-      "poll_type": "approval",
-      "sample_size": 1296,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/times_20250425.pdf",
-      "created_at": "2025-04-29",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-23",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 53
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Times of London"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyoudu5x78j6",
-      "poll_type": "approval",
-      "sample_size": 949,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/times_20250425.pdf",
-      "created_at": "2025-04-29",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-23",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 44
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 52
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Times of London"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonmar8izt2bkj",
-      "poll_type": "approval",
-      "sample_size": 0,
-      "population": "a",
-      "url": "https://x.com/NewsHour/status/1916977988844876122",
-      "created_at": "2025-04-29",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-23",
-      "pollster": "Marist College",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 53
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "NPR",
-        "PBS News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -12932,6 +12929,32 @@
       "internal": false,
       "partisan": null,
       "subject": "2026"
+    },
+    {
+      "id": "gen202emefa66ea0d",
+      "poll_type": "generic-ballot",
+      "sample_size": 1000,
+      "population": "lv",
+      "url": "https://docs.google.com/spreadsheets/d/1Tw_zIv2JLeRPiZVOfoLA82rZY_RpNY9-/edit?rtpof=true&sd=true&gid=1557082126#gid=1557082126",
+      "created_at": "2026-05-29",
+      "start_date": "2026-05-24",
+      "end_date": "2026-05-25",
+      "pollster": "Emerson College",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49.8
+        },
+        {
+          "choice": "Rep",
+          "pct": 41.3
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
     }
   ],
   "debug": {
@@ -13028,6 +13051,7 @@
       "Noble Predictive Insights",
       "Normington, Petts & Associates",
       "OnMessage",
+      "Overton Insights",
       "Overton Insights/Targoz Market Research",
       "Public Policy Polling",
       "Public Religion Research Institute",
