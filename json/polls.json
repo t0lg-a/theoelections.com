@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-29T14:15:43.728Z",
+  "updatedAt": "2026-05-30T12:17:57.724Z",
   "approval": [
     {
       "id": "appdonyou6cd5046b",
@@ -10631,113 +10631,9 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonthejcy2ah7m",
-      "poll_type": "approval",
-      "sample_size": 913,
-      "population": "rv",
-      "url": "https://www.nytimes.com/interactive/2025/04/25/us/elections/times-siena-poll-crosstabs.html",
-      "created_at": "2025-04-25",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-24",
-      "pollster": "The New York Times/Siena College",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdoncnnoyofxxgs",
-      "poll_type": "approval",
-      "sample_size": 1476,
-      "population": "rv",
-      "url": "https://www.cnn.com/.element/interactive/2025/04/REL5a-Trump-at-100days.pdf",
-      "created_at": "2025-04-27",
-      "start_date": "2025-04-17",
-      "end_date": "2025-04-24",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 57
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdoncnni0prmalq",
-      "poll_type": "approval",
-      "sample_size": 1678,
-      "population": "a",
-      "url": "https://www.cnn.com/.element/interactive/2025/04/REL5a-Trump-at-100days.pdf",
-      "created_at": "2025-04-27",
-      "start_date": "2025-04-17",
-      "end_date": "2025-04-24",
-      "pollster": "CNN/SSRS",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
-    {
-      "id": "gen202thebjaz89iw",
-      "poll_type": "generic-ballot",
-      "sample_size": 913,
-      "population": "rv",
-      "url": "https://www.nytimes.com/interactive/2025/04/25/us/elections/times-siena-poll-crosstabs.html",
-      "created_at": "2025-04-25",
-      "start_date": "2025-04-21",
-      "end_date": "2025-04-24",
-      "pollster": "The New York Times/Siena College",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 47
-        },
-        {
-          "choice": "Rep",
-          "pct": 44
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
     {
       "id": "gen202verd5ikieo6",
       "poll_type": "generic-ballot",
