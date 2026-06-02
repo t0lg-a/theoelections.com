@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T16:59:04.388Z",
+  "updatedAt": "2026-06-02T15:14:28.974Z",
   "approval": [
     {
       "id": "appdontip7f1a457b",
@@ -10545,34 +10545,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonipsm5a21twp",
-      "poll_type": "approval",
-      "sample_size": 1029,
-      "population": "a",
-      "url": "https://www.reuters.com/data/trumps-approval-rating-2025-01-21/",
-      "created_at": "2025-04-30",
-      "start_date": "2025-04-25",
-      "end_date": "2025-04-27",
-      "pollster": "Ipsos",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 53
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Reuters"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -12848,7 +12820,6 @@
       "The Bullfinch Group",
       "The Public Sentiment Institute",
       "The Winston Group",
-      "TrueDot.ai",
       "Washington Post/ABC News/Ipsos",
       "Yale Youth Poll",
       "YouGov",
@@ -12910,7 +12881,6 @@
       "The Winston Group",
       "Trafalgar Group",
       "Trafalgar Group/InsiderAdvantage",
-      "TrueDot.ai",
       "Yale Youth Poll",
       "Zogby Analytics",
       "co/efficient"
