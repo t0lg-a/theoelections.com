@@ -1,6 +1,62 @@
 {
-  "updatedAt": "2026-06-03T15:55:29.089Z",
+  "updatedAt": "2026-06-04T14:11:18.525Z",
   "approval": [
+    {
+      "id": "appdonyou7a420daf",
+      "poll_type": "approval",
+      "sample_size": 1453,
+      "population": "rv",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_AvLU7vY.pdf#page=4",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-29",
+      "end_date": "2026-06-01",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 39
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 60
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyoud10fff24",
+      "poll_type": "approval",
+      "sample_size": 1604,
+      "population": "a",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_AvLU7vY.pdf#page=4",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-29",
+      "end_date": "2026-06-01",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 35
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 61
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdontip7f1a457b",
       "poll_type": "approval",
@@ -81,6 +137,58 @@
       "sponsors": [
         "The Economist"
       ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmar9e783609",
+      "poll_type": "approval",
+      "sample_size": 857,
+      "population": "rv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 41
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 59
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmar0117b99d",
+      "poll_type": "approval",
+      "sample_size": 1001,
+      "population": "a",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 38
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 62
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
@@ -12620,6 +12728,84 @@
         {
           "choice": "Rep",
           "pct": 41.3
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mar7ecb1694",
+      "poll_type": "generic-ballot",
+      "sample_size": 576,
+      "population": "lv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 49
+        },
+        {
+          "choice": "Rep",
+          "pct": 48
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mar6d2d2b89",
+      "poll_type": "generic-ballot",
+      "sample_size": 857,
+      "population": "rv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 46
+        },
+        {
+          "choice": "Rep",
+          "pct": 45
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "2026"
+    },
+    {
+      "id": "gen202mar66597189",
+      "poll_type": "generic-ballot",
+      "sample_size": 1001,
+      "population": "a",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-03",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Dem",
+          "pct": 45
+        },
+        {
+          "choice": "Rep",
+          "pct": 41
         }
       ],
       "seat_name": null,
