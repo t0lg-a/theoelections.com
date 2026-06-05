@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04T14:11:18.525Z",
+  "updatedAt": "2026-06-05T14:03:53.048Z",
   "approval": [
     {
       "id": "appdonyou7a420daf",
@@ -81,6 +81,32 @@
       "sponsors": [
         "Issues & Insights"
       ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmar0ca17e86",
+      "poll_type": "approval",
+      "sample_size": 576,
+      "population": "lv",
+      "url": "https://law.marquette.edu/assets/community/poll/MLSPSC32/MLSPSC32Toplines_NationalIssues.html",
+      "created_at": "2026-06-04",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-26",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 44
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 56
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
