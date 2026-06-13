@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-12T14:17:10.982Z",
+  "updatedAt": "2026-06-13T12:59:30.729Z",
   "approval": [
     {
       "id": "appdonyoudd7ff04e",
@@ -10538,32 +10538,6 @@
       "sponsors": [
         "The Economist"
       ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyou3msuxgj6",
-      "poll_type": "approval",
-      "sample_size": 1143,
-      "population": "a",
-      "url": "https://yougovamerica.substack.com/p/your-polls-on-protestants-pets-and",
-      "created_at": "2025-05-12",
-      "start_date": "2025-05-06",
-      "end_date": "2025-05-08",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41.5
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 50
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
