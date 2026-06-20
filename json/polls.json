@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-06-19T14:23:06.866Z",
+  "updatedAt": "2026-06-20T13:00:03.615Z",
   "approval": [
+    {
+      "id": "appdonap-6dc2cc83",
+      "poll_type": "approval",
+      "sample_size": 3040,
+      "population": "a",
+      "url": "https://apnorc.org/wp-content/uploads/2026/06/June-2026-Topline.pdf",
+      "created_at": "2026-06-19",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-17",
+      "pollster": "AP-NORC",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 37
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 62
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdonipsb35d6ff5",
       "poll_type": "approval",
@@ -10661,58 +10687,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonmarlxifhs54",
-      "poll_type": "approval",
-      "sample_size": 707,
-      "population": "rv",
-      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/05/MLSPSC26Crosstabs_NationalIssues.html",
-      "created_at": "2025-05-22",
-      "start_date": "2025-05-05",
-      "end_date": "2025-05-15",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonmarwsblbstj",
-      "poll_type": "approval",
-      "sample_size": 1004,
-      "population": "a",
-      "url": "https://law.marquette.edu/poll/wp-content/uploads/2025/05/MLSPSC26Crosstabs_NationalIssues.html",
-      "created_at": "2025-05-22",
-      "start_date": "2025-05-05",
-      "end_date": "2025-05-15",
-      "pollster": "Marquette University Law School",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 50
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -13146,6 +13120,7 @@
       "Tavern Research",
       "The Bullfinch Group",
       "The Public Sentiment Institute",
+      "The Rainey Center",
       "The Winston Group",
       "Washington Post/ABC News/Ipsos",
       "Yale Youth Poll",
