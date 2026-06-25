@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T13:31:57.078Z",
+  "updatedAt": "2026-06-25T13:28:58.933Z",
   "approval": [
     {
       "id": "appdonyoub2fe3e15",
@@ -52,6 +52,62 @@
       "seat_name": null,
       "sponsors": [
         "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonips8b682645",
+      "poll_type": "approval",
+      "sample_size": 978,
+      "population": "rv",
+      "url": "https://www.reuters.com/data/trumps-approval-rating-2025-01-21/",
+      "created_at": "2026-06-24",
+      "start_date": "2026-06-18",
+      "end_date": "2026-06-22",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 34
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 64
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonvera0a8d3f8",
+      "poll_type": "approval",
+      "sample_size": 2087,
+      "population": "a",
+      "url": "https://www.gelliottmorris.com/p/poll",
+      "created_at": "2026-06-24",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-22",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 37
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 60
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength in Numbers"
       ],
       "internal": false,
       "partisan": null,
@@ -299,6 +355,32 @@
       "sponsors": [
         "Fox News"
       ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonmar846f107b",
+      "poll_type": "approval",
+      "sample_size": 1514,
+      "population": "a",
+      "url": "https://law.marquette.edu/poll/",
+      "created_at": "2026-06-24",
+      "start_date": "2026-06-09",
+      "end_date": "2026-06-15",
+      "pollster": "Marquette University Law School",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 38
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 62
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
@@ -10661,58 +10743,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonamebgztpqd4",
-      "poll_type": "approval",
-      "sample_size": 1008,
-      "population": "rv",
-      "url": "https://americanresearchgroup.com/economy/",
-      "created_at": "2025-05-22",
-      "start_date": "2025-05-17",
-      "end_date": "2025-05-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonamez6hee8fy",
-      "poll_type": "approval",
-      "sample_size": 1100,
-      "population": "a",
-      "url": "https://americanresearchgroup.com/economy/",
-      "created_at": "2025-05-22",
-      "start_date": "2025-05-17",
-      "end_date": "2025-05-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -13092,6 +13122,34 @@
       "internal": false,
       "partisan": null,
       "subject": "2026"
+    },
+    {
+      "id": "genconver13f348b3",
+      "poll_type": "generic-ballot",
+      "sample_size": 1896,
+      "population": "rv",
+      "url": "https://www.gelliottmorris.com/p/poll",
+      "created_at": "2026-06-24",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-22",
+      "pollster": "Verasight",
+      "answers": [
+        {
+          "choice": "Democrat",
+          "pct": 50
+        },
+        {
+          "choice": "Republican",
+          "pct": 43
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Strength in Numbers"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Congress"
     }
   ],
   "debug": {
@@ -13160,7 +13218,6 @@
       "Angus Reid Global",
       "Big Data Poll",
       "Change Research",
-      "Civiqs",
       "Clarity Campaign Labs",
       "Data for Progress",
       "Echelon Insights",
