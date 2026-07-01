@@ -1,6 +1,34 @@
 {
-  "updatedAt": "2026-06-30T13:19:06.787Z",
+  "updatedAt": "2026-07-01T13:41:56.853Z",
   "approval": [
+    {
+      "id": "appdonyou319bfe49",
+      "poll_type": "approval",
+      "sample_size": 1428,
+      "population": "rv",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_1tbbxVr.pdf#page=4",
+      "created_at": "2026-06-30",
+      "start_date": "2026-06-26",
+      "end_date": "2026-06-29",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 40
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 58
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdonyoub2fe3e15",
       "poll_type": "approval",
@@ -10709,62 +10737,6 @@
       "seat_name": null,
       "sponsors": [
         "Yahoo News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouhvzvb4d6",
-      "poll_type": "approval",
-      "sample_size": 1660,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_WokQXF7.pdf",
-      "created_at": "2025-05-28",
-      "start_date": "2025-05-23",
-      "end_date": "2025-05-26",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 44
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 52
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyoucb8fktkz",
-      "poll_type": "approval",
-      "sample_size": 1486,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_WokQXF7.pdf",
-      "created_at": "2025-05-28",
-      "start_date": "2025-05-23",
-      "end_date": "2025-05-26",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 52
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
       ],
       "internal": false,
       "partisan": null,
