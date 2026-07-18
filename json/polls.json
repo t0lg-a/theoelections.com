@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T12:38:28.884Z",
+  "updatedAt": "2026-07-18T12:07:39.403Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -10329,65 +10329,9 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonverumlqw331",
-      "poll_type": "approval",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/trump-approval-at-42-democrats-up",
-      "created_at": "2025-06-16",
-      "start_date": "2025-06-06",
-      "end_date": "2025-06-12",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 42
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 56
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength in Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
-    {
-      "id": "gen202verpqhwodpk",
-      "poll_type": "generic-ballot",
-      "sample_size": 1500,
-      "population": "a",
-      "url": "https://www.gelliottmorris.com/p/trump-approval-at-42-democrats-up",
-      "created_at": "2025-06-16",
-      "start_date": "2025-06-06",
-      "end_date": "2025-06-12",
-      "pollster": "Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 45
-        },
-        {
-          "choice": "Rep",
-          "pct": 37
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Strength in Numbers"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
     {
       "id": "gen202emeq4b54wek",
       "poll_type": "generic-ballot",
