@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T12:50:24.410Z",
+  "updatedAt": "2026-07-25T12:11:58.489Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -10184,32 +10184,6 @@
         {
           "choice": "Disapprove",
           "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdongalgxdvuodf",
-      "poll_type": "approval",
-      "sample_size": 1000,
-      "population": "a",
-      "url": "https://news.gallup.com/poll/692045/economic-confidence-slightly-improved-negative.aspx",
-      "created_at": "2025-06-25",
-      "start_date": "2025-06-02",
-      "end_date": "2025-06-19",
-      "pollster": "Gallup",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 40
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 57
         }
       ],
       "seat_name": null,
