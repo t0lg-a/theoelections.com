@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T12:11:58.489Z",
+  "updatedAt": "2026-07-26T12:32:54.204Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -10136,58 +10136,6 @@
       "sponsors": [
         "Reuters"
       ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonamecz7mcard",
-      "poll_type": "approval",
-      "sample_size": 1100,
-      "population": "a",
-      "url": "https://americanresearchgroup.com/economy/",
-      "created_at": "2025-06-23",
-      "start_date": "2025-06-17",
-      "end_date": "2025-06-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonameq8dv5g1n",
-      "poll_type": "approval",
-      "sample_size": 1009,
-      "population": "rv",
-      "url": "https://americanresearchgroup.com/economy/",
-      "created_at": "2025-06-23",
-      "start_date": "2025-06-17",
-      "end_date": "2025-06-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 38
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
