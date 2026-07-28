@@ -1789,7 +1789,9 @@ function PollsGBSection(_ref22) {
     className: "lbl"
   }, labR), /*#__PURE__*/React.createElement("div", {
     className: "num"
-  }, rBig))), /*#__PURE__*/React.createElement(PollsCanvasHost, {
+  }, rBig))), /*#__PURE__*/React.createElement("div", {
+    className: "colBody"
+  }, /*#__PURE__*/React.createElement(PollsCanvasHost, {
     mode: "gb",
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
@@ -1823,7 +1825,7 @@ function PollsGBSection(_ref22) {
     className: "pollsListHead"
   }, "the record"), /*#__PURE__*/React.createElement(PollsListHost, {
     ready: ready
-  })), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("div", {
     className: "t-src"
   }, POLLS_SOURCE));
 }
@@ -1863,7 +1865,9 @@ function PollsRaceSection(_ref23) {
     className: "lbl"
   }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
-  }, rBig))), /*#__PURE__*/React.createElement(PollsCanvasHost, {
+  }, rBig))), /*#__PURE__*/React.createElement("div", {
+    className: "colBody"
+  }, /*#__PURE__*/React.createElement(PollsCanvasHost, {
     mode: mode,
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
@@ -1884,7 +1888,7 @@ function PollsRaceSection(_ref23) {
   }, stTitle)), /*#__PURE__*/React.createElement(PollsStateChartHost, {
     mode: mode,
     ready: ready
-  })), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("div", {
     className: "t-src"
   }, POLLS_SOURCE));
 }

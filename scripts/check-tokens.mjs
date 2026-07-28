@@ -48,6 +48,7 @@ const PENDING_CONVERSION = new Set([
 // Tokens that are the same on either ground, by design.
 const GROUND_INDEPENDENT = new Set([
   "--t-d1", "--t-d2", "--t-d5", "--t-data", "--t-prose", "--t-control-h",
+  "--t-sheet", "--t-gutter", "--t-baseline",
   "--t-w-hair", "--t-w-rule", "--t-w-contour", "--t-w-slab",
   "--t-fs-1", "--t-fs-2", "--t-fs-3", "--t-fs-4",
   "--t-fs-5", "--t-fs-6", "--t-fs-7", "--t-fs-8",

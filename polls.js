@@ -398,7 +398,7 @@ function pollTable(el,rows,lA,lB,cA,cB){
   const paper=PAPER();
   let h=`<table style="width:100%;border-collapse:collapse;font:600 11px/1.4 ${FONT};font-variant-numeric:tabular-nums">`;
   h+=`<thead><tr style="font:700 11px/1.4 ${FONT};color:var(--muted)">`;
-  const th=`padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:${paper};z-index:2`;
+  const th=`padding:6px 8px;position:sticky;top:0;background:${paper};z-index:2`;
   h+=`<th style="${th};text-align:left">date</th>`;
   h+=`<th style="${th};text-align:left">pollster</th>`;
   h+=`<th style="${th};text-align:right;color:${ca}">${lA}</th>`;
@@ -409,7 +409,7 @@ function pollTable(el,rows,lA,lB,cA,cB){
     const m=p.a-p.b;
     const ms=Math.abs(m)<.05?"tied":(m>0?`${lA}+${m.toFixed(1)}`:`${lB}+${Math.abs(m).toFixed(1)}`);
     const mc=m>0?ca:(m<0?cb:"var(--muted)");
-    h+=`<tr style="border-bottom:1px solid var(--t-row-rule)">`;
+    h+=`<tr>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};white-space:nowrap">${ds(p.date)}</td>`;
     h+=`<td style="padding:5px 8px;font:500 11px ${FONT};overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||""))}</td>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${ca}">${(+p.a).toFixed(1)}</td>`;

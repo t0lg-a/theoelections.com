@@ -115,6 +115,20 @@
   --t-sp-5:22px;
   --t-sp-6:32px;
 
+  /* ---- the sheet ------------------------------------------------------- */
+  /* [3.5] The sheet's maximum measure. Past this the columns stop growing:
+     a 1420px sheet is three 460px columns, and a column wider than that is
+     a line nobody's eye tracks back from. Above 1480 the sheet centres in
+     the window instead. */
+  --t-sheet:1480px;
+  /* [3.6] One gutter. It is the column's inner padding and the offset every
+     rule inside a column is measured from, so the two cannot drift. */
+  --t-gutter:16px;
+  /* [3.8] The baseline unit. Section heads, figure blocks and the record's
+     row height are all multiples of it, so the sheet has a rhythm rather
+     than a set of separately-chosen paddings. */
+  --t-baseline:8px;
+
   /* ---- control height -------------------------------------------------- */
   /* [2.12] Every control in the masthead is this tall, and nothing in the
      masthead sets a height any other way. scripts/check-tokens.mjs asserts
@@ -635,6 +649,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 
 /* The decode gate and the source line. Muted, never faint: a source is not
    decoration and has to survive a real screen. */
+.t-how, .t-src, .secSub, .seatsNote{text-wrap:pretty;}
 .t-how{
   font-family:var(--t-data);
   font-size:var(--t-fs-1);line-height:1.5;font-weight:500;
@@ -647,8 +662,8 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   font-family:var(--t-data);
   font-size:var(--t-fs-1);font-weight:500;
   color:var(--t-ink3);
-  margin-top:var(--t-sp-3);
-  padding-top:var(--t-sp-2);
+  margin-top:calc(var(--t-baseline) * 2);
+  padding-top:var(--t-baseline);
   border-top:var(--t-w-hair) solid var(--t-hair);
 }
 .t-src a{color:var(--t-ink);text-decoration:underline;text-underline-offset:2px;}
@@ -666,29 +681,60 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 /* ---- columns: hairline between, ink rule above each ---------------------- */
 /* The sheet rests on the same scale everything else is spaced by. */
 .pollsView{padding-bottom:calc(var(--t-sp-6) * 2);}
+/* [3.5][3.7] The sheet's measure, owned here rather than in the app's own
+   stylesheet, so the landing sheet and the analyses can read the same one.
+   The outer columns sit flush with the masthead's outer edge: the gutter is
+   inner padding only, never an outer margin. */
+.sheet{max-width:var(--t-sheet);}
+
+/* [3.1] The three columns align because the grid says so.
+
+   They used to align because two min-height reservations forced them to:
+   .secTitle reserved two lines and .secSub reserved three, so the display
+   figures landed on one line whatever the copy did. That works until the
+   copy is one line, and then it is whitespace nobody asked for above the
+   head rule — and it never aligned the bottoms at all, so the three source
+   lines finished up to 18px apart.
+
+   The columns now share the parent's rows through subgrid. The five rows
+   are the head, the note, the display figure, the body, and the source; the
+   body is the only one that stretches, so the figures line up at the top of
+   the sheet and the sources line up at the foot of it, with no reservation
+   anywhere. */
 .pollsView .cols{
   display:grid;
   grid-template-columns:1fr 1px 1fr 1px 1fr;
+  grid-template-rows:auto auto auto 1fr auto;
   gap:0;
-  align-items:start;
 }
 .pollsView .colRule{
   background:var(--t-hair);
   width:1px;
-  align-self:stretch;
+  grid-row:1 / -1;
 }
 .pollsView .col{
   border-top:1px solid var(--t-ink);
-  padding:15px var(--t-sp-4) 0;
+  padding:calc(var(--t-baseline) * 2) var(--t-gutter) 0;
   min-width:0;
+  display:grid;
+  grid-row:1 / -1;
+  grid-template-rows:subgrid;
 }
 /* Outer columns align to the page edge; only the gutters get padding. */
 .pollsView .col:first-child{padding-left:0;}
 .pollsView .col:last-child{padding-right:0;}
 @media (max-width:980px){
-  .pollsView .cols{grid-template-columns:1fr;}
+  /* Stacked, each column is its own block again: there is no row to share. */
+  .pollsView .cols{grid-template-columns:1fr;grid-template-rows:none;}
   .pollsView .colRule{display:none;}
-  .pollsView .col{padding:15px 0 0;margin-top:22px;}
+  .pollsView .col{
+    display:block;
+    grid-row:auto;
+    grid-template-rows:none;
+    padding:calc(var(--t-baseline) * 2) 0 0;
+    /* [3.18] One token for the rhythm between stacked columns. */
+    margin-top:calc(var(--t-baseline) * 4);
+  }
 }
 
 /* ---- the section head: a finding, then its dek --------------------------- */
@@ -696,9 +742,10 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
-  gap:14px;
-  padding:0 0 10px;
-  margin-bottom:12px;
+  gap:var(--t-sp-4);
+  /* [3.8] Snapped to the baseline unit: 8 under the dek, 16 to the note. */
+  padding:0 0 var(--t-baseline);
+  margin-bottom:calc(var(--t-baseline) * 2);
   border-bottom:var(--t-w-hair) solid var(--t-hair);
 }
 .pollsView .secTitle{
@@ -707,9 +754,16 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   font-size:var(--t-fs-6);
   line-height:1.22;
   letter-spacing:-.018em;
-  max-width:32ch;
+  /* [10] A title measure that fits the column it lives in, not a fixed one. */
+  max-width:none;
   color:var(--t-ink);
   font-style:normal;
+  /* [3.15] "What gubernatorial polling says, state by state" broke as
+     "…says, state / by state" at 981 and 1024 — a two-word widow under a
+     three-word line. Fixed by measure, not by a hard break: the browser is
+     told to balance the lines and finds a break the copy does not have to
+     be rewritten around. */
+  text-wrap:balance;
 }
 .pollsView .secSub{
   font-family:var(--t-data);
@@ -718,7 +772,9 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   line-height:1.55;
   letter-spacing:0;
   color:var(--t-muted);
-  margin-top:5px;
+  margin-top:var(--t-sp-1);
+  /* [3.14] The dek's measure. 56 characters is where a 13px line stops
+     being one thought and starts being a paragraph. */
   max-width:56ch;
 }
 
@@ -762,9 +818,9 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   font-family:var(--t-data);
   font-size:var(--t-fs-1);font-weight:500;
   color:var(--t-ink3);
-  margin-top:var(--t-sp-3);
+  margin-top:0;
 }
-.pollsView .seatsNote + .seats{padding-top:2px;}
+.pollsView .seatsNote + .seats{padding-top:var(--t-sp-1);}
 .pollsView .seats{
   display:flex;
   align-items:flex-end;
@@ -810,18 +866,21 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 
 /* ---- figure blocks ------------------------------------------------------- */
+/* [3.9] Every figure block opens the same way: two units of air, the
+   hairline, then two units back to the figure. */
 .pollsView .mapBlock,
-.pollsView .probBlock{
-  margin-top:16px;
-  padding-top:14px;
+.pollsView .probBlock,
+.pollsView .pollsListWrap{
+  margin-top:calc(var(--t-baseline) * 2);
+  padding-top:calc(var(--t-baseline) * 2);
   border-top:var(--t-w-hair) solid var(--t-hair);
 }
 .pollsView .probHead{
   display:flex;
   justify-content:space-between;
   align-items:baseline;
-  gap:12px;
-  margin-bottom:8px;
+  gap:var(--t-sp-3);
+  margin-bottom:var(--t-baseline);
 }
 .pollsView .probHead .h{
   font-family:var(--t-data);
@@ -930,16 +989,12 @@ svg path.state:focus-visible{
 }
 
 /* ---- the record ---------------------------------------------------------- */
-.pollsView .pollsListWrap{
-  border-top:var(--t-w-hair) solid var(--t-hair);
-  padding-top:var(--t-sp-3);
-  margin-top:16px;
-}
+
 .pollsView .pollsListHead{
   font-family:var(--t-data);
   font-size:var(--t-fs-2);font-weight:700;letter-spacing:0;
   color:var(--t-ink);
-  margin-bottom:8px;
+  margin-bottom:var(--t-baseline);
 }
 .pollsView .pollsListHost{max-height:260px;overflow-y:auto;}
 .pollsView .pollsListHost table{
@@ -1124,14 +1179,6 @@ input[type="range"]::-moz-range-thumb{
    11 · WHAT THE AUDIT FOUND
    ====================================================================== */
 
-/* [1] The three columns set their display figures on one line. Each head
-   reserves the tallest title and dek the sheet actually uses, so the biggest
-   marks on the page align instead of drifting with the copy. */
-@media (min-width:981px){
-  .pollsView .secTitle{min-height:calc(2 * 1.22em);}
-  .pollsView .secSub{min-height:calc(3 * 1.55em);}
-}
-
 /* [18] Waiting is not the same claim as absent. A form still fetching is
    hatched; an empty one is a plain vessel with its word inside. */
 .pollsHistHost:empty,
@@ -1303,8 +1350,68 @@ input[type="range"]::-moz-range-thumb{
    scrolling back is smaller than the cost of never getting the space. */
 .top{position:static;}
 
-/* [10] A title measure that fits the column it lives in. */
-.pollsView .secTitle{max-width:none;}
+/* ======================================================================
+   14 · PAPER  (chapter 3)
+   The system is already paper and ink, so printing it is mostly a matter of
+   taking the chrome off and letting the figures have the page. Nothing here
+   restyles a figure: a printed figure that does not match the screen one is
+   a second design to maintain.
+   ====================================================================== */
+@media print{
+  /* [3.22] Paper is the ground on paper: the sheet's own ground is dropped
+     so the stock shows through, and a reader who chose the ink ground still
+     gets ink on white rather than a solid black page. The tokens are not
+     otherwise restyled — the printed figure has to be the same figure — but
+     the three quietest neutrals step down, because a hairline that survives
+     a screen does not always survive a printer. */
+  :root:root, :root:root body{
+    background:none !important;
+  }
+  :root:root{
+    --t-paper:#F6F5EF;
+    --t-faint:#8E8C82;
+    --t-hair:#A8A59A;
+    --t-row-rule:#C4C1B7;
+  }
+  /* The chrome does not print: the nav is nine links nobody can follow, the
+     controls do nothing, and the skip link is for a keyboard. */
+  .top, .skiplink, .actions, .nav, .tweaks, .tweaksPanel,
+  .mapCtrlBtn, .zoomBtn, .chartTab, .chipBtn, .toggle{display:none !important;}
+
+  /* [3.22] The figures take the page. The three columns become one, because
+     three 150mm columns on A4 is three columns of nothing. */
+  .sheet{max-width:none;padding:0;}
+  .pollsView .cols, .cols{
+    display:block !important;
+    grid-template-columns:none !important;
+    grid-template-rows:none !important;
+  }
+  .pollsView .col, .col{
+    display:block !important;
+    grid-row:auto !important;
+    grid-template-rows:none !important;
+    padding:0 !important;
+    margin:0 0 calc(var(--t-baseline) * 4);
+  }
+  .colRule{display:none !important;}
+
+  /* A figure is not split across a page break, and its title goes with it. */
+  .mapBlock, .probBlock, .pollsListWrap, figure, table{
+    break-inside:avoid;
+  }
+  .secTitle, .secHead, .pollsListHead, .probHead{
+    break-after:avoid;
+  }
+  /* The record is a record: all of it prints, not the 260px of it that fits
+     a screen. */
+  .pollsView .pollsListHost{max-height:none;overflow:visible;}
+
+  /* A link's destination is worth nothing on paper unless it is written out,
+     and the source line is the one place it matters. */
+  .t-src a::after{content:" (" attr(href) ")";font-weight:500;}
+
+  @page{margin:16mm;}
+}
 
 /* ======================================================================
    12 · THE DISTRICT SHAPES

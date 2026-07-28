@@ -235,44 +235,135 @@ The three-column sheet is the site's structure. It currently aligns because
 two `min-height` reservations force it to. This chapter makes it align because
 the grid says so.
 
-1. Replace the `min-height` reservations with a real subgrid: give `.cols` its
-   row template and let each `.col` inherit it.
-2. Wrap everything after `.seats` in one child element in both polls sections
-   so subgrid has a row to align.
-3. Verify the display figures set on one line at 981, 1024, 1280, 1440, 1920.
-4. Verify the reserved whitespace above the head rule is gone at 1281+.
-5. Decide the sheet's maximum measure and stop the columns growing past it at
-   1920 and above.
-6. Set the gutter as a token and use it for the column padding and the rule
-   offsets alike.
-7. Align the outer columns to the masthead's outer edge, and prove it with a
-   pixel measurement rather than by eye.
-8. Establish a baseline grid unit and snap the section heads to it.
-9. Snap the figure blocks to the same unit.
-10. Snap the record's row height to the same unit.
-11. Audit every horizontal rule on the sheet and delete the ones that are not
-    earned; count before and after.
-12. Decide the rule hierarchy: which separations are ink, which are hairline,
-    which are whitespace alone.
-13. Apply that hierarchy across all three columns and check no two adjacent
-    rules survive.
-14. Set the maximum measure for the dek at 56ch and the decode line at 64ch,
-    and verify no line exceeds it at any width.
-15. Fix the two-word widow in the third column title, by measure rather than
-    by a hard break.
-16. Decide the stacking order on mobile: currently generic ballot, senate,
-    governor. Confirm it is the reading order you want.
-17. Give the stacked columns a rule between them on mobile so the sections
-    stay distinct.
-18. Set the vertical rhythm between stacked columns as one token.
-19. Verify the sheet at 320px, which nothing has been tested at.
-20. Verify the sheet at 2560px.
-21. Verify the sheet at 1024 in portrait, which is a real tablet case.
-22. Add a print stylesheet: paper ground, ink type, figures at full width, no
-    chrome.
-23. Verify the print layout for the polls sheet and the methodology page.
-24. Record the grid decisions in this file so the next change has something to
-    violate knowingly.
+1. [x] `.pollsView .cols` now has five rows — head, note, display figure,
+   body, source — and each `.col` takes `grid-row:1/-1` with
+   `grid-template-rows:subgrid`. Only the body stretches.
+   Original step: Replace the `min-height` reservations with a real subgrid: give `.cols` its
+    row template and let each `.col` inherit it.
+2. [x] Both polls sections wrap their tail in `.colBody`, so subgrid has a
+   row to stretch and the source line has one of its own.
+   Original step: Wrap everything after `.seats` in one child element in both polls sections
+    so subgrid has a row to align.
+3. [x] Measured at 981, 1024, 1280, 1440, 1920 and 2560: head tops, head
+   rules, notes, display figures, body tops and source lines all agree to
+   the pixel, and the three columns finish the same height.
+   Original step: Verify the display figures set on one line at 981, 1024, 1280, 1440, 1920.
+4. [x] Gone. The reservation cost 30px above the figures at 1280 and up; the
+   display figures moved from y=262 to y=232 and the column from 971/980/989
+   to a uniform 957.
+   Original step: Verify the reserved whitespace above the head rule is gone at 1281+.
+5. [x] `--t-sheet`, 1480px, which is three 460px columns after the sheet's
+   own padding. Above that the sheet centres rather than grows.
+   Original step: Decide the sheet's maximum measure and stop the columns growing past it at
+    1920 and above.
+6. [x] `--t-gutter`. It is the column's inner padding and the offset every
+   rule inside a column is measured from.
+   Original step: Set the gutter as a token and use it for the column padding and the rule
+    offsets alike.
+7. [x] Measured, not eyeballed: the first column's left edge and the last
+   column's right edge sit 0px from the masthead's, at all six widths.
+   Original step: Align the outer columns to the masthead's outer edge, and prove it with a
+    pixel measurement rather than by eye.
+8. [x] `--t-baseline`, 8px. The section head is 8 under its dek and 16 to the
+   note.
+   Original step: Establish a baseline grid unit and snap the section heads to it.
+9. [x] Every figure block opens the same way: 16 of air, the hairline, 16
+   back to the figure. The record's wrap was a fourth variant of the same
+   idea and now shares the rule.
+   Original step: Snap the figure blocks to the same unit.
+10. [x] The record's row is 24px — three units — and was already on it.
+    Original step: Snap the record's row height to the same unit.
+11. [x] Counted: 403 horizontal rules on the sheet at 1440, of which 264
+    belonged to the record's 44 rows. `polls.js` was drawing a border on
+    every `<tr>` and `assets/theme.css` another on every `<td>`, so each row
+    line had two owners; the same went for the header rule. 45 rules
+    deleted, none of them visible, all of them a second thing to change.
+    Original step: Audit every horizontal rule on the sheet and delete the ones that are not
+     earned; count before and after.
+12. [x] Decided and recorded below: ink opens a column, the hairline
+    separates blocks inside one, the row rule is quieter than a hairline,
+    and everything else is whitespace.
+    Original step: Decide the rule hierarchy: which separations are ink, which are hairline,
+     which are whitespace alone.
+13. [x] Applied and checked: no two rules survive within 26px of each other
+    with nothing between them. The only near-pairs left are the masthead's
+    slab and the columns' opening rule, 22px apart at different weights,
+    which is a close followed by an open rather than a doubled rule.
+    Original step: Apply that hierarchy across all three columns and check no two adjacent
+     rules survive.
+14. [x] 56ch and 64ch, verified at nine widths from 320 to 2560: no block
+    exceeds its measure at any of them.
+    Original step: Set the maximum measure for the dek at 56ch and the decode line at 64ch,
+     and verify no line exceeds it at any width.
+15. [x] "What gubernatorial polling says, state by state" broke as
+    "…says, state / by state" at 981 and 1024. Fixed with `text-wrap:balance`
+    on the title and `pretty` on the running blocks — by measure, with no
+    hard break and no rewritten copy.
+    Original step: Fix the two-word widow in the third column title, by measure rather than
+     by a hard break.
+16. [x] Confirmed: the national picture, then the Senate map, then the
+    governor map. The reader wants the country before the chamber.
+    Original step: Decide the stacking order on mobile: currently generic ballot, senate,
+     governor. Confirm it is the reading order you want.
+17. [x] Each stacked column keeps its 1px ink opening rule, verified at 320
+    and 768.
+    Original step: Give the stacked columns a rule between them on mobile so the sections
+     stay distinct.
+18. [x] Four baseline units, from the token.
+    Original step: Set the vertical rhythm between stacked columns as one token.
+19. [x] 320 lays out, stacks, and does not scroll sideways; nothing overruns
+    the viewport.
+    Original step: Verify the sheet at 320px, which nothing has been tested at.
+20. [x] 2560 is identical to 1920: the sheet stops at its measure and
+    centres.
+    Original step: Verify the sheet at 2560px.
+21. [x] 1024×1366 portrait holds the three columns and reads.
+    Original step: Verify the sheet at 1024 in portrait, which is a real tablet case.
+22. [x] `assets/theme.css` §14. The ground is dropped so the stock shows
+    through, the chrome goes, the three columns become one, figures avoid a
+    page break and keep their titles, the record prints whole rather than the
+    260px of it that fits a screen, and a source link's destination is
+    written out.
+    Original step: Add a print stylesheet: paper ground, ink type, figures at full width, no
+     chrome.
+23. [x] Both rendered to `docs/shots/polls-print.pdf` and
+    `docs/shots/methodology-print.pdf` at A4.
+    Original step: Verify the print layout for the polls sheet and the methodology page.
+24. [x] Below.
+    Original step: Record the grid decisions in this file so the next change has something to
+     violate knowingly.
+
+### The grid decisions
+
+**The sheet.** One measure, `--t-sheet` at 1480px, centred. Three columns of
+1fr with a 1px hairline between them. The outer columns are flush with the
+masthead's outer edge; the gutter is inner padding only. Below 981 the
+columns stack in source order.
+
+**The rows.** Five, shared by all three columns through subgrid: the head,
+the note, the display figure, the body, the source. Only the body stretches.
+Nothing reserves height; if a head is one line shorter than its neighbour,
+the difference lands under the dek, where it belongs, and not above the
+figures.
+
+**The rule hierarchy.**
+
+| weight | what it means | where |
+|---|---|---|
+| 9px ink slab | the masthead closes | `.top` |
+| 1px ink | a column opens | `.col` |
+| 1px hairline | a block ends inside a column | `.secHead`, `.mapBlock`, `.probBlock`, `.pollsListWrap`, `.t-src` |
+| 1px row rule | one record from the next, quieter than a hairline | the record's `td` |
+| nothing | everything else | |
+
+Two rules never sit within 26px of each other with nothing between them. A
+rule has exactly one owner: if the sheet draws it, the module must not.
+
+**The rhythm.** `--t-baseline` is 8px. Section heads, figure blocks, the
+record's rows and the gap between stacked columns are all multiples of it.
+
+**The measures.** A dek stops at 56ch, a decode line at 64ch. A title takes
+the column it lives in and balances its own lines.
 
 ---
 
