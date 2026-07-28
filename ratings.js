@@ -206,6 +206,24 @@ async function initRtgMap(modeKey){
   RTG_MAP[modeKey] = { svg, gRoot };
 }
 
+/** Absent is absent, not zero: an empty vessel with its word inside. */
+function drawRtgAbsent(svg, word){
+  const w = 960, h = 600, bw = 300, bh = 72;
+  svg.append("rect")
+    .attr("x", (w-bw)/2).attr("y", (h-bh)/2)
+    .attr("width", bw).attr("height", bh)
+    .attr("fill", "var(--t-paper)")
+    .attr("stroke", "var(--t-ink)")
+    .attr("stroke-width", 2);
+  svg.append("text")
+    .attr("x", w/2).attr("y", h/2 + 5)
+    .attr("text-anchor", "middle")
+    .attr("fill", "var(--t-muted)")
+    .attr("font-family", "var(--t-data)")
+    .attr("font-size", "14px").attr("font-weight", "600")
+    .text(word);
+}
+
 async function initRtgHouseMap(ui, modeKey){
   const width = 960, height = 600;
   const svg = d3.select(ui.mapSvg);
@@ -215,11 +233,28 @@ async function initRtgHouseMap(ui, modeKey){
   const gZoom = svg.append("g");
   const gRoot = gZoom.append("g");
 
-  if (!HOUSE_SVG_TEXT) return; // house.svg not loaded yet
+  // Fetch the district shapes rather than waiting for another tab to have done
+  // it. Returning here left the Congress ratings map permanently blank for
+  // anyone who opened /ratings/ directly.
+  if (!HOUSE_SVG_TEXT){
+    try {
+      HOUSE_SVG_TEXT = await fetch("/svg/house.svg", {cache:"no-store"}).then(r=>{
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      });
+    } catch(e){
+      console.warn("Ratings: svg/house.svg not loaded:", e);
+      drawRtgAbsent(svg, "district map unavailable");
+      return;
+    }
+  }
 
   const doc = new DOMParser().parseFromString(HOUSE_SVG_TEXT, "image/svg+xml");
   const shapes = doc.getElementById("district-shapes");
-  if (!shapes) return;
+  if (!shapes){
+    drawRtgAbsent(svg, "district map unavailable");
+    return;
+  }
 
   const imported = document.importNode(shapes, true);
   gRoot.node().appendChild(imported);

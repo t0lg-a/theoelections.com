@@ -315,29 +315,63 @@ function loadCsvSupplement() {
 const D_WORDS = /^(d|dem|dems|democrat|democrats|democratic|generic democrat|democratic candidate)$/;
 const R_WORDS = /^(r|rep|reps|gop|republican|republicans|generic republican|republican candidate)$/;
 
-/** Party for one answer: explicit field, party token in the label, then the name. */
-function answerParty(ans) {
-  const explicit = String(ans.party ?? ans.candidate_party ?? ans.answer_party ?? "").trim().toUpperCase().slice(0, 1);
-  if (explicit === "D" || explicit === "R") return explicit;
+/** Normalize any party spelling the API might use into D, R or "". */
+function partyLetter(raw) {
+  const v = String(raw ?? "").trim().toLowerCase();
+  if (!v) return "";
+  if (/^(d|dem|dems|democrat|democratic|democrats)$/.test(v)) return "D";
+  if (/^(r|rep|reps|gop|republican|republicans)$/.test(v)) return "R";
+  return "";
+}
 
-  const choice = String(ans.choice ?? ans.answer ?? ans.candidate_name ?? ans.name ?? "").trim();
+/**
+ * Party for one answer. The API's field naming is not pinned down, so this
+ * looks at every key whose name mentions a party, then at the label, then at
+ * the candidate map built from the CSV. It never guesses from position:
+ * assigning a party by order would quietly corrupt the model, and a dropped
+ * poll is recoverable where a mislabelled one is not.
+ */
+function answerParty(ans) {
+  if (!ans || typeof ans !== "object") return "";
+
+  // 1. Any field that names a party, at the top level or one level down.
+  for (const [k, v] of Object.entries(ans)) {
+    if (!/part(y|isan)/i.test(k)) continue;
+    const p = partyLetter(v);
+    if (p) return p;
+  }
+  for (const nest of ["candidate", "answer", "choice"]) {
+    const obj = ans[nest];
+    if (obj && typeof obj === "object") {
+      for (const [k, v] of Object.entries(obj)) {
+        if (!/part(y|isan)/i.test(k)) continue;
+        const p = partyLetter(v);
+        if (p) return p;
+      }
+    }
+  }
+
+  // 2. The label itself.
+  const choice = String(
+    ans.choice ?? ans.answer ?? ans.candidate_name ?? ans.name ?? ans.label ??
+    (ans.candidate && (ans.candidate.name || ans.candidate.candidate_name)) ?? ""
+  ).trim();
   const lower = choice.toLowerCase().replace(/\s+/g, " ");
   if (D_WORDS.test(lower)) return "D";
   if (R_WORDS.test(lower)) return "R";
 
-  // Trailing party marker: "Jon Ossoff (D)", "Ossoff, D", "Ossoff - Dem"
-  const marker = choice.match(/[(\[,\-–]\s*(dem|democrat(?:ic)?|d|rep|republican|gop|r)\s*[)\]]?\s*$/i);
-  if (marker) {
-    const t = marker[1].toLowerCase();
-    return (t === "d" || t.startsWith("dem")) ? "D" : "R";
-  }
+  // Party marker anywhere in the label: "Jon Ossoff (D)", "Ossoff, D",
+  // "Ossoff - Dem", "(D) Ossoff".
+  const marker = choice.match(/[(\[,\-–]\s*(dem|democrat(?:ic)?|d|rep|republican|gop|r)\s*[)\]]?(?:\s|$)/i);
+  if (marker) return partyLetter(marker[1]);
 
+  // 3. The candidate map built from the manual CSV.
   const byName = CANDIDATE_PARTY.get(normName(choice.replace(/[(\[].*$/, "")));
   return byName || "";
 }
 
 function answerPct(ans) {
-  const v = Number(ans.pct ?? ans.percent ?? ans.value ?? NaN);
+  const v = Number(ans.pct ?? ans.percent ?? ans.value ?? ans.share ?? ans.support ?? NaN);
   return isFinite(v) ? v : NaN;
 }
 
@@ -561,9 +595,16 @@ async function run() {
   debug.fromApi = merged.filter(p => p.source === "votehub").length;
   debug.fromCsv = merged.filter(p => p.source === "csv").length;
 
+  // If the API answered and nothing survived, say so in the artifact itself.
+  // The manual CSV keeps the site working, which is exactly how a silent
+  // failure hides.
+  const anyFetched = Object.values(debug.fetched).some(n => n > 0);
+  debug.degraded = (anyFetched && debug.fromApi === 0) ? "API returned polls but none were usable" : false;
+
   const out = {
     updatedAt: new Date().toISOString(),
     source: API_BASE,
+    degraded: debug.degraded,
     window: 6,                 // rolling window (polls) the model averages over
     counts,
     states: { senate: states.senate.size, governor: states.governor.size },
@@ -575,6 +616,9 @@ async function run() {
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
   console.log(`Done. ${merged.length} state polls (${debug.fromApi} from VoteHub, ${debug.fromCsv} manual) → ${OUT_PATH}`);
 
+  if (debug.degraded) {
+    console.warn(`WARNING: ${debug.degraded}. See debug.dropReasons and debug.shape in ${OUT_PATH}.`);
+  }
   if (debug.skippedDays.length) {
     console.warn(`WARNING: skipped ${debug.skippedDays.length} day(s) due to VoteHub 5xx. See debug.skippedDays.`);
   }
@@ -587,4 +631,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { run, normalizeApiPoll, toMatchup, answerParty, toUsps, normMode, rememberCandidate, dedupeKey };
+module.exports = { run, normalizeApiPoll, toMatchup, answerParty, partyLetter, stageIsModelled, toUsps, normMode, rememberCandidate, dedupeKey };

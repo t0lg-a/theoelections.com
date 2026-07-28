@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-07-28T10:57:30.963Z",
+  "note": "Year to the modes that have a precomputed odds file. Absent means the race was not held or has no odds.",
+  "years": {
+    "2000": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2002": [
+      "governor",
+      "senate"
+    ],
+    "2004": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2006": [
+      "governor",
+      "senate"
+    ],
+    "2008": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2010": [
+      "governor",
+      "senate"
+    ],
+    "2012": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2014": [
+      "governor",
+      "senate"
+    ],
+    "2016": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2018": [
+      "governor",
+      "senate"
+    ],
+    "2020": [
+      "governor",
+      "president",
+      "senate"
+    ],
+    "2022": [
+      "governor",
+      "senate"
+    ],
+    "2024": [
+      "governor",
+      "house",
+      "president",
+      "senate"
+    ]
+  }
+}

@@ -660,8 +660,37 @@ async function loadPastStatePolls(year){
   }
 }
 
-async function loadPastOdds(year, mode){
+// Which year/mode combinations actually have an odds file. Built by
+// js/build_past_index.js; without it every off-year asked for four files that
+// were never there.
+let PAST_ODDS_INDEX = null;
+let PAST_ODDS_INDEX_OK = false;
 
+async function loadPastOddsIndex(){
+  if (PAST_ODDS_INDEX) return PAST_ODDS_INDEX;
+  try{
+    const j = await fetch("/json/past/odds_index.json", {cache:"no-store"}).then(r=>{
+      if(!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    });
+    PAST_ODDS_INDEX = j.years || {};
+    PAST_ODDS_INDEX_OK = true;
+  }catch(e){
+    // No manifest: fall back to asking for everything, as before.
+    PAST_ODDS_INDEX = {};
+    PAST_ODDS_INDEX_OK = false;
+  }
+  return PAST_ODDS_INDEX;
+}
+
+async function loadPastOdds(year, mode){
+  const index = await loadPastOddsIndex();
+  if (PAST_ODDS_INDEX_OK){
+    // A year absent from the manifest has no odds files at all, which is the
+    // normal case for an off-year.
+    const modes = index[String(year)];
+    if (!modes || !modes.includes(mode)) return false;
+  }
 
   const file = `/json/past/${year}_${mode}_odds.json`;
   try {
