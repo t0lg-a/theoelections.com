@@ -28,13 +28,29 @@ const OUT_PATH      = "json/state_polls.json";
 // Each mode lists its candidates in preference order; the first one that
 // returns polls wins and the rest are skipped.
 const MODE_POLL_TYPES = {
-  senate:   ["senate", "senate-general", "us-senate"],
-  governor: ["governor", "gubernatorial", "governor-general"],
+  senate:   ["senate", "us-senate", "senate-general", "senate-race", "state-senate"],
+  governor: ["governor", "gubernatorial", "governor-general", "governor-race"],
 };
 
-// Race stages we model. The API exposes primaries and runoffs under the same
-// poll_type, and those are not head-to-head D vs R matchups.
-const ALLOWED_STAGES = new Set(["general", "general-election", "generalelection", ""]);
+// When every candidate name comes back empty, ask the API what it does carry
+// rather than guessing again next time.
+const PROBE_TYPES = [
+  "senate", "us-senate", "house", "us-house", "governor", "gubernatorial",
+  "president", "presidential", "generic-ballot", "approval", "favorability",
+  "state-senate", "state-house", "attorney-general", "secretary-of-state",
+  "senate-primary", "governor-primary", "ballot-measure",
+];
+
+// Race stages we skip. Anything else — including a stage the API does not
+// report at all — is treated as a general-election matchup, because rejecting
+// on an unrecognised stage silently threw away every poll on the first run.
+const REJECTED_STAGE = /(primary|runoff|jungle|caucus|convention|nomination)/;
+
+function stageIsModelled(raw) {
+  const v = String(raw || "").trim().toLowerCase();
+  if (!v) return true;
+  return !REJECTED_STAGE.test(v);
+}
 
 const NAME_TO_USPS = {
   alabama:"AL",alaska:"AK",arizona:"AZ",arkansas:"AR",california:"CA",colorado:"CO",
@@ -344,18 +360,23 @@ function toMatchup(poll) {
   return { D, R };
 }
 
+/**
+ * Returns a row, or a string naming why the poll was dropped. Naming the
+ * reason is the point: the first live run dropped 282 of 282 polls and the
+ * output could not say which test had failed.
+ */
 function normalizeApiPoll(poll, mode) {
-  const stage = String(poll.stage ?? poll.race_stage ?? "").trim().toLowerCase();
-  if (!ALLOWED_STAGES.has(stage)) return null;
+  if (!stageIsModelled(poll.stage ?? poll.race_stage)) return "stage";
 
-  const state = toUsps(poll.state) || toUsps(poll.seat_name) || toUsps(poll.race);
-  if (!state) return null;
+  const state = toUsps(poll.state) || toUsps(poll.seat_name) || toUsps(poll.race)
+             || toUsps(poll.state_abbr) || toUsps(poll.state_name);
+  if (!state) return "state";
 
   const date = parseDate(poll.end_date || poll.start_date || poll.created_at);
-  if (!date) return null;
+  if (!date) return "date";
 
   const pair = toMatchup(poll);
-  if (!pair) return null;
+  if (!pair) return "matchup";
 
   const moe = Number(poll.margin_of_error ?? poll.moe ?? NaN);
 
@@ -388,6 +409,62 @@ function dedupeKey(p) {
 }
 
 /* ═══════════════════════════════════════════════════════
+   DIAGNOSTICS
+   The API is not reachable from every environment this repo is worked on in,
+   so the script has to be able to describe what it received.
+   ═══════════════════════════════════════════════════════ */
+
+/** Record the field names the API actually returned, plus a redacted sample. */
+function describeShape(mode, polls, debug) {
+  const keys = new Set();
+  const answerKeys = new Set();
+  const stages = new Set();
+  const stateVals = new Set();
+  for (const p of polls.slice(0, 200)) {
+    for (const k of Object.keys(p || {})) keys.add(k);
+    for (const a of (Array.isArray(p.answers) ? p.answers : [])) {
+      for (const k of Object.keys(a || {})) answerKeys.add(k);
+    }
+    if (p.stage != null) stages.add(String(p.stage));
+    if (p.state != null) stateVals.add(String(p.state));
+  }
+  const sample = polls.slice(0, 3).map(p => ({
+    id: p.id, poll_type: p.poll_type, stage: p.stage,
+    state: p.state, seat_name: p.seat_name, subject: p.subject,
+    start_date: p.start_date, end_date: p.end_date, pollster: p.pollster,
+    answers: (Array.isArray(p.answers) ? p.answers : []).slice(0, 4),
+  }));
+  debug.shape[mode] = {
+    pollKeys: [...keys].sort(),
+    answerKeys: [...answerKeys].sort(),
+    stages: [...stages].slice(0, 8),
+    stateExamples: [...stateVals].slice(0, 8),
+    sample,
+  };
+  console.log(`  ${mode} shape: keys=${JSON.stringify([...keys].sort())}`);
+  console.log(`  ${mode} answer keys=${JSON.stringify([...answerKeys].sort())} stages=${JSON.stringify([...stages].slice(0,8))}`);
+  console.log(`  ${mode} sample=${JSON.stringify(sample)}`);
+}
+
+/** Ask the API which poll_type names it answers for, over a short window. */
+async function probePollTypes(start, today, debug) {
+  const from_date = isoDate(addDays(today, -120));
+  const to_date = isoDate(today);
+  const found = {};
+  for (const t of PROBE_TYPES) {
+    try {
+      const list = extractList(await fetchJson(buildUrl({
+        poll_type: t, from_date, to_date, sort: "-end_date",
+      })));
+      if (list.length) found[t] = list.length;
+    } catch (e) {
+      found[t] = `error: ${String(e).split("\n")[0].slice(0, 60)}`;
+    }
+  }
+  return found;
+}
+
+/* ═══════════════════════════════════════════════════════
    MAIN
    ═══════════════════════════════════════════════════════ */
 async function run() {
@@ -399,6 +476,8 @@ async function run() {
     pollTypeUsed: {},
     fetched: {},
     dropped: {},
+    dropReasons: {},
+    shape: {},
     okSlices: 0,
     failedSlices: 0,
     skippedDays: [],
@@ -433,14 +512,28 @@ async function run() {
     }
     const unique = Array.from(byId.values());
 
-    let dropped = 0;
+    if (unique.length) describeShape(mode, unique, debug);
+
+    const reasons = {};
+    let kept = 0;
     for (const p of unique) {
       const row = normalizeApiPoll(p, mode);
-      if (row) apiPolls.push(row); else dropped++;
+      if (typeof row === "string") reasons[row] = (reasons[row] || 0) + 1;
+      else { apiPolls.push(row); kept++; }
     }
     debug.fetched[mode] = unique.length;
-    debug.dropped[mode] = dropped;
-    console.log(`  ${mode}: ${unique.length} polls, ${unique.length - dropped} usable D-vs-R matchups`);
+    debug.dropped[mode] = unique.length - kept;
+    debug.dropReasons[mode] = reasons;
+    console.log(`  ${mode}: ${unique.length} polls, ${kept} usable D-vs-R matchups`);
+    if (unique.length && kept === 0) {
+      console.warn(`  ${mode}: every poll was dropped. Reasons: ${JSON.stringify(reasons)}`);
+    }
+
+    if (!unique.length) {
+      const found = await probePollTypes(start, today, debug);
+      debug.probe = found;
+      console.warn(`  ${mode}: no poll_type matched. The API answered for: ${JSON.stringify(found)}`);
+    }
   }
 
   if (!apiPolls.length) {
