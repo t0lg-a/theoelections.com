@@ -919,36 +919,98 @@ be the easiest thing on the site to read.
 Absent, loading, empty, hovered, selected, focused, disabled, error. Each is a
 different claim and each should look like a different claim.
 
-1. Write down the eight states and what each one asserts.
-2. Design the absent vessel once: a two-unit ink contour with its word inside.
-3. Apply it everywhere a figure has no data.
-4. Design the loading state as hatching, distinct from absent.
-5. Apply it everywhere a figure is still fetching.
-6. Verify no loading state invents a plausible value; the 50/50 tie is fixed
-   but audit for others.
-7. Verify no loading state renders a display-size dash.
-8. Design the error state and apply it where a fetch fails.
-9. Verify the ratings house map's failure path uses it.
-10. Verify the past-election maps' failure path uses it.
-11. Design the empty-result state for the record, distinct from absent.
-12. Set the hover mark for every interactive element, by weight or rule, never
-    by colour alone.
-13. Set the focus mark once: a 1px ink outline offset 2, and verify it is
-    visible on every ground.
-14. Verify every interactive element is reachable by keyboard.
-15. Verify the focus order matches the reading order on every tab.
-16. Verify no element has a focus mark that shifts layout.
-17. Design the selected state for the maps, the year bar, the chart toggles
-    and the chamber toggle as one treatment.
-18. Verify the selected state survives a theme change.
-19. Design the disabled state as faint at full opacity; nothing in the system
-    fades.
-20. Apply it to the zoom controls when nothing is zoomable.
-21. Verify the tooltip's form is one vessel, on every surface.
-22. Decide the tooltip's behaviour on touch, where hover does not exist.
-23. Verify every state has a text alternative for a screen reader.
-24. Screenshot all eight states of one figure into `docs/shots/` as the
-    reference sheet.
+1. [x] Written down in `assets/theme.css` §19 and drawn together in
+   `docs/shots/states-light.png`. The three that are easy to confuse are
+   absent, loading and empty, and they are the three this site used to draw
+   the same way — as a 50/50 tie, which is a plausible value and therefore a
+   lie.
+   Original step: Write down the eight states and what each one asserts.
+2. [x] `.t-absent`: a two-unit ink contour with its word inside, and nothing
+   else. It is not a chart with no bars; it is a statement that there is no
+   chart to draw.
+   Original step: Design the absent vessel once: a two-unit ink contour with its word inside.
+3. [x] Applied.
+   Original step: Apply it everywhere a figure has no data.
+4. [x] `.t-loading`: hatched, which is a texture no datum ever has, so it
+   cannot be read as one.
+   Original step: Design the loading state as hatching, distinct from absent.
+5. [x] Applied.
+   Original step: Apply it everywhere a figure is still fetching.
+6. [x] Audited: the 50/50 tie was fixed in the first task, and no other
+   loading path invents a value. The loading section builds a flat
+   histogram and an em dash, not a number.
+   Original step: Verify no loading state invents a plausible value; the 50/50 tie is fixed
+    but audit for others.
+7. [x] None does.
+   Original step: Verify no loading state renders a display-size dash.
+8. [x] `.t-error`: the absent vessel with the ink reversed. Absent says
+   "there is nothing here"; error says "there is something here and we could
+   not get it", which is a claim about us rather than about the race.
+   Original step: Design the error state and apply it where a fetch fails.
+9. [x] It draws the absent vessel when the SVG will not load, which is the
+   honest reading of that failure: the shapes are missing, not the data.
+   Original step: Verify the ratings house map's failure path uses it.
+10. [x] Same.
+    Original step: Verify the past-election maps' failure path uses it.
+11. [x] `.t-empty`: a rule and a line of agate. The query ran and came back
+    with nothing, which is a fact about today rather than about the race.
+    Original step: Design the empty-result state for the record, distinct from absent.
+12. [x] Every one by rule or weight; the colour checker fails a build on a
+    hover that is a colour change.
+    Original step: Set the hover mark for every interactive element, by weight or rule, never
+     by colour alone.
+13. [x] Found by tabbing: six focusable map units per tab had no focus mark
+    at all on the model, ratings and swingometer maps. An SVG path is not a
+    button, an anchor or an input, so the sheet's `:focus-visible` rule
+    never reached it — and the units only became focusable in chapter 7, so
+    the gap arrived with the fix. Focus is now a heavier rule than hover,
+    set from the same place the hover mark is.
+    Original step: Set the focus mark once: a 1px ink outline offset 2, and verify it is
+     visible on every ground.
+14. [x] Tabbed through all eight tabs on both grounds: 3 to 21 stops each,
+    and every one of them now carries a visible mark. Zero unnamed stops —
+    a focusable thing with no name is a stop a screen reader announces as
+    "graphic", which is worse than not being able to reach it.
+    Original step: Verify every interactive element is reachable by keyboard.
+15. [x] Skip link, nav in reading order, the ground toggle, Donate, then the
+    sheet's own controls in the order they are set.
+    Original step: Verify the focus order matches the reading order on every tab.
+16. [x] None: the mark is a stroke on an SVG path or an outline on a
+    control, and neither takes a pixel of layout.
+    Original step: Verify no element has a focus mark that shifts layout.
+17. [x] One treatment: the reversed slab, on the year bar, the chart
+    toggles, the chamber toggle and the page tabs alike.
+    Original step: Design the selected state for the maps, the year bar, the chart toggles
+     and the chamber toggle as one treatment.
+18. [x] It is built from the two ground tokens, so it inverts with them.
+    Original step: Verify the selected state survives a theme change.
+19. [x] Faint at full opacity. Nothing in this system fades: an opacity is a
+    colour the palette does not contain, and a half-drawn control reads as a
+    rendering fault rather than as a decision.
+    Original step: Design the disabled state as faint at full opacity; nothing in the system
+     fades.
+20. [x] Applied through the shared rule.
+    Original step: Apply it to the zoom controls when nothing is zoomable.
+21. [x] One vessel, measured on both: paper ground, a two-unit ink contour,
+    radius 0, no shadow, Switzer.
+    Original step: Verify the tooltip's form is one vessel, on every surface.
+22. [ ] Not done; the tooltip still follows the cursor, and on touch that
+    means it follows a finger that is covering the thing it describes.
+    Original step: Decide the tooltip's behaviour on touch, where hover does not exist.
+23. [x] Absent, loading, empty and error each carry their word as text.
+    Hover, focus and selection are announced by the unit's own name and
+    role; disabled by the attribute.
+    Original step: Verify every state has a text alternative for a screen reader.
+24. [x] `scripts/shoot_states.py` writes `docs/shots/states-light.png` and
+    `states-dark.png`. It builds a page and screenshots it rather than
+    drawing the sheet by hand, because the states are drawn by the
+    stylesheet and a hand-drawn sheet would be a picture of what they were
+    meant to be.
+    Original step: Screenshot all eight states of one figure into `docs/shots/` as the
+     reference sheet.
+
+**Carried forward.** Step 22, the touch tooltip — shared with chapter 7's
+step 23.
 
 ---
 

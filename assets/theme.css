@@ -1996,3 +1996,153 @@ svg path.district.selected{
   .pollsListHost th:nth-child(4), .pollsListHost td:nth-child(4){display:none;}
   .pollsListHost td.recName{max-width:18ch;}
 }
+
+/* ======================================================================
+   19 · THE STATES OF A THING  (chapter 9)
+
+   [9.1] Eight states, and what each one asserts:
+
+     absent     there is no datum, and there never will be for this unit
+     loading    there is a datum and it has not arrived yet
+     empty      the query ran and returned nothing
+     hovered    the pointer is over this
+     focused    the keyboard is on this
+     selected   the reader chose this, and it is still chosen
+     disabled   this control exists but has nothing to act on
+     error      the fetch failed, which is not the same as absent
+
+   The three that are easy to confuse are absent, loading and empty, and
+   they are the three the site used to draw the same way — as a 50/50 tie,
+   which is a plausible value and therefore a lie.
+   ====================================================================== */
+
+/* [9.13][9.16] The focus mark. An SVG path is not covered by the
+   :focus-visible rule the controls take — it is not a button, an anchor or
+   an input — so a keyboard reader tabbing the map got the hover mark and
+   nothing more, on every map. Focus is a heavier rule than hover, which is
+   how this system marks one thing above another, and a stroke does not
+   shift a single pixel of layout. */
+.pollsView .mapHost svg path.state.focused,
+.mapSvg path.state.focused,
+svg path.state.focused,
+svg path.district.focused,
+svg path.state:focus-visible,
+svg path.district:focus-visible{
+  outline:none;
+  stroke:var(--t-ink);
+  stroke-width:3.5;
+  paint-order:stroke;
+}
+.pollsView .mapHost svg path.state.focused.onDark,
+svg path.state.focused.onDark,
+svg path.district.focused.onDark,
+svg path.state.onDark:focus-visible,
+svg path.district.onDark:focus-visible{stroke:var(--t-paper);}
+/* The UA's own ring would sit on the SVG's bounding box, not the shape. */
+svg path:focus{outline:none;}
+
+/* [9.19] Disabled is faint at full opacity. Nothing in this system fades:
+   an opacity is a colour the palette does not contain, and a half-drawn
+   control reads as a rendering fault rather than as a decision. */
+:where(button, a, input, select, textarea)[disabled],
+:where(button, a, input, select, textarea)[aria-disabled="true"],
+.is-disabled{
+  opacity:1;
+  color:var(--t-faint);
+  border-color:var(--t-faint);
+  background:transparent;
+  cursor:default;
+  pointer-events:none;
+}
+.donate[disabled], .donateBtn[disabled]{
+  background:var(--t-faint);
+  color:var(--t-paper);
+  border-color:var(--t-faint);
+}
+
+/* [9.2][9.3] The absent vessel: a contour with its word inside, and nothing
+   else. It is not a chart with no bars — it is a statement that there is no
+   chart to draw. */
+.t-absent, .absentVessel{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:calc(var(--t-baseline) * 9);
+  border:var(--t-w-contour) solid var(--t-ink);
+  background:transparent;
+  font-family:var(--t-data);
+  font-size:var(--t-fs-2);
+  font-weight:700;
+  letter-spacing:0;
+  color:var(--t-ink);
+  text-align:center;
+}
+
+/* [9.4][9.5] Loading is hatched, which is a texture no datum ever has, so
+   it cannot be read as one. Absent is a plain vessel; loading is a hatched
+   one; the two are never the same picture. */
+.t-loading, .isLoading{
+  min-height:calc(var(--t-baseline) * 9);
+  border:var(--t-w-contour) solid var(--t-ink);
+  background:repeating-linear-gradient(45deg,
+    transparent 0 5px, var(--t-hair) 5px 6.5px);
+}
+
+/* [9.8] An error is not an absence. Absent says "there is nothing here";
+   error says "there is something here and we could not get it", which is a
+   claim about us rather than about the race. It is the absent vessel with
+   the ink reversed, so it is unmistakable at a glance and still no louder
+   than a figure. */
+.t-error{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:calc(var(--t-baseline) * 9);
+  border:var(--t-w-contour) solid var(--t-ink);
+  background:var(--t-ink);
+  color:var(--t-paper);
+  font-family:var(--t-data);
+  font-size:var(--t-fs-2);
+  font-weight:700;
+  letter-spacing:0;
+  text-align:center;
+  padding:0 var(--t-sp-4);
+}
+
+/* [9.11] An empty result is not an absent one: the record ran and came back
+   with nothing, which is a fact about today rather than about the race. */
+.t-empty{
+  padding:calc(var(--t-baseline) * 2) 0;
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:700;
+  color:var(--t-ink3);
+  border-top:var(--t-w-hair) solid var(--t-hair);
+}
+
+/* [9.17] One selected treatment, everywhere something can be chosen: the
+   reversed slab. It is the only reversal inside a figure, and it survives a
+   ground change because it is built from the two ground tokens. */
+.yearBtnA.active, .yearBtn.active,
+.chartTab.active, .chipBtn.active, .chip.active,
+.chamberBtn.active, .pageTab.active{
+  background:var(--t-ink);
+  color:var(--t-paper);
+  border-color:var(--t-ink);
+}
+/* A toggle set inline in a figure's head is words, not chips: reversing it
+   puts a slab in the middle of a line. Its selected mark is the rule under
+   it, at the weight the nav's active tab uses — the same decision, applied
+   to the same kind of thing. */
+.probHead .toggle button{
+  background:transparent;
+  color:var(--t-muted);
+  border:0;
+  border-bottom:var(--t-w-contour) solid transparent;
+}
+.probHead .toggle button.active{
+  background:transparent;
+  color:var(--t-ink);
+  font-weight:700;
+  border-bottom-color:var(--t-ink);
+}

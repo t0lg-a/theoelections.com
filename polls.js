@@ -484,11 +484,13 @@ async function initMap(mk){
     })
     .on("focus",(ev,d)=>{
       const st=fipsToUsps(d.id);if(!st||!DATA[mk]?.ratios[st])return;
-      d3.select(ev.currentTarget).classed("hovered",true)
+      // [9.13] Focus is a heavier rule than hover, and it is set here for
+      // the same reason it is in forecast.js: an SVG path is not a control.
+      d3.select(ev.currentTarget).classed("hovered",true).classed("focused",true)
         .classed("onDark",isDarkFill(ev.currentTarget.style.fill));
       showSimTip(ev,stateTipHtml(mk,st));
     })
-    .on("blur",ev=>{d3.select(ev.currentTarget).classed("hovered",false).classed("onDark",false);hideSimTip();})
+    .on("blur",ev=>{d3.select(ev.currentTarget).classed("hovered",false).classed("focused",false).classed("onDark",false);hideSimTip();})
     .on("keydown",(ev,d)=>{
       if(ev.key!=="Enter"&&ev.key!==" ")return;
       ev.preventDefault();

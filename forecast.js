@@ -435,15 +435,27 @@ const GEO = (function(){
   /** [7.15] Focusable units, Enter and Space, and a hover mark that reverses
    *  on a dark fill. `describe` returns the unit's accessible name. */
   function makeReachable(sel, key, has, describe, activate){
+    // A focusable thing with no name is a stop a screen reader announces as
+    // "graphic", which is worse than not being able to reach it at all.
+    const named = d => {
+      const k = key(d);
+      const n = describe(k);
+      return (n && String(n).trim()) || k || "an unnamed unit";
+    };
     sel.attr("tabindex", d => has(key(d)) ? 0 : null)
        .attr("role", d => has(key(d)) ? (activate ? "button" : "img") : null)
-       .attr("aria-label", d => has(key(d)) ? describe(key(d)) : null)
+       .attr("aria-label", d => has(key(d)) ? named(d) : null)
        .on("focus", function(){
-         d3.select(this).classed("hovered", true)
+         // [9.13] The focus mark is set here rather than left to
+         // :focus-visible: an SVG path is not a control, and the sheet's
+         // control rule does not reach it. Focus is a heavier rule than
+         // hover, which is how this system marks one thing above another.
+         d3.select(this).classed("hovered", true).classed("focused", true)
            .classed("onDark", isDarkFill(this.style.fill || this.getAttribute("fill")));
        })
        .on("blur", function(){
-         d3.select(this).classed("hovered", false).classed("onDark", false);
+         d3.select(this).classed("hovered", false).classed("focused", false)
+           .classed("onDark", false);
        });
     if (activate){
       sel.on("keydown", function(ev, d){
