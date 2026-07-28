@@ -36,11 +36,11 @@
     padding: 12px 0 10px;
     border-bottom: 9px solid var(--t-ink);
     font-family: var(--t-data);
-    font-size: .75rem;
+    font-size: var(--t-fs-2);
     font-weight: 500;
     color: var(--t-muted);
   }
-  .mast b{ font-weight: 700; font-size: 1.0625rem; letter-spacing: -.02em; color: var(--t-ink); }
+  .mast b{ font-weight: 700; font-size: var(--t-fs-5); letter-spacing: -.02em; color: var(--t-ink); }
 
   /* Hero: kicker, then the finding at display weight. */
   .hero{
@@ -51,14 +51,14 @@
   .heroTitle, .heroKicker{ max-width: 18ch; }
   .heroKicker{
     font-family: var(--t-data);
-    font-size: .75rem;
+    font-size: var(--t-fs-2);
     font-weight: 700;
     color: var(--t-muted);
     margin-bottom: 10px;
   }
   .heroTitle{
     font-family: var(--t-data);
-    font-size: clamp(2rem, 5vw, 3.3rem);
+    font-size: var(--t-fs-7);
     font-weight: 900;
     line-height: 1.02;
     letter-spacing: -.038em;
@@ -68,7 +68,7 @@
   .heroLede{
     font-family: var(--t-prose);
     font-variant-numeric: proportional-nums oldstyle-nums;
-    font-size: 1.0625rem;
+    font-size: var(--t-fs-5);
     line-height: 1.62;
     color: var(--t-ink2);
     margin: 12px 0 0;
@@ -95,7 +95,7 @@
   .col:last-child{ padding-right: 0; }
   .colKick{
     font-family: var(--t-data);
-    font-size: .75rem;
+    font-size: var(--t-fs-2);
     font-weight: 700;
     color: var(--t-muted);
     margin-bottom: 8px;
@@ -103,7 +103,7 @@
   .colKick .sep{ color: var(--t-hair); margin: 0 6px; }
   .colTitle{
     font-family: var(--t-data);
-    font-size: 1.125rem;
+    font-size: var(--t-fs-6);
     font-weight: 800;
     line-height: 1.22;
     letter-spacing: -.018em;
@@ -113,7 +113,7 @@
   }
   .colLede{
     font-family: var(--t-data);
-    font-size: .8125rem;
+    font-size: var(--t-fs-3);
     line-height: 1.55;
     color: var(--t-muted);
     margin: 0 0 16px;
@@ -125,7 +125,7 @@
     padding: 12px 0 0;
     border-top: 1px solid var(--t-hair);
     font-family: var(--t-data);
-    font-size: .8125rem;
+    font-size: var(--t-fs-3);
     line-height: 1.55;
     color: var(--t-ink2);
   }
@@ -155,7 +155,7 @@
     background: transparent;
     color: var(--t-ink);
     font-family: var(--t-data);
-    font-size: .8125rem;
+    font-size: var(--t-fs-3);
     font-weight: 700;
     height: 40px;
     padding: 0 18px;
@@ -167,7 +167,7 @@
   .colCta a:focus-visible{ outline: 1px solid var(--t-ink); outline-offset: 2px; }
   .colCta .host{
     font-family: var(--t-data);
-    font-size: .6875rem;
+    font-size: var(--t-fs-1);
     font-weight: 500;
     color: var(--t-faint);
   }
@@ -182,7 +182,7 @@
     gap: 16px;
     flex-wrap: wrap;
     font-family: var(--t-data);
-    font-size: .6875rem;
+    font-size: var(--t-fs-1);
     font-weight: 500;
     color: var(--t-muted);
   }

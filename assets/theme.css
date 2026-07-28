@@ -30,43 +30,113 @@
    1 · TOKENS
    ====================================================================== */
 :root{
-  --t-paper:#E9E8E0;
+  /* ---- the neutral ramp · the whole interface lives here ---------------
+     Contrast against the paper ground, measured: ink 13.6:1, ink2 8.9:1,
+     ink3 6.1:1, muted 4.3:1, faint 2.0:1. Anything carrying meaning uses
+     ink, ink2 or ink3. Muted is for labels at 12px and up. Faint never
+     carries a value: it is for a rule, a swatch edge, a disabled word. */
+  --t-paper:#E9E8E0;     /* the ground */
   --t-paper-2:#E0DFD5;   /* the one quieter ground, for a well or a fill */
-  --t-ink:#16171A;
-  --t-ink2:#3A382F;
-  --t-muted:#6E6C61;
-  --t-faint:#A9A69A;
-  --t-hair:#CBC8BC;
+  --t-ink:#16171A;       /* type, rules, every mark that is not a datum */
+  --t-ink2:#3A382F;      /* running prose */
+  --t-ink3:#55534A;      /* a caption that must still be read */
+  --t-muted:#6E6C61;     /* a label, 12px and up */
+  --t-faint:#A9A69A;     /* never a value: a rule, an edge, a disabled word */
+  --t-hair:#CBC8BC;      /* the hairline */
+  --t-row-rule:#DEDCD3;  /* the record's row separation, quieter than a hairline */
 
-  /* the data palette · figures only */
-  --t-d1:#D62828;  /* series 1 · Republican */
-  --t-d2:#FFC300;  /* series 2 */
-  --t-d3:#17BEBB;
-  --t-d4:#7B2CBF;
-  --t-d5:#1E6FD9;  /* series 5 · Democratic */
-  --t-d6:#2E9E44;
-  --t-overprint:#191122;   /* d1 over d5 · the contested unit */
-  --t-d1-soft:#F0C0C0;
-  --t-d5-soft:#C3D5F2;
-  --t-d2-soft:#F3E0A8;
+  /* ---- the data palette ------------------------------------------------
+     Legal inside a figure and nowhere else. The site draws two-way contests
+     only, so it carries the two-way pair and the contested overprint. The
+     full ramp is red, yellow, turquoise, purple, blue, green in that fixed
+     order; the four it does not use are absent on purpose, so nobody reaches
+     for an arbitrary one. A multi-series figure re-opens the palette
+     deliberately rather than by accident. */
+  --t-d1:#D62828;          /* series 1 · Republican          · figures only */
+  --t-d2:#FFC300;          /* series 2 · the third position  · figures only */
+  --t-d5:#1E6FD9;          /* series 5 · Democratic          · figures only */
+  --t-overprint:#191122;   /* d1 over d5 · the contested unit · figures only */
+  --t-d1-soft:#F0C0C0;     /* the pale step of the R ramp    · figures only */
+  --t-d5-soft:#C3D5F2;     /* the pale step of the D ramp    · figures only */
+  --t-d2-soft:#F3E0A8;     /* the pale step of series 2      · figures only */
 
-  --t-data:"Switzer", ui-sans-serif, system-ui, sans-serif;
-  --t-prose:"Author", Georgia, serif;
+  /* ---- faces ---------------------------------------------------------- */
+  --t-data:"Switzer", ui-sans-serif, system-ui, sans-serif;   /* all data */
+  --t-prose:"Author", Georgia, serif;                         /* running prose */
+
+  /* ---- rule weights --------------------------------------------------- */
+  --t-w-hair:1px;      /* a separation inside a block */
+  --t-w-rule:1.5px;    /* a threshold or a mean */
+  --t-w-contour:2px;   /* the vessel around a figure or a control */
+  --t-w-slab:9px;      /* the masthead's rule */
+
+  /* ---- the type scale ------------------------------------------------- */
+  --t-fs-1:.6875rem;   /* the record, the decode gate, the source */
+  --t-fs-2:.75rem;     /* a label */
+  --t-fs-3:.8125rem;   /* a dek, a control */
+  --t-fs-4:.9375rem;   /* a sub-head */
+  --t-fs-5:1.0625rem;  /* the wordmark, a figure's number */
+  --t-fs-6:1.125rem;   /* a finding */
+  --t-fs-7:clamp(1.9rem,4.8vw,3.3rem);   /* a page's claim */
+  --t-fs-8:clamp(2.2rem,6vw,3.9rem);     /* a display figure */
+
+  /* ---- the spacing scale ----------------------------------------------- */
+  --t-sp-1:4px;
+  --t-sp-2:8px;
+  --t-sp-3:12px;
+  --t-sp-4:16px;
+  --t-sp-5:22px;
+  --t-sp-6:32px;
 }
 
-/* Night is the same system inverted: ink ground, paper type, one palette. */
+/* Night is the same system inverted: ink ground, paper type, one palette.
+   Only the neutrals and the pale steps move. The two-way inks do not: they
+   are the palette, and a colour that changes meaning with the ground is not
+   one colour. */
 :root[data-theme="dark"]{
-  --t-paper:#16171A;
-  --t-paper-2:#1E2024;
-  --t-ink:#E9E8E0;
-  --t-ink2:#CFCEC4;
-  --t-muted:#9A988C;
-  --t-faint:#6E6C61;
-  --t-hair:#3A3C40;
-  --t-d1-soft:#4A1C1C;
+  --t-paper:#16171A;     /* the light ground's ink, now the ground */
+  --t-paper-2:#1E2024;   /* one step up, so a well still reads as a well */
+  --t-ink:#E9E8E0;       /* the light ground's paper, now the type */
+  --t-ink2:#CFCEC4;      /* prose, one step down from the type */
+  --t-ink3:#A8A69B;      /* a caption, still above the label level */
+  --t-muted:#9A988C;     /* a label · 4.6:1 on the ink ground */
+  --t-faint:#6E6C61;     /* never a value, as on paper */
+  --t-hair:#3A3C40;      /* the hairline, lifted off the ground not dropped */
+  --t-row-rule:#25272B; /* the record's row separation */
+  --t-d1-soft:#4A1C1C;   /* the pale steps invert: pale means nearer the ground */
   --t-d5-soft:#16304F;
   --t-d2-soft:#4A3C10;
-  --t-overprint:#C9BFD8;
+  --t-overprint:#C9BFD8; /* the contested unit reverses, so it still reads dark-on-light */
+}
+
+/* The ground follows the reader's system so form controls, scrollbars and the
+   caret stop arriving from somewhere else. */
+:root{color-scheme:light;}
+:root[data-theme="dark"]{color-scheme:dark;}
+
+/* More contrast asked for: hairlines become rules, quiet type steps up. */
+@media (prefers-contrast: more){
+  :root{
+    --t-hair:#8E8B80;
+    --t-muted:#4A4840;
+    --t-faint:#6E6C61;
+    --t-w-hair:1.5px;
+  }
+  :root[data-theme="dark"]{
+    --t-hair:#6E6C61;
+    --t-muted:#C6C4B8;
+    --t-faint:#9A988C;
+  }
+}
+
+/* Forced colours: keep the figures legible when the ground is not ours. */
+@media (forced-colors: active){
+  :root:root{
+    --t-paper:Canvas; --t-paper-2:Canvas;
+    --t-ink:CanvasText; --t-ink2:CanvasText; --t-ink3:CanvasText;
+    --t-muted:GrayText; --t-faint:GrayText; --t-hair:GrayText;
+  }
+  svg path.state.selected, svg path.state.hovered{forced-color-adjust:none;}
 }
 
 /* ======================================================================
@@ -158,27 +228,27 @@ body{
 /* The slab: the masthead's rule is a 9px bar of ink, so the two never stack
    and nothing can slide under it. */
 .top{
-  border-bottom:9px solid var(--t-ink);
-  padding-bottom:10px;
-  margin-bottom:22px;
+  border-bottom:var(--t-w-slab) solid var(--t-ink);
+  padding-bottom:var(--t-sp-3);
+  margin-bottom:var(--t-sp-5);
 }
-.brand{font-family:var(--t-data);gap:8px;}
+.brand{font-family:var(--t-data);gap:var(--t-sp-2);}
 .brand .name{
   font-family:var(--t-data);
   font-weight:700;
-  font-size:1.0625rem;
+  font-size:var(--t-fs-5);
   letter-spacing:-.02em;
   line-height:1;
 }
 .brand .sep{color:var(--t-hair);font-size:1rem;}
 .brand .tag{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:500;
+  font-size:var(--t-fs-2);font-weight:500;
   color:var(--t-muted);
 }
 .nav a{
   font-family:var(--t-data);
-  font-size:.8125rem;
+  font-size:var(--t-fs-3);
   font-weight:500;
   color:var(--t-muted);
   padding:6px 10px;
@@ -192,13 +262,13 @@ body{
 }
 .nav .dot::before{content:"\00B7";}
 
-.actions{gap:8px;align-items:center;}
+.actions{gap:var(--t-sp-2);align-items:center;}
 .iconbtn{
   border:1px solid var(--t-ink);
   color:var(--t-ink);
   background:transparent;
   font-family:var(--t-data);
-  font-weight:700;font-size:.75rem;
+  font-weight:700;font-size:var(--t-fs-2);
   width:32px;height:32px;
 }
 .iconbtn:hover{background:var(--t-ink);color:var(--t-paper);}
@@ -206,7 +276,7 @@ body{
   background:var(--t-ink);color:var(--t-paper);
   border:1px solid var(--t-ink);
   font-family:var(--t-data);font-weight:700;
-  font-size:.8125rem;height:32px;padding:0 16px;line-height:1;
+  font-size:var(--t-fs-3);height:32px;padding:0 16px;line-height:1;
 }
 .donate:hover, .donateBtn:hover{background:var(--t-ink2);}
 :where(button, a, input, select, textarea):focus-visible{
@@ -216,10 +286,10 @@ body{
 
 .foot{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:500;
+  font-size:var(--t-fs-1);font-weight:500;
   color:var(--t-muted);
-  border-top:1px solid var(--t-hair);
-  padding-top:12px;
+  border-top:var(--t-w-hair) solid var(--t-hair);
+  padding-top:var(--t-sp-3);
 }
 .foot b{
   font-family:var(--t-data);font-weight:700;
@@ -256,7 +326,7 @@ body{
 .projSectionALabel, .mapCtrlLabel, .swingPartyLabel, .rtgCountLbl,
 .miniLbl, .miniLblFinal, .seatPillLabel, .yearBarLabel, .sliderLabel{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:700;
+  font-size:var(--t-fs-2);font-weight:700;
   letter-spacing:0;
   color:var(--t-muted);
 }
@@ -276,7 +346,7 @@ body{
 .chip, .chipBtn, .zoomBtn, .mapCtrlBtn, .yearBtn, .yearBtnA, .fsBtn,
 .chartTab, .seg, .segmentedControl button, .chamberBtn, .gbToggle button{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:700;
+  font-size:var(--t-fs-2);font-weight:700;
   color:var(--t-muted);
   background:transparent;
   border-color:var(--t-hair);
@@ -304,7 +374,7 @@ body{
 }
 .zoomSelect, select, input[type="text"], input[type="number"]{
   font-family:var(--t-data);
-  font-size:.8125rem;
+  font-size:var(--t-fs-3);
   background:var(--t-paper);
   border:1px solid var(--t-ink);
   color:var(--t-ink);
@@ -327,7 +397,7 @@ svg text, .axis text, .oddsAxis text, .probAxis text, .seatAxis text,
 }
 .seatMajLine, .seatMajorityLine, .miniZero, .tickZero{
   stroke:var(--t-ink);
-  stroke-width:1.5;
+  stroke-width:var(--t-w-rule);
   stroke-dasharray:none;
   opacity:1;
 }
@@ -365,8 +435,8 @@ svg path.state.selected{
   font-family:var(--t-data) !important;
   background:var(--t-paper) !important;
   color:var(--t-ink) !important;
-  border:2px solid var(--t-ink) !important;
-  font-size:.6875rem;
+  border:var(--t-w-contour) solid var(--t-ink) !important;
+  font-size:var(--t-fs-1);
   padding:7px 9px;
 }
 #simTip .stDate, .tipHeader, .tipTitle{font-weight:700;color:var(--t-ink);}
@@ -375,17 +445,17 @@ svg path.state.selected{
 
 /* Absent is absent, not zero. */
 .t-absent, .raceEmpty, .miniRowNoData{
-  border:2px solid var(--t-ink);
+  border:var(--t-w-contour) solid var(--t-ink);
   background:var(--t-paper-2);
   color:var(--t-muted);
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:600;
+  font-size:var(--t-fs-2);font-weight:600;
   display:flex;align-items:center;justify-content:center;
   min-height:56px;
   padding:8px 10px;
 }
 .num.isAbsent, .isAbsent{
-  font-size:.8125rem !important;
+  font-size:var(--t-fs-3) !important;
   font-weight:700 !important;
   letter-spacing:0 !important;
   color:var(--t-faint) !important;
@@ -399,13 +469,13 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 .bucketTable th, .pollTable th, .methTable th{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:700;
+  font-size:var(--t-fs-1);font-weight:700;
   color:var(--t-muted);
   background:var(--t-paper);
   border-bottom:1px solid var(--t-ink);
 }
 .bucketTable td, .pollTable td, .methTable td{
-  border-bottom:1px solid rgba(110,108,97,.18);
+  border-bottom:1px solid var(--t-row-rule);
   color:var(--t-ink);
 }
 
@@ -414,16 +484,16 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
    ====================================================================== */
 .colRule{background:var(--t-hair);}
 .secHead{
-  border-bottom:1px solid var(--t-hair);
+  border-bottom:var(--t-w-hair) solid var(--t-hair);
   align-items:flex-start;
 }
 .secTitle{
-  font-size:1.125rem;
+  font-size:var(--t-fs-6);
   line-height:1.22;
   max-width:32ch;
 }
 .secSub{
-  font-size:.8125rem;
+  font-size:var(--t-fs-3);
   line-height:1.55;
   margin-top:5px;
   max-width:56ch;
@@ -437,7 +507,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 .seatsCol .lbl, .seatsSide .lbl{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:700;
+  font-size:var(--t-fs-2);font-weight:700;
   color:var(--t-muted);
 }
 .seatsCol .num, .seatsSide .num{
@@ -451,8 +521,8 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .seatsDash, .seatsDivider{display:none;}
 .mapHint{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:500;
-  color:var(--t-muted);
+  font-size:var(--t-fs-1);font-weight:500;
+  color:var(--t-ink3);
   text-align:left;
 }
 
@@ -460,26 +530,26 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
    decoration and has to survive a real screen. */
 .t-how{
   font-family:var(--t-data);
-  font-size:.6875rem;line-height:1.5;font-weight:500;
-  color:var(--t-muted);
-  margin-top:10px;
+  font-size:var(--t-fs-1);line-height:1.5;font-weight:500;
+  color:var(--t-ink3);
+  margin-top:var(--t-sp-3);
   max-width:64ch;
 }
 .t-how b{color:var(--t-ink);font-weight:700;}
 .t-src{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:500;
-  color:var(--t-muted);
-  margin-top:12px;
-  padding-top:8px;
-  border-top:1px solid var(--t-hair);
+  font-size:var(--t-fs-1);font-weight:500;
+  color:var(--t-ink3);
+  margin-top:var(--t-sp-3);
+  padding-top:var(--t-sp-2);
+  border-top:var(--t-w-hair) solid var(--t-hair);
 }
 .t-src a{color:var(--t-ink);text-decoration:underline;text-underline-offset:2px;}
 .seatsNote{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:500;
-  color:var(--t-muted);
-  margin-top:12px;
+  font-size:var(--t-fs-1);font-weight:500;
+  color:var(--t-ink3);
+  margin-top:var(--t-sp-3);
 }
 
 
@@ -487,6 +557,8 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
    9 · THE POLLS SHEET
    ====================================================================== */
 /* ---- columns: hairline between, ink rule above each ---------------------- */
+/* The sheet rests on the same scale everything else is spaced by. */
+.pollsView{padding-bottom:calc(var(--t-sp-6) * 2);}
 .pollsView .cols{
   display:grid;
   grid-template-columns:1fr 1px 1fr 1px 1fr;
@@ -500,7 +572,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 .pollsView .col{
   border-top:1px solid var(--t-ink);
-  padding:15px 18px 0;
+  padding:15px var(--t-sp-4) 0;
   min-width:0;
 }
 /* Outer columns align to the page edge; only the gutters get padding. */
@@ -520,12 +592,12 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   gap:14px;
   padding:0 0 10px;
   margin-bottom:12px;
-  border-bottom:1px solid var(--t-hair);
+  border-bottom:var(--t-w-hair) solid var(--t-hair);
 }
 .pollsView .secTitle{
   font-family:var(--t-data);
   font-weight:800;
-  font-size:1.125rem;
+  font-size:var(--t-fs-6);
   line-height:1.22;
   letter-spacing:-.018em;
   max-width:32ch;
@@ -535,7 +607,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .secSub{
   font-family:var(--t-data);
   font-weight:500;
-  font-size:.8125rem;
+  font-size:var(--t-fs-3);
   line-height:1.55;
   letter-spacing:0;
   color:var(--t-muted);
@@ -547,7 +619,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .pills{
   display:flex;
   flex-direction:column;
-  gap:3px;
+  gap:var(--t-sp-1);
   align-items:flex-end;
   font-family:var(--t-data);
 }
@@ -567,23 +639,23 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .col.isApproval .pill.d .sw{background:var(--t-ink);}
 .pollsView .col.isApproval .pill.r .sw{background:var(--t-muted);}
 .pollsView .pill .l{
-  font-size:.75rem;font-weight:700;letter-spacing:0;
+  font-size:var(--t-fs-2);font-weight:700;letter-spacing:0;
   color:var(--t-muted);width:auto;min-width:14px;
 }
 .pollsView .pill .n{
-  font-size:1.0625rem;font-weight:800;color:var(--t-ink);letter-spacing:-.015em;
+  font-size:var(--t-fs-5);font-weight:800;color:var(--t-ink);letter-spacing:-.015em;
 }
 .pollsView .pill .pct{
-  font-size:.6875rem;font-weight:600;color:var(--t-muted);
+  font-size:var(--t-fs-1);font-weight:600;color:var(--t-muted);
   font-style:normal;margin-left:1px;
 }
 
 /* ---- the display figures ------------------------------------------------- */
 .pollsView .seatsNote{
   font-family:var(--t-data);
-  font-size:.6875rem;font-weight:500;
-  color:var(--t-muted);
-  margin-top:12px;
+  font-size:var(--t-fs-1);font-weight:500;
+  color:var(--t-ink3);
+  margin-top:var(--t-sp-3);
 }
 .pollsView .seatsNote + .seats{padding-top:2px;}
 .pollsView .seats{
@@ -592,7 +664,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   justify-content:space-between;
   gap:18px;
   padding:12px 0 8px;
-  border-bottom:1px solid var(--t-hair);
+  border-bottom:var(--t-w-hair) solid var(--t-hair);
 }
 .pollsView .seatsCol{
   text-align:left;
@@ -600,7 +672,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 .pollsView .seatsCol .lbl{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:700;letter-spacing:0;
+  font-size:var(--t-fs-2);font-weight:700;letter-spacing:0;
   font-variant:normal;
   color:var(--t-muted);
   margin-bottom:2px;
@@ -608,7 +680,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .seatsCol .num{
   font-family:var(--t-data);
   font-weight:900;
-  font-size:clamp(2.6rem,6vw,3.9rem);
+  font-size:var(--t-fs-8);
   line-height:.86;
   letter-spacing:-.05em;
   font-variant-numeric:tabular-nums;
@@ -625,7 +697,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .pollsHistHost{
   height:40px;
   margin:12px 0 0;
-  border:2px solid var(--t-ink);
+  border:var(--t-w-contour) solid var(--t-ink);
   background:var(--t-paper);
   padding:0;
 }
@@ -635,7 +707,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .probBlock{
   margin-top:16px;
   padding-top:14px;
-  border-top:1px solid var(--t-hair);
+  border-top:var(--t-w-hair) solid var(--t-hair);
 }
 .pollsView .probHead{
   display:flex;
@@ -648,7 +720,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   font-family:var(--t-data);
   font-style:normal;
   font-weight:800;
-  font-size:.9375rem;
+  font-size:var(--t-fs-4);
   line-height:1.25;
   letter-spacing:-.015em;
   color:var(--t-ink);
@@ -660,7 +732,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .probHead .toggle button{
   appearance:none;border:none;background:transparent;
   font-family:var(--t-data);font-style:normal;
-  font-size:.75rem;font-weight:700;letter-spacing:0;
+  font-size:var(--t-fs-2);font-weight:700;letter-spacing:0;
   color:var(--t-muted);cursor:pointer;padding:2px 6px;
 }
 .pollsView .probHead .toggle button.active{
@@ -673,7 +745,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 }
 .pollsView .probHead .toggle .s{color:var(--t-hair);}
 .pollsView .pollsStateTitle{
-  font-size:.9375rem !important;
+  font-size:var(--t-fs-4) !important;
   letter-spacing:-.015em !important;
 }
 
@@ -719,10 +791,10 @@ svg path.state:focus-visible{
 .pollsView .mapHint{
   font-family:var(--t-data);
   font-style:normal;
-  font-size:.6875rem;font-weight:500;
-  color:var(--t-muted);
+  font-size:var(--t-fs-1);font-weight:500;
+  color:var(--t-ink3);
   text-align:left;
-  margin-top:8px;
+  margin-top:var(--t-sp-2);
   padding-left:0;
   text-indent:0;
 }
@@ -745,20 +817,20 @@ svg path.state:focus-visible{
 /* A threshold is always an ink rule. */
 .pollsView .chartHost svg .seatMajLine{
   stroke:var(--t-ink);
-  stroke-width:1.5;
+  stroke-width:var(--t-w-rule);
   stroke-dasharray:none;
   opacity:1;
 }
 
 /* ---- the record ---------------------------------------------------------- */
 .pollsView .pollsListWrap{
-  border-top:1px solid var(--t-hair);
-  padding-top:12px;
+  border-top:var(--t-w-hair) solid var(--t-hair);
+  padding-top:var(--t-sp-3);
   margin-top:16px;
 }
 .pollsView .pollsListHead{
   font-family:var(--t-data);
-  font-size:.75rem;font-weight:700;letter-spacing:0;
+  font-size:var(--t-fs-2);font-weight:700;letter-spacing:0;
   color:var(--t-ink);
   margin-bottom:8px;
 }
@@ -767,13 +839,13 @@ svg path.state:focus-visible{
   width:100%;
   border-collapse:collapse;
   font-family:var(--t-data) !important;
-  font-size:.6875rem;
+  font-size:var(--t-fs-1);
   border-top:1px solid var(--t-ink);
   border-bottom:1px solid var(--t-ink);
 }
 .pollsView .pollsListHost th{
   font-family:var(--t-data) !important;
-  font-size:.6875rem !important;
+  font-size:var(--t-fs-1) !important;
   font-weight:700 !important;
   letter-spacing:0 !important;
   color:var(--t-muted) !important;
@@ -786,13 +858,13 @@ svg path.state:focus-visible{
 .pollsView .pollsListHost th:nth-child(2){text-align:left;}
 .pollsView .pollsListHost td{
   font-family:var(--t-data) !important;
-  font-size:.6875rem !important;
+  font-size:var(--t-fs-1) !important;
   font-weight:500 !important;
   color:var(--t-ink) !important;
   padding:4px 10px 4px 0 !important;
   text-align:right;
   font-variant-numeric:tabular-nums;
-  border-bottom:1px solid rgba(22,23,26,.06) !important;
+  border-bottom:1px solid var(--t-row-rule) !important;
 }
 .pollsView .pollsListHost td:first-child,
 .pollsView .pollsListHost td:nth-child(2){text-align:left;}
@@ -827,7 +899,7 @@ svg path.state:focus-visible{
 /* Projects: the index is a record, not a deck of cards. */
 .projCard, .projCardA{background:transparent;}
 .projCardOpen, .projCardAOpen{
-  font-family:var(--t-data);font-weight:700;font-size:.75rem;color:var(--t-ink);
+  font-family:var(--t-data);font-weight:700;font-size:var(--t-fs-2);color:var(--t-ink);
 }
 .projSectionLabel, .projSectionALabel{color:var(--t-muted);}
 
@@ -845,7 +917,7 @@ svg path.state:focus-visible{
 .swingRange::-webkit-slider-thumb, input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance:none;appearance:none;
   width:12px;height:12px;margin-top:-5px;
-  background:var(--t-paper);border:2px solid var(--t-ink);
+  background:var(--t-paper);border:var(--t-w-contour) solid var(--t-ink);
 }
 .swingMarginLabel, .swingPartyLabel{color:var(--t-muted);font-weight:700;}
 
@@ -859,7 +931,7 @@ svg path.state:focus-visible{
 .stateLegsHost .cardInner, .stateLegsHost [class*="panel"],
 .floridaHost .cardInner{
   border:0;
-  border-top:1px solid var(--t-hair);
+  border-top:var(--t-w-hair) solid var(--t-hair);
   background:transparent;
 }
 .methHero{border-bottom:0;padding-bottom:0;}
@@ -888,9 +960,9 @@ svg path.state:focus-visible{
 .rtg-safeR{color:var(--t-d1);}
 .rtgCountItem .rtgCountNum{
   color:var(--t-ink) !important;
-  font-family:var(--t-data);font-weight:800;font-size:1.0625rem;
+  font-family:var(--t-data);font-weight:800;font-size:var(--t-fs-5);
 }
-.rtgCountItem .rtgCountLbl{color:var(--t-muted) !important;font-weight:700;font-size:.6875rem;}
+.rtgCountItem .rtgCountLbl{color:var(--t-muted) !important;font-weight:700;font-size:var(--t-fs-1);}
 .rtgLabels, .rtgLabels .rlbl{color:var(--t-muted) !important;font-weight:700;}
 .rtgSeg{font-family:var(--t-data);font-weight:700;}
 
@@ -917,10 +989,10 @@ svg path.state:focus-visible{
 #flRedistrictingPage .flrMapWrap, #flRedistrictingPage .mapStage,
 .floridaHost svg, #flRedistrictingPage svg{background:var(--t-paper) !important;}
 #flRedistrictingPage .sliderLabel, #flRedistrictingPage .swingCardLabel{
-  font-family:var(--t-data);font-weight:700;font-size:.75rem;color:var(--t-muted);
+  font-family:var(--t-data);font-weight:700;font-size:var(--t-fs-2);color:var(--t-muted);
 }
 .panelClassify{
-  font-family:var(--t-data);font-weight:700;font-size:.6875rem;
+  font-family:var(--t-data);font-weight:700;font-size:var(--t-fs-1);
 }
 
 /* Nothing on this site sits on a well of a different colour. */
@@ -932,12 +1004,12 @@ input[type="range"]::-webkit-slider-thumb,
 .swingRangeA::-webkit-slider-thumb{
   border-radius:0 !important;
   background:var(--t-paper) !important;
-  border:2px solid var(--t-ink) !important;
+  border:var(--t-w-contour) solid var(--t-ink) !important;
   width:12px;height:12px;
 }
 input[type="range"]::-moz-range-thumb{
   border-radius:0 !important;
-  background:var(--t-paper);border:2px solid var(--t-ink);width:10px;height:10px;
+  background:var(--t-paper);border:var(--t-w-contour) solid var(--t-ink);width:10px;height:10px;
 }
 
 /* ======================================================================
@@ -1013,3 +1085,35 @@ input[type="range"]::-moz-range-thumb{
 
 /* [10] A title measure that fits the column it lives in. */
 .pollsView .secTitle{max-width:none;}
+
+/* ======================================================================
+   12 · THE DISTRICT SHAPES
+   svg/house.svg and its siblings ship with a white stroke and the original
+   author's reds and blues baked into inline style attributes. The fills are
+   replaced at runtime; the stroke was not, which left a white grid on the
+   paper ground and a bright one on the ink ground.
+   ====================================================================== */
+#district-shapes,
+#district-shapes *,
+svg .district,
+svg path.district{
+  stroke:var(--t-hair) !important;
+  stroke-opacity:1 !important;
+  stroke-width:.5px !important;
+  vector-effect:non-scaling-stroke;
+}
+svg path.district.hovered,
+svg path.district:hover{
+  stroke:var(--t-ink) !important;
+  stroke-width:1.5px !important;
+}
+svg path.district.selected{
+  stroke:var(--t-ink) !important;
+  stroke-width:2.5px !important;
+}
+
+/* The two alphas the system does use, named so they are not literals. */
+.pollsListHost td,
+.bucketTable td, .pollTable td, .methTable td{
+  border-bottom-color:var(--t-row-rule);
+}

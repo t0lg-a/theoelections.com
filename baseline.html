@@ -1225,7 +1225,6 @@
       padding:10px 12px 12px;
     }
 
-
     .tipSparkWrap{
       margin-top:10px;
       padding-top:10px;
@@ -1348,7 +1347,6 @@
       font-family: var(--mono);
     }
 
-
     .sliderBlock{ margin-top:16px; }
     .sliderLabelRow{
       display:flex;
@@ -1417,7 +1415,6 @@
       z-index: 5;
     }
     .hr{ height:1px; background: var(--line); margin:16px 0; }
-
 
     /* Race Table */
     .tableScroll{ overflow:auto; border-radius:12px; border:1px solid var(--line); box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);}
@@ -1535,8 +1532,7 @@
     
     /* Utilities */
     .tiny{ font-size:12px; color:var(--muted); }
-  
-    
+
 /* ---------- Panel header + simple seats (screenshot-style) ---------- */
 .topCard{ padding:14px 14px; overflow:visible; border-left:3px solid var(--muted-light); }
 .topCard.leads-d{ border-left-color:var(--blue); }
@@ -1830,18 +1826,6 @@
         text-align: center;
         white-space: nowrap;
         box-sizing: border-box;
-      }
-      /* Riso tab borders — on 2-row mobile: right border only between tabs in same row, bottom border only on first row */
-      html[data-look="riso"] .pageTabsWrap .pageTab {
-        border-right: 1px solid var(--text-ink) !important;
-        border-bottom: 1px solid var(--text-ink) !important;
-      }
-      html[data-look="riso"] .pageTabsWrap .pageTab:nth-child(3n),
-      html[data-look="riso"] .pageTabsWrap .pageTab:last-child {
-        border-right: none !important;
-      }
-      html[data-look="riso"] .pageTabsWrap .pageTab:nth-child(n+4) {
-        border-bottom: none !important;
       }
       .pageTabsWrap > *:not(.pageTabs) { flex-shrink: 0; }
     }
@@ -2248,7 +2232,6 @@
       .mapSvg{ height:220px; }
     }
 
-
     /* ---------- Model Output chart card ---------- */
     .mapControlBar{
       display:flex;
@@ -2569,7 +2552,6 @@
       font-weight:600;
       color: var(--muted-light);
     }
-
 
     .gbControls{
       display:flex;
@@ -3007,19 +2989,6 @@
     }
     .projCard:hover .projCardOpen::after{ transform:translateX(3px); }
 
-    /* Riso treatment for project cards (default) */
-    html[data-look="riso"] .projCard{
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      background:var(--card-bg) !important;
-      border:1px solid var(--card-border) !important;
-      box-shadow:var(--card-shadow) !important;
-      border-radius:0 !important;
-    }
-    html[data-look="riso"] .projCard:hover{
-      box-shadow:6px 6px 0 0 var(--text-ink) !important;
-    }
-
     @media (max-width: 760px){
       .projGrid{ grid-template-columns:1fr; gap:14px; }
       .projTitle{ font-size:22px; }
@@ -3027,158 +2996,11 @@
       .projCardTitle{ font-size:16px; }
     }
 
-/* ═══════════════════════════════════════════════
-   THEO RISO + DARK MODE OVERRIDES
-   Toggles via [data-look="riso"] (default) / [data-look="legacy"]
-                [data-theme="light"] (default) / [data-theme="dark"]
-   ═══════════════════════════════════════════════ */
-
-:root {
-  /* Dark-aware text colors (default: light mode) */
-  --text-ink: #111827;
-  --text-dim: #374151;
-  --text-muted: #6b7280;
-  --text-faint: #9ca3af;
-  --pg-bg: #f3f4f6;
-  --grad-1: #eef2ff;
-  --grad-2: #fff1f2;
-}
-
-/* RISO DEFAULT — flat, sharp, hard shadows */
-html[data-look="riso"] {
-  --card-bg: var(--t-paper);
-  --card-border: var(--text-ink);
-  --card-shadow: 4px 4px 0 0 var(--text-ink);
-  --card-shadow-hover: 4px 4px 0 0 var(--text-ink);
-  --radius-lg: 0;
-  --radius-md: 0;
-  --radius-sm: 0;
-  --radius-pill: 0;
-  --line: var(--text-ink);
-  --line-strong: var(--text-ink);
-}
-
-html[data-look="riso"] .cardDash,
-html[data-look="riso"] .card,
-html[data-look="riso"] .titleRow,
-html[data-look="riso"] .tooltipBox,
-html[data-look="riso"] .pageTabs,
-html[data-look="riso"] .authorBadge,
-html[data-look="riso"] .segmentedControl,
-html[data-look="riso"] .lookToggle,
-html[data-look="riso"] .themeToggle {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  background: var(--card-bg) !important;
-  border: 1px solid var(--card-border) !important;
-  box-shadow: var(--card-shadow) !important;
-  border-radius: 0 !important;
-}
-
-/* Donate button — stays colored, just sharpen the corners and swap shadow */
-html[data-look="riso"] .donateBtn {
-  background: var(--blue) !important;
-  color: var(--t-paper) !important;
-  border: 1px solid var(--text-ink) !important;
-  border-radius: 0 !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-}
-html[data-look="riso"] .donateBtn:hover {
-  background: var(--blue-dark) !important;
-  transform: none !important;
-}
-
-html[data-look="riso"] button,
-html[data-look="riso"] input[type="number"],
-html[data-look="riso"] input[type="text"] {
-  border-radius: 0 !important;
-}
-
-html[data-look="riso"] .pageTab.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  border-radius: 0 !important;
-}
-
-/* Page tabs — ensure individual tabs stay visually separated in riso */
-html[data-look="riso"] .pageTabs {
-  gap: 0 !important;
-  padding: 0 !important;
-}
-html[data-look="riso"] .pageTab {
-  padding: 7px 14px !important;
-  border-right: 1px solid var(--text-ink) !important;
-  background: var(--card-bg);
-  color: var(--text-muted);
-}
-html[data-look="riso"] .pageTab:last-child {
-  border-right: none !important;
-}
-html[data-look="riso"] .pageTab:hover:not(.active) {
-  background: var(--neutral-bg);
-}
-
-/* Tooltip (#tip) + State info panel — riso overrides */
-html[data-look="riso"] #tip,
-html[data-look="riso"] .stateInfoPanel,
-html[data-look="riso"] body .stateInfoPanel {
-  border-radius: 0 !important;
-  background: var(--card-bg) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 4px 4px 0 0 var(--text-ink) !important;
-  overflow: visible !important;
-}
-/* All rounded children inside — kill every radius */
-html[data-look="riso"] #tip *,
-html[data-look="riso"] .stateInfoPanel * {
-  border-radius: 0 !important;
-}
-/* Share track pill → flat bar with ink border */
-html[data-look="riso"] #tip .panelShareTrack,
-html[data-look="riso"] .stateInfoPanel .panelShareTrack {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
-}
-/* Classification chip (Lean R, Safe D, etc) → sharp rectangle */
-html[data-look="riso"] #tip .panelClassify,
-html[data-look="riso"] .stateInfoPanel .panelClassify {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-}
-/* Mini factor bars (Generic Ballot, Polls, etc) */
-html[data-look="riso"] #tip .miniBar,
-html[data-look="riso"] #tip .miniBarFinal,
-html[data-look="riso"] .stateInfoPanel .miniBar,
-html[data-look="riso"] .stateInfoPanel .miniBarFinal {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  box-shadow: none !important;
-}
-/* Panel final row divider */
-html[data-look="riso"] #tip .miniRowFinal,
-html[data-look="riso"] .stateInfoPanel .miniRowFinal {
-  border-top: 1px solid var(--text-ink) !important;
-}
-/* Accent bar at top → thin ink line */
-html[data-look="riso"] #tip .panelAccent,
-html[data-look="riso"] .stateInfoPanel .panelAccent {
-  background: var(--text-ink) !important;
-  height: 2px !important;
-}
 /* Muted text inside panel */
-html[data-look="riso"] #tip .miniLbl,
-html[data-look="riso"] .stateInfoPanel .miniLbl,
 #tip .miniLbl,
 .stateInfoPanel .miniLbl {
   color: var(--muted) !important;
 }
-html[data-look="riso"] #tip .miniVal,
-html[data-look="riso"] .stateInfoPanel .miniVal,
 #tip .miniVal,
 .stateInfoPanel .miniVal {
   color: var(--ink-dim) !important;
@@ -3189,28 +3011,7 @@ html[data-theme="dark"] .stateInfoPanel {
   background: var(--card-bg) !important;
 }
 
-/* Map strokes — riso: thin ink hairlines; dark: white hairlines */
-html[data-look="riso"] .state {
-  stroke: var(--text-ink) !important;
-  stroke-width: 0.6px !important;
-  transition: stroke 0.15s ease, stroke-width 0.15s ease !important;
-}
-html[data-look="riso"] .state.hovered {
-  stroke: var(--purple, #4f46e5) !important;
-  stroke-width: 2.5px !important;
-  filter: none !important;
-}
-html[data-look="riso"] .district {
-  stroke: var(--text-ink) !important;
-  stroke-width: 0.3px !important;
-  stroke-opacity: 0.5 !important;
-}
-html[data-look="riso"] .district.hovered {
-  stroke: var(--purple, #4f46e5) !important;
-  stroke-width: 1.5px !important;
-  stroke-opacity: 1 !important;
-  filter: none !important;
-}
+/* Map strokes — riso: thin ink hairlines;
 /* Dark mode map: ink is white, so strokes become white hairlines */
 html[data-theme="dark"] .state {
   stroke: var(--text-ink);
@@ -3257,13 +3058,6 @@ html[data-theme="dark"] {
   --red-border: #ef4444;
 }
 
-html[data-theme="dark"][data-look="riso"] {
-  --card-bg: #141414;
-  --card-border: var(--t-paper);
-  --card-shadow: 4px 4px 0 0 var(--t-paper);
-  --card-shadow-hover: 4px 4px 0 0 var(--t-paper);
-}
-
 html[data-theme="dark"][data-look="legacy"] {
   --card-bg: rgba(31, 41, 55, 0.85);
   --card-border: rgba(55, 65, 81, 0.6);
@@ -3303,10 +3097,6 @@ html[data-theme="dark"] body {
   background: var(--text-ink);
   color: var(--card-bg);
 }
-html[data-look="riso"] .lookToggle,
-html[data-look="riso"] .themeToggle {
-  box-shadow: 2px 2px 0 0 var(--text-ink);
-}
 html[data-look="legacy"] .lookToggle,
 html[data-look="legacy"] .themeToggle {
   border-radius: 9999px;
@@ -3327,24 +3117,6 @@ html[data-look="legacy"] .themeToggle {
     margin-left: 4px;
   }
 }
-
-/* CHAMBER TOGGLE — don't get force-flattened by the card override */
-html[data-look="riso"] .chamberToggle {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 3px !important;
-}
-html[data-look="riso"] .chamberBtn {
-  border-radius: 0 !important;
-  color: var(--text-muted);
-}
-html[data-look="riso"] .chamberBtn.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  box-shadow: none !important;
-}
 html[data-theme="dark"] .chamberBtn.active {
   background: var(--text-ink);
   color: var(--card-bg);
@@ -3353,143 +3125,9 @@ html[data-theme="dark"][data-look="legacy"] .chamberBtn.active {
   background: #1f2937;
   color: #f0f0f0;
 }
-
-/* Map control bar — unified height across Senate/Gov/Congress so grid aligns */
-html[data-look="riso"] .mapControlBar {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 6px 10px !important;
-  color: var(--text-muted);
-  min-height: 36px;
-  box-sizing: border-box;
-  align-items: center;
-  flex-wrap: nowrap !important;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  gap: 5px !important;
-}
-html[data-look="riso"] .mapControlBar::-webkit-scrollbar { display: none; }
-html[data-look="riso"] .mapCtrlBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink);
-  border-radius: 0 !important;
-  box-shadow: 1px 1px 0 0 var(--text-ink) !important;
-}
-html[data-look="riso"] .mapCtrlBtn:hover {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-}
-html[data-look="riso"] .mapCtrlLabel {
-  flex-shrink: 0;
-  color: var(--text-muted);
-  font-size: 10px;
-  font-weight: 700;
-}
-html[data-look="riso"] .zoomBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-muted);
-  border-radius: 0 !important;
-  padding: 3px 7px !important;
-  font-size: 10px;
-}
-html[data-look="riso"] .zoomBtn.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  border-color: var(--text-ink) !important;
-}
-html[data-look="riso"] .zoomSelect {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink);
-  border-radius: 0 !important;
-  max-width: 100px;
-  padding: 3px 6px !important;
-  font-size: 10px;
-}
-html[data-look="riso"] .zoomSep {
-  color: var(--text-faint);
-  flex-shrink: 0;
-}
-
-/* Match Senate/Gov "Click a state to zoom in" row to Congress city picker height */
-html[data-look="riso"] .mapCtrlLabel {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-muted);
-  padding: 5px 10px;
-  border: 1px solid var(--text-ink);
-  background: var(--card-bg);
-  flex: 1;
-  text-align: center;
-  letter-spacing: 0.02em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 22px;
-}
-html[data-look="riso"] .mapCtrlBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 3px 8px !important;
-  font-size: 10px;
-  font-weight: 700;
-  cursor: pointer;
-}
-html[data-look="riso"] .mapControlBar {
-  min-height: 28px;
-  align-items: center;
-}
-
-/* Win Prob / Seats tabs inside Senate/Gov/Congress cards — riso segmented */
-html[data-look="riso"] .chartTabs {
-  border: 1px solid var(--text-ink) !important;
-  border-radius: 0 !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink);
-  overflow: visible !important;
-  background: var(--card-bg);
-}
-html[data-look="riso"] .chartTab {
-  color: var(--text-muted);
-  border-radius: 0 !important;
-}
-html[data-look="riso"] .chartTab + .chartTab {
-  border-left: 1px solid var(--text-ink) !important;
-}
-html[data-look="riso"] .chartTab.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-}
-
-/* Odds card internal text colors — inherit from variables but force on dark */
-html[data-look="riso"] .oddsCard .oddsTitle { color: var(--text-ink); }
-html[data-look="riso"] .oddsCard .oddsSub { color: var(--text-muted); }
 html[data-theme="dark"] .oddsCard .oddsTitle { color: var(--text-ink); }
 html[data-theme="dark"] .oddsCard .oddsSub { color: var(--text-muted); }
 html[data-theme="dark"] .chartYLabel { color: var(--text-muted); }
-
-/* The 50 / 50 default odds pills at the top of each panel */
-html[data-look="riso"] .metricPill {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  color: var(--text-ink) !important;
-}
-html[data-look="riso"] .metricPill .dot {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink);
-}
 html[data-theme="dark"] .metricPill {
   background: var(--card-bg);
   border: 1px solid var(--text-ink);
@@ -3499,8 +3137,6 @@ html[data-theme="dark"][data-look="legacy"] .metricPill {
   background: rgba(31,41,55,0.9);
   border: 1px solid rgba(75,85,99,0.9);
 }
-html[data-look="riso"] .panelTitle { color: var(--text-ink); }
-html[data-look="riso"] .panelSub { color: var(--text-muted); }
 html[data-theme="dark"] .panelTitle { color: var(--text-ink); }
 html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
@@ -3790,10 +3426,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   #flRedistrictingPage .district.hovered{
     stroke-width: 1.6;
   }
-  html[data-look="riso"] #flRedistrictingPage .district{
-    stroke: var(--ink);
-    stroke-width: 0.5;
-  }
 </style>
 <!-- end index-1.html CSS -->
 
@@ -3882,12 +3514,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .rtg-leanR { color: var(--red-soft); border-color: var(--red-soft); }
   .rtg-likelyR { color: var(--red); border-color: var(--red); }
   .rtg-safeR { color: var(--red-deep); border-color: var(--red-deep); }
-  
-  
-  
-  
-  
-  
+
   
   .rtgBar { display: flex; height: 18px; border: 1px solid var(--ink); margin: 6px 0 4px; overflow: hidden; }
   .rtgSeg { display: flex; align-items: center; justify-content: center; color: var(--t-paper);
@@ -4361,22 +3988,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     font-weight: 500 !important;
   }
   .pageTab:hover:not(.active) { background: var(--bg-2) !important; }
-  [data-palette="foundry"]{
-    --bg: #ece2cf; --bg-2: #e5d8b9; --paper: #efe5cc;
-    --ink: #1a1812; --ink-dim: #38311f; --muted: #6c6147; --muted-2: #9a8c6f;
-    --rule: #1a1812; --rule-soft: #b8a578;
-    --blue: #2f4c66; --blue-soft:#c6d0db; --blue-deep:#1c2f44;
-    --red:  #7d3324; --red-soft:#dabfb5; --red-deep:#4d1c12;
-    --yellow:#b6892b; --yellow-soft:#e3cb82;
-  }
-  [data-palette="atlas"]{
-    --bg: #ece1c5; --bg-2: #e0d2b0; --paper: #efe5c8;
-    --ink: #211e15; --ink-dim: #3c3525; --muted: #6e624a; --muted-2: #9c8e6e;
-    --rule: #211e15; --rule-soft: #bea98a;
-    --blue: #3a5670; --blue-soft:#ccd5df; --blue-deep:#22384e;
-    --red:  #98442e; --red-soft:#e1c4b9; --red-deep:#6b2a1a;
-    --yellow:#c8932e; --yellow-soft:#e3ca87;
-  }
   [data-density="cozy"]{ --pad: 14px; }
   [data-density="airy"]{ --pad: 24px; }
 
@@ -4808,7 +4419,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       </div>
     </section>
 
-    
     <section class="card mapCard" aria-label="Map">
       <div class="mapGrid">
         <div class="mapStage">
@@ -5185,7 +4795,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       </div>
     </section>
   </section>
-
 
 </div>
 
@@ -5666,8 +5275,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   <script src="assets/tweaks-panel.js"></script>
   <script src="assets/app.js"></script>
-
-
 
 <!-- v13: forecast.js + ratings.js + past-elections.js + swingometer.js + state-legs.js + fl_redistricting.js + polls.js + bridge -->
 <script src="forecast.js?v=v21"></script>

@@ -563,7 +563,7 @@ var __TwkCheck = function __TwkCheck(_ref1) {
     strokeWidth: "2.2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    stroke: light ? 'rgba(0,0,0,.78)' : '#fff'
+    stroke: light ? 'var(--t-ink)' : 'var(--t-paper)'
   }));
 };
 
