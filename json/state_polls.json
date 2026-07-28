@@ -1,6 +1,7 @@
 {
-  "updatedAt": "2026-07-28T02:19:03.620Z",
+  "updatedAt": "2026-07-28T13:03:12.862Z",
   "source": "https://api.votehub.com/polls",
+  "degraded": "API returned polls but none were usable",
   "window": 6,
   "counts": {
     "senate": 71,
@@ -1673,10 +1674,109 @@
       "senate": 0,
       "governor": 282
     },
-    "okSlices": 48,
+    "dropReasons": {
+      "senate": {},
+      "governor": {
+        "state": 282
+      }
+    },
+    "shape": {
+      "governor": {
+        "pollKeys": [
+          "answers",
+          "created_at",
+          "end_date",
+          "id",
+          "internal",
+          "partisan",
+          "poll_type",
+          "pollster",
+          "population",
+          "sample_size",
+          "seat_name",
+          "sponsors",
+          "start_date",
+          "subject",
+          "url"
+        ],
+        "answerKeys": [
+          "choice",
+          "pct"
+        ],
+        "stages": [],
+        "stateExamples": [],
+        "sample": [
+          {
+            "id": "govvirres3u1v5zll",
+            "poll_type": "governor",
+            "seat_name": null,
+            "subject": "2025 Virginia",
+            "start_date": "2024-09-03",
+            "end_date": "2024-09-09",
+            "pollster": "Research America",
+            "answers": [
+              {
+                "choice": "Abigail Spanberger",
+                "pct": 39
+              },
+              {
+                "choice": "Winsome Earle-Sears",
+                "pct": 39
+              }
+            ]
+          },
+          {
+            "id": "gov202co/6d724bce",
+            "poll_type": "governor",
+            "seat_name": null,
+            "subject": "2026 New Hampshire",
+            "start_date": "2025-10-09",
+            "end_date": "2024-10-13",
+            "pollster": "co/efficient",
+            "answers": [
+              {
+                "choice": "Kelly Ayotte",
+                "pct": 43
+              },
+              {
+                "choice": "Dem",
+                "pct": 40
+              }
+            ]
+          },
+          {
+            "id": "govvirmaslveo0i3n",
+            "poll_type": "governor",
+            "seat_name": null,
+            "subject": "2025 Virginia",
+            "start_date": "2024-12-15",
+            "end_date": "2024-12-19",
+            "pollster": "Mason-Dixon",
+            "answers": [
+              {
+                "choice": "Abigail Spanberger",
+                "pct": 47
+              },
+              {
+                "choice": "Winsome Earle-Sears",
+                "pct": 44
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "okSlices": 72,
     "failedSlices": 0,
     "skippedDays": [],
+    "probe": {
+      "governor": 92,
+      "generic-ballot": 153,
+      "approval": 216,
+      "favorability": 125
+    },
     "fromApi": 0,
-    "fromCsv": 103
+    "fromCsv": 103,
+    "degraded": "API returned polls but none were usable"
   }
 }
