@@ -16,6 +16,11 @@
    Two faces: Switzer for data (tabular by default), Author for prose.
    ========================================================================== */
 
+/* Both faces are subset to Basic Latin, Latin-1, Latin Extended-A and the
+   punctuation the system sets. font-display is swap, not optional: the faces
+   carry the tabular figures every number on this site is set in, and a reader
+   who never receives them reads a different site. The metric-matched
+   fallbacks below make the swap cost close to nothing. */
 @font-face{font-family:"Switzer";src:url("fonts/switzer-400.woff2") format("woff2");font-weight:400;font-display:swap;}
 @font-face{font-family:"Switzer";src:url("fonts/switzer-500.woff2") format("woff2");font-weight:500;font-display:swap;}
 @font-face{font-family:"Switzer";src:url("fonts/switzer-600.woff2") format("woff2");font-weight:600;font-display:swap;}
@@ -26,13 +31,35 @@
 @font-face{font-family:"Author";src:url("fonts/author-500.woff2") format("woff2");font-weight:500;font-display:swap;}
 @font-face{font-family:"Author";src:url("fonts/author-600.woff2") format("woff2");font-weight:600;font-display:swap;}
 
+/* Metric-matched fallbacks. The ratios are measured, not guessed: the string
+   xn0Hg sets 2.9440em in Switzer against 3.2486em in the resolved sans
+   fallback, and 2.5110em in Author against 2.7222em in the serif. The
+   overrides carry each face's own ascent, descent and line gap, so the line
+   box does not move when the real face arrives. */
+@font-face{
+  font-family:"Switzer fallback";
+  src:local("Arial"), local("Helvetica"), local("Liberation Sans");
+  size-adjust:90.6%;
+  ascent-override:98%;
+  descent-override:25%;
+  line-gap-override:9%;
+}
+@font-face{
+  font-family:"Author fallback";
+  src:local("Georgia"), local("Times New Roman"), local("Liberation Serif");
+  size-adjust:92.2%;
+  ascent-override:83%;
+  descent-override:20%;
+  line-gap-override:8%;
+}
+
 /* ======================================================================
    1 · TOKENS
    ====================================================================== */
 :root{
   /* ---- the neutral ramp · the whole interface lives here ---------------
-     Contrast against the paper ground, measured: ink 13.6:1, ink2 8.9:1,
-     ink3 6.1:1, muted 4.3:1, faint 2.0:1. Anything carrying meaning uses
+     Contrast against the paper ground, measured: ink 14.58:1, ink2 9.56:1,
+     ink3 6.28:1, muted 4.29:1, faint 1.98:1. Anything carrying meaning uses
      ink, ink2 or ink3. Muted is for labels at 12px and up. Faint never
      carries a value: it is for a rule, a swatch edge, a disabled word. */
   --t-paper:#E9E8E0;     /* the ground */
@@ -61,8 +88,8 @@
   --t-d2-soft:#F3E0A8;     /* the pale step of series 2      · figures only */
 
   /* ---- faces ---------------------------------------------------------- */
-  --t-data:"Switzer", ui-sans-serif, system-ui, sans-serif;   /* all data */
-  --t-prose:"Author", Georgia, serif;                         /* running prose */
+  --t-data:"Switzer", "Switzer fallback", ui-sans-serif, system-ui, sans-serif;
+  --t-prose:"Author", "Author fallback", Georgia, serif;
 
   /* ---- rule weights --------------------------------------------------- */
   --t-w-hair:1px;      /* a separation inside a block */
@@ -192,6 +219,8 @@ html, body{
 }
 body{
   font-family:var(--t-data);
+  /* Tabular is the default because almost everything here is a figure in a
+     column. Prose opts out, and only prose. */
   font-variant-numeric:tabular-nums;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -884,7 +913,8 @@ svg path.state:focus-visible{
 .rtgTossupNote{color:var(--t-muted);}
 
 /* Methodology: prose in the prose face, and no tinted column to group a table. */
-.methBody, .methP, .methLede, .methDesc{
+.methBody, .methP, .methLede, .methDesc,
+.heroLede, [class*="Lede"], .projCardDesc, .projCardADesc{
   font-family:var(--t-prose) !important;
   font-variant-numeric:proportional-nums oldstyle-nums;
   line-height:1.62;

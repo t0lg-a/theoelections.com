@@ -82,7 +82,7 @@ function winArcSVG(pD, size){
     ${ticks}
     <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--ink)" stroke-width="1.5"/>
     <circle cx="${cx}" cy="${cy}" r="3" fill="var(--ink)"/><circle cx="${cx}" cy="${cy}" r="1.5" fill="var(--paper)"/>
-    <text x="${cx}" y="${cy+16}" text-anchor="middle" style="font-size:18px;font-weight:800;letter-spacing:-0.02em;font-family:'Eczar',Georgia,serif;font-variant-numeric:tabular-nums;fill:${pctColor}">${pct}%</text>
+    <text x="${cx}" y="${cy+16}" text-anchor="middle" style="font-size:18px;font-weight:800;letter-spacing:-0.02em;font-family:var(--t-data);font-variant-numeric:tabular-nums;fill:${pctColor}">${pct}%</text>
   </svg>`;
 }
 

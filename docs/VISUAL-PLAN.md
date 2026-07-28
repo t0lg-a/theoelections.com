@@ -54,15 +54,20 @@ minimal, owned, and provably closed.
    theme.css outside the `:root` blocks.
 9. [x] Green. It found the white district strokes on the way.
    Original step: Run the checker; fix what it finds; commit the checker with the fix.
-10. Subset Switzer and Author to the codepoints the site actually uses;
+10. [x] Subset to Basic Latin, Latin-1, Latin Extended-A and the system's punctuation: 175,616 to 142,504 bytes, 33,112 saved. Separately, the four retired faces (Eczar, JetBrains Mono, Newsreader, Old Standard TT) were still being shipped and are now deleted: 537,668 bytes.
+    Original step: Subset Switzer and Author to the codepoints the site actually uses;
     measure and record the byte saving.
-11. Decide `font-display`: `swap` (current) versus `optional`; test both for
+11. [x] `swap`, on evidence. Cumulative layout shift measured at 0.0027 with fonts immediate and 0.0087 with fonts delayed 600ms, both far under the 0.1 threshold, so `optional` would trade a real risk of never showing the tabular figures for nothing.
+    Original step: Decide `font-display`: `swap` (current) versus `optional`; test both for
     layout shift on a cold load and keep the measured winner.
-12. Add `size-adjust`, `ascent-override` and `descent-override` to the
+12. [x] Two metric-matched fallback faces. The ratios are measured, not guessed: xn0Hg sets 2.9440em in Switzer against 3.2486em in the resolved sans fallback, 2.5110em in Author against 2.7222em in the serif.
+    Original step: Add `size-adjust`, `ascent-override` and `descent-override` to the
     fallback stacks so the fallback does not reflow the page.
-13. Verify tabular figures are on in every numeric context and off in prose;
+13. [x] Tabular is the body default and prose opts out; verified only prose contexts do.
+    Original step: Verify tabular figures are on in every numeric context and off in prose;
     fix the contexts that inherit the wrong one.
-14. Add `font-variant-numeric: oldstyle-nums proportional-nums` to every
+14. [x] Author now carries oldstyle proportional figures in every context it appears, including the landing lede and the project deks.
+    Original step: Add `font-variant-numeric: oldstyle-nums proportional-nums` to every
     Author context still rendering lining figures.
 15. [x] `color-scheme` follows the ground; light and dark both verified to resolve.
    Original step: Add `color-scheme: light dark` so form controls, scrollbars and the
@@ -551,6 +556,12 @@ lattice on the ink ground. The token checker found it.
 sitemap. Deleted, which is Chapter 11 step 2 arriving early because it was the
 largest source of pure-white violations. `index-1.html` stays: every route
 links it as a redirect.
+
+**The site was still shipping four retired faces.** Eczar, JetBrains Mono,
+Newsreader and Old Standard TT were replaced in the type system but never
+removed: 537,668 bytes of woff2 and 71 `@font-face` blocks, for faces nothing
+referenced any more. Deleted. With the subsetting and the dead CSS, Chapter 1
+takes 763,526 bytes off the site.
 
 **The three standalone analyses are exempt by name.** `check-tokens.mjs` lists
 them in `PENDING_CONVERSION` so it can guard the app today; Chapter 11

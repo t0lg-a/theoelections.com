@@ -7,7 +7,7 @@
 <meta property="og:description" content="Race ratings across the 2026 Senate, Governor, and House maps: Safe, Likely, Lean, and Tossup, drawn from the daily forecast.">
 <meta property="og:url" content="https://theoelections.com/ratings/">
 <meta property="og:type" content="website">
-<meta name="prerender-build" content="2026-07-28T11:03:37Z">
+<meta name="prerender-build" content="2026-07-28T16:46:04Z">
 <script>window.__INITIAL_TAB="Ratings";</script>
 
 <meta charset="utf-8">
@@ -16,645 +16,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<style>/* devanagari */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-devanagari.woff2") format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek-ext.woff2") format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-devanagari.woff2") format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek-ext.woff2") format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-devanagari.woff2") format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek-ext.woff2") format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-devanagari.woff2") format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek-ext.woff2") format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Eczar';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/eczar-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-greek.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/newsreader-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-400-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-700-latin.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-700-cyrillic.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-700-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-700-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/old-standard-tt-700-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+<style>
+
 </style>
 
 <script src="assets/d3.v7.min.js"></script>
@@ -1235,7 +598,6 @@
       padding:10px 12px 12px;
     }
 
-
     .tipSparkWrap{
       margin-top:10px;
       padding-top:10px;
@@ -1358,7 +720,6 @@
       font-family: var(--mono);
     }
 
-
     .sliderBlock{ margin-top:16px; }
     .sliderLabelRow{
       display:flex;
@@ -1427,7 +788,6 @@
       z-index: 5;
     }
     .hr{ height:1px; background: var(--line); margin:16px 0; }
-
 
     /* Race Table */
     .tableScroll{ overflow:auto; border-radius:12px; border:1px solid var(--line); box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);}
@@ -1545,8 +905,7 @@
     
     /* Utilities */
     .tiny{ font-size:12px; color:var(--muted); }
-  
-    
+
 /* ---------- Panel header + simple seats (screenshot-style) ---------- */
 .topCard{ padding:14px 14px; overflow:visible; border-left:3px solid var(--muted-light); }
 .topCard.leads-d{ border-left-color:var(--blue); }
@@ -1840,18 +1199,6 @@
         text-align: center;
         white-space: nowrap;
         box-sizing: border-box;
-      }
-      /* Riso tab borders — on 2-row mobile: right border only between tabs in same row, bottom border only on first row */
-      html[data-look="riso"] .pageTabsWrap .pageTab {
-        border-right: 1px solid var(--text-ink) !important;
-        border-bottom: 1px solid var(--text-ink) !important;
-      }
-      html[data-look="riso"] .pageTabsWrap .pageTab:nth-child(3n),
-      html[data-look="riso"] .pageTabsWrap .pageTab:last-child {
-        border-right: none !important;
-      }
-      html[data-look="riso"] .pageTabsWrap .pageTab:nth-child(n+4) {
-        border-bottom: none !important;
       }
       .pageTabsWrap > *:not(.pageTabs) { flex-shrink: 0; }
     }
@@ -2258,7 +1605,6 @@
       .mapSvg{ height:220px; }
     }
 
-
     /* ---------- Model Output chart card ---------- */
     .mapControlBar{
       display:flex;
@@ -2579,7 +1925,6 @@
       font-weight:600;
       color: var(--muted-light);
     }
-
 
     .gbControls{
       display:flex;
@@ -3017,19 +2362,6 @@
     }
     .projCard:hover .projCardOpen::after{ transform:translateX(3px); }
 
-    /* Riso treatment for project cards (default) */
-    html[data-look="riso"] .projCard{
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      background:var(--card-bg) !important;
-      border:1px solid var(--card-border) !important;
-      box-shadow:var(--card-shadow) !important;
-      border-radius:0 !important;
-    }
-    html[data-look="riso"] .projCard:hover{
-      box-shadow:6px 6px 0 0 var(--text-ink) !important;
-    }
-
     @media (max-width: 760px){
       .projGrid{ grid-template-columns:1fr; gap:14px; }
       .projTitle{ font-size:22px; }
@@ -3037,158 +2369,11 @@
       .projCardTitle{ font-size:16px; }
     }
 
-/* ═══════════════════════════════════════════════
-   THEO RISO + DARK MODE OVERRIDES
-   Toggles via [data-look="riso"] (default) / [data-look="legacy"]
-                [data-theme="light"] (default) / [data-theme="dark"]
-   ═══════════════════════════════════════════════ */
-
-:root {
-  /* Dark-aware text colors (default: light mode) */
-  --text-ink: #111827;
-  --text-dim: #374151;
-  --text-muted: #6b7280;
-  --text-faint: #9ca3af;
-  --pg-bg: #f3f4f6;
-  --grad-1: #eef2ff;
-  --grad-2: #fff1f2;
-}
-
-/* RISO DEFAULT — flat, sharp, hard shadows */
-html[data-look="riso"] {
-  --card-bg: var(--t-paper);
-  --card-border: var(--text-ink);
-  --card-shadow: 4px 4px 0 0 var(--text-ink);
-  --card-shadow-hover: 4px 4px 0 0 var(--text-ink);
-  --radius-lg: 0;
-  --radius-md: 0;
-  --radius-sm: 0;
-  --radius-pill: 0;
-  --line: var(--text-ink);
-  --line-strong: var(--text-ink);
-}
-
-html[data-look="riso"] .cardDash,
-html[data-look="riso"] .card,
-html[data-look="riso"] .titleRow,
-html[data-look="riso"] .tooltipBox,
-html[data-look="riso"] .pageTabs,
-html[data-look="riso"] .authorBadge,
-html[data-look="riso"] .segmentedControl,
-html[data-look="riso"] .lookToggle,
-html[data-look="riso"] .themeToggle {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  background: var(--card-bg) !important;
-  border: 1px solid var(--card-border) !important;
-  box-shadow: var(--card-shadow) !important;
-  border-radius: 0 !important;
-}
-
-/* Donate button — stays colored, just sharpen the corners and swap shadow */
-html[data-look="riso"] .donateBtn {
-  background: var(--blue) !important;
-  color: var(--t-paper) !important;
-  border: 1px solid var(--text-ink) !important;
-  border-radius: 0 !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-}
-html[data-look="riso"] .donateBtn:hover {
-  background: var(--blue-dark) !important;
-  transform: none !important;
-}
-
-html[data-look="riso"] button,
-html[data-look="riso"] input[type="number"],
-html[data-look="riso"] input[type="text"] {
-  border-radius: 0 !important;
-}
-
-html[data-look="riso"] .pageTab.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  border-radius: 0 !important;
-}
-
-/* Page tabs — ensure individual tabs stay visually separated in riso */
-html[data-look="riso"] .pageTabs {
-  gap: 0 !important;
-  padding: 0 !important;
-}
-html[data-look="riso"] .pageTab {
-  padding: 7px 14px !important;
-  border-right: 1px solid var(--text-ink) !important;
-  background: var(--card-bg);
-  color: var(--text-muted);
-}
-html[data-look="riso"] .pageTab:last-child {
-  border-right: none !important;
-}
-html[data-look="riso"] .pageTab:hover:not(.active) {
-  background: var(--neutral-bg);
-}
-
-/* Tooltip (#tip) + State info panel — riso overrides */
-html[data-look="riso"] #tip,
-html[data-look="riso"] .stateInfoPanel,
-html[data-look="riso"] body .stateInfoPanel {
-  border-radius: 0 !important;
-  background: var(--card-bg) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 4px 4px 0 0 var(--text-ink) !important;
-  overflow: visible !important;
-}
-/* All rounded children inside — kill every radius */
-html[data-look="riso"] #tip *,
-html[data-look="riso"] .stateInfoPanel * {
-  border-radius: 0 !important;
-}
-/* Share track pill → flat bar with ink border */
-html[data-look="riso"] #tip .panelShareTrack,
-html[data-look="riso"] .stateInfoPanel .panelShareTrack {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
-}
-/* Classification chip (Lean R, Safe D, etc) → sharp rectangle */
-html[data-look="riso"] #tip .panelClassify,
-html[data-look="riso"] .stateInfoPanel .panelClassify {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-}
-/* Mini factor bars (Generic Ballot, Polls, etc) */
-html[data-look="riso"] #tip .miniBar,
-html[data-look="riso"] #tip .miniBarFinal,
-html[data-look="riso"] .stateInfoPanel .miniBar,
-html[data-look="riso"] .stateInfoPanel .miniBarFinal {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  box-shadow: none !important;
-}
-/* Panel final row divider */
-html[data-look="riso"] #tip .miniRowFinal,
-html[data-look="riso"] .stateInfoPanel .miniRowFinal {
-  border-top: 1px solid var(--text-ink) !important;
-}
-/* Accent bar at top → thin ink line */
-html[data-look="riso"] #tip .panelAccent,
-html[data-look="riso"] .stateInfoPanel .panelAccent {
-  background: var(--text-ink) !important;
-  height: 2px !important;
-}
 /* Muted text inside panel */
-html[data-look="riso"] #tip .miniLbl,
-html[data-look="riso"] .stateInfoPanel .miniLbl,
 #tip .miniLbl,
 .stateInfoPanel .miniLbl {
   color: var(--muted) !important;
 }
-html[data-look="riso"] #tip .miniVal,
-html[data-look="riso"] .stateInfoPanel .miniVal,
 #tip .miniVal,
 .stateInfoPanel .miniVal {
   color: var(--ink-dim) !important;
@@ -3199,28 +2384,7 @@ html[data-theme="dark"] .stateInfoPanel {
   background: var(--card-bg) !important;
 }
 
-/* Map strokes — riso: thin ink hairlines; dark: white hairlines */
-html[data-look="riso"] .state {
-  stroke: var(--text-ink) !important;
-  stroke-width: 0.6px !important;
-  transition: stroke 0.15s ease, stroke-width 0.15s ease !important;
-}
-html[data-look="riso"] .state.hovered {
-  stroke: var(--purple, #4f46e5) !important;
-  stroke-width: 2.5px !important;
-  filter: none !important;
-}
-html[data-look="riso"] .district {
-  stroke: var(--text-ink) !important;
-  stroke-width: 0.3px !important;
-  stroke-opacity: 0.5 !important;
-}
-html[data-look="riso"] .district.hovered {
-  stroke: var(--purple, #4f46e5) !important;
-  stroke-width: 1.5px !important;
-  stroke-opacity: 1 !important;
-  filter: none !important;
-}
+/* Map strokes — riso: thin ink hairlines;
 /* Dark mode map: ink is white, so strokes become white hairlines */
 html[data-theme="dark"] .state {
   stroke: var(--text-ink);
@@ -3267,13 +2431,6 @@ html[data-theme="dark"] {
   --red-border: #ef4444;
 }
 
-html[data-theme="dark"][data-look="riso"] {
-  --card-bg: #141414;
-  --card-border: var(--t-paper);
-  --card-shadow: 4px 4px 0 0 var(--t-paper);
-  --card-shadow-hover: 4px 4px 0 0 var(--t-paper);
-}
-
 html[data-theme="dark"][data-look="legacy"] {
   --card-bg: rgba(31, 41, 55, 0.85);
   --card-border: rgba(55, 65, 81, 0.6);
@@ -3313,10 +2470,6 @@ html[data-theme="dark"] body {
   background: var(--text-ink);
   color: var(--card-bg);
 }
-html[data-look="riso"] .lookToggle,
-html[data-look="riso"] .themeToggle {
-  box-shadow: 2px 2px 0 0 var(--text-ink);
-}
 html[data-look="legacy"] .lookToggle,
 html[data-look="legacy"] .themeToggle {
   border-radius: 9999px;
@@ -3337,24 +2490,6 @@ html[data-look="legacy"] .themeToggle {
     margin-left: 4px;
   }
 }
-
-/* CHAMBER TOGGLE — don't get force-flattened by the card override */
-html[data-look="riso"] .chamberToggle {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 3px !important;
-}
-html[data-look="riso"] .chamberBtn {
-  border-radius: 0 !important;
-  color: var(--text-muted);
-}
-html[data-look="riso"] .chamberBtn.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  box-shadow: none !important;
-}
 html[data-theme="dark"] .chamberBtn.active {
   background: var(--text-ink);
   color: var(--card-bg);
@@ -3363,143 +2498,9 @@ html[data-theme="dark"][data-look="legacy"] .chamberBtn.active {
   background: #1f2937;
   color: #f0f0f0;
 }
-
-/* Map control bar — unified height across Senate/Gov/Congress so grid aligns */
-html[data-look="riso"] .mapControlBar {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 6px 10px !important;
-  color: var(--text-muted);
-  min-height: 36px;
-  box-sizing: border-box;
-  align-items: center;
-  flex-wrap: nowrap !important;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  gap: 5px !important;
-}
-html[data-look="riso"] .mapControlBar::-webkit-scrollbar { display: none; }
-html[data-look="riso"] .mapCtrlBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink);
-  border-radius: 0 !important;
-  box-shadow: 1px 1px 0 0 var(--text-ink) !important;
-}
-html[data-look="riso"] .mapCtrlBtn:hover {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-}
-html[data-look="riso"] .mapCtrlLabel {
-  flex-shrink: 0;
-  color: var(--text-muted);
-  font-size: 10px;
-  font-weight: 700;
-}
-html[data-look="riso"] .zoomBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-muted);
-  border-radius: 0 !important;
-  padding: 3px 7px !important;
-  font-size: 10px;
-}
-html[data-look="riso"] .zoomBtn.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-  border-color: var(--text-ink) !important;
-}
-html[data-look="riso"] .zoomSelect {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink);
-  border-radius: 0 !important;
-  max-width: 100px;
-  padding: 3px 6px !important;
-  font-size: 10px;
-}
-html[data-look="riso"] .zoomSep {
-  color: var(--text-faint);
-  flex-shrink: 0;
-}
-
-/* Match Senate/Gov "Click a state to zoom in" row to Congress city picker height */
-html[data-look="riso"] .mapCtrlLabel {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-muted);
-  padding: 5px 10px;
-  border: 1px solid var(--text-ink);
-  background: var(--card-bg);
-  flex: 1;
-  text-align: center;
-  letter-spacing: 0.02em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 22px;
-}
-html[data-look="riso"] .mapCtrlBtn {
-  flex-shrink: 0;
-  border: 1px solid var(--text-ink) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-ink) !important;
-  border-radius: 0 !important;
-  padding: 3px 8px !important;
-  font-size: 10px;
-  font-weight: 700;
-  cursor: pointer;
-}
-html[data-look="riso"] .mapControlBar {
-  min-height: 28px;
-  align-items: center;
-}
-
-/* Win Prob / Seats tabs inside Senate/Gov/Congress cards — riso segmented */
-html[data-look="riso"] .chartTabs {
-  border: 1px solid var(--text-ink) !important;
-  border-radius: 0 !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink);
-  overflow: visible !important;
-  background: var(--card-bg);
-}
-html[data-look="riso"] .chartTab {
-  color: var(--text-muted);
-  border-radius: 0 !important;
-}
-html[data-look="riso"] .chartTab + .chartTab {
-  border-left: 1px solid var(--text-ink) !important;
-}
-html[data-look="riso"] .chartTab.active {
-  background: var(--text-ink) !important;
-  color: var(--card-bg) !important;
-}
-
-/* Odds card internal text colors — inherit from variables but force on dark */
-html[data-look="riso"] .oddsCard .oddsTitle { color: var(--text-ink); }
-html[data-look="riso"] .oddsCard .oddsSub { color: var(--text-muted); }
 html[data-theme="dark"] .oddsCard .oddsTitle { color: var(--text-ink); }
 html[data-theme="dark"] .oddsCard .oddsSub { color: var(--text-muted); }
 html[data-theme="dark"] .chartYLabel { color: var(--text-muted); }
-
-/* The 50 / 50 default odds pills at the top of each panel */
-html[data-look="riso"] .metricPill {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--text-ink) !important;
-  box-shadow: 2px 2px 0 0 var(--text-ink) !important;
-  border-radius: 0 !important;
-  color: var(--text-ink) !important;
-}
-html[data-look="riso"] .metricPill .dot {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-ink);
-}
 html[data-theme="dark"] .metricPill {
   background: var(--card-bg);
   border: 1px solid var(--text-ink);
@@ -3509,8 +2510,6 @@ html[data-theme="dark"][data-look="legacy"] .metricPill {
   background: rgba(31,41,55,0.9);
   border: 1px solid rgba(75,85,99,0.9);
 }
-html[data-look="riso"] .panelTitle { color: var(--text-ink); }
-html[data-look="riso"] .panelSub { color: var(--text-muted); }
 html[data-theme="dark"] .panelTitle { color: var(--text-ink); }
 html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
@@ -3800,10 +2799,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   #flRedistrictingPage .district.hovered{
     stroke-width: 1.6;
   }
-  html[data-look="riso"] #flRedistrictingPage .district{
-    stroke: var(--ink);
-    stroke-width: 0.5;
-  }
 </style>
 <!-- end index-1.html CSS -->
 
@@ -3837,7 +2832,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border: 1px solid var(--rule, #2a2317);
     background: var(--paper, #f4eccf);
     color: var(--ink, #1d1810);
-    font-family: var(--display, Eczar), serif; font-size: 12px;
+    font-family: var(--display), sans-serif; font-size: 12px;
     padding: 4px 10px; cursor: pointer; line-height: 1.2;
     box-shadow: 2px 2px 0 var(--ink, #1d1810);
   }
@@ -3847,7 +2842,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border: 1px solid var(--rule-soft, #c1ad84);
     background: transparent;
     color: var(--ink, #1d1810);
-    font-family: var(--display, Eczar), serif; font-size: 12px;
+    font-family: var(--display), sans-serif; font-size: 12px;
     padding: 2px 8px; cursor: pointer; line-height: 1.3; border-radius: 0;
   }
   .chipBtn:hover { background: var(--bg-2, #ead9b5); }
@@ -3856,7 +2851,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border: 1px solid var(--rule-soft, #c1ad84);
     background: transparent;
     color: var(--ink, #1d1810);
-    font-family: var(--display, Eczar), serif; font-size: 12px;
+    font-family: var(--display), sans-serif; font-size: 12px;
     padding: 2px 18px 2px 8px; cursor: pointer; line-height: 1.3;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%231d1810' d='M0 0h10L5 6z'/></svg>");
     background-repeat: no-repeat; background-position: right 6px center;
@@ -3880,10 +2875,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   /* Ratings */
   .rtgCountStrip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
-                   margin: 14px 0 8px; font-family: var(--mono, "IBM Plex Mono"), monospace; }
+                   margin: 14px 0 8px; font-family: var(--mono), sans-serif; }
   .rtgCountItem { text-align: center; padding: 6px 2px; border: 1px solid var(--rule-soft);
                   background: var(--paper); line-height: 1.1; }
-  .rtgCountNum { font-family: var(--display, Eczar), serif; font-size: 18px; font-weight: 600; }
+  .rtgCountNum { font-family: var(--display), sans-serif; font-size: 18px; font-weight: 600; }
   .rtgCountLbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; color: var(--muted); }
   .rtg-safeD { color: var(--blue-deep); border-color: var(--blue-deep); }
   .rtg-likelyD { color: var(--blue); border-color: var(--blue); }
@@ -3892,16 +2887,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .rtg-leanR { color: var(--red-soft); border-color: var(--red-soft); }
   .rtg-likelyR { color: var(--red); border-color: var(--red); }
   .rtg-safeR { color: var(--red-deep); border-color: var(--red-deep); }
-  
-  
-  
-  
-  
-  
-  
+
   .rtgBar { display: flex; height: 18px; border: 1px solid var(--ink); margin: 6px 0 4px; overflow: hidden; }
   .rtgSeg { display: flex; align-items: center; justify-content: center; color: var(--t-paper);
-            font-size: 10px; font-family: var(--mono, "IBM Plex Mono"), monospace; transition: width 0.3s ease; }
+            font-size: 10px; font-family: var(--mono), sans-serif; transition: width 0.3s ease; }
   .rtgBar .rtgSeg.rtg-safeD { background: var(--blue-deep); color: var(--paper); }
   .rtgBar .rtgSeg.rtg-likelyD { background: var(--blue); color: var(--paper); }
   .rtgBar .rtgSeg.rtg-leanD { background: var(--blue-soft); color: var(--ink); }
@@ -3912,31 +2901,31 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .rtgLabels { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
                font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em;
                color: var(--muted); margin-bottom: 10px; text-align: center; }
-  .rtgTossupNote { font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
+  .rtgTossupNote { font-family: var(--mono), sans-serif; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
   .rtgTossupNote .rtg-tossup { color: var(--t-overprint); font-weight: 700; }
 
   .comingSoon { padding: 80px 40px; text-align: center;
                 border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
                 margin: 40px 0; }
-  .comingSoonTitle { font-family: var(--display, Eczar), serif; font-size: 32px; margin-bottom: 8px; }
+  .comingSoonTitle { font-family: var(--display), sans-serif; font-size: 32px; margin-bottom: 8px; }
   .comingSoonSub { color: var(--muted); font-size: 13px; }
 
   /* Methodology */
   .methAlmanac { max-width: 720px; margin: 0 auto; padding: 24px 8px 48px;
                  font-family: var(--body, "Source Serif Pro"), Georgia, serif; color: var(--ink); line-height: 1.65; }
   .methHero { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 28px; text-align: center; }
-  .methKicker { font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 10px;
+  .methKicker { font-family: var(--mono), sans-serif; font-size: 10px;
                 text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 6px; }
-  .methTitle { font-family: var(--display, Eczar), serif; font-size: 44px; line-height: 1.05; margin: 0 0 6px; font-weight: 700; }
+  .methTitle { font-family: var(--display), sans-serif; font-size: 44px; line-height: 1.05; margin: 0 0 6px; font-weight: 700; }
   .methLede { color: var(--muted); font-size: 14px; font-style: italic; margin: 0; }
   .methCard { padding: 18px 0; border-bottom: 1px solid var(--rule-soft); }
   .methCard:last-of-type { border-bottom: none; }
-  .methH2 { font-family: var(--display, Eczar), serif; font-size: 20px; margin: 0 0 12px; font-weight: 600; }
+  .methH2 { font-family: var(--display), sans-serif; font-size: 20px; margin: 0 0 12px; font-weight: 600; }
   .methBody { font-size: 14.5px; margin: 0 0 12px; }
   .methBody:last-child { margin-bottom: 0; }
   .methBody strong { font-weight: 600; }
   .methTableWrap { margin-top: 16px; }
-  .methTableA { width: 100%; border-collapse: collapse; font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 12px; }
+  .methTableA { width: 100%; border-collapse: collapse; font-family: var(--mono), sans-serif; font-size: 12px; }
   .methTableA th { text-align: left; text-transform: uppercase; letter-spacing: 0.04em; font-size: 10px;
                    color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--ink); font-weight: 600; }
   .methTableA td { padding: 9px 10px; border-bottom: 1px solid var(--rule-soft); vertical-align: middle; }
@@ -3952,7 +2941,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .methRatingName { font-family: var(--body, "Source Serif Pro"), Georgia, serif; font-size: 13.5px; }
   .methMono { color: var(--muted); }
   .methDesc { font-family: var(--body, "Source Serif Pro"), Georgia, serif; font-size: 13.5px; }
-  .methFoot { text-align: center; padding: 28px 0 0; font-family: var(--mono, "IBM Plex Mono"), monospace; color: var(--muted); font-size: 11px; }
+  .methFoot { text-align: center; padding: 28px 0 0; font-family: var(--mono), sans-serif; color: var(--muted); font-size: 11px; }
   .methFoot a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
 
   /* Projects */
@@ -3960,7 +2949,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
                  font-family: var(--body, "Source Serif Pro"), Georgia, serif; color: var(--ink); }
   .projHero { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 24px; text-align: center; }
   .projSectionA { margin-bottom: 32px; }
-  .projSectionALabel { font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 10px;
+  .projSectionALabel { font-family: var(--mono), sans-serif; font-size: 10px;
                         text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted);
                         padding-bottom: 6px; margin-bottom: 12px; border-bottom: 1px solid var(--rule); }
   .projGridA { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
@@ -3969,17 +2958,17 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
                transition: box-shadow 0.12s, transform 0.12s; position: relative; }
   .projCardA:hover { box-shadow: 4px 4px 0 var(--ink); transform: translate(-1px, -1px); }
   .projCardA-mini { padding: 10px 14px; }
-  .projCardAKicker { font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 9px;
+  .projCardAKicker { font-family: var(--mono), sans-serif; font-size: 9px;
                      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px; color: var(--muted); }
   .projKick-red { color: var(--red); }
   .projKick-purple { color: var(--blue); }
   .projKick-neutral { color: var(--ink-dim); }
-  .projCardATitle { font-family: var(--display, Eczar), serif; font-size: 17px; line-height: 1.2;
+  .projCardATitle { font-family: var(--display), sans-serif; font-size: 17px; line-height: 1.2;
                     margin: 0 0 6px; font-weight: 600; }
   .projCardA-mini .projCardATitle { font-size: 14px; margin: 0; }
   .projCardADesc { font-size: 12.5px; line-height: 1.45; color: var(--ink-dim); margin: 6px 0 10px; }
   .projCardAMeta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
-                   font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 10px;
+                   font-family: var(--mono), sans-serif; font-size: 10px;
                    text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-top: 8px; }
   .projCardA-mini .projCardAMeta { margin-top: 4px; }
   .projCardAOpen { margin-left: auto; color: var(--ink); }
@@ -3994,7 +2983,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border-bottom: 1px solid var(--rule-soft);
   }
   .yearBarLabel {
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--muted); padding-left: 4px;
   }
@@ -4007,7 +2996,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border-right: 1px solid var(--rule-soft);
     background: transparent;
     color: var(--ink);
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 12px;
     padding: 4px 12px;
     cursor: pointer;
@@ -4041,7 +3030,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     margin: 12px 0;
   }
   .swingCardLabel {
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--muted); margin-bottom: 8px;
   }
@@ -4053,13 +3042,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     margin: 6px 0;
   }
   .swingPartyLabel {
-    font-family: var(--display, Eczar), serif;
+    font-family: var(--display), sans-serif;
     font-size: 14px; font-weight: 700; text-align: center;
   }
   .swingPartyLabel.d { color: var(--blue); }
   .swingPartyLabel.r { color: var(--red); }
   .swingRowVal {
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 12px; text-align: right;
     color: var(--ink);
   }
@@ -4099,12 +3088,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     margin-top: 8px;
   }
   .swingMarginLabel {
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--muted);
   }
   .swingMarginVal {
-    font-family: var(--display, Eczar), serif;
+    font-family: var(--display), sans-serif;
     font-size: 14px; font-weight: 600;
   }
   .swing-d   { color: var(--blue); }
@@ -4168,7 +3157,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     margin-top: 12px;
   }
   .pollsListHead {
-    font-family: var(--mono, "IBM Plex Mono"), monospace;
+    font-family: var(--mono), sans-serif;
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--muted); margin-bottom: 6px;
   }
@@ -4206,9 +3195,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     --pad: 18px;
 
-    --display: 'Eczar', 'Times New Roman', serif;
-    --body:    'Eczar', Georgia, serif;
-    --mono:    'JetBrains Mono', ui-monospace, monospace;
+    --display: "Switzer", ui-sans-serif, system-ui, sans-serif;
+    --body:    "Switzer", ui-sans-serif, system-ui, sans-serif;
+    --mono:    "Switzer", ui-sans-serif, system-ui, sans-serif;
 
     /* Almanac neutralization of legacy riso/Tailwind tokens. */
     --bg-app: var(--bg);
@@ -4371,22 +3360,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     font-weight: 500 !important;
   }
   .pageTab:hover:not(.active) { background: var(--bg-2) !important; }
-  [data-palette="foundry"]{
-    --bg: #ece2cf; --bg-2: #e5d8b9; --paper: #efe5cc;
-    --ink: #1a1812; --ink-dim: #38311f; --muted: #6c6147; --muted-2: #9a8c6f;
-    --rule: #1a1812; --rule-soft: #b8a578;
-    --blue: #2f4c66; --blue-soft:#c6d0db; --blue-deep:#1c2f44;
-    --red:  #7d3324; --red-soft:#dabfb5; --red-deep:#4d1c12;
-    --yellow:#b6892b; --yellow-soft:#e3cb82;
-  }
-  [data-palette="atlas"]{
-    --bg: #ece1c5; --bg-2: #e0d2b0; --paper: #efe5c8;
-    --ink: #211e15; --ink-dim: #3c3525; --muted: #6e624a; --muted-2: #9c8e6e;
-    --rule: #211e15; --rule-soft: #bea98a;
-    --blue: #3a5670; --blue-soft:#ccd5df; --blue-deep:#22384e;
-    --red:  #98442e; --red-soft:#e1c4b9; --red-deep:#6b2a1a;
-    --yellow:#c8932e; --yellow-soft:#e3ca87;
-  }
   [data-density="cozy"]{ --pad: 14px; }
   [data-density="airy"]{ --pad: 24px; }
 
@@ -5397,7 +4370,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       </div>
     </section>
 
-    
     <section class="card mapCard" aria-label="Map">
       <div class="mapGrid">
         <div class="mapStage">
@@ -6214,7 +5186,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </section>
   </section>
 
-
 </div>
 
 <div class="triGrid" id="swingometerPage" style="display:none" aria-label="Swingometer">
@@ -6698,7 +5669,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   <!-- ROW 4: Poll list / State charts (SAME HEIGHT) -->
   <section class="card pollListCard" data-polls-mode="gb" style="grid-area:b1">
-    <div class="pollListWrap" data-polls-list=""><table style="width:100%;border-collapse:collapse;font:600 11px/1.4 'Switzer',ui-sans-serif,system-ui,sans-serif;font-variant-numeric:tabular-nums"><thead><tr style="font:700 11px/1.4 'Switzer',ui-sans-serif,system-ui,sans-serif;color:var(--muted)"><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:left">date</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:left">pollster</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right;color:#1E6FD9">D</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right;color:#D62828">R</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right">margin</th></tr></thead><tbody><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-08</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.8</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-03</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-28</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">48.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-25</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.8</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.3</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.5</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight/Morris Predictive Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.4</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-07</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.6</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+14.5</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.2</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.1</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-23</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Beacon Research/Shaw &amp; Co. Research</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Leger</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-23</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.2</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.7</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">46.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">44.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+9.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">44.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.4</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-10</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-29</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-28</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">55.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Beacon Research/Shaw &amp; Co. Research</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">46.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.1</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.7</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.4</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-12</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.4</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">38.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+16.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-11</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.6</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.2</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-13</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">55.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+14.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-12</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.4</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-29</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+9.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.9</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.4</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.8</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.3</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-01</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">48.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+0.3</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-21</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.7</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.3</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.4</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">44.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.5</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.7</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.6</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid rgba(22,23,26,.06)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-06-25</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">42.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.8</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.7</td></tr></tbody></table></div>
+    <div class="pollListWrap" data-polls-list=""><table style="width:100%;border-collapse:collapse;font:600 11px/1.4 'Switzer',ui-sans-serif,system-ui,sans-serif;font-variant-numeric:tabular-nums"><thead><tr style="font:700 11px/1.4 'Switzer',ui-sans-serif,system-ui,sans-serif;color:var(--muted)"><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:left">date</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:left">pollster</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right;color:#1E6FD9">D</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right;color:#D62828">R</th><th style="padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:#E9E8E0;z-index:2;text-align:right">margin</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-08</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.8</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-06-03</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-28</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">48.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-25</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.8</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.3</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.5</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight/Morris Predictive Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.4</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-07</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.6</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+14.5</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-05-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.2</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.1</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-23</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Beacon Research/Shaw &amp; Co. Research</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Leger</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-04-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-23</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+11.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.2</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+7.7</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">46.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-03-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">44.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+9.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">44.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.4</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-02-10</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-29</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">TIPP Insights</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-28</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">45.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">55.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+10.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Beacon Research/Shaw &amp; Co. Research</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">46.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.1</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.7</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.4</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">48.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2026-01-12</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">54.4</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">38.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+16.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-15</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-12-11</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.6</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.4</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.2</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-13</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marist College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">55.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+14.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-12</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Marquette University Law School</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">46.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-11-04</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">40.1</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+3.4</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-30</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-29</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-20</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Quinnipiac University</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+9.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-10-14</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.9</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.4</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-27</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The New York Times/Siena College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">45.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-19</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+5.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">53.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">47.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+6.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.8</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.3</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-09-01</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">CNN/SSRS</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">52.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">48.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-26</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">43.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+0.3</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-21</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">49.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-08-17</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">The Argument/Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">50.7</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">49.3</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+1.4</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-22</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">44.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">41.5</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.5</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-18</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">AtlasIntel</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">51.3</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">42.7</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+8.6</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-07-16</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Verasight</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">47.0</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">43.0</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+4.0</td></tr><tr style="border-bottom:1px solid var(--t-row-rule)"><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;white-space:nowrap">2025-06-25</td><td style="padding:5px 8px;font:500 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">Emerson College</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">42.5</td><td style="padding:5px 8px;font:600 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#D62828">39.8</td><td style="padding:5px 8px;font:700 11px 'Switzer',ui-sans-serif,system-ui,sans-serif;text-align:right;color:#1E6FD9">D+2.7</td></tr></tbody></table></div>
   </section>
   <section class="card oddsCard" data-polls-mode="senate" data-polls-state-wrap="" style="grid-area:b2">
     <div class="oddsHead"><div><div class="oddsTitle" data-polls-state-chart-title="">Democrats lead Texas by 0.5</div></div></div>
@@ -6726,8 +5697,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   <script src="assets/tweaks-panel.js"></script>
   <script src="assets/app.js"></script>
-
-
 
 <!-- v13: forecast.js + ratings.js + past-elections.js + swingometer.js + state-legs.js + fl_redistricting.js + polls.js + bridge -->
 <script src="forecast.js?v=v21"></script>
