@@ -11,271 +11,194 @@
 <meta property="og:description" content="Pick a 2026 election forecast model: VoteHub (precinct-level) or the polling-focused personal baseline.">
 <meta property="og:image" content="preview.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
-  :root {
-    --display: 'Eczar', Georgia, serif;
-    --body:    'Source Serif 4', 'Source Serif Pro', Georgia, serif;
-    --mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-
-    --bg:        #f1e7cf;
-    --bg-2:      #ead9b5;
-    --paper:     #f4eccf;
-
-    --ink:       #1d1810;
-    --ink-dim:   #3a2f1f;
-    --muted:     #7e6a4a;
-    --muted-2:   #9d8460;
-
-    --rule:      #2a2317;
-    --rule-soft: #c1ad84;
-
-    --blue:      #2a4a72;
-    --blue-soft: #a8c2dd;
-    --blue-deep: #1a3050;
-    --red:       #a83a30;
-    --red-soft:  #dba29a;
-    --red-deep:  #6e1f1a;
-    --yellow:      #c89834;
-    --yellow-soft: #e3c986;
-  }
-
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    height: auto;
-    overflow: visible;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  .sheet {
-    max-width: 1000px;
+  /* The landing sheet, on the system: paper and ink, rules for structure,
+     labels bold lowercase, radius and elevation zero. */
+  .sheet{
+    max-width: 1040px;
     margin: 0 auto;
-    padding: 28px 22px 40px;
+    padding: 0 20px 72px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
-  /* Masthead — top hairline strip */
-  .mast {
+  /* Masthead, closed by the slab. */
+  .mast{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 16px;
-    padding: 4px 0 10px;
-    border-bottom: 1px solid var(--rule-soft);
-    font-family: var(--mono);
-    font-size: 10px;
+    padding: 12px 0 10px;
+    border-bottom: 9px solid var(--t-ink);
+    font-family: var(--t-data);
+    font-size: .75rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--muted);
+    color: var(--t-muted);
   }
-  .mast b {
-    font-weight: 600;
-    color: var(--ink-dim);
-  }
+  .mast b{ font-weight: 700; font-size: 1.0625rem; letter-spacing: -.02em; color: var(--t-ink); }
 
-  /* Hero — display serif title over a 2px ink underline */
-  .hero {
-    text-align: center;
-    padding: 64px 0 22px;
-    border-bottom: 2px solid var(--ink);
-    margin-bottom: 38px;
+  /* Hero: kicker, then the finding at display weight. */
+  .hero{
+    padding: 44px 0 26px;
+    border-bottom: 1px solid var(--t-hair);
+    margin-bottom: 30px;
   }
-  .heroKicker {
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--muted);
+  .heroTitle, .heroKicker{ max-width: 18ch; }
+  .heroKicker{
+    font-family: var(--t-data);
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--t-muted);
     margin-bottom: 10px;
   }
-  .heroTitle {
-    font-family: var(--display);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.005em;
+  .heroTitle{
+    font-family: var(--t-data);
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -.038em;
     margin: 0;
-    color: var(--ink);
+    color: var(--t-ink);
   }
-  .heroLede {
-    font-family: var(--body);
-    font-style: italic;
-    font-size: 14.5px;
-    color: var(--muted);
-    margin: 8px 0 0;
+  .heroLede{
+    font-family: var(--t-prose);
+    font-variant-numeric: proportional-nums oldstyle-nums;
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    color: var(--t-ink2);
+    margin: 12px 0 0;
+    max-width: 64ch;
   }
 
-  /* Two columns of methods, hairline between */
-  .cols {
+  /* Two columns, a hairline between, an ink rule above each. */
+  .cols{
     display: grid;
     grid-template-columns: 1fr 1px 1fr;
-    gap: 32px;
+    gap: 0;
     align-items: stretch;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
-  .colRule {
-    background: var(--rule-soft);
-    align-self: stretch;
-  }
-
-  .col {
+  .colRule{ background: var(--t-hair); align-self: stretch; }
+  .col{
     display: flex;
     flex-direction: column;
     min-width: 0;
+    border-top: 1px solid var(--t-ink);
+    padding: 15px 24px 0;
   }
-  .colKick {
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-  .colKick .sep { color: var(--rule-soft); margin: 0 6px; }
-
-  .colTitle {
-    font-family: var(--display);
-    font-size: 28px;
+  .col:first-child{ padding-left: 0; }
+  .col:last-child{ padding-right: 0; }
+  .colKick{
+    font-family: var(--t-data);
+    font-size: .75rem;
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.005em;
-    margin: 0 0 8px;
-    color: var(--ink);
+    color: var(--t-muted);
+    margin-bottom: 8px;
   }
-  .colLede {
-    font-family: var(--body);
-    font-style: italic;
-    font-size: 14.5px;
-    line-height: 1.5;
-    color: var(--ink-dim);
-    margin: 0 0 18px;
+  .colKick .sep{ color: var(--t-hair); margin: 0 6px; }
+  .colTitle{
+    font-family: var(--t-data);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -.018em;
+    margin: 0 0 6px;
+    max-width: 32ch;
+    color: var(--t-ink);
   }
-
-  .colNotes {
+  .colLede{
+    font-family: var(--t-data);
+    font-size: .8125rem;
+    line-height: 1.55;
+    color: var(--t-muted);
+    margin: 0 0 16px;
+    max-width: 56ch;
+  }
+  .colNotes{
     list-style: none;
     margin: 0;
-    padding: 14px 0 0;
-    border-top: 1px solid var(--rule-soft);
-    font-family: var(--body);
-    font-size: 14px;
+    padding: 12px 0 0;
+    border-top: 1px solid var(--t-hair);
+    font-family: var(--t-data);
+    font-size: .8125rem;
     line-height: 1.55;
-    color: var(--ink-dim);
+    color: var(--t-ink2);
   }
-  .colNotes li {
-    position: relative;
-    padding: 5px 0 5px 20px;
-  }
-  .colNotes li::before {
-    content: "—";
+  .colNotes li{ position: relative; padding: 5px 0 5px 16px; }
+  .colNotes li::before{
+    content: "\00B7";
     position: absolute;
     left: 0;
-    color: var(--muted-2);
-    font-family: var(--mono);
+    color: var(--t-faint);
   }
 
-  .colCta {
-    margin-top: 22px;
-    padding-top: 14px;
-    border-top: 1px solid var(--rule-soft);
+  /* One primary per view is reversed; the other is a keyline. */
+  .colCta{
+    margin-top: auto;
+    padding-top: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
   }
-  .colCta a {
+  .colCta a{
     appearance: none;
-    display: inline-block;
-    border: 1px solid var(--ink);
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--t-ink);
     background: transparent;
-    color: var(--ink);
-    font-family: var(--display);
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 14px;
-    line-height: 1.3;
-    border-radius: 0;
+    color: var(--t-ink);
+    font-family: var(--t-data);
+    font-size: .8125rem;
+    font-weight: 700;
+    height: 40px;
+    padding: 0 18px;
     text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
   }
-  .colCta a:hover {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .colCta a:focus-visible {
-    outline: 2px solid var(--ink);
-    outline-offset: 2px;
-  }
-  .colCta .host {
-    font-family: var(--mono);
-    font-size: 10px;
+  .colCta a:hover{ background: var(--t-ink); color: var(--t-paper); }
+  .col:last-child .colCta a{ background: var(--t-ink); color: var(--t-paper); }
+  .col:last-child .colCta a:hover{ background: var(--t-ink2); }
+  .colCta a:focus-visible{ outline: 1px solid var(--t-ink); outline-offset: 2px; }
+  .colCta .host{
+    font-family: var(--t-data);
+    font-size: .6875rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--muted);
+    color: var(--t-faint);
   }
 
-  /* Footer — bottom hairline strip */
-  .foot {
+  .foot{
     margin-top: auto;
-    padding-top: 14px;
-    border-top: 1px solid var(--rule-soft);
+    padding-top: 12px;
+    border-top: 1px solid var(--t-hair);
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
-    font-family: var(--mono);
-    font-size: 10px;
+    font-family: var(--t-data);
+    font-size: .6875rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--muted);
+    color: var(--t-muted);
   }
-  .foot .footLinks {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-  .foot a {
-    color: var(--ink-dim);
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule-soft);
-    padding-bottom: 1px;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
-  .foot a:hover {
-    color: var(--ink);
-    border-bottom-color: var(--ink);
+  .foot .footLinks{ display: flex; gap: 18px; flex-wrap: wrap; }
+  .foot a{
+    color: var(--t-ink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
-  @media (max-width: 720px) {
-    .sheet { padding: 22px 18px 32px; }
-    .hero { padding: 40px 0 18px; margin-bottom: 28px; }
-    .heroTitle { font-size: 36px; }
-    .cols {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .colRule {
-      height: 1px;
-      width: 100%;
-      margin: 28px 0;
-    }
-    .colTitle { font-size: 24px; }
+  @media (max-width: 760px){
+    .sheet{ padding: 0 16px 48px; }
+    .hero{ padding: 30px 0 20px; margin-bottom: 22px; }
+    .cols{ grid-template-columns: 1fr; }
+    .colRule{ display: none; }
+    .col{ padding: 15px 0 0; margin-top: 26px; }
   }
 </style>
 </head>
@@ -288,15 +211,15 @@
   </header>
 
   <section class="hero">
-    <div class="heroKicker">Methods</div>
-    <h1 class="heroTitle">Pick Your Forecast</h1>
-    <p class="heroLede">Two reads on the 2026 cycle, side by side.</p>
+    <div class="heroKicker">methods</div>
+    <h1 class="heroTitle">Two reads on the same cycle.</h1>
+    <p class="heroLede">One forecast is structural and runs to the precinct. The other is a polling nowcast that ends on the last day with a survey behind it. Pick the one that answers your question.</p>
   </section>
 
   <section class="cols">
 
     <div class="col">
-      <div class="colKick">External<span class="sep">·</span>VoteHub</div>
+      <div class="colKick">external<span class="sep">·</span>votehub</div>
       <h2 class="colTitle">VoteHub Forecast Model</h2>
       <p class="colLede">A structural forecast that runs all the way down to the precinct level.</p>
       <ul class="colNotes">
@@ -305,7 +228,7 @@
         <li>Best read of the map months out from Election Day</li>
       </ul>
       <div class="colCta">
-        <a href="https://votehub.com/2026-forecast/senate" target="_blank" rel="noopener">Open on VoteHub &rarr;</a>
+        <a href="https://votehub.com/2026-forecast/senate" target="_blank" rel="noopener">Open on VoteHub ›</a>
         <span class="host">votehub.com</span>
       </div>
     </div>
@@ -313,7 +236,7 @@
     <div class="colRule" aria-hidden="true"></div>
 
     <div class="col">
-      <div class="colKick">This Site<span class="sep">·</span>Baseline</div>
+      <div class="colKick">this site<span class="sep">·</span>baseline</div>
       <h2 class="colTitle">Personal Baseline Model</h2>
       <p class="colLede">A polling-focused baseline that tends to get more accurate in the final weeks.</p>
       <ul class="colNotes">
@@ -322,7 +245,7 @@
         <li>Daily refresh across Senate, Governor, House</li>
       </ul>
       <div class="colCta">
-        <a href="baseline.html">Open the Baseline &rarr;</a>
+        <a href="baseline.html">Open the Baseline ›</a>
         <span class="host">theoelections.com</span>
       </div>
     </div>

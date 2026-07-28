@@ -1,0 +1,916 @@
+/* ==========================================================================
+   theoelections — paper and ink.
+
+   One system across the whole site.
+
+   1. Colour appears only where a datum is. The interface is monochrome; the
+      data palette is legal inside figures and nowhere else.
+   2. Marking without colour: reverse it, weight it, or rule it. A threshold or
+      a mean is always an ink rule.
+   3. Labels are bold lowercase. No text-transform, no small caps, no italics.
+   4. Radius 0, elevation 0, transition none. Structure comes from rules.
+   5. Every figure states its finding as its title and carries its source.
+   6. Every novel form carries a one-line decode gate.
+   7. Absent is absent, not zero.
+
+   Two faces: Switzer for data (tabular by default), Author for prose.
+   ========================================================================== */
+
+@font-face{font-family:"Switzer";src:url("fonts/switzer-400.woff2") format("woff2");font-weight:400;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer-500.woff2") format("woff2");font-weight:500;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer-600.woff2") format("woff2");font-weight:600;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer-700.woff2") format("woff2");font-weight:700;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer-800.woff2") format("woff2");font-weight:800;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer-900.woff2") format("woff2");font-weight:900;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author-400.woff2") format("woff2");font-weight:400;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author-500.woff2") format("woff2");font-weight:500;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author-600.woff2") format("woff2");font-weight:600;font-display:swap;}
+
+/* ======================================================================
+   1 · TOKENS
+   ====================================================================== */
+:root{
+  --t-paper:#E9E8E0;
+  --t-paper-2:#E0DFD5;   /* the one quieter ground, for a well or a fill */
+  --t-ink:#16171A;
+  --t-ink2:#3A382F;
+  --t-muted:#6E6C61;
+  --t-faint:#A9A69A;
+  --t-hair:#CBC8BC;
+
+  /* the data palette · figures only */
+  --t-d1:#D62828;  /* series 1 · Republican */
+  --t-d2:#FFC300;  /* series 2 */
+  --t-d3:#17BEBB;
+  --t-d4:#7B2CBF;
+  --t-d5:#1E6FD9;  /* series 5 · Democratic */
+  --t-d6:#2E9E44;
+  --t-overprint:#191122;   /* d1 over d5 · the contested unit */
+  --t-d1-soft:#F0C0C0;
+  --t-d5-soft:#C3D5F2;
+  --t-d2-soft:#F3E0A8;
+
+  --t-data:"Switzer", ui-sans-serif, system-ui, sans-serif;
+  --t-prose:"Author", Georgia, serif;
+}
+
+/* Night is the same system inverted: ink ground, paper type, one palette. */
+:root[data-theme="dark"]{
+  --t-paper:#16171A;
+  --t-paper-2:#1E2024;
+  --t-ink:#E9E8E0;
+  --t-ink2:#CFCEC4;
+  --t-muted:#9A988C;
+  --t-faint:#6E6C61;
+  --t-hair:#3A3C40;
+  --t-d1-soft:#4A1C1C;
+  --t-d5-soft:#16304F;
+  --t-d2-soft:#4A3C10;
+  --t-overprint:#C9BFD8;
+}
+
+/* ======================================================================
+   2 · REBINDING THE APP'S TOKENS
+   Doubled selector so the palette, look and theme variants cannot outrank it.
+   ====================================================================== */
+:root:root{
+  --bg:var(--t-paper);
+  --bg-2:var(--t-paper-2);
+  --paper:var(--t-paper);
+  --ink:var(--t-ink);
+  --ink-dim:var(--t-ink2);
+  --muted:var(--t-muted);
+  --muted-2:var(--t-faint);
+  --muted-light:var(--t-faint);
+  --rule:var(--t-ink);
+  --rule-soft:var(--t-hair);
+  --line:var(--t-hair);
+  --line-strong:var(--t-ink);
+  --neutral-bg:var(--t-paper-2);
+  --neutral-border:var(--t-hair);
+  --card-bg:var(--t-paper);
+  --card-border:var(--t-hair);
+  --card-shadow:none;
+  --card-shadow-hover:none;
+  --bg-app:var(--t-paper);
+  --bg-gradient-1:var(--t-paper);
+  --bg-gradient-2:var(--t-paper);
+  --text-ink:var(--t-ink);
+  --text-muted:var(--t-muted);
+
+  --blue:var(--t-d5);  --blue-deep:var(--t-d5);  --blue-dark:var(--t-d5);
+  --blue-soft:var(--t-d5-soft); --blue-border:var(--t-d5);
+  --red:var(--t-d1);   --red-deep:var(--t-d1);   --red-dark:var(--t-d1);
+  --red-soft:var(--t-d1-soft);  --red-border:var(--t-d1);
+  --yellow:var(--t-d2); --yellow-soft:var(--t-d2-soft);
+  --approve:var(--t-ink); --approve-soft:var(--t-hair);
+
+  --display:var(--t-data);
+  --body:var(--t-data);
+  --mono:var(--t-data);
+
+  --radius-lg:0; --radius-md:0; --radius-sm:0; --radius-pill:0;
+  --focus-ring:0 0 0 1px var(--t-ink);
+}
+
+/* ======================================================================
+   3 · THE GROUND
+   ====================================================================== */
+html, body{
+  background:var(--t-paper);
+  color:var(--t-ink);
+}
+body{
+  font-family:var(--t-data);
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--t-ink);color:var(--t-paper);}
+
+/* ======================================================================
+   4 · THE CANON SWEEP
+   Radius 0, elevation 0, transition none, and none of the case tricks the
+   system does without: no text-transform, no small caps, no synthesised
+   italics in a face that has none.
+   ====================================================================== */
+*, *::before, *::after{
+  border-radius:0 !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  transition:none !important;
+  animation:none !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  text-transform:none !important;
+  font-variant-caps:normal !important;
+  font-style:normal !important;
+  letter-spacing:normal;
+}
+/* The one place a curve is sanctioned: nothing here yet, so nothing is round. */
+
+/* Type steps. The system has two scales, the record and the display figure. */
+.tiny, .mono{font-family:var(--t-data);}
+
+/* ======================================================================
+   5 · CHROME
+   ====================================================================== */
+/* The slab: the masthead's rule is a 9px bar of ink, so the two never stack
+   and nothing can slide under it. */
+.top{
+  border-bottom:9px solid var(--t-ink);
+  padding-bottom:10px;
+  margin-bottom:22px;
+}
+.brand{font-family:var(--t-data);gap:8px;}
+.brand .name{
+  font-family:var(--t-data);
+  font-weight:700;
+  font-size:1.0625rem;
+  letter-spacing:-.02em;
+  line-height:1;
+}
+.brand .sep{color:var(--t-hair);font-size:1rem;}
+.brand .tag{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:500;
+  color:var(--t-muted);
+}
+.nav a{
+  font-family:var(--t-data);
+  font-size:.8125rem;
+  font-weight:500;
+  color:var(--t-muted);
+  padding:6px 10px;
+}
+.nav a:hover{color:var(--t-ink);}
+.nav a.active{color:var(--t-ink);font-weight:700;border-bottom-color:var(--t-ink);}
+/* The system's separator is typographic, never a drawn pictogram. */
+.nav .dot{
+  width:auto;height:auto;background:transparent;
+  color:var(--t-hair);padding:0 1px;
+}
+.nav .dot::before{content:"\00B7";}
+
+.actions{gap:8px;align-items:center;}
+.iconbtn{
+  border:1px solid var(--t-ink);
+  color:var(--t-ink);
+  background:transparent;
+  font-family:var(--t-data);
+  font-weight:700;font-size:.75rem;
+  width:32px;height:32px;
+}
+.iconbtn:hover{background:var(--t-ink);color:var(--t-paper);}
+.donate, .donateBtn{
+  background:var(--t-ink);color:var(--t-paper);
+  border:1px solid var(--t-ink);
+  font-family:var(--t-data);font-weight:700;
+  font-size:.8125rem;height:32px;padding:0 16px;line-height:1;
+}
+.donate:hover, .donateBtn:hover{background:var(--t-ink2);}
+:where(button, a, input, select, textarea):focus-visible{
+  outline:1px solid var(--t-ink);
+  outline-offset:2px;
+}
+
+.foot{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-muted);
+  border-top:1px solid var(--t-hair);
+  padding-top:12px;
+}
+.foot b{
+  font-family:var(--t-data);font-weight:700;
+  color:var(--t-ink);letter-spacing:0;
+}
+.foot .sep{color:var(--t-hair);}
+
+/* ======================================================================
+   6 · BOXES: grade 0 default, grade 1 rule, grade 2 keyline, grade 3 reversed
+   A card is a claim about a boundary. One ink rule on the top edge, open on
+   the other three. No tints to group, no four-sided borders for emphasis.
+   ====================================================================== */
+.card, .cardDash, .topCard, .seatsCard, .mapCard, .chartCard, .oddsCard,
+.pollListCard, .flrCard, .methCard, .projCard, .projCardA, .swingCard,
+.swingSliderCard, .ratingsTopCard, .ratingsSummaryCard, .stateInfoPanel{
+  background:transparent;
+  border:0;
+  border-top:1px solid var(--t-ink);
+  padding:15px 0 0;
+}
+.cardTitle, .panelTitle, .modeTitle, .secTitle, .methH2, .projCardTitle,
+.projCardATitle, .swingCardLabel{
+  font-family:var(--t-data);
+  font-weight:800;
+  letter-spacing:-.018em;
+  color:var(--t-ink);
+}
+.panelSub, .modeSub, .secSub, .methDesc, .projCardDesc, .projCardADesc, .tipSub{
+  font-family:var(--t-data);
+  font-weight:500;
+  color:var(--t-muted);
+}
+.methKicker, .projCardKicker, .projCardAKicker, .projSectionLabel,
+.projSectionALabel, .mapCtrlLabel, .swingPartyLabel, .rtgCountLbl,
+.miniLbl, .miniLblFinal, .seatPillLabel, .yearBarLabel, .sliderLabel{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:700;
+  letter-spacing:0;
+  color:var(--t-muted);
+}
+.methBody, .methP, .projTitle + p, .methLede{
+  font-family:var(--t-prose);
+  font-variant-numeric:proportional-nums oldstyle-nums;
+  color:var(--t-ink2);
+}
+.methTitle, .projTitle, .methH1{
+  font-family:var(--t-data);
+  font-weight:900;
+  letter-spacing:-.038em;
+  color:var(--t-ink);
+}
+
+/* Chips, pills and segmented controls: keylines or underlines, never fills. */
+.chip, .chipBtn, .zoomBtn, .mapCtrlBtn, .yearBtn, .yearBtnA, .fsBtn,
+.chartTab, .seg, .segmentedControl button, .chamberBtn, .gbToggle button{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:700;
+  color:var(--t-muted);
+  background:transparent;
+  border-color:var(--t-hair);
+}
+.chip.active, .chipBtn.active, .zoomBtn.active, .mapCtrlBtn.active,
+.yearBtn.active, .yearBtnA.active, .fsBtn.active, .chartTab.active,
+.seg.active, .chamberBtn.active{
+  color:var(--t-paper);
+  background:var(--t-ink);
+  border-color:var(--t-ink);
+}
+.chamberToggle, .segmentedControl, .lookToggle, .themeToggle{
+  background:transparent;
+  border:1px solid var(--t-ink);
+  padding:2px;
+}
+.metricPill, .seatPill, .panelSparkPill{
+  background:transparent;
+  border:1px solid var(--t-hair);
+  font-family:var(--t-data);
+  font-weight:700;
+}
+.metricPill .dot, .seatsDot, .methDot, .swatch, .methSwatch, .miniDot{
+  border-radius:0 !important;
+}
+.zoomSelect, select, input[type="text"], input[type="number"]{
+  font-family:var(--t-data);
+  font-size:.8125rem;
+  background:var(--t-paper);
+  border:1px solid var(--t-ink);
+  color:var(--t-ink);
+}
+
+/* ======================================================================
+   7 · FIGURES
+   Axes are hairlines. The only ink rule inside a figure is a threshold.
+   ====================================================================== */
+svg text, .axis text, .oddsAxis text, .probAxis text, .seatAxis text,
+.tickLabel, .seatTickLabel{
+  font-family:var(--t-data) !important;
+  font-weight:600;
+  fill:var(--t-muted);
+}
+.oddsAxis path.domain, .probAxis path.domain, .axis path.domain,
+.oddsAxis line, .probAxis line, .axis line,
+.gridline, .probGrid line, .zeroLine, .seatTickLine{
+  stroke:var(--t-hair);
+}
+.seatMajLine, .seatMajorityLine, .miniZero, .tickZero{
+  stroke:var(--t-ink);
+  stroke-width:1.5;
+  stroke-dasharray:none;
+  opacity:1;
+}
+.seatMajLabel, .thrLabel{
+  font-family:var(--t-data);
+  font-size:10px;font-weight:700;
+  fill:var(--t-ink);
+}
+.map path, .mapSvg path.state, svg path.state{
+  stroke:var(--t-hair);
+  stroke-width:.75;
+  vector-effect:non-scaling-stroke;
+}
+.mapSvg path.state.hovered, svg path.state.hovered, .map path:hover{
+  stroke:var(--t-ink);
+  stroke-width:1.75;
+}
+/* The selected unit is marked by rule, not by colour. */
+svg path.state.selected{
+  stroke:var(--t-ink);
+  stroke-width:2.75;
+}
+.mapLabel{
+  font-family:var(--t-data);
+  font-size:9.5px;
+  font-weight:700;
+  fill:var(--t-ink);
+  paint-order:stroke;
+  pointer-events:none;
+}
+.mapLabel.selected{font-size:11px;}
+
+/* Tooltips are keyline vessels, never floating cards. */
+#tip, #simTip, #pastTip, #sldlCursorTip, .tooltipBox{
+  font-family:var(--t-data) !important;
+  background:var(--t-paper) !important;
+  color:var(--t-ink) !important;
+  border:2px solid var(--t-ink) !important;
+  font-size:.6875rem;
+  padding:7px 9px;
+}
+#simTip .stDate, .tipHeader, .tipTitle{font-weight:700;color:var(--t-ink);}
+#simTip .stLbl, .tipMeta, .tipSub{font-weight:700;color:var(--t-muted);}
+#simTip .stVal{font-weight:800;font-variant-numeric:tabular-nums;}
+
+/* Absent is absent, not zero. */
+.t-absent, .raceEmpty, .miniRowNoData{
+  border:2px solid var(--t-ink);
+  background:var(--t-paper-2);
+  color:var(--t-muted);
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  min-height:56px;
+  padding:8px 10px;
+}
+.num.isAbsent, .isAbsent{
+  font-size:.8125rem !important;
+  font-weight:700 !important;
+  letter-spacing:0 !important;
+  color:var(--t-faint) !important;
+}
+
+/* Tables: the record. Exact figures, ruled top and bottom, nothing tinted. */
+table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
+.bucketTable, .pollTable, .methTable{
+  border-top:1px solid var(--t-ink);
+  border-bottom:1px solid var(--t-ink);
+}
+.bucketTable th, .pollTable th, .methTable th{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:700;
+  color:var(--t-muted);
+  background:var(--t-paper);
+  border-bottom:1px solid var(--t-ink);
+}
+.bucketTable td, .pollTable td, .methTable td{
+  border-bottom:1px solid rgba(110,108,97,.18);
+  color:var(--t-ink);
+}
+
+/* ======================================================================
+   8 · THE THREE-COLUMN SHEET
+   ====================================================================== */
+.colRule{background:var(--t-hair);}
+.secHead{
+  border-bottom:1px solid var(--t-hair);
+  align-items:flex-start;
+}
+.secTitle{
+  font-size:1.125rem;
+  line-height:1.22;
+  max-width:32ch;
+}
+.secSub{
+  font-size:.8125rem;
+  line-height:1.55;
+  margin-top:5px;
+  max-width:56ch;
+}
+.seatsCol .lbl, .seatsSide .lbl, .seatPillLabel, .miniLbl, .miniLblFinal,
+.swingPartyLabel, .swingMarginLabel, .sliderLabel, .rtgCountLbl,
+.methKicker, .projCardKicker, .projCardAKicker, .mapCtrlLabel,
+.projSectionLabel, .projSectionALabel, .yearBarLabel, .brand .tag,
+.pollsListHead, .secSub, .foot, .foot b, .tickLabel{
+  letter-spacing:0 !important;
+}
+.seatsCol .lbl, .seatsSide .lbl{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:700;
+  color:var(--t-muted);
+}
+.seatsCol .num, .seatsSide .num{
+  font-family:var(--t-data);
+  font-weight:900;
+  letter-spacing:-.05em;
+  font-variant-numeric:tabular-nums;
+}
+.seatsCol.d .num, .seatsSide.d .num{color:var(--t-d5);}
+.seatsCol.r .num, .seatsSide.r .num{color:var(--t-d1);}
+.seatsDash, .seatsDivider{display:none;}
+.mapHint{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-muted);
+  text-align:left;
+}
+
+/* The decode gate and the source line. Muted, never faint: a source is not
+   decoration and has to survive a real screen. */
+.t-how{
+  font-family:var(--t-data);
+  font-size:.6875rem;line-height:1.5;font-weight:500;
+  color:var(--t-muted);
+  margin-top:10px;
+  max-width:64ch;
+}
+.t-how b{color:var(--t-ink);font-weight:700;}
+.t-src{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-muted);
+  margin-top:12px;
+  padding-top:8px;
+  border-top:1px solid var(--t-hair);
+}
+.t-src a{color:var(--t-ink);text-decoration:underline;text-underline-offset:2px;}
+.seatsNote{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-muted);
+  margin-top:12px;
+}
+
+
+/* ======================================================================
+   9 · THE POLLS SHEET
+   ====================================================================== */
+/* ---- columns: hairline between, ink rule above each ---------------------- */
+.pollsView .cols{
+  display:grid;
+  grid-template-columns:1fr 1px 1fr 1px 1fr;
+  gap:0;
+  align-items:start;
+}
+.pollsView .colRule{
+  background:var(--t-hair);
+  width:1px;
+  align-self:stretch;
+}
+.pollsView .col{
+  border-top:1px solid var(--t-ink);
+  padding:15px 18px 0;
+  min-width:0;
+}
+/* Outer columns align to the page edge; only the gutters get padding. */
+.pollsView .col:first-child{padding-left:0;}
+.pollsView .col:last-child{padding-right:0;}
+@media (max-width:980px){
+  .pollsView .cols{grid-template-columns:1fr;}
+  .pollsView .colRule{display:none;}
+  .pollsView .col{padding:15px 0 0;margin-top:22px;}
+}
+
+/* ---- the section head: a finding, then its dek --------------------------- */
+.pollsView .secHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:14px;
+  padding:0 0 10px;
+  margin-bottom:12px;
+  border-bottom:1px solid var(--t-hair);
+}
+.pollsView .secTitle{
+  font-family:var(--t-data);
+  font-weight:800;
+  font-size:1.125rem;
+  line-height:1.22;
+  letter-spacing:-.018em;
+  max-width:32ch;
+  color:var(--t-ink);
+  font-style:normal;
+}
+.pollsView .secSub{
+  font-family:var(--t-data);
+  font-weight:500;
+  font-size:.8125rem;
+  line-height:1.55;
+  letter-spacing:0;
+  color:var(--t-muted);
+  margin-top:5px;
+  max-width:56ch;
+}
+
+/* ---- the two-way readout ------------------------------------------------- */
+.pollsView .pills{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  align-items:flex-end;
+  font-family:var(--t-data);
+}
+.pollsView .pill{
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  font-variant-numeric:tabular-nums;
+}
+.pollsView .pill .sw{
+  width:9px;height:9px;display:inline-block;
+  border:1.5px solid var(--t-ink);
+}
+.pollsView .pill.d .sw{background:var(--t-d5);}
+.pollsView .pill.r .sw{background:var(--t-d1);}
+/* Approval is not a party contest, so it is marked by weight, not by colour. */
+.pollsView .col.isApproval .pill.d .sw{background:var(--t-ink);}
+.pollsView .col.isApproval .pill.r .sw{background:var(--t-muted);}
+.pollsView .pill .l{
+  font-size:.75rem;font-weight:700;letter-spacing:0;
+  color:var(--t-muted);width:auto;min-width:14px;
+}
+.pollsView .pill .n{
+  font-size:1.0625rem;font-weight:800;color:var(--t-ink);letter-spacing:-.015em;
+}
+.pollsView .pill .pct{
+  font-size:.6875rem;font-weight:600;color:var(--t-faint);
+  font-style:normal;margin-left:1px;
+}
+
+/* ---- the display figures ------------------------------------------------- */
+.pollsView .seatsNote{
+  font-family:var(--t-data);
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-faint);
+  margin-top:12px;
+}
+.pollsView .seatsNote + .seats{padding-top:2px;}
+.pollsView .seats{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px 0 8px;
+  border-bottom:1px solid var(--t-hair);
+}
+.pollsView .seatsCol{
+  text-align:left;
+  min-width:0;
+}
+.pollsView .seatsCol .lbl{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:700;letter-spacing:0;
+  font-variant:normal;
+  color:var(--t-muted);
+  margin-bottom:2px;
+}
+.pollsView .seatsCol .num{
+  font-family:var(--t-data);
+  font-weight:900;
+  font-size:clamp(2.6rem,6vw,3.9rem);
+  line-height:.86;
+  letter-spacing:-.05em;
+  font-variant-numeric:tabular-nums;
+  color:var(--t-ink);
+}
+/* The colour marks the datum, so it sits on the swatch, not on the number. */
+.pollsView .seatsCol.r{text-align:right;}
+.pollsView .seatsCol.r .lbl{text-align:right;}
+.pollsView .seatsDash{
+  display:none;
+}
+
+/* ---- the margin timeline ------------------------------------------------- */
+.pollsView .pollsHistHost{
+  height:40px;
+  margin:12px 0 0;
+  border:2px solid var(--t-ink);
+  background:var(--t-paper);
+  padding:0;
+}
+
+/* ---- figure blocks ------------------------------------------------------- */
+.pollsView .mapBlock,
+.pollsView .probBlock{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid var(--t-hair);
+}
+.pollsView .probHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:8px;
+}
+.pollsView .probHead .h{
+  font-family:var(--t-data);
+  font-style:normal;
+  font-weight:800;
+  font-size:.9375rem;
+  line-height:1.25;
+  letter-spacing:-.015em;
+  color:var(--t-ink);
+}
+.pollsView .probHead .toggle{
+  display:flex;align-items:baseline;gap:2px;flex:none;
+}
+/* Ghost buttons: an underline, no box. */
+.pollsView .probHead .toggle button{
+  appearance:none;border:none;background:transparent;
+  font-family:var(--t-data);font-style:normal;
+  font-size:.75rem;font-weight:700;letter-spacing:0;
+  color:var(--t-muted);cursor:pointer;padding:2px 6px;
+}
+.pollsView .probHead .toggle button.active{
+  color:var(--t-ink);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.pollsView .probHead .toggle button:focus-visible{
+  outline:1px solid var(--t-ink);outline-offset:2px;
+}
+.pollsView .probHead .toggle .s{color:var(--t-hair);}
+.pollsView .pollsStateTitle{
+  font-size:.9375rem !important;
+  letter-spacing:-.015em !important;
+}
+
+/* ---- the map: geography is a figure -------------------------------------- */
+.pollsView .mapHost{
+  width:100%;
+  aspect-ratio:5/3;
+}
+.pollsView .mapHost svg path.state{
+  stroke:var(--t-hair);
+  stroke-width:.75;
+  vector-effect:non-scaling-stroke;
+}
+.pollsView .mapHost svg path.state.active{cursor:pointer;}
+.pollsView .mapHost svg path.state.hovered,
+.pollsView .mapHost svg path.state:hover{
+  stroke:var(--t-ink);
+  stroke-width:1.75;
+}
+.pollsView .mapHint{
+  font-family:var(--t-data);
+  font-style:normal;
+  font-size:.6875rem;font-weight:500;
+  color:var(--t-faint);
+  text-align:left;
+  margin-top:8px;
+}
+
+/* ---- charts -------------------------------------------------------------- */
+.pollsView .chartHost{height:210px;}
+.pollsView .chartHost svg text,
+.pollsView .chartHost svg .oddsAxis text{
+  font-family:var(--t-data);
+  font-size:10px;
+  font-weight:600;
+  fill:var(--t-muted);
+}
+.pollsView .chartHost svg .oddsAxis path.domain{
+  stroke:var(--t-ink);
+}
+.pollsView .chartHost svg .oddsAxis line{
+  stroke:var(--t-hair);
+}
+/* A threshold is always an ink rule. */
+.pollsView .chartHost svg .seatMajLine{
+  stroke:var(--t-ink);
+  stroke-width:1.5;
+  stroke-dasharray:none;
+  opacity:1;
+}
+
+/* ---- the record ---------------------------------------------------------- */
+.pollsView .pollsListWrap{
+  border-top:1px solid var(--t-hair);
+  padding-top:12px;
+  margin-top:16px;
+}
+.pollsView .pollsListHead{
+  font-family:var(--t-data);
+  font-size:.75rem;font-weight:700;letter-spacing:0;
+  color:var(--t-ink);
+  margin-bottom:8px;
+}
+.pollsView .pollsListHost{max-height:260px;overflow-y:auto;}
+.pollsView .pollsListHost table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:var(--t-data) !important;
+  font-size:.6875rem;
+  border-top:1px solid var(--t-ink);
+  border-bottom:1px solid var(--t-ink);
+}
+.pollsView .pollsListHost th{
+  font-family:var(--t-data) !important;
+  font-size:.6875rem !important;
+  font-weight:700 !important;
+  letter-spacing:0 !important;
+  color:var(--t-muted) !important;
+  background:var(--t-paper) !important;
+  border-bottom:1px solid var(--t-ink) !important;
+  padding:5px 10px 6px 0 !important;
+  text-align:right;
+}
+.pollsView .pollsListHost th:first-child,
+.pollsView .pollsListHost th:nth-child(2){text-align:left;}
+.pollsView .pollsListHost td{
+  font-family:var(--t-data) !important;
+  font-size:.6875rem !important;
+  font-weight:500 !important;
+  color:var(--t-ink) !important;
+  padding:4px 10px 4px 0 !important;
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+  border-bottom:1px solid rgba(22,23,26,.06) !important;
+}
+.pollsView .pollsListHost td:first-child,
+.pollsView .pollsListHost td:nth-child(2){text-align:left;}
+.pollsView .pollsListHost td:first-child{font-weight:600 !important;}
+.pollsView .pollsListHost tr{background:transparent !important;}
+
+/* ======================================================================
+   10 · THE OTHER SHEETS
+   ====================================================================== */
+
+/* Ratings: the count chips are keylines, the number is the datum, the label
+   is a label. No tint groups the row. */
+.rtgCountItem{background:transparent;border:1px solid var(--t-hair);}
+.rtgCountLbl{color:var(--t-muted) !important;font-weight:700;}
+.rtgSeg{color:var(--t-paper);font-weight:700;}
+.rtgLabels .rlbl{font-weight:700;}
+.rtgTossupNote{color:var(--t-muted);}
+
+/* Methodology: prose in the prose face, and no tinted column to group a table. */
+.methBody, .methP, .methLede, .methDesc{
+  font-family:var(--t-prose) !important;
+  font-variant-numeric:proportional-nums oldstyle-nums;
+  line-height:1.62;
+}
+.methTable, .methTableA{border-top:1px solid var(--t-ink);border-bottom:1px solid var(--t-ink);}
+.methTable td, .methTableA td, .methTable th, .methTableA th{background:transparent !important;}
+.methTable tr, .methTableA tr{background:transparent !important;}
+.methMono{font-family:var(--t-data);color:var(--t-muted);}
+.methHero{border-bottom:0;}
+.methSwatch{border:1px solid var(--t-ink);}
+
+/* Projects: the index is a record, not a deck of cards. */
+.projCard, .projCardA{background:transparent;}
+.projCardOpen, .projCardAOpen{
+  font-family:var(--t-data);font-weight:700;font-size:.75rem;color:var(--t-ink);
+}
+.projSectionLabel, .projSectionALabel{color:var(--t-muted);}
+
+/* State legislatures: the map sits on paper like every other figure. */
+.stateLegsHost, .stateLegsHost > div, .stateLegsHost svg{background:var(--t-paper) !important;}
+.stateLegsHost .card, .stateLegsHost .cardInner{
+  background:transparent;border:0;border-top:1px solid var(--t-ink);
+}
+
+/* Swingometer: a hairline track, an ink-keyline handle. */
+.swingRange, .swingRangeA, input[type="range"]{background:transparent;}
+.swingRange::-webkit-slider-runnable-track, input[type="range"]::-webkit-slider-runnable-track{
+  height:1.5px;background:var(--t-hair);
+}
+.swingRange::-webkit-slider-thumb, input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;
+  width:12px;height:12px;margin-top:-5px;
+  background:var(--t-paper);border:2px solid var(--t-ink);
+}
+.swingMarginLabel, .swingPartyLabel{color:var(--t-muted);font-weight:700;}
+
+/* Past elections: an empty year is absent, and says so plainly. */
+.raceEmpty, .col-past-hidden{color:var(--t-muted);}
+
+/* Florida: cards to grade 1 like everything else. */
+.flrCard{background:transparent;}
+
+/* A box that only groups is no box: the panels drop to grade 1. */
+.stateLegsHost .cardInner, .stateLegsHost [class*="panel"],
+.floridaHost .cardInner{
+  border:0;
+  border-top:1px solid var(--t-hair);
+  background:transparent;
+}
+.methHero{border-bottom:0;padding-bottom:0;}
+
+/* The rating chips: a square swatch carries the colour, the number and the
+   label stay ink and muted so a pale tier is still readable. */
+.rtgCountItem{
+  position:relative;
+  border:1px solid var(--t-hair);
+  color:inherit;
+}
+.rtgCountItem::before{
+  content:"";
+  position:absolute;
+  top:5px;left:5px;
+  width:8px;height:8px;
+  background:currentColor;
+  border:1px solid var(--t-ink);
+}
+.rtg-safeD{color:var(--t-d5);}
+.rtg-likelyD{color:color-mix(in srgb, var(--t-d5) 66%, var(--t-paper));}
+.rtg-leanD{color:color-mix(in srgb, var(--t-d5) 34%, var(--t-paper));}
+.rtg-tossup{color:var(--t-overprint);}
+.rtg-leanR{color:color-mix(in srgb, var(--t-d1) 34%, var(--t-paper));}
+.rtg-likelyR{color:color-mix(in srgb, var(--t-d1) 66%, var(--t-paper));}
+.rtg-safeR{color:var(--t-d1);}
+.rtgCountItem .rtgCountNum{
+  color:var(--t-ink) !important;
+  font-family:var(--t-data);font-weight:800;font-size:1.0625rem;
+}
+.rtgCountItem .rtgCountLbl{color:var(--t-muted) !important;font-weight:700;font-size:.6875rem;}
+.rtgLabels, .rtgLabels .rlbl{color:var(--t-muted) !important;font-weight:700;}
+.rtgSeg{font-family:var(--t-data);font-weight:700;}
+
+/* The majority is an ink rule through the simulation histogram. */
+.histo{align-items:flex-end;position:relative;}
+.histo .histoMaj{
+  flex:0 0 1.5px;
+  align-self:stretch;
+  background:var(--t-ink);
+  margin:0 2px;
+}
+.histo .b{background:var(--t-d5);}
+.histo .b.r{background:var(--t-d1);}
+.histo .b.faint{opacity:.45;}
+
+/* Florida: cards drop to grade 1, the map sits on paper, labels take the
+   label voice. */
+#flRedistrictingPage .flrCard{
+  background:transparent !important;
+  border:0 !important;
+  border-top:1px solid var(--t-ink) !important;
+  padding:15px 0 0 !important;
+}
+#flRedistrictingPage .flrMapWrap, #flRedistrictingPage .mapStage,
+.floridaHost svg, #flRedistrictingPage svg{background:var(--t-paper) !important;}
+#flRedistrictingPage .sliderLabel, #flRedistrictingPage .swingCardLabel{
+  font-family:var(--t-data);font-weight:700;font-size:.75rem;color:var(--t-muted);
+}
+.panelClassify{
+  font-family:var(--t-data);font-weight:700;font-size:.6875rem;
+}
+
+/* Nothing on this site sits on a well of a different colour. */
+.mapStage, .mapHostWrap, .tableScroll, .simMini{background:var(--t-paper);}
+
+/* Range handles are squares like everything else. */
+input[type="range"]::-webkit-slider-thumb,
+.swingRange::-webkit-slider-thumb,
+.swingRangeA::-webkit-slider-thumb{
+  border-radius:0 !important;
+  background:var(--t-paper) !important;
+  border:2px solid var(--t-ink) !important;
+  width:12px;height:12px;
+}
+input[type="range"]::-moz-range-thumb{
+  border-radius:0 !important;
+  background:var(--t-paper);border:2px solid var(--t-ink);width:10px;height:10px;
+}

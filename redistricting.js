@@ -693,7 +693,7 @@ function redistRecolorMap(era){
     if (!did) return;
     const model = redistHouseModel(era, did);
     if (!model){
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || "#e5e7eb";
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
       return;
     }
     this.style.fill = interpColor(model.margin);

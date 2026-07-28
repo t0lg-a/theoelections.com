@@ -2,13 +2,14 @@
 (function(){
 
 const RTG_COLORS = {
-  "Safe D":   "var(--blue-deep, #182e4d)",
-  "Likely D": "var(--blue, #2a4570)",
-  "Lean D":   "var(--blue-soft, #cfd6e0)",
-  "Tossup":   "var(--yellow, #c89c2c)",
-  "Lean R":   "var(--red-soft, #e0c3b8)",
-  "Likely R": "var(--red, #903629)",
-  "Safe R":   "var(--red-deep, #61201a)"
+  // Filled at read time from the site's one divergent ramp (see forecast.js).
+  get "Safe D"()   { return window.__pal ? window.__pal.ratingFill("Safe D")   : "#1E6FD9"; },
+  get "Likely D"() { return window.__pal ? window.__pal.ratingFill("Likely D") : "#5B93E2"; },
+  get "Lean D"()   { return window.__pal ? window.__pal.ratingFill("Lean D")   : "#A9C4EE"; },
+  get "Tossup"()   { return window.__pal ? window.__pal.ratingFill("Tossup")   : "#191122"; },
+  get "Lean R"()   { return window.__pal ? window.__pal.ratingFill("Lean R")   : "#EDB0AF"; },
+  get "Likely R"() { return window.__pal ? window.__pal.ratingFill("Likely R") : "#DF6A62"; },
+  get "Safe R"()   { return window.__pal ? window.__pal.ratingFill("Safe R")   : "#D62828"; }
 };
 const RTG_ORDER = ["Safe D","Likely D","Lean D","Tossup","Lean R","Likely R","Safe R"];
 const RTG_LABELS = ["Safe D","Likely D","Lean D","Tossup","Lean R","Likely R","Safe R"];
@@ -135,8 +136,7 @@ function renderRatingBar(mode, counts){
       if (!n) return "";
       const pct = (n / total * 100);
       const shortLabel = k.replace("Likely ","Lkly ").replace("Tossup","Toss");
-      const lblColor = RTG_COLORS[k];
-      return `<div class="rlbl" style="flex:${pct};color:${lblColor}">${pct > 6 ? shortLabel : ""}</div>`;
+      return `<div class="rlbl" style="flex:${pct}">${pct > 6 ? shortLabel : ""}</div>`;
     }).join("");
   }
 
@@ -439,13 +439,13 @@ function recolorRtgMap(modeKey, perRace){
     m.gRoot.selectAll(".district").each(function(){
       const did = this.getAttribute("data-did");
       const info = perRace[did];
-      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
     });
   } else {
     m.gRoot.selectAll("path.state").each(function(){
       const st = this.getAttribute("data-st");
       const info = perRace[st];
-      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
     });
   }
 }
@@ -504,7 +504,7 @@ function renderRtgChart(modeKey, chartMode){
 
     const stack = d3.stack().keys(["D","T","R"]).value((d, key) => d[key] || 0);
     const stacked = stack(faceData);
-    const faceColors = { D: "var(--blue)", T: "#c89c2c", R: "var(--red)" };
+    const faceColors = { D: "var(--blue)", T: "var(--t-overprint)", R: "var(--red)" };
 
     const area = d3.area()
       .x(d => x(d.data.date))
@@ -572,7 +572,7 @@ function renderRtgChart(modeKey, chartMode){
         const rC = (d.counts["Safe R"]||0)+(d.counts["Likely R"]||0)+(d.counts["Lean R"]||0);
         const tC = d.counts["Tossup"]||0;
         html += `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stLbl">D</span><span class="stVal">${dC}</span></div>`;
-        html += `<div class="stRow"><span class="stDot" style="background:#c89c2c"></span><span class="stLbl">T</span><span class="stVal">${tC}</span></div>`;
+        html += `<div class="stRow"><span class="stDot" style="background:var(--t-overprint)"></span><span class="stLbl">T</span><span class="stVal">${tC}</span></div>`;
         html += `<div class="stRow"><span class="stDot" style="background:var(--red)"></span><span class="stLbl">R</span><span class="stVal">${rC}</span></div>`;
       } else {
         for (const k of RTG_ORDER){

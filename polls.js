@@ -14,6 +14,7 @@ function tok(name, fallback){
 const INK      = () => tok("--t-ink", "#16171A");
 const PAPER    = () => tok("--t-paper", "#E9E8E0");
 const MUTED    = () => tok("--t-muted", "#6E6C61");
+const HAIR     = () => tok("--t-hair", "#CBC8BC");
 const DEM_INK  = () => tok("--t-d5", "#1E6FD9");
 const REP_INK  = () => tok("--t-d1", "#D62828");
 const OVERPRINT= () => tok("--t-overprint", "#191122");
@@ -257,10 +258,12 @@ function renderApproval(ui){
 }
 
 function setNum(ui,a,b,lA,lB){
-  if(ui.dPill)ui.dPill.textContent=(+a).toFixed(1);
-  if(ui.rPill)ui.rPill.textContent=(+b).toFixed(1);
-  if(ui.dBig)ui.dBig.textContent=Math.round(a);
-  if(ui.rBig)ui.rBig.textContent=Math.round(b);
+  // Absent is absent, not zero, and never a plausible-looking placeholder.
+  const fmt=v=>isFinite(+v)?(+v).toFixed(1):"absent";
+  if(ui.dPill)ui.dPill.textContent=fmt(a);
+  if(ui.rPill)ui.rPill.textContent=fmt(b);
+  if(ui.dBig){ui.dBig.textContent=fmt(a);ui.dBig.classList.toggle("isAbsent",!isFinite(+a));}
+  if(ui.rBig){ui.rBig.textContent=fmt(b);ui.rBig.classList.toggle("isAbsent",!isFinite(+b));}
   if(ui.dLbl)ui.dLbl.textContent=lA;
   if(ui.rLbl)ui.rLbl.textContent=lB;
 }
@@ -306,15 +309,25 @@ function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
   const bl=cAbove||DEM_INK();
   const rd=cBelow||REP_INK();
   const mid=H/2;
-  // Zero line
-  ctx.strokeStyle=INK(); ctx.lineWidth=1;
-  ctx.beginPath(); ctx.moveTo(0,mid); ctx.lineTo(W,mid); ctx.stroke();
   // Extend to today
   const minD=days[0].date;
   const today=new Date(); today.setHours(0,0,0,0);
   const maxD=today>days[days.length-1].date?today:days[days.length-1].date;
   const span=maxD-minD||1;
-  const maxAbs=Math.max(1,...days.map(d=>Math.abs(d.margin)));
+  // A fixed scale in points, stepped up only when the data needs it. Scaling to
+  // the observed maximum made a steady lead fill the whole vessel and hid the
+  // shape of the series.
+  const peak=Math.max(...days.map(d=>Math.abs(d.margin)));
+  const SCALES=[5,10,15,20,30,40];
+  const maxAbs=SCALES.find(v=>peak<=v*0.92)||Math.ceil(peak/10)*10;
+  // Quarter-scale hairlines, so the height of a bar can be read off the vessel.
+  ctx.strokeStyle=HAIR(); ctx.lineWidth=1;
+  for(const frac of [0.5]){
+    for(const dir of [-1,1]){
+      const yy=Math.round(mid-dir*frac*(mid-2))+0.5;
+      ctx.beginPath(); ctx.moveTo(0,yy); ctx.lineTo(W,yy); ctx.stroke();
+    }
+  }
   // Each bar stretches from its date to the next day's date (no gaps)
   for(let i=0;i<days.length;i++){
     const d=days[i];
@@ -322,16 +335,18 @@ function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
     const nextD=i<days.length-1?days[i+1].date:maxD;
     const x2=((nextD-minD)/span)*W;
     const bw=Math.max(2, x2-x);
-    const barH=(Math.abs(d.margin)/maxAbs)*(mid-2);
+    const barH=Math.min(1,Math.abs(d.margin)/maxAbs)*(mid-2);
     ctx.fillStyle=d.margin>=0?bl:rd;
-    ctx.globalAlpha=0.85;
     if(d.margin>=0){
       ctx.fillRect(x,mid-barH,bw-0.5,barH);
     } else {
       ctx.fillRect(x,mid,bw-0.5,barH);
     }
   }
-  ctx.globalAlpha=1;
+  // The zero rule sits on top of the bars, never under them.
+  ctx.strokeStyle=INK(); ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(0,Math.round(mid)+0.5); ctx.lineTo(W,Math.round(mid)+0.5); ctx.stroke();
+  canvas.setAttribute("data-scale",String(maxAbs));
 }
 
 /* ======== DUAL SCATTER ======== */
@@ -351,10 +366,14 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
   const y=d3.scaleLinear().domain([yMn,yMx]).range([mg.t+ih,mg.t]).nice();
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.min(6,iw/100|0)).tickFormat(d3.timeFormat("%b")));
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
-  if(y.domain()[0]<=50&&y.domain()[1]>=50)
+  if(y.domain()[0]<=50&&y.domain()[1]>=50){
     svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
-  svg.selectAll(".dA").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",2.5).attr("fill",blue).attr("opacity",.25);
-  svg.selectAll(".dB").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",2.5).attr("fill",red).attr("opacity",.25);
+    svg.append("text").attr("class","thrLabel").attr("x",mg.l+iw).attr("y",y(50)-5).attr("text-anchor","end").text("50");
+  }
+  // Hollow marks are the individual polls, the solid line is the average, so a
+  // pile-up of surveys never reads as a tint of the series colour.
+  svg.selectAll(".dA").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",2.6).attr("fill","none").attr("stroke",blue).attr("stroke-width",1.2);
+  svg.selectAll(".dB").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",2.6).attr("fill","none").attr("stroke",red).attr("stroke-width",1.2);
   if(avg.length>1){
     const la=d3.line().x(d=>x(d.date)).y(d=>y(d.a)).curve(d3.curveMonotoneX);
     const lb=d3.line().x(d=>x(d.date)).y(d=>y(d.b)).curve(d3.curveMonotoneX);
@@ -362,37 +381,40 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
     svg.append("path").datum(avg).attr("d",lb).attr("fill","none").attr("stroke",red).attr("stroke-width",2.5).attr("stroke-linejoin","round").attr("stroke-linecap","round");
   }
   // hover
-  const dot=svg.append("circle").attr("r",4).attr("fill",blue).style("opacity",0);
+  const dot=svg.append("circle").attr("r",3.5).attr("fill",blue).style("opacity",0);
+  const dot2=svg.append("circle").attr("r",3.5).attr("fill",red).style("opacity",0);
   const bis=d3.bisector(d=>d.date).left;
   const hd=avg.length>1?avg:polls;
   svg.append("rect").attr("x",mg.l).attr("y",mg.t).attr("width",iw).attr("height",ih).style("fill","transparent").style("cursor","crosshair")
-    .on("mousemove",ev=>{if(!hd.length)return;const[mx]=d3.pointer(ev);const xd=x.invert(mx);const i=clamp(bis(hd,xd),1,hd.length-1);const p=hd[i-1],q=hd[i];const d=(xd-p.date)>(q.date-xd)?q:p;dot.attr("cx",x(d.date)).attr("cy",y(d.a)).style("opacity",1);showSimTip(ev,`<div class="stDate">${ds(d.date)}</div><div class="stRow"><span class="stDot" style="background:${blue}"></span><span class="stLbl">${lA}</span><span class="stVal">${d.a.toFixed(1)}%</span></div><div class="stRow"><span class="stDot" style="background:${red}"></span><span class="stLbl">${lB}</span><span class="stVal">${d.b.toFixed(1)}%</span></div>`);})
-    .on("mouseleave",()=>{dot.style("opacity",0);hideSimTip();});
+    .on("mousemove",ev=>{if(!hd.length)return;const[mx]=d3.pointer(ev);const xd=x.invert(mx);const i=clamp(bis(hd,xd),1,hd.length-1);const p=hd[i-1],q=hd[i];const d=(xd-p.date)>(q.date-xd)?q:p;dot.attr("cx",x(d.date)).attr("cy",y(d.a)).style("opacity",1);dot2.attr("cx",x(d.date)).attr("cy",y(d.b)).style("opacity",1);showSimTip(ev,`<div class="stDate">${ds(d.date)}</div><div class="stRow"><span class="stDot" style="background:${blue}"></span><span class="stLbl">${lA}</span><span class="stVal">${d.a.toFixed(1)}%</span></div><div class="stRow"><span class="stDot" style="background:${red}"></span><span class="stLbl">${lB}</span><span class="stVal">${d.b.toFixed(1)}%</span></div>`);})
+    .on("mouseleave",()=>{dot.style("opacity",0);dot2.style("opacity",0);hideSimTip();});
 }
 
 /* ======== POLL TABLE ======== */
 function pollTable(el,rows,lA,lB,cA,cB){
   if(!el)return;
-  if(!rows.length){el.innerHTML=`<div style="padding:16px;color:var(--muted);font:12px ${FONT}">No polls</div>`;return;}
+  if(!rows.length){el.innerHTML=`<div class="t-absent">no polls yet</div>`;return;}
   const ca=cA|| "#2a4570",cb=cB|| "#903629";
+  const paper=PAPER();
   let h=`<table style="width:100%;border-collapse:collapse;font:600 11px/1.4 ${FONT};font-variant-numeric:tabular-nums">`;
-  h+=`<thead><tr style="background:var(--neutral-bg);font:800 10px/1.4 ${FONT};text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">`;
-  h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2">Date</th>`;
-  h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2">Pollster</th>`;
-  h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2;color:${ca}">${lA}</th>`;
-  h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2;color:${cb}">${lB}</th>`;
-  h+=`<th style="padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--neutral-bg);z-index:2">Margin</th>`;
+  h+=`<thead><tr style="font:700 11px/1.4 ${FONT};color:var(--muted)">`;
+  const th=`padding:6px 8px;border-bottom:1px solid var(--line-strong,var(--line));position:sticky;top:0;background:${paper};z-index:2`;
+  h+=`<th style="${th};text-align:left">date</th>`;
+  h+=`<th style="${th};text-align:left">pollster</th>`;
+  h+=`<th style="${th};text-align:right;color:${ca}">${lA}</th>`;
+  h+=`<th style="${th};text-align:right;color:${cb}">${lB}</th>`;
+  h+=`<th style="${th};text-align:right">margin</th>`;
   h+=`</tr></thead><tbody>`;
   for(const p of rows){
     const m=p.a-p.b;
-    const ms=Math.abs(m)<.05?"Tied":(m>0?`${lA}+${m.toFixed(1)}`:`${lB}+${Math.abs(m).toFixed(1)}`);
+    const ms=Math.abs(m)<.05?"tied":(m>0?`${lA}+${m.toFixed(1)}`:`${lB}+${Math.abs(m).toFixed(1)}`);
     const mc=m>0?ca:(m<0?cb:"var(--muted)");
-    h+=`<tr style="border-bottom:1px solid rgba(229,231,235,.5)">`;
+    h+=`<tr style="border-bottom:1px solid rgba(22,23,26,.06)">`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};white-space:nowrap">${ds(p.date)}</td>`;
     h+=`<td style="padding:5px 8px;font:500 11px ${FONT};max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||"").slice(0,28))}</td>`;
-    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};color:${ca}">${(+p.a).toFixed(1)}</td>`;
-    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};color:${cb}">${(+p.b).toFixed(1)}</td>`;
-    h+=`<td style="padding:5px 8px;font:700 11px ${FONT};color:${mc}">${ms}</td>`;
+    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${ca}">${(+p.a).toFixed(1)}</td>`;
+    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${cb}">${(+p.b).toFixed(1)}</td>`;
+    h+=`<td style="padding:5px 8px;font:700 11px ${FONT};text-align:right;color:${mc}">${ms}</td>`;
     h+=`</tr>`;
   }
   h+=`</tbody></table>`;
@@ -419,7 +441,7 @@ async function initMode(mk){
 
   await initMap(mk);
   recolorMap(mk);
-  if(ui.stTitle)ui.stTitle.textContent="Click a state to see polls";
+  if(ui.stTitle)ui.stTitle.textContent="Pick a state to read its polls";
 }
 
 /* ---- Maps (colored by POLLS) ---- */
@@ -438,15 +460,62 @@ async function initMap(mk){
     .on("mouseenter",(ev,d)=>{
       const st=fipsToUsps(d.id);if(!st||!DATA[mk]?.ratios[st])return;
       d3.select(ev.currentTarget).classed("hovered",true);
-      const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st],pc=pp?pp.length:0;
-      let ms="No polls";
-      if(pp&&pp.length){const l=pp[pp.length-1];const m=l.D-l.R;ms=Math.abs(m)<.05?"Tied":(m>0?`D+${m.toFixed(1)}`:`R+${Math.abs(m).toFixed(1)}`);}
-      showSimTip(ev,`<b>${USPS_TO_NAME[st]||st}</b> <b>${ms}</b> <span style="color:var(--muted);font-size:10px;margin-left:4px">${pc} poll${pc!==1?"s":""}</span>`);
+      showSimTip(ev,stateTipHtml(mk,st));
     })
     .on("mousemove",ev=>{const el=document.getElementById("simTip");if(el)showSimTip(ev,el.innerHTML);})
     .on("mouseleave",ev=>{d3.select(ev.currentTarget).classed("hovered",false);hideSimTip();})
     .on("click",(ev,d)=>{const st=fipsToUsps(d.id);if(st&&DATA[mk]?.ratios[st])pickState(mk,st);});
-  PMAP[mk]={svg,g};
+
+  // Direct labels: geography is a figure, so the polled units name themselves
+  // rather than sending the reader to a legend or a hover.
+  const gl=svg.append("g").attr("class","mapLabels").attr("pointer-events","none");
+  for(const f of geo.features){
+    const st=fipsToUsps(f.id);
+    if(!st||!DATA[mk]?.ratios[st])continue;
+    const b=path.bounds(f), w=b[1][0]-b[0][0], h=b[1][1]-b[0][1];
+    if(w<26||h<16)continue;   // too small to hold its own label
+    const c=path.centroid(f);
+    if(!isFinite(c[0])||!isFinite(c[1]))continue;
+    gl.append("text").attr("class","mapLabel").attr("data-st",st)
+      .attr("x",c[0]).attr("y",c[1]+3.5).attr("text-anchor","middle").text(st);
+  }
+  PMAP[mk]={svg,g,labels:gl};
+  paintLabelContrast(mk);
+}
+
+/* One state's hover card: the name, the margin, and how many polls stand behind it. */
+function stateTipHtml(mk,st){
+  const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st];
+  const pc=pp?pp.length:0;
+  const name=USPS_TO_NAME[st]||st;
+  if(!pc) return `<div class="stDate">${name}</div><div class="stRow"><span class="stLbl">no polls yet</span></div>`;
+  const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
+  let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
+  const D=sD/w,R=sR/w,m=D-R;
+  const ms=Math.abs(m)<.05?"tied":(m>0?`D+${m.toFixed(1)}`:`R+${Math.abs(m).toFixed(1)}`);
+  return `<div class="stDate">${name} \u00B7 ${pc} poll${pc!==1?"s":""}</div>`+
+    `<div class="stRow"><span class="stDot" style="background:${DEM_INK()}"></span><span class="stLbl">D</span><span class="stVal">${D.toFixed(1)}%</span></div>`+
+    `<div class="stRow"><span class="stDot" style="background:${REP_INK()}"></span><span class="stLbl">R</span><span class="stVal">${R.toFixed(1)}%</span></div>`+
+    `<div class="stRow"><span class="stLbl">margin</span><span class="stVal">${ms}</span></div>`;
+}
+
+/* A label sits on top of its unit's fill, so it flips to paper over a dark one. */
+function paintLabelContrast(mk){
+  const m=PMAP[mk]; if(!m?.labels)return;
+  m.labels.selectAll("text.mapLabel").each(function(){
+    const st=this.getAttribute("data-st");
+    const unit=m.g.select(`path.state[data-st='${st}']`).node();
+    const fill=unit?unit.style.fill:"";
+    this.style.fill=isDarkFill(fill)?PAPER():INK();
+  });
+}
+
+function isDarkFill(fill){
+  const m=String(fill||"").match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+  const rgb=m?[+m[1],+m[2],+m[3]]:parseHex(fill);
+  if(!rgb)return false;
+  // Rec. 601 luma; below this the paper type wins.
+  return (0.299*rgb[0]+0.587*rgb[1]+0.114*rgb[2])<140;
 }
 
 function recolorMap(mk){
@@ -461,32 +530,53 @@ function recolorMap(mk){
     let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
     this.style.fill=pollsFill((sR/w)-(sD/w));
   });
+  paintLabelContrast(mk);
 }
 
 /* ---- State Selection ---- */
 function pickState(mk,usps){
   PSEL[mk]=usps;
   const ui=PUI[mk]; if(!ui)return;
-  // Highlight
+  // Mark the selected unit by rule, not by colour, and let the stylesheet own it.
   const m=PMAP[mk];
-  if(m?.g) m.g.selectAll("path.state")
-    .attr("stroke",function(){return this.getAttribute("data-st")===usps?"var(--ink)":"white";})
-    .attr("stroke-width",function(){return this.getAttribute("data-st")===usps?2.5:1;});
+  if(m?.g){
+    m.g.selectAll("path.state").classed("selected",function(){
+      return this.getAttribute("data-st")===usps;
+    });
+    // A selected unit is raised so its contour is never clipped by a neighbour.
+    const sel=m.g.select(`path.state[data-st='${usps}']`).node();
+    if(sel&&sel.parentNode) sel.parentNode.appendChild(sel);
+  }
+  if(m?.labels) m.labels.selectAll("text.mapLabel").classed("selected",function(){
+    return this.getAttribute("data-st")===usps;
+  });
 
   // Update big numbers to show this state's poll average
   const pp=STATE_POLL_SRC.byModeState?.[mk]?.[usps];
+  let avgD=NaN,avgR=NaN;
   if(pp&&pp.length){
     const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
     let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
-    const avgD=sD/w, avgR=sR/w;
-    setNum(ui,avgD.toFixed(0),avgR.toFixed(0),"D","R");
+    avgD=sD/w; avgR=sR/w;
+    setNum(ui,avgD,avgR,"D","R");
     colorTop(ui,avgD>avgR);
+  } else {
+    setNum(ui,NaN,NaN,"D","R");
   }
 
   const name=USPS_TO_NAME[usps]||usps;
   const n=pp?pp.length:0;
-  if(ui.stTitle)ui.stTitle.textContent=`${name} — ${mk==="senate"?"Senate":"Governor"} · ${n} poll${n===1?"":"s"}`;
+  if(ui.stTitle)ui.stTitle.textContent=raceFinding(name,avgD,avgR,n);
   stateScatter(mk,usps);
+}
+
+/* A figure is titled with what it found, not with what it is. */
+function raceFinding(name,D,R,n){
+  if(!n||!isFinite(D)||!isFinite(R)) return `No polling in ${name} yet`;
+  const m=D-R;
+  if(Math.abs(m)<0.5) return `${name} is a tied race`;
+  const lead=m>0?"Democrats":"Republicans";
+  return `${lead} lead ${name} by ${Math.abs(m).toFixed(1)}`;
 }
 
 function stateScatter(mk,usps){
@@ -498,10 +588,10 @@ function stateScatter(mk,usps){
   const mg={l:38,r:10,t:10,b:26},iw=W-mg.l-mg.r,ih=H-mg.t-mg.b;
   // Absent is absent, not zero: an empty vessel with its word inside.
   if(!polls.length){
-    const bw=Math.min(220,iw),bh=56;
-    svg.append("rect").attr("x",(W-bw)/2).attr("y",(H-bh)/2).attr("width",bw).attr("height",bh)
+    const bh=Math.min(72,ih);
+    svg.append("rect").attr("x",mg.l).attr("y",mg.t+(ih-bh)/2).attr("width",iw).attr("height",bh)
       .attr("fill",PAPER()).attr("stroke",INK()).attr("stroke-width",2);
-    svg.append("text").attr("x",W/2).attr("y",H/2+4).attr("text-anchor","middle")
+    svg.append("text").attr("x",mg.l+iw/2).attr("y",mg.t+ih/2+4).attr("text-anchor","middle")
       .attr("fill",MUTED()).attr("font-family",FONT).attr("font-size","12px").attr("font-weight","600")
       .text("no polls yet");
     return;

@@ -26,6 +26,13 @@
    these states so viewers aren't confused by "30 seats" in an
    Arizona house panel that holds 60 representatives.
    ============================================================ */
+/* The site's one palette, read at call time (see forecast.js). */
+function _p(){ return window.__pal || null; }
+function PAPER(){ const p=_p(); return p ? p.PAL.paper() : '#E9E8E0'; }
+function INK(){ const p=_p(); return p ? p.PAL.ink() : '#16171A'; }
+function OVERPRINT(){ const p=_p(); return p ? p.PAL.overprint() : '#191122'; }
+function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
+
 (function(){
   const PAGE_ID = 'stateLegsPage';
 
@@ -99,13 +106,13 @@
 
   // --- Ratings + margin coloring ------------------------------
   const RATINGS = [
-    { key:'SD', label:'Safe D', color:'#182e4d', light:false },
-    { key:'LD', label:'Lkly D', color:'#2a4570', light:false },
-    { key:'TD', label:'Lean D', color:'#cfd6e0', light:true  },
-    { key:'TU', label:'Toss',   color:'#c89c2c', light:true  },
-    { key:'TR', label:'Lean R', color:'#e0c3b8', light:true  },
-    { key:'LR', label:'Lkly R', color:'#903629', light:false },
-    { key:'SR', label:'Safe R', color:'#61201a', light:false },
+    { key:'SD', label:'safe d', get color(){return RF('Safe D');},   light:false },
+    { key:'LD', label:'lkly d', get color(){return RF('Likely D');}, light:false },
+    { key:'TD', label:'lean d', get color(){return RF('Lean D');},   light:true  },
+    { key:'TU', label:'toss',   get color(){return RF('Tossup');},   light:false },
+    { key:'TR', label:'lean r', get color(){return RF('Lean R');},   light:true  },
+    { key:'LR', label:'lkly r', get color(){return RF('Likely R');}, light:false },
+    { key:'SR', label:'safe r', get color(){return RF('Safe R');},   light:false },
   ];
   function rateDistrict(m){
     if (m == null || !isFinite(m)) return null;
@@ -802,7 +809,7 @@
         display:none;
         align-items:center;
         gap:6px;
-        font-size:13px; color:#374151;
+        font-size:13px; color:var(--t-ink2);
         cursor:pointer;
         user-select:none;
       }
@@ -862,7 +869,7 @@
       }
       #stateLegsPage .sldlStatePanel--senate{
         /* slight visual distinction so users can tell the panels apart at a glance */
-        border-top: 2px solid var(--red, #903629);
+        border-top: 2px solid var(--red, #D62828);
       }
       html[data-look="riso"] #stateLegsPage .sldlStatePanel--senate{
         border-top: 2px solid var(--text-ink) !important;
@@ -1126,25 +1133,25 @@
   function hex(c){ if(!c) return '#888'; c=c.trim(); if(c.startsWith('#')) return c.length===4?'#'+[...c.slice(1)].map(x=>x+x).join(''):c; const m=c.match(/(\d+)[,\s]+(\d+)[,\s]+(\d+)/); return m?'#'+[m[1],m[2],m[3]].map(v=>(+v).toString(16).padStart(2,'0')).join(''):'#888'; }
   function mix(a,b,k){ const pa=a.match(/\w\w/g).map(h=>parseInt(h,16)); const pb=b.match(/\w\w/g).map(h=>parseInt(h,16)); return '#'+pa.map((v,i)=>Math.round(v+(pb[i]-v)*k).toString(16).padStart(2,'0')).join(''); }
   function marginColor(m){
-    if (m==null||!isFinite(m)) return '#ead9b5';
-    if (Math.abs(m) <= 2.5) return '#c89c2c';
+    if (m==null||!isFinite(m)) return PAPER();
+    if (Math.abs(m) <= 2.5) return OVERPRINT();
     const cs=getComputedStyle(document.documentElement);
-    const blue=hex(cs.getPropertyValue('--blue')|| '#2a4570');
-    const red =hex(cs.getPropertyValue('--red') || '#903629');
+    const blue=hex(cs.getPropertyValue('--blue')|| '#1E6FD9');
+    const red =hex(cs.getPropertyValue('--red') || '#D62828');
     const t=Math.max(-1,Math.min(1,m/40));
-    return t>=0?mix('#f4f4f4',blue,t):mix('#f4f4f4',red,-t);
+    return t>=0?mix(PAPER(),blue,t):mix(PAPER(),red,-t);
   }
 
   let fillMode = 'model';
-  function ratingFillFor(m){ const r = rateDistrict(m); return r ? r.color : '#ead9b5'; }
+  function ratingFillFor(m){ const r = rateDistrict(m); return r ? r.color : PAPER(); }
   function fillForChamber(chamber, m, props){
     if (props){
       const notUp = NOT_UP_SET(chamber);
-      if (notUp.has(props.state_abbr)) return '#ead9b5';
+      if (notUp.has(props.state_abbr)) return PAPER();
       // Per-district stagger gray — individual seats not up this cycle
-      if (!isDistrictUp2026(chamber, props)) return '#ead9b5';
+      if (!isDistrictUp2026(chamber, props)) return PAPER();
     }
-    if (m == null || !isFinite(m)) return '#ead9b5';
+    if (m == null || !isFinite(m)) return PAPER();
     return fillMode === 'ratings' ? ratingFillFor(m) : marginColor(m);
   }
 
@@ -1182,13 +1189,13 @@
     const r = rateDistrict(m);
     const fm = fmtMargin(m);
     const wpD = Math.round(winProbD(m) * 100);
-    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue, #2a4570)' : 'var(--red, #903629)');
+    const mColor = m == null ? 'var(--muted)' : (m >= 0 ? 'var(--blue)' : 'var(--red)');
     el.innerHTML = `
       <div style="font-weight:800;font-size:12px;margin-bottom:4px;">
         ${props.state_abbr} · ${props.NAMELSAD || 'District'}
       </div>
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
-        ${r ? `<span style="display:inline-block;padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'#1f2937':'#fff'};font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;">${r.label}</span>` : ''}
+        ${r ? `<span style="display:inline-block;padding:2px 7px;border-radius:3px;background:${r.color};color:${r.light?'var(--t-ink)':'var(--t-paper)'};font-size:10px;font-weight:700;">${r.label}</span>` : ''}
         <span style="font-weight:800;color:${mColor};">${fm}</span>
       </div>
       <div style="font-size:9px;color:var(--muted);font-weight:600;">
@@ -1242,14 +1249,14 @@
     demArea += `L ${W} ${H} Z`;
     const mid = yOf(0.5);
     const cs = getComputedStyle(document.documentElement);
-    const blueC = (cs.getPropertyValue('--blue')|| '#2a4570').trim();
-    const redC  = (cs.getPropertyValue('--red') || '#903629').trim();
+    const blueC = (cs.getPropertyValue('--blue')|| '#1E6FD9').trim();
+    const redC  = (cs.getPropertyValue('--red') || '#D62828').trim();
     return `
       <svg class="dstSpark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
         <rect x="0" y="0" width="${W}" height="${H}" fill="${redC}" opacity="0.08"/>
         <rect x="0" y="0" width="${W}" height="${mid}" fill="${blueC}" opacity="0.10"/>
         <path d="${demArea}" fill="${blueC}" opacity="0.35"/>
-        <line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="#a89773" stroke-width="0.5" stroke-dasharray="2,2"/>
+        <line x1="0" y1="${mid}" x2="${W}" y2="${mid}" stroke="var(--t-hair)" stroke-width="1"/>
         <path d="${line}" fill="none" stroke="${blueC}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
       </svg>`;
   }
@@ -1434,7 +1441,7 @@
         .attr('stroke','rgba(255,255,255,0.4)')
         .attr('stroke-width', strokeBase)
       .on('mouseenter', function(ev, d){
-        d3.select(this).attr('stroke','#1f2937').attr('stroke-width', strokeBase * 2.4);
+        d3.select(this).attr('stroke',INK()).attr('stroke-width', strokeBase * 2.4);
         const st = d.properties.state_abbr;
         if (vs.zoom === 'us' && st){
           renderPanelForState(chamber, st);

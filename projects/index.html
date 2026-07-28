@@ -7,7 +7,7 @@
 <meta property="og:description" content="Standalone analyses, dashboards, and election-night coverage from theoelections.com. An index of one-off election projects.">
 <meta property="og:url" content="https://theoelections.com/projects/">
 <meta property="og:type" content="website">
-<meta name="prerender-build" content="2026-07-28T02:13:33Z">
+<meta name="prerender-build" content="2026-07-28T02:59:56Z">
 <script>window.__INITIAL_TAB="Projects";</script>
 
 <meta charset="utf-8">
@@ -841,7 +841,7 @@
       top:4px; bottom:4px;
       width:calc(33.333% - 4px);
       border-radius:var(--radius-pill);
-      background: #ffffff;
+      background: var(--t-paper);
       border:1px solid rgba(0,0,0,0.04);
       box-shadow: 0 2px 4px rgba(0,0,0,0.08);
       transform: translateX(0%);
@@ -933,7 +933,7 @@
       padding:8px 16px;
       border-radius:var(--radius-md);
       border:1px solid var(--line);
-      background: #ffffff;
+      background: var(--t-paper);
       box-shadow: var(--card-shadow);
       user-select:none;
       min-width: 160px;
@@ -945,10 +945,10 @@
       flex:0 0 auto;
     }
     .seatPill.blue{ border-color: var(--blue-border); background: var(--blue-soft); }
-    .seatPill.blue .seatDot{ background: var(--blue); box-shadow: 0 0 0 2px #fff; }
+    .seatPill.blue .seatDot{ background: var(--blue); box-shadow: 0 0 0 2px var(--t-paper); }
     
     .seatPill.red{ border-color: var(--red-border); background: var(--red-soft); }
-    .seatPill.red  .seatDot{ background: var(--red); box-shadow: 0 0 0 2px #fff; }
+    .seatPill.red  .seatDot{ background: var(--red); box-shadow: 0 0 0 2px var(--t-paper); }
     
     .seatPill.neutral .seatDot{ background: var(--muted); }
 
@@ -1066,7 +1066,7 @@
     /* Map */
     .mapStage{
       position: relative;
-      background: white; 
+      background: var(--t-paper); 
       border-radius: var(--radius-md);
       box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
     }
@@ -1078,7 +1078,7 @@
     }
 
     .state{
-      stroke: white;
+      stroke: var(--t-paper);
       stroke-width: 1px;
       vector-effect: non-scaling-stroke;
       cursor:default;
@@ -1219,7 +1219,7 @@
       padding:3px 8px;
       border-radius:6px;
       border:1px solid var(--line);
-      background: white;
+      background: var(--t-paper);
       font-variant-numeric: tabular-nums;
       font-size:12px;
       font-weight:600;
@@ -1318,7 +1318,7 @@
       width:8px;
       height:8px;
       border-radius:9999px;
-      border:2px solid #fff;
+      border:2px solid var(--t-paper);
       box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
     }
     .miniDot.blue{ background: var(--blue); }
@@ -1422,7 +1422,7 @@
       width:20px; height:20px;
       border-radius:50%;
       transform:translateX(-50%);
-      border:3px solid #fff;
+      border:3px solid var(--t-paper);
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       z-index: 5;
     }
@@ -1463,7 +1463,7 @@
       border-radius:8px;
       padding:10px 12px;
       border:1px solid var(--line);
-      background: #fff;
+      background: var(--t-paper);
       text-align:left;
       cursor:pointer;
       box-shadow: 0 1px 2px rgba(0,0,0,0.03);
@@ -1698,7 +1698,7 @@
     .zoomBtn:hover{ background:var(--line); color:var(--ink-dim); }
     .zoomBtn.active{
       background:var(--ink);
-      color:#fff;
+      color:var(--t-paper);
       border-color:var(--ink);
     }
     .zoomSelect{
@@ -1782,7 +1782,7 @@
     .pageTab:hover{ color:var(--ink-dim); background:rgba(0,0,0,0.03); }
     .pageTab.active{
       color:var(--ink);
-      background:#fff;
+      background:var(--t-paper);
       box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 1px rgba(0,0,0,0.04);
     }
     .donateBtn{
@@ -1793,7 +1793,7 @@
       border:none;
       border-radius:var(--radius-pill);
       background: linear-gradient(135deg, #2563eb, #1e40af);
-      color:#fff;
+      color:var(--t-paper);
       font-family:var(--sans);
       font-weight:700;
       font-size:12px;
@@ -1883,7 +1883,7 @@
       border-radius:6px;
       overflow:hidden;
       border:1px solid var(--line);
-      background:#fff;
+      background:var(--t-paper);
     }
     .ratingBar .seg{
       display:flex;
@@ -1893,7 +1893,7 @@
       transition: flex 0.4s cubic-bezier(0.2,0.8,0.2,1);
       font-size:10px;
       font-weight:800;
-      color:#fff;
+      color:var(--t-paper);
       font-family:var(--mono);
       border:none;
       border-radius:0;
@@ -2117,12 +2117,12 @@
       font-size:14px; line-height:1; color:var(--muted,#6b7280);
       margin-right:6px; transition:background .15s, color .15s;
     }
-    .fsBtn:hover{ background:var(--ink,#111); color:#fff; }
+    .fsBtn:hover{ background:var(--t-ink); color:var(--t-paper); }
     #triGrid[data-fullscreen] .fsBtn{ opacity:0.4; }
     #triGrid[data-fullscreen="senate"]   .modeCol[data-mode="senate"]   .fsBtn,
     #triGrid[data-fullscreen="governor"] .modeCol[data-mode="governor"] .fsBtn,
     #triGrid[data-fullscreen="house"]    .modeCol[data-mode="house"]    .fsBtn{
-      opacity:1; background:var(--ink,#111); color:#fff; border-color:var(--ink,#111);
+      opacity:1; background:var(--t-ink); color:var(--t-paper); border-color:var(--t-ink);
     }
 
     /* --- Fullscreen layout: narrow left sidebar + wide right map --- */
@@ -2290,7 +2290,7 @@
     .panelShareR small{ font-size:6.5px; font-weight:700; opacity:0.6; margin-left:1px; }
     .panelShareTrack{ display:flex; height:5px; border-radius:9999px; overflow:hidden; box-shadow:inset 0 1px 2px rgba(0,0,0,0.07); }
     .panelShareFillD{ background:linear-gradient(90deg, #93c5fd, var(--blue)); border-radius:9999px 0 0 9999px; }
-    .panelShareGap{ width:2px; background:white; flex-shrink:0; }
+    .panelShareGap{ width:2px; background:var(--t-paper); flex-shrink:0; }
     .panelShareFillR{ flex:1; background:linear-gradient(90deg, var(--red), #fca5a5); border-radius:0 9999px 9999px 0; }
     .panelHero{ display:flex; align-items:center; justify-content:space-between; padding:10px 12px 6px; }
     .panelMarginBlock{}
@@ -2411,7 +2411,7 @@
     .mapCtrlBtn{
       appearance:none;
       border:1px solid var(--line);
-      background:white;
+      background:var(--t-paper);
       color:var(--ink-dim);
       font-size:11px;
       font-weight:700;
@@ -2420,7 +2420,7 @@
       cursor:pointer;
       transition: all 0.12s ease;
     }
-    .mapCtrlBtn:hover{ background:var(--ink); color:#fff; border-color:var(--ink); }
+    .mapCtrlBtn:hover{ background:var(--ink); color:var(--t-paper); border-color:var(--ink); }
     .mapCtrlLabel{
       font-size:11px;
       font-weight:600;
@@ -2469,7 +2469,7 @@
     .chartTab + .chartTab{ border-left:1px solid var(--line); }
     .chartTab.active{
       background:var(--ink);
-      color:#fff;
+      color:var(--t-paper);
     }
     .chartTab:hover:not(.active){ background:var(--neutral-bg); }
     .oddsCard .oddsChartWrap{
@@ -2664,7 +2664,7 @@
     .yearBtn:hover:not(.disabled){ color:var(--ink-dim); background:rgba(0,0,0,0.03); }
     .yearBtn.active{
       color:var(--ink);
-      background:#fff;
+      background:var(--t-paper);
       box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 1px rgba(0,0,0,0.04);
     }
     .yearBtn.disabled{
@@ -2699,7 +2699,7 @@
       width:12px; height:12px;
       border-radius:50%;
       flex:0 0 auto;
-      border:2px solid #fff;
+      border:2px solid var(--t-paper);
       box-shadow: 0 1px 3px rgba(0,0,0,0.15);
     }
     .swingSliderRow .swingDot.blue{ background:var(--blue); }
@@ -2728,7 +2728,7 @@
       appearance:none;
       width:20px; height:20px;
       border-radius:50%;
-      border:3px solid #fff;
+      border:3px solid var(--t-paper);
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       cursor:grab;
     }
@@ -2736,7 +2736,7 @@
     .swingRange::-moz-range-thumb{
       width:20px; height:20px;
       border-radius:50%;
-      border:3px solid #fff;
+      border:3px solid var(--t-paper);
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       cursor:grab;
     }
@@ -2812,7 +2812,7 @@
     }
     .chamberBtn:hover{ color:var(--ink-dim); }
     .chamberBtn.active{
-      background:#fff;
+      background:var(--t-paper);
       color:var(--blue-dark);
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
@@ -3056,7 +3056,7 @@
 
 /* RISO DEFAULT — flat, sharp, hard shadows */
 html[data-look="riso"] {
-  --card-bg: #fff;
+  --card-bg: var(--t-paper);
   --card-border: var(--text-ink);
   --card-shadow: 4px 4px 0 0 var(--text-ink);
   --card-shadow-hover: 4px 4px 0 0 var(--text-ink);
@@ -3088,7 +3088,7 @@ html[data-look="riso"] .themeToggle {
 /* Donate button — stays colored, just sharpen the corners and swap shadow */
 html[data-look="riso"] .donateBtn {
   background: var(--blue) !important;
-  color: #fff !important;
+  color: var(--t-paper) !important;
   border: 1px solid var(--text-ink) !important;
   border-radius: 0 !important;
   box-shadow: 2px 2px 0 0 var(--text-ink) !important;
@@ -3269,9 +3269,9 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"][data-look="riso"] {
   --card-bg: #141414;
-  --card-border: #fff;
-  --card-shadow: 4px 4px 0 0 #fff;
-  --card-shadow-hover: 4px 4px 0 0 #fff;
+  --card-border: var(--t-paper);
+  --card-shadow: 4px 4px 0 0 var(--t-paper);
+  --card-shadow-hover: 4px 4px 0 0 var(--t-paper);
 }
 
 html[data-theme="dark"][data-look="legacy"] {
@@ -3548,7 +3548,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   }
   #stateLegsPage .sldlStickyPanel{
     position:absolute; top:8px; right:8px;
-    background:var(--panel, #fff);
+    background:var(--panel, var(--t-paper));
     border:1px solid var(--line, rgba(0,0,0,0.1));
     border-radius:6px; padding:8px 10px;
     font-size:10px; line-height:1.4; font-weight:600;
@@ -3563,7 +3563,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   #stateLegsPage .sldlStickyPanel .stRow.r .v{ color:var(--red); }
   #stateLegsPage .sldlCursorTip{
     position:absolute; pointer-events:none; display:none;
-    background:var(--panel,#fff); border:1px solid var(--line,rgba(0,0,0,0.1));
+    background:var(--panel,var(--t-paper)); border:1px solid var(--line,rgba(0,0,0,0.1));
     border-radius:4px; padding:4px 6px; font-size:10px; font-weight:600;
     box-shadow:0 1px 3px rgba(0,0,0,0.08); white-space:nowrap; z-index:3;
   }
@@ -3616,7 +3616,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     }
   }
   #flRedistrictingPage .flrCard{
-    background: var(--card-bg, #fff);
+    background: var(--card-bg, var(--t-paper));
     border: 1px solid var(--ink, #0a0e1a);
     box-shadow: 4px 4px 0 var(--ink, #0a0e1a);
     border-radius: 0;
@@ -3725,7 +3725,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border-radius: 50%;
     background: var(--ink, #0a0e1a);
     cursor: pointer;
-    border: 2px solid #fff;
+    border: 2px solid var(--t-paper);
   }
   #flRedistrictingPage input[type="range"]::-moz-range-thumb{
     width: 14px;
@@ -3733,7 +3733,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     border-radius: 50%;
     background: var(--ink, #0a0e1a);
     cursor: pointer;
-    border: 2px solid #fff;
+    border: 2px solid var(--t-paper);
   }
 
   /* Seats + histogram */
@@ -3782,8 +3782,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     display: flex;
     align-items: stretch;
     justify-content: stretch;
-    background: var(--card-bg-soft, #fafafa);
-    border: 1px solid var(--line, rgba(0,0,0,0.1));
+    background: var(--t-paper);
+    border: 1px solid var(--t-hair);
   }
   #flRedistrictingPage .flrMap{
     width: 100%;
@@ -3888,24 +3888,24 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .rtg-safeD { color: var(--blue-deep); border-color: var(--blue-deep); }
   .rtg-likelyD { color: var(--blue); border-color: var(--blue); }
   .rtg-leanD { color: var(--blue-soft); border-color: var(--blue-soft); }
-  .rtg-tossup { color: var(--yellow); border-color: var(--yellow); }
+  .rtg-tossup { color: var(--t-overprint); border-color: var(--t-overprint); }
   .rtg-leanR { color: var(--red-soft); border-color: var(--red-soft); }
   .rtg-likelyR { color: var(--red); border-color: var(--red); }
   .rtg-safeR { color: var(--red-deep); border-color: var(--red-deep); }
-  .rtgCountItem.rtg-safeD .rtgCountNum { color: var(--blue-deep); }
-  .rtgCountItem.rtg-likelyD .rtgCountNum { color: var(--blue); }
-  .rtgCountItem.rtg-leanD .rtgCountNum { color: var(--blue-soft); }
-  .rtgCountItem.rtg-tossup .rtgCountNum { color: var(--yellow); }
-  .rtgCountItem.rtg-leanR .rtgCountNum { color: var(--red-soft); }
-  .rtgCountItem.rtg-likelyR .rtgCountNum { color: var(--red); }
-  .rtgCountItem.rtg-safeR .rtgCountNum { color: var(--red-deep); }
+  
+  
+  
+  
+  
+  
+  
   .rtgBar { display: flex; height: 18px; border: 1px solid var(--ink); margin: 6px 0 4px; overflow: hidden; }
-  .rtgSeg { display: flex; align-items: center; justify-content: center; color: white;
+  .rtgSeg { display: flex; align-items: center; justify-content: center; color: var(--t-paper);
             font-size: 10px; font-family: var(--mono, "IBM Plex Mono"), monospace; transition: width 0.3s ease; }
   .rtgBar .rtgSeg.rtg-safeD { background: var(--blue-deep); color: var(--paper); }
   .rtgBar .rtgSeg.rtg-likelyD { background: var(--blue); color: var(--paper); }
   .rtgBar .rtgSeg.rtg-leanD { background: var(--blue-soft); color: var(--ink); }
-  .rtgBar .rtgSeg.rtg-tossup { background: var(--yellow); color: var(--ink); }
+  .rtgBar .rtgSeg.rtg-tossup { background: var(--t-overprint); color: var(--t-paper); }
   .rtgBar .rtgSeg.rtg-leanR { background: var(--red-soft); color: var(--ink); }
   .rtgBar .rtgSeg.rtg-likelyR { background: var(--red); color: var(--paper); }
   .rtgBar .rtgSeg.rtg-safeR { background: var(--red-deep); color: var(--paper); }
@@ -3913,7 +3913,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
                font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em;
                color: var(--muted); margin-bottom: 10px; text-align: center; }
   .rtgTossupNote { font-family: var(--mono, "IBM Plex Mono"), monospace; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
-  .rtgTossupNote .rtg-tossup { color: var(--yellow); font-weight: 600; }
+  .rtgTossupNote .rtg-tossup { color: var(--t-overprint); font-weight: 700; }
 
   .comingSoon { padding: 80px 40px; text-align: center;
                 border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
@@ -3945,7 +3945,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .methTableA .methSwatch.rtg-safeD { background: var(--blue-deep); }
   .methTableA .methSwatch.rtg-likelyD { background: var(--blue); }
   .methTableA .methSwatch.rtg-leanD { background: var(--blue-soft); }
-  .methTableA .methSwatch.rtg-tossup { background: var(--yellow); }
+  .methTableA .methSwatch.rtg-tossup { background: var(--t-overprint); }
   .methTableA .methSwatch.rtg-leanR { background: var(--red-soft); }
   .methTableA .methSwatch.rtg-likelyR { background: var(--red); }
   .methTableA .methSwatch.rtg-safeR { background: var(--red-deep); }
@@ -4628,7 +4628,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </style>
 <link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="stylesheet" href="assets/polls-theme.css?v=1">
+<link rel="stylesheet" href="assets/theme.css?v=2">
 <style id="sldlPanelStyles">
       #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .mapStage{position:relative;}
@@ -4704,7 +4704,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         display:none;
         align-items:center;
         gap:6px;
-        font-size:13px; color:#374151;
+        font-size:13px; color:var(--t-ink2);
         cursor:pointer;
         user-select:none;
       }
@@ -4764,7 +4764,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       }
       #stateLegsPage .sldlStatePanel--senate{
         /* slight visual distinction so users can tell the panels apart at a glance */
-        border-top: 2px solid var(--red, #903629);
+        border-top: 2px solid var(--red, #D62828);
       }
       html[data-look="riso"] #stateLegsPage .sldlStatePanel--senate{
         border-top: 2px solid var(--text-ink) !important;
@@ -4772,7 +4772,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </style></head>
 <body>
   
-  <div class="sheet"><div id="app"><div class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/">Model</a><span class="dot">·</span><a class="" href="/ratings/">Ratings</a><span class="dot">·</span><a class="" href="/florida/">Florida</a><span class="dot">·</span><a class="" href="/polls/">Polls</a><span class="dot">·</span><a class="" href="/swingometer/">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/">State Legs.</a><span class="dot">·</span><a class="active" href="/projects/">Projects</a><span class="dot">·</span><a class="" href="/methodology/">Methodology</a></nav><div class="actions"><button class="iconbtn" title="Percent">%</button><button class="iconbtn" title="Dark mode">☾</button><button class="donate">Donate</button></div></div><div class="projAlmanac"><header class="projHero"><div class="methKicker">Index</div><h1 class="methTitle">Projects</h1><p class="methLede">Standalone analyses, dashboards, and election-night coverage.</p></header><section class="projSectionA"><div class="projSectionALabel">Projects</div><div class="projGridA"><a class="projCardA" href="fundraising-comparison.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-red">Texas Senate '26</div><h3 class="projCardATitle">Talarico vs. the field: Texas Democratic fundraising</h3><p class="projCardADesc">Cumulative inflation-adjusted fundraising for four recent Texas Democratic statewide challengers, charted by months to general election. Talarico's seven-month haul versus Beto '18, Beto '22 governor, and Allred '24.</p><div class="projCardAMeta"><span>Chart</span><span>FEC · TEC</span><span class="projCardAOpen">Open →</span></div></a><a class="projCardA" href="primary_turnout_combined.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-neutral">National analysis</div><h3 class="projCardATitle">Primary turnout as a general election signal</h3><p class="projCardADesc">State-by-state primary-to-general vote ratios for Democrats and Republicans, 2000–2026. Tests whether the primary enthusiasm gap predicts the national environment in November.</p><div class="projCardAMeta"><span>Interactive</span><span>FEC · State SOS</span><span class="projCardAOpen">Open →</span></div></a><a class="projCardA" href="nationalization-2.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-purple">Midterm races</div><h3 class="projCardATitle">Nationalization indicator for 2026</h3><p class="projCardADesc">A district-level measure of how closely individual Senate, House, and gubernatorial races are tracking the national environment. Filter by chamber, sort by deviation, and see who's running ahead or behind their baseline.</p><div class="projCardAMeta"><span>Interactive</span><span>2026 forecast model</span><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">CA gov model</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Lindsey Graham approval</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">International polling averages</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas trends</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">VoteHub publishment</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">American shift</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas voter turnout dashboard</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas income to swing, 2020 and 2024</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a></div></section><section class="projSectionA"><div class="projSectionALabel">Election Coverage</div><div class="projGridA"><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">GA 14 jungle primary</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">GA 14 runoff</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Wisconsin Supreme Court election turnout and model</h3><div class="projCardAMeta"><span class="projCardAOpen">Open →</span></div></a></div></section></div></div>
+  <div class="sheet"><div id="app"><div class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/">Model</a><span class="dot">·</span><a class="" href="/ratings/">Ratings</a><span class="dot">·</span><a class="" href="/florida/">Florida</a><span class="dot">·</span><a class="" href="/polls/">Polls</a><span class="dot">·</span><a class="" href="/swingometer/">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/">State Legs.</a><span class="dot">·</span><a class="active" href="/projects/">Projects</a><span class="dot">·</span><a class="" href="/methodology/">Methodology</a></nav><div class="actions"><button class="iconbtn" title="Dark mode">☾</button><button class="donate">Donate</button></div></div><div class="projAlmanac"><header class="projHero"><div class="methKicker">Index</div><h1 class="methTitle">Projects</h1><p class="methLede">Standalone analyses, dashboards, and election-night coverage.</p></header><section class="projSectionA"><div class="projSectionALabel">projects</div><div class="projGridA"><a class="projCardA" href="fundraising-comparison.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-red">Texas Senate '26</div><h3 class="projCardATitle">Talarico vs. the field: Texas Democratic fundraising</h3><p class="projCardADesc">Cumulative inflation-adjusted fundraising for four recent Texas Democratic statewide challengers, charted by months to general election. Talarico's seven-month haul versus Beto '18, Beto '22 governor, and Allred '24.</p><div class="projCardAMeta"><span>Chart</span><span>FEC · TEC</span><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA" href="primary_turnout_combined.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-neutral">National analysis</div><h3 class="projCardATitle">Primary turnout as a general election signal</h3><p class="projCardADesc">State-by-state primary-to-general vote ratios for Democrats and Republicans, 2000–2026. Tests whether the primary enthusiasm gap predicts the national environment in November.</p><div class="projCardAMeta"><span>Interactive</span><span>FEC · State SOS</span><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA" href="nationalization-2.html" target="_blank" rel="noreferrer"><div class="projCardAKicker projKick-purple">Midterm races</div><h3 class="projCardATitle">Nationalization indicator for 2026</h3><p class="projCardADesc">A district-level measure of how closely individual Senate, House, and gubernatorial races are tracking the national environment. Filter by chamber, sort by deviation, and see who's running ahead or behind their baseline.</p><div class="projCardAMeta"><span>Interactive</span><span>2026 forecast model</span><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">CA gov model</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Lindsey Graham approval</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">International polling averages</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas trends</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">VoteHub publishment</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">American shift</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas voter turnout dashboard</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Texas income to swing, 2020 and 2024</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a></div></section><section class="projSectionA"><div class="projSectionALabel">election coverage</div><div class="projGridA"><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">GA 14 jungle primary</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">GA 14 runoff</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a><a class="projCardA projCardA-mini" href="#" rel="noreferrer"><h3 class="projCardATitle">Wisconsin Supreme Court election turnout and model</h3><div class="projCardAMeta"><span class="projCardAOpen">Open ›</span></div></a></div></section></div></div>
   <!-- v13: offscreen DOM for forecast.js + ratings.js + past-elections.js + swingometer.js + state-legs.js + fl_redistricting.js + polls.js -->
   <div class="__legacy_offscreen" aria-hidden="true">
     <div class="wrap">
@@ -5750,8 +5750,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     <div class="panelHeaderRow">
       <div class="panelTitleWrap"><div class="panelTitle">Approval / Gen Ballot</div></div>
       <div class="pillRow">
-        <div class="metricPill blue"><span class="dot"></span><span class="val" data-polls-d="">50.0</span></div>
-        <div class="metricPill red"><span class="dot"></span><span class="val" data-polls-r="">50.0</span></div>
+        <div class="metricPill blue"><span class="dot"></span><span class="val" data-polls-d="">absent</span></div>
+        <div class="metricPill red"><span class="dot"></span><span class="val" data-polls-r="">absent</span></div>
       </div>
     </div>
   </section>
@@ -5766,9 +5766,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <section class="card seatsCard" data-polls-mode="gb" style="grid-area:n1">
     <div class="seatsSummary">
       <div class="seatsLine">
-        <div class="seatsSide d"><span class="lbl" data-polls-d-lbl="">D</span><span class="num" data-polls-d-big="">—</span></div>
+        <div class="seatsSide d"><span class="lbl" data-polls-d-lbl="">D</span><span class="num isAbsent" data-polls-d-big="">absent</span></div>
         <div class="seatsDivider"></div>
-        <div class="seatsSide r"><span class="lbl" data-polls-r-lbl="">R</span><span class="num" data-polls-r-big="">—</span></div>
+        <div class="seatsSide r"><span class="lbl" data-polls-r-lbl="">R</span><span class="num isAbsent" data-polls-r-big="">absent</span></div>
       </div>
       <div class="pollsHistWide"><canvas data-polls-hist=""></canvas></div>
     </div>
@@ -5776,9 +5776,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <section class="card seatsCard" data-polls-mode="senate" style="grid-area:n2">
     <div class="seatsSummary">
       <div class="seatsLine">
-        <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-polls-d-big="">—</span></div>
+        <div class="seatsSide d"><span class="lbl">D</span><span class="num isAbsent" data-polls-d-big="">absent</span></div>
         <div class="seatsDivider"></div>
-        <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-polls-r-big="">—</span></div>
+        <div class="seatsSide r"><span class="lbl">R</span><span class="num isAbsent" data-polls-r-big="">absent</span></div>
       </div>
       <div class="pollsHistWide"><canvas data-polls-hist=""></canvas></div>
     </div>
@@ -5786,9 +5786,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <section class="card seatsCard" data-polls-mode="governor" style="grid-area:n3">
     <div class="seatsSummary">
       <div class="seatsLine">
-        <div class="seatsSide d"><span class="lbl">D</span><span class="num" data-polls-d-big="">—</span></div>
+        <div class="seatsSide d"><span class="lbl">D</span><span class="num isAbsent" data-polls-d-big="">absent</span></div>
         <div class="seatsDivider"></div>
-        <div class="seatsSide r"><span class="lbl">R</span><span class="num" data-polls-r-big="">—</span></div>
+        <div class="seatsSide r"><span class="lbl">R</span><span class="num isAbsent" data-polls-r-big="">absent</span></div>
       </div>
       <div class="pollsHistWide"><canvas data-polls-hist=""></canvas></div>
     </div>

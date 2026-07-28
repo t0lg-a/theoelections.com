@@ -31,13 +31,13 @@ function classifyMargin(m){
   return m < 0 ? "Safe D" : "Safe R";
 }
 function classifyColorAttr(cls){
-  if (cls.includes("Safe D"))   return "bg:#182e4d;color:#f4eccf";
-  if (cls.includes("Likely D")) return "bg:#2a4570;color:#f4eccf";
-  if (cls.includes("Lean D"))   return "bg:#cfd6e0;color:#182e4d";
-  if (cls === "Tossup")         return "bg:#c89c2c;color:#3a2f1f";
-  if (cls.includes("Lean R"))   return "bg:#e0c3b8;color:#61201a";
-  if (cls.includes("Likely R")) return "bg:#903629;color:#f4eccf";
-  return "bg:#61201a;color:#f4eccf";
+  const key = cls === "Tossup" ? "Tossup"
+    : cls.includes("Safe D") ? "Safe D" : cls.includes("Likely D") ? "Likely D"
+    : cls.includes("Lean D") ? "Lean D" : cls.includes("Lean R") ? "Lean R"
+    : cls.includes("Likely R") ? "Likely R" : "Safe R";
+  const bg = ratingFill(key);
+  // Type flips to paper only where the fill is dark enough to carry it.
+  return `bg:${bg};color:${palIsDark(bg) ? PAL.paper() : PAL.ink()}`;
 }
 
 function winArcSVG(pD, size){
@@ -60,7 +60,7 @@ function winArcSVG(pD, size){
   const ny = cy + nLen * Math.sin(bRad);
   const pathD = `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${cx+r} ${cy}`;
   const totalH = size/2 + strokeW + 22;
-  const pctColor = favored === "D" ? "var(--blue-deep, #182e4d)" : "var(--red, #903629)";
+  const pctColor = favored === "D" ? PAL.dem() : PAL.rep();
 
   let ticks = "";
   [0,0.25,0.5,0.75,1].forEach(frac => {
@@ -73,8 +73,8 @@ function winArcSVG(pD, size){
 
   return `<svg viewBox="0 0 ${size} ${totalH}" width="${size}" height="${totalH}" style="overflow:visible">
     <defs>
-      <linearGradient id="gaR" x1="0%" y1="50%" x2="50%" y2="50%"><stop offset="0%" stop-color="#e0c3b8"/><stop offset="100%" stop-color="#903629"/></linearGradient>
-      <linearGradient id="gaB" x1="50%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#2a4570"/><stop offset="100%" stop-color="#cfd6e0"/></linearGradient>
+      <linearGradient id="gaR" x1="0%" y1="50%" x2="50%" y2="50%"><stop offset="0%" stop-color="${palMix(PAL.rep(),0.34)}"/><stop offset="100%" stop-color="${PAL.rep()}"/></linearGradient>
+      <linearGradient id="gaB" x1="50%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="${PAL.dem()}"/><stop offset="100%" stop-color="${palMix(PAL.dem(),0.34)}"/></linearGradient>
     </defs>
     <path d="${pathD}" fill="none" stroke="var(--rule-soft)" stroke-width="${strokeW}"/>
     ${seg(rLen)>0?`<path d="${pathD}" fill="none" stroke="url(#gaR)" stroke-width="${strokeW}" stroke-dasharray="${seg(rLen)} ${sc}" stroke-dashoffset="0"/>`:""}
@@ -179,32 +179,97 @@ function winProbD_fast(m){
   return WINP_PD_TABLE[idx] ?? 0.5;
 }
 
-/* ---------- Color ---------- */
-function interpColor(m){
-  if (!isFinite(m)) return "#ead9b5";
-
-  const max = 25;
-  const a = Math.abs(m);
-
-  // Under 2 pts: highlight as "ultra-close" (yellow)
-  if (a < 2.0) return "rgb(200, 156, 44)"; // ~#c89c2c
-
-  const t = clamp(a/max, 0, 1);
-
-  if (m < 0){
-    // Blue ramp
-    const r = Math.round(248*(1-t) + 37*t);
-    const g = Math.round(250*(1-t) + 99*t);
-    const b = Math.round(252*(1-t) + 235*t);
-    return `rgb(${r},${g},${b})`;
-  } else {
-    // Red ramp
-    const r = Math.round(252*(1-t) + 220*t);
-    const g = Math.round(250*(1-t) + 38*t);
-    const b = Math.round(250*(1-t) + 38*t);
-    return `rgb(${r},${g},${b})`;
-  }
+/* ---------- The data palette ----------
+   Colour appears only where a datum is. Every figure on the site reads its
+   inks from here so the map, the ratings bar and the charts cannot drift
+   apart. Defined once, shared through window.__pal. */
+function tk(name, fallback){
+  try{
+    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || fallback;
+  }catch(e){ return fallback; }
 }
+
+const PAL = {
+  paper:     () => tk("--t-paper", "#E9E8E0"),
+  paper2:    () => tk("--t-paper-2", "#E0DFD5"),
+  ink:       () => tk("--t-ink", "#16171A"),
+  muted:     () => tk("--t-muted", "#6E6C61"),
+  hair:      () => tk("--t-hair", "#CBC8BC"),
+  dem:       () => tk("--t-d5", "#1E6FD9"),
+  rep:       () => tk("--t-d1", "#D62828"),
+  overprint: () => tk("--t-overprint", "#191122"),
+};
+
+function palParse(s){
+  const str = String(s||"").trim();
+  const hex = str.match(/^#?([0-9a-f]{6})$/i);
+  if (hex){ const n = parseInt(hex[1],16); return [(n>>16)&255,(n>>8)&255,n&255]; }
+  const rgb = str.match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+  if (rgb) return [+rgb[1],+rgb[2],+rgb[3]];
+  return null;
+}
+
+/** Pull an ink toward the paper ground. amount 1 is the full ink. */
+function palMix(color, amount){
+  const p = palParse(PAL.paper()) || [233,232,224];
+  const c = palParse(color) || [22,23,26];
+  const m = c.map((v,i)=>Math.round(p[i]*(1-amount) + v*amount));
+  return `rgb(${m[0]},${m[1]},${m[2]})`;
+}
+
+/** True when paper type should sit on top of this fill. */
+function palIsDark(color){
+  const rgb = palParse(color);
+  if (!rgb) return false;
+  const paperDark = (palParse(PAL.paper())||[233,232,224]).reduce((a,b)=>a+b,0) < 380;
+  const luma = 0.299*rgb[0] + 0.587*rgb[1] + 0.114*rgb[2];
+  return paperDark ? luma > 150 : luma < 140;
+}
+
+/**
+ * One divergent ramp for every margin on the site: paper at the line, the
+ * two-way inks out to a 25 point lead, and the overprint for a unit inside
+ * two points. Absent units never enter here.
+ */
+function marginFill(m){
+  if (!isFinite(m)) return PAL.paper();
+  const a = Math.abs(m);
+  if (a < 2.0) return PAL.overprint();          // the contested unit
+  const t = clamp(a/25, 0, 1);
+  return palMix(m > 0 ? PAL.rep() : PAL.dem(), 0.22 + 0.78*t);
+}
+
+function interpColor(m){ return marginFill(m); }
+
+/* Seven-step rating scale, cut from the same ramp. */
+const RATING_FILL = {
+  "Safe D":   () => PAL.dem(),
+  "Likely D": () => palMix(PAL.dem(), 0.66),
+  "Lean D":   () => palMix(PAL.dem(), 0.34),
+  "Tossup":   () => PAL.overprint(),
+  "Lean R":   () => palMix(PAL.rep(), 0.34),
+  "Likely R": () => palMix(PAL.rep(), 0.66),
+  "Safe R":   () => PAL.rep(),
+};
+function ratingFill(rating){
+  const f = RATING_FILL[rating];
+  return f ? f() : PAL.paper();
+}
+
+window.__pal = { PAL, palMix, palParse, palIsDark, marginFill, ratingFill, tk };
+
+/** Repaint every figure after the ground changes (light to night and back). */
+window.__repaintFigures = function(){
+  try{ refreshAllViews(); }catch(e){}
+  for (const fn of ["refreshRatingsForForecast","refreshFloridaForForecast","refreshRedistrictingForForecast"]){
+    if (typeof window[fn] === "function"){ try{ window[fn](); }catch(e){} }
+  }
+  if (typeof window.initPollsPage === "function"){
+    try{ Promise.resolve(window.initPollsPage()).catch(()=>{}); }catch(e){}
+  }
+  try{ window.dispatchEvent(new Event("resize")); }catch(e){}
+};
 
 
 
@@ -1293,9 +1358,9 @@ function drawProbSpark(canvas, values){
   }
 
   const rootStyle = getComputedStyle(document.documentElement);
-  const blue = rootStyle.getPropertyValue("--blue").trim() || "#2a4570";
-  const red  = rootStyle.getPropertyValue("--red").trim()  || "#903629";
-  const grid = rootStyle.getPropertyValue("--rule-soft").trim() || "#c1ad84";
+  const blue = rootStyle.getPropertyValue("--blue").trim() || PAL.dem();
+  const red  = rootStyle.getPropertyValue("--red").trim()  || PAL.rep();
+  const grid = rootStyle.getPropertyValue("--rule-soft").trim() || PAL.hair();
 
   // grid: 25/50/75%
   ctx.strokeStyle = grid;
@@ -1884,14 +1949,12 @@ function drawSeatSimMini(canvas, hist, controlThreshold){
   const barW = w / n;
 
   const cs = getComputedStyle(document.documentElement);
-  const blue = cs.getPropertyValue("--blue").trim() || "#2a4570";
-  const red  = cs.getPropertyValue("--red").trim()  || "#903629";
-  const lineCol = "rgba(31,41,55,0.35)";
-  const neutral = "rgba(156,163,175,0.9)";
+  const blue = cs.getPropertyValue("--blue").trim() || PAL.dem();
+  const red  = cs.getPropertyValue("--red").trim()  || PAL.rep();
+  const lineCol = PAL.ink();
+  const neutral = PAL.muted();
 
-  ctx.globalAlpha = 0.82;
-
-  const radius = Math.max(1, Math.round(1.5 * dpr));
+  const radius = 0;   // radius 0, here as everywhere
 
   for (let i=0;i<n;i++){
     const frac = counts[i] / maxCount;
@@ -1909,20 +1972,8 @@ function drawSeatSimMini(canvas, hist, controlThreshold){
       ctx.fillStyle = (seatVal >= controlThreshold) ? blue : red;
     }
 
-    // Rounded top corners
-    const r = Math.min(radius, bw/2, bh);
-    ctx.beginPath();
-    ctx.moveTo(x, y + bh);
-    ctx.lineTo(x, y + r);
-    ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.lineTo(x + bw - r, y);
-    ctx.quadraticCurveTo(x + bw, y, x + bw, y + r);
-    ctx.lineTo(x + bw, y + bh);
-    ctx.closePath();
-    ctx.fill();
+    ctx.fillRect(x, y, bw, bh);
   }
-
-  ctx.globalAlpha = 1;
 
   // Control threshold line at the boundary before the threshold seat value
   if (isFinite(controlThreshold)){
@@ -1931,11 +1982,12 @@ function drawSeatSimMini(canvas, hist, controlThreshold){
     const boundary = (controlThreshold - min) / (bs * n); // left edge of threshold bar
     const x = Math.round(clamp(boundary, 0, 1) * w);
 
+    // A threshold is always an ink rule, and it sits on top of the bars.
     ctx.strokeStyle = lineCol;
-    ctx.lineWidth = Math.max(1, Math.round(1*dpr));
+    ctx.lineWidth = Math.max(1, Math.round(1.5*dpr));
     ctx.beginPath();
-    ctx.moveTo(x, padTop);
-    ctx.lineTo(x, h - padBot);
+    ctx.moveTo(x + 0.5, 0);
+    ctx.lineTo(x + 0.5, h);
     ctx.stroke();
   }
 }
@@ -2206,7 +2258,7 @@ async function zoomToStateCounties(modeKey, usps, stateFips){
         const s = rawD + rawR;
         if (s > 0) return interpColor(100 * rawR / s - 100 * rawD / s);
       }
-      return isFinite(stateMargin) ? interpColor(stateMargin) : "#ead9b5";
+      return isFinite(stateMargin) ? interpColor(stateMargin) : PAL.paper();
     })
     .attr("stroke", "white")
     .attr("stroke-width", 0.3)
@@ -2745,7 +2797,7 @@ function recolorMapForMode(modeKey){
 
       if (!ratio){
         this.removeAttribute("display");
-        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
         this.classList.remove("filtered");
         return;
       }
@@ -2753,7 +2805,7 @@ function recolorMapForMode(modeKey){
       const model = getHouseModel(did);
       if (!model){
         this.removeAttribute("display");
-        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+        this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
         this.classList.add("filtered");
         return;
       }
@@ -2772,8 +2824,8 @@ function recolorMapForMode(modeKey){
 
     if (!ratio){
       this.removeAttribute("display");
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
-      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5");
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
+      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
       this.classList.remove("active","filtered");
       return;
     }
@@ -2783,8 +2835,8 @@ function recolorMapForMode(modeKey){
     const model = getStateModel(modeKey, st, IND_CACHE[modeKey]);
     if (!model){
       this.removeAttribute("display");
-      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
-      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5");
+      this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
+      this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
       this.classList.add("filtered");
       return;
     }

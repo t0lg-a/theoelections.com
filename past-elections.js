@@ -268,23 +268,9 @@ function formatMarginDR(m){
   return (m < 0) ? `D+${a.toFixed(1)}` : `R+${a.toFixed(1)}`;
 }
 function marginColor(m){
-  if (!isFinite(m)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
-  const max = 25;
-  const a = Math.abs(m);
-  // Under 2 pts: tossup yellow
-  if (a < 2.0) return "rgb(200, 156, 44)";
-  const t = clamp(a/max, 0, 1);
-  if (m < 0){
-    const r = Math.round(248*(1-t) + 37*t);
-    const g = Math.round(250*(1-t) + 99*t);
-    const b = Math.round(252*(1-t) + 235*t);
-    return `rgb(${r},${g},${b})`;
-  } else {
-    const r = Math.round(252*(1-t) + 220*t);
-    const g = Math.round(250*(1-t) + 38*t);
-    const b = Math.round(250*(1-t) + 38*t);
-    return `rgb(${r},${g},${b})`;
-  }
+  // The site's one divergent ramp, so a past map reads like every other map.
+  if (window.__pal) return window.__pal.marginFill(m);
+  return "#E9E8E0";
 }
 function median(arr){
   const a = arr.filter(x=>isFinite(x)).slice().sort((x,y)=>x-y);
@@ -1057,8 +1043,8 @@ function renderPastSim(mode, histData, rule){
   const barW = w / n;
 
   const cs = getComputedStyle(document.documentElement);
-  const blue = cs.getPropertyValue("--blue").trim() || "#2a4570";
-  const red  = cs.getPropertyValue("--red").trim()  || "#903629";
+  const blue = cs.getPropertyValue("--blue").trim() || "#1E6FD9";
+  const red  = cs.getPropertyValue("--red").trim()  || "#D62828";
   const lineCol = "rgba(31,41,55,0.35)";
 
   const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
@@ -1183,9 +1169,9 @@ async function renderPastMap(year, mode, d, rule, raceFilter){
     .attr("d", dd => pathGen(dd))
     .attr("fill", dd => {
       const st = _fips(dd.id);
-      if (!st || !d?.ratios[st] || !isContested(st)) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      if (!st || !d?.ratios[st] || !isContested(st)) return getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
       const model = getStateModelPast(year, mode, st);
-      if (!model) return getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";
+      if (!model) return getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
       return marginColor(model.mFinal);
     })
     .on("mouseenter", (event, dd) => {

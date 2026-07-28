@@ -205,7 +205,7 @@ function flRenderMap(svgEl, projections, era){
       const p = projByCd.get(d.properties.id);
       if (!p) return "var(--bg-2, #ead9b5)";
       return (typeof interpColor === "function") ? interpColor(p.margin)
-                                                  : (p.margin < 0 ? "#2a4570" : "#903629");
+                                                  : (p.margin < 0 ? "var(--t-d5)" : "var(--t-d1)");
     })
     .attr("vector-effect", "non-scaling-stroke")
     .style("cursor", "pointer")
@@ -226,7 +226,7 @@ function flShowTooltip(evt, proj, era){
   if (typeof tip === "undefined" || !tip || !proj) return;
   const isDem = proj.margin <= 0;
   const cls = (typeof classifyMargin === "function") ? classifyMargin(proj.margin) : "";
-  const clsStyle = (typeof classifyColorAttr === "function") ? classifyColorAttr(cls) : "bg:#7a6a4c;color:#f4eccf";
+  const clsStyle = (typeof classifyColorAttr === "function") ? classifyColorAttr(cls) : "bg:var(--t-paper-2);color:var(--t-ink)";
   const bgParts = clsStyle.split(";");
   const clsBg = (bgParts[0]||"").replace("bg:","");
   const clsCol = (bgParts[1]||"").replace("color:","");
@@ -306,7 +306,7 @@ function flDrawHistoFallback(canvas, dist){
   const max = Math.max(...dist);
   if (max <= 0) return;
   const barW = W / dist.length;
-  const blueColor = getComputedStyle(document.documentElement).getPropertyValue("--blue").trim() || "#2a4570";
+  const blueColor = getComputedStyle(document.documentElement).getPropertyValue("--blue").trim() || "#1E6FD9";
   ctx.fillStyle = blueColor;
   for (let i=0;i<dist.length;i++){
     const h = (dist[i] / max) * (H - 4);

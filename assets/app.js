@@ -207,13 +207,17 @@ function Histogram(_ref2) {
     className: "histo"
   }, data.map(function (v, i) {
     var isD = i >= dStart;
-    return /*#__PURE__*/React.createElement("div", {
-      key: i,
+    return /*#__PURE__*/React.createElement(React.Fragment, {
+      key: i
+    }, i === dStart && /*#__PURE__*/React.createElement("div", {
+      className: "histoMaj",
+      "aria-hidden": "true"
+    }), /*#__PURE__*/React.createElement("div", {
       className: "b" + (isD ? "" : " r") + (v / max < 0.18 ? " faint" : ""),
       style: {
         height: "".concat(Math.max(2, v / max * 100), "%")
       }
-    });
+    }));
   }));
 }
 function ChartHost(_ref3) {
@@ -394,7 +398,7 @@ function ModelSection(_ref5) {
     className: "seatsCol d"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Dem."), /*#__PURE__*/React.createElement("div", {
+  }, "dem"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, d.dSeats)), /*#__PURE__*/React.createElement("div", {
     className: "seatsDash"
@@ -402,7 +406,7 @@ function ModelSection(_ref5) {
     className: "seatsCol r"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Rep."), /*#__PURE__*/React.createElement("div", {
+  }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, d.rSeats))), /*#__PURE__*/React.createElement(Histogram, {
     data: d.histo,
@@ -978,7 +982,7 @@ function PastSection(_ref13) {
     className: "seatsCol d"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Dem."), /*#__PURE__*/React.createElement("div", {
+  }, "dem"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, seatsD)), /*#__PURE__*/React.createElement("div", {
     className: "seatsDash"
@@ -986,7 +990,7 @@ function PastSection(_ref13) {
     className: "seatsCol r"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Rep."), /*#__PURE__*/React.createElement("div", {
+  }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, seatsR))), /*#__PURE__*/React.createElement("div", {
     className: "mapBlock"
@@ -1266,7 +1270,7 @@ function SwingSection(_ref16) {
     className: "swingCard"
   }, /*#__PURE__*/React.createElement("div", {
     className: "swingCardLabel"
-  }, "National Two-Party Vote"), /*#__PURE__*/React.createElement("div", {
+  }, "national two-party vote"), /*#__PURE__*/React.createElement("div", {
     className: "swingRow"
   }, /*#__PURE__*/React.createElement("span", {
     className: "swingPartyLabel d"
@@ -1302,7 +1306,7 @@ function SwingSection(_ref16) {
     className: "swingMarginRow"
   }, /*#__PURE__*/React.createElement("span", {
     className: "swingMarginLabel"
-  }, "Margin"), /*#__PURE__*/React.createElement("span", {
+  }, "margin"), /*#__PURE__*/React.createElement("span", {
     className: "swingMarginVal swing-" + marginSide
   }, margin))), /*#__PURE__*/React.createElement("div", {
     className: "seats"
@@ -1310,7 +1314,7 @@ function SwingSection(_ref16) {
     className: "seatsCol d"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Dem."), /*#__PURE__*/React.createElement("div", {
+  }, "dem"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, seatsD)), /*#__PURE__*/React.createElement("div", {
     className: "seatsDash"
@@ -1318,7 +1322,7 @@ function SwingSection(_ref16) {
     className: "seatsCol r"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Rep."), /*#__PURE__*/React.createElement("div", {
+  }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, seatsR))), /*#__PURE__*/React.createElement(SwingCanvasHost, {
     mode: mode,
@@ -1733,23 +1737,32 @@ function PollsListHost(_ref21) {
   });
 }
 function PollsGBSection(_ref22) {
-  var _s$pillD3, _s$pillR3, _s$dBig, _s$rBig;
+  var _s$dBig, _s$rBig;
   var snapshot = _ref22.snapshot,
     ready = _ref22.ready,
     leftTab = _ref22.leftTab,
     setLeftTab = _ref22.setLeftTab;
   var meta = POLLS_TITLES.gb;
   var s = snapshot || {};
-  var pillD = (_s$pillD3 = s.pillD) !== null && _s$pillD3 !== void 0 ? _s$pillD3 : "—";
-  var pillR = (_s$pillR3 = s.pillR) !== null && _s$pillR3 !== void 0 ? _s$pillR3 : "—";
   var dBig = (_s$dBig = s.dBig) !== null && _s$dBig !== void 0 ? _s$dBig : "—";
   var rBig = (_s$rBig = s.rBig) !== null && _s$rBig !== void 0 ? _s$rBig : "—";
   // The readout is shared by both series, so the labels have to follow the tab.
   var isApproval = leftTab === "approval";
   var labD = isApproval ? "app" : "dem";
   var labR = isApproval ? "dis" : "rep";
-  var pillLabD = isApproval ? "app" : "D";
-  var pillLabR = isApproval ? "dis" : "R";
+  // Law: a figure is titled with its finding, never with its form.
+  var nD = parseFloat(dBig), nR = parseFloat(rBig);
+  var lead = (isFinite(nD) && isFinite(nR)) ? nD - nR : NaN;
+  var chartFinding;
+  if (!isFinite(lead)) {
+    chartFinding = isApproval ? "Presidential approval" : "The generic ballot";
+  } else if (Math.abs(lead) < 0.5) {
+    chartFinding = isApproval ? "Approval and disapproval are level" : "The generic ballot is tied";
+  } else if (isApproval) {
+    chartFinding = (lead > 0 ? "Approval leads by " : "Disapproval leads by ") + Math.abs(lead).toFixed(1);
+  } else {
+    chartFinding = (lead > 0 ? "Democrats lead the generic ballot by " : "Republicans lead the generic ballot by ") + Math.abs(lead).toFixed(1);
+  }
   return /*#__PURE__*/React.createElement("div", {
     className: isApproval ? "col isApproval" : "col"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1758,29 +1771,9 @@ function PollsGBSection(_ref22) {
     className: "secTitle"
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
-  }, meta.sub)), /*#__PURE__*/React.createElement("div", {
-    className: "pills"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "pill d"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "sw"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "l"
-  }, pillLabD), /*#__PURE__*/React.createElement("span", {
-    className: "n"
-  }, pillD), /*#__PURE__*/React.createElement("span", {
-    className: "pct"
-  }, "%")), /*#__PURE__*/React.createElement("div", {
-    className: "pill r"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "sw"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "l"
-  }, pillLabR), /*#__PURE__*/React.createElement("span", {
-    className: "n"
-  }, pillR), /*#__PURE__*/React.createElement("span", {
-    className: "pct"
-  }, "%")))), /*#__PURE__*/React.createElement("div", {
+  }, meta.sub))), /*#__PURE__*/React.createElement("div", {
+    className: "seatsNote"
+  }, isApproval ? "share approving and disapproving, latest average" : "share of the two-party vote, latest average"), /*#__PURE__*/React.createElement("div", {
     className: "seats"
   }, /*#__PURE__*/React.createElement("div", {
     className: "seatsCol d"
@@ -1805,7 +1798,7 @@ function PollsGBSection(_ref22) {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
     className: "h"
-  }, leftTab === "gb" ? "Generic ballot" : "Approval"), /*#__PURE__*/React.createElement("div", {
+  }, chartFinding), /*#__PURE__*/React.createElement("div", {
     className: "toggle"
   }, /*#__PURE__*/React.createElement("button", {
     className: leftTab === "gb" ? "active" : "",
@@ -1824,7 +1817,7 @@ function PollsGBSection(_ref22) {
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
     className: "t-how"
-  }, /*#__PURE__*/React.createElement("b", null, "how to read"), isApproval ? " \xB7 one dot per published poll, the line is the weighted rolling average. The bar above the chart is the daily margin, above the rule when approval leads and below it when disapproval does." : " \xB7 one dot per published poll, the line is the weighted rolling average. The bar above the chart is the daily margin, above the rule for a Democratic lead and below it for a Republican one.")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), isApproval ? " \xB7 hollow marks are single polls, the solid line is the average, the bar above is the daily margin off the rule." : " \xB7 hollow marks are single polls, the solid line is the average, the bar above is the daily margin off the rule.")), /*#__PURE__*/React.createElement("div", {
     className: "pollsListWrap"
   }, /*#__PURE__*/React.createElement("div", {
     className: "pollsListHead"
@@ -1880,7 +1873,7 @@ function PollsRaceSection(_ref23) {
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
     className: "t-how"
-  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 each polled state is filled toward the party leading its poll average, darker with the margin; a state inside two points is overprinted. States with no polling stay paper."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 fill leans to the leading party and darkens with the margin, a race inside two points is overprinted, an unpolled state stays paper."), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
   }, !ready ? "loading polls" : "click a state to read its polls")), /*#__PURE__*/React.createElement("div", {
     className: "probBlock"
@@ -2067,7 +2060,7 @@ function MethodologyView() {
     className: "methTableWrap"
   }, /*#__PURE__*/React.createElement("table", {
     className: "methTableA"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Rating"), /*#__PURE__*/React.createElement("th", null, "Margin"), /*#__PURE__*/React.createElement("th", null, "Description"))), /*#__PURE__*/React.createElement("tbody", null, RTG_TABLE_ROWS.map(function (r, i) {
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "rating"), /*#__PURE__*/React.createElement("th", null, "margin"), /*#__PURE__*/React.createElement("th", null, "description"))), /*#__PURE__*/React.createElement("tbody", null, RTG_TABLE_ROWS.map(function (r, i) {
     var margins = [">15", "7.5–15", "2.5–7.5", "<2.5", "2.5–7.5", "7.5–15", ">15"];
     return /*#__PURE__*/React.createElement("tr", {
       key: r.key
@@ -2095,7 +2088,7 @@ function MethodologyView() {
   }, "Theo"), " \xB7 2026"));
 }
 var PROJECTS = [{
-  label: "Projects",
+  label: "projects",
   items: [{
     url: "fundraising-comparison.html",
     kicker: "Texas Senate '26",
@@ -2143,7 +2136,7 @@ var PROJECTS = [{
     title: "Texas income to swing, 2020 and 2024"
   }]
 }, {
-  label: "Election Coverage",
+  label: "election coverage",
   items: [{
     url: "#",
     title: "GA 14 jungle primary"
@@ -2177,7 +2170,7 @@ function ProjectCard(_ref24) {
     }, m);
   }), /*#__PURE__*/React.createElement("span", {
     className: "projCardAOpen"
-  }, "Open \u2192")));
+  }, "Open \u203A")));
 }
 function ProjectsView() {
   return /*#__PURE__*/React.createElement("div", {
@@ -2248,6 +2241,10 @@ function TopBar(_ref25) {
     try {
       localStorage.setItem("theo-theme", theme);
     } catch (e) {}
+    // The figures paint their inks imperatively, so they have to be told.
+    if (typeof window.__repaintFigures === "function") {
+      requestAnimationFrame(function () { window.__repaintFigures(); });
+    }
   }, [theme]);
   return /*#__PURE__*/React.createElement("div", {
     className: "top"
@@ -2285,9 +2282,6 @@ function TopBar(_ref25) {
   })), /*#__PURE__*/React.createElement("div", {
     className: "actions"
   }, /*#__PURE__*/React.createElement("button", {
-    className: "iconbtn",
-    title: "Percent"
-  }, "%"), /*#__PURE__*/React.createElement("button", {
     className: "iconbtn",
     title: theme === "dark" ? "Light mode" : "Dark mode",
     onClick: function onClick() {
