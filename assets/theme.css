@@ -114,6 +114,13 @@
   --t-sp-4:16px;
   --t-sp-5:22px;
   --t-sp-6:32px;
+
+  /* ---- control height -------------------------------------------------- */
+  /* [2.12] Every control in the masthead is this tall, and nothing in the
+     masthead sets a height any other way. scripts/check-tokens.mjs asserts
+     it, because a masthead where the button and the toggle disagree by two
+     pixels is the kind of thing nobody sees and everybody feels. */
+  --t-control-h:32px;
 }
 
 /* Night is the same system inverted: ink ground, paper type, one palette.
@@ -213,10 +220,20 @@
 /* ======================================================================
    3 · THE GROUND
    ====================================================================== */
-html, body{
-  background:var(--t-paper);
-  color:var(--t-ink);
+/* The ground is the paper and nothing is painted on it. baseline.html washes
+   the body with an indigo and a red radial gradient, swaps in a near-black
+   of its own on the ink ground, and carries a `data-bg` texture layer in a
+   body::before besides — all leftovers of the sheet this replaced, and all
+   declared !important there, which is why they are answered in kind here.
+   A ground with a colour in it is a ground competing with the data. */
+html, body{color:var(--t-ink);}
+/* Doubled :root so this outranks html[data-theme="dark"] body, which is
+   where the wash and the near-black are declared. */
+:root:root, :root:root body{
+  background-color:var(--t-paper) !important;
+  background-image:none !important;
 }
+body::before{content:none !important;}
 body{
   font-family:var(--t-data);
   /* Tabular is the default because almost everything here is a figure in a
@@ -256,11 +273,25 @@ body{
    ====================================================================== */
 /* The slab: the masthead's rule is a 9px bar of ink, so the two never stack
    and nothing can slide under it. */
+/* [2.2] The masthead is one rule, not one per page. The app, the landing
+   sheet and the standalone analyses all write .top > .brand + .nav +
+   .actions and read this block. The landing sheet used to carry a second
+   copy under its own class name, which is how two mastheads drift. The
+   layout lives here rather than in the app's own sheet so a page that is
+   not the app still gets it. */
 .top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--t-sp-5);
+  flex-wrap:wrap;
   border-bottom:var(--t-w-slab) solid var(--t-ink);
   padding-bottom:var(--t-sp-3);
   margin-bottom:var(--t-sp-5);
 }
+.brand{display:flex;}
+.nav{display:flex;align-items:center;}
+.actions{display:flex;align-items:center;}
 .brand{font-family:var(--t-data);gap:var(--t-sp-2);}
 .brand .name{
   font-family:var(--t-data);
@@ -275,43 +306,90 @@ body{
   font-size:var(--t-fs-2);font-weight:500;
   color:var(--t-muted);
 }
+/* [2.16] Nine labels only fit on one line if each costs what it is worth.
+   The padding was 12px a side for a 14.5px label — more air than type. */
 .nav a{
   font-family:var(--t-data);
   font-size:var(--t-fs-3);
   font-weight:500;
   color:var(--t-muted);
-  padding:6px 10px;
+  padding:6px 9px;
+  line-height:1.35;      /* [2.4] the nav's line box, shared with the brand */
+  white-space:nowrap;
+  /* Every label reserves the active rule's room, so marking one moves none. */
+  border-bottom:var(--t-w-contour) solid transparent;
 }
-.nav a:hover{color:var(--t-ink);}
-.nav a.active{color:var(--t-ink);font-weight:700;border-bottom-color:var(--t-ink);}
-/* The system's separator is typographic, never a drawn pictogram. */
+/* [2.7] Hover is a change of weight, not of colour — and the label reserves
+   its own bold width in a zero-height copy of itself, so going bold moves
+   nothing. Colour in this system means a datum; a nav label is not one. */
+.nav a{position:relative;}
+.nav a::after{
+  content:attr(data-label);
+  display:block;height:0;overflow:hidden;
+  font-weight:700;visibility:hidden;pointer-events:none;
+}
+.nav a:hover{color:var(--t-ink);font-weight:700;}
+/* [2.6] The active tab is marked by a rule, which reads across a room. The
+   weight and the ink are what make the rule's label match it. */
+.nav a.active{
+  color:var(--t-ink);font-weight:700;
+  border-bottom-color:var(--t-ink);
+}
+/* [2.8] The system's separator is the typographic middot, never a drawn
+   pictogram — and the markup already carries the character, so this rule
+   only has to stop styling it as a dot. It used to add a second middot in
+   a ::before, which set every separator twice in every tab. */
 .nav .dot{
   width:auto;height:auto;background:transparent;
   color:var(--t-hair);padding:0 1px;
 }
-.nav .dot::before{content:"\00B7";}
 
 .actions{gap:var(--t-sp-2);align-items:center;}
+/* [2.9] The ground toggle names the ground it will switch to. It used to be
+   a sun and a crescent — two pictograms in a system that has none, and two
+   that a reader has to guess at besides. A word does not need a legend. */
 .iconbtn{
-  border:1px solid var(--t-ink);
+  border:var(--t-w-contour) solid var(--t-ink);
   color:var(--t-ink);
   background:transparent;
   font-family:var(--t-data);
   font-weight:700;font-size:var(--t-fs-2);
-  width:32px;height:32px;
+  height:var(--t-control-h);padding:0 10px;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
 }
-.iconbtn:hover{background:var(--t-ink);color:var(--t-paper);}
+/* [2.11] Donate is the masthead's one reversed element, at rest and on
+   hover alike, so hover here is a weight of rule rather than a fill. */
+.iconbtn:hover{background:var(--t-paper-2);}
 .donate, .donateBtn{
   background:var(--t-ink);color:var(--t-paper);
   border:1px solid var(--t-ink);
   font-family:var(--t-data);font-weight:700;
-  font-size:var(--t-fs-3);height:32px;padding:0 16px;line-height:1;
+  font-size:var(--t-fs-3);height:var(--t-control-h);padding:0 16px;line-height:1;
+  /* It is a <button> in the app and an <a> on the landing sheet; it has to
+     look the same either way. */
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;
 }
 .donate:hover, .donateBtn:hover{background:var(--t-ink2);}
 :where(button, a, input, select, textarea):focus-visible{
   outline:1px solid var(--t-ink);
   outline-offset:2px;
 }
+/* [2.14] The skip link is the first thing in the tab order and invisible
+   until it is the thing being tabbed to. It is drawn in the system: a
+   reversed slab, no radius, no shadow, no animation. */
+.skiplink{
+  position:absolute;left:var(--t-sp-4);top:var(--t-sp-2);
+  z-index:100;
+  transform:translateY(-200%);
+  background:var(--t-ink);color:var(--t-paper);
+  border:var(--t-w-contour) solid var(--t-ink);
+  font-family:var(--t-data);font-weight:700;font-size:var(--t-fs-2);
+  padding:8px 12px;text-decoration:none;
+}
+.skiplink:focus{transform:none;}
+#main:focus{outline:none;}
+#main:focus-visible{outline:var(--t-w-contour) solid var(--t-ink);outline-offset:4px;}
 
 .foot{
   font-family:var(--t-data);
@@ -1074,8 +1152,10 @@ input[type="range"]::-moz-range-thumb{
     display:inline-flex;
     align-items:center;
   }
-  .iconbtn{width:44px;height:44px;}
-  .donate, .donateBtn{height:44px;}
+  /* [2.12] The masthead's controls stay one height; on a phone that height
+     is the touch target. Rebinding the token is how it moves — no control
+     sets a height of its own. */
+  :root{--t-control-h:44px;}
   /* [22] The nav scrolls on one line instead of stacking seven ragged rows
      ahead of the data. */
   .nav{
@@ -1084,15 +1164,28 @@ input[type="range"]::-moz-range-thumb{
     justify-content:flex-start;
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
+    min-width:0;
   }
   .nav::-webkit-scrollbar{display:none;}
   .nav a{white-space:nowrap;padding:10px 8px;}
-  /* The nav is the only part allowed to shrink and scroll; the sheet itself
-     never scrolls sideways. */
-  .nav{min-width:0;flex:1 1 auto;}
-  .top{flex-wrap:nowrap;gap:10px;align-items:center;max-width:100%;}
-  .brand{flex:0 0 auto;min-width:0;}
-  .actions{flex:0 0 auto;}
+  /* [2.16] On the phone the nav takes its own row, as it does at tablet.
+     Squeezed between the wordmark and two controls it had 150px of the 330
+     on offer, which cut the third label in half against the toggle's
+     keyline and read as damage rather than as a scroll. On its own row it
+     shows four labels and the fifth clipped at the sheet's edge, which is
+     what a scroll looks like. The sheet itself never scrolls sideways. */
+  .top{
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-areas:"brand actions" "nav nav";
+    align-items:center;
+    column-gap:10px;
+    row-gap:var(--t-sp-1);
+    max-width:100%;
+  }
+  .brand{grid-area:brand;min-width:0;}
+  .actions{grid-area:actions;justify-self:end;}
+  .nav{grid-area:nav;}
   .sheet, .wrap, body{overflow-x:hidden;}
 }
 
@@ -1102,16 +1195,113 @@ input[type="range"]::-moz-range-thumb{
 @media (min-width:981px){.pollsListHost td:nth-child(2){max-width:22ch;}}
 
 /* [15] The masthead's controls sit on one height. */
-.iconbtn, .donate, .donateBtn{height:32px;}
-.iconbtn{width:32px;}
+/* The height token is the box, keyline included: baseline.html resets
+   box-sizing and the landing sheet does not, which made the same control two
+   pixels taller on one page than the other. */
+.iconbtn, .donate, .donateBtn{height:var(--t-control-h);box-sizing:border-box;}
 
-/* [16][25] The nav is centred on the sheet, not on what is left of it. */
-@media (min-width:761px){
-  .top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
-  .brand{justify-self:start;}
-  .nav{justify-self:center;flex-wrap:wrap;justify-content:center;}
-  .actions{justify-self:end;}
+/* ======================================================================
+   13 · THE MASTHEAD  (chapter 2)
+   ====================================================================== */
+
+/* [2.1] The masthead's canonical content is four things in reading order:
+   wordmark, tagline, nav, actions. Everything past this is removal.
+
+   [2.2] And it is one rule, not one per page. The app, the landing sheet and
+   the standalone analyses all write the same markup — .top > .brand + .nav +
+   .actions — and read this block. The landing sheet used to carry a second
+   copy under its own class name, which is how two mastheads drift. The
+   layout lives here rather than in the app's own sheet so a page that is not
+   the app still gets it. */
+/* [2.16] The nav's nine labels want 750px of line. There are exactly two
+   honest ways to set that: on the middle of a three-column line when the
+   sheet is wide enough to hold brand + nav + actions, and on a line of its
+   own when it is not. What it must never do is wrap to three ragged rows
+   inside a flex row, which is what it did between 768 and 1100 — the widths
+   where vertical space is scarcest. */
+@media (min-width:1200px){
+  .top{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:baseline;      /* [2.4] one baseline for brand and nav */
+    column-gap:var(--t-sp-4);
+  }
+  /* Placed by column rather than by source order, so a masthead without a
+     nav — the landing sheet, an analysis — still puts its actions at the
+     right-hand edge instead of in the middle. */
+  .brand{grid-column:1;justify-self:start;min-width:0;}
+  .nav{
+    grid-column:2;
+    justify-self:center;
+    flex-wrap:nowrap;
+    justify-content:center;
+    min-width:0;
+  }
+  /* The controls are boxes, not text, so they centre rather than sit on the
+     baseline the type uses. */
+  .actions{grid-column:3;justify-self:end;align-self:center;}
 }
+
+/* [2.4] Between 761 and 1199 the nav is wider than the gap left between the
+   brand and the actions, so it takes the second line whole and centres on
+   the sheet. Two deliberate rows beat three accidental ones. */
+@media (min-width:761px) and (max-width:1199px){
+  .top{
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-areas:"brand actions" "nav nav";
+    align-items:center;
+    column-gap:var(--t-sp-4);
+    row-gap:var(--t-sp-2);
+  }
+  .brand{grid-area:brand;justify-self:start;min-width:0;}
+  .actions{grid-area:actions;justify-self:end;}
+  .nav{
+    grid-area:nav;
+    justify-self:center;
+    max-width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+    row-gap:var(--t-sp-1);
+  }
+}
+
+/* [2.16] Between 761 and 899 the nav's own row is 47px short of holding all
+   nine labels, which wraps two of them onto a lonely third line. The 47px
+   is bought back from the label padding: the middots already separate the
+   labels, so the air between them was doing nothing the type was not. */
+@media (min-width:761px) and (max-width:899px){
+  .nav a{padding:6px 5px;}
+  .nav .dot{padding:0;}
+}
+
+/* [2.5] The tagline survives wherever the brand has a line it does not have
+   to share — down to 761, where the two-row masthead gives it one. Below
+   that it is competing with the actions for 330px, and it is the wordmark
+   said twice, so it goes. It never wraps: a three-line tagline is what a
+   wrapping tagline looks like, and it doubled the masthead's height at
+   1024. */
+.brand .tag{white-space:nowrap;}
+@media (max-width:760px){
+  .brand .sep, .brand .tag{display:none;}
+}
+
+/* [2.4] Brand and nav share a baseline: the wordmark's box is set to the
+   nav's own line box so the two read as one line rather than two. */
+.brand{align-items:baseline;}
+.brand .name{line-height:1.35;}
+
+/* [2.3] The slab is the masthead's only bottom rule. Nothing else may draw
+   one under it. */
+.top{border-top:0;}
+.top + *{border-top:0;}
+
+/* [2.15] The masthead does not stick. It is 53px and a 9px slab at desktop
+   and 93px at tablet, and sticking it would park that slab over the figure
+   a reader is reading for the whole of every scroll. The nav is nine links
+   at the top of a page that is rarely more than two screens; the cost of
+   scrolling back is smaller than the cost of never getting the space. */
+.top{position:static;}
 
 /* [10] A title measure that fits the column it lives in. */
 .pollsView .secTitle{max-width:none;}

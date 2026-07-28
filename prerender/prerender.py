@@ -102,6 +102,14 @@ def _head_injection(route: dict, build_iso: str) -> str:
         f'<meta property="og:description" content="{html.escape(description, quote=True)}">',
         f'<meta property="og:url" content="{canonical}">',
         '<meta property="og:type" content="website">',
+        # [2.22] The broadcast card is drawn in the system by
+        # scripts/build_icons.py, not screenshotted from the app.
+        f'<meta property="og:image" content="{SITE_ORIGIN}/preview.png">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        '<meta property="og:image:alt" content="Theo, election forecast: '
+        'two reads on the same cycle.">',
+        '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="prerender-build" content="{build_iso}">',
         # Inline boot hint so React hydrates onto the right tab at runtime.
         f'<script>window.__INITIAL_TAB={json.dumps(initial_tab)};</script>',
@@ -119,8 +127,13 @@ _EXISTING_META_DESC_RE = re.compile(
     r'<meta[^>]+name=["\']description["\'][^>]*>', re.IGNORECASE
 )
 _EXISTING_OG_RE = re.compile(
-    r'<meta[^>]+property=["\']og:(?:title|description|url|type)["\'][^>]*>',
+    r'<meta[^>]+property=["\']og:'
+    r'(?:title|description|url|type|image|image:width|image:height|image:alt)'
+    r'["\'][^>]*>',
     re.IGNORECASE,
+)
+_EXISTING_TWITTER_RE = re.compile(
+    r'<meta[^>]+name=["\']twitter:card["\'][^>]*>', re.IGNORECASE
 )
 
 
@@ -132,6 +145,7 @@ def _inject_head(rendered_html: str, head_block: str) -> str:
     cleaned = _EXISTING_CANONICAL_RE.sub("", cleaned, count=1)
     cleaned = _EXISTING_META_DESC_RE.sub("", cleaned, count=1)
     cleaned = _EXISTING_OG_RE.sub("", cleaned)
+    cleaned = _EXISTING_TWITTER_RE.sub("", cleaned)
     match = _HEAD_OPEN_RE.search(cleaned)
     if not match:
         raise RuntimeError("No <head> tag found in rendered HTML.")

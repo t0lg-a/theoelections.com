@@ -14,6 +14,8 @@
  *   4. Every --t-* token that is read is defined.
  *   5. Every token defined for the light ground has a dark counterpart or is
  *      explicitly ground-independent.
+ *   6. No masthead control declares a height of its own: they all take
+ *      --t-control-h, so the row cannot drift by two pixels.
  */
 
 import { readFileSync, readdirSync, statSync } from "node:fs";
@@ -45,7 +47,7 @@ const PENDING_CONVERSION = new Set([
 
 // Tokens that are the same on either ground, by design.
 const GROUND_INDEPENDENT = new Set([
-  "--t-d1", "--t-d2", "--t-d5", "--t-data", "--t-prose",
+  "--t-d1", "--t-d2", "--t-d5", "--t-data", "--t-prose", "--t-control-h",
   "--t-w-hair", "--t-w-rule", "--t-w-contour", "--t-w-slab",
   "--t-fs-1", "--t-fs-2", "--t-fs-3", "--t-fs-4",
   "--t-fs-5", "--t-fs-6", "--t-fs-7", "--t-fs-8",
@@ -124,6 +126,26 @@ for (const t of [...read].sort()) {
   for (const t of [...defined].sort()) {
     if (dark.has(t) || GROUND_INDEPENDENT.has(t)) continue;
     failures.push(`${THEME} token ${t} has no dark counterpart and is not listed as ground-independent`);
+  }
+}
+
+/* 6 · one height for every masthead control -------------------------------- */
+{
+  // The masthead's controls: the ground toggle and the two Donate buttons.
+  const CONTROLS = /(^|[\s,}])\.(iconbtn|donate|donateBtn)\b/;
+  css.split("\n").forEach((line, i) => {
+    const bare = line.split("/*")[0];
+    if (!CONTROLS.test(bare)) return;
+    // The declaration may sit on the selector's own line in this sheet.
+    const block = bare.slice(bare.indexOf("{") + 1);
+    const h = block.match(/(?:^|[;{\s])height\s*:\s*([^;}]+)/);
+    if (h && !/var\(\s*--t-control-h\s*\)/.test(h[1])) {
+      failures.push(
+        `${THEME}:${i + 1} masthead control sets its own height — ${h[1].trim()}`);
+    }
+  });
+  if (!/--t-control-h\s*:/.test(css)) {
+    failures.push(`${THEME} --t-control-h is not defined`);
   }
 }
 

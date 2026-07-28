@@ -1,0 +1,15 @@
+{
+  "name": "Theo · Election Forecast",
+  "short_name": "Theo",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#E9E8E0",
+  "theme_color": "#E9E8E0",
+  "icons": [
+    { "src": "/assets/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/favicon.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

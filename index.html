@@ -4,14 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Theo · Election Forecast 2026</title>
-<link rel="icon" href="favicon.png">
+<!-- [2.19][2.20] The mark is drawn in the system: scripts/build_icons.py
+     rasterises assets/icon.svg for the sizes that cannot take an SVG. -->
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="canonical" href="/">
+<meta name="theme-color" content="#E9E8E0" data-ground>
+<script src="assets/ground.js"></script>
 <meta name="description" content="Pick a 2026 election forecast model: the precinct-level VoteHub structural model, or the polling-focused personal baseline.">
 <meta property="og:title" content="Theo · Election Forecast 2026">
 <meta property="og:description" content="Pick a 2026 election forecast model: VoteHub (precinct-level) or the polling-focused personal baseline.">
-<meta property="og:image" content="preview.png">
+<meta property="og:image" content="https://theoelections.com/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Theo, election forecast: two reads on the same cycle.">
+<meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="assets/theme.css?v=2">
+<link rel="stylesheet" href="assets/theme.css?v=3">
 <link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -21,26 +32,14 @@
   .sheet{
     max-width: 1040px;
     margin: 0 auto;
-    padding: 0 20px 72px;
+    padding: 22px 20px 72px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
-  /* Masthead, closed by the slab. */
-  .mast{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 12px 0 10px;
-    border-bottom: 9px solid var(--t-ink);
-    font-family: var(--t-data);
-    font-size: var(--t-fs-2);
-    font-weight: 500;
-    color: var(--t-muted);
-  }
-  .mast b{ font-weight: 700; font-size: var(--t-fs-5); letter-spacing: -.02em; color: var(--t-ink); }
+  /* [2.2][2.16] The masthead is assets/theme.css's .top, unmodified: the
+     sheet's own top inset is what puts it where the app's sits. */
 
   /* Hero: kicker, then the finding at display weight. */
   .hero{
@@ -194,7 +193,7 @@
   }
 
   @media (max-width: 760px){
-    .sheet{ padding: 0 16px 48px; }
+    .sheet{ padding: 22px 16px 48px; }
     .hero{ padding: 30px 0 20px; margin-bottom: 22px; }
     .cols{ grid-template-columns: 1fr; }
     .colRule{ display: none; }
@@ -203,13 +202,22 @@
 </style>
 </head>
 <body>
+<a class="skiplink" href="#main">Skip to the findings</a>
 <div class="sheet">
 
-  <header class="mast">
-    <span><b>Theo</b> · Election Forecast</span>
-    <span>2026 Cycle</span>
+  <header class="top">
+    <div class="brand">
+      <span class="name">Theo</span>
+      <span class="sep">·</span>
+      <span class="tag">Election Forecast '26</span>
+    </div>
+    <div class="actions">
+      <button class="iconbtn" type="button" data-ground-toggle>dark</button>
+      <a class="donate" href="https://buymeacoffee.com/the0" target="_blank" rel="noopener">Donate</a>
+    </div>
   </header>
 
+  <main id="main" tabindex="-1">
   <section class="hero">
     <div class="heroKicker">methods</div>
     <h1 class="heroTitle">Two reads on the same cycle.</h1>
@@ -251,6 +259,7 @@
     </div>
 
   </section>
+  </main>
 
   <footer class="foot">
     <span>Updated daily during the cycle</span>

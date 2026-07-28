@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Theo">
+  <!-- [2.19] The mark is cut from the system, not photographed from the app:
+       the ink ground, the wordmark's initial, and the masthead's slab. The
+       slab is 1px at 16px and 9px at 144px, which is the same rule the
+       masthead draws, so the tab and the page agree. -->
+  <title>Theo</title>
+  <rect width="64" height="64" fill="#16171A"/>
+  <path fill="#E9E8E0" d="M11 14h42v9H37.6v25.5h-11.2V23H11z"/>
+  <rect x="11" y="53" width="42" height="4" fill="#E9E8E0"/>
+</svg>

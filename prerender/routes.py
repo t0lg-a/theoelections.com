@@ -22,7 +22,7 @@ Add or rename routes here only; the prerender script reads this file.
 """
 
 SITE_ORIGIN = "https://theoelections.com"
-DEFAULT_TITLE_SUFFIX = " | theoelections.com"
+DEFAULT_TITLE_SUFFIX = " · Theo · Election Forecast"
 
 
 def _default_title(page_name: str) -> str:
@@ -37,8 +37,9 @@ ALMANAC_ROUTES = [
         "page_name": "Model",
         "title": _default_title("Model"),
         "description": (
-            "Daily forecast for the 2026 Senate, Governor, and House races. "
-            "Win probabilities, expected seats, and simulation histograms."
+            "The daily forecast for the 2026 Senate, Governor and House "
+            "races: win probabilities, expected seats, the seat histogram, "
+            "and the map behind each."
         ),
     },
     {
@@ -47,8 +48,9 @@ ALMANAC_ROUTES = [
         "page_name": "Ratings",
         "title": _default_title("Ratings"),
         "description": (
-            "Race ratings across the 2026 Senate, Governor, and House maps: "
-            "Safe, Likely, Lean, and Tossup, drawn from the daily forecast."
+            "Race ratings across the 2026 Senate, Governor and House maps — "
+            "Safe, Likely, Lean and Tossup — drawn from the daily forecast "
+            "rather than assigned by hand."
         ),
     },
     {
@@ -56,7 +58,11 @@ ALMANAC_ROUTES = [
         "tab": "Florida",
         "page_name": "Florida",
         "title": _default_title("Florida"),
-        "description": None,  # TODO: write a Florida-specific description (140-160 chars).
+        "description": (
+            "Florida's mid-decade congressional redistricting, district by "
+            "district: the old lines, the new lines, and what each seat did "
+            "the last time it was asked."
+        ),
     },
     {
         "slug": "polls",
@@ -64,8 +70,9 @@ ALMANAC_ROUTES = [
         "page_name": "Polls",
         "title": _default_title("Polls"),
         "description": (
-            "Tracked polls for the 2026 cycle: generic ballot, Senate races, "
-            "and gubernatorial races, with state-by-state polling charts."
+            "Every tracked poll of the 2026 cycle: the generic ballot, the "
+            "Senate races and the governor races, with a state-by-state "
+            "chart and the full polling record."
         ),
     },
     {
@@ -74,8 +81,9 @@ ALMANAC_ROUTES = [
         "page_name": "Swingometer",
         "title": _default_title("Swingometer"),
         "description": (
-            "Drag a national vote share and watch the 2026 Senate, Governor, "
-            "and House maps swing. Live what-if for the U.S. midterm map."
+            "Drag a national vote share and watch the 2026 Senate, Governor "
+            "and House maps swing with it — a live what-if over the whole "
+            "midterm map, seat by seat."
         ),
     },
     {
@@ -83,14 +91,22 @@ ALMANAC_ROUTES = [
         "tab": "Past Elections",
         "page_name": "Past Elections",
         "title": _default_title("Past Elections"),
-        "description": None,  # TODO: write a Past Elections description (140-160 chars).
+        "description": (
+            "How the forecast finished against the result, cycle by cycle: "
+            "the past Senate, Governor and House calls set beside what "
+            "actually happened on the night."
+        ),
     },
     {
         "slug": "state-legs",
         "tab": "State Legs.",
         "page_name": "State Legislatures",
         "title": _default_title("State Legislatures"),
-        "description": None,  # TODO: write a State Legislatures description (140-160 chars).
+        "description": (
+            "Party control of all ninety-nine state legislative chambers, "
+            "with the House, Senate and split-control maps and what the "
+            "2026 cycle puts on the table."
+        ),
     },
     {
         "slug": "projects",
@@ -98,8 +114,9 @@ ALMANAC_ROUTES = [
         "page_name": "Projects",
         "title": _default_title("Projects"),
         "description": (
-            "Standalone analyses, dashboards, and election-night coverage "
-            "from theoelections.com. An index of one-off election projects."
+            "Standalone analyses, dashboards and election-night coverage "
+            "from theoelections.com — an index of the one-off projects that "
+            "sit outside the daily forecast."
         ),
     },
     {
@@ -108,8 +125,9 @@ ALMANAC_ROUTES = [
         "page_name": "Methodology",
         "title": _default_title("Methodology"),
         "description": (
-            "How the theoelections.com forecast works: signals, weighting, "
-            "corrections, simulation, and the forecast-vs-nowcast distinction."
+            "How the theoelections.com forecast works: the signals it reads, "
+            "the weighting it applies, the corrections it makes, and how the "
+            "simulation is run."
         ),
     },
 ]
@@ -124,14 +142,14 @@ STATIC_ROUTES = [
     },
     {
         "url_path": "/primary_turnout_combined.html",
-        "title": "Primary turnout, combined",
+        "title": "Primary turnout · Theo · Election Forecast",
     },
     {
         "url_path": "/nationalization-2.html",
-        "title": "Nationalization 2",
+        "title": "Nationalization · Theo · Election Forecast",
     },
     {
         "url_path": "/fundraising-comparison.html",
-        "title": "Fundraising comparison",
+        "title": "Texas Senate fundraising · Theo · Election Forecast",
     },
 ]

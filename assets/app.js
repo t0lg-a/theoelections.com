@@ -2226,8 +2226,12 @@ function TopBar(_ref25) {
   var activeTab = _ref25.activeTab,
     setActiveTab = _ref25.setActiveTab;
   var tabs = ["Model", "Ratings", "Florida", "Polls", "Swingometer", "Past Elections", "State Legs.", "Projects", "Methodology"];
+  // [2.2] assets/ground.js already decided the ground before the first paint
+  // and owns the attribute, the store and the browser-chrome colour. React
+  // reads its answer rather than keeping a second one.
   var _useState35 = useState(function () {
       try {
+        if (window.__ground) return window.__ground.get();
         return localStorage.getItem("theo-theme") || "light";
       } catch (e) {
         return "light";
@@ -2237,10 +2241,14 @@ function TopBar(_ref25) {
     theme = _useState36[0],
     setTheme = _useState36[1];
   useEffect(function () {
-    document.documentElement.setAttribute("data-theme", theme);
-    try {
-      localStorage.setItem("theo-theme", theme);
-    } catch (e) {}
+    if (window.__ground) {
+      window.__ground.set(theme);
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+      try {
+        localStorage.setItem("theo-theme", theme);
+      } catch (e) {}
+    }
     // The figures paint their inks imperatively, so they have to be told.
     if (typeof window.__repaintFigures === "function") {
       requestAnimationFrame(function () { window.__repaintFigures(); });
@@ -2268,6 +2276,8 @@ function TopBar(_ref25) {
     }, "\xB7"), /*#__PURE__*/React.createElement("a", {
       className: activeTab === t ? "active" : "",
       href: href,
+      "data-label": t,
+      "aria-current": activeTab === t ? "page" : undefined,
       onClick: function onClick(e) {
         if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1 || e.button === 2)) return;
         if (e && typeof e.preventDefault === "function") e.preventDefault();
@@ -2283,12 +2293,16 @@ function TopBar(_ref25) {
     className: "actions"
   }, /*#__PURE__*/React.createElement("button", {
     className: "iconbtn",
-    title: theme === "dark" ? "Light mode" : "Dark mode",
+    type: "button",
+    "aria-label": theme === "dark" ? "Switch to the light ground" : "Switch to the dark ground",
+    "aria-pressed": theme === "dark",
+    title: theme === "dark" ? "Light ground" : "Dark ground",
     onClick: function onClick() {
       return setTheme(theme === "dark" ? "light" : "dark");
     }
-  }, theme === "dark" ? "☀" : "☾"), /*#__PURE__*/React.createElement("button", {
+  }, theme === "dark" ? "light" : "dark"), /*#__PURE__*/React.createElement("button", {
     className: "donate",
+    type: "button",
     onClick: function onClick() {
       return window.open("https://buymeacoffee.com/the0", "_blank");
     }
@@ -2520,10 +2534,16 @@ function App() {
       className: "comingSoonSub"
     }, "Not yet wired in this build."));
   }
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(TopBar, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("a", {
+    className: "skiplink",
+    href: "#main"
+  }, "Skip to the findings"), /*#__PURE__*/React.createElement(TopBar, {
     activeTab: activeTab,
     setActiveTab: setActiveTab
-  }), viewContent, (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("main", {
+    id: "main",
+    tabIndex: -1
+  }, viewContent), (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("div", {
     className: "foot"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Updated"), " \xA0", foot.updated), /*#__PURE__*/React.createElement("span", {
     className: "sep"

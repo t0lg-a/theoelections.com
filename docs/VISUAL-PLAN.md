@@ -107,49 +107,125 @@ The chrome is the first thing rendered and the last thing anyone looks at.
 It should be quiet, aligned, and identical on every page including the ones
 that are not the app.
 
-1. Decide the masthead's canonical content: wordmark, tagline, nav, actions.
-   Write it down; everything else is removal.
-2. Set the wordmark once, in one place, and have the landing page and the app
-   read the same rule rather than two copies.
-3. Verify the slab is the masthead's only bottom rule at every width, with no
-   second hairline anywhere near it.
-4. Align the brand baseline to the nav baseline at every width, including the
-   1024 two-row wrap.
-5. Decide whether the tagline survives below 900px or is dropped; implement.
-6. Give the active nav item a rule, not a colour, and check it reads at a
-   glance from two metres.
-7. Give nav hover a weight change rather than a colour change, and confirm it
-   does not shift layout.
-8. Set the nav separator as the typographic middot everywhere, and confirm no
-   drawn dot survives in any tab.
-9. Decide the theme toggle's glyph: currently a moon and a sun. Replace with
-   a typographic mark or a word, per the no-pictogram rule.
-10. Give the theme toggle an accessible name and a pressed state.
-11. Make the Donate button the single reversed element in the masthead and
-    confirm nothing else competes.
-12. Set one height for every masthead control and assert it in the checker.
-13. Give the whole masthead a visible focus order that matches its reading
-    order; tab through it and record the sequence.
-14. Add a skip link to the first figure, styled in the system, visible only
-    on focus.
-15. Decide whether the masthead sticks on scroll; if yes, give it a rule that
-    only appears once the page has moved.
-16. Verify the masthead on the landing page, which uses its own markup, now
-    matches the app's to the pixel.
-17. Verify it on the three standalone project pages, which have never had it.
-18. Set the page title pattern for every route and check the browser tab text
-    for each.
-19. Replace the favicon with a mark cut from the system: a slab, not a
-    photograph.
-20. Add the apple-touch-icon and the maskable variant.
-21. Add `theme-color` for light and dark so the mobile browser chrome matches
-    the ground.
-22. Add the Open Graph image as a broadcast card drawn in the system rather
-    than a screenshot.
-23. Verify the OG card renders at 1200×630 with the finding legible at
-    thumbnail size.
-24. Take a masthead screenshot at 390, 768, 1024, 1440 and 1920 and put the
-    five in `docs/shots/` as the reference.
+1. [x] Written down in `assets/theme.css` §13 [2.1]: wordmark, tagline, nav,
+   actions, in that reading order. Everything past those four is removal.
+   Original step: Decide the masthead's canonical content: wordmark, tagline, nav, actions.
+    Write it down; everything else is removal.
+2. [x] `theme.css` owns `.top > .brand + .nav + .actions` — layout, slab and
+   type. The landing sheet writes the same markup and deleted its own copy;
+   its masthead is now 53px at 1440 and 65px at 390, the same as the app's.
+   Original step: Set the wordmark once, in one place, and have the landing page and the app
+    read the same rule rather than two copies.
+3. [x] `scripts/shoot_masthead.py` asserts `borderBottomWidth == 9px` on
+   `.top` at five widths on both grounds, and nothing else draws under it.
+   Original step: Verify the slab is the masthead's only bottom rule at every width, with no
+    second hairline anywhere near it.
+4. [x] Brand and nav share one 1.35 line box. The 1024 wrap is gone: the nav
+   takes its own row from 761 to 1199 rather than wrapping ragged inside a
+   flex row.
+   Original step: Align the brand baseline to the nav baseline at every width, including the
+    1024 two-row wrap.
+5. [x] It survives to 761, where the two-row masthead gives the brand a line
+   it does not have to share, and is dropped below. It never wraps: it used
+   to set three lines at 1024 and take the masthead to 81px.
+   Original step: Decide whether the tagline survives below 900px or is dropped; implement.
+6. [x] A 2px ink rule, reserved as transparent on every label so marking one
+   moves none.
+   Original step: Give the active nav item a rule, not a colour, and check it reads at a
+    glance from two metres.
+7. [x] Hover is 700 weight. Each label reserves its own bold width in a
+   zero-height `::after` carrying `data-label`, so going bold shifts nothing.
+   Original step: Give nav hover a weight change rather than a colour change, and confirm it
+    does not shift layout.
+8. [x] The markup already carried the middot and the sheet drew a second one
+   in a `::before`, so every separator was set twice. The `::before` is gone;
+   `drawnDots` is asserted at 0.
+   Original step: Set the nav separator as the typographic middot everywhere, and confirm no
+    drawn dot survives in any tab.
+9. [x] It is the word `dark` or `light` — the ground it will switch to. The
+   sun and the crescent were two pictograms in a system that has none.
+   Original step: Decide the theme toggle's glyph: currently a moon and a sun. Replace with
+    a typographic mark or a word, per the no-pictogram rule.
+10. [x] `aria-label="Switch to the … ground"` and `aria-pressed`, in the app
+    and in `assets/ground.js` for the pages without React.
+    Original step: Give the theme toggle an accessible name and a pressed state.
+11. [x] Donate is the only reversed element at rest and on hover; the toggle
+    hovers to `--t-paper-2` rather than filling with ink.
+    Original step: Make the Donate button the single reversed element in the masthead and
+     confirm nothing else competes.
+12. [x] `--t-control-h`, 32px and 44px on a phone by rebinding the token.
+    `check-tokens.mjs` rule 6 fails the build on a control that sets its own
+    height.
+    Original step: Set one height for every masthead control and assert it in the checker.
+13. [x] Tabbed and recorded: skip link, the nine nav labels in reading order,
+    the ground toggle, Donate, then the first control in the sheet.
+    Original step: Give the whole masthead a visible focus order that matches its reading
+     order; tab through it and record the sequence.
+14. [x] `.skiplink` — first in the tab order, off-canvas until focused, drawn
+    as a reversed slab. `#main` is the target on both the app and the landing.
+    Original step: Add a skip link to the first figure, styled in the system, visible only
+     on focus.
+15. [x] Decided: it does not stick. It is 53px and a 9px slab at desktop and
+    93px at tablet, and sticking it parks that slab over the figure being
+    read. Recorded in `theme.css` §13 [2.15].
+    Original step: Decide whether the masthead sticks on scroll; if yes, give it a rule that
+     only appears once the page has moved.
+16. [x] It does, measured: 53px at 1440 and 1920, 65px at 390, same rule and
+    same tokens. Two drifts were found doing it — the landing's Donate was an
+    `<a>` with an underline, and it was two pixels taller because that page
+    does not reset `box-sizing`.
+    Original step: Verify the masthead on the landing page, which uses its own markup, now
+     matches the app's to the pixel.
+17. [~] Partial, on purpose. The three analyses now carry the mark, the
+    browser-chrome colour, the card and the title pattern. The masthead
+    itself waits for Chapter 11: those pages still run their own palettes
+    under their own token names, and giving them the system's masthead
+    before converting the sheet would leave the worst of both on one page.
+    Original step: Verify it on the three standalone project pages, which have never had it.
+18. [x] One pattern everywhere: `<Page> · Theo · Election Forecast`, set in
+    `prerender/routes.py`. The three `None` descriptions were placeholders
+    that shipped; all nine are now written and every one lands in the
+    140–160 character target the module documents. The Methodology
+    description still promised a forecast-vs-nowcast distinction that was
+    deleted in the first task.
+    Original step: Set the page title pattern for every route and check the browser tab text
+     for each.
+19. [x] `assets/icon.svg`: the ink ground, the wordmark's initial and the
+    masthead's slab. It replaced a 58 kB crop of a Senate panel.
+    Original step: Replace the favicon with a mark cut from the system: a slab, not a
+     photograph.
+20. [x] `apple-touch-icon.png` at 180 and `assets/icon-maskable.png` at 512
+    inside the 80% safe zone, both drawn by `scripts/build_icons.py`, plus
+    `site.webmanifest` to name them.
+    Original step: Add the apple-touch-icon and the maskable variant.
+21. [x] `<meta name="theme-color" data-ground>` on every page, repainted from
+    `--t-paper` by `ground.js` when the ground changes.
+    Original step: Add `theme-color` for light and dark so the mobile browser chrome matches
+     the ground.
+22. [x] `preview.png`, drawn: masthead, kicker, the claim at 96px, the lede,
+    the source rule. It replaced a 243 kB screenshot that still showed the
+    Forecast/Nowcast control deleted in the first task.
+    Original step: Add the Open Graph image as a broadcast card drawn in the system rather
+     than a screenshot.
+23. [x] Rendered and read at 1200×630; the claim fills 17ch at 96px and is
+    the one thing that survives the thumbnail.
+    Original step: Verify the OG card renders at 1200×630 with the finding legible at
+     thumbnail size.
+24. [x] `docs/shots/` holds twenty: the app and the landing sheet, five
+    widths each, on both grounds, written by `scripts/shoot_masthead.py` —
+    which also prints the measurements, so a regression shows up as a number
+    and not only as a picture.
+    Original step: Take a masthead screenshot at 390, 768, 1024, 1440 and 1920 and put the
+     five in `docs/shots/` as the reference.
+
+**Also fixed while here.** The ground was not the ground: `baseline.html`
+washed the body with an indigo and a red radial gradient and swapped the ink
+ground for a near-black of its own, both `!important`, so the dark sheet was
+tinted blue on the left and red on the right. Answered in `theme.css` §3 with
+a doubled `:root`; both grounds now sample flat at every x. The ground was
+also being decided in a React effect, which flashed paper at a reader who
+chose ink — `assets/ground.js` now settles it before the first paint, and the
+landing sheet, which had no ground switch at all, reads the same choice.
 
 ---
 
