@@ -264,11 +264,12 @@ function USMap(_ref) {
     className: "mapHost",
     ref: hostRef,
     role: "img",
-    "aria-label": "A map; its finding is the title above it",
+    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-mode": mode,
     role: "img",
-    "aria-label": "Map of " + (mode === "house" ? "congressional districts" : "states")
-      + ", each filled by the party it leans to and darkened with the margin",
+    "aria-label": "A map of " + (mode === "house" ? "congressional districts" : "states")
+      + ". Each unit is filled by the party it leans to and darkened with the margin;"
+      + " a race inside two points is overprinted, and a unit with no race stays paper.",
     suppressHydrationWarning: true,
     dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "") }
   }));
@@ -565,7 +566,7 @@ function RatingMapHost(_ref6) {
     className: "mapHost",
     ref: hostRef,
     role: "img",
-    "aria-label": "A map; its finding is the title above it",
+    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-mode": mode,
     "data-rtg-host": "map",
     suppressHydrationWarning: true,
@@ -965,7 +966,7 @@ function PastMapHost(_ref10) {
     className: "mapHost",
     ref: hostRef,
     role: "img",
-    "aria-label": "A map; its finding is the title above it",
+    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-past-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1320,7 +1321,7 @@ function SwingMapHost(_ref14) {
     className: "mapHost",
     ref: hostRef,
     role: "img",
-    "aria-label": "A map; its finding is the title above it",
+    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-swing-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1856,7 +1857,7 @@ function PollsMapHost(_ref19) {
     className: "mapHost",
     ref: hostRef,
     role: "img",
-    "aria-label": "A map; its finding is the title above it",
+    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-polls-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,

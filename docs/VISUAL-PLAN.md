@@ -736,39 +736,94 @@ sheet work, and they are the next thing this chapter owes.
 Geography obeys the colour law: hairline boundaries, fills from the data
 palette, overprint for contested, paper for absent, no basemap, direct labels.
 
-1. Verify every map fills absent units with paper, not a grey.
-2. Verify every map draws boundaries as hairlines in faint.
-3. Verify no map carries a basemap, graticule or relief.
-4. Extend direct labels from the polls maps to the model maps.
-5. Extend direct labels to the ratings maps.
-6. Decide the label rule for units too small to hold one: currently skipped.
-   Add leader lines or an inset, or sanction the omission.
-7. Add the small-state inset column that every US map of this kind needs.
-8. Verify the label flips to paper on a dark fill on every map, not just the
-   polls maps.
-9. Set the label size per map scale as a token.
-10. Verify Alaska and Hawaii are positioned deliberately rather than by the
-    projection's default.
-11. Set the hover mark once and apply it to every map.
-12. Set the selection mark once and apply it to every map that has selection.
-13. Verify the hover mark reverses on a dark fill on every map.
-14. Verify the selected unit is raised above its neighbours so its contour is
-    never clipped.
-15. Give every interactive map keyboard access: focusable units, Enter and
-    Space, and a visible focus contour.
-16. Give every map an accessible name and a description of what its fill
-    means.
-17. Add a text alternative to every map: a table of the same data, visually
-    hidden.
-18. Verify the county zoom's fills follow the same ramp as the state fills.
-19. Verify the district maps follow the same ramp.
-20. Verify the state-legislature maps follow the same ramp.
-21. Set one aspect ratio policy for maps and a minimum height that keeps
-    small units tappable on a phone.
-22. Verify tap targets on the smallest states at 390px.
-23. Decide whether the map tooltip follows the cursor or docks; docking is
-    steadier on touch.
-24. Screenshot every map at its reference width into `docs/shots/`.
+1. [x] They do. An absent unit takes `--t-paper`, not a grey, on every map.
+   Original step: Verify every map fills absent units with paper, not a grey.
+2. [x] `--t-hair` at 0.5 to 0.75px on all of them, measured.
+   Original step: Verify every map draws boundaries as hairlines in faint.
+3. [x] None carries one.
+   Original step: Verify no map carries a basemap, graticule or relief.
+4. [x] Done, through a shared helper rather than a fourth copy. The polls
+   maps got direct labels, a contrast flip, a hover mark and keyboard access
+   in the first task; the model, ratings and swingometer maps had zero
+   labels and zero focusable units between them, so a reader on a keyboard
+   could not reach a state and a reader without a mouse could not name one.
+   Original step: Extend direct labels from the polls maps to the model maps.
+5. [x] Same helper, same result: 35 labels and 36 reachable units on each.
+   Original step: Extend direct labels to the ratings maps.
+6. [x] Decided: skipped on the map, carried in the inset. A leader line
+   across a map this dense is a second figure drawn over the first.
+   Original step: Decide the label rule for units too small to hold one: currently skipped.
+    Add leader lines or an inset, or sanction the omission.
+7. [x] Added. Measured at 390, sixteen of the thirty-five states with a race
+   are under 24px on their longest side and Rhode Island is four pixels by
+   six — no projection fixes that, the states are that shape. The units the
+   map declines to label now sit under it as chips, by the same test and in
+   the same units, so every state either has its name on the map or has a
+   chip: never both, never neither.
+   Original step: Add the small-state inset column that every US map of this kind needs.
+8. [x] On every map now, and painted after the fills rather than with them —
+   a label can only know what to flip to once it knows what it is sitting on.
+   Original step: Verify the label flips to paper on a dark fill on every map, not just the
+    polls maps.
+9. [x] The label's size and colour come from the figure rule in §15; its
+   placement threshold is `MIN_W`/`MIN_H` in the helper, in viewBox units so
+   it does not change with the sheet's width.
+   Original step: Set the label size per map scale as a token.
+10. [x] `geoAlbersUsa` places both deliberately; verified in the shots.
+    Original step: Verify Alaska and Hawaii are positioned deliberately rather than by the
+     projection's default.
+11. [x] `GEO.markHover`, applied by all four maps.
+    Original step: Set the hover mark once and apply it to every map.
+12. [x] The polls map is the only one with selection; its mark is unchanged
+    and now shares the hover helper.
+    Original step: Set the selection mark once and apply it to every map that has selection.
+13. [x] It does: `markHover` sets `onDark` from the unit's own fill.
+    Original step: Verify the hover mark reverses on a dark fill on every map.
+14. [x] The selected unit's contour is drawn at 3px and raised; measured on
+    the polls map at every width.
+    Original step: Verify the selected unit is raised above its neighbours so its contour is
+     never clipped.
+15. [x] Every unit carrying a datum is focusable, announces itself, and
+    responds to Enter and Space where there is something to activate. The
+    district maps are deliberately not focusable unit by unit: 435 tab stops
+    is a keyboard trap, and the decode gate and the hover card carry them.
+    Original step: Give every interactive map keyboard access: focusable units, Enter and
+     Space, and a visible focus contour.
+16. [x] Each map's name says what its fill means rather than that it is a
+    map: "each unit is filled by the party it leans to and darkened with the
+    margin; a race inside two points is overprinted, and an unpolled unit
+    stays paper."
+    Original step: Give every map an accessible name and a description of what its fill
+     means.
+17. [ ] Not done. The per-unit labels announce each state's name and datum,
+    which is most of what a table would carry, but a table of the same data
+    is a different thing and is not there.
+    Original step: Add a text alternative to every map: a table of the same data, visually
+     hidden.
+18. [x] It does. `scripts/check_colour.py` fails on any fill that is neither
+    a token nor a step on the ramp, and the county zoom passes.
+    Original step: Verify the county zoom's fills follow the same ramp as the state fills.
+19. [x] Same check, same result.
+    Original step: Verify the district maps follow the same ramp.
+20. [x] Same check, same result.
+    Original step: Verify the state-legislature maps follow the same ramp.
+21. [x] One policy: the maps keep the projection's own ratio and take a
+    minimum height of 280px below 761, which is what keeps the smallest
+    units drawable at all.
+    Original step: Set one aspect ratio policy for maps and a minimum height that keeps
+     small units tappable on a phone.
+22. [x] The chips are 52 by 44 on a phone. The map cannot give Rhode Island
+    a tap target — it is four pixels wide — so the chip does.
+    Original step: Verify tap targets on the smallest states at 390px.
+23. [ ] Not done; the tooltip still follows the cursor.
+    Original step: Decide whether the map tooltip follows the cursor or docks; docking is
+     steadier on touch.
+24. [x] Five maps on both grounds in `docs/shots/`, written by
+    `scripts/shoot_figures.py` alongside the figure forms.
+    Original step: Screenshot every map at its reference width into `docs/shots/`.
+
+**Carried forward.** Step 17 (the hidden table alternative) and step 23 (the
+docking tooltip).
 
 ---
 

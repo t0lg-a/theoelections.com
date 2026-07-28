@@ -118,6 +118,10 @@ const USPS_TO_NAME = {
   SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"
 };
 function fipsToUsps(id){ const n = parseInt(id, 10); return FIPS_TO_USPS[n] || ""; }
+const USPS_TO_FIPS = Object.fromEntries(
+  Object.entries(FIPS_TO_USPS).map(([fips, usps]) => [usps, +fips])
+);
+function uspsToFips(usps){ return USPS_TO_FIPS[usps]; }
 /* ---------- House district helpers ---------- */
 const NAME_TO_USPS = Object.fromEntries(
   Object.entries(USPS_TO_NAME).map(([usps, name]) => [String(name).trim().toLowerCase(), usps])
@@ -370,6 +374,200 @@ const AXIS = (function(){
   };
 })();
 window.__axis = AXIS;
+
+/* ======================================================================
+   GEOGRAPHY AS A FIGURE  (chapter 7)
+
+   [7.4][7.5][7.8][7.9][7.11][7.13][7.15][7.16] The polls maps got direct
+   labels, a contrast flip, a hover mark and keyboard access in the first
+   task. The model, ratings and swingometer maps got none of it: zero labels
+   and zero focusable units between them, so a reader on a keyboard could
+   not reach a state and a reader without a mouse could not name one.
+
+   One helper, applied to all of them. A map is a figure: its units name
+   themselves rather than sending the reader to a legend, and every unit that
+   carries a datum is reachable.
+   ====================================================================== */
+const GEO = (function(){
+  /** Rec. 601 luma. Below this the paper type wins over the fill. */
+  function isDarkFill(fill){
+    const m = String(fill || "").match(/rgba?\((\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+    if (!m) return false;
+    return (0.299 * +m[1] + 0.587 * +m[2] + 0.114 * +m[3]) < 140;
+  }
+
+  /** [7.6] A unit too small to hold its own label is skipped rather than
+   *  given a leader line: a leader line across a map this dense is a second
+   *  figure. The units it skips are the ones the inset column would carry,
+   *  and the hover card names every one of them. */
+  const MIN_W = 26, MIN_H = 16;
+
+  /** [7.4][7.9] Direct labels. `key` reads a unit's short name from a
+   *  feature; `has` says whether that unit carries a datum. */
+  function directLabels(svg, features, pathGen, key, has){
+    svg.selectAll("g.mapLabels").remove();
+    const gl = svg.append("g").attr("class", "mapLabels").attr("pointer-events", "none");
+    for (const f of features){
+      const k = key(f);
+      if (!k || !has(k)) continue;
+      const b = pathGen.bounds(f);
+      if ((b[1][0] - b[0][0]) < MIN_W || (b[1][1] - b[0][1]) < MIN_H) continue;
+      const c = pathGen.centroid(f);
+      if (!isFinite(c[0]) || !isFinite(c[1])) continue;
+      gl.append("text").attr("class", "mapLabel").attr("data-st", k)
+        .attr("x", c[0]).attr("y", c[1] + 3.5)
+        .attr("text-anchor", "middle").text(k);
+    }
+    return gl;
+  }
+
+  /** [7.8][7.13] A label sits on its unit's fill, so it flips to paper over
+   *  a dark one — on every map, not only the polls maps. */
+  function paintLabelContrast(svg, unitSel){
+    svg.selectAll("g.mapLabels text.mapLabel").each(function(){
+      const k = this.getAttribute("data-st");
+      const unit = svg.select(`${unitSel}[data-st='${k}']`).node();
+      const fill = unit ? (unit.style.fill || unit.getAttribute("fill")) : "";
+      this.style.fill = isDarkFill(fill) ? PAL.paper() : PAL.ink();
+    });
+  }
+
+  /** [7.15] Focusable units, Enter and Space, and a hover mark that reverses
+   *  on a dark fill. `describe` returns the unit's accessible name. */
+  function makeReachable(sel, key, has, describe, activate){
+    sel.attr("tabindex", d => has(key(d)) ? 0 : null)
+       .attr("role", d => has(key(d)) ? (activate ? "button" : "img") : null)
+       .attr("aria-label", d => has(key(d)) ? describe(key(d)) : null)
+       .on("focus", function(){
+         d3.select(this).classed("hovered", true)
+           .classed("onDark", isDarkFill(this.style.fill || this.getAttribute("fill")));
+       })
+       .on("blur", function(){
+         d3.select(this).classed("hovered", false).classed("onDark", false);
+       });
+    if (activate){
+      sel.on("keydown", function(ev, d){
+        if (ev.key !== "Enter" && ev.key !== " ") return;
+        ev.preventDefault();
+        if (has(key(d))) activate(key(d));
+      });
+    }
+    return sel;
+  }
+
+  /** [7.11] The hover mark, applied the same way everywhere. */
+  function markHover(node, on){
+    d3.select(node).classed("hovered", !!on)
+      .classed("onDark", !!on && isDarkFill(node.style.fill || node.getAttribute("fill")));
+  }
+
+  /** [7.7][7.6][7.22] The small-state inset.
+
+   *  Measured at 390: sixteen of the thirty-five states with a race are
+   *  under 24px on their longest side, and Rhode Island is four pixels by
+   *  six. No projection fixes that — the states are that shape — so the
+   *  ones the map cannot hold get a row of chips under it, each carrying
+   *  the same fill, its own name, and a real tap target.
+   *
+   *  The chips read their fill from the map's own paths, so there is one
+   *  source of colour and the row cannot disagree with the map above it. */
+  function insetChips(host, svg, activate){
+    if (!svg || !svg.node()) return;
+    // The maps are teleported out of their legacy stage and into the app's
+    // host, so the SVG's parent at build time is not where it ends up. Ask
+    // the node where it is now rather than remembering where it was.
+    // The row sits beside the map, not inside it: .mapHost is a fixed-height
+    // window with overflow hidden, so a row appended there is a row nobody
+    // sees. The block that owns the map has no such ceiling.
+    host = svg.node().closest(".mapBlock") || svg.node().closest(".mapHostWrap")
+        || svg.node().closest(".mapHost") || host || svg.node().parentElement;
+    if (!host) return;
+    let row = host.querySelector(".mapInset");
+    if (!row){
+      // It may still be sitting in the stage the SVG was drawn in.
+      const stray = svg.node().parentElement &&
+        svg.node().parentElement.querySelector(":scope > .mapInset");
+      if (stray){ host.appendChild(stray); row = stray; }
+    }
+    if (svg.node().getBoundingClientRect().width < 60) return;
+    const units = [...svg.node().querySelectorAll("path.state.active")];
+    // The chips hold exactly the units the map declined to label, by the
+    // same test and in the same units, so every state either has its name on
+    // the map or has a chip under it — never both, never neither.
+    const small = units.filter(u => {
+      if (!u.getBBox) return false;
+      let b; try { b = u.getBBox(); } catch (e) { return false; }
+      return b.width < MIN_W || b.height < MIN_H;
+    });
+    if (!small.length){ if (row) row.remove(); return; }
+    if (!row){
+      row = document.createElement("div");
+      row.className = "mapInset";
+      row.setAttribute("aria-label", "The states too small to hold a label on the map");
+      host.appendChild(row);
+    }
+    const wanted = small.map(u => u.getAttribute("data-st")).filter(Boolean);
+    if (row.dataset.keys !== wanted.join(",")){
+      row.dataset.keys = wanted.join(",");
+      row.innerHTML = "";
+      for (const st of wanted){
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "mapChip";
+        b.setAttribute("data-st", st);
+        // [5.6] The fill goes on a swatch, not behind the name. A state's
+        // two letters on a saturated data ink read at 3.9:1 at 11px, and at
+        // 1.0:1 when the fill is the paper an unpolled state keeps — the
+        // same lesson the ratings bar taught in chapter 5.
+        const sw = document.createElement("i");
+        sw.className = "mapChipSw";
+        b.appendChild(sw);
+        b.appendChild(document.createTextNode(st));
+        if (activate) b.addEventListener("click", () => activate(st));
+        row.appendChild(b);
+      }
+    }
+    for (const b of row.querySelectorAll(".mapChip")){
+      const st = b.getAttribute("data-st");
+      const unit = svg.node().querySelector(`path.state[data-st='${st}']`);
+      const fill = unit ? (unit.style.fill || unit.getAttribute("fill")) : "";
+      const sw = b.querySelector(".mapChipSw");
+      if (sw) sw.style.background = fill;
+      if (unit){
+        b.setAttribute("aria-label", unit.getAttribute("aria-label") || st);
+        const lean = unit.getAttribute("data-lean");
+        if (lean) b.setAttribute("data-lean", lean);
+      }
+    }
+  }
+
+  /** [7.7] Every live map's chips, re-homed and repainted. The app calls
+   *  this after it teleports a map out of its legacy stage, because the
+   *  chips are built where the SVG was drawn, not where it ends up. */
+  function refreshInsets(){
+    // Any row left behind in a stage the map has since left, or built for a
+    // map that is not laid out, is not a row anybody can read.
+    document.querySelectorAll(".mapInset").forEach(r => {
+      if (!r.closest(".mapBlock, .mapHostWrap, .mapHost") || !r.children.length) r.remove();
+    });
+    document.querySelectorAll(".mapHost svg").forEach(node => {
+      if (node.getBoundingClientRect().width < 60) return;
+      if (!node.querySelector("path.state.active")) return;
+      const sel = d3.select(node);
+      paintLabelContrast(sel, "path.state");
+      insetChips(null, sel, null);
+    });
+    // A district map has no unit small enough to need a chip and no unit
+    // big enough to label; it leaves an empty row behind on a tab switch.
+    document.querySelectorAll(".mapInset").forEach(r => {
+      if (!r.children.length) r.remove();
+    });
+  }
+
+  return { isDarkFill, directLabels, paintLabelContrast, makeReachable, markHover,
+           insetChips, refreshInsets, MIN_W, MIN_H };
+})();
+window.__geo = GEO;
 
 /** Repaint every figure after the ground changes (light to night and back). */
 window.__repaintFigures = function(){
@@ -2206,7 +2404,7 @@ async function initStateMapForMode(modeKey, ui){
       const st = fipsToUsps(d.id);
       if (!st) return;
       if (!DATA[modeKey].ratios[st]) return;
-      d3.select(event.currentTarget).classed("hovered", true);
+      GEO.markHover(event.currentTarget, true);
       showTooltip(event, modeKey, st, IND_CACHE[modeKey]);
     })
     .on("mousemove", (event, d)=>{
@@ -2216,11 +2414,25 @@ async function initStateMapForMode(modeKey, ui){
       positionTooltip(event);
     })
     .on("mouseleave", (event)=>{
-      d3.select(event.currentTarget).classed("hovered", false);
+      GEO.markHover(event.currentTarget, false);
       hideTooltip();
     });
 
+  // [7.4][7.15][7.16] The map is a figure: its units name themselves, and
+  // every unit carrying a datum is reachable from a keyboard.
+  const hasDatum = st => !!(st && DATA[modeKey].ratios[st]);
+  const nameOf = st => USPS_TO_NAME[st] || st;
+  GEO.makeReachable(
+    gRoot.selectAll("path.state"),
+    d => fipsToUsps(d.id),
+    hasDatum,
+    st => `${nameOf(st)} — press Enter to zoom into its counties`,
+    st => zoomToStateCounties(modeKey, st, uspsToFips(st))
+  );
+  GEO.directLabels(svg, features, pathGen, f => fipsToUsps(f.id), hasDatum);
+
   MAP[modeKey] = { kind:"states", svg, gRoot, projection, pathGen, width, height };
+  GEO.paintLabelContrast(svg, "path.state");
 
   // Click any active state → zoom to county view
   gRoot.selectAll(".state.active")
@@ -2967,6 +3179,15 @@ function recolorMapForMode(modeKey){
     this.setAttribute("data-lean", !isFinite(mm) ? "none"
       : Math.abs(mm) < 2 ? "contested" : (mm > 0 ? "r" : "d"));
   });
+
+  // [7.8] The labels are painted after the fills, not with them: a label
+  // flips to paper only once it knows what it is sitting on.
+  if (m.svg){
+    GEO.paintLabelContrast(m.svg, "path.state");
+    // [7.7] And the states the map cannot hold get their chips.
+    const host = m.svg.node() && m.svg.node().parentElement;
+    GEO.insetChips(host, m.svg, st => zoomToStateCounties(modeKey, st, uspsToFips(st)));
+  }
 }
 
 /* ---------- Bucket table (per mode) ---------- */

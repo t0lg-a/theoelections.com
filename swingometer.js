@@ -233,7 +233,7 @@ async function initSwingMap(mode){
     .on("mouseenter", (event, d) => {
       const st = fipsToUsps(d.id);
       if (!st || !DATA[mode]?.ratios[st]) return;
-      d3.select(event.currentTarget).classed("hovered", true);
+      window.__geo.markHover(event.currentTarget, true);
       showSwingTooltip(event, mode, st);
     })
     .on("mousemove", (event, d) => {
@@ -242,9 +242,19 @@ async function initSwingMap(mode){
       positionTooltip(event);
     })
     .on("mouseleave", (event) => {
-      d3.select(event.currentTarget).classed("hovered", false);
+      window.__geo.markHover(event.currentTarget, false);
       hideTooltip();
     });
+
+  // [7.4][7.5][7.15] The same map rule as everywhere else: direct labels and
+  // a unit a keyboard can reach. This map has no selection, so its units are
+  // read rather than pressed.
+  const has = st => !!(st && DATA[mode]?.ratios[st]);
+  window.__geo.makeReachable(
+    gRoot.selectAll("path.state"), d => fipsToUsps(d.id), has,
+    st => `${st}, at the national vote you have set`, null
+  );
+  window.__geo.directLabels(svg, features, pathGen, f => fipsToUsps(f.id), has);
 
   SWING.maps[mode] = { svg, gRoot, projection, pathGen };
 }
@@ -381,7 +391,17 @@ function swingRecolorMap(mode, gb){
     const pair = normalizePair(gb.D * ratio.D, gb.R * ratio.R);
     const margin = pair.R - pair.D;
     el.attr("fill", interpColor(margin));
+    // [5.17][5.23] The lean, for the greyscale and forced-colours cue.
+    el.attr("data-lean", !isFinite(margin) ? "none"
+      : Math.abs(margin) < 2 ? "contested" : (margin > 0 ? "r" : "d"));
   });
+
+  // [7.8] Labels flip only once they know what they sit on.
+  if (m.svg){
+    window.__geo.paintLabelContrast(m.svg, "path.state");
+    // [7.7] The states the map cannot hold get their chips.
+    window.__geo.insetChips(m.svg.node() && m.svg.node().parentElement, m.svg, null);
+  }
 }
 
 function swingRecolorHouseMap(gb){

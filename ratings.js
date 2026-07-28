@@ -197,21 +197,37 @@ async function initRtgMap(modeKey){
     .on("mouseenter", (event, d) => {
       const st = fipsToUsps(d.id);
       if (!st || !DATA[modeKey]?.ratios[st]) return;
-      d3.select(event.currentTarget).classed("hovered", true);
+      window.__geo.markHover(event.currentTarget, true);
       const info = RTG_PER_RACE[modeKey]?.[st];
       const name = USPS_TO_NAME[st] || st;
       const rating = info ? info.rating : "—";
-      const color = info ? RTG_COLORS[rating] : "var(--muted)";
-      showSimTip(event, `<span style="font-family:var(--display);font-weight:600">${name}</span> <span style="font-family:var(--mono);color:${color};font-weight:500;text-transform:uppercase;letter-spacing:0.14em">${rating}</span>`);
+      const color = info ? RTG_COLORS[rating] : "var(--t-faint)";
+      // [4.4][5.6] The tier is the swatch; the word is a label, lowercase
+      // and untracked like every other label on the site.
+      showSimTip(event, `<div class="stDate">${name}</div>` +
+        `<div class="stRow"><span class="stDot" style="background:${color}"></span>` +
+        `<span class="stLbl">${rating}</span></div>`);
     })
     .on("mousemove", (event) => {
       const el = document.getElementById("simTip");
       if (el) showSimTip(event, el.innerHTML);
     })
     .on("mouseleave", (event) => {
-      d3.select(event.currentTarget).classed("hovered", false);
+      window.__geo.markHover(event.currentTarget, false);
       hideSimTip();
     });
+
+  // [7.5][7.15][7.16] The same map rule everywhere: direct labels, and a
+  // unit a keyboard can reach that says what it is rated.
+  const has = st => !!(st && DATA[modeKey]?.ratios[st]);
+  window.__geo.makeReachable(
+    gRoot.selectAll("path.state"), d => fipsToUsps(d.id), has,
+    st => {
+      const info = RTG_PER_RACE[modeKey]?.[st];
+      return `${USPS_TO_NAME[st] || st}, rated ${info ? info.rating : "unrated"}`;
+    }, null
+  );
+  window.__geo.directLabels(svg, geo.features, pathGen, f => fipsToUsps(f.id), has);
 
   RTG_MAP[modeKey] = { svg, gRoot };
 }
@@ -307,8 +323,12 @@ async function initRtgHouseMap(ui, modeKey){
       const meta = DATA.house.meta[did];
       const name = meta ? houseDistrictName(meta.state, meta.cd) : did;
       const rating = info ? info.rating : "—";
-      const color = info ? RTG_COLORS[rating] : "var(--muted)";
-      showSimTip(event, `<span style="font-family:var(--display);font-weight:600">${name}</span> <span style="font-family:var(--mono);color:${color};font-weight:500;text-transform:uppercase;letter-spacing:0.14em">${rating}</span>`);
+      const color = info ? RTG_COLORS[rating] : "var(--t-faint)";
+      // [4.4][5.6] The tier is the swatch; the word is a label, lowercase
+      // and untracked like every other label on the site.
+      showSimTip(event, `<div class="stDate">${name}</div>` +
+        `<div class="stRow"><span class="stDot" style="background:${color}"></span>` +
+        `<span class="stLbl">${rating}</span></div>`);
     })
     .on("mousemove", (event) => {
       const el = document.getElementById("simTip");
@@ -491,7 +511,16 @@ function recolorRtgMap(modeKey, perRace){
       const st = this.getAttribute("data-st");
       const info = perRace[st];
       this.style.fill = info ? RTG_COLORS[info.rating] : getComputedStyle(document.documentElement).getPropertyValue("--t-paper").trim() || "#E9E8E0";
+      // [5.17][5.23] The lean, for the greyscale and forced-colours cue.
+      this.setAttribute("data-lean", !info ? "none"
+        : /D$/.test(info.rating) ? "d" : (/R$/.test(info.rating) ? "r" : "contested"));
     });
+  }
+  // [7.8] Labels flip only once they know what they sit on.
+  if (m.svg){
+    window.__geo.paintLabelContrast(m.svg, "path.state");
+    // [7.7] The states the map cannot hold get their chips.
+    window.__geo.insetChips(m.svg.node() && m.svg.node().parentElement, m.svg, null);
   }
 }
 

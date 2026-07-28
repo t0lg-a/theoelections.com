@@ -1839,3 +1839,51 @@ svg path.district.selected{
     vector-effect:non-scaling-stroke;
   }
 }
+
+/* ======================================================================
+   17 · THE SMALL-STATE INSET  (chapter 7)
+   [7.7][7.22] Measured at 390: sixteen of the thirty-five states with a
+   race are under 24px on their longest side, and Rhode Island is four
+   pixels by six. No projection fixes that — the states are that shape — so
+   the ones the map cannot hold sit under it as chips, each with the same
+   fill, its own name, and a target a thumb can hit.
+   ====================================================================== */
+.mapInset{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--t-sp-1);
+  margin-top:var(--t-baseline);
+}
+.mapChip{
+  appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--t-sp-1);
+  border:var(--t-w-hair) solid var(--t-ink);
+  background:var(--t-paper);
+  color:var(--t-ink);
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:700;
+  letter-spacing:0;
+  min-width:44px;
+  height:26px;
+  padding:0 var(--t-sp-2);
+  cursor:pointer;
+  box-sizing:border-box;
+}
+/* [5.6] The tier goes on the swatch; the name stays ink. Two letters on a
+   saturated data ink read at 3.9:1 at 11px, and at 1.0:1 when the fill is
+   the paper an unpolled state keeps. */
+.mapChipSw{
+  width:9px;height:9px;flex:0 0 9px;
+  display:inline-block;
+  border:var(--t-w-hair) solid var(--t-ink);
+  background:var(--t-paper);
+}
+.mapChip:hover{outline:var(--t-w-contour) solid var(--t-ink);outline-offset:-1px;}
+@media (max-width:760px){
+  /* The touch target the map itself cannot give these states. */
+  .mapChip{min-width:52px;height:44px;font-size:var(--t-fs-2);}
+}

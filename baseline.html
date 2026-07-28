@@ -5022,7 +5022,17 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       var btn = q(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-chart-tab='" + tab + "']");
       if (btn) { btn.click(); return true; } return false;
     }
-    function triggerResize(){ try { window.dispatchEvent(new Event("resize")); } catch (e) {} }
+    function triggerResize(){
+      try { window.dispatchEvent(new Event("resize")); } catch (e) {}
+      // [7.7] The app calls this right after it teleports a map out of its
+      // legacy stage. The small-state chips are built where the SVG was
+      // drawn, so this is where they follow it and repaint.
+      try {
+        if (window.__geo && window.__geo.refreshInsets) {
+          requestAnimationFrame(function(){ window.__geo.refreshInsets(); });
+        }
+      } catch (e) {}
+    }
     function zoomHouseTo(target){
       if (!target) return false;
       try {

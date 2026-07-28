@@ -34,6 +34,12 @@ FORMS = [
     ("polls-margin", "Polls", ".pollsHistHost"),
     ("record", "Polls", ".pollsListWrap"),
     ("florida-panel", "Florida", ".flrCard"),
+    # [7.24] The maps, each at the width its sheet gives it.
+    ("map-state-inset", "Model", ".mapBlock"),
+    ("map-ratings", "Ratings", ".mapHost"),
+    ("map-swing", "Swingometer", ".mapHost"),
+    ("map-polls", "Polls", ".mapHost"),
+    ("map-districts", "Ratings", ".col:nth-child(5) .mapHost"),
 ]
 
 
