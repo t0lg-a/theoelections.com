@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch poll data
+      - name: Fetch generic ballot + approval polls
         run: node js/fetch-data.js
+
+      - name: Fetch state Senate + Governor polls
+        run: node js/fetch-state-polls.js
 
       - name: Build county ratios
         run: node js/build_county_ratios.js

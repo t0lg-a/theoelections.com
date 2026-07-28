@@ -661,7 +661,7 @@ window.addEventListener("resize", () => {
   }
 }, {passive:true});
 
-// Refresh ratings when forecast/nowcast toggles
+// Refresh ratings whenever the underlying polling data changes
 window.refreshRatingsForForecast = function(){
   if (!ratingsInited) return;
   for (const mode of MODES){

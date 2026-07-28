@@ -1,5 +1,5 @@
 /* ---------- Config ---------- */
-console.log("forecast.js v17 — forecast/nowcast toggle with undecided allocation");
+console.log("forecast.js v18 — polling nowcast, no forward projection");
 const PROB_ERROR_SD_PTS = 7; // hidden, used for win probabilities (state + senate majority)
 const TOOLTIP_COMPACT = true;
 const WEIGHTS = { gb:35, polls:50, ind:15 };
@@ -105,16 +105,6 @@ const SEAT_RULES = {
   house:    { total:435, majorityLine:218, baseR:0,  baseD:0  },
 };
 const SENATE_CONTROL_RULE = { demAtLeast: 51, repAtLeast: 50 };
-
-/* ---------- Forecast / Nowcast Mode ---------- */
-const ELECTION_DAY     = new Date(2026, 10, 3);   // Nov 3 2026
-const FULL_ALLOC_DATE  = new Date(2026, 9, 1);    // Oct 1 2026
-const UNDECIDED_SPLIT_D = 0.60;
-const UNDECIDED_SPLIT_R = 0.40;
-const POLL_SHIFT_D = 1;           // shift polls 1pt toward D in forecast view
-let FORECAST_MODE = "forecast";
-let _savedNowcastGb = null;
-let _savedNowcastPolls = null;
 
 /* ---------- FIPS lookup for US-atlas ---------- */
 const FIPS_TO_USPS = {
@@ -357,12 +347,64 @@ function parseDate(s){
 }
 
 
-/* ---------- State polling by date (manual input) ---------- */
+/* ---------- State polling by date (VoteHub API, via json/state_polls.json) ---------- */
 const STATE_POLL_SRC = {
-  file: "/csv/state_polls_by_date.csv",
+  file: "/json/state_polls.json",
+  csvFallback: "/csv/state_polls_by_date.csv",
   window: 6,
+  updatedAt: null,
+  source: null,
   byModeState: { senate:{}, governor:{}, house:{} }
 };
+
+/**
+ * State polls come from VoteHub, fetched by js/fetch-state-polls.js into
+ * json/state_polls.json. Falls back to the hand-kept CSV if that file is
+ * missing (a fresh checkout before the first fetch, or a local file:// open).
+ */
+async function loadStatePolls(){
+  STATE_POLL_SRC.byModeState = { senate:{}, governor:{}, house:{} };
+
+  try{
+    const resp = await fetch(STATE_POLL_SRC.file, {cache:"no-store"});
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const j = await resp.json();
+    const rows = Array.isArray(j.polls) ? j.polls : [];
+    if (!rows.length) throw new Error("no polls in state_polls.json");
+
+    for (const r of rows){
+      const mode = String(r.mode||"").trim().toLowerCase();
+      const key  = String(r.state||"").trim().toUpperCase();
+      const dt   = parseDate(r.date);
+      const D = Number(r.D), R = Number(r.R);
+      if (!mode || !STATE_POLL_SRC.byModeState[mode] || !key || !dt) continue;
+      if (!isFinite(D) || !isFinite(R) || (D+R) <= 0) continue;
+
+      const S = Number(r.sigma);
+      (STATE_POLL_SRC.byModeState[mode][key] ||= []).push({
+        date: dt, D, R,
+        S: isFinite(S) && S > 0 ? S : 3,
+        pollster: String(r.pollster||"").trim(),
+        partisan: r.partisan || null,
+        internal: !!r.internal,
+        url: r.url || null
+      });
+    }
+
+    for (const mode of Object.keys(STATE_POLL_SRC.byModeState)){
+      const mm = STATE_POLL_SRC.byModeState[mode];
+      for (const k of Object.keys(mm)) mm[k].sort((a,b)=>a.date - b.date);
+    }
+
+    STATE_POLL_SRC.updatedAt = j.updatedAt || null;
+    STATE_POLL_SRC.source = j.source || "VoteHub";
+    if (isFinite(+j.window) && +j.window > 0) STATE_POLL_SRC.window = +j.window;
+    return true;
+  }catch(e){
+    console.warn("State polls from VoteHub not loaded, falling back to CSV:", e);
+    return loadStatePollsByDateCSV();
+  }
+}
 
 async function loadStatePollsByDateCSV(){
   // Supports two schemas:
@@ -408,7 +450,7 @@ async function loadStatePollsByDateCSV(){
   }
 
   try{
-    const resp = await fetch(STATE_POLL_SRC.file, {cache:"no-store"});
+    const resp = await fetch(STATE_POLL_SRC.csvFallback, {cache:"no-store"});
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const txt = await resp.text();
     const rows = d3.csvParse(txt);
@@ -435,7 +477,14 @@ async function loadStatePollsByDateCSV(){
 
       const S = Number(r.sigma ?? r.S ?? r.sd ?? r.pollSigma ?? r.moe ?? r.moe_pct);
       const arr = (STATE_POLL_SRC.byModeState[mode][key] ||= []);
-      arr.push({date: dt, D, R, S: isFinite(S) ? S : 3});
+      arr.push({
+        date: dt, D, R,
+        S: isFinite(S) ? S : 3,
+        pollster: String(r.pollster || "").trim(),
+        partisan: String(r.pollster_partisan || "").trim().toUpperCase() || null,
+        internal: false,
+        url: null
+      });
     }
 
     for (const mode of Object.keys(STATE_POLL_SRC.byModeState)){
@@ -729,15 +778,7 @@ async function loadGenericBallotFromPollsJSON(){
 
 function refreshAllAfterGbChange(){
   try{ TIP_SPARK_CACHE.clear(); }catch(e){}
-  _savedNowcastGb = null;
-  _savedNowcastPolls = null;
-
   buildGbSeriesFromRaw();
-
-  if (FORECAST_MODE === "forecast"){
-    applyForecastOverrides();
-  }
-
   refreshAllViews();
 }
 
@@ -2963,8 +3004,7 @@ function renderComboChart(modeKey, data, chartMode){
     date: parseDate(d.date),
     pDem: +d.pDem,
     pRep: 1 - (+d.pDem),
-    expDem: +d.expDem,
-    isForecast: !!d.isForecast
+    expDem: +d.expDem
   })).filter(d=>d.date && isFinite(d.pDem) && isFinite(d.expDem));
 
   if (!parsed.length){
@@ -3013,32 +3053,8 @@ function renderComboChart(modeKey, data, chartMode){
     const sLineDGen = d3.line().x(d=>x(d.date)).y(d=>y(d.expDem)).curve(d3.curveMonotoneX);
     const sLineRGen = seatTotal > 0 ? d3.line().x(d=>x(d.date)).y(d=>y(seatTotal - d.expDem)).curve(d3.curveMonotoneX) : null;
 
-    const hasFcS = parsed.some(d=>d.isForecast);
-    const obsS = hasFcS ? parsed.filter(d=>!d.isForecast) : parsed;
-    const fcS  = hasFcS ? parsed.filter(d=>d.isForecast) : [];
-
-    svg.append("path").datum(obsS).attr("class","seatsLine").attr("d",sLineDGen);
-    if (sLineRGen) svg.append("path").datum(obsS).attr("class","seatsLineR").attr("d",sLineRGen);
-
-    if (fcS.length){
-      const bridgeS = obsS.length ? [obsS[obsS.length-1], ...fcS] : fcS;
-      svg.append("path").datum(bridgeS).attr("d",sLineDGen)
-        .attr("fill","none").attr("stroke","#cfd6e0").attr("stroke-width",2)
-        .attr("stroke-dasharray","6 3").attr("opacity",0.85);
-      if (sLineRGen) svg.append("path").datum(bridgeS).attr("d",sLineRGen)
-        .attr("fill","none").attr("stroke","#e0c3b8").attr("stroke-width",2)
-        .attr("stroke-dasharray","6 3").attr("opacity",0.85);
-
-      const divXs = x(obsS[obsS.length-1].date);
-      svg.append("line").attr("x1",divXs).attr("x2",divXs)
-        .attr("y1",m.t).attr("y2",m.t+ih)
-        .attr("stroke","var(--muted-light)").attr("stroke-width",1)
-        .attr("stroke-dasharray","4 2").attr("opacity",0.45);
-      svg.append("text").attr("x",divXs+4).attr("y",m.t+10)
-        .attr("font-size","8px").attr("font-weight","700").attr("fill","var(--muted)")
-        .attr("font-family","var(--sans)")
-        .text("Forecast →");
-    }
+    svg.append("path").datum(parsed).attr("class","seatsLine").attr("d",sLineDGen);
+    if (sLineRGen) svg.append("path").datum(parsed).attr("class","seatsLineR").attr("d",sLineRGen);
 
     const dotD = svg.append("circle").attr("class","dotDem").attr("r",4).style("opacity",0);
     const dotR = svg.append("circle").attr("class","dotRep").attr("r",4).style("opacity",0);
@@ -3054,7 +3070,7 @@ function renderComboChart(modeKey, data, chartMode){
         dotD.attr("cx",x(d.date)).attr("cy",y(d.expDem)).style("opacity",1);
         if(seatTotal>0) dotR.attr("cx",x(d.date)).attr("cy",y(seatTotal-d.expDem)).style("opacity",1);
         showSimTip(ev,
-          `<div class="stDate">${ds(d.date)}${d.isForecast?' <span style="color:var(--muted);font-size:9px;font-weight:600">FORECAST</span>':''}</div>`+
+          `<div class="stDate">${ds(d.date)}</div>`+
           `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stLbl">D</span><span class="stVal">${d.expDem.toFixed(1)}</span></div>`+
           (seatTotal>0?`<div class="stRow"><span class="stDot" style="background:var(--red)"></span><span class="stLbl">R</span><span class="stVal">${(seatTotal-d.expDem).toFixed(1)}</span></div>`:"")
         );
@@ -3082,32 +3098,8 @@ function renderComboChart(modeKey, data, chartMode){
     const pLineDGen = d3.line().x(d=>x(d.date)).y(d=>y(d.pDem)).curve(d3.curveMonotoneX);
     const pLineRGen = d3.line().x(d=>x(d.date)).y(d=>y(d.pRep)).curve(d3.curveMonotoneX);
 
-    const hasFcP = parsed.some(d=>d.isForecast);
-    const obsP = hasFcP ? parsed.filter(d=>!d.isForecast) : parsed;
-    const fcP  = hasFcP ? parsed.filter(d=>d.isForecast) : [];
-
-    svg.append("path").datum(obsP).attr("class","lineDem").attr("d",pLineDGen);
-    svg.append("path").datum(obsP).attr("class","lineRep").attr("d",pLineRGen);
-
-    if (fcP.length){
-      const bridgeP = obsP.length ? [obsP[obsP.length-1], ...fcP] : fcP;
-      svg.append("path").datum(bridgeP).attr("d",pLineDGen)
-        .attr("fill","none").attr("stroke","#cfd6e0").attr("stroke-width",2)
-        .attr("stroke-dasharray","6 3").attr("opacity",0.85);
-      svg.append("path").datum(bridgeP).attr("d",pLineRGen)
-        .attr("fill","none").attr("stroke","#e0c3b8").attr("stroke-width",2)
-        .attr("stroke-dasharray","6 3").attr("opacity",0.85);
-
-      const divXp = x(obsP[obsP.length-1].date);
-      svg.append("line").attr("x1",divXp).attr("x2",divXp)
-        .attr("y1",m.t).attr("y2",m.t+ih)
-        .attr("stroke","var(--muted-light)").attr("stroke-width",1)
-        .attr("stroke-dasharray","4 2").attr("opacity",0.45);
-      svg.append("text").attr("x",divXp+4).attr("y",m.t+10)
-        .attr("font-size","8px").attr("font-weight","700").attr("fill","var(--muted)")
-        .attr("font-family","var(--sans)")
-        .text("Forecast →");
-    }
+    svg.append("path").datum(parsed).attr("class","lineDem").attr("d",pLineDGen);
+    svg.append("path").datum(parsed).attr("class","lineRep").attr("d",pLineRGen);
 
     const dotD = svg.append("circle").attr("class","dotDem").attr("r",4).style("opacity",0);
     const dotR = svg.append("circle").attr("class","dotRep").attr("r",4).style("opacity",0);
@@ -3123,7 +3115,7 @@ function renderComboChart(modeKey, data, chartMode){
         dotD.attr("cx",x(d.date)).attr("cy",y(d.pDem)).style("opacity",1);
         dotR.attr("cx",x(d.date)).attr("cy",y(d.pRep)).style("opacity",1);
         showSimTip(ev,
-          `<div class="stDate">${ds(d.date)}${d.isForecast?' <span style="color:var(--muted);font-size:9px;font-weight:600">FORECAST</span>':''}</div>`+
+          `<div class="stDate">${ds(d.date)}</div>`+
           `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stLbl">D</span><span class="stVal">${(d.pDem*100).toFixed(1)}%</span></div>`+
           `<div class="stRow"><span class="stDot" style="background:var(--red)"></span><span class="stLbl">R</span><span class="stVal">${(d.pRep*100).toFixed(1)}%</span></div>`
         );
@@ -3372,89 +3364,16 @@ function setupOddsUI(modeKey){
   if (data) renderComboChart(modeKey, data);
 }
 
-/* ---------- Forecast / Nowcast (reads precomputed isForecast from odds JSON) ---------- */
+/* ---------- Odds series ---------- */
 
 /**
- * Return the odds data for a mode.
- * Forecast mode: include all results (nowcast + forecast).
- * Nowcast mode: only results without isForecast flag.
+ * Return the odds data for a mode. The series only covers days we have polling
+ * for — nothing is projected forward past the last observed day.
  */
 function getOddsDataForMode(modeKey){
   const all = PRECOMPUTED_ODDS[modeKey] || [];
-  if (FORECAST_MODE === "forecast") return all;
+  // Defensive: older odds JSON may still carry projected days.
   return all.filter(d => !d.isForecast);
-}
-
-/** Compute the fully-allocated forecast GB pair. */
-function computeForecastGbPair(){
-  const latestGb = GB_SRC.latest;
-  if (!latestGb) return null;
-  const undecided = Math.max(0, 100 - latestGb.dem - latestGb.rep);
-  return normalizePair(
-    latestGb.dem + undecided * UNDECIDED_SPLIT_D,
-    latestGb.rep + undecided * UNDECIDED_SPLIT_R
-  );
-}
-
-/** Apply forecast-adjusted GB + poll shift so maps/tables/tooltips match the forecast. */
-function applyForecastOverrides(){
-  if (FORECAST_MODE !== "forecast") return;
-
-  // Save originals on first call
-  if (!_savedNowcastGb){
-    const latestGb = GB_SRC.latest;
-    if (latestGb) _savedNowcastGb = normalizePair(latestGb.dem, latestGb.rep);
-  }
-  if (!_savedNowcastPolls){
-    _savedNowcastPolls = {};
-    for (const mode of ["senate","governor"]){
-      _savedNowcastPolls[mode] = {};
-      const polls = DATA[mode]?.polls;
-      if (!polls) continue;
-      for (const st of Object.keys(polls)){
-        _savedNowcastPolls[mode][st] = { ...polls[st] };
-      }
-    }
-  }
-
-  // Override GB
-  const pair = computeForecastGbPair();
-  if (pair){
-    DATA.house.gb = pair;
-    if (DATA.senate) DATA.senate.gb = pair;
-    if (DATA.governor) DATA.governor.gb = pair;
-  }
-
-  // Shift polls +1 D / -1 R (from saved originals, not cumulative)
-  for (const mode of ["senate","governor"]){
-    const saved = _savedNowcastPolls[mode];
-    const polls = DATA[mode]?.polls;
-    if (!saved || !polls) continue;
-    for (const st of Object.keys(saved)){
-      const orig = saved[st];
-      if (isFinite(orig.D) && isFinite(orig.R)){
-        polls[st] = { ...orig, D: orig.D + POLL_SHIFT_D, R: orig.R - POLL_SHIFT_D };
-      }
-    }
-  }
-}
-
-/** Restore nowcast originals. */
-function restoreNowcastData(){
-  if (_savedNowcastGb){
-    DATA.house.gb = _savedNowcastGb;
-    if (DATA.senate) DATA.senate.gb = _savedNowcastGb;
-    if (DATA.governor) DATA.governor.gb = _savedNowcastGb;
-  }
-  if (_savedNowcastPolls){
-    for (const mode of ["senate","governor"]){
-      const saved = _savedNowcastPolls[mode];
-      if (!saved || !DATA[mode]?.polls) continue;
-      for (const st of Object.keys(saved)){
-        DATA[mode].polls[st] = { ...saved[st] };
-      }
-    }
-  }
 }
 
 /** Recompute everything after data changes (indicators, maps, tables, charts). */
@@ -3476,41 +3395,6 @@ function refreshAllViews(){
   }
 }
 
-/** Toggle between forecast and nowcast. */
-function toggleForecastMode(mode){
-  FORECAST_MODE = mode;
-
-  if (mode === "forecast"){
-    applyForecastOverrides();
-  } else {
-    restoreNowcastData();
-  }
-
-  refreshAllViews();
-}
-
-function setupForecastToggle(){
-  const allToggles = document.querySelectorAll(".fcToggleSync");
-  if (!allToggles.length) return;
-
-  function syncAll(mode){
-    allToggles.forEach(wrap=>{
-      wrap.querySelectorAll("[data-fc]").forEach(b=>{
-        b.classList.toggle("active", b.dataset.fc === mode);
-      });
-    });
-  }
-
-  allToggles.forEach(wrap=>{
-    wrap.querySelectorAll("[data-fc]").forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        syncAll(btn.dataset.fc);
-        toggleForecastMode(btn.dataset.fc);
-      });
-    });
-  });
-}
-
 /* ---------- Boot ---------- */
 (async function boot(){
   const ok = await loadCSV();
@@ -3519,12 +3403,12 @@ function setupForecastToggle(){
   const okHouse = await loadHouseRatios();
   if (!okHouse) return;
 
-  // Generic ballot from polls.json (produced by poll.html)
+  // Generic ballot from polls.json (produced by js/fetch-data.js)
   await loadGenericBallotFromPollsJSON();
   setupGbControlsUI();
 
-  // Optional: manual state polls by date (state_polls_by_date.csv)
-  await loadStatePollsByDateCSV();
+  // State polls from VoteHub (produced by js/fetch-state-polls.js)
+  await loadStatePolls();
   applyLatestStatePollsToData();
 
   // County-level ratio data (for county zoom)
@@ -3533,14 +3417,6 @@ function setupForecastToggle(){
   // Hispanic CD polling adjustment (must load before House model runs)
   await loadHispanicCDShare();
   await loadHispanicPolls();
-
-  // Wire forecast/nowcast toggle buttons
-  setupForecastToggle();
-
-  // Apply forecast overrides BEFORE computing indicators or rendering
-  if (FORECAST_MODE === "forecast"){
-    applyForecastOverrides();
-  }
 
   // cache indicators per mode (House intentionally has none)
   IND_CACHE.senate = computeIndicatorNationalFromPolls("senate");

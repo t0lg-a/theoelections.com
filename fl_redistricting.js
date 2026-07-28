@@ -498,17 +498,6 @@ window.refreshFloridaForForecast = function(){
   } catch(e){ console.warn(e); }
 };
 
-/* Forecast/Nowcast toggle inside the FL page or anywhere else */
-(function(){
-  document.addEventListener('click', (ev) => {
-    const btn = ev.target.closest('.fcToggleSync [data-fc]');
-    if (!btn) return;
-    setTimeout(() => {
-      try { window.refreshFloridaForForecast(); } catch(e){}
-    }, 0);
-  });
-})();
-
 /* ---------- Tab switching ---------- */
 (function(){
   const nav = document.querySelector('.pageTabs');

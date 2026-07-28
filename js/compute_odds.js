@@ -4,7 +4,8 @@
 // First run computes all days from GB series; subsequent runs append only new days.
 //
 // Reads:  entries_all.csv, house_district_ratios_filled.csv, polls.json,
-//         state_polls_by_date.csv (optional)
+//         state_polls.json (VoteHub state polling; falls back to
+//         state_polls_by_date.csv)
 // Writes: senate_odds.json, governor_odds.json, house_odds.json
 
 const fs = require("fs");
@@ -26,13 +27,6 @@ const SWING_STEP        = 0.1;   // House grid step
 const GB_WINDOW_POLLS   = 24;
 const STATE_POLL_WINDOW = 6;
 const FILTER_STRICT     = true;
-
-// Forecast: extend GB series to Election Day with undecided allocation
-const ELECTION_DAY       = new Date(2026, 10, 3);   // Nov 3 2026
-const FULL_ALLOC_DATE    = new Date(2026, 9, 1);    // Oct 1 2026
-const UNDECIDED_SPLIT_D  = 0.60;
-const UNDECIDED_SPLIT_R  = 0.40;
-const POLL_SHIFT_D       = 1;    // shift polls 1pt toward D by election day
 
 // ═══════════════════════════════════════════════════════
 //  MATH — shared with workers
@@ -375,59 +369,58 @@ function buildGBSeries() {
   return series;
 }
 
-/**
- * Extend the GB series from the last observed date to Election Day.
- * Undecided voters (100 - dem - rep) are gradually distributed 60/40 D/R,
- * linearly ramped from last poll date to FULL_ALLOC_DATE (Oct 1).
- * After Oct 1, 100% of undecided is allocated.
- * Returns array of {date, dem, rep, isForecast:true}.
- */
-function buildForecastGBExtension(gbSeries) {
-  if (!gbSeries.length) return [];
-  const last = gbSeries[gbSeries.length - 1];
-  const lastDate = parseDate(last.date);
-  if (!lastDate || lastDate >= ELECTION_DAY) return [];
-
-  const baseDem = last.dem;
-  const baseRep = last.rep;
-  const undecided = Math.max(0, 100 - baseDem - baseRep);
-
-  const rampStart = lastDate.getTime();
-  const rampEnd = FULL_ALLOC_DATE.getTime();
-
-  const ext = [];
-  const nextDay = new Date(lastDate);
-  nextDay.setDate(nextDay.getDate() + 1);
-
-  for (let day = new Date(nextDay); day <= ELECTION_DAY; day.setDate(day.getDate() + 1)) {
-    let frac = 0;
-    if (undecided > 0) {
-      const t = day.getTime();
-      if (t >= rampEnd) frac = 1;
-      else if (t <= rampStart) frac = 0;
-      else {
-        const span = rampEnd - rampStart;
-        frac = span > 0 ? (t - rampStart) / span : 0;
-      }
-    }
-
-    ext.push({
-      date: fmtDate(day),
-      dem: baseDem + undecided * UNDECIDED_SPLIT_D * frac,
-      rep: baseRep + undecided * UNDECIDED_SPLIT_R * frac,
-      isForecast: true,
-      rampFrac: frac
-    });
-  }
-
-  console.log(`  Forecast extension: ${ext.length} days (${ext[0]?.date} → ${ext[ext.length - 1]?.date}), undecided=${undecided.toFixed(1)}%`);
-  return ext;
-}
-
 // ═══════════════════════════════════════════════════════
-//  STATE POLLS BY DATE (optional)
+//  STATE POLLS BY DATE (VoteHub, via json/state_polls.json)
 // ═══════════════════════════════════════════════════════
 const STATE_POLLS = { senate: {}, governor: {} };
+
+function sortStatePolls() {
+  for (const mode of Object.keys(STATE_POLLS)) {
+    for (const k of Object.keys(STATE_POLLS[mode])) {
+      STATE_POLLS[mode][k].sort((a, b) => a.date - b.date);
+    }
+  }
+}
+
+/**
+ * State polls come from VoteHub, fetched by js/fetch-state-polls.js. The CSV
+ * loader stays as a fallback for a checkout that predates the first fetch.
+ */
+function loadStatePolls() {
+  if (!fs.existsSync("json/state_polls.json")) {
+    console.log("  json/state_polls.json: not found, falling back to CSV");
+    return loadStatePollsByDate();
+  }
+
+  let j;
+  try {
+    j = JSON.parse(fs.readFileSync("json/state_polls.json", "utf8"));
+  } catch (e) {
+    console.warn(`  json/state_polls.json: unreadable (${e.message}), falling back to CSV`);
+    return loadStatePollsByDate();
+  }
+
+  const rows = Array.isArray(j.polls) ? j.polls : [];
+  if (!rows.length) {
+    console.warn("  json/state_polls.json: no polls, falling back to CSV");
+    return loadStatePollsByDate();
+  }
+
+  let count = 0;
+  for (const r of rows) {
+    const mode = String(r.mode || "").trim().toLowerCase();
+    const key = String(r.state || "").trim().toUpperCase();
+    const dt = parseDate(r.date);
+    const D = Number(r.D), R = Number(r.R);
+    if (!STATE_POLLS[mode] || !key || !dt) continue;
+    if (!isFinite(D) || !isFinite(R) || (D + R) <= 0) continue;
+    const S = Number(r.sigma);
+    (STATE_POLLS[mode][key] ||= []).push({ date: dt, D, R, S: isFinite(S) && S > 0 ? S : 3 });
+    count++;
+  }
+  sortStatePolls();
+  console.log(`  json/state_polls.json: ${count} poll entries (source: ${j.source || "VoteHub"}, fetched ${j.updatedAt || "?"})`);
+}
 
 function loadStatePollsByDate() {
   if (!fs.existsSync("csv/state_polls_by_date.csv")) {
@@ -463,11 +456,7 @@ function loadStatePollsByDate() {
     (STATE_POLLS[mode][key] ||= []).push({ date: dt, D, R, S: isFinite(S) ? S : 3 });
     count++;
   }
-  for (const mode of Object.keys(STATE_POLLS)) {
-    for (const k of Object.keys(STATE_POLLS[mode])) {
-      STATE_POLLS[mode][k].sort((a, b) => a.date - b.date);
-    }
-  }
+  sortStatePolls();
   console.log(`  state_polls_by_date.csv: ${count} poll entries`);
 }
 
@@ -648,8 +637,7 @@ function simHouseDay(gbD, gbR, ratioD, ratioR, seatTotal, majorityLine, trackHis
 // ═══════════════════════════════════════════════════════
 function simStateDay(modeKey, gbD, gbR, ratioD, ratioR, pollD0, pollR0, pollDDay, pollRDay,
                      nStates, dayIdx, indD, indR, wGb, wPoll, wInd,
-                     baseD, baseR, total, controlLine, tieIsDem, tieSeat, trackHist, pollShift) {
-  const pShift = pollShift || 0;
+                     baseD, baseR, total, controlLine, tieIsDem, tieSeat, trackHist) {
   const upSeats = Math.min(ratioD.length, ratioR.length);
   const margins = new Float32Array(upSeats);
 
@@ -669,7 +657,6 @@ function simStateDay(modeKey, gbD, gbR, ratioD, ratioR, pollD0, pollR0, pollDDay
     }
     if (!isFinite(pDi) || !isFinite(pRi)) { pDi = pollD0[i]; pRi = pollR0[i]; }
     if (isFinite(pDi) && isFinite(pRi)) {
-      if (pShift !== 0) { pDi += pShift; pRi -= pShift; }
       pollPair = normalizePair(pDi, pRi);
     }
 
@@ -749,7 +736,8 @@ function loadExisting(file) {
   if (!fs.existsSync(file)) return { results: [] };
   try {
     const data = JSON.parse(fs.readFileSync(file, "utf8"));
-    // Strip old forecast results — they always get recomputed fresh
+    // Drop any day that came from the retired forward projection. The series
+    // only ever covers dates we have actually polled.
     if (data.results) {
       data.results = data.results.filter(r => !r.isForecast);
     }
@@ -763,7 +751,6 @@ function saveOdds(file, results, latestHist) {
   const obj = {
     updatedAt: new Date().toISOString(),
     config: { sims: MC_SIMS, swingRange: SWING_RANGE, gbWindow: GB_WINDOW_POLLS, filterStrict: FILTER_STRICT },
-    forecast: { electionDay: fmtDate(ELECTION_DAY), fullAllocDate: fmtDate(FULL_ALLOC_DATE), splitD: UNDECIDED_SPLIT_D, splitR: UNDECIDED_SPLIT_R, pollShiftD: POLL_SHIFT_D },
     results,
   };
   if (latestHist) obj.latestHist = latestHist;
@@ -780,17 +767,12 @@ function main() {
   loadHispanicCDShare();
   loadHispanicPolls();
   const gbSeries = buildGBSeries();
-  loadStatePollsByDate();
+  loadStatePolls();
 
   // Apply latest state polls to DATA
   if (gbSeries.length) {
     applyLatestStatePollsToData(gbSeries[gbSeries.length - 1].date);
   }
-
-  // Build forecast extension (future dates with undecided allocation)
-  const forecastExt = buildForecastGBExtension(gbSeries);
-  const fullSeries = [...gbSeries.map(d => ({ ...d, isForecast: false, rampFrac: 0 })), ...forecastExt];
-  const forecastStartIdx = gbSeries.length; // index where forecast begins
 
   // Compute indicators
   const indSenate = computeIndicatorFromPolls("senate");
@@ -801,12 +783,11 @@ function main() {
   const senateArr = stateArraysSorted("senate");
   const govArr = stateArraysSorted("governor");
 
-  const allDates = fullSeries.map(d => d.date);
-  const allGbD = fullSeries.map(d => d.dem);
-  const allGbR = fullSeries.map(d => d.rep);
-  const allRampFrac = fullSeries.map(d => d.rampFrac || 0);
+  const allDates = gbSeries.map(d => d.date);
+  const allGbD = gbSeries.map(d => d.dem);
+  const allGbR = gbSeries.map(d => d.rep);
 
-  // Build state poll matrices for full date range (forecast dates reuse last available polls)
+  // Build state poll matrices over the observed date range
   const senatePM = buildPollMatrix("senate", senateArr.keys, allDates);
   const govPM = buildPollMatrix("governor", govArr.keys, allDates);
 
@@ -833,7 +814,6 @@ function main() {
         const isLast = (i === allDates.length - 1);
         const r = simHouseDay(allGbD[i], allGbR[i], houseArr.d, houseArr.r, rules.total, rules.majorityLine, isLast, hcdArr);
         const entry = { date: allDates[i], pDem: +r.pDem.toFixed(4), expDem: +r.expDem.toFixed(2) };
-        if (i >= forecastStartIdx) entry.isForecast = true;
         newResults.push(entry);
         if (r.hist) latestHist = r.hist;
         if ((ni + 1) % 50 === 0 || ni === newDays.length - 1) {
@@ -884,9 +864,8 @@ function main() {
           senateArr.keys.length, i,
           dayIndD, dayIndR, WEIGHTS.gb, WEIGHTS.polls, WEIGHTS.ind,
           rules.baseD, rules.baseR, rules.total, controlLine,
-          false, controlLine - 1, isLast, POLL_SHIFT_D * allRampFrac[i]);
+          false, controlLine - 1, isLast);
         const entry = { date: allDates[i], pDem: +r.pDem.toFixed(4), expDem: +r.expDem.toFixed(2) };
-        if (i >= forecastStartIdx) entry.isForecast = true;
         newResults.push(entry);
         if (r.hist) latestHist = r.hist;
         if ((ni + 1) % 50 === 0 || ni === newDays.length - 1) process.stdout.write(`  ${ni + 1}/${newDays.length}\r`);
@@ -934,9 +913,8 @@ function main() {
           govArr.keys.length, i,
           dayIndD, dayIndR, WEIGHTS.gb, WEIGHTS.polls, WEIGHTS.ind,
           rules.baseD, rules.baseR, rules.total, controlLine,
-          true, controlLine - 1, isLast, POLL_SHIFT_D * allRampFrac[i]);  // tieIsDem = true for governor
+          true, controlLine - 1, isLast);  // tieIsDem = true for governor
         const entry = { date: allDates[i], pDem: +r.pDem.toFixed(4), expDem: +r.expDem.toFixed(2) };
-        if (i >= forecastStartIdx) entry.isForecast = true;
         newResults.push(entry);
         if (r.hist) latestHist = r.hist;
         if ((ni + 1) % 50 === 0 || ni === newDays.length - 1) process.stdout.write(`  ${ni + 1}/${newDays.length}\r`);

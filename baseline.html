@@ -2776,15 +2776,8 @@
     .modeCol[data-swing-mode="house"] .mapSvg{ cursor:grab; }
     .modeCol[data-swing-mode="house"] .mapSvg:active{ cursor:grabbing; }
 
-    /* ---------- Forecast / Nowcast Toggle ---------- */
-    .forecastToggleWrap{
-      grid-column: 1 / -1;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-    }
-    .forecastToggle{
+    /* ---------- Chamber toggle (State Legislatures) ---------- */
+    .chamberToggle{
       display:inline-flex;
       background: var(--neutral-bg);
       border:1px solid var(--line);
@@ -2793,7 +2786,7 @@
       gap:2px;
       box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
     }
-    .fcBtn{
+    .chamberBtn{
       appearance:none;
       border:none;
       background:transparent;
@@ -2807,8 +2800,8 @@
       font-family:var(--sans);
       letter-spacing:0.01em;
     }
-    .fcBtn:hover{ color:var(--ink-dim); }
-    .fcBtn.active{
+    .chamberBtn:hover{ color:var(--ink-dim); }
+    .chamberBtn.active{
       background:#fff;
       color:var(--blue-dark);
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -3071,7 +3064,6 @@ html[data-look="riso"] .titleRow,
 html[data-look="riso"] .tooltipBox,
 html[data-look="riso"] .pageTabs,
 html[data-look="riso"] .authorBadge,
-html[data-look="riso"] .forecastToggleWrap,
 html[data-look="riso"] .segmentedControl,
 html[data-look="riso"] .lookToggle,
 html[data-look="riso"] .themeToggle {
@@ -3336,33 +3328,28 @@ html[data-look="legacy"] .themeToggle {
   }
 }
 
-/* FORECAST TOGGLE — don't get force-flattened by the card override */
-html[data-look="riso"] .forecastToggleWrap {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-html[data-look="riso"] .forecastToggle {
+/* CHAMBER TOGGLE — don't get force-flattened by the card override */
+html[data-look="riso"] .chamberToggle {
   background: var(--card-bg) !important;
   border: 1px solid var(--text-ink) !important;
   box-shadow: 2px 2px 0 0 var(--text-ink) !important;
   border-radius: 0 !important;
   padding: 3px !important;
 }
-html[data-look="riso"] .fcBtn {
+html[data-look="riso"] .chamberBtn {
   border-radius: 0 !important;
   color: var(--text-muted);
 }
-html[data-look="riso"] .fcBtn.active {
+html[data-look="riso"] .chamberBtn.active {
   background: var(--text-ink) !important;
   color: var(--card-bg) !important;
   box-shadow: none !important;
 }
-html[data-theme="dark"] .fcBtn.active {
+html[data-theme="dark"] .chamberBtn.active {
   background: var(--text-ink);
   color: var(--card-bg);
 }
-html[data-theme="dark"][data-look="legacy"] .fcBtn.active {
+html[data-theme="dark"][data-look="legacy"] .chamberBtn.active {
   background: #1f2937;
   color: #f0f0f0;
 }
@@ -4241,7 +4228,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .flrCard, .methCard, .projCard, .stateInfoPanel,
   .tooltipBox, #tip, #simTip, #pastTip, #sldlCursorTip,
   .pageTab, .donateBtn,
-  .forecastToggle, .forecastToggleWrap, .fcBtn,
+  .chamberToggle, .chamberBtn,
   .segmentedControl, .lookToggle, .themeToggle,
   .pillRow .metricPill, .seatPill, .panelClassify,
   .panelShareTrack, .panelShareFillD, .panelShareFillR, .panelShareGap,
@@ -4472,21 +4459,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   }
   .donate:hover{ background: var(--ink-dim); }
 
-  /* ============ Forecast / Nowcast ============ */
-  .fcRow{ display:flex; justify-content: center; margin-bottom: 22px; }
-  .fcToggle{
-    display:inline-flex; align-items: baseline; gap: 14px;
-    font-family: var(--display); font-style: italic; font-size: 18px;
-  }
-  .fcToggle button{
-    appearance:none; border:none; background: transparent;
-    font-family: var(--display); font-style: italic; font-size: 18px;
-    color: var(--muted); cursor: pointer; padding: 2px 8px;
-    border-bottom: 1px solid transparent;
-  }
-  .fcToggle button.active{ color: var(--ink); border-bottom-color: var(--ink); font-style: normal; font-weight: 700; }
-  .fcToggle .sep{ color: var(--rule-soft); }
-
   /* ============ 3 columns ============ */
   .cols{
     display:grid;
@@ -4644,6 +4616,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   .tweaksRoot, .twk-panel{ font-family: var(--body) !important; }
 </style>
+<link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/polls-theme.css?v=1">
 </head>
 <body>
   
@@ -4663,14 +4638,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div></nav>
     <div id="loadError" class="loadError" hidden></div>
 <div class="triGrid" id="triGrid" aria-label="Three-panel forecast">
-
-  <!-- Forecast / Nowcast Toggle -->
-  <div class="forecastToggleWrap" id="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync" id="forecastToggle">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <!-- SENATE -->
   <section class="modeCol" data-mode="senate">
@@ -4893,14 +4860,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <div id="simTip" class="simTip" aria-hidden="true"></div>
 
 <div class="ratingsPage triGrid" id="ratingsPage" style="display:none">
-
-  <!-- Forecast / Nowcast Toggle -->
-  <div class="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <!-- SENATE RATINGS -->
   <section class="modeCol" data-ratings-mode="senate">
@@ -5452,14 +5411,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div>
 
 <div id="flRedistrictingPage" style="display:none" aria-label="Florida Redistricting">
-
-  <!-- Forecast / Nowcast Toggle (syncs with model tab) -->
-  <div class="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <div class="flrGrid">
 
@@ -6070,17 +6021,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       }
     }
 
-    function setForecastMode(mode){
-      var btn = q(".__legacy_offscreen .fcToggleSync [data-fc='" + mode + "']");
-      if (!btn) return false;
-      btn.click();
-      try {
-        window.__forecast = buildSnapshot();
-        window.__forecast.forecastMode = (typeof FORECAST_MODE !== "undefined") ? FORECAST_MODE : "forecast";
-        window.dispatchEvent(new CustomEvent("forecast-update"));
-      } catch (e) {}
-      return true;
-    }
     function setChartTab(mode, tab){
       var btn = q(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-chart-tab='" + tab + "']");
       if (btn) { btn.click(); return true; } return false;
@@ -6210,11 +6150,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       odds:  { senate: PRECOMPUTED_ODDS.senate, governor: PRECOMPUTED_ODDS.governor, house: PRECOMPUTED_ODDS.house },
       hist:  { senate: hist.senate, governor: hist.governor, house: hist.house },
       config: { sims: 10000 }, pollsCount: pollsCount,
-      forecastMode: (typeof FORECAST_MODE !== "undefined") ? FORECAST_MODE : "forecast",
       getStateMargins: getStateMargins,
       getMapSvg: getMapSvg, getComboSvg: getComboSvg, getMapBackBtn: getMapBackBtn,
       getRatingsMapSvg: getRatingsMapSvg, getRatingsChartSvg: getRatingsChartSvg,
-      setForecastMode: setForecastMode, setChartTab: setChartTab,
+      setChartTab: setChartTab,
       setRatingsChartTab: setRatingsChartTab, triggerResize: triggerResize,
       zoomHouseTo: zoomHouseTo, getZoomableStates: getZoomableStates,
       getRatingsCounts: getRatingsCounts, ensureRatingsInited: ensureRatingsInited,

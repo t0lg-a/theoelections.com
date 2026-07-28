@@ -895,10 +895,10 @@
     const bar = document.createElement('div');
     bar.id = 'sldlViewToolbar';
     bar.innerHTML = `
-      <div class="forecastToggle" role="tablist" aria-label="State legislature view">
-        <button class="fcBtn active" data-view="sldl" type="button">House</button>
-        <button class="fcBtn"        data-view="sldu" type="button">Senate</button>
-        <button class="fcBtn"        data-view="split" type="button">Split</button>
+      <div class="chamberToggle" role="tablist" aria-label="State legislature view">
+        <button class="chamberBtn active" data-view="sldl" type="button">House</button>
+        <button class="chamberBtn"        data-view="sldu" type="button">Senate</button>
+        <button class="chamberBtn"        data-view="split" type="button">Split</button>
       </div>
       <label class="sldlSyncToggle" data-sldl-sync-wrap title="When on, zooming one map zooms the other. When off, each map can be zoomed to a different state independently.">
         <input type="checkbox" data-sldl-sync checked>

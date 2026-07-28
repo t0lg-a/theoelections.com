@@ -1,0 +1,497 @@
+#!/usr/bin/env node
+// fetch-state-polls.js — Node.js CI script
+// Pulls state-level Senate and Governor polls from the VoteHub polls API and
+// writes them to json/state_polls.json, the file forecast.js, polls.js and
+// compute_odds.js read for state polling.
+//
+// csv/state_polls_by_date.csv stays in the repo as a manual supplement: any
+// row in it that the API does not already carry is merged in, so a race the
+// API has not picked up yet still reaches the model.
+//
+// Reads:  csv/state_polls_by_date.csv (optional supplement + candidate parties)
+// Writes: json/state_polls.json
+
+const fs = require("fs");
+
+const API_BASE = "https://api.votehub.com/polls";
+
+// CONFIG
+const LOOKBACK_DAYS = 700;   // 2026 cycle polling starts well before the year
+const SLICE_DAYS    = 60;    // initial chunk size for the date-sliced fetch
+const MAX_RETRIES   = 4;
+const RETRY_BASE_MS = 750;
+const DEFAULT_SIGMA = 3;     // matches the model's per-state polling sigma
+const CSV_PATH      = "csv/state_polls_by_date.csv";
+const OUT_PATH      = "json/state_polls.json";
+
+// poll_type must match the API exactly, and the API has renamed types before.
+// Each mode lists its candidates in preference order; the first one that
+// returns polls wins and the rest are skipped.
+const MODE_POLL_TYPES = {
+  senate:   ["senate", "senate-general", "us-senate"],
+  governor: ["governor", "gubernatorial", "governor-general"],
+};
+
+// Race stages we model. The API exposes primaries and runoffs under the same
+// poll_type, and those are not head-to-head D vs R matchups.
+const ALLOWED_STAGES = new Set(["general", "general-election", "generalelection", ""]);
+
+const NAME_TO_USPS = {
+  alabama:"AL",alaska:"AK",arizona:"AZ",arkansas:"AR",california:"CA",colorado:"CO",
+  connecticut:"CT",delaware:"DE","district of columbia":"DC",florida:"FL",georgia:"GA",
+  hawaii:"HI",idaho:"ID",illinois:"IL",indiana:"IN",iowa:"IA",kansas:"KS",kentucky:"KY",
+  louisiana:"LA",maine:"ME",maryland:"MD",massachusetts:"MA",michigan:"MI",minnesota:"MN",
+  mississippi:"MS",missouri:"MO",montana:"MT",nebraska:"NE",nevada:"NV","new hampshire":"NH",
+  "new jersey":"NJ","new mexico":"NM","new york":"NY","north carolina":"NC","north dakota":"ND",
+  ohio:"OH",oklahoma:"OK",oregon:"OR",pennsylvania:"PA","rhode island":"RI",
+  "south carolina":"SC","south dakota":"SD",tennessee:"TN",texas:"TX",utah:"UT",vermont:"VT",
+  virginia:"VA",washington:"WA","west virginia":"WV",wisconsin:"WI",wyoming:"WY"
+};
+const USPS = new Set(Object.values(NAME_TO_USPS));
+
+/* ═══════════════════════════════════════════════════════
+   HTTP
+   ═══════════════════════════════════════════════════════ */
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// VoteHub's docs use %20 for spaces; URLSearchParams emits '+', which some of
+// their filters reject.
+function buildUrl(paramsObj) {
+  const qs = new URLSearchParams(paramsObj).toString().replace(/\+/g, "%20");
+  return `${API_BASE}?${qs}`;
+}
+
+function extractList(json) {
+  if (Array.isArray(json)) return json;
+  if (json && Array.isArray(json.polls)) return json.polls;
+  if (json && Array.isArray(json.results)) return json.results;
+  if (json && Array.isArray(json.data)) return json.data;
+  return [];
+}
+
+async function fetchJson(url) {
+  let lastErr = null;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const res = await fetch(url, {
+        headers: { Accept: "application/json", "User-Agent": "theoelections-state-polls/1.0" },
+      });
+      const text = await res.text();
+
+      if (res.status === 429) {
+        const wait = RETRY_BASE_MS * Math.pow(2, attempt - 1);
+        console.warn(`  429 rate limit. Waiting ${wait}ms then retrying...`);
+        await sleep(wait);
+        continue;
+      }
+
+      if (!res.ok) {
+        const err = new Error(`HTTP ${res.status} ${res.statusText}\nURL: ${url}\nBody (first 600):\n${text.slice(0, 600)}`);
+        if (res.status >= 500 && attempt < MAX_RETRIES) {
+          const wait = RETRY_BASE_MS * Math.pow(2, attempt - 1);
+          console.warn(`  HTTP ${res.status}. Waiting ${wait}ms then retrying...`);
+          await sleep(wait);
+          lastErr = err;
+          continue;
+        }
+        throw err;
+      }
+
+      try {
+        return JSON.parse(text);
+      } catch {
+        throw new Error(`Non-JSON response\nURL: ${url}\nBody (first 600):\n${text.slice(0, 600)}`);
+      }
+    } catch (e) {
+      lastErr = e;
+      if (attempt < MAX_RETRIES) {
+        const wait = RETRY_BASE_MS * Math.pow(2, attempt - 1);
+        console.warn(`  Fetch error. Waiting ${wait}ms then retrying...`);
+        await sleep(wait);
+      }
+    }
+  }
+
+  throw lastErr;
+}
+
+function isoDate(d) { return d.toISOString().slice(0, 10); }
+
+function addDays(d, n) {
+  const x = new Date(d);
+  x.setDate(x.getDate() + n);
+  return x;
+}
+
+function daysBetween(a, b) {
+  return Math.floor((new Date(b) - new Date(a)) / (24 * 3600 * 1000));
+}
+
+// A single 5xx on one malformed record shouldn't cost a whole slice, so split
+// the range down to day level before giving up on it.
+async function fetchRangeRobust({ poll_type, from_date, to_date, debug }) {
+  const span = daysBetween(from_date, to_date) + 1;
+
+  try {
+    const list = extractList(await fetchJson(buildUrl({
+      poll_type, from_date, to_date, sort: "-end_date",
+    })));
+    debug.okSlices++;
+    return list;
+  } catch (e) {
+    const msg = String(e);
+    const is5xx = msg.includes("HTTP 5") || msg.includes("Internal Server Error");
+    if (!is5xx) throw e;
+
+    debug.failedSlices++;
+    if (span <= 1) {
+      debug.skippedDays.push(from_date);
+      console.warn(`  Skipping ${from_date} (VoteHub 5xx).`);
+      return [];
+    }
+
+    const mid = isoDate(addDays(new Date(from_date), Math.floor(span / 2) - 1));
+    const left = await fetchRangeRobust({ poll_type, from_date, to_date: mid, debug });
+    const right = await fetchRangeRobust({ poll_type, from_date: isoDate(addDays(new Date(mid), 1)), to_date, debug });
+    return left.concat(right);
+  }
+}
+
+async function fetchPollType(poll_type, start, today, debug) {
+  let all = [];
+  for (let d = new Date(start); d <= today; d = addDays(d, SLICE_DAYS)) {
+    const from_date = isoDate(d);
+    const end = addDays(d, SLICE_DAYS - 1);
+    const to_date = isoDate(end > today ? today : end);
+    process.stdout.write(`  ${poll_type} ${from_date} → ${to_date} ... `);
+    const slice = await fetchRangeRobust({ poll_type, from_date, to_date, debug });
+    all = all.concat(slice);
+    console.log(`+${slice.length}`);
+  }
+  return all;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CSV (supplement + candidate → party lookup)
+   ═══════════════════════════════════════════════════════ */
+function parseCSV(text) {
+  const lines = text.split(/\r?\n/);
+  if (!lines.length) return [];
+  const headers = lines[0].split(",").map(h => h.trim());
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+    const vals = line.split(",");
+    const row = {};
+    for (let j = 0; j < headers.length; j++) row[headers[j]] = (vals[j] || "").trim();
+    rows.push(row);
+  }
+  return rows;
+}
+
+const CANDIDATE_PARTY = new Map();  // normalized candidate name → "D" | "R"
+
+function normName(s) {
+  return String(s || "").toLowerCase().replace(/[^a-z ]+/g, "").replace(/\s+/g, " ").trim();
+}
+
+function rememberCandidate(name, party) {
+  const n = normName(name);
+  const p = String(party || "").trim().toUpperCase().slice(0, 1);
+  if (!n || (p !== "D" && p !== "R")) return;
+  if (!CANDIDATE_PARTY.has(n)) CANDIDATE_PARTY.set(n, p);
+  // Last-name-only fallback, useful because polls often list "Peltola" alone.
+  const parts = n.split(" ");
+  if (parts.length > 1) {
+    const last = parts[parts.length - 1];
+    if (last.length > 3 && !CANDIDATE_PARTY.has(last)) CANDIDATE_PARTY.set(last, p);
+  }
+}
+
+function normMode(x) {
+  const v = String(x || "").trim().toLowerCase();
+  if (v.includes("senate") || v === "sen") return "senate";
+  if (v.includes("governor") || v.includes("gubernatorial") || v === "gov") return "governor";
+  const u = v.toUpperCase();
+  if (u.includes("SEN")) return "senate";
+  if (u.includes("GOV")) return "governor";
+  return "";
+}
+
+function toUsps(x) {
+  const raw = String(x || "").trim();
+  if (!raw) return "";
+  const up = raw.toUpperCase();
+  if (USPS.has(up)) return up;
+  const byName = NAME_TO_USPS[raw.toLowerCase()];
+  if (byName) return byName;
+  // Race codes: "AK-SEN", "GA-Sen-Special", "TX-GOV"
+  const m = up.match(/^([A-Z]{2})[-\s]/);
+  if (m && USPS.has(m[1])) return m[1];
+  // Seat names: "Georgia Senate", "New Hampshire Governor"
+  const stripped = raw.toLowerCase()
+    .replace(/\b(senate|senator|governor|gubernatorial|class\s+[ivx]+|special|general|runoff)\b/g, "")
+    .replace(/[^a-z ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return NAME_TO_USPS[stripped] || "";
+}
+
+function parseDate(s) {
+  const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : "";
+}
+
+function loadCsvSupplement() {
+  if (!fs.existsSync(CSV_PATH)) {
+    console.log(`  ${CSV_PATH}: not found (optional, skipping)`);
+    return [];
+  }
+  const rows = parseCSV(fs.readFileSync(CSV_PATH, "utf8"));
+  const out = [];
+
+  for (const r of rows) {
+    rememberCandidate(r.candA_name, r.candA_party);
+    rememberCandidate(r.candB_name, r.candB_party);
+
+    const mode = normMode(r.mode || r.office || r.race || r.contest || "");
+    const state = toUsps(r.state || r.State || r.key || r.race || "");
+    const date = parseDate(r.date || r.end_date || r.endDate || "");
+    if (!mode || !state || !date) continue;
+
+    let D = Number(r.dem ?? r.D ?? r.pollD ?? NaN);
+    let R = Number(r.rep ?? r.R ?? r.pollR ?? NaN);
+    if (!isFinite(D) || !isFinite(R)) {
+      const aP = String(r.candA_party || "").trim().toUpperCase().slice(0, 1);
+      const bP = String(r.candB_party || "").trim().toUpperCase().slice(0, 1);
+      const aPct = Number(r.candA_pct), bPct = Number(r.candB_pct);
+      if (aP === "D") D = aPct; if (bP === "D") D = bPct;
+      if (aP === "R") R = aPct; if (bP === "R") R = bPct;
+      if (!isFinite(D) && !isFinite(R) && !aP && !bP) { D = aPct; R = bPct; }
+    }
+    if (!isFinite(D) || !isFinite(R) || (D + R) <= 0) continue;
+
+    const moe = Number(r.sigma ?? r.moe_pct ?? NaN);
+    out.push({
+      mode, state, date,
+      D, R,
+      sigma: isFinite(moe) && moe > 0 ? moe : DEFAULT_SIGMA,
+      pollster: String(r.pollster || "").trim(),
+      sampleSize: Number(r.sample_n) || null,
+      population: String(r.sample_type || "").trim().toLowerCase() || null,
+      partisan: String(r.pollster_partisan || "").trim().toUpperCase() || null,
+      internal: false,
+      url: null,
+      seat: String(r.race || "").trim() || null,
+      source: "csv",
+    });
+  }
+
+  console.log(`  ${CSV_PATH}: ${out.length} manual poll rows, ${CANDIDATE_PARTY.size} candidate-party entries`);
+  return out;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NORMALIZING API POLLS
+   ═══════════════════════════════════════════════════════ */
+const D_WORDS = /^(d|dem|dems|democrat|democrats|democratic|generic democrat|democratic candidate)$/;
+const R_WORDS = /^(r|rep|reps|gop|republican|republicans|generic republican|republican candidate)$/;
+
+/** Party for one answer: explicit field, party token in the label, then the name. */
+function answerParty(ans) {
+  const explicit = String(ans.party ?? ans.candidate_party ?? ans.answer_party ?? "").trim().toUpperCase().slice(0, 1);
+  if (explicit === "D" || explicit === "R") return explicit;
+
+  const choice = String(ans.choice ?? ans.answer ?? ans.candidate_name ?? ans.name ?? "").trim();
+  const lower = choice.toLowerCase().replace(/\s+/g, " ");
+  if (D_WORDS.test(lower)) return "D";
+  if (R_WORDS.test(lower)) return "R";
+
+  // Trailing party marker: "Jon Ossoff (D)", "Ossoff, D", "Ossoff - Dem"
+  const marker = choice.match(/[(\[,\-–]\s*(dem|democrat(?:ic)?|d|rep|republican|gop|r)\s*[)\]]?\s*$/i);
+  if (marker) {
+    const t = marker[1].toLowerCase();
+    return (t === "d" || t.startsWith("dem")) ? "D" : "R";
+  }
+
+  const byName = CANDIDATE_PARTY.get(normName(choice.replace(/[(\[].*$/, "")));
+  return byName || "";
+}
+
+function answerPct(ans) {
+  const v = Number(ans.pct ?? ans.percent ?? ans.value ?? NaN);
+  return isFinite(v) ? v : NaN;
+}
+
+/**
+ * Collapse one API poll into a single {D, R} matchup: the strongest Democrat
+ * against the strongest Republican. Returns null when either side is missing —
+ * primaries and one-party fields drop out here.
+ */
+function toMatchup(poll) {
+  const answers = Array.isArray(poll.answers) ? poll.answers : [];
+  let D = NaN, R = NaN;
+  for (const a of answers) {
+    const pct = answerPct(a);
+    if (!isFinite(pct)) continue;
+    const party = answerParty(a);
+    if (party === "D" && (!isFinite(D) || pct > D)) D = pct;
+    if (party === "R" && (!isFinite(R) || pct > R)) R = pct;
+  }
+  if (!isFinite(D) || !isFinite(R) || (D + R) <= 0) return null;
+  return { D, R };
+}
+
+function normalizeApiPoll(poll, mode) {
+  const stage = String(poll.stage ?? poll.race_stage ?? "").trim().toLowerCase();
+  if (!ALLOWED_STAGES.has(stage)) return null;
+
+  const state = toUsps(poll.state) || toUsps(poll.seat_name) || toUsps(poll.race);
+  if (!state) return null;
+
+  const date = parseDate(poll.end_date || poll.start_date || poll.created_at);
+  if (!date) return null;
+
+  const pair = toMatchup(poll);
+  if (!pair) return null;
+
+  const moe = Number(poll.margin_of_error ?? poll.moe ?? NaN);
+
+  return {
+    mode,
+    state,
+    date,
+    D: pair.D,
+    R: pair.R,
+    sigma: isFinite(moe) && moe > 0 ? moe : DEFAULT_SIGMA,
+    pollster: String(poll.pollster || poll.display_name || "").trim(),
+    sampleSize: Number(poll.sample_size) || null,
+    population: String(poll.population || "").trim().toLowerCase() || null,
+    partisan: poll.partisan ? String(poll.partisan).trim().toUpperCase().slice(0, 1) : null,
+    internal: !!poll.internal,
+    url: poll.url || null,
+    seat: poll.seat_name || null,
+    source: "votehub",
+    id: poll.id || null,
+  };
+}
+
+/** Same race, same field date, same pollster, same numbers → same poll. */
+function dedupeKey(p) {
+  return [
+    p.mode, p.state, p.date,
+    String(p.pollster || "").toLowerCase().replace(/[^a-z0-9]+/g, ""),
+    Number(p.D).toFixed(1), Number(p.R).toFixed(1),
+  ].join("|");
+}
+
+/* ═══════════════════════════════════════════════════════
+   MAIN
+   ═══════════════════════════════════════════════════════ */
+async function run() {
+  const today = new Date();
+  const start = addDays(today, -LOOKBACK_DAYS);
+
+  const debug = {
+    lookbackDays: LOOKBACK_DAYS,
+    pollTypeUsed: {},
+    fetched: {},
+    dropped: {},
+    okSlices: 0,
+    failedSlices: 0,
+    skippedDays: [],
+  };
+
+  console.log("Loading manual supplement + candidate parties...");
+  const csvPolls = loadCsvSupplement();
+
+  const apiPolls = [];
+  for (const mode of Object.keys(MODE_POLL_TYPES)) {
+    console.log(`Fetching ${mode} polls from VoteHub...`);
+    let raw = [];
+    for (const pollType of MODE_POLL_TYPES[mode]) {
+      try {
+        raw = await fetchPollType(pollType, start, today, debug);
+      } catch (e) {
+        console.warn(`  poll_type="${pollType}" failed: ${String(e).split("\n")[0]}`);
+        continue;
+      }
+      if (raw.length) {
+        debug.pollTypeUsed[mode] = pollType;
+        break;
+      }
+      console.log(`  poll_type="${pollType}" returned nothing; trying the next name.`);
+    }
+
+    // The API can repeat a poll across overlapping slices.
+    const byId = new Map();
+    for (const p of raw) {
+      if (p && p.id != null) byId.set(p.id, p);
+      else if (p) byId.set(JSON.stringify(p), p);
+    }
+    const unique = Array.from(byId.values());
+
+    let dropped = 0;
+    for (const p of unique) {
+      const row = normalizeApiPoll(p, mode);
+      if (row) apiPolls.push(row); else dropped++;
+    }
+    debug.fetched[mode] = unique.length;
+    debug.dropped[mode] = dropped;
+    console.log(`  ${mode}: ${unique.length} polls, ${unique.length - dropped} usable D-vs-R matchups`);
+  }
+
+  if (!apiPolls.length) {
+    console.warn("WARNING: VoteHub returned no usable state polls; writing the manual supplement only.");
+  }
+
+  // API first, then any manual row the API doesn't already carry.
+  const seen = new Set();
+  const merged = [];
+  for (const p of apiPolls.concat(csvPolls)) {
+    const k = dedupeKey(p);
+    if (seen.has(k)) continue;
+    seen.add(k);
+    merged.push(p);
+  }
+  merged.sort((a, b) => a.mode.localeCompare(b.mode) || a.state.localeCompare(b.state) || a.date.localeCompare(b.date));
+
+  const counts = { senate: 0, governor: 0 };
+  const states = { senate: new Set(), governor: new Set() };
+  for (const p of merged) {
+    counts[p.mode] = (counts[p.mode] || 0) + 1;
+    states[p.mode]?.add(p.state);
+  }
+
+  debug.fromApi = merged.filter(p => p.source === "votehub").length;
+  debug.fromCsv = merged.filter(p => p.source === "csv").length;
+
+  const out = {
+    updatedAt: new Date().toISOString(),
+    source: API_BASE,
+    window: 6,                 // rolling window (polls) the model averages over
+    counts,
+    states: { senate: states.senate.size, governor: states.governor.size },
+    polls: merged,
+    debug,
+  };
+
+  fs.mkdirSync("json", { recursive: true });
+  fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+  console.log(`Done. ${merged.length} state polls (${debug.fromApi} from VoteHub, ${debug.fromCsv} manual) → ${OUT_PATH}`);
+
+  if (debug.skippedDays.length) {
+    console.warn(`WARNING: skipped ${debug.skippedDays.length} day(s) due to VoteHub 5xx. See debug.skippedDays.`);
+  }
+}
+
+if (require.main === module) {
+  run().catch(e => {
+    console.error("Critical Error:\n" + String(e));
+    process.exit(1);
+  });
+}
+
+module.exports = { run, normalizeApiPoll, toMatchup, answerParty, toUsps, normMode, rememberCandidate, dedupeKey };

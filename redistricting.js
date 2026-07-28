@@ -1170,14 +1170,6 @@ window.redistDiffEras = function(){
   }
 };
 
-(function(){
-  document.addEventListener('click', (ev) => {
-    const btn = ev.target.closest('.fcToggleSync [data-fc]');
-    if (!btn) return;
-    setTimeout(() => { try { window.refreshRedistrictingForForecast(); } catch(e){} }, 0);
-  });
-})();
-
 window.addEventListener("resize", ()=>{
   if (!REDIST_INITED) return;
   try { redistRenderWarChart(); } catch(e){}

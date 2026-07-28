@@ -71,13 +71,14 @@ function makeLoadingSection(mode) {
     histoDStart: 9
   };
 }
-function buildSectionData(mode, oddsAll, hist, forecastMode) {
+function buildSectionData(mode, oddsAll, hist) {
   var meta = TITLES[mode];
   var rule = SEAT_RULES_UI[mode];
   if (!oddsAll || !oddsAll.length) return makeLoadingSection(mode);
-  var odds = forecastMode === "nowcast" ? oddsAll.filter(function (d) {
+  // The series only covers days with polling behind them; nothing is projected.
+  var odds = oddsAll.filter(function (d) {
     return !d.isForecast;
-  }) : oddsAll;
+  });
   if (!odds.length) return makeLoadingSection(mode);
   var last = odds[odds.length - 1];
   var pDem = Math.max(0, Math.min(1, +last.pDem));
@@ -347,7 +348,6 @@ function ModelSection(_ref5) {
   var d = _ref5.d,
     mode = _ref5.mode,
     ready = _ref5.ready,
-    forecastMode = _ref5.forecastMode,
     isCongress = _ref5.isCongress;
   var _useState5 = useState("prob"),
     _useState6 = _slicedToArray(_useState5, 2),
@@ -709,8 +709,7 @@ function RatingSection(_ref0) {
   })));
 }
 function RatingsView(_ref1) {
-  var forecastMode = _ref1.forecastMode,
-    dataReady = _ref1.dataReady;
+  var dataReady = _ref1.dataReady;
   var _useState1 = useState({
       senate: Object.fromEntries(RTG_ORDER.map(function (k) {
         return [k, 0];
@@ -762,7 +761,7 @@ function RatingsView(_ref1) {
         house: fn("house")
       });
     } catch (e) {}
-  }, [dataReady, forecastMode, ratingsReady]);
+  }, [dataReady, ratingsReady]);
   return /*#__PURE__*/React.createElement("div", {
     className: "cols"
   }, /*#__PURE__*/React.createElement(RatingSection, {
@@ -1565,20 +1564,22 @@ function FloridaView() {
    state-chart SVG are all teleported out of the offscreen #pollsPage so
    polls.js continues to render into them; everything around them is React.
    ============================================================================ */
+/* Titles state the finding, never the form. The dek carries the form. */
 var POLLS_TITLES = {
   gb: {
-    title: "Generic Ballot",
-    sub: "Approval & national vote"
+    title: "Where the national vote sits today",
+    sub: "Generic congressional ballot and presidential approval, weighted rolling average of published polls."
   },
   senate: {
-    title: "Senate",
-    sub: "Class II · 2026"
+    title: "What Senate polling says, state by state",
+    sub: "Every 2026 Senate race with published polling, averaged over its most recent surveys."
   },
   governor: {
-    title: "Gubernatorial",
-    sub: "Governor · 2026"
+    title: "What gubernatorial polling says, state by state",
+    sub: "Every 2026 governor's race with published polling, averaged over its most recent surveys."
   }
 };
+var POLLS_SOURCE = "Source: VoteHub polls API. Averages are ours; nothing is projected forward.";
 function PollsCanvasHost(_ref17) {
   var mode = _ref17.mode,
     ready = _ref17.ready;
@@ -1743,8 +1744,14 @@ function PollsGBSection(_ref22) {
   var pillR = (_s$pillR3 = s.pillR) !== null && _s$pillR3 !== void 0 ? _s$pillR3 : "—";
   var dBig = (_s$dBig = s.dBig) !== null && _s$dBig !== void 0 ? _s$dBig : "—";
   var rBig = (_s$rBig = s.rBig) !== null && _s$rBig !== void 0 ? _s$rBig : "—";
+  // The readout is shared by both series, so the labels have to follow the tab.
+  var isApproval = leftTab === "approval";
+  var labD = isApproval ? "app" : "dem";
+  var labR = isApproval ? "dis" : "rep";
+  var pillLabD = isApproval ? "app" : "D";
+  var pillLabR = isApproval ? "dis" : "R";
   return /*#__PURE__*/React.createElement("div", {
-    className: "col"
+    className: isApproval ? "col isApproval" : "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -1759,7 +1766,7 @@ function PollsGBSection(_ref22) {
     className: "sw"
   }), /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "D"), /*#__PURE__*/React.createElement("span", {
+  }, pillLabD), /*#__PURE__*/React.createElement("span", {
     className: "n"
   }, pillD), /*#__PURE__*/React.createElement("span", {
     className: "pct"
@@ -1769,7 +1776,7 @@ function PollsGBSection(_ref22) {
     className: "sw"
   }), /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "R"), /*#__PURE__*/React.createElement("span", {
+  }, pillLabR), /*#__PURE__*/React.createElement("span", {
     className: "n"
   }, pillR), /*#__PURE__*/React.createElement("span", {
     className: "pct"
@@ -1779,7 +1786,7 @@ function PollsGBSection(_ref22) {
     className: "seatsCol d"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Dem."), /*#__PURE__*/React.createElement("div", {
+  }, labD), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, dBig)), /*#__PURE__*/React.createElement("div", {
     className: "seatsDash"
@@ -1787,7 +1794,7 @@ function PollsGBSection(_ref22) {
     className: "seatsCol r"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Rep."), /*#__PURE__*/React.createElement("div", {
+  }, labR), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, rBig))), /*#__PURE__*/React.createElement(PollsCanvasHost, {
     mode: "gb",
@@ -1815,13 +1822,17 @@ function PollsGBSection(_ref22) {
   }, "approval"))), /*#__PURE__*/React.createElement(PollsChartHost, {
     mode: "gb",
     ready: ready
-  })), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), isApproval ? " \xB7 one dot per published poll, the line is the weighted rolling average. The bar above the chart is the daily margin, above the rule when approval leads and below it when disapproval does." : " \xB7 one dot per published poll, the line is the weighted rolling average. The bar above the chart is the daily margin, above the rule for a Democratic lead and below it for a Republican one.")), /*#__PURE__*/React.createElement("div", {
     className: "pollsListWrap"
   }, /*#__PURE__*/React.createElement("div", {
     className: "pollsListHead"
-  }, "Recent polls"), /*#__PURE__*/React.createElement(PollsListHost, {
+  }, "the record"), /*#__PURE__*/React.createElement(PollsListHost, {
     ready: ready
-  })));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, POLLS_SOURCE));
 }
 function PollsRaceSection(_ref23) {
   var _s$dBig2, _s$rBig2;
@@ -1842,12 +1853,14 @@ function PollsRaceSection(_ref23) {
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
   }, meta.sub))), /*#__PURE__*/React.createElement("div", {
+    className: "seatsNote"
+  }, "poll average, selected state"), /*#__PURE__*/React.createElement("div", {
     className: "seats"
   }, /*#__PURE__*/React.createElement("div", {
     className: "seatsCol d"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Dem."), /*#__PURE__*/React.createElement("div", {
+  }, "dem"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, dBig)), /*#__PURE__*/React.createElement("div", {
     className: "seatsDash"
@@ -1855,7 +1868,7 @@ function PollsRaceSection(_ref23) {
     className: "seatsCol r"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lbl"
-  }, "Rep."), /*#__PURE__*/React.createElement("div", {
+  }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, rBig))), /*#__PURE__*/React.createElement(PollsCanvasHost, {
     mode: mode,
@@ -1866,8 +1879,10 @@ function PollsRaceSection(_ref23) {
     mode: mode,
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 each polled state is filled toward the party leading its poll average, darker with the margin; a state inside two points is overprinted. States with no polling stay paper."), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "Loading polls…" : "Click a state to see its polls")), /*#__PURE__*/React.createElement("div", {
+  }, !ready ? "loading polls" : "click a state to read its polls")), /*#__PURE__*/React.createElement("div", {
     className: "probBlock"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
@@ -1876,7 +1891,9 @@ function PollsRaceSection(_ref23) {
   }, stTitle)), /*#__PURE__*/React.createElement(PollsStateChartHost, {
     mode: mode,
     ready: ready
-  })));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, POLLS_SOURCE));
 }
 function PollsView() {
   var _useState29 = useState(false),
@@ -2036,11 +2053,11 @@ function MethodologyView() {
     className: "methCard"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "methH2"
-  }, "Forecast vs. Nowcast"), /*#__PURE__*/React.createElement("p", {
+  }, "What the numbers cover"), /*#__PURE__*/React.createElement("p", {
     className: "methBody"
-  }, /*#__PURE__*/React.createElement("strong", null, "Nowcast"), " reflects what would happen if the election were held today \u2014 a pure snapshot of current polling."), /*#__PURE__*/React.createElement("p", {
+  }, "Every figure on this site is a ", /*#__PURE__*/React.createElement("strong", null, "nowcast"), ": what would happen if the election were held today, given the polling in hand. The series ends on the last day with polling behind it."), /*#__PURE__*/React.createElement("p", {
     className: "methBody"
-  }, /*#__PURE__*/React.createElement("strong", null, "Forecast"), " projects forward to Election Day by modeling how the race is likely to evolve. Undecided voters are gradually allocated based on historical patterns, and a small structural adjustment is applied to account for the typical relationship between midterm polling and final results. Both adjustments ramp gradually to full strength by early fall.")), /*#__PURE__*/React.createElement("section", {
+  }, "Nothing is projected forward to Election Day. Undecided voters are left undecided rather than allocated to either party, so a lead here reflects the surveys as they were published and nothing added on top of them.")), /*#__PURE__*/React.createElement("section", {
     className: "methCard"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "methH2"
@@ -2190,7 +2207,7 @@ function ProjectsView() {
   }));
 }
 
-/* ========== TopBar + ForecastToggle ========== */
+/* ========== TopBar ========== */
 var TAB_SLUGS = {
   "Model": "model",
   "Ratings": "ratings",
@@ -2283,33 +2300,6 @@ function TopBar(_ref25) {
     }
   }, "Donate")));
 }
-function ForecastToggle(_ref26) {
-  var forecastMode = _ref26.forecastMode,
-    setForecastMode = _ref26.setForecastMode;
-  var click = function click(mode) {
-    var _window$__forecast47;
-    setForecastMode(mode);
-    if (typeof ((_window$__forecast47 = window.__forecast) === null || _window$__forecast47 === void 0 ? void 0 : _window$__forecast47.setForecastMode) === "function") window.__forecast.setForecastMode(mode);
-  };
-  return /*#__PURE__*/React.createElement("div", {
-    className: "fcRow"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "fcToggle"
-  }, /*#__PURE__*/React.createElement("button", {
-    className: forecastMode === "forecast" ? "active" : "",
-    onClick: function onClick() {
-      return click("forecast");
-    }
-  }, "Forecast"), /*#__PURE__*/React.createElement("span", {
-    className: "sep"
-  }, "\xB7"), /*#__PURE__*/React.createElement("button", {
-    className: forecastMode === "nowcast" ? "active" : "",
-    onClick: function onClick() {
-      return click("nowcast");
-    }
-  }, "Nowcast")));
-}
-var TABS_WITH_FORECAST_TOGGLE = new Set(["Model", "Ratings"]);
 function App() {
   var _useTweaks = useTweaks(window.TWEAK_DEFAULTS),
     _useTweaks2 = _slicedToArray(_useTweaks, 2),
@@ -2348,10 +2338,6 @@ function App() {
     _useState48 = _slicedToArray(_useState47, 2),
     dataReady = _useState48[0],
     setDataReady = _useState48[1];
-  var _useState49 = useState("forecast"),
-    _useState50 = _slicedToArray(_useState49, 2),
-    forecastMode = _useState50[0],
-    setForecastMode = _useState50[1];
   var _useState51 = useState({
       updated: "—",
       sims: "—",
@@ -2366,17 +2352,19 @@ function App() {
     document.documentElement.setAttribute("data-density", t.density);
     document.documentElement.setAttribute("data-bg", t.background);
   }, [t.palette, t.density, t.background]);
+  // Lets a surface claim the whole ground, not just a panel inside it.
+  useEffect(function () {
+    document.documentElement.setAttribute("data-view", TAB_SLUGS[activeTab] || "");
+  }, [activeTab]);
   useEffect(function () {
     function refresh() {
       var F = window.__forecast;
       if (!F) return;
-      var fm = F.forecastMode === "nowcast" ? "nowcast" : "forecast";
-      setForecastMode(fm);
       setDataReady(true);
       try {
-        setSenate(buildSectionData("senate", F.odds && F.odds.senate, F.hist && F.hist.senate, fm));
-        setGovernor(buildSectionData("governor", F.odds && F.odds.governor, F.hist && F.hist.governor, fm));
-        setHouse(buildSectionData("house", F.odds && F.odds.house, F.hist && F.hist.house, fm));
+        setSenate(buildSectionData("senate", F.odds && F.odds.senate, F.hist && F.hist.senate));
+        setGovernor(buildSectionData("governor", F.odds && F.odds.governor, F.hist && F.hist.governor));
+        setHouse(buildSectionData("house", F.odds && F.odds.house, F.hist && F.hist.house));
         var ELECTION_DAY = new Date(2026, 10, 3);
         var today = new Date();
         var days = Math.max(0, Math.ceil((ELECTION_DAY - today) / 86400000));
@@ -2496,27 +2484,23 @@ function App() {
     }, /*#__PURE__*/React.createElement(ModelSection, {
       d: senate,
       mode: "senate",
-      ready: ready,
-      forecastMode: forecastMode
+      ready: ready
     }), /*#__PURE__*/React.createElement("div", {
       className: "colRule"
     }), /*#__PURE__*/React.createElement(ModelSection, {
       d: governor,
       mode: "governor",
-      ready: ready,
-      forecastMode: forecastMode
+      ready: ready
     }), /*#__PURE__*/React.createElement("div", {
       className: "colRule"
     }), /*#__PURE__*/React.createElement(ModelSection, {
       d: house,
       mode: "house",
       ready: ready,
-      forecastMode: forecastMode,
       isCongress: true
     }));
   } else if (activeTab === "Ratings") {
     viewContent = /*#__PURE__*/React.createElement(RatingsView, {
-      forecastMode: forecastMode,
       dataReady: dataReady
     });
   } else if (activeTab === "Past Elections") {
@@ -2545,9 +2529,6 @@ function App() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(TopBar, {
     activeTab: activeTab,
     setActiveTab: setActiveTab
-  }), TABS_WITH_FORECAST_TOGGLE.has(activeTab) && /*#__PURE__*/React.createElement(ForecastToggle, {
-    forecastMode: forecastMode,
-    setForecastMode: setForecastMode
   }), viewContent, (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("div", {
     className: "foot"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Updated"), " \xA0", foot.updated), /*#__PURE__*/React.createElement("span", {

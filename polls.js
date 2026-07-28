@@ -2,8 +2,45 @@
 (function(){
 "use strict";
 
-const FONT = "'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace";
+const FONT = "'Switzer',ui-sans-serif,system-ui,sans-serif";
 let pollsInited = false;
+
+/* ---- The data palette. Colour appears only where a datum is, so these are
+   read for the figures on this surface and nowhere else. ---- */
+function tok(name, fallback){
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return v || fallback;
+}
+const INK      = () => tok("--t-ink", "#16171A");
+const PAPER    = () => tok("--t-paper", "#E9E8E0");
+const MUTED    = () => tok("--t-muted", "#6E6C61");
+const DEM_INK  = () => tok("--t-d5", "#1E6FD9");
+const REP_INK  = () => tok("--t-d1", "#D62828");
+const OVERPRINT= () => tok("--t-overprint", "#191122");
+
+/* Geography obeys the colour law: paper for units with no datum, the two-way
+   inks by margin, overprint for a contested unit. */
+function pollsFill(margin){
+  if (!isFinite(margin)) return PAPER();
+  const a = Math.abs(margin);
+  if (a < 2) return OVERPRINT();
+  const t = Math.min(1, Math.max(0, a / 25));
+  return mixToPaper(margin > 0 ? REP_INK() : DEM_INK(), 0.22 + 0.78 * t);
+}
+
+function mixToPaper(hex, amount){
+  const p = parseHex(PAPER()) || [233, 232, 224];
+  const c = parseHex(hex) || [22, 23, 26];
+  const m = c.map((v, i) => Math.round(p[i] * (1 - amount) + v * amount));
+  return `rgb(${m[0]},${m[1]},${m[2]})`;
+}
+
+function parseHex(s){
+  const m = String(s).trim().match(/^#?([0-9a-f]{6})$/i);
+  if (!m) return null;
+  const n = parseInt(m[1], 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
 const PUI = {};          // per-mode UI refs
 const PMAP = {};         // per-mode map handles
 const PSEL = { senate:null, governor:null }; // selected state
@@ -200,7 +237,7 @@ function renderGB(ui){
   const ser=(GB_SRC.series||[]).map(s=>({date:parseDate(s.date),a:+s.dem,b:+s.rep})).filter(d=>d.date);
   drawMarginTimeline(ui.hist, ser.map(d=>({date:d.date,margin:d.a-d.b})));
   dualScatter(ui.chart, polls.map(p=>({date:p.date,a:+p.dem,b:+p.rep})), ser, "D","R");
-  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.dem,b:p.rep})),"D","R","var(--blue)","var(--red)");
+  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.dem,b:p.rep})),"D","R",DEM_INK(),REP_INK());
 }
 
 function renderApproval(ui){
@@ -214,9 +251,9 @@ function renderApproval(ui){
 
   const strict=!!GB_SRC.filterStrict;
   const polls=APP_RAW.filter(p=>isAllowedPollster(p.pollster,strict));
-  drawMarginTimeline(ui.hist, APP_SERIES.map(d=>({date:d.date,margin:d.a-d.b})));
-  dualScatter(ui.chart, polls.map(p=>({date:p.date,a:p.approve,b:p.disapprove})), APP_SERIES, "App","Dis","var(--approve, #4a7a3a)","var(--red, #903629)");
-  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.approve,b:p.disapprove})),"App","Dis","var(--approve, #4a7a3a)","var(--red, #903629)");
+  drawMarginTimeline(ui.hist, APP_SERIES.map(d=>({date:d.date,margin:d.a-d.b})), INK(), MUTED());
+  dualScatter(ui.chart, polls.map(p=>({date:p.date,a:p.approve,b:p.disapprove})), APP_SERIES, "app","dis",INK(),MUTED());
+  pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.approve,b:p.disapprove})),"app","dis",INK(),MUTED());
 }
 
 function setNum(ui,a,b,lA,lB){
@@ -238,14 +275,14 @@ function resetPillColor(ui){
   const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color="";
 }
 function greenPill(ui){
-  const APPROVE = "var(--approve, #4a7a3a)";
+  const APPROVE = INK();
   const el=ui.dPill?.closest(".metricPill");
   if(el){el.classList.remove("blue");el.querySelector(".dot").style.background=APPROVE;}
   const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color=APPROVE;
 }
 
 /* ======== MARGIN HISTOGRAM ======== */
-function drawMarginTimeline(canvas,rawPolls){
+function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
   // rawPolls = [{date, margin}]. Group by day, average, then draw bar per day.
   if(!canvas)return;
   const W=canvas.clientWidth||300, H=canvas.clientHeight||36;
@@ -266,12 +303,11 @@ function drawMarginTimeline(canvas,rawPolls){
   const days=[...byDay.values()].map(d=>({date:d.date,margin:d.sum/d.n})).sort((a,b)=>a.date-b.date);
   if(!days.length)return;
 
-  const cs=getComputedStyle(document.documentElement);
-  const bl=cs.getPropertyValue("--blue").trim()|| "#2a4570";
-  const rd=cs.getPropertyValue("--red").trim()|| "#903629";
+  const bl=cAbove||DEM_INK();
+  const rd=cBelow||REP_INK();
   const mid=H/2;
   // Zero line
-  ctx.strokeStyle=cs.getPropertyValue("--rule-soft").trim()||"#c1ad84"; ctx.lineWidth=1;
+  ctx.strokeStyle=INK(); ctx.lineWidth=1;
   ctx.beginPath(); ctx.moveTo(0,mid); ctx.lineTo(W,mid); ctx.stroke();
   // Extend to today
   const minD=days[0].date;
@@ -306,9 +342,8 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
   const svg=d3.select(el); svg.selectAll("*").remove(); svg.attr("viewBox",`0 0 ${W} ${H}`);
   const mg={l:38,r:10,t:10,b:26}, iw=W-mg.l-mg.r, ih=H-mg.t-mg.b;
   if(!polls.length)return;
-  const cs=getComputedStyle(document.documentElement);
-  const blue=cA||cs.getPropertyValue("--blue").trim()|| "#2a4570";
-  const red=cB||cs.getPropertyValue("--red").trim()|| "#903629";
+  const blue=cA||DEM_INK();
+  const red=cB||REP_INK();
   const ad=polls.map(d=>d.date).concat(avg.map(d=>d.date)).filter(Boolean);
   const xE=d3.extent(ad), av=polls.flatMap(d=>[d.a,d.b]);
   const yMn=Math.max(0,d3.min(av)-3), yMx=Math.min(100,d3.max(av)+3);
@@ -354,7 +389,7 @@ function pollTable(el,rows,lA,lB,cA,cB){
     const mc=m>0?ca:(m<0?cb:"var(--muted)");
     h+=`<tr style="border-bottom:1px solid rgba(229,231,235,.5)">`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};white-space:nowrap">${ds(p.date)}</td>`;
-    h+=`<td style="padding:5px 8px;font:500 11px ${FONT};max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${String(p.ps||"").slice(0,28)}</td>`;
+    h+=`<td style="padding:5px 8px;font:500 11px ${FONT};max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||"").slice(0,28))}</td>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};color:${ca}">${(+p.a).toFixed(1)}</td>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};color:${cb}">${(+p.b).toFixed(1)}</td>`;
     h+=`<td style="padding:5px 8px;font:700 11px ${FONT};color:${mc}">${ms}</td>`;
@@ -418,12 +453,13 @@ function recolorMap(mk){
   const m=PMAP[mk]; if(!m?.g)return;
   m.g.selectAll("path.state").each(function(){
     const st=this.getAttribute("data-st");
-    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";return;}
+    // Absent is absent, not zero: an unpolled state keeps the paper ground.
+    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=PAPER();return;}
     const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st];
-    if(!pp||!pp.length){this.style.fill=getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim()|| "#ead9b5";return;}
+    if(!pp||!pp.length){this.style.fill=PAPER();return;}
     const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
     let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
-    this.style.fill=interpColor((sR/w)-(sD/w));
+    this.style.fill=pollsFill((sR/w)-(sD/w));
   });
 }
 
@@ -448,18 +484,28 @@ function pickState(mk,usps){
   }
 
   const name=USPS_TO_NAME[usps]||usps;
-  if(ui.stTitle)ui.stTitle.textContent=`${name} — ${mk==="senate"?"Senate":"Governor"} polls`;
+  const n=pp?pp.length:0;
+  if(ui.stTitle)ui.stTitle.textContent=`${name} — ${mk==="senate"?"Senate":"Governor"} · ${n} poll${n===1?"":"s"}`;
   stateScatter(mk,usps);
 }
 
 function stateScatter(mk,usps){
   const ui=PUI[mk]; const el=ui?.stChart; if(!el)return;
-  const polls=(STATE_POLL_SRC.byModeState?.[mk]?.[usps]||[]).map(p=>({date:p.date,a:+p.D,b:+p.R})).sort((a,b)=>a.date-b.date);
+  const polls=(STATE_POLL_SRC.byModeState?.[mk]?.[usps]||[]).map(p=>({date:p.date,a:+p.D,b:+p.R,ps:p.pollster||"",partisan:p.partisan||null})).sort((a,b)=>a.date-b.date);
   const r=el.getBoundingClientRect();
   const W=Math.max(320,Math.floor(r.width||400)),H=Math.max(180,Math.floor(r.height||220));
   const svg=d3.select(el); svg.selectAll("*").remove(); svg.attr("viewBox",`0 0 ${W} ${H}`);
   const mg={l:38,r:10,t:10,b:26},iw=W-mg.l-mg.r,ih=H-mg.t-mg.b;
-  if(!polls.length){svg.append("text").attr("x",W/2).attr("y",H/2).attr("text-anchor","middle").attr("fill","var(--muted)").attr("font-size","12px").attr("font-weight","600").text("No polls for this state");return;}
+  // Absent is absent, not zero: an empty vessel with its word inside.
+  if(!polls.length){
+    const bw=Math.min(220,iw),bh=56;
+    svg.append("rect").attr("x",(W-bw)/2).attr("y",(H-bh)/2).attr("width",bw).attr("height",bh)
+      .attr("fill",PAPER()).attr("stroke",INK()).attr("stroke-width",2);
+    svg.append("text").attr("x",W/2).attr("y",H/2+4).attr("text-anchor","middle")
+      .attr("fill",MUTED()).attr("font-family",FONT).attr("font-size","12px").attr("font-weight","600")
+      .text("no polls yet");
+    return;
+  }
   const av=polls.flatMap(d=>[d.a,d.b]);
   const yMn=Math.max(0,d3.min(av)-3),yMx=Math.min(100,d3.max(av)+3);
   const x=d3.scaleTime().domain(d3.extent(polls,d=>d.date)).range([mg.l,mg.l+iw]);
@@ -467,8 +513,7 @@ function stateScatter(mk,usps){
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.min(6,iw/90|0)).tickFormat(d3.timeFormat("%b %d")));
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50) svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
-  const cs=getComputedStyle(document.documentElement);
-  const blue=cs.getPropertyValue("--blue").trim()|| "#2a4570",red=cs.getPropertyValue("--red").trim()|| "#903629";
+  const blue=DEM_INK(),red=REP_INK();
   svg.selectAll(".dD").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",3.5).attr("fill",blue).attr("opacity",.5);
   svg.selectAll(".dR").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",3.5).attr("fill",red).attr("opacity",.5);
   if(polls.length>=3){
@@ -482,8 +527,12 @@ function stateScatter(mk,usps){
   const dot=svg.append("circle").attr("r",4).attr("fill",blue).style("opacity",0);
   const bis=d3.bisector(d=>d.date).left;
   svg.append("rect").attr("x",mg.l).attr("y",mg.t).attr("width",iw).attr("height",ih).style("fill","transparent").style("cursor","crosshair")
-    .on("mousemove",ev=>{if(!polls.length)return;const[mx]=d3.pointer(ev);const xd=x.invert(mx);const i=clamp(bis(polls,xd),1,polls.length-1);const a=polls[i-1],b=polls[i];const d=(xd-a.date)>(b.date-xd)?b:a;dot.attr("cx",x(d.date)).attr("cy",y(d.a)).style("opacity",1);showSimTip(ev,`<div class="stDate">${ds(d.date)}</div><div class="stRow"><span class="stDot" style="background:${blue}"></span><span class="stLbl">D</span><span class="stVal">${d.a.toFixed(1)}%</span></div><div class="stRow"><span class="stDot" style="background:${red}"></span><span class="stLbl">R</span><span class="stVal">${d.b.toFixed(1)}%</span></div>`);})
+    .on("mousemove",ev=>{if(!polls.length)return;const[mx]=d3.pointer(ev);const xd=x.invert(mx);const i=clamp(bis(polls,xd),1,polls.length-1);const a=polls[i-1],b=polls[i];const d=(xd-a.date)>(b.date-xd)?b:a;dot.attr("cx",x(d.date)).attr("cy",y(d.a)).style("opacity",1);showSimTip(ev,`<div class="stDate">${ds(d.date)}${d.ps?` · ${escapeHtml(d.ps)}${d.partisan?` (${escapeHtml(d.partisan)})`:""}`:""}</div><div class="stRow"><span class="stDot" style="background:${blue}"></span><span class="stLbl">D</span><span class="stVal">${d.a.toFixed(1)}%</span></div><div class="stRow"><span class="stDot" style="background:${red}"></span><span class="stLbl">R</span><span class="stVal">${d.b.toFixed(1)}%</span></div>`);})
     .on("mouseleave",()=>{dot.style("opacity",0);hideSimTip();});
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
 
 /* ======== RESIZE ======== */

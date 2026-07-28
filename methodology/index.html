@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light" data-palette="almanac" data-density="default" data-bg="plain"><head>
+<!DOCTYPE html><html lang="en" data-theme="light" data-palette="almanac" data-density="default" data-bg="plain" data-view="methodology"><head>
 <base href="/">
 <title>Methodology | theoelections.com</title>
 <meta name="description" content="How the theoelections.com forecast works: signals, weighting, corrections, simulation, and the forecast-vs-nowcast distinction.">
@@ -7,7 +7,7 @@
 <meta property="og:description" content="How the theoelections.com forecast works: signals, weighting, corrections, simulation, and the forecast-vs-nowcast distinction.">
 <meta property="og:url" content="https://theoelections.com/methodology/">
 <meta property="og:type" content="website">
-<meta name="prerender-build" content="2026-05-18T01:26:35Z">
+<meta name="prerender-build" content="2026-07-28T02:13:33Z">
 <script>window.__INITIAL_TAB="Methodology";</script>
 
 <meta charset="utf-8">
@@ -2786,15 +2786,8 @@
     .modeCol[data-swing-mode="house"] .mapSvg{ cursor:grab; }
     .modeCol[data-swing-mode="house"] .mapSvg:active{ cursor:grabbing; }
 
-    /* ---------- Forecast / Nowcast Toggle ---------- */
-    .forecastToggleWrap{
-      grid-column: 1 / -1;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-    }
-    .forecastToggle{
+    /* ---------- Chamber toggle (State Legislatures) ---------- */
+    .chamberToggle{
       display:inline-flex;
       background: var(--neutral-bg);
       border:1px solid var(--line);
@@ -2803,7 +2796,7 @@
       gap:2px;
       box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
     }
-    .fcBtn{
+    .chamberBtn{
       appearance:none;
       border:none;
       background:transparent;
@@ -2817,8 +2810,8 @@
       font-family:var(--sans);
       letter-spacing:0.01em;
     }
-    .fcBtn:hover{ color:var(--ink-dim); }
-    .fcBtn.active{
+    .chamberBtn:hover{ color:var(--ink-dim); }
+    .chamberBtn.active{
       background:#fff;
       color:var(--blue-dark);
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -3081,7 +3074,6 @@ html[data-look="riso"] .titleRow,
 html[data-look="riso"] .tooltipBox,
 html[data-look="riso"] .pageTabs,
 html[data-look="riso"] .authorBadge,
-html[data-look="riso"] .forecastToggleWrap,
 html[data-look="riso"] .segmentedControl,
 html[data-look="riso"] .lookToggle,
 html[data-look="riso"] .themeToggle {
@@ -3346,33 +3338,28 @@ html[data-look="legacy"] .themeToggle {
   }
 }
 
-/* FORECAST TOGGLE — don't get force-flattened by the card override */
-html[data-look="riso"] .forecastToggleWrap {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-html[data-look="riso"] .forecastToggle {
+/* CHAMBER TOGGLE — don't get force-flattened by the card override */
+html[data-look="riso"] .chamberToggle {
   background: var(--card-bg) !important;
   border: 1px solid var(--text-ink) !important;
   box-shadow: 2px 2px 0 0 var(--text-ink) !important;
   border-radius: 0 !important;
   padding: 3px !important;
 }
-html[data-look="riso"] .fcBtn {
+html[data-look="riso"] .chamberBtn {
   border-radius: 0 !important;
   color: var(--text-muted);
 }
-html[data-look="riso"] .fcBtn.active {
+html[data-look="riso"] .chamberBtn.active {
   background: var(--text-ink) !important;
   color: var(--card-bg) !important;
   box-shadow: none !important;
 }
-html[data-theme="dark"] .fcBtn.active {
+html[data-theme="dark"] .chamberBtn.active {
   background: var(--text-ink);
   color: var(--card-bg);
 }
-html[data-theme="dark"][data-look="legacy"] .fcBtn.active {
+html[data-theme="dark"][data-look="legacy"] .chamberBtn.active {
   background: #1f2937;
   color: #f0f0f0;
 }
@@ -4251,7 +4238,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   .flrCard, .methCard, .projCard, .stateInfoPanel,
   .tooltipBox, #tip, #simTip, #pastTip, #sldlCursorTip,
   .pageTab, .donateBtn,
-  .forecastToggle, .forecastToggleWrap, .fcBtn,
+  .chamberToggle, .chamberBtn,
   .segmentedControl, .lookToggle, .themeToggle,
   .pillRow .metricPill, .seatPill, .panelClassify,
   .panelShareTrack, .panelShareFillD, .panelShareFillR, .panelShareGap,
@@ -4482,21 +4469,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   }
   .donate:hover{ background: var(--ink-dim); }
 
-  /* ============ Forecast / Nowcast ============ */
-  .fcRow{ display:flex; justify-content: center; margin-bottom: 22px; }
-  .fcToggle{
-    display:inline-flex; align-items: baseline; gap: 14px;
-    font-family: var(--display); font-style: italic; font-size: 18px;
-  }
-  .fcToggle button{
-    appearance:none; border:none; background: transparent;
-    font-family: var(--display); font-style: italic; font-size: 18px;
-    color: var(--muted); cursor: pointer; padding: 2px 8px;
-    border-bottom: 1px solid transparent;
-  }
-  .fcToggle button.active{ color: var(--ink); border-bottom-color: var(--ink); font-style: normal; font-weight: 700; }
-  .fcToggle .sep{ color: var(--rule-soft); }
-
   /* ============ 3 columns ============ */
   .cols{
     display:grid;
@@ -4654,6 +4626,9 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
   .tweaksRoot, .twk-panel{ font-family: var(--body) !important; }
 </style>
+<link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="assets/polls-theme.css?v=1">
 <style id="sldlPanelStyles">
       #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .mapStage{position:relative;}
@@ -4797,7 +4772,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </style></head>
 <body>
   
-  <div class="sheet"><div id="app"><div class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/">Model</a><span class="dot">·</span><a class="" href="/ratings/">Ratings</a><span class="dot">·</span><a class="" href="/florida/">Florida</a><span class="dot">·</span><a class="" href="/polls/">Polls</a><span class="dot">·</span><a class="" href="/swingometer/">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/">State Legs.</a><span class="dot">·</span><a class="" href="/projects/">Projects</a><span class="dot">·</span><a class="active" href="/methodology/">Methodology</a></nav><div class="actions"><button class="iconbtn" title="Percent">%</button><button class="iconbtn" title="Dark mode">☾</button><button class="donate">Donate</button></div></div><div class="methAlmanac"><header class="methHero"><div class="methKicker">Documentation</div><h1 class="methTitle">Methodology</h1><p class="methLede">How the 2026 midterm forecast works.</p></header><section class="methCard"><p class="methBody">This forecast projects the outcome of every Senate, gubernatorial, and House race in the 2026 midterm elections. It combines national polling, state-level surveys, and historical voting patterns into a probabilistic model that runs thousands of election simulations daily.</p></section><section class="methCard"><h2 class="methH2">Inputs</h2><p class="methBody">The model ingests three main signals: a <strong>generic ballot</strong> average computed from a quality-filtered, weighted rolling window of national polls; <strong>state and district polls</strong> where available; and<strong> historical partisan ratios</strong> derived from recent election results. These are blended together with weights that reflect their relative informativeness — state polls carry the most influence where they exist, and the generic ballot fills in everywhere else.</p><p class="methBody">A <strong>national indicator</strong> is also computed by reverse-engineering the implied national environment from all available state polls, providing an additional cross-check on the generic ballot signal.</p></section><section class="methCard"><h2 class="methH2">Adjustments</h2><p class="methBody">The model applies several corrections to improve accuracy. A <strong>pollster quality filter</strong> screens polls by historical track record and weights them accordingly. A <strong>circuit breaker</strong> in non-competitive states prevents the national trend from overriding strong local polling. A <strong>Hispanic voter adjustment</strong>accounts for shifts in Hispanic voter preference relative to recent baselines, scaled by each district's demographic composition.</p></section><section class="methCard"><h2 class="methH2">Simulation</h2><p class="methBody">Individual race win probabilities are derived from projected margins using a normal distribution that accounts for polling uncertainty. Chamber-level outcomes are determined through <strong>Monte Carlo simulation</strong> — each run draws a correlated national swing and resolves every race, producing a full election map. The share of simulations in which each party reaches a majority determines the control probability.</p></section><section class="methCard"><h2 class="methH2">Forecast vs. Nowcast</h2><p class="methBody"><strong>Nowcast</strong> reflects what would happen if the election were held today — a pure snapshot of current polling.</p><p class="methBody"><strong>Forecast</strong> projects forward to Election Day by modeling how the race is likely to evolve. Undecided voters are gradually allocated based on historical patterns, and a small structural adjustment is applied to account for the typical relationship between midterm polling and final results. Both adjustments ramp gradually to full strength by early fall.</p></section><section class="methCard"><h2 class="methH2">Ratings</h2><p class="methBody">Each race is classified on a seven-point scale from Safe D to Safe R based on its projected margin. The thresholds are calibrated to reflect meaningful differences in competitiveness.</p><div class="methTableWrap"><table class="methTableA"><thead><tr><th>Rating</th><th>Margin</th><th>Description</th></tr></thead><tbody><tr><td><span class="methSwatch rtg-safeD"></span><span class="methRatingName">Safe D</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Democratic advantage</td></tr><tr><td><span class="methSwatch rtg-likelyD"></span><span class="methRatingName">Likely D</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Democratic lead</td></tr><tr><td><span class="methSwatch rtg-leanD"></span><span class="methRatingName">Lean D</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Democratic edge</td></tr><tr><td><span class="methSwatch rtg-tossup"></span><span class="methRatingName">Tossup</span></td><td class="methMono">&lt;2.5 pp</td><td class="methDesc">Either party could win</td></tr><tr><td><span class="methSwatch rtg-leanR"></span><span class="methRatingName">Lean R</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Republican edge</td></tr><tr><td><span class="methSwatch rtg-likelyR"></span><span class="methRatingName">Likely R</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Republican lead</td></tr><tr><td><span class="methSwatch rtg-safeR"></span><span class="methRatingName">Safe R</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Republican advantage</td></tr></tbody></table></div></section><section class="methCard"><h2 class="methH2">Data Sources</h2><p class="methBody">National and state polls are sourced from public polling databases and manually curated releases. Election baselines come from recent presidential and congressional results. Demographic adjustments use Census population estimates. Maps use US Census Bureau shapefiles.</p></section><footer class="methFoot">Built by <a href="https://x.com/The0_o7" target="_blank" rel="noreferrer">Theo</a> · 2026</footer></div></div>
+  <div class="sheet"><div id="app"><div class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/">Model</a><span class="dot">·</span><a class="" href="/ratings/">Ratings</a><span class="dot">·</span><a class="" href="/florida/">Florida</a><span class="dot">·</span><a class="" href="/polls/">Polls</a><span class="dot">·</span><a class="" href="/swingometer/">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/">State Legs.</a><span class="dot">·</span><a class="" href="/projects/">Projects</a><span class="dot">·</span><a class="active" href="/methodology/">Methodology</a></nav><div class="actions"><button class="iconbtn" title="Percent">%</button><button class="iconbtn" title="Dark mode">☾</button><button class="donate">Donate</button></div></div><div class="methAlmanac"><header class="methHero"><div class="methKicker">Documentation</div><h1 class="methTitle">Methodology</h1><p class="methLede">How the 2026 midterm forecast works.</p></header><section class="methCard"><p class="methBody">This forecast projects the outcome of every Senate, gubernatorial, and House race in the 2026 midterm elections. It combines national polling, state-level surveys, and historical voting patterns into a probabilistic model that runs thousands of election simulations daily.</p></section><section class="methCard"><h2 class="methH2">Inputs</h2><p class="methBody">The model ingests three main signals: a <strong>generic ballot</strong> average computed from a quality-filtered, weighted rolling window of national polls; <strong>state and district polls</strong> where available; and<strong> historical partisan ratios</strong> derived from recent election results. These are blended together with weights that reflect their relative informativeness — state polls carry the most influence where they exist, and the generic ballot fills in everywhere else.</p><p class="methBody">A <strong>national indicator</strong> is also computed by reverse-engineering the implied national environment from all available state polls, providing an additional cross-check on the generic ballot signal.</p></section><section class="methCard"><h2 class="methH2">Adjustments</h2><p class="methBody">The model applies several corrections to improve accuracy. A <strong>pollster quality filter</strong> screens polls by historical track record and weights them accordingly. A <strong>circuit breaker</strong> in non-competitive states prevents the national trend from overriding strong local polling. A <strong>Hispanic voter adjustment</strong>accounts for shifts in Hispanic voter preference relative to recent baselines, scaled by each district's demographic composition.</p></section><section class="methCard"><h2 class="methH2">Simulation</h2><p class="methBody">Individual race win probabilities are derived from projected margins using a normal distribution that accounts for polling uncertainty. Chamber-level outcomes are determined through <strong>Monte Carlo simulation</strong> — each run draws a correlated national swing and resolves every race, producing a full election map. The share of simulations in which each party reaches a majority determines the control probability.</p></section><section class="methCard"><h2 class="methH2">What the numbers cover</h2><p class="methBody">Every figure on this site is a <strong>nowcast</strong>: what would happen if the election were held today, given the polling in hand. The series ends on the last day with polling behind it.</p><p class="methBody">Nothing is projected forward to Election Day. Undecided voters are left undecided rather than allocated to either party, so a lead here reflects the surveys as they were published and nothing added on top of them.</p></section><section class="methCard"><h2 class="methH2">Ratings</h2><p class="methBody">Each race is classified on a seven-point scale from Safe D to Safe R based on its projected margin. The thresholds are calibrated to reflect meaningful differences in competitiveness.</p><div class="methTableWrap"><table class="methTableA"><thead><tr><th>Rating</th><th>Margin</th><th>Description</th></tr></thead><tbody><tr><td><span class="methSwatch rtg-safeD"></span><span class="methRatingName">Safe D</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Democratic advantage</td></tr><tr><td><span class="methSwatch rtg-likelyD"></span><span class="methRatingName">Likely D</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Democratic lead</td></tr><tr><td><span class="methSwatch rtg-leanD"></span><span class="methRatingName">Lean D</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Democratic edge</td></tr><tr><td><span class="methSwatch rtg-tossup"></span><span class="methRatingName">Tossup</span></td><td class="methMono">&lt;2.5 pp</td><td class="methDesc">Either party could win</td></tr><tr><td><span class="methSwatch rtg-leanR"></span><span class="methRatingName">Lean R</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Republican edge</td></tr><tr><td><span class="methSwatch rtg-likelyR"></span><span class="methRatingName">Likely R</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Republican lead</td></tr><tr><td><span class="methSwatch rtg-safeR"></span><span class="methRatingName">Safe R</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Republican advantage</td></tr></tbody></table></div></section><section class="methCard"><h2 class="methH2">Data Sources</h2><p class="methBody">National and state polls are sourced from public polling databases and manually curated releases. Election baselines come from recent presidential and congressional results. Demographic adjustments use Census population estimates. Maps use US Census Bureau shapefiles.</p></section><footer class="methFoot">Built by <a href="https://x.com/The0_o7" target="_blank" rel="noreferrer">Theo</a> · 2026</footer></div></div>
   <!-- v13: offscreen DOM for forecast.js + ratings.js + past-elections.js + swingometer.js + state-legs.js + fl_redistricting.js + polls.js -->
   <div class="__legacy_offscreen" aria-hidden="true">
     <div class="wrap">
@@ -4813,14 +4788,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div></nav>
     <div id="loadError" class="loadError" hidden=""></div>
 <div class="triGrid" id="triGrid" aria-label="Three-panel forecast">
-
-  <!-- Forecast / Nowcast Toggle -->
-  <div class="forecastToggleWrap" id="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync" id="forecastToggle">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <!-- SENATE -->
   <section class="modeCol" data-mode="senate">
@@ -4884,7 +4851,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsChartWrap">
         <div class="chartYLabel" data-chart-ylabel="">Win probability</div>
         <svg class="comboSvg" data-combo-svg=""></svg>
-        <div class="oddsStatus" data-odds-status="">570 days • precomputed 10,000 sims/day</div>
+        <div class="oddsStatus" data-odds-status=""></div>
       </div>
     </section>
   </section>
@@ -4951,7 +4918,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsChartWrap">
         <div class="chartYLabel" data-chart-ylabel="">Win probability</div>
         <svg class="comboSvg" data-combo-svg=""></svg>
-        <div class="oddsStatus" data-odds-status="">570 days • precomputed 10,000 sims/day</div>
+        <div class="oddsStatus" data-odds-status=""></div>
       </div>
     </section>
   </section>
@@ -5043,14 +5010,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
   <div id="simTip" class="simTip" aria-hidden="true"></div>
 
 <div class="ratingsPage triGrid" id="ratingsPage" style="display:none">
-
-  <!-- Forecast / Nowcast Toggle -->
-  <div class="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <!-- SENATE RATINGS -->
   <section class="modeCol" data-ratings-mode="senate">
@@ -5550,10 +5509,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div>
 
 <div class="triGrid" id="stateLegsPage" style="display:none" aria-label="State Legislatures"><div id="sldlViewToolbar">
-      <div class="forecastToggle" role="tablist" aria-label="State legislature view">
-        <button class="fcBtn active" data-view="sldl" type="button">House</button>
-        <button class="fcBtn" data-view="sldu" type="button">Senate</button>
-        <button class="fcBtn" data-view="split" type="button">Split</button>
+      <div class="chamberToggle" role="tablist" aria-label="State legislature view">
+        <button class="chamberBtn active" data-view="sldl" type="button">House</button>
+        <button class="chamberBtn" data-view="sldu" type="button">Senate</button>
+        <button class="chamberBtn" data-view="split" type="button">Split</button>
       </div>
       <label class="sldlSyncToggle" data-sldl-sync-wrap="" title="When on, zooming one map zooms the other. When off, each map can be zoomed to a different state independently.">
         <input type="checkbox" data-sldl-sync="" checked="">
@@ -5634,14 +5593,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </div>
 
 <div id="flRedistrictingPage" style="display:none" aria-label="Florida Redistricting">
-
-  <!-- Forecast / Nowcast Toggle (syncs with model tab) -->
-  <div class="forecastToggleWrap">
-    <div class="forecastToggle fcToggleSync">
-      <button class="fcBtn active" data-fc="forecast">Forecast</button>
-      <button class="fcBtn" data-fc="nowcast">Nowcast</button>
-    </div>
-  </div>
 
   <div class="flrGrid">
 
@@ -6252,17 +6203,6 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       }
     }
 
-    function setForecastMode(mode){
-      var btn = q(".__legacy_offscreen .fcToggleSync [data-fc='" + mode + "']");
-      if (!btn) return false;
-      btn.click();
-      try {
-        window.__forecast = buildSnapshot();
-        window.__forecast.forecastMode = (typeof FORECAST_MODE !== "undefined") ? FORECAST_MODE : "forecast";
-        window.dispatchEvent(new CustomEvent("forecast-update"));
-      } catch (e) {}
-      return true;
-    }
     function setChartTab(mode, tab){
       var btn = q(".__legacy_offscreen .modeCol[data-mode='" + mode + "'] [data-chart-tab='" + tab + "']");
       if (btn) { btn.click(); return true; } return false;
@@ -6392,11 +6332,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       odds:  { senate: PRECOMPUTED_ODDS.senate, governor: PRECOMPUTED_ODDS.governor, house: PRECOMPUTED_ODDS.house },
       hist:  { senate: hist.senate, governor: hist.governor, house: hist.house },
       config: { sims: 10000 }, pollsCount: pollsCount,
-      forecastMode: (typeof FORECAST_MODE !== "undefined") ? FORECAST_MODE : "forecast",
       getStateMargins: getStateMargins,
       getMapSvg: getMapSvg, getComboSvg: getComboSvg, getMapBackBtn: getMapBackBtn,
       getRatingsMapSvg: getRatingsMapSvg, getRatingsChartSvg: getRatingsChartSvg,
-      setForecastMode: setForecastMode, setChartTab: setChartTab,
+      setChartTab: setChartTab,
       setRatingsChartTab: setRatingsChartTab, triggerResize: triggerResize,
       zoomHouseTo: zoomHouseTo, getZoomableStates: getZoomableStates,
       getRatingsCounts: getRatingsCounts, ensureRatingsInited: ensureRatingsInited,
