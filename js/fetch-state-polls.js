@@ -24,13 +24,19 @@ const DEFAULT_SIGMA = 3;     // matches the model's per-state polling sigma
 const CSV_PATH      = "csv/state_polls_by_date.csv";
 const OUT_PATH      = "json/state_polls.json";
 
-// poll_type must match the API exactly, and the API has renamed types before.
-// Each mode lists its candidates in preference order; the first one that
-// returns polls wins and the rest are skipped.
+// poll_type must match the API exactly. A live probe on 2026-07-28 showed the
+// API answers for governor, generic-ballot, approval and favorability, and for
+// nothing resembling senate: state Senate races are not exposed. The senate
+// names stay in the list so the day they appear this picks them up, and the
+// manual CSV carries senate until then.
 const MODE_POLL_TYPES = {
-  senate:   ["senate", "us-senate", "senate-general", "senate-race", "state-senate"],
+  senate:   ["senate", "us-senate", "senate-general", "senate-race"],
   governor: ["governor", "gubernatorial", "governor-general", "governor-race"],
 };
+
+// The cycle this site models. A governor poll's subject reads "2025 Virginia"
+// or "2026 New Hampshire", and last cycle's race is not this cycle's data.
+const CYCLE = "2026";
 
 // When every candidate name comes back empty, ask the API what it does carry
 // rather than guessing again next time.
@@ -260,6 +266,20 @@ function parseDate(s) {
   return m ? `${m[1]}-${m[2]}-${m[3]}` : "";
 }
 
+/**
+ * A race poll carries neither a state field nor a seat name: the race is in
+ * `subject`, as a cycle and a state name, "2026 New Hampshire". Returns the
+ * cycle and the USPS code, either of which may be empty.
+ */
+function parseSubject(subject) {
+  const raw = String(subject || "").trim();
+  if (!raw) return { cycle: "", state: "" };
+  const m = raw.match(/^(\d{4})\s+(.*)$/);
+  const cycle = m ? m[1] : "";
+  const rest = (m ? m[2] : raw).trim();
+  return { cycle, state: toUsps(rest) };
+}
+
 function loadCsvSupplement() {
   if (!fs.existsSync(CSV_PATH)) {
     console.log(`  ${CSV_PATH}: not found (optional, skipping)`);
@@ -380,17 +400,48 @@ function answerPct(ans) {
  * against the strongest Republican. Returns null when either side is missing —
  * primaries and one-party fields drop out here.
  */
+// Candidate names the party lookup could not place. Reported so the manual CSV
+// can be extended rather than the poll being silently lost every run.
+const UNRESOLVED = new Map();
+
+function noteUnresolved(choice, subject) {
+  const key = String(choice || "").trim();
+  if (!key) return;
+  if (!UNRESOLVED.has(key)) UNRESOLVED.set(key, new Set());
+  UNRESOLVED.get(key).add(String(subject || "").trim());
+}
+
 function toMatchup(poll) {
-  const answers = Array.isArray(poll.answers) ? poll.answers : [];
+  const answers = (Array.isArray(poll.answers) ? poll.answers : [])
+    .map(a => ({ a, pct: answerPct(a), party: answerParty(a) }))
+    .filter(x => isFinite(x.pct));
+
   let D = NaN, R = NaN;
-  for (const a of answers) {
-    const pct = answerPct(a);
-    if (!isFinite(pct)) continue;
-    const party = answerParty(a);
-    if (party === "D" && (!isFinite(D) || pct > D)) D = pct;
-    if (party === "R" && (!isFinite(R) || pct > R)) R = pct;
+  for (const x of answers) {
+    if (x.party === "D" && (!isFinite(D) || x.pct > D)) D = x.pct;
+    if (x.party === "R" && (!isFinite(R) || x.pct > R)) R = x.pct;
   }
-  if (!isFinite(D) || !isFinite(R) || (D + R) <= 0) return null;
+
+  // A two-answer race where exactly one side is known: the other side is the
+  // other party. This is the shape of the contest, not a guess from position —
+  // a head-to-head has two parties, and one of them is already named.
+  if (answers.length === 2) {
+    const known = answers.filter(x => x.party === "D" || x.party === "R");
+    if (known.length === 1) {
+      const other = answers.find(x => x !== known[0]);
+      if (known[0].party === "D") { D = known[0].pct; R = other.pct; }
+      else                        { R = known[0].pct; D = other.pct; }
+    }
+  }
+
+  if (!isFinite(D) || !isFinite(R) || (D + R) <= 0) {
+    for (const x of answers) {
+      if (!x.party) {
+        noteUnresolved(x.a.choice ?? x.a.answer ?? x.a.candidate_name, poll.subject);
+      }
+    }
+    return null;
+  }
   return { D, R };
 }
 
@@ -402,8 +453,11 @@ function toMatchup(poll) {
 function normalizeApiPoll(poll, mode) {
   if (!stageIsModelled(poll.stage ?? poll.race_stage)) return "stage";
 
+  const subject = parseSubject(poll.subject);
+  if (subject.cycle && subject.cycle !== CYCLE) return "cycle";
+
   const state = toUsps(poll.state) || toUsps(poll.seat_name) || toUsps(poll.race)
-             || toUsps(poll.state_abbr) || toUsps(poll.state_name);
+             || toUsps(poll.state_abbr) || toUsps(poll.state_name) || subject.state;
   if (!state) return "state";
 
   const date = parseDate(poll.end_date || poll.start_date || poll.created_at);
@@ -600,6 +654,16 @@ async function run() {
   // failure hides.
   const anyFetched = Object.values(debug.fetched).some(n => n > 0);
   debug.degraded = (anyFetched && debug.fromApi === 0) ? "API returned polls but none were usable" : false;
+
+  // Names the lookup could not place, with the races they appeared in. Adding
+  // a row for one to csv/state_polls_by_date.csv teaches the map and the poll
+  // stops being dropped.
+  if (UNRESOLVED.size) {
+    debug.unresolvedCandidates = Object.fromEntries(
+      [...UNRESOLVED.entries()].sort().slice(0, 60).map(([name, races]) => [name, [...races].sort()])
+    );
+    console.warn(`  ${UNRESOLVED.size} candidate name(s) had no party. Add any of them to ${CSV_PATH} to resolve their polls.`);
+  }
 
   const out = {
     updatedAt: new Date().toISOString(),
