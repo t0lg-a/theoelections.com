@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T13:03:12.862Z",
+  "updatedAt": "2026-07-28T13:05:45.179Z",
   "source": "https://api.votehub.com/polls",
   "degraded": "API returned polls but none were usable",
   "window": 6,
