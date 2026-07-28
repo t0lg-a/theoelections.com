@@ -2256,7 +2256,12 @@ function MethodologyView() {
     className: "methTableWrap"
   }, /*#__PURE__*/React.createElement("table", {
     className: "methTableA"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "rating"), /*#__PURE__*/React.createElement("th", null, "margin"), /*#__PURE__*/React.createElement("th", null, "description"))), /*#__PURE__*/React.createElement("tbody", null, RTG_TABLE_ROWS.map(function (r, i) {
+  }, /*#__PURE__*/React.createElement("caption", null,
+    "The seven tiers, and the margin each one starts at"),
+  /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null,
+    /*#__PURE__*/React.createElement("th", { scope: "col" }, "rating"),
+    /*#__PURE__*/React.createElement("th", { scope: "col" }, "margin"),
+    /*#__PURE__*/React.createElement("th", { scope: "col" }, "description"))), /*#__PURE__*/React.createElement("tbody", null, RTG_TABLE_ROWS.map(function (r, i) {
     var margins = [">15", "7.5–15", "2.5–7.5", "<2.5", "2.5–7.5", "7.5–15", ">15"];
     return /*#__PURE__*/React.createElement("tr", {
       key: r.key

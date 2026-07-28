@@ -832,37 +832,85 @@ docking tooltip).
 Density lives in text. The record is the tables and the agate, and it should
 be the easiest thing on the site to read.
 
-1. Set the record's type size, weight and line height once.
-2. Set the row rule as a hairline at the system's opacity and remove the
-   others.
-3. Remove every tinted header, every zebra stripe and every fill used to
-   group.
-4. Set the column alignment rule: label left, figure right, always.
-5. Apply it to the polls record.
-6. Apply it to the bucket tables on the model tab.
-7. Apply it to the methodology's ratings table.
-8. Set the sticky header's ground to paper and verify it does not smear.
-9. Set the numeric columns to tabular figures and verify the decimal points
-   line up.
-10. Decide the pollster column's truncation: by measure, never by a character
-    count in a template string.
-11. Add a title attribute or a tooltip for a truncated name.
-12. Verify the record scrolls inside its own container and never the page.
-13. Give the scroll container a visible edge so the reader knows there is
-    more.
-14. Set the record's maximum height per breakpoint.
-15. Decide whether the record is sortable; if yes, design the affordance in
-    the system.
-16. Add the agate form from the kit for the dense list cases the tables
-    currently handle badly.
-17. Use it for the ratings list.
-18. Use it for the state list on the polls tab.
-19. Give the marked rows the reversed treatment rather than a tint.
-20. Verify no table has a caption that names its form instead of its finding.
-21. Add `scope` to every header cell and a caption to every table.
-22. Verify a screen reader reads every table in a sensible order.
-23. Verify the record at 320px, where five columns cannot fit.
-24. Decide the narrow-width record: horizontal scroll, or a stacked form.
+1. [x] `assets/theme.css` §18. It was written inline in a template string,
+   with its type, padding, alignment and colours set per cell — five places
+   to change one decision. `polls.js` now writes structure and nothing else.
+   Original step: Set the record's type size, weight and line height once.
+2. [x] One hairline per row, at `--t-row-rule`, and nothing else. Chapter 3
+   had already found the row line was being drawn twice.
+   Original step: Set the row rule as a hairline at the system's opacity and remove the
+    others.
+3. [x] None survive: measured, the only background in either table is the
+   sticky header's paper, which is there to stop the rows showing through.
+   Original step: Remove every tinted header, every zebra stripe and every fill used to
+    group.
+4. [x] A label is left, a figure is right, always.
+   Original step: Set the column alignment rule: label left, figure right, always.
+5. [x] Done.
+   Original step: Apply it to the polls record.
+6. [x] Nothing to do: the model tab has no visible bucket table. It was
+   folded into the ratings strip.
+   Original step: Apply it to the bucket tables on the model tab.
+7. [x] Done; its margin column is a figure and reads right.
+   Original step: Apply it to the methodology's ratings table.
+8. [x] Paper, and it does not smear: measured at every width.
+   Original step: Set the sticky header's ground to paper and verify it does not smear.
+9. [x] They were `font-variant-numeric: normal`, which is why the decimals
+   did not line up. Every numeric column is tabular now, in both tables.
+   Original step: Set the numeric columns to tabular figures and verify the decimal points
+    line up.
+10. [x] By measure: 14ch narrow, 22ch from 981, 18ch at 320 where two columns
+    are dropped. No character count anywhere in the template.
+    Original step: Decide the pollster column's truncation: by measure, never by a character
+     count in a template string.
+11. [x] Every truncated name carries its full text in a `title`.
+    Original step: Add a title attribute or a tooltip for a truncated name.
+12. [x] It does, and at 320 it does not scroll at all — it flows into the
+    page, because a scroll inside a scroll is a trap on a touch screen.
+    Original step: Verify the record scrolls inside its own container and never the page.
+13. [x] An ink rule at the foot of the well, not a fade: a fade is a
+    gradient and the system has none.
+    Original step: Give the scroll container a visible edge so the reader knows there is
+     more.
+14. [x] Eleven whole rows above 980 — a round number of pixels cut one in
+    half — and no ceiling below it.
+    Original step: Set the record's maximum height per breakpoint.
+15. [x] Decided: not sortable. The record is ordered by date because that is
+    what makes it a record; a sort by margin turns it into a ranking, which
+    is a different claim and one the figure above it already makes.
+    Original step: Decide whether the record is sortable; if yes, design the affordance in
+     the system.
+16. [ ] Not done.
+    Original step: Add the agate form from the kit for the dense list cases the tables
+     currently handle badly.
+17. [ ] Not done; see 16.
+    Original step: Use it for the ratings list.
+18. [ ] Not done; see 16.
+    Original step: Use it for the state list on the polls tab.
+19. [x] Nothing to do: no table marks a row. If one does, §18's rule is
+    reverse it, not tint it.
+    Original step: Give the marked rows the reversed treatment rather than a tint.
+20. [x] Both captions state what the table is a record of: "Every poll behind
+    this average, most recent first" and "The seven tiers, and the margin each
+    one starts at". They are read, not seen — the finding above the figure
+    already carries the claim.
+    Original step: Verify no table has a caption that names its form instead of its finding.
+21. [x] `scope="col"` on 5 of 5 and 3 of 3, and a caption on both. Neither
+    had either.
+    Original step: Add `scope` to every header cell and a caption to every table.
+22. [x] Header, then rows in date order, with each row's cells in the order
+    they are set. The caption names the table before the reader enters it.
+    Original step: Verify a screen reader reads every table in a sensible order.
+23. [x] Verified at 320: three columns, no sideways scroll anywhere on the
+    page.
+    Original step: Verify the record at 320px, where five columns cannot fit.
+24. [x] Decided: neither. It drops the two columns a reader can reconstruct —
+    each side's share, which the margin already states — and keeps the date,
+    the pollster and the margin. A table that scrolls sideways inside a page
+    that does not is a trap, and a stacked form is a different figure.
+    Original step: Decide the narrow-width record: horizontal scroll, or a stacked form.
+
+**Carried forward.** Steps 16 to 18, the agate form.
 
 ---
 

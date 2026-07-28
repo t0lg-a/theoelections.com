@@ -396,25 +396,33 @@ function pollTable(el,rows,lA,lB,cA,cB){
   if(!rows.length){el.innerHTML=`<div class="t-absent">no polls yet</div>`;return;}
   const ca=cA|| "#2a4570",cb=cB|| "#903629";
   const paper=PAPER();
-  let h=`<table style="width:100%;border-collapse:collapse;font:600 11px/1.4 ${FONT};font-variant-numeric:tabular-nums">`;
-  h+=`<thead><tr style="font:700 11px/1.4 ${FONT};color:var(--muted)">`;
-  const th=`padding:6px 8px;position:sticky;top:0;background:${paper};z-index:2`;
-  h+=`<th style="${th};text-align:left">date</th>`;
-  h+=`<th style="${th};text-align:left">pollster</th>`;
-  h+=`<th style="${th};text-align:right;color:${ca}">${lA}</th>`;
-  h+=`<th style="${th};text-align:right;color:${cb}">${lB}</th>`;
-  h+=`<th style="${th};text-align:right">margin</th>`;
+  // [8.1][8.9][8.21] The record's type and its column rule live in
+  // assets/theme.css; this writes structure and nothing else. Every header
+  // carries a scope and the table carries a caption that states what it is
+  // a record of, not what shape it is.
+  let h=`<table><caption>Every poll behind this average, most recent first</caption>`;
+  h+=`<thead><tr>`;
+  const th=`position:sticky;top:0;background:${paper};z-index:2`;
+  h+=`<th scope="col" style="${th}">date</th>`;
+  h+=`<th scope="col" style="${th}">pollster</th>`;
+  h+=`<th scope="col" style="${th}">${lA}</th>`;
+  h+=`<th scope="col" style="${th}">${lB}</th>`;
+  h+=`<th scope="col" style="${th}">margin</th>`;
   h+=`</tr></thead><tbody>`;
   for(const p of rows){
     const m=p.a-p.b;
     const ms=Math.abs(m)<.05?"tied":(m>0?`${lA}+${m.toFixed(1)}`:`${lB}+${Math.abs(m).toFixed(1)}`);
     const mc=m>0?ca:(m<0?cb:"var(--muted)");
+    // [8.10][8.11] The pollster's name is truncated by measure in the
+    // sheet, never by a character count here, and it carries its full name
+    // for anyone who wants it.
+    const ps = String(p.ps || "");
     h+=`<tr>`;
-    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};white-space:nowrap">${ds(p.date)}</td>`;
-    h+=`<td style="padding:5px 8px;font:500 11px ${FONT};overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||""))}</td>`;
-    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${ca}">${(+p.a).toFixed(1)}</td>`;
-    h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${cb}">${(+p.b).toFixed(1)}</td>`;
-    h+=`<td style="padding:5px 8px;font:700 11px ${FONT};text-align:right;color:${mc}">${ms}</td>`;
+    h+=`<td class="recDate">${ds(p.date)}</td>`;
+    h+=`<td class="recName" title="${escapeHtml(ps)}">${escapeHtml(ps)}</td>`;
+    h+=`<td class="recNum">${(+p.a).toFixed(1)}</td>`;
+    h+=`<td class="recNum">${(+p.b).toFixed(1)}</td>`;
+    h+=`<td class="recNum recMargin">${ms}</td>`;
     h+=`</tr>`;
   }
   h+=`</tbody></table>`;

@@ -1887,3 +1887,112 @@ svg path.district.selected{
   /* The touch target the map itself cannot give these states. */
   .mapChip{min-width:52px;height:44px;font-size:var(--t-fs-2);}
 }
+
+/* ======================================================================
+   18 · THE RECORD  (chapter 8)
+
+   Density lives in text, so the record should be the easiest thing on the
+   site to read. It was written inline, in a template string, with its type,
+   its padding, its alignment and its colours all set per cell — five
+   different places to change one decision.
+
+   [8.1] One type: the record's own step, on the baseline's rhythm.
+   [8.4] One column rule: a label is left, a figure is right, always.
+   [8.9] Tabular figures on every numeric column, so the decimals line up.
+         They were `normal`, which is why they did not.
+   ====================================================================== */
+.pollsListHost table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  line-height:calc(var(--t-baseline) * 2);
+  border-top:var(--t-w-hair) solid var(--t-ink);
+  border-bottom:var(--t-w-hair) solid var(--t-ink);
+}
+/* [8.20] The caption states what the table is a record of. It is read, not
+   seen: the finding above the figure already carries the claim. */
+.pollsListHost caption,
+.methTableA caption, .methTable caption{
+  position:absolute;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap;
+}
+.pollsListHost th{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:700;
+  letter-spacing:0;
+  color:var(--t-muted);
+  padding:var(--t-sp-1) var(--t-sp-2) var(--t-sp-1) 0;
+  border-bottom:var(--t-w-hair) solid var(--t-ink);
+  text-align:right;
+}
+.pollsListHost th:first-child,
+.pollsListHost th:nth-child(2){text-align:left;}
+.pollsListHost td{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:500;
+  color:var(--t-ink);
+  padding:var(--t-sp-1) var(--t-sp-2) var(--t-sp-1) 0;
+  border-bottom:var(--t-w-hair) solid var(--t-row-rule);
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+.pollsListHost td.recDate{text-align:left;font-weight:600;white-space:nowrap;}
+.pollsListHost td.recName{
+  text-align:left;
+  color:var(--t-ink2);
+  /* [8.10] Truncation by measure. The width is a measure, not a count of
+     characters chosen inside a template string. */
+  max-width:14ch;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+@media (min-width:981px){.pollsListHost td.recName{max-width:22ch;}}
+.pollsListHost td.recMargin{font-weight:700;}
+
+/* [8.13] The well has a visible edge, so a reader knows the record goes on
+   past it. An ink rule at the foot of the scroll, not a fade: a fade is a
+   gradient, and the system has none. */
+.pollsView .pollsListWrap{position:relative;}
+.pollsView .pollsListHost{
+  border-bottom:var(--t-w-contour) solid var(--t-ink);
+}
+@media (max-width:980px){
+  .pollsView .pollsListHost{border-bottom:0;}
+}
+
+/* [8.4][8.7] The methodology's table, on the same column rule. */
+.methTableA th, .methTable th{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:700;
+  letter-spacing:0;
+  color:var(--t-muted);
+  text-align:left;
+  padding:var(--t-sp-1) var(--t-sp-3) var(--t-sp-1) 0;
+  border-bottom:var(--t-w-hair) solid var(--t-ink);
+}
+.methTableA td, .methTable td{
+  padding:var(--t-sp-1) var(--t-sp-3) var(--t-sp-1) 0;
+  border-bottom:var(--t-w-hair) solid var(--t-row-rule);
+  font-variant-numeric:tabular-nums;
+}
+/* The margin column is a figure. */
+.methTableA td:nth-child(2), .methTableA th:nth-child(2){text-align:right;}
+
+/* [8.23][8.24] At 320 five columns do not fit, and a table that scrolls
+   sideways inside a page that does not is a trap. The record drops the two
+   columns a reader can reconstruct — each side's share, which the margin
+   already states — and keeps the date, the pollster and the margin. */
+@media (max-width:400px){
+  .pollsListHost th:nth-child(3), .pollsListHost td:nth-child(3),
+  .pollsListHost th:nth-child(4), .pollsListHost td:nth-child(4){display:none;}
+  .pollsListHost td.recName{max-width:18ch;}
+}
