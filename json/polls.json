@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T13:44:59.390Z",
+  "updatedAt": "2026-07-28T02:18:55.485Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -10107,34 +10107,6 @@
       "seat_name": null,
       "sponsors": [
         "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonipszerpbj67",
-      "poll_type": "approval",
-      "sample_size": 1144,
-      "population": "a",
-      "url": "https://www.ipsos.com/sites/default/files/Reuters%20Ipsos%20Core%20Political%20Presidential%20Approval%20Tracker%2006%2025%202025.pdf",
-      "created_at": "2025-06-25",
-      "start_date": "2025-06-20",
-      "end_date": "2025-06-22",
-      "pollster": "Ipsos",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Reuters"
       ],
       "internal": false,
       "partisan": null,
