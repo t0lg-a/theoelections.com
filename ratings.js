@@ -103,20 +103,24 @@ function renderRatingBar(mode, counts){
   const baseD = rules?.baseD || 0;
   const baseR = rules?.baseR || 0;
 
-  const numColor = (k) => RTG_COLORS[k];
+  // [5.6] The number is ink and the tier is a swatch beside it. Setting the
+  // number in the tier's own colour put a pale ink on the paper ground: the
+  // Lean tiers read at 1.54:1 and 1.66:1, which is not a number anybody can
+  // read. The swatch carries the tier at full strength, where a swatch is
+  // allowed to.
   const numSpan = (k) => {
     const n = counts[k] || 0;
-    return `<span class="rtgNum" style="color:${numColor(k)}">${n}</span>`;
+    return `<span class="rtgNum"><i class="rtgSw" style="background:${RTG_COLORS[k]}"></i>${n}</span>`;
   };
   const sep = `<span class="rtgSep">-</span>`;
 
-  // Incumbents in near-black
-  const incD = baseD > 0 ? `<span class="rtgNum" style="color:var(--ink)">${baseD}</span>${sep}` : "";
-  const incR = baseR > 0 ? `${sep}<span class="rtgNum" style="color:var(--ink)">${baseR}</span>` : "";
+  // Incumbents carry no tier, so they carry no swatch.
+  const incD = baseD > 0 ? `<span class="rtgNum">${baseD}</span>${sep}` : "";
+  const incR = baseR > 0 ? `${sep}<span class="rtgNum">${baseR}</span>` : "";
 
   const dPart = incD + dTiers.map(numSpan).join(sep);
   const rPart = rTiers.map(numSpan).join(sep) + incR;
-  const tPart = `<span class="rtgNum" style="color:${RTG_COLORS['Tossup']}">${counts["Tossup"]||0}</span>`;
+  const tPart = `<span class="rtgNum"><i class="rtgSw" style="background:${RTG_COLORS['Tossup']}"></i>${counts["Tossup"]||0}</span>`;
 
   ui.countsEl.innerHTML = dPart + `<div class="divider"></div>` + tPart + `<div class="divider"></div>` + rPart;
 
@@ -126,7 +130,10 @@ function renderRatingBar(mode, counts){
     if (!n) return "";
     const pct = (n / total * 100);
     const cls = k === "Tossup" ? "seg tossup" : "seg";
-    return `<div class="${cls}" style="flex:${pct};background:${RTG_COLORS[k]}">${n > 0 && pct > 5 ? `<span>${n}</span>` : ""}</div>`;
+    // [5.6] The count is not set inside the segment: no foreground clears
+    // 4.5:1 against a data ink at 10px, and on the pale tiers it read at
+    // 1.02:1. The counts row above the bar carries the numbers.
+    return `<div class="${cls}" style="flex:${pct};background:${RTG_COLORS[k]}" aria-label="${n} ${k}"></div>`;
   }).join("");
 
   // Labels under bar
@@ -145,9 +152,12 @@ function renderRatingBar(mode, counts){
     const toss = counts["Tossup"] || 0;
     const totalD = dSeats + (rules?.baseD || 0);
     const totalR = rSeats + (rules?.baseR || 0);
+    // The three totals are labelled D, Tossup and R in words. The words are
+    // what says which is which; the colours said it a second time, and the
+    // Tossup amber was not in the palette at all.
     ui.totals.innerHTML =
       `<span class="rtD">D ${totalD}</span>` +
-      `<span class="rtT">${toss} Tossup</span>` +
+      `<span class="rtT">${toss} tossup</span>` +
       `<span class="rtR">R ${totalR}</span>`;
   }
 }

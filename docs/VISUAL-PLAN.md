@@ -489,40 +489,144 @@ The display figure is not a voice. It is a datum, set in Switzer 900 on the
 Colour appears only where a datum is. The site now obeys that. This chapter
 proves it and settles the cases the sweep left ambiguous.
 
-1. Write `scripts/check-colour.mjs`: crawl every route and fail on any colour
-   outside the palette appearing outside a figure.
-2. Run it; record the violations; fix them one at a time.
-3. Settle the contrast question the audit raised: muted at 4.29:1 carries
-   labels. Decide whether that stands or whether labels move to ink2.
-4. If it stands, document why, naming the sizes and weights it is allowed at.
-5. Audit every text colour against its actual ground and record the ratio.
-6. Fix every ratio under 4.5:1 that carries meaning.
-7. Fix every ratio under 3:1 regardless of what it carries.
-8. Verify the same ratios on the ink ground, which has different maths.
-9. Decide the approval series' inks: currently ink and muted, deliberately not
-   party colours. Confirm or replace.
-10. Decide the third-party and undecided treatment, which currently has none.
-11. Verify the overprint is distinguishable from a maximal lead at a glance,
-    with a side-by-side swatch test.
-12. Verify the overprint is distinguishable in dark, where it inverts to a
-    pale lilac.
-13. Check the divergent ramp for a perceptual midpoint that reads as neutral
-    rather than as a weak lean.
-14. Check the ramp's steps are perceptually even, not evenly numbered.
-15. Simulate deuteranopia across the maps and record what is lost.
-16. Simulate protanopia and tritanopia.
-17. Decide the redundant encoding for colour-blind readers: direct labels
-    already help, but the ramp's direction does not survive. Add a second cue.
-18. Verify the ratings scale's seven steps remain distinguishable under
-    simulation.
-19. Verify the two-way inks are used for the same meaning in every figure, and
-    fix any inversion.
-20. Verify no tint of a data ink appears outside a figure.
-21. Verify no alpha is used on a data mark anywhere; alpha manufactures
-    colours the palette does not contain.
-22. Check the print stylesheet's colour: the ramp must survive greyscale.
-23. Add a greyscale fallback for the maps that reads by value alone.
-24. Record the colour law's exceptions, if any survive, with their reasons.
+1. [x] `scripts/check_colour.py`. It crawls the running site with a real
+   browser on both grounds and reads the computed colour of every element,
+   because `check-tokens.mjs` asserts what a person wrote and this has to
+   assert what the browser paints — the modules draw inks imperatively and a
+   colour can arrive from four sheets at once.
+   Original step: Write `scripts/check-colour.mjs`: crawl every route and fail on any colour
+    outside the palette appearing outside a figure.
+2. [x] 5,225 violations on the first run; zero now. The run also found two
+   bugs in the checker itself: a margin fill is a data ink mixed toward the
+   ground, so the map paints a continuum rather than seven swatches, and a
+   separator drawn as a middot is a rule rather than text.
+   Original step: Run it; record the violations; fix them one at a time.
+3. [x] It does not stand. Muted was #6E6C61 at 4.29:1 and it carries every
+   label on the site at 11 to 13 pixels — the smallest type here. "It is
+   only a label" is not an argument when the label is what tells you what
+   the number is.
+   Original step: Settle the contrast question the audit raised: muted at 4.29:1 carries
+    labels. Decide whether that stands or whether labels move to ink2.
+4. [x] Moved instead, to #646257: 4.99:1 on the ground and 4.58:1 inside a
+   well, so it clears the floor on both of the grounds it is ever set on
+   rather than only the lighter one.
+   Original step: If it stands, document why, naming the sizes and weights it is allowed at.
+5. [x] Every text colour on nine tabs on two grounds, against the ground it
+   is actually on rather than the one it was designed against — the checker
+   walks up the tree for the first opaque background.
+   Original step: Audit every text colour against its actual ground and record the ratio.
+6. [x] 623 of them. Almost all were one mistake made in five places: a
+   number set in a party ink. A party ink is 3.94:1 (D) and 4.07:1 (R) on
+   paper, which clears the 3:1 floor for a display figure and nothing
+   smaller — and every one of these already carried the letter D or R
+   beside it, so the colour was saying the same thing twice at the cost of
+   the number's legibility.
+   Original step: Fix every ratio under 4.5:1 that carries meaning.
+7. [x] 260 of them, all in the ratings bar: the count was set inside its own
+   segment. On the two deepest tiers no foreground clears 4.5:1 against a
+   data ink at 10px; on the pale tiers it read at 1.02:1, which is
+   invisible. The number left the bar — the strip above it already carries
+   the counts in ink with its own swatch — and the bar now shows the
+   proportion, which is what a bar is for.
+   Original step: Fix every ratio under 3:1 regardless of what it carries.
+8. [x] Both grounds on every run. The ink ground's own failures were the
+   same five, at 3.70:1 and 3.58:1.
+   Original step: Verify the same ratios on the ink ground, which has different maths.
+9. [x] Confirmed, not replaced. A reader who sees red and blue on an
+   approval chart reads a partisan split that is not in the data.
+   Original step: Decide the approval series' inks: currently ink and muted, deliberately not
+    party colours. Confirm or replace.
+10. [x] Decided: none, on purpose. The site draws two-way contests only, so
+    `--t-d2` is reserved for a third position and used by nothing; an
+    undecided share is not drawn at all, because the forecast no longer
+    allocates it and absent is absent, not zero. A three-way race would open
+    `--t-d2` deliberately rather than by reaching for a colour.
+    Original step: Decide the third-party and undecided treatment, which currently has none.
+11. [x] ΔE 88 from a maximal R and ΔE 66 from a maximal D. It is not a step
+    on the ramp at all, which is the point: a contested race is a different
+    claim, not a weak one.
+    Original step: Verify the overprint is distinguishable from a maximal lead at a glance,
+     with a side-by-side swatch test.
+12. [x] On the ink ground it is ΔE 11.3 from the ground itself — thin, and
+    recorded as the one place the overprint is doing least work.
+    Original step: Verify the overprint is distinguishable in dark, where it inverts to a
+     pale lilac.
+13. [x] The midpoint is not a pale tint of either side: it is the overprint,
+    ΔE 73 from the weakest lean the ramp draws. Nothing on this ramp reads
+    as a neutral lean, because nothing on it is one.
+    Original step: Check the divergent ramp for a perceptual midpoint that reads as neutral
+     rather than as a weak lean.
+14. [x] Measured in Lab: the R side steps 8.7, 11.8, 15.1, 14.9, 14.2 and
+    the D side 7.6, 10.1, 12.8, 13.2, 13.9. Largest gap under 1.9x the
+    smallest, well inside the 3x the check fails at.
+    Original step: Check the ramp's steps are perceptually even, not evenly numbered.
+15. [x] Nothing is lost. A maximal D and a maximal R separate by ΔE 148
+    under deuteranopia, and the seven ratings steps keep a smallest
+    neighbouring ΔE of 18.
+    Original step: Simulate deuteranopia across the maps and record what is lost.
+16. [x] ΔE 135 under protanopia and 114 under tritanopia; smallest ratings
+    step 16.9 and 12.7. `docs/shots/ramp.svg` is the record.
+    Original step: Simulate protanopia and tritanopia.
+17. [x] The cue is needed, but not for the reason the step assumed. The ramp
+    survives all three dichromacies. What it does not survive is losing hue
+    altogether — greyscale — where a D lead and an R lead of the same size
+    are the same value to within ΔE 0.89. `forecast.js` now writes the lean
+    onto each shape as `data-lean`, and where hue is gone the contour
+    carries direction: a Republican lean is outlined and dashed, a
+    Democratic lean is not.
+    Original step: Decide the redundant encoding for colour-blind readers: direct labels
+     already help, but the ramp's direction does not survive. Add a second cue.
+18. [x] Yes, under all three; the tightest is tritanopia at ΔE 12.7 between
+    neighbours.
+    Original step: Verify the ratings scale's seven steps remain distinguishable under
+     simulation.
+19. [x] The checker fails on any colour that is neither a token nor a step
+    on the ramp, so an inverted or invented ink cannot survive a run. None
+    did.
+    Original step: Verify the two-way inks are used for the same meaning in every figure, and
+     fix any inversion.
+20. [x] The Florida sliders' D and R labels were the last of them. A slider
+    is a control and a control's label is a label.
+    Original step: Verify no tint of a data ink appears outside a figure.
+21. [x] None. The checker asserts it on every element and every SVG fill and
+    stroke.
+    Original step: Verify no alpha is used on a data mark anywhere; alpha manufactures
+     colours the palette does not contain.
+22. [x] It survives as value; it does not survive as direction. That is a
+    property of divergent ramps, not of this one, and the measurement is in
+    `scripts/check_ramp.py`.
+    Original step: Check the print stylesheet's colour: the ramp must survive greyscale.
+23. [x] Added, but not "by value alone" — the measurement says value alone
+    cannot carry direction on a divergent ramp, and a fallback that says
+    "big margin" without saying whose is worse than no fallback. Direction
+    is carried by the contour instead, in `@media print` and in
+    `forced-colors: active`.
+    Original step: Add a greyscale fallback for the maps that reads by value alone.
+24. [x] None survive. Every case that looked like it wanted an exception
+    turned out to be a swatch that had not been drawn yet: the ratings bar's
+    legend, the counts strip, the methodology's rating table. The checker's
+    exception list is empty and stays that way.
+    Original step: Record the colour law's exceptions, if any survive, with their reasons.
+
+### The colour law, as enforced
+
+1. A colour is legal if it is a token, or a step on the ramp between a data
+   ink and the ground. Nothing else is.
+2. A saturated colour is legal only inside a figure.
+3. A data ink may be a fill or a swatch at any size. As *text* it clears the
+   3:1 floor only at display size; below that the number is ink and the
+   swatch or the letter carries the party.
+4. Text clears 4.5:1 against the ground it is actually on, 3:1 at display
+   size, and 3:1 always. A glyph that is punctuation only is a rule, not
+   text, and may be drawn in the quiet neutrals.
+5. No alpha on a data mark. Two overlapping marks would make a third colour
+   the palette does not contain.
+6. Where hue is unavailable, direction is carried by the contour.
+
+`python3 scripts/check_colour.py` asserts 1, 2, 4 and 5 against the running
+site. `python3 scripts/check_ramp.py` asserts the ramp's evenness, its
+midpoint, the overprint's separation and the three dichromacies, and writes
+`docs/shots/ramp.svg`.
 
 ---
 

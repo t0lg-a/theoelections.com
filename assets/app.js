@@ -673,10 +673,15 @@ function RatingBar(_ref9) {
       className: "rtgSeg rtg-" + RTG_KEY[cat],
       style: {
         width: n / total * 100 + "%"
-      }
-    }, n >= 2 && /*#__PURE__*/React.createElement("span", {
-      className: "rtgN"
-    }, n));
+      },
+      // [5.6] The count used to be set inside the segment. On the two
+      // deepest tiers no foreground clears 4.5:1 against a data ink at
+      // 10px — paper reaches 3.94:1 on safe D and ink 3.70:1 — and on the
+      // pale tiers it was 1.02:1, which is invisible. The bar shows the
+      // proportion; the strip above it shows the counts, in ink, with its
+      // own swatch. The number does not need to be in both.
+      "aria-label": n + " " + cat
+    });
   })), /*#__PURE__*/React.createElement("div", {
     className: "rtgLabels"
   }, RTG_ORDER.map(function (cat) {

@@ -2826,6 +2826,7 @@ function recolorMapForMode(modeKey){
       this.removeAttribute("display");
       this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
       this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
+      this.setAttribute("data-lean", "none");
       this.classList.remove("active","filtered");
       return;
     }
@@ -2837,6 +2838,7 @@ function recolorMapForMode(modeKey){
       this.removeAttribute("display");
       this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
       this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
+      this.setAttribute("data-lean", "none");
       this.classList.add("filtered");
       return;
     }
@@ -2845,6 +2847,13 @@ function recolorMapForMode(modeKey){
     this.removeAttribute("display");
     this.classList.remove("filtered");
     this.style.fill = interpColor(mm);
+    // [5.17][5.23] A divergent ramp says how big; only its hue says whose,
+    // and hue is exactly what greyscale and a forced-colours mode take
+    // away. Measured: a D lead and an R lead of +/-25 are the same value to
+    // within dE 0.89. The lean is written onto the shape so the sheet can
+    // give it a second cue that is not colour.
+    this.setAttribute("data-lean", !isFinite(mm) ? "none"
+      : Math.abs(mm) < 2 ? "contested" : (mm > 0 ? "r" : "d"));
   });
 }
 

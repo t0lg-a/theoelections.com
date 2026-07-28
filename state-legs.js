@@ -767,9 +767,9 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
       #stateLegsPage .sldlPanelTitle{font-family:var(--t-data);font-size:var(--t-fs-5);font-weight:800;color:var(--t-ink);letter-spacing:-0.018em;line-height:1.22;}
       #stateLegsPage .sldlPanelSub{font-family:var(--t-data);font-style:normal;font-size:var(--t-fs-2);font-weight:700;color:var(--t-muted);}
       #stateLegsPage .sldlSeatLine{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:6px 0 8px;}
-      #stateLegsPage .sldlSeatLine .dSide{color:var(--t-d5);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .dSide{color:var(--t-ink);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
       #stateLegsPage .sldlSeatLine .dSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
-      #stateLegsPage .sldlSeatLine .rSide{color:var(--t-d1);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .rSide{color:var(--t-ink);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
       #stateLegsPage .sldlSeatLine .rSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
       #stateLegsPage .sldlSeatLine .sep{color:var(--t-hair);font-family:var(--t-data);font-weight:500;}
       #stateLegsPage .sldlRatingBar{display:flex;height:18px;border-radius:0;overflow:hidden;border:1px solid var(--ink);}
