@@ -574,7 +574,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   font-size:1.0625rem;font-weight:800;color:var(--t-ink);letter-spacing:-.015em;
 }
 .pollsView .pill .pct{
-  font-size:.6875rem;font-weight:600;color:var(--t-faint);
+  font-size:.6875rem;font-weight:600;color:var(--t-muted);
   font-style:normal;margin-left:1px;
 }
 
@@ -582,7 +582,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .seatsNote{
   font-family:var(--t-data);
   font-size:.6875rem;font-weight:500;
-  color:var(--t-faint);
+  color:var(--t-muted);
   margin-top:12px;
 }
 .pollsView .seatsNote + .seats{padding-top:2px;}
@@ -692,14 +692,39 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 .pollsView .mapHost svg path.state:hover{
   stroke:var(--t-ink);
   stroke-width:1.75;
+  paint-order:stroke;
 }
+/* The contour reverses on a dark unit, so hovering the overprint or a
+   saturated fill marks it as plainly as hovering paper. The flip is set in
+   polls.js, which knows each unit's fill. */
+.pollsView .mapHost svg path.state.hovered.onDark,
+svg path.state.hovered.onDark{stroke:var(--t-paper);}
+.pollsView .mapHost svg path.state.selected.onDark,
+svg path.state.selected.onDark{stroke:var(--t-paper);}
+.pollsView .mapHost svg path.state.selected,
+svg path.state.selected{
+  stroke:var(--t-ink);
+  stroke-width:3;
+  paint-order:stroke;
+}
+.pollsView .mapHost svg path.state:focus-visible,
+svg path.state:focus-visible{
+  outline:none;
+  stroke:var(--t-ink);
+  stroke-width:3.5;
+  stroke-dasharray:none;
+}
+/* [14][23] The hint starts on the column's left edge like everything else;
+   the base stylesheet's 20px indent had it alone out of the measure. */
 .pollsView .mapHint{
   font-family:var(--t-data);
   font-style:normal;
   font-size:.6875rem;font-weight:500;
-  color:var(--t-faint);
+  color:var(--t-muted);
   text-align:left;
   margin-top:8px;
+  padding-left:0;
+  text-indent:0;
 }
 
 /* ---- charts -------------------------------------------------------------- */
@@ -712,7 +737,7 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
   fill:var(--t-muted);
 }
 .pollsView .chartHost svg .oddsAxis path.domain{
-  stroke:var(--t-ink);
+  stroke:var(--t-hair);
 }
 .pollsView .chartHost svg .oddsAxis line{
   stroke:var(--t-hair);
@@ -914,3 +939,77 @@ input[type="range"]::-moz-range-thumb{
   border-radius:0 !important;
   background:var(--t-paper);border:2px solid var(--t-ink);width:10px;height:10px;
 }
+
+/* ======================================================================
+   11 · WHAT THE AUDIT FOUND
+   ====================================================================== */
+
+/* [1] The three columns set their display figures on one line. Each head
+   reserves the tallest title and dek the sheet actually uses, so the biggest
+   marks on the page align instead of drifting with the copy. */
+@media (min-width:981px){
+  .pollsView .secTitle{min-height:calc(2 * 1.22em);}
+  .pollsView .secSub{min-height:calc(3 * 1.55em);}
+}
+
+/* [18] Waiting is not the same claim as absent. A form still fetching is
+   hatched; an empty one is a plain vessel with its word inside. */
+.pollsHistHost:empty,
+.pollsView .pollsHistHost:empty{
+  background:repeating-linear-gradient(45deg,
+    transparent 0 5px, var(--t-hair) 5px 6.5px);
+}
+
+/* [9][20] Touch: the map keeps a usable height and every control clears the
+   44px target on a phone. */
+@media (max-width:760px){
+  .pollsView .mapHost, .mapHost{min-height:280px;}
+  .pollsView .probHead .toggle button,
+  .probHead .toggle button,
+  .chartTab, .chip, .chipBtn, .yearBtn, .yearBtnA, .zoomBtn, .mapCtrlBtn{
+    min-height:44px;
+    padding:0 12px;
+    display:inline-flex;
+    align-items:center;
+  }
+  .iconbtn{width:44px;height:44px;}
+  .donate, .donateBtn{height:44px;}
+  /* [22] The nav scrolls on one line instead of stacking seven ragged rows
+     ahead of the data. */
+  .nav{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:flex-start;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{white-space:nowrap;padding:10px 8px;}
+  /* The nav is the only part allowed to shrink and scroll; the sheet itself
+     never scrolls sideways. */
+  .nav{min-width:0;flex:1 1 auto;}
+  .top{flex-wrap:nowrap;gap:10px;align-items:center;max-width:100%;}
+  .brand{flex:0 0 auto;min-width:0;}
+  .actions{flex:0 0 auto;}
+  .sheet, .wrap, body{overflow-x:hidden;}
+}
+
+/* [21] The record's pollster column takes the width it has rather than a
+   width hard-coded in a template string. */
+.pollsListHost td:nth-child(2){max-width:14ch;}
+@media (min-width:981px){.pollsListHost td:nth-child(2){max-width:22ch;}}
+
+/* [15] The masthead's controls sit on one height. */
+.iconbtn, .donate, .donateBtn{height:32px;}
+.iconbtn{width:32px;}
+
+/* [16][25] The nav is centred on the sheet, not on what is left of it. */
+@media (min-width:761px){
+  .top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+  .brand{justify-self:start;}
+  .nav{justify-self:center;flex-wrap:wrap;justify-content:center;}
+  .actions{justify-self:end;}
+}
+
+/* [10] A title measure that fits the column it lives in. */
+.pollsView .secTitle{max-width:none;}

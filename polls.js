@@ -364,7 +364,7 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
   const yMn=Math.max(0,d3.min(av)-3), yMx=Math.min(100,d3.max(av)+3);
   const x=d3.scaleTime().domain(xE).range([mg.l,mg.l+iw]);
   const y=d3.scaleLinear().domain([yMn,yMx]).range([mg.t+ih,mg.t]).nice();
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.min(6,iw/100|0)).tickFormat(d3.timeFormat("%b")));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.max(2,Math.min(6,iw/100|0))).tickFormat(d3.timeFormat("%b")));
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50){
     svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
@@ -411,7 +411,7 @@ function pollTable(el,rows,lA,lB,cA,cB){
     const mc=m>0?ca:(m<0?cb:"var(--muted)");
     h+=`<tr style="border-bottom:1px solid rgba(22,23,26,.06)">`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};white-space:nowrap">${ds(p.date)}</td>`;
-    h+=`<td style="padding:5px 8px;font:500 11px ${FONT};max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||"").slice(0,28))}</td>`;
+    h+=`<td style="padding:5px 8px;font:500 11px ${FONT};overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-dim)">${escapeHtml(String(p.ps||""))}</td>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${ca}">${(+p.a).toFixed(1)}</td>`;
     h+=`<td style="padding:5px 8px;font:600 11px ${FONT};text-align:right;color:${cb}">${(+p.b).toFixed(1)}</td>`;
     h+=`<td style="padding:5px 8px;font:700 11px ${FONT};text-align:right;color:${mc}">${ms}</td>`;
@@ -459,12 +459,33 @@ async function initMap(mk){
     .style("cursor",d=>{const st=fipsToUsps(d.id);return(st&&DATA[mk]?.ratios[st])?"pointer":"default";})
     .on("mouseenter",(ev,d)=>{
       const st=fipsToUsps(d.id);if(!st||!DATA[mk]?.ratios[st])return;
-      d3.select(ev.currentTarget).classed("hovered",true);
+      d3.select(ev.currentTarget).classed("hovered",true)
+        .classed("onDark",isDarkFill(ev.currentTarget.style.fill));
       showSimTip(ev,stateTipHtml(mk,st));
     })
     .on("mousemove",ev=>{const el=document.getElementById("simTip");if(el)showSimTip(ev,el.innerHTML);})
-    .on("mouseleave",ev=>{d3.select(ev.currentTarget).classed("hovered",false);hideSimTip();})
-    .on("click",(ev,d)=>{const st=fipsToUsps(d.id);if(st&&DATA[mk]?.ratios[st])pickState(mk,st);});
+    .on("mouseleave",ev=>{d3.select(ev.currentTarget).classed("hovered",false).classed("onDark",false);hideSimTip();})
+    .on("click",(ev,d)=>{const st=fipsToUsps(d.id);if(st&&DATA[mk]?.ratios[st])pickState(mk,st);})
+    .attr("tabindex",d=>{const st=fipsToUsps(d.id);return(st&&DATA[mk]?.ratios[st])?0:null;})
+    .attr("role",d=>{const st=fipsToUsps(d.id);return(st&&DATA[mk]?.ratios[st])?"button":null;})
+    .attr("aria-label",d=>{
+      const st=fipsToUsps(d.id);
+      if(!st||!DATA[mk]?.ratios[st])return null;
+      const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st],n=pp?pp.length:0;
+      return `${USPS_TO_NAME[st]||st}, ${n} poll${n===1?"":"s"}`;
+    })
+    .on("focus",(ev,d)=>{
+      const st=fipsToUsps(d.id);if(!st||!DATA[mk]?.ratios[st])return;
+      d3.select(ev.currentTarget).classed("hovered",true)
+        .classed("onDark",isDarkFill(ev.currentTarget.style.fill));
+      showSimTip(ev,stateTipHtml(mk,st));
+    })
+    .on("blur",ev=>{d3.select(ev.currentTarget).classed("hovered",false).classed("onDark",false);hideSimTip();})
+    .on("keydown",(ev,d)=>{
+      if(ev.key!=="Enter"&&ev.key!==" ")return;
+      ev.preventDefault();
+      const st=fipsToUsps(d.id);if(st&&DATA[mk]?.ratios[st])pickState(mk,st);
+    });
 
   // Direct labels: geography is a figure, so the polled units name themselves
   // rather than sending the reader to a legend or a hover.
@@ -540,9 +561,11 @@ function pickState(mk,usps){
   // Mark the selected unit by rule, not by colour, and let the stylesheet own it.
   const m=PMAP[mk];
   if(m?.g){
-    m.g.selectAll("path.state").classed("selected",function(){
-      return this.getAttribute("data-st")===usps;
-    });
+    m.g.selectAll("path.state")
+      .classed("selected",function(){ return this.getAttribute("data-st")===usps; })
+      .classed("onDark",function(){
+        return this.getAttribute("data-st")===usps && isDarkFill(this.style.fill);
+      });
     // A selected unit is raised so its contour is never clipped by a neighbour.
     const sel=m.g.select(`path.state[data-st='${usps}']`).node();
     if(sel&&sel.parentNode) sel.parentNode.appendChild(sel);
@@ -600,12 +623,14 @@ function stateScatter(mk,usps){
   const yMn=Math.max(0,d3.min(av)-3),yMx=Math.min(100,d3.max(av)+3);
   const x=d3.scaleTime().domain(d3.extent(polls,d=>d.date)).range([mg.l,mg.l+iw]);
   const y=d3.scaleLinear().domain([yMn,yMx]).range([mg.t+ih,mg.t]).nice();
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.min(6,iw/90|0)).tickFormat(d3.timeFormat("%b %d")));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.max(2,Math.min(6,iw/90|0))).tickFormat(d3.timeFormat(iw<260?"%b":"%b %d")));
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50) svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
   const blue=DEM_INK(),red=REP_INK();
-  svg.selectAll(".dD").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",3.5).attr("fill",blue).attr("opacity",.5);
-  svg.selectAll(".dR").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",3.5).attr("fill",red).attr("opacity",.5);
+  // Hollow rings at unequal radii, no alpha: two coincident polls nest instead
+  // of blending into a colour the palette does not contain.
+  svg.selectAll(".dD").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",3.4).attr("fill","none").attr("stroke",blue).attr("stroke-width",1.2);
+  svg.selectAll(".dR").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",2.2).attr("fill","none").attr("stroke",red).attr("stroke-width",1.2);
   if(polls.length>=3){
     const wn=Math.min(6,polls.length),ag=[];
     for(let i=0;i<polls.length;i++){const lo=Math.max(0,i-wn+1);let sA=0,sB=0;for(let j=lo;j<=i;j++){sA+=polls[j].a;sB+=polls[j].b;}const c=i-lo+1;ag.push({date:polls[i].date,a:sA/c,b:sB/c});}
