@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T01:50:31.597Z",
+  "updatedAt": "2026-07-28T02:19:03.620Z",
   "source": "https://api.votehub.com/polls",
   "window": 6,
   "counts": {
@@ -1662,16 +1662,18 @@
   ],
   "debug": {
     "lookbackDays": 700,
-    "pollTypeUsed": {},
+    "pollTypeUsed": {
+      "governor": "governor"
+    },
     "fetched": {
       "senate": 0,
-      "governor": 0
+      "governor": 282
     },
     "dropped": {
       "senate": 0,
-      "governor": 0
+      "governor": 282
     },
-    "okSlices": 0,
+    "okSlices": 48,
     "failedSlices": 0,
     "skippedDays": [],
     "fromApi": 0,
