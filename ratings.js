@@ -528,7 +528,7 @@ function renderRtgChart(modeKey, chartMode){
   const ih = height - mg.t - mg.b;
 
   const x = d3.scaleTime().domain(d3.extent(valid, d=>d.date)).range([mg.l, mg.l+iw]);
-  const xAxis = d3.axisBottom(x).ticks(Math.min(5, Math.floor(iw/70))).tickFormat(d3.timeFormat("%b"));
+  const xAxis = window.__axis.time(x, iw);
 
   if (ui._chartMode === "faceoff"){
     // Stacked area: D-leading vs R-leading (two colors)
@@ -542,7 +542,7 @@ function renderRtgChart(modeKey, chartMode){
 
     const total = Object.keys(modeKey === "house" ? DATA.house.ratios : DATA[modeKey]?.ratios || {}).length;
     const y = d3.scaleLinear().domain([0, total || 50]).range([mg.t+ih, mg.t]);
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d)}`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d)}`);
 
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(yAxis);
@@ -571,7 +571,7 @@ function renderRtgChart(modeKey, chartMode){
 
     const total = Object.keys(modeKey === "house" ? DATA.house.ratios : DATA[modeKey]?.ratios || {}).length;
     const y = d3.scaleLinear().domain([0, total || 50]).range([mg.t+ih, mg.t]);
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d)}`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d)}`);
 
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(yAxis);
@@ -598,7 +598,11 @@ function renderRtgChart(modeKey, chartMode){
   // Hover overlay for both chart modes
   const bisect = d3.bisector(d=>d.date).left;
   const vline = svg.append("line").attr("y1",mg.t).attr("y2",mg.t+ih)
-    .attr("stroke","var(--ink)").attr("stroke-width",1).attr("opacity",0).attr("stroke-dasharray","3 2");
+    // [6.11] The cursor's rule is not a threshold, so it is not an ink
+    // rule: the only ink rule inside a figure is the threshold. It reads
+    // at the caption's weight, solid, one pixel.
+    .attr("class","cursorRule")
+    .attr("stroke","var(--t-ink3)").attr("stroke-width",1).attr("opacity",0);
 
   svg.append("rect").attr("x",mg.l).attr("y",mg.t).attr("width",iw).attr("height",ih)
     .style("fill","transparent").style("cursor","crosshair")

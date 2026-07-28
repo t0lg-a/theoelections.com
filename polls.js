@@ -364,8 +364,8 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
   const yMn=Math.max(0,d3.min(av)-3), yMx=Math.min(100,d3.max(av)+3);
   const x=d3.scaleTime().domain(xE).range([mg.l,mg.l+iw]);
   const y=d3.scaleLinear().domain([yMn,yMx]).range([mg.t+ih,mg.t]).nice();
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.max(2,Math.min(6,iw/100|0))).tickFormat(d3.timeFormat("%b")));
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(window.__axis.time(x, iw));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(window.__axis.value(y, ih, d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50){
     svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
     svg.append("text").attr("class","thrLabel").attr("x",mg.l+iw).attr("y",y(50)-5).attr("text-anchor","end").text("50");
@@ -623,8 +623,8 @@ function stateScatter(mk,usps){
   const yMn=Math.max(0,d3.min(av)-3),yMx=Math.min(100,d3.max(av)+3);
   const x=d3.scaleTime().domain(d3.extent(polls,d=>d.date)).range([mg.l,mg.l+iw]);
   const y=d3.scaleLinear().domain([yMn,yMx]).range([mg.t+ih,mg.t]).nice();
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(d3.axisBottom(x).ticks(Math.max(2,Math.min(6,iw/90|0))).tickFormat(d3.timeFormat(iw<260?"%b":"%b %d")));
-  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d=>`${d}%`));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${mg.t+ih})`).call(window.__axis.time(x, iw));
+  svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(window.__axis.value(y, ih, d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50) svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
   const blue=DEM_INK(),red=REP_INK();
   // Hollow rings at unequal radii, no alpha: two coincident polls nest instead

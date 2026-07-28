@@ -1445,7 +1445,7 @@ function renderPastComboChart(mode, data, rule, chartMode){
   if (!parsed.length) return;
 
   const x = d3.scaleTime().domain(d3.extent(parsed, d=>d.date)).range([m.l, m.l+iw]);
-  const xAxis = d3.axisBottom(x).ticks(Math.min(5, Math.floor(iw/70))).tickFormat(d3.timeFormat("%b"));
+  const xAxis = window.__axis.time(x, iw);
 
   if (cMode === "seats"){
     const total = rule?.total ?? 0;
@@ -1455,13 +1455,13 @@ function renderPastComboChart(mode, data, rule, chartMode){
     const yMin = clamp((ext[0]??0)-pad, 0, total||1000);
     const yMax = clamp((ext[1]??(total||0))+pad, 0, total||1000);
     const y = d3.scaleLinear().domain([yMin, yMax]).range([m.t+ih, m.t]).nice();
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d)}`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d)}`);
 
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);
     y.ticks(5).forEach(t=>{
       svg.append("line").attr("x1",m.l).attr("x2",m.l+iw).attr("y1",y(t)).attr("y2",y(t))
-        .attr("stroke","var(--line)").attr("stroke-width",1).attr("stroke-dasharray","3 3").attr("opacity",0.5);
+        .attr("class","gridline").attr("stroke","var(--t-row-rule)").attr("stroke-width",1);
     });
     if (isFinite(maj) && maj >= y.domain()[0] && maj <= y.domain()[1]){
       svg.append("line").attr("class","seatMajLine").attr("x1",m.l).attr("x2",m.l+iw).attr("y1",y(maj)).attr("y2",y(maj));
@@ -1494,12 +1494,12 @@ function renderPastComboChart(mode, data, rule, chartMode){
   } else {
     /* Win Prob mode */
     const y = d3.scaleLinear().domain([0,1]).range([m.t+ih, m.t]);
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d*100)}%`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d*100)}%`);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);
     y.ticks(5).forEach(t=>{
       svg.append("line").attr("x1",m.l).attr("x2",m.l+iw).attr("y1",y(t)).attr("y2",y(t))
-        .attr("stroke","var(--line)").attr("stroke-width",1).attr("stroke-dasharray","3 3").attr("opacity",0.5);
+        .attr("class","gridline").attr("stroke","var(--t-row-rule)").attr("stroke-width",1);
     });
     svg.append("line").attr("class","seatMajLine").attr("x1",m.l).attr("x2",m.l+iw).attr("y1",y(0.5)).attr("y2",y(0.5));
 

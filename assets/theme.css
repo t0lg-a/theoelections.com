@@ -139,6 +139,13 @@
      than a set of separately-chosen paddings. */
   --t-baseline:8px;
 
+  /* ---- the figure vessel ------------------------------------------------ */
+  /* [6.3] A tick's length and the gap between it and its label, once. They
+     were 6 and 3 in one module, 4 and 2 in another, and d3's own defaults in
+     a third. */
+  --t-tick:5px;
+  --t-tick-gap:4px;
+
   /* ---- control height -------------------------------------------------- */
   /* [2.12] Every control in the masthead is this tall, and nothing in the
      masthead sets a height any other way. scripts/check-tokens.mjs asserts
@@ -521,10 +528,48 @@ svg text, .axis text, .oddsAxis text, .probAxis text, .seatAxis text,
   font-weight:600;
   fill:var(--t-muted);
 }
+/* [6.2] The domain path is a hairline everywhere, so no frame competes with
+   a threshold; the ticks are the same hairline at the same weight. */
 .oddsAxis path.domain, .probAxis path.domain, .axis path.domain,
 .oddsAxis line, .probAxis line, .axis line,
-.gridline, .probGrid line, .zeroLine, .seatTickLine{
+.probGrid line, .zeroLine, .seatTickLine{
   stroke:var(--t-hair);
+  stroke-width:var(--t-w-hair);
+  stroke-dasharray:none;
+  opacity:1;
+}
+/* [6.4] A gridline is quieter than the domain it hangs from: it is the
+   record's row rule, solid. It used to be a dashed hairline at 50% alpha,
+   and the system has neither a dash nor an alpha — an alpha on a rule
+   manufactures a colour the palette does not contain. */
+.gridline{
+  stroke:var(--t-row-rule);
+  stroke-width:var(--t-w-hair);
+  stroke-dasharray:none;
+  opacity:1;
+}
+/* [6.11] A cursor's rule marks where the reader is, not where a threshold
+   is, so it is not an ink rule. Solid, one pixel, at the caption's step. */
+.cursorRule, .annotRule{
+  stroke:var(--t-ink3);
+  stroke-width:var(--t-w-hair);
+  stroke-dasharray:none;
+}
+/* [6.3][6.5] One tick length and one gap, read from the tokens by
+   window.__axis in forecast.js, which every axis on the site is now built
+   through. The label's colour and size are set here, once: --t-tick and
+   --t-tick-gap are geometry and belong to the axis builder; the type
+   belongs to the sheet. */
+.oddsAxis .tick line, .probAxis .tick line, .axis .tick line{
+  stroke:var(--t-hair);
+  stroke-width:var(--t-w-hair);
+}
+.oddsAxis .tick text, .probAxis .tick text, .axis .tick text,
+.tickLabel, .seatTickLabel{
+  fill:var(--t-muted);
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+  font-weight:600;
 }
 .seatMajLine, .seatMajorityLine, .miniZero, .tickZero{
   stroke:var(--t-ink);

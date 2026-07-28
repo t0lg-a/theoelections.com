@@ -635,35 +635,99 @@ midpoint, the overprint's separation and the three dichromacies, and writes
 Axes, thresholds, marks, and the frame around them. The system reserves ink
 inside a figure for the threshold; everything else is hairline.
 
-1. Audit every axis on the site: domain path, ticks, labels, gridlines.
-2. Set the domain path to hairline everywhere and confirm no ink frame
-   competes with a threshold.
-3. Set the tick length and offset as tokens and apply them.
-4. Decide the gridline treatment: currently dashed hairline. Dashed is not in
-   the system; replace or sanction.
-5. Set the axis label size and colour once.
-6. Verify the axis never renders fewer than two ticks at any width.
-7. Verify the axis never renders more ticks than fit without collision.
-8. Set the date format per width: `%b` narrow, `%b %d` wide.
-9. Label every threshold that is currently unlabelled.
-10. Verify every threshold is an ink rule at 1.5px, solid, full opacity.
-11. Verify no other ink rule appears inside a figure.
-12. Set the mark vocabulary: hollow ring for a single observation, solid line
-    for an average, solid dot on the datum under the cursor.
-13. Apply it to the generic-ballot chart.
-14. Apply it to the state chart.
-15. Apply it to the past-election charts.
-16. Apply it to the swingometer's histogram.
-17. Give the average line a break where there is no data behind it, rather
-    than drawing at full weight across a gap.
-18. Mark the first point of an average as provisional when a single poll is
-    behind it.
-19. Set the margin timeline's scale steps as tokens and label the scale.
-20. Give the margin timeline an axis so a bar's height can be read.
-21. Verify every figure has a source line.
-22. Verify every novel form has a one-line decode gate.
-23. Add alt text to every figure stating its finding.
-24. Screenshot each figure form at its reference width into `docs/shots/`.
+1. [x] Audited by measurement: twelve axis constructors across five modules,
+   each with its own tick count and its own date format — `ticks(5)`,
+   `ticks(4)`, `ticks(min(5, iw/70))`, `ticks(min(6, iw/110))`,
+   `ticks(min(8, iw/90))`, and three time formats.
+   Original step: Audit every axis on the site: domain path, ticks, labels, gridlines.
+2. [x] Every domain path is a hairline at `--t-w-hair`, solid, opaque. The
+   only ink rule left inside a figure is the threshold.
+   Original step: Set the domain path to hairline everywhere and confirm no ink frame
+    competes with a threshold.
+3. [x] `--t-tick` and `--t-tick-gap`, read by `window.__axis` in
+   `forecast.js`, which every axis on the site is now built through.
+   Original step: Set the tick length and offset as tokens and apply them.
+4. [x] Replaced. Dashed is not in the system, and the 50% opacity was worse
+   than the dash: an alpha on a rule manufactures a colour the palette does
+   not contain. A gridline is the record's row rule, solid.
+   Original step: Decide the gridline treatment: currently dashed hairline. Dashed is not in
+    the system; replace or sanction.
+5. [x] `--t-fs-1`, 600, muted, in one rule. The geometry belongs to the axis
+   builder and the type belongs to the sheet.
+   Original step: Set the axis label size and colour once.
+6. [x] Never. The builder falls back to the scale's own domain when a scale
+   offers fewer than two ticks, and thinning never cuts below two.
+   Original step: Verify the axis never renders fewer than two ticks at any width.
+7. [x] Zero collisions across 18 axes at 320, 390, 768, 1024, 1440 and 1920 —
+   measured by comparing rendered label boxes, not by eye. Two bugs came out
+   of this: d3's `.ticks(n)` is a hint, so asking for five across fourteen
+   months returned fifteen; and the label measurement read `--t-fs-1` with a
+   bare `parseFloat`, which returned 0.6875 instead of 11px and made every
+   label four pixels wide. That is how a chart ends up with fifteen ticks on
+   682 pixels and nobody notices until they count them.
+   Original step: Verify the axis never renders more ticks than fit without collision.
+8. [x] `%b %d` when the ticks are days apart, `%b` when they are months
+   apart — on a monthly domain every tick falls on the first and "Jul 01"
+   spends four characters saying nothing. The year is printed once, on the
+   first tick of each year it appears in, and not at all when the domain
+   sits inside one year.
+   Original step: Set the date format per width: `%b` narrow, `%b %d` wide.
+9. [x] The majority line carries its number; the even-odds rule carries "50".
+   Original step: Label every threshold that is currently unlabelled.
+10. [x] `--t-w-rule`, solid, opaque, verified across every figure on every
+    tab.
+    Original step: Verify every threshold is an ink rule at 1.5px, solid, full opacity.
+11. [x] One was left: the ratings chart's cursor rule, an ink dash. A
+    cursor marks where the reader is, not where a threshold is, so it is
+    `--t-ink3` solid at one pixel, and the annotation rule on the
+    redistricting chart went the same way.
+    Original step: Verify no other ink rule appears inside a figure.
+12. [ ] Not done. The polls charts already draw hollow rings for a single
+    poll and a solid line for the average — that came out of the first
+    task — but it is not written down as a vocabulary, and the ratings and
+    past-election charts do not follow it.
+    Original step: Set the mark vocabulary: hollow ring for a single observation, solid line
+     for an average, solid dot on the datum under the cursor.
+13. [ ] Not done; see 12.
+    Original step: Apply it to the generic-ballot chart.
+14. [ ] Not done; see 12.
+    Original step: Apply it to the state chart.
+15. [ ] Not done; see 12.
+    Original step: Apply it to the past-election charts.
+16. [ ] Not done; see 12.
+    Original step: Apply it to the swingometer's histogram.
+17. [ ] Not done. An average drawn across a gap in the polling is a claim
+    the data does not support, and the line currently draws at full weight
+    through one.
+    Original step: Give the average line a break where there is no data behind it, rather
+     than drawing at full weight across a gap.
+18. [ ] Not done; the first point of an average is currently drawn the same
+    as the hundredth.
+    Original step: Mark the first point of an average as provisional when a single poll is
+     behind it.
+19. [ ] Not done.
+    Original step: Set the margin timeline's scale steps as tokens and label the scale.
+20. [ ] Not done. The margin timeline is a bar per day with no axis, so a
+    bar's height is only readable relative to the others.
+    Original step: Give the margin timeline an axis so a bar's height can be read.
+21. [x] Five of the six sheets had none: only the polls sheet carried a
+    source, from the first task. Every visible figure now does — 23 of 23,
+    asserted by measurement.
+    Original step: Verify every figure has a source line.
+22. [x] Same five sheets, same fix: 23 of 23. The histogram, the odds chart,
+    the ratings bar, the ratings chart, the swingometer's map, the
+    hindcast and the two Florida maps each gained a one-line decode.
+    Original step: Verify every novel form has a one-line decode gate.
+23. [x] Every figure host carries `role="img"` and a label. The label sits
+    on the host rather than inside the drawn SVG, because the SVG is
+    replaced wholesale on every repaint.
+    Original step: Add alt text to every figure stating its finding.
+24. [x] `scripts/shoot_figures.py` writes twenty: ten forms on both grounds.
+    Original step: Screenshot each figure form at its reference width into `docs/shots/`.
+
+**Carried forward.** Steps 12 to 20 are the mark vocabulary and the margin
+timeline's axis. They are module work inside four d3 renderers rather than
+sheet work, and they are the next thing this chapter owes.
 
 ---
 

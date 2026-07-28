@@ -259,6 +259,118 @@ function ratingFill(rating){
 
 window.__pal = { PAL, palMix, palParse, palIsDark, marginFill, ratingFill, tk };
 
+/* ======================================================================
+   THE FIGURE VESSEL  (chapter 6)
+
+   [6.3][6.6][6.7][6.8] Twelve axis constructors across five modules, each
+   with its own tick count and its own date format: ticks(5), ticks(4),
+   ticks(min(5, iw/70)), ticks(min(6, iw/110)), ticks(min(8, iw/90)), and
+   three different time formats. At 390 that produced eleven ticks on a
+   chart 300px wide.
+
+   One rule instead. The number of ticks is derived from how wide a label
+   actually is, never fewer than two and never more than fit; the date
+   format steps down with the space; the tick length and the gap to the
+   label come from the tokens.
+   ====================================================================== */
+const AXIS = (function(){
+  /** A token's value in pixels. The type scale is in rem, so a bare
+   *  parseFloat returns 0.6875 and every label measures four pixels wide —
+   *  which is exactly how an axis ends up with fifteen ticks on a 682px
+   *  chart and nobody notices until they count them. */
+  function tokenPx(name, fallback){
+    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    const n = parseFloat(v);
+    if (!isFinite(n)) return fallback;
+    if (/rem$/.test(v)) return n * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    return n;
+  }
+
+  const GAP = 14;                       // the least air the system leaves between labels
+  const FORMATS = ["%b %d", "%b"];      // [6.8] wide, then narrow
+  let ctx = null, cachedFont = "";
+
+  /** The rendered width of a label, measured in the face the axis draws in. */
+  function labelWidth(text){
+    const family = getComputedStyle(document.documentElement)
+      .getPropertyValue("--t-data").trim() || "sans-serif";
+    const font = "600 " + tokenPx("--t-fs-1", 11) + "px " + family;
+    if (!ctx) ctx = document.createElement("canvas").getContext("2d");
+    if (font !== cachedFont){ ctx.font = font; cachedFont = font; }
+    return ctx.measureText(text).width;
+  }
+
+  /** A tick's text, with the year added the first time that year appears. */
+  function labeller(fmt, values){
+    const base = d3.timeFormat(fmt);
+    const year = d3.timeFormat("%Y");
+    const firstOfYear = new Set();
+    const seen = new Set();
+    for (const v of values){
+      const y = year(v);
+      if (!seen.has(y)){ seen.add(y); firstOfYear.add(+v); }
+    }
+    // One year in the domain needs no year at all: the figure's dek has it.
+    if (seen.size < 2) return base;
+    return v => firstOfYear.has(+v) ? base(v) + " " + year(v) : base(v);
+  }
+
+  function widest(values, label){
+    return values.reduce((w, v) => Math.max(w, labelWidth(label(v))), 0);
+  }
+
+  /** [6.7] d3's .ticks(n) is a hint: ask for five across fourteen months and
+   *  it returns fifteen. So the values are chosen here and thinned until
+   *  they fit, and .tickValues sets exactly those. */
+  function thin(values, label, iw){
+    const room = Math.max(2, Math.floor(iw / (widest(values, label) + GAP)));
+    if (values.length <= room) return values;
+    const k = Math.ceil(values.length / room);
+    const out = values.filter((_, i) => i % k === 0);
+    // [6.6] Never fewer than two.
+    if (out.length < 2 && values.length >= 2) return [values[0], values[values.length - 1]];
+    return out;
+  }
+
+  /** [6.8] The day is only worth printing when the ticks are days apart. On
+   *  a domain measured in months every tick falls on the first, and "Jul 01"
+   *  spends four characters saying nothing. Below that, the widest format
+   *  whose labels still leave three of them. */
+  function formatFor(values, iw){
+    const spanDays = (values[values.length - 1] - values[0]) / 86400000;
+    const candidates = spanDays > 120 ? ["%b"] : FORMATS;
+    for (const fmt of candidates){
+      if (Math.floor(iw / (widest(values, labeller(fmt, values)) + GAP)) >= 3) return fmt;
+    }
+    return candidates[candidates.length - 1];
+  }
+
+  function style(axis){
+    return axis.tickSize(tokenPx("--t-tick", 5))
+               .tickPadding(tokenPx("--t-tick-gap", 4));
+  }
+
+  return {
+    /** A time axis that never collides and never renders fewer than two ticks. */
+    time(scale, iw, opts){
+      let values = scale.ticks(Math.max(2, Math.floor(iw / 60)));
+      if (values.length < 2) values = scale.domain();
+      const fmt = (opts && opts.format) || formatFor(values, iw);
+      const kept = thin(values, labeller(fmt, values), iw);
+      return style(d3.axisBottom(scale)
+        .tickValues(kept)
+        .tickFormat(labeller(fmt, kept)));
+    },
+    /** A value axis. Five steps unless the figure is too short to hold them. */
+    value(scale, ih, format){
+      const n = Math.max(2, Math.min(5, Math.floor(ih / 26)));
+      return style(d3.axisLeft(scale).ticks(n).tickFormat(format));
+    },
+    tokenPx,
+  };
+})();
+window.__axis = AXIS;
+
 /** Repaint every figure after the ground changes (light to night and back). */
 window.__repaintFigures = function(){
   try{ refreshAllViews(); }catch(e){}
@@ -3077,9 +3189,7 @@ function renderComboChart(modeKey, data, chartMode){
     .domain(d3.extent(parsed, d=>d.date))
     .range([m.l, m.l+iw]);
 
-  const xAxis = d3.axisBottom(x)
-    .ticks(Math.min(5, Math.floor(iw/70)))
-    .tickFormat(d3.timeFormat("%b"));
+  const xAxis = window.__axis.time(x, iw);
 
   if (mode === "seats"){
     const rules = SEAT_RULES[modeKey];
@@ -3091,7 +3201,7 @@ function renderComboChart(modeKey, data, chartMode){
     const yMin = clamp((ext[0]??0)-pad, 0, seatTotal||1000);
     const yMax = clamp((ext[1]??(seatTotal||0))+pad, 0, seatTotal||1000);
     const y = d3.scaleLinear().domain([yMin, yMax]).range([m.t+ih, m.t]).nice();
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d)}`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d)}`);
 
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);
@@ -3100,8 +3210,8 @@ function renderComboChart(modeKey, data, chartMode){
     y.ticks(5).forEach(t=>{
       svg.append("line").attr("x1",m.l).attr("x2",m.l+iw)
         .attr("y1",y(t)).attr("y2",y(t))
-        .attr("stroke","var(--line)").attr("stroke-width",1)
-        .attr("stroke-dasharray","3 3").attr("opacity",0.5);
+        .attr("class","gridline")
+        .attr("stroke","var(--t-row-rule)").attr("stroke-width",1);
     });
 
     if (isFinite(maj) && maj >= y.domain()[0] && maj <= y.domain()[1]){
@@ -3140,7 +3250,7 @@ function renderComboChart(modeKey, data, chartMode){
 
   } else {
     const y = d3.scaleLinear().domain([0,1]).range([m.t+ih, m.t]);
-    const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d*100)}%`);
+    const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d*100)}%`);
 
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
     svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);
@@ -3149,8 +3259,8 @@ function renderComboChart(modeKey, data, chartMode){
     y.ticks(5).forEach(t=>{
       svg.append("line").attr("x1",m.l).attr("x2",m.l+iw)
         .attr("y1",y(t)).attr("y2",y(t))
-        .attr("stroke","var(--line)").attr("stroke-width",1)
-        .attr("stroke-dasharray","3 3").attr("opacity",0.5);
+        .attr("class","gridline")
+        .attr("stroke","var(--t-row-rule)").attr("stroke-width",1);
     });
 
     svg.append("line").attr("class","seatMajLine")
@@ -3243,8 +3353,8 @@ function renderOddsChart(modeKey, data){
     .range([m.t+ih, m.t])
     .nice();
 
-  const xAxis = d3.axisBottom(x).ticks(Math.min(6, Math.floor(iw/110))).tickFormat(d3.timeFormat("%b %d"));
-  const yAxis = d3.axisLeft(y).ticks(4).tickFormat(d=>`${Math.round(d*100)}%`);
+  const xAxis = window.__axis.time(x, iw);
+  const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d*100)}%`);
 
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);
@@ -3344,8 +3454,8 @@ function renderSeatAvgChart(modeKey, data){
     .range([m.t+ih, m.t])
     .nice();
 
-  const xAxis = d3.axisBottom(x).ticks(Math.min(6, Math.floor(iw/110))).tickFormat(d3.timeFormat("%b %d"));
-  const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d)}`);
+  const xAxis = window.__axis.time(x, iw);
+  const yAxis = window.__axis.value(y, ih, d=>`${Math.round(d)}`);
 
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(0,${m.t+ih})`).call(xAxis);
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${m.l},0)`).call(yAxis);

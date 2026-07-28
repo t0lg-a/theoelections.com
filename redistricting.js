@@ -819,9 +819,7 @@ function redistRenderWarChart(){
     .domain(d3.extent(parsed, d=>d.date))
     .range([m.l, m.l+iw]);
 
-  const xAxis = d3.axisBottom(x)
-    .ticks(Math.min(8, Math.floor(iw/90)))
-    .tickFormat(d3.timeFormat("%b %Y"));
+  const xAxis = window.__axis.time(x, iw);
 
   let y, yAxis, yVal;
   if (mode === "seats"){
@@ -830,11 +828,11 @@ function redistRenderWarChart(){
     const ymax = Math.max(0, d3.max(vals));
     const pad = Math.max(1, (ymax - ymin) * 0.12);
     y = d3.scaleLinear().domain([ymin - pad, ymax + pad]).range([m.t+ih, m.t]).nice();
-    yAxis = d3.axisLeft(y).ticks(5).tickFormat(d => (d>0 ? `+${d.toFixed(0)}` : d.toFixed(0)));
+    yAxis = window.__axis.value(y, ih, d => (d>0 ? `+${d.toFixed(0)}` : d.toFixed(0)));
     yVal = d => d.expGainR;
   } else {
     y = d3.scaleLinear().domain([0, 1]).range([m.t+ih, m.t]);
-    yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>`${Math.round(d*100)}%`);
+    yAxis = window.__axis.value(y, ih, d=>`${Math.round(d*100)}%`);
     yVal = d => d.pGainR;
   }
 
@@ -845,7 +843,7 @@ function redistRenderWarChart(){
     svg.append("line").attr("x1",m.l).attr("x2",m.l+iw)
       .attr("y1",y(t)).attr("y2",y(t))
       .attr("stroke","var(--line)").attr("stroke-width",1)
-      .attr("stroke-dasharray","3 3").attr("opacity",0.5);
+      .attr("class","gridline");
   });
 
   if (mode === "seats"){
@@ -873,10 +871,12 @@ function redistRenderWarChart(){
     svg.append("line")
       .attr("x1",xp).attr("x2",xp)
       .attr("y1",m.t).attr("y2",m.t+ih)
-      .attr("stroke","var(--muted-light)")
-      .attr("stroke-width",1)
-      .attr("stroke-dasharray","3 2")
-      .attr("opacity",0.6);
+      // [6.4] An annotation is a rule, and the system's rules are solid at
+      // full strength. Dashes and alpha both say "this one is provisional",
+      // which is not what an election date is.
+      .attr("class","annotRule")
+      .attr("stroke","var(--t-ink3)")
+      .attr("stroke-width",1);
     svg.append("text")
       .attr("x",xp+3).attr("y",m.t+10)
       .attr("font-size","9px")

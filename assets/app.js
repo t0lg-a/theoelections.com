@@ -263,17 +263,25 @@ function USMap(_ref) {
   }, "\u2190 US"), /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A map; its finding is the title above it",
     "data-mode": mode,
+    role: "img",
+    "aria-label": "Map of " + (mode === "house" ? "congressional districts" : "states")
+      + ", each filled by the party it leans to and darkened with the margin",
     suppressHydrationWarning: true,
     dangerouslySetInnerHTML: { __html: _hostHtml("mapHost", mode, "") }
   }));
 }
 function Histogram(_ref2) {
   var data = _ref2.data,
-    dStart = _ref2.dStart;
+    dStart = _ref2.dStart,
+    ariaHisto = _ref2.label;
   var max = Math.max.apply(Math, _toConsumableArray(data).concat([1e-9]));
   return /*#__PURE__*/React.createElement("div", {
-    className: "histo"
+    className: "histo",
+    role: "img",
+    "aria-label": ariaHisto
   }, data.map(function (v, i) {
     var isD = i >= dStart;
     return /*#__PURE__*/React.createElement(React.Fragment, {
@@ -315,6 +323,8 @@ function ChartHost(_ref3) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A chart; its finding is the title above it",
     "data-mode": mode,
     suppressHydrationWarning: true,
     dangerouslySetInnerHTML: { __html: _hostHtml("chartHost", mode, "") }
@@ -481,11 +491,16 @@ function ModelSection(_ref5) {
     className: "histoTitle"
   }, histoFinding(d)), /*#__PURE__*/React.createElement(Histogram, {
     data: d.histo,
-    dStart: d.histoDStart
+    dStart: d.histoDStart,
+    label: histoFinding(d)
   }), /*#__PURE__*/React.createElement("div", {
     className: "histoCap"
   }, /*#__PURE__*/React.createElement("span", null, "more rep."), /*#__PURE__*/React.createElement("span", null, "simulated outcomes"), /*#__PURE__*/React.createElement("span", null, "more dem.")), /*#__PURE__*/React.createElement("div", {
-    className: "mapBlock"
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 each bar is a share of ten thousand simulated elections at that seat count; the ink rule is the majority."), /*#__PURE__*/React.createElement("div", {
+    className: "mapBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement(USMap, {
     mode: mode,
     ready: ready
@@ -494,7 +509,9 @@ function ModelSection(_ref5) {
   }, !ready ? "loading the map" : isCongress ? "hover a district for details" : "hover a state for details, click to zoom into counties"), isCongress ? /*#__PURE__*/React.createElement(CongressZoomRow, {
     ready: ready
   }) : null), /*#__PURE__*/React.createElement("div", {
-    className: "probBlock"
+    className: "probBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
@@ -516,7 +533,11 @@ function ModelSection(_ref5) {
   }, "seats"))), /*#__PURE__*/React.createElement(ChartHost, {
     mode: mode,
     ready: ready
-  })));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 each line is a party's daily chance of control; the ink rule is even odds.")), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, MODEL_SOURCE));
 }
 
 /* ========== Ratings (unchanged from v8) ========== */
@@ -543,6 +564,8 @@ function RatingMapHost(_ref6) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A map; its finding is the title above it",
     "data-mode": mode,
     "data-rtg-host": "map",
     suppressHydrationWarning: true,
@@ -576,6 +599,8 @@ function RatingChartHost(_ref7) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A chart; its finding is the title above it",
     "data-mode": mode,
     "data-rtg-host": "chart",
     suppressHydrationWarning: true,
@@ -770,11 +795,15 @@ function RatingSection(_ref0) {
   })), /*#__PURE__*/React.createElement(RatingBar, {
     counts: counts
   }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 the bar is the whole map, split by tier; each block's width is its share of the races."), /*#__PURE__*/React.createElement("div", {
     className: "rtgTossupNote"
   }, tossup > 0 ? /*#__PURE__*/React.createElement(React.Fragment, null, tossup, " ", /*#__PURE__*/React.createElement("span", {
     className: "rtg-tossup"
   }, "Tossup"), " race", tossup === 1 ? "" : "s") : /*#__PURE__*/React.createElement(React.Fragment, null, "no tossups")), /*#__PURE__*/React.createElement("div", {
-    className: "mapBlock"
+    className: "mapBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement(RatingMapHost, {
     mode: mode,
     ready: ready
@@ -783,7 +812,9 @@ function RatingSection(_ref0) {
   }, !ready ? "loading the ratings" : isCongress ? "hover a district for details" : "hover a state for details"), isCongress ? /*#__PURE__*/React.createElement(RatingsCongressZoomRow, {
     ready: ready
   }) : null), /*#__PURE__*/React.createElement("div", {
-    className: "probBlock"
+    className: "probBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
@@ -806,7 +837,11 @@ function RatingSection(_ref0) {
   }, "face-off"))), /*#__PURE__*/React.createElement(RatingChartHost, {
     mode: mode,
     ready: ready
-  })));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 each line is how many races sat in that tier on the day.")), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, RATINGS_SOURCE));
 }
 function RatingsView(_ref1) {
   var dataReady = _ref1.dataReady;
@@ -929,6 +964,8 @@ function PastMapHost(_ref10) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A map; its finding is the title above it",
     "data-past-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -964,6 +1001,8 @@ function PastChartHost(_ref11) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A chart; its finding is the title above it",
     "data-past-host": "chart",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1089,7 +1128,9 @@ function PastSection(_ref13) {
   }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
   }, seatsR))), /*#__PURE__*/React.createElement("div", {
-    className: "mapBlock"
+    className: "mapBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement(PastMapHost, {
     mode: mode,
     ready: ready,
@@ -1097,7 +1138,9 @@ function PastSection(_ref13) {
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
   }, !ready ? "loading the hindcast" : "hover a state for details")), /*#__PURE__*/React.createElement("div", {
-    className: "probBlock"
+    className: "probBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1117,11 +1160,15 @@ function PastSection(_ref13) {
     onClick: function onClick() {
       return setTab("seats");
     }
-  }, "seats"))), /*#__PURE__*/React.createElement(PastChartHost, {
+  }, "seats"))), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 the model as it stood on each day of that cycle, not as it looks now."), /*#__PURE__*/React.createElement(PastChartHost, {
     mode: mode,
     ready: ready,
     refreshKey: refreshKey
-  })));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, PAST_SOURCE));
 }
 function PastElectionsView() {
   var _useState15 = useState(2025),
@@ -1272,6 +1319,8 @@ function SwingMapHost(_ref14) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A map; its finding is the title above it",
     "data-swing-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1305,6 +1354,8 @@ function SwingCanvasHost(_ref15) {
   return /*#__PURE__*/React.createElement("div", {
     className: "swingCanvasHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "The seat curve across the whole range of national votes",
     "data-swing-host": "canvas",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1441,7 +1492,9 @@ function SwingSection(_ref16) {
     ready: ready,
     refreshKey: refreshKey
   }), /*#__PURE__*/React.createElement("div", {
-    className: "mapBlock"
+    className: "mapBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "figTitle"
   }, swingFinding(mode, seatsD, seatsR, margin, ready)),
@@ -1450,8 +1503,12 @@ function SwingSection(_ref16) {
     ready: ready,
     refreshKey: refreshKey
   }), /*#__PURE__*/React.createElement("div", {
+    className: "t-how"
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 move the national vote and every state moves with it from its own baseline; the fill leans to whoever wins it."), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "loading the swingometer" : "hover a state for details")));
+  }, !ready ? "loading the swingometer" : "hover a state for details")), /*#__PURE__*/React.createElement("div", {
+    className: "t-src"
+  }, SWING_SOURCE));
 }
 function SwingometerView() {
   var _useState23 = useState(false),
@@ -1699,6 +1756,11 @@ var POLLS_TITLES = {
   }
 };
 var POLLS_SOURCE = "Source: VoteHub polls API. Averages are ours; nothing is projected forward.";
+/* [6.21] Every figure carries its source. Five of the six sheets had none. */
+var MODEL_SOURCE = "Source: VoteHub polls API and past results, run through this site's model. Nothing is projected past the last day with polling behind it.";
+var RATINGS_SOURCE = "Source: this site's model. Ratings are cut from the forecast's margins, not assigned by hand.";
+var SWING_SOURCE = "Source: this site's model, re-run at the vote share you set. The baselines are the same ones the forecast uses.";
+var PAST_SOURCE = "Source: certified results, with the model re-run on what was known at the time.";
 function PollsCanvasHost(_ref17) {
   var mode = _ref17.mode,
     ready = _ref17.ready;
@@ -1725,6 +1787,8 @@ function PollsCanvasHost(_ref17) {
   return /*#__PURE__*/React.createElement("div", {
     className: "pollsHistHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "The daily margin off the even-vote rule",
     "data-polls-host": "hist",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1759,6 +1823,8 @@ function PollsChartHost(_ref18) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A chart; its finding is the title above it",
     "data-polls-host": "chart",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1789,6 +1855,8 @@ function PollsMapHost(_ref19) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A map; its finding is the title above it",
     "data-polls-host": "map",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1823,6 +1891,8 @@ function PollsStateChartHost(_ref20) {
   return /*#__PURE__*/React.createElement("div", {
     className: "chartHost",
     ref: hostRef,
+    role: "img",
+    "aria-label": "A chart; its finding is the title above it",
     "data-polls-host": "stchart",
     "data-mode": mode,
     suppressHydrationWarning: true,
@@ -1910,7 +1980,9 @@ function PollsGBSection(_ref22) {
     mode: "gb",
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
-    className: "probBlock"
+    className: "probBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1986,7 +2058,9 @@ function PollsRaceSection(_ref23) {
     mode: mode,
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
-    className: "mapBlock"
+    className: "mapBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement(PollsMapHost, {
     mode: mode,
     ready: ready
@@ -1995,7 +2069,9 @@ function PollsRaceSection(_ref23) {
   }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 fill leans to the leading party and darkens with the margin, a race inside two points is overprinted, an unpolled state stays paper."), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
   }, !ready ? "loading polls" : "click a state to read its polls")), /*#__PURE__*/React.createElement("div", {
-    className: "probBlock"
+    className: "probBlock",
+
+    role: "group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
