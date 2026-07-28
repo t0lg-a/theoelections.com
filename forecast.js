@@ -2306,7 +2306,7 @@ function updateMapControlBar(modeKey, zoomedUsps){
     if (label) label.textContent = `${stateName} — county view`;
   } else {
     if (backBtn) backBtn.style.display = "none";
-    if (label) label.textContent = "Click a state to zoom in";
+    if (label) label.textContent = "click a state to zoom in";
   }
 }
 

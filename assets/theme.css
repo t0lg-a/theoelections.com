@@ -996,7 +996,18 @@ svg path.state:focus-visible{
   color:var(--t-ink);
   margin-bottom:var(--t-baseline);
 }
-.pollsView .pollsListHost{max-height:260px;overflow-y:auto;}
+/* [4.20] The record's row is three baseline units, so the well is a whole
+   number of rows rather than a round number of pixels — a half-row at the
+   bottom edge reads as a rendering fault. On a phone there is no well at
+   all: a scroll inside a scroll is a trap on a touch screen, and the record
+   flows into the page instead. */
+.pollsView .pollsListHost{
+  max-height:calc(var(--t-baseline) * 3 * 11);
+  overflow-y:auto;
+}
+@media (max-width:980px){
+  .pollsView .pollsListHost{max-height:none;overflow-y:visible;}
+}
 .pollsView .pollsListHost table{
   width:100%;
   border-collapse:collapse;
@@ -1444,3 +1455,200 @@ svg path.district.selected{
 .bucketTable td, .pollTable td, .methTable td{
   border-bottom-color:var(--t-row-rule);
 }
+
+/* ======================================================================
+   15 · THE THREE VOICES  (chapter 4)
+
+   [4.1] Every piece of type on this site is one of three things, and the
+   audit found seventy-six distinct combinations of face, size, weight,
+   tracking and leading pretending otherwise. Eleven of the sizes in use
+   were not on the scale at all — 9, 9.5, 10, 12.5, 13.5, 14, 14.5, 16, 20,
+   22 and 24 — each one a number somebody typed once.
+
+   [4.24] The three voices, and what each is for:
+
+     the label    Switzer 700, --t-fs-2, no tracking, muted or ink.
+                  It names a thing. It is never Title Case, never tracked,
+                  never a sentence.
+     the finding  Switzer 800, --t-fs-6, -.018em, balanced, the column's
+                  measure. It states what the figure found, in a sentence,
+                  and it is the only voice allowed to be a claim.
+     the prose    Author 400, --t-fs-4, 1.62, oldstyle figures, 64ch.
+                  It is the only voice that runs to a paragraph, and the
+                  only one set in the serif.
+
+   The display figure is not a voice: it is a datum, set in Switzer 900 on
+   the --t-fs-8 clamp, and it is the only type on the site allowed past
+   --t-fs-6.
+   ====================================================================== */
+
+/* ---- the label ---------------------------------------------------------- */
+/* [4.3][4.5] One rule. The tracking that ten of these carried is the
+   letterspaced-small-caps habit the system does without: at 10px, 1.5px of
+   tracking is 15% of an em, which is not emphasis, it is damage. */
+.lbl, .seatsNote, .miniLbl, .miniLblFinal,
+.rtgLbl, .rtgCountLbl, .rtgN,
+.chartYLabel, .mapCtrlLabel, .pollsListHead,
+.swingCardLabel, .swingPartyLabel, .swingMarginLabel, .sliderLabel,
+.panelSub, .flrSub, .flrSliderSection, .flrSliderLbl, .flrSeatLabel,
+.methKicker, .projCardKicker, .projCardAKicker,
+.projSectionLabel, .projSectionALabel, .yearBarLabel,
+.sldlPanelSub, .pill .l, .dSide, .rSide,
+.pollsListHost th, .bucketTable th, .methTable th{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-2);
+  font-weight:700;
+  letter-spacing:0;
+  font-style:normal;
+  text-transform:none;
+}
+/* The smallest labels — a swatch's letter, a chart's axis, a table head —
+   take the record's size rather than inventing one below it. */
+.chartYLabel, .rtgN, .rtgLbl, .flrSeatLabel, .flrSliderLbl,
+.pollsListHost th, .bucketTable th, .methTable th,
+.pill .l, .dSide, .rSide{font-size:var(--t-fs-1);}
+
+/* ---- the finding -------------------------------------------------------- */
+/* [4.9] One rule, one measure, and lines that balance rather than leave a
+   two-word last one. */
+.secTitle, .panelTitle, .oddsTitle, .probHead .h,
+.flrTitle, .projCardTitle, .projCardATitle, .sldlPanelTitle,
+.methH2, .rtgTitle, .histoTitle, .figTitle{
+  font-family:var(--t-data);
+  font-weight:800;
+  font-size:var(--t-fs-6);
+  line-height:1.22;
+  letter-spacing:-.018em;
+  font-style:normal;
+  color:var(--t-ink);
+  text-wrap:balance;
+}
+/* A finding inside a figure, rather than over one, takes a step down: it is
+   still a claim, but it is subordinate to the section's. */
+.probHead .h, .oddsTitle, .flrTitle, .sldlPanelTitle, .projCardATitle,
+.histoTitle, .figTitle{
+  font-size:var(--t-fs-4);
+}
+/* [4.11][4.14] The two figures that had no title at all now carry one, on
+   the same rhythm every other figure block opens with. */
+.histoTitle, .figTitle{
+  margin:calc(var(--t-baseline) * 2) 0 var(--t-baseline);
+}
+
+/* ---- the prose ---------------------------------------------------------- */
+/* [4.16][4.17] The only serif on the site, and the only voice that runs to a
+   paragraph. Oldstyle figures, because a number inside a sentence is part of
+   the sentence; every other number on this site is tabular. */
+.methBody, .methLede, .methDesc, .methNote, .methP,
+.projCardDesc, .projCardADesc, .heroLede{
+  font-family:var(--t-prose);
+  font-variant-numeric:proportional-nums oldstyle-nums;
+  font-size:var(--t-fs-4);
+  font-weight:400;
+  line-height:1.62;
+  max-width:64ch;
+  text-wrap:pretty;
+}
+.methBody strong, .methLede strong, .methDesc strong,
+.projCardDesc strong, .projCardADesc strong{font-weight:600;}
+/* A rating's name is a label, not prose, even though it sits in a prose
+   block. */
+.methRatingName{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-3);
+  font-weight:700;
+  letter-spacing:0;
+}
+
+/* ---- the display figure -------------------------------------------------- */
+/* [4.18][4.19] One clamp, whose floor survives 320px: two numbers of four
+   glyphs each at 2.2rem sit inside a 288px column with room to spare. And
+   two trackings, because one does not serve both ends of a clamp — -.05em
+   is right at 62px and closes the counters at 35px. */
+.seats .num, .seatsSide .num, .flrSeatNum, .rtgNum, .rtgCountNum{
+  font-family:var(--t-data);
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+  line-height:.9;
+}
+.seats .num, .seatsSide .num{
+  font-size:var(--t-fs-8);
+  letter-spacing:-.05em;
+}
+@media (max-width:980px){
+  .seats .num, .seatsSide .num{letter-spacing:-.035em;}
+}
+/* A figure's number inside a panel is a datum at reading size, not a
+   display figure. */
+.flrSeatNum{font-size:var(--t-fs-6);letter-spacing:-.03em;}
+.rtgNum, .rtgCountNum{font-size:var(--t-fs-5);letter-spacing:-.03em;}
+
+/* The Florida panel and the odds card style their type from an id selector,
+   which outranks a class. Matched here rather than loosened there: the page
+   is teleported into the app whole, and its own sheet is not ours to thin
+   out until chapter 11. */
+#flRedistrictingPage .flrTitle{font-size:var(--t-fs-4);letter-spacing:-.018em;}
+#flRedistrictingPage .flrSub,
+#flRedistrictingPage .flrSliderSection,
+#flRedistrictingPage .flrSliderLbl,
+#flRedistrictingPage .flrSeatLabel{
+  font-size:var(--t-fs-1);font-weight:700;letter-spacing:0;
+}
+#flRedistrictingPage .flrSeatNum{font-size:var(--t-fs-6);letter-spacing:-.03em;}
+.oddsCard .oddsTitle{font-size:var(--t-fs-4);letter-spacing:-.018em;}
+
+/* The last of the off-scale labels: a ratings bar's segment names, a
+   histogram's end labels, the tooltip's rows, the state-legs cursor, and the
+   two separators the masthead and the footer set by hand. Nine and ten
+   pixels are not sizes, they are what is left when a label is treated as
+   packaging. */
+.ratingLabels, .ratingLabels .rlbl,
+.pollsHistLabels, .pollsHistLabels span,
+#tip .miniLbl, #tip .miniLblFinal, #tip .miniVal,
+#stateLegsPage .sldlCursorTip .cBase,
+.rtgCountLbl, .projCardAKicker, .projCardKicker, .methKicker{
+  font-size:var(--t-fs-1);
+  font-weight:700;
+  letter-spacing:0;
+  text-transform:none;
+}
+.brand .sep, .foot .sep, .zoomRow .sep, .gbMeta .sep{
+  font-size:var(--t-fs-3);
+  opacity:1;
+}
+.swingMarginVal{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-4);
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+}
+
+/* The last six. A project card's mini variant, the state-legs panel title,
+   the hover panel's margin figure and its labels, and the tooltip's rows —
+   each of them a size chosen inside the block that needed it rather than
+   from the scale. */
+.projCardA-mini .projCardATitle{font-size:var(--t-fs-3);}
+.sldlPanelTitle{font-size:var(--t-fs-5);}
+.panelMarginNum{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-6);
+  font-weight:900;
+  letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;
+}
+.panelUsps, .simTip .stDate, .miniLbl, .miniVal{
+  font-size:var(--t-fs-1) !important;
+  font-weight:700;
+  letter-spacing:0;
+}
+
+/* Named exactly, because each of these is inside a block that styles by
+   descendant and would otherwise keep its own number: the state-legs panel's
+   title, its mode toggle, and its two seat figures; the ratings bar's segment
+   counts; a project card's kind; and the methodology table's head. */
+/* state-legs.js injects its own sheet at runtime, scoped by the page's id
+   and appended after this one, so it wins on order at equal specificity.
+   Its panel now reads the tokens directly rather than being answered here. */
+.ratingBar .seg span{font-size:var(--t-fs-1);font-weight:700;}
+.projCardAMeta span{font-size:var(--t-fs-1);font-weight:700;letter-spacing:0;}
+.methTableA th{font-size:var(--t-fs-1);font-weight:700;letter-spacing:0;}

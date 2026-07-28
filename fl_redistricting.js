@@ -333,6 +333,23 @@ function flRenderCard(cardKey){
   if (seatsD) seatsD.textContent = tally.D;
   if (seatsR) seatsR.textContent = tally.R;
 
+  // [4.15] The panel is titled with what these lines produced, not with
+  // which lines they are — the sub already says that. The title moves with
+  // the sliders on the two swingometer cards, so it is always the claim the
+  // map under it is making.
+  const title = cardEl.querySelector(".flrTitle");
+  if (title) {
+    const total = tally.D + tally.R;
+    const lead = tally.D === tally.R ? null : (tally.D > tally.R ? "Democrats" : "Republicans");
+    const n = Math.max(tally.D, tally.R);
+    const era = c.era === "old" ? "the old lines" : "the new lines";
+    title.textContent = !total
+      ? (c.era === "old" ? "The old lines" : "The new lines")
+      : lead
+        ? `${era.charAt(0).toUpperCase()}${era.slice(1)} give ${lead} ${n} of ${total}`
+        : `${era.charAt(0).toUpperCase()}${era.slice(1)} split Florida ${tally.D}\u2013${tally.R}`;
+  }
+
   const pillD = cardEl.querySelector("[data-pill-d]");
   const pillR = cardEl.querySelector("[data-pill-r]");
   if (pillD) pillD.textContent = gb.D.toFixed(1);
@@ -381,7 +398,7 @@ function flWireSwingCard(cardKey){
     const gbHeader = document.createElement("div");
     gbHeader.className = "flrSliderSection";
     gbHeader.setAttribute("data-flr-section-hdr", "gb");
-    gbHeader.textContent = "National generic ballot";
+    gbHeader.textContent = "national generic ballot";
     inputs.gbD.closest(".flrSliderRow").before(gbHeader);
 
     const hispRow = cardEl.querySelector(".flrHispRow");
@@ -389,7 +406,7 @@ function flWireSwingCard(cardKey){
       const hispHeader = document.createElement("div");
       hispHeader.className = "flrSliderSection";
       hispHeader.setAttribute("data-flr-section-hdr", "hisp");
-      hispHeader.textContent = "National Hispanic vote";
+      hispHeader.textContent = "national Hispanic vote";
       hispRow.before(hispHeader);
     }
   }

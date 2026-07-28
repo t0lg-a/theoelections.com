@@ -68,7 +68,11 @@ function makeLoadingSection(mode) {
     dSeats: half,
     rSeats: rule.total - half,
     histo: LOADING_HIST,
-    histoDStart: 9
+    histoDStart: 9,
+    histoLo: null,
+    histoHi: null,
+    majority: rule.majority,
+    total: rule.total
   };
 }
 function buildSectionData(mode, oddsAll, hist) {
@@ -88,7 +92,9 @@ function buildSectionData(mode, oddsAll, hist) {
   var dSeats = Math.max(0, Math.min(rule.total, Math.round(expDem)));
   var rSeats = rule.total - dSeats;
   var histo = LOADING_HIST.slice(),
-    histoDStart = 9;
+    histoDStart = 9,
+    histoLo = null,
+    histoHi = null;
   if (hist && hist.counts && hist.counts.length) {
     var _hist$min;
     var counts = hist.counts;
@@ -127,6 +133,20 @@ function buildSectionData(mode, oddsAll, hist) {
     if (seatRange > 0) {
       histoDStart = Math.max(0, Math.min(N, Math.floor((rule.majority - trimmedMin) / seatRange * N)));
     }
+    // [4.11] The central 80% of the runs, in seats, so the histogram can be
+    // titled with what it found rather than with what it is.
+    var totalRuns = counts.reduce(function (t, v) { return t + v; }, 0);
+    if (totalRuns > 0) {
+      var acc = 0, loSeat = null, hiSeat = null;
+      for (var k = 0; k < counts.length; k++) {
+        acc += counts[k];
+        var seatAt = minSeat + k * binSize;
+        if (loSeat === null && acc >= totalRuns * 0.1) loSeat = seatAt;
+        if (hiSeat === null && acc >= totalRuns * 0.9) hiSeat = seatAt;
+      }
+      histoLo = loSeat;
+      histoHi = hiSeat;
+    }
   }
   return {
     title: meta.title,
@@ -136,8 +156,57 @@ function buildSectionData(mode, oddsAll, hist) {
     dSeats: dSeats,
     rSeats: rSeats,
     histo: histo,
-    histoDStart: histoDStart
+    histoDStart: histoDStart,
+    histoLo: histoLo,
+    histoHi: histoHi,
+    majority: rule.majority,
+    total: rule.total
   };
+}
+
+/* [4.10] A figure is titled with its finding, never with its form. These
+   write the finding from the same numbers the figure draws, so a title can
+   never disagree with the picture under it. */
+function chamberWord(mode) {
+  return mode === "senate" ? "the Senate"
+    : mode === "house" ? "the House"
+    : "the governorships";
+}
+function probFinding(d, mode) {
+  var p = d.dPct;
+  if (!isFinite(p)) return "Control of " + chamberWord(mode);
+  if (Math.abs(p - 50) < 0.5) return chamberWord(mode).replace(/^the /, "The ") + " is a coin flip";
+  var lead = p > 50 ? "Democrats" : "Republicans";
+  var share = p > 50 ? p : 100 - p;
+  return lead + " hold " + chamberWord(mode) + " in " + Math.round(share) + "% of runs";
+}
+function seatsFinding(d, mode) {
+  if (!isFinite(d.dSeats)) return "Expected seats in " + chamberWord(mode);
+  var maj = d.majority, total = d.total;
+  var side = d.dSeats >= maj ? "Democrats" : (d.rSeats >= (total - maj + 1) ? "Republicans" : null);
+  var n = side === "Republicans" ? d.rSeats : d.dSeats;
+  if (!side) return "Neither party averages a majority of " + chamberWord(mode);
+  return side + " average " + n + " of " + total + ", and need " + maj;
+}
+function pastProbFinding(pillD, pillR, year) {
+  var d = parseFloat(pillD), r = parseFloat(pillR);
+  if (!isFinite(d) || !isFinite(r)) return "What the model said before the vote";
+  if (Math.abs(d - r) < 0.5) return "The model called it a coin flip before the vote";
+  var lead = d > r ? "Democrats" : "Republicans";
+  return "The model gave " + lead + " " + Math.round(Math.max(d, r)) + "% before the " + year + " vote";
+}
+function pastSeatsFinding(seatsD, seatsR, year) {
+  var d = parseInt(seatsD, 10), r = parseInt(seatsR, 10);
+  if (!isFinite(d) || !isFinite(r)) return "What " + year + " returned";
+  if (d === r) return "The two sides finished level in " + year;
+  var lead = d > r ? "Democrats" : "Republicans";
+  return lead + " took " + Math.max(d, r) + " of " + (d + r) + " in " + year;
+}
+function histoFinding(d) {
+  if (d.histoLo == null || d.histoHi == null || d.histoLo === d.histoHi) {
+    return "Simulated outcomes";
+  }
+  return "Eight runs in ten land Democrats between " + d.histoLo + " and " + d.histoHi;
 }
 
 /* ========== Model components ========== */
@@ -408,7 +477,9 @@ function ModelSection(_ref5) {
     className: "lbl"
   }, "rep"), /*#__PURE__*/React.createElement("div", {
     className: "num"
-  }, d.rSeats))), /*#__PURE__*/React.createElement(Histogram, {
+  }, d.rSeats))), /*#__PURE__*/React.createElement("div", {
+    className: "histoTitle"
+  }, histoFinding(d)), /*#__PURE__*/React.createElement(Histogram, {
     data: d.histo,
     dStart: d.histoDStart
   }), /*#__PURE__*/React.createElement("div", {
@@ -420,7 +491,7 @@ function ModelSection(_ref5) {
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "Loading map…" : isCongress ? "Hover a district for details" : "Hover a state for details; click to zoom into counties"), isCongress ? /*#__PURE__*/React.createElement(CongressZoomRow, {
+  }, !ready ? "loading the map" : isCongress ? "hover a district for details" : "hover a state for details, click to zoom into counties"), isCongress ? /*#__PURE__*/React.createElement(CongressZoomRow, {
     ready: ready
   }) : null), /*#__PURE__*/React.createElement("div", {
     className: "probBlock"
@@ -428,7 +499,7 @@ function ModelSection(_ref5) {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
     className: "h"
-  }, chartTab === "prob" ? "Win probability" : "Expected seats"), /*#__PURE__*/React.createElement("div", {
+  }, chartTab === "prob" ? probFinding(d, mode) : seatsFinding(d, mode)), /*#__PURE__*/React.createElement("div", {
     className: "toggle"
   }, /*#__PURE__*/React.createElement("button", {
     className: chartTab === "prob" ? "active" : "",
@@ -615,6 +686,25 @@ function RatingBar(_ref9) {
     }, cat);
   })));
 }
+/* [4.13] The ratings bar states what the ratings found: which side has more
+   of the map beyond a tossup, and how much of it is still in play. */
+function ratingFinding(dTotal, rTotal, tossup, mode) {
+  var safe = dTotal + rTotal;
+  if (!safe && !tossup) return "Ratings for " + chamberWord(mode);
+  if (dTotal === rTotal) {
+    return "The two sides are rated level at " + dTotal + " apiece";
+  }
+  var lead = dTotal > rTotal ? "Democrats" : "Republicans";
+  var trail = dTotal > rTotal ? "Republicans" : "Democrats";
+  var n = Math.max(dTotal, rTotal), m = Math.min(dTotal, rTotal);
+  return lead + " are rated ahead in " + n + ", " + trail + " in " + m +
+    (tossup ? ", and " + tossup + " " + (tossup === 1 ? "is" : "are") + " a tossup" : "");
+}
+function faceoffFinding(dTotal, rTotal, tossup) {
+  if (!tossup) return "Every race is rated for one side or the other";
+  return tossup + (tossup === 1 ? " race is" : " races are") +
+    " a tossup; the other " + (dTotal + rTotal) + " are not";
+}
 function RatingSection(_ref0) {
   var mode = _ref0.mode,
     counts = _ref0.counts,
@@ -685,7 +775,7 @@ function RatingSection(_ref0) {
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "Loading ratings…" : isCongress ? "Hover a district for details" : "Hover a state for details"), isCongress ? /*#__PURE__*/React.createElement(RatingsCongressZoomRow, {
+  }, !ready ? "loading the ratings" : isCongress ? "hover a district for details" : "hover a state for details"), isCongress ? /*#__PURE__*/React.createElement(RatingsCongressZoomRow, {
     ready: ready
   }) : null), /*#__PURE__*/React.createElement("div", {
     className: "probBlock"
@@ -693,7 +783,8 @@ function RatingSection(_ref0) {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
     className: "h"
-  }, chartTab === "detailed" ? "Rating counts" : "Face-off"), /*#__PURE__*/React.createElement("div", {
+  }, chartTab === "detailed" ? ratingFinding(dTotal, rTotal, tossup, mode)
+     : faceoffFinding(dTotal, rTotal, tossup)), /*#__PURE__*/React.createElement("div", {
     className: "toggle"
   }, /*#__PURE__*/React.createElement("button", {
     className: chartTab === "detailed" ? "active" : "",
@@ -1000,13 +1091,14 @@ function PastSection(_ref13) {
     refreshKey: refreshKey
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "Loading hindcast…" : "Hover a state for details")), /*#__PURE__*/React.createElement("div", {
+  }, !ready ? "loading the hindcast" : "hover a state for details")), /*#__PURE__*/React.createElement("div", {
     className: "probBlock"
   }, /*#__PURE__*/React.createElement("div", {
     className: "probHead"
   }, /*#__PURE__*/React.createElement("div", {
     className: "h"
-  }, chartTab === "prob" ? "Win probability" : "Expected seats"), /*#__PURE__*/React.createElement("div", {
+  }, chartTab === "prob" ? pastProbFinding(pillD, pillR, year)
+     : pastSeatsFinding(seatsD, seatsR, year)), /*#__PURE__*/React.createElement("div", {
     className: "toggle"
   }, /*#__PURE__*/React.createElement("button", {
     className: chartTab === "prob" ? "active" : "",
@@ -1214,6 +1306,21 @@ function SwingCanvasHost(_ref15) {
     dangerouslySetInnerHTML: { __html: _hostHtml("swingCanvasHost", mode, "canvas") }
   });
 }
+/* [4.14] The swingometer's map is titled with the map the slider has just
+   produced, so the reader can read the claim without counting the states. */
+function swingFinding(mode, seatsD, seatsR, margin, ready) {
+  if (!ready) return "The map at this national vote";
+  var d = parseInt(seatsD, 10), r = parseInt(seatsR, 10);
+  if (!isFinite(d) || !isFinite(r)) return "The map at this national vote";
+  var rule = SEAT_RULES_UI[mode === "house" ? "house" : mode] || {};
+  var maj = rule.majority;
+  var who = maj == null ? null : (d >= maj ? "Democrats" : (r >= maj ? "Republicans" : null));
+  var at = (margin && margin !== "Tied")
+    ? " on a national vote of " + margin
+    : " on an even national vote";
+  if (!who) return "Neither side reaches a majority" + at;
+  return who + " take " + Math.max(d, r) + " of " + (d + r) + at;
+}
 function SwingSection(_ref16) {
   var _s$pillD2, _s$pillR2, _s$seatsD2, _s$seatsR2, _s$margin;
   var mode = _ref16.mode,
@@ -1330,13 +1437,16 @@ function SwingSection(_ref16) {
     refreshKey: refreshKey
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapBlock"
-  }, /*#__PURE__*/React.createElement(SwingMapHost, {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "figTitle"
+  }, swingFinding(mode, seatsD, seatsR, margin, ready)),
+  /*#__PURE__*/React.createElement(SwingMapHost, {
     mode: mode,
     ready: ready,
     refreshKey: refreshKey
   }), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "Loading swingometer…" : "Hover a state for details")));
+  }, !ready ? "loading the swingometer" : "hover a state for details")));
 }
 function SwingometerView() {
   var _useState23 = useState(false),
@@ -2018,7 +2128,7 @@ function MethodologyView() {
     className: "methHero"
   }, /*#__PURE__*/React.createElement("div", {
     className: "methKicker"
-  }, "Documentation"), /*#__PURE__*/React.createElement("h1", {
+  }, "documentation"), /*#__PURE__*/React.createElement("h1", {
     className: "methTitle"
   }, "Methodology"), /*#__PURE__*/React.createElement("p", {
     className: "methLede"
@@ -2102,14 +2212,14 @@ var PROJECTS = [{
     meta: ["Chart", "FEC · TEC"]
   }, {
     url: "primary_turnout_combined.html",
-    kicker: "National analysis",
+    kicker: "national analysis",
     kickerKind: "neutral",
     title: "Primary turnout as a general election signal",
     desc: "State-by-state primary-to-general vote ratios for Democrats and Republicans, 2000–2026. Tests whether the primary enthusiasm gap predicts the national environment in November.",
     meta: ["Interactive", "FEC · State SOS"]
   }, {
     url: "nationalization-2.html",
-    kicker: "Midterm races",
+    kicker: "midterm races",
     kickerKind: "purple",
     title: "Nationalization indicator for 2026",
     desc: "A district-level measure of how closely individual Senate, House, and gubernatorial races are tracking the national environment. Filter by chamber, sort by deviation, and see who's running ahead or behind their baseline.",
@@ -2183,7 +2293,7 @@ function ProjectsView() {
     className: "projHero"
   }, /*#__PURE__*/React.createElement("div", {
     className: "methKicker"
-  }, "Index"), /*#__PURE__*/React.createElement("h1", {
+  }, "index"), /*#__PURE__*/React.createElement("h1", {
     className: "methTitle"
   }, "Projects"), /*#__PURE__*/React.createElement("p", {
     className: "methLede"

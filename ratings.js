@@ -557,7 +557,7 @@ function renderRtgChart(modeKey, chartMode){
 
   } else {
     // Stacked area: 7 rating categories
-    ui.ylabel.textContent = "Rating counts";
+    ui.ylabel.textContent = "rating counts";
 
     const total = Object.keys(modeKey === "house" ? DATA.house.ratios : DATA[modeKey]?.ratios || {}).length;
     const y = d3.scaleLinear().domain([0, total || 50]).range([mg.t+ih, mg.t]);

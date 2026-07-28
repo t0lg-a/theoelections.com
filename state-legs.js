@@ -749,33 +749,33 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
       #stateLegsPage .sldlStatePanel .sldlModeToggle button{pointer-events:auto;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
       #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid var(--rule-soft);border-radius:0;overflow:hidden;pointer-events:auto;}
-      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;}
+      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);letter-spacing:0;text-transform:none;}
       #stateLegsPage .sldlModeToggle button.active{background:var(--ink);color:var(--paper);font-weight:600;}
       #stateLegsPage .sldlMmNote{
-        display:none;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--ink-dim);
+        display:none;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-ink2);
         background:var(--yellow-soft);border:1px solid var(--yellow);
-        border-radius:0;padding:4px 6px;margin:4px 0 8px;letter-spacing:0.04em;text-transform:uppercase;
+        border-radius:0;padding:4px 6px;margin:4px 0 8px;letter-spacing:0;text-transform:none;
       }
       #stateLegsPage .sldlMmNote.show{display:block;}
       #stateLegsPage .sldlOddsRow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-top:10px;}
       #stateLegsPage .sldlOddsRow .cell{background:transparent;border:1px solid var(--rule-soft);border-radius:0;padding:5px 6px;text-align:center;}
-      #stateLegsPage .sldlOddsRow .lbl{font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1px;}
-      #stateLegsPage .sldlOddsRow .val{font-family:var(--mono);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;}
+      #stateLegsPage .sldlOddsRow .lbl{font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);text-transform:none;letter-spacing:0;margin-bottom:1px;}
+      #stateLegsPage .sldlOddsRow .val{font-family:var(--t-data);font-size:var(--t-fs-3);font-weight:800;font-variant-numeric:tabular-nums;}
       #stateLegsPage .sldlOddsRow .val.d{color:var(--blue);}
       #stateLegsPage .sldlOddsRow .val.r{color:var(--red);}
-      #stateLegsPage .sldlOddsNone{font-family:var(--body);font-size:11px;color:var(--muted);text-align:center;padding:6px 0;font-style:italic;}
-      #stateLegsPage .sldlPanelTitle{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.2;}
-      #stateLegsPage .sldlPanelSub{font-family:var(--body);font-style:italic;font-size:12px;font-weight:400;color:var(--muted);}
+      #stateLegsPage .sldlOddsNone{font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:500;color:var(--t-muted);text-align:center;padding:6px 0;font-style:normal;}
+      #stateLegsPage .sldlPanelTitle{font-family:var(--t-data);font-size:var(--t-fs-5);font-weight:800;color:var(--t-ink);letter-spacing:-0.018em;line-height:1.22;}
+      #stateLegsPage .sldlPanelSub{font-family:var(--t-data);font-style:normal;font-size:var(--t-fs-2);font-weight:700;color:var(--t-muted);}
       #stateLegsPage .sldlSeatLine{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:6px 0 8px;}
-      #stateLegsPage .sldlSeatLine .dSide{color:var(--blue);font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;}
-      #stateLegsPage .sldlSeatLine .dSide b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;}
-      #stateLegsPage .sldlSeatLine .rSide{color:var(--red);font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;}
-      #stateLegsPage .sldlSeatLine .rSide b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;}
-      #stateLegsPage .sldlSeatLine .sep{color:var(--rule-soft);font-family:var(--display);font-weight:400;}
+      #stateLegsPage .sldlSeatLine .dSide{color:var(--t-d5);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .dSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
+      #stateLegsPage .sldlSeatLine .rSide{color:var(--t-d1);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .rSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
+      #stateLegsPage .sldlSeatLine .sep{color:var(--t-hair);font-family:var(--t-data);font-weight:500;}
       #stateLegsPage .sldlRatingBar{display:flex;height:18px;border-radius:0;overflow:hidden;border:1px solid var(--ink);}
-      #stateLegsPage .sldlRatingBar .seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;font-weight:500;color:var(--paper);min-width:0;}
+      #stateLegsPage .sldlRatingBar .seg{display:flex;align-items:center;justify-content:center;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-paper);min-width:0;}
       #stateLegsPage .sldlRatingBar .seg.light{color:var(--ink);}
-      #stateLegsPage .sldlRatingLabels{display:flex;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.04em;}
+      #stateLegsPage .sldlRatingLabels{display:flex;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);margin-top:3px;text-transform:none;letter-spacing:0;}
       #stateLegsPage .sldlRatingLabels .lbl{text-align:center;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
       #stateLegsPage .sldlPanelDivider{height:1px;background:var(--rule-soft);margin:10px -12px;}
       #stateLegsPage .sldlPanelDistrict{min-height:56px;}

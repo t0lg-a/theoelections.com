@@ -372,41 +372,115 @@ the column it lives in and balances its own lines.
 Two faces, three voices: the label, the finding, the prose. This chapter makes
 each one consistent everywhere it appears.
 
-1. Enumerate every text style in use and map each to label, finding or prose.
-2. Delete any style that is none of the three.
-3. Set the label voice once — bold, lowercase, no tracking — and have every
-   label read it.
-4. Find every remaining Title Case label and lowercase it; the map hints, the
-   chart toggles, the zoom controls.
-5. Find every remaining letter-spaced label and remove the tracking.
-6. Verify no `text-transform` survives anywhere, including inline styles in
-   the JS modules.
-7. Verify no `font-variant: small-caps` survives.
-8. Verify no synthesised italic survives; Switzer has no italic and the
-   browser's oblique is not a substitute.
-9. Set the finding voice once — 800 weight, tight tracking, 32ch measure.
-10. Audit every figure title: does it state a finding or name a form? Rewrite
-    the ones that name a form.
-11. Write the finding for the seat histogram, which currently has none.
-12. Write the finding for the win-probability chart, which says "Win
-    probability".
-13. Write the finding for the ratings bar.
-14. Write the finding for the swingometer's map.
-15. Write the finding for each Florida panel.
-16. Set the prose voice once — Author, oldstyle figures, 1.62 line height,
-    64ch measure.
-17. Move the methodology body, the project deks and the landing lede onto it
-    and check none of them is still Switzer.
-18. Set the display figure's scale as a clamp with a floor that survives 320px.
-19. Check the display figure's tracking at its smallest and largest size; one
-    value will not serve both.
-20. Set the record's type size and line height so twenty rows fit a phone
-    screen without scrolling inside a scroll.
-21. Verify hyphenation and wrapping in the deks at narrow widths; add
-    `text-wrap: pretty` where it helps.
-22. Verify no orphan or widow in any heading at the five reference widths.
-23. Add `lang` to every document and to any element carrying another language.
-24. Record the three voices and their measures in this file.
+1. [x] Enumerated by measurement, not by reading the sheet: seventy-six
+   distinct combinations of face, size, weight, tracking and leading across
+   the nine tabs. Eleven of the sizes in use were not on the scale at all —
+   9, 9.5, 10, 12.5, 13.5, 14, 14.5, 16, 20, 22, 24.
+   Original step: Enumerate every text style in use and map each to label, finding or prose.
+2. [x] Down to fifty-seven, and every non-SVG element on every tab now sits
+   on the scale. The map's own labels are drawn by d3 and belong to
+   chapter 7.
+   Original step: Delete any style that is none of the three.
+3. [x] `assets/theme.css` §15. One rule, read by every label on the site.
+   Original step: Set the label voice once — bold, lowercase, no tracking — and have every
+    label read it.
+4. [x] Twenty-eight in `baseline.html`, four in the app, and one each in
+   `forecast.js`, `ratings.js` and `fl_redistricting.js`: the chart toggles,
+   the axis labels, the zoom control, the year label, the kickers, and every
+   map hint.
+   Original step: Find every remaining Title Case label and lowercase it; the map hints, the
+    chart toggles, the zoom controls.
+5. [x] Ten tracked labels found and untracked. At 10px, the 1.5px on the
+   worst of them was 15% of an em — not emphasis, damage.
+   Original step: Find every remaining letter-spaced label and remove the tracking.
+6. [x] Verified by computed style across all nine tabs: no `text-transform`
+   survives, including the ones `state-legs.js` injected at runtime.
+   Original step: Verify no `text-transform` survives anywhere, including inline styles in
+    the JS modules.
+7. [x] None.
+   Original step: Verify no `font-variant: small-caps` survives.
+8. [x] None: every element resolves `font-style: normal`.
+   Original step: Verify no synthesised italic survives; Switzer has no italic and the
+    browser's oblique is not a substitute.
+9. [x] `assets/theme.css` §15, with `text-wrap: balance` so a finding is
+   never left with a two-word last line.
+   Original step: Set the finding voice once — 800 weight, tight tracking, 32ch measure.
+10. [x] Audited: seven titles named a form. Each now states its finding, and
+    each is written from the same numbers the figure draws, so a title can
+    never disagree with the picture under it.
+    Original step: Audit every figure title: does it state a finding or name a form? Rewrite
+     the ones that name a form.
+11. [x] It had none at all. `buildSectionData` now carries the central 80%
+    interval in seats and the histogram is titled "Eight runs in ten land
+    Democrats between 47 and 55".
+    Original step: Write the finding for the seat histogram, which currently has none.
+12. [x] "Democrats hold the Senate in 54% of runs", and on the other toggle
+    "Democrats average 51 of 100, and need 51".
+    Original step: Write the finding for the win-probability chart, which says "Win
+     probability".
+13. [x] "Republicans are rated ahead in 17, Democrats in 15, and 3 are a
+    tossup", and on the face-off toggle "3 races are a tossup; the other 32
+    are not".
+    Original step: Write the finding for the ratings bar.
+14. [x] "Republicans take 51 of 100 on a national vote of D+8.0" — which is
+    the whole point of a swingometer, and it moves with the slider.
+    Original step: Write the finding for the swingometer's map.
+15. [x] "The old lines give Republicans 18 of 28" / "The new lines give
+    Republicans 20 of 28", recomputed on every slider move. They read "Old
+    map · Forecast" before, which the sub-line already said.
+    Original step: Write the finding for each Florida panel.
+16. [x] `assets/theme.css` §15.
+    Original step: Set the prose voice once — Author, oldstyle figures, 1.62 line height,
+     64ch measure.
+17. [x] The methodology body, lede, notes and rating descriptions, both
+    project card deks and the landing lede are all on it; none is Switzer.
+    Original step: Move the methodology body, the project deks and the landing lede onto it
+     and check none of them is still Switzer.
+18. [x] `--t-fs-8`, `clamp(2.2rem, 6vw, 3.9rem)`. The floor puts two
+    four-glyph numbers inside a 288px column with room to spare.
+    Original step: Set the display figure's scale as a clamp with a floor that survives 320px.
+19. [x] It does not: -.05em closes the counters at 35px. Two values, split at
+    the same 980 the sheet stacks at.
+    Original step: Check the display figure's tracking at its smallest and largest size; one
+     value will not serve both.
+20. [x] The row is three baseline units, so the well is eleven whole rows
+    rather than a round 260px that cut one in half. On a phone there is no
+    well: a scroll inside a scroll is a trap on a touch screen, and the
+    record flows into the page.
+    Original step: Set the record's type size and line height so twenty rows fit a phone
+     screen without scrolling inside a scroll.
+21. [x] `text-wrap: pretty` on the deks, the decode lines and the source
+    lines; verified at nine widths from 320 to 2560 with no block over its
+    measure.
+    Original step: Verify hyphenation and wrapping in the deks at narrow widths; add
+     `text-wrap: pretty` where it helps.
+22. [x] Checked at 390, 768, 1024, 1440 and 1920. What the check flags at
+    the narrow end are two-word titles in a one-word-wide column — "Virginia
+    / Governor" — which is a balanced wrap, not a widow. No heading is left
+    with a short line under a long one.
+    Original step: Verify no orphan or widow in any heading at the five reference widths.
+23. [x] `lang="en"` on all six hand-written documents and all nine
+    prerendered routes; no element carries another language.
+    Original step: Add `lang` to every document and to any element carrying another language.
+24. [x] Below, and in `assets/theme.css` §15.
+    Original step: Record the three voices and their measures in this file.
+
+### The three voices
+
+| voice | face | size | weight | tracking | measure | for |
+|---|---|---|---|---|---|---|
+| label | Switzer | `--t-fs-2`, `--t-fs-1` at its smallest | 700 | 0 | — | naming a thing |
+| finding | Switzer | `--t-fs-6`, `--t-fs-4` inside a figure | 800 | -.018em | the column | stating what was found |
+| prose | Author | `--t-fs-4` | 400 | 0 | 64ch | running to a paragraph |
+
+A label is never Title Case, never tracked, never a sentence. A finding is
+the only voice allowed to be a claim, and it is always written from the
+numbers the figure draws. Prose is the only serif and the only voice with
+oldstyle figures; every other number on the site is tabular.
+
+The display figure is not a voice. It is a datum, set in Switzer 900 on the
+`--t-fs-8` clamp, and it is the only type on the site allowed past
+`--t-fs-6`.
 
 ---
 
