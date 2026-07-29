@@ -1,1 +1,4 @@
 prerender/__pycache__/
+node_modules/
+.serve.pid
+.shots-scratch*/

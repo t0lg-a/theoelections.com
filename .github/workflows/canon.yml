@@ -23,8 +23,12 @@ jobs:
 
       - name: Install Playwright
         run: |
-          python3 -m pip install --quiet playwright
+          python3 -m pip install --quiet playwright pillow numpy
           python3 -m playwright install --with-deps chromium
+
+      # [10.5] axe-core is the ARIA-relationship half of the access pass.
+      - name: Install axe-core
+        run: npm install --no-save --no-audit --no-fund axe-core
 
       - name: The token contract
         run: node scripts/check-tokens.mjs
@@ -45,3 +49,11 @@ jobs:
 
       - name: The canon
         run: python3 scripts/audit.py
+
+      # [10.5][10.18] The tree a screen reader is handed, and axe over it.
+      - name: Access
+        run: python3 scripts/check_a11y.py
+
+      # [12.17][12.18] The visual regression pass, against docs/shots/.
+      - name: The reference set
+        run: python3 scripts/check_shots.py

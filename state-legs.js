@@ -902,10 +902,12 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
     const bar = document.createElement('div');
     bar.id = 'sldlViewToolbar';
     bar.innerHTML = `
+      <!-- [10.5] A tablist has to hold tabs. These were buttons, so a
+           screen reader was promised three tabs and handed none. -->
       <div class="chamberToggle" role="tablist" aria-label="State legislature view">
-        <button class="chamberBtn active" data-view="sldl" type="button">House</button>
-        <button class="chamberBtn"        data-view="sldu" type="button">Senate</button>
-        <button class="chamberBtn"        data-view="split" type="button">Split</button>
+        <button class="chamberBtn active" role="tab" aria-selected="true"  data-view="sldl"  type="button">House</button>
+        <button class="chamberBtn"        role="tab" aria-selected="false" data-view="sldu"  type="button">Senate</button>
+        <button class="chamberBtn"        role="tab" aria-selected="false" data-view="split" type="button">Split</button>
       </div>
       <label class="sldlSyncToggle" data-sldl-sync-wrap title="When on, zooming one map zooms the other. When off, each map can be zoomed to a different state independently.">
         <input type="checkbox" data-sldl-sync checked>
@@ -917,7 +919,12 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
       if (!btn) return;
       const next = btn.getAttribute('data-view');
       if (next === view) return;
-      bar.querySelectorAll('[data-view]').forEach(x => x.classList.toggle('active', x===btn));
+      // The mark and the state have to move together: a tab that looks
+      // selected and reports otherwise is worse than one that does neither.
+      bar.querySelectorAll('[data-view]').forEach(x => {
+        x.classList.toggle('active', x===btn);
+        x.setAttribute('aria-selected', x===btn ? 'true' : 'false');
+      });
       await setView(next);
     });
     // Wire the sync toggle. Default state = checked = synced.
@@ -1013,7 +1020,7 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
         </section>
         <div class="mapControlBar">
           <button class="zoomBtn active" data-sldl-zoom="us" type="button">US</button>
-          <select class="zoomSelect" data-sldl-zoom-select>
+          <select class="zoomSelect" aria-label="Zoom the map to a state" data-sldl-zoom-select>
             <option value="">State…</option>
           </select>
         </div>`;
@@ -1206,13 +1213,8 @@ function RF(r){ const p=_p(); return p ? p.ratingFill(r) : '#E9E8E0'; }
   }
   function moveTip(ev){
     const el = tipEl(); if (!el || el.style.display === 'none') return;
-    const pad = 14;
-    let x = ev.clientX + pad, y = ev.clientY + pad;
-    const rect = el.getBoundingClientRect();
-    if (x + rect.width  > window.innerWidth)  x = ev.clientX - rect.width  - pad;
-    if (y + rect.height > window.innerHeight) y = ev.clientY - rect.height - pad;
-    el.style.left = x + 'px';
-    el.style.top  = y + 'px';
+    // [7.23][9.22] The one placer: follows a cursor, docks where there is none.
+    window.__tip.place(el, ev, { pad: 14 });
   }
   function hideTip(){ const el = tipEl(); if (el) el.style.display = 'none'; }
 

@@ -38,13 +38,15 @@ body{
 .titlerow{display:flex;align-items:stretch;gap:14px;margin-bottom:14px;flex-wrap:wrap}
 .title-left{flex:1;min-width:280px;padding:14px 18px}
 .mark{font-weight:900;font-size:30px;letter-spacing:-0.04em;line-height:1}
-.mark .slash{color:#2563eb}
-.title-left .sub{font-size:11px;font-weight:800;letter-spacing:0;text-transform:none;color:#6b7280;margin-top:8px;font-family:var(--t-data)}
+/* [5.x] A separator inside a wordmark is a rule, not a datum: colour
+   appears only where a datum is, and this is punctuation. */
+.mark .slash{color:var(--t-faint)}
+.title-left .sub{font-size:11px;font-weight:800;letter-spacing:0;text-transform:none;color:var(--t-muted);margin-top:8px;font-family:var(--t-data)}
 
 .title-right{display:flex;align-items:center;gap:10px;padding:10px 14px}
-.stat{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-right:14px;border-right:1px solid #e5e7eb}
+.stat{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-right:14px;border-right:1px solid var(--t-hair)}
 .stat:last-of-type{border-right:none;padding-right:8px}
-.stat .lbl{font-size:9px;font-weight:800;letter-spacing:0;text-transform:none;color:#6b7280;font-family:var(--t-data)}
+.stat .lbl{font-size:9px;font-weight:800;letter-spacing:0;text-transform:none;color:var(--t-muted);font-family:var(--t-data)}
 .stat .val{font-size:20px;font-weight:900;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;font-family:var(--t-data)}
 
 .toggles{display:flex;gap:6px;margin-left:6px}
@@ -55,13 +57,16 @@ body{
 .controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 12px}
 .seg{display:flex}
 .seg button{background:var(--t-paper);color:var(--t-ink);border:1px solid var(--t-ink);border-right:none;padding:6px 12px;font-family:inherit;font-weight:700;font-size:12px;cursor:pointer;letter-spacing:-0.01em}
-.seg button:last-child{border-right:1px solid #111827}
+.seg button:last-child{border-right:1px solid var(--t-ink)}
 .seg button.active{background:var(--t-ink);color:var(--t-paper)}
-.seg button .n{opacity:0.55;font-variant-numeric:tabular-nums;margin-left:4px;font-weight:700}
+/* [11.14] A count beside a word is a quieter thing than the word, and
+   the system says quieter by stepping down the ink, never by alpha. */
+.seg button.active .n{color:var(--t-paper)}
+.seg button .n{color:var(--t-muted);font-variant-numeric:tabular-nums;margin-left:4px;font-weight:700}
 .sep{flex:1}
 .yearseg{display:flex;flex-wrap:wrap;gap:0}
 .yearseg button{background:var(--t-paper);color:var(--t-ink);border:1px solid var(--t-ink);border-right:none;padding:5px 9px;font-family:inherit;font-weight:800;font-size:12px;cursor:pointer;font-variant-numeric:tabular-nums;letter-spacing:-0.02em;line-height:1.2}
-.yearseg button:last-child{border-right:1px solid #111827}
+.yearseg button:last-child{border-right:1px solid var(--t-ink)}
 .yearseg button.active{background:var(--t-ink);color:var(--t-paper)}
 
 /* main grid */
@@ -72,32 +77,32 @@ svg.chart{width:100%;height:auto;display:block}
 svg.histo{width:100%;height:140px;display:block;margin-top:4px}
 
 /* sidebar */
-.panel h3{font-size:11px;font-weight:800;letter-spacing:0;text-transform:none;margin-bottom:8px;color:#6b7280;font-family:var(--t-data)}
+.panel h3{font-size:11px;font-weight:800;letter-spacing:0;text-transform:none;margin-bottom:8px;color:var(--t-muted);font-family:var(--t-data)}
 .leaderlist{display:flex;flex-direction:column;gap:4px}
 .leader{display:flex;align-items:center;gap:8px;font-size:12px;font-variant-numeric:tabular-nums;font-family:var(--t-data)}
-.leader .dot{width:8px;height:8px;border:1px solid #111827;flex-shrink:0}
+.leader .dot{width:8px;height:8px;border:1px solid var(--t-ink);flex-shrink:0}
 .leader .geo{font-weight:700;width:58px;flex-shrink:0}
-.leader .typ{font-size:9px;color:#6b7280;text-transform:none;letter-spacing:0;width:30px;flex-shrink:0;font-weight:700}
-.leader .bar{flex:1;height:10px;background:#f3f4f6;border:1px solid #111827;position:relative;overflow:hidden}
+.leader .typ{font-size:9px;color:var(--t-muted);text-transform:none;letter-spacing:0;width:30px;flex-shrink:0;font-weight:700}
+.leader .bar{flex:1;height:10px;background:var(--t-paper-2);border:1px solid var(--t-ink);position:relative;overflow:hidden}
 .leader .bar .fill{position:absolute;top:0;bottom:0;height:100%}
 .leader .val{font-weight:800;width:48px;text-align:right;flex-shrink:0;font-size:11px}
 
 /* tooltip */
 .tooltip{position:absolute;background:var(--t-paper);border:var(--t-w-contour) solid var(--t-ink);box-shadow:none;padding:10px 12px;font-size:var(--t-fs-1);pointer-events:none;z-index:20;min-width:180px;display:none;font-family:var(--t-data)}
 .tt-geo{font-weight:800;font-size:13px;margin-bottom:2px;letter-spacing:-0.01em}
-.tt-type{display:inline-block;font-size:9px;font-weight:800;letter-spacing:0;text-transform:none;padding:1px 5px;margin-left:6px;border:1px solid #111827;font-family:var(--t-data)}
+.tt-type{display:inline-block;font-size:9px;font-weight:800;letter-spacing:0;text-transform:none;padding:1px 5px;margin-left:6px;border:1px solid var(--t-ink);font-family:var(--t-data)}
 .tt-row{display:flex;justify-content:space-between;gap:14px;font-family:var(--t-data);font-variant-numeric:tabular-nums;font-size:11px;margin-top:3px}
-.tt-row .k{color:#6b7280;font-weight:600}
+.tt-row .k{color:var(--t-muted);font-weight:600}
 .tt-row .v{font-weight:800}
-.tt-adj{margin-top:6px;padding-top:6px;border-top:1px solid #111827;font-family:var(--t-data);font-size:12px;font-weight:800;display:flex;justify-content:space-between}
+.tt-adj{margin-top:6px;padding-top:6px;border-top:1px solid var(--t-ink);font-family:var(--t-data);font-size:12px;font-weight:800;display:flex;justify-content:space-between}
 
 /* legend */
-.legend{display:flex;gap:12px;align-items:center;font-size:10px;font-weight:700;letter-spacing:0;text-transform:none;color:#6b7280;font-family:var(--t-data);padding:8px 12px 4px}
-.legend .sw{width:10px;height:10px;border:1px solid #111827;display:inline-block;vertical-align:middle;margin-right:5px}
+.legend{display:flex;gap:12px;align-items:center;font-size:10px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--t-muted);font-family:var(--t-data);padding:8px 12px 4px}
+.legend .sw{width:10px;height:10px;border:1px solid var(--t-ink);display:inline-block;vertical-align:middle;margin-right:5px}
 
 /* formula */
-.formula{font-size:10px;color:#6b7280;line-height:1.6;font-family:var(--t-data);padding:10px 14px}
-.formula b{color:#111827;font-weight:800}
+.formula{font-size:10px;color:var(--t-muted);line-height:1.6;font-family:var(--t-data);padding:10px 14px}
+.formula b{color:var(--t-ink);font-weight:800}
 
 @media (max-width:900px){
   .grid{grid-template-columns:1fr}
@@ -122,9 +127,12 @@ svg.histo{width:100%;height:140px;display:block;margin-top:4px}
     </div>
   </header>
 
+  <!-- [10.18] A main landmark, so a screen reader can skip the masthead. -->
+  <main id="main" tabindex="-1">
+
   <div class="titlerow">
     <div class="box title-left">
-      <div class="mark">Nationalization<span class="slash"> / </span>Indicator</div>
+      <h1 class="mark">Nationalization<span class="slash"> / </span>Indicator</h1>
       <div class="sub" id="subline">Candidate over/underperformance vs presidential baseline</div>
     </div>
     <div class="box title-right">
@@ -146,9 +154,8 @@ svg.histo{width:100%;height:140px;display:block;margin-top:4px}
         <button id="btn2022" onclick="setYear('2022')">2022</button>
         <button id="btn2024" onclick="setYear('2024')">2024</button>
       </div>
-      <div class="toggles">
-        <button class="tbtn" id="themeBtn" onclick="toggleTheme()">☾</button>
-      </div>
+      <!-- [11.14] There is one ground switch on this site and it is in the
+           masthead above. This page carried a second one. -->
     </div>
   </div>
 
@@ -156,18 +163,28 @@ svg.histo{width:100%;height:140px;display:block;margin-top:4px}
     <div class="seg" id="filterBtns"></div>
     <div class="sep"></div>
     <div class="legend">
-      <span><span class="sw" style="background:#94A3B8"></span>House</span>
-      <span><span class="sw" style="background:#34D399"></span>Gov</span>
-      <span><span class="sw" style="background:#60A5FA"></span>Senate</span>
+      <span><span class="sw" style="background:var(--t-muted)"></span>house</span>
+      <span><span class="sw" style="background:var(--t-d3)"></span>governor</span>
+      <span><span class="sw" style="background:var(--t-d5)"></span>senate</span>
     </div>
   </div>
 
   <div class="grid">
     <div class="box chartbox">
+      <!-- [11.16] A figure is titled with what it found. This one had no
+           title at all, only a form name in the page's sub-line. -->
+      <h2 class="figTitle" id="chartTitle">How far each race ran from its presidential baseline</h2>
       <div class="chart-inner">
         <svg class="chart" id="chart" viewBox="0 0 820 540"></svg>
       </div>
       <div class="tooltip" id="tooltip"></div>
+      <div class="t-how"><b>how to read</b> · one hollow ring is one race; across is the margin it
+      actually won by, up is how far that sat from the same state's presidential margin. The thin
+      diagonal is where a race matched its baseline exactly, and the ink rule across the plot is
+      the median.</div>
+      <div class="t-src">Source: certified results for each race, against the presidential
+      margin in the same state — the same cycle for 2024, the prior presidential cycle for
+      midterms.</div>
     </div>
 
     <div>
@@ -189,9 +206,15 @@ svg.histo{width:100%;height:140px;display:block;margin-top:4px}
     </div>
   </div>
 
-  <div class="box formula">
+  </main>
+
+  <!-- [10.18] The figure redraws under the reader's hands when a year or a
+       chamber is chosen, and said nothing. -->
+  <div class="t-announce" id="announce" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="box formula">
     <b>Method.</b> <b>Y</b> = race D−R margin minus state's presidential D−R margin (same-year baseline for 2024; cross-year nationalized index for 2018/2022). <b>X</b> = raw race margin. Points above the 45° line = Democrat candidate overperformed the state's presidential lean; below = Republican overperformed. Pres baseline year: <span id="presYearLabel">2024</span>. <b>2024:</b> 35 Senate, 11 Gov, 393 contested House (excludes uncontested + jungle-primary D vs D races). Senate sources: Wikipedia certified results. House: The Downballot pres-by-CD baselines + michaelminn.net consolidated state SoS results.
-  </div>
+  </footer>
 
 </div>
 
@@ -218,10 +241,17 @@ const CL = {
   get dark(){ return this.now; },
   get now(){
     const t = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+    const px = (n, f) => parseFloat(t(n)) || f;
     return { House: t("--t-muted"), Governor: t("--t-d3"), Senate: t("--t-d5"),
              blue: t("--t-d5"), red: t("--t-d1"), ink: t("--t-ink"),
+             ink3: t("--t-ink3"),
              card: t("--t-paper"), faint: t("--t-faint"), rule: t("--t-hair"),
-             muted: t("--t-muted") };
+             muted: t("--t-muted"),
+             /* [11.15] The marks, from the same tokens the site's own
+                figures draw with. */
+             face: t("--t-data"),
+             ringR: px("--t-mark-r", 2.2), ringW: px("--t-mark-w", 1.2),
+             hairW: px("--t-w-hair", 1), ruleW: px("--t-w-rule", 1.5) };
   }
 };
 const NS = "http://www.w3.org/2000/svg";
@@ -255,49 +285,53 @@ function renderChart(){
   const col = C();
   const filtered = getFiltered();
 
-  // background
+  // The plot's ground. [11.15] The four quadrant washes that used to sit
+  // on it were data inks at alpha .05 to .15 — a tint of a series colour
+  // behind a mark of the same series colour, which is the one thing a
+  // divergent figure cannot afford. The two zero rules say which quadrant
+  // is which, and the corner labels name them.
   svg.appendChild(el("rect",{x:0,y:0,width:W,height:H,fill:col.card}));
-  // quadrant fills (subtle)
-  svg.appendChild(el("rect",{x:M.left,y:M.top,width:xS(0)-M.left,height:yS(0)-M.top,fill:col.red,opacity:dark?0.10:0.05}));
-  svg.appendChild(el("rect",{x:xS(0),y:M.top,width:M.left+iW-xS(0),height:yS(0)-M.top,fill:col.blue,opacity:dark?0.10:0.05}));
-  svg.appendChild(el("rect",{x:M.left,y:yS(0),width:xS(0)-M.left,height:M.top+iH-yS(0),fill:col.red,opacity:dark?0.15:0.09}));
-  svg.appendChild(el("rect",{x:xS(0),y:yS(0),width:M.left+iW-xS(0),height:M.top+iH-yS(0),fill:col.blue,opacity:dark?0.15:0.09}));
 
-  // quadrant micro-labels
-  const qf = {fill:col.ink,"font-size":9,"font-weight":800,"font-family":"ui-monospace,Menlo,monospace","letter-spacing":"0.08em",opacity:0.35};
-  const qtl = el("text",{x:xS(-98)+6,y:M.top+12,"text-anchor":"start",...qf}); qtl.textContent="R SEAT, D OVERPERFORMS"; svg.appendChild(qtl);
-  const qtr = el("text",{x:xS(98)-6,y:M.top+12,"text-anchor":"end",...qf}); qtr.textContent="D SEAT, D OVERPERFORMS"; svg.appendChild(qtr);
-  const qbl = el("text",{x:xS(-98)+6,y:M.top+iH-6,"text-anchor":"start",...qf}); qbl.textContent="R SEAT, R OVERPERFORMS"; svg.appendChild(qbl);
-  const qbr = el("text",{x:xS(98)-6,y:M.top+iH-6,"text-anchor":"end",...qf}); qbr.textContent="D SEAT, R OVERPERFORMS"; svg.appendChild(qbr);
+  // Quadrant labels, bold lowercase like every label on this site.
+  const qf = {fill:col.muted,"font-size":9,"font-weight":700,"font-family":col.face};
+  const qtl = el("text",{x:xS(-98)+6,y:M.top+12,"text-anchor":"start",...qf}); qtl.textContent="republican seat, democrat overperforms"; svg.appendChild(qtl);
+  const qtr = el("text",{x:xS(98)-6,y:M.top+12,"text-anchor":"end",...qf}); qtr.textContent="democratic seat, democrat overperforms"; svg.appendChild(qtr);
+  const qbl = el("text",{x:xS(-98)+6,y:M.top+iH-6,"text-anchor":"start",...qf}); qbl.textContent="republican seat, republican overperforms"; svg.appendChild(qbl);
+  const qbr = el("text",{x:xS(98)-6,y:M.top+iH-6,"text-anchor":"end",...qf}); qbr.textContent="democratic seat, republican overperforms"; svg.appendChild(qbr);
 
-  // grid lines
+  // [6.10] Grid lines are hairlines; the two zero lines are thresholds, so
+  // they are ink rules at full weight and full opacity.
   const xT = [-80,-60,-40,-20,0,20,40,60,80], yT = [-60,-40,-20,0,20,40,60];
-  xT.forEach(t => svg.appendChild(el("line",{x1:xS(t),x2:xS(t),y1:M.top,y2:M.top+iH,stroke:col.ink,"stroke-width":t===0?1:0.4,opacity:t===0?0.5:0.1})));
-  yT.forEach(t => svg.appendChild(el("line",{x1:M.left,x2:M.left+iW,y1:yS(t),y2:yS(t),stroke:col.ink,"stroke-width":t===0?1:0.4,opacity:t===0?0.5:0.1})));
+  xT.forEach(t => svg.appendChild(el("line",{x1:xS(t),x2:xS(t),y1:M.top,y2:M.top+iH,stroke:t===0?col.ink:col.rule,"stroke-width":t===0?col.ruleW:col.hairW})));
+  yT.forEach(t => svg.appendChild(el("line",{x1:M.left,x2:M.left+iW,y1:yS(t),y2:yS(t),stroke:t===0?col.ink:col.rule,"stroke-width":t===0?col.ruleW:col.hairW})));
 
-  // 45-degree line
-  svg.appendChild(el("line",{x1:xS(-70),y1:yS(-70),x2:xS(70),y2:yS(70),stroke:col.ink,"stroke-width":0.75,"stroke-dasharray":"4 3",opacity:0.4}));
-  const diagLab = el("text",{x:xS(60)+4,y:yS(60)-4,fill:col.ink,"font-size":9,"font-weight":700,"font-family":"ui-monospace,Menlo,monospace",opacity:0.55});
-  diagLab.textContent="match"; svg.appendChild(diagLab);
+  // [6.11] The 45-degree reference is not a threshold — it marks where a
+  // race matched its baseline — so it takes the annotation rule's form:
+  // solid, one pixel, at the caption's step.
+  svg.appendChild(el("line",{x1:xS(-70),y1:yS(-70),x2:xS(70),y2:yS(70),stroke:col.ink3,"stroke-width":col.hairW}));
+  // The label sits on the empty lower-left stretch of the diagonal; at the
+  // top-right end it lands on the quadrant's own label.
+  const diagLab = el("text",{x:xS(-42)+6,y:yS(-42)-5,fill:col.ink3,"font-size":9,"font-weight":700,"font-family":col.face});
+  diagLab.textContent="matched its baseline"; svg.appendChild(diagLab);
 
-  // median
+  // [6.10] A mean is an ink rule. It was a dashed coloured line at alpha
+  // .8, which read as a third data series.
   const vals = filtered.map(d=>d.a);
   const med = median(vals);
-  const medC = mc(med);
-  svg.appendChild(el("line",{x1:M.left,x2:M.left+iW,y1:yS(med),y2:yS(med),stroke:medC,"stroke-width":1.5,"stroke-dasharray":"6 3",opacity:0.8}));
-  const medTagW = 72;
-  svg.appendChild(el("rect",{x:M.left+iW-medTagW,y:yS(med)-8,width:medTagW,height:16,fill:col.card,stroke:medC,"stroke-width":1}));
-  const medTxt = el("text",{x:M.left+iW-medTagW/2,y:yS(med)+4,fill:medC,"font-size":10,"text-anchor":"middle","font-weight":800,"font-family":"ui-monospace,Menlo,monospace"});
-  medTxt.textContent = `MED ${fmt(med)}`; svg.appendChild(medTxt);
+  svg.appendChild(el("line",{x1:M.left,x2:M.left+iW,y1:yS(med),y2:yS(med),stroke:col.ink,"stroke-width":col.ruleW}));
+  const medTagW = 96;
+  svg.appendChild(el("rect",{x:M.left+iW-medTagW,y:yS(med)-9,width:medTagW,height:18,fill:col.card,stroke:col.ink,"stroke-width":col.hairW}));
+  const medTxt = el("text",{x:M.left+iW-medTagW/2,y:yS(med)+4,fill:col.ink,"font-size":10,"text-anchor":"middle","font-weight":700,"font-family":col.face});
+  medTxt.textContent = `median ${fmt(med)}`; svg.appendChild(medTxt);
 
   // axis ticks
-  xT.forEach(t => { const tx = el("text",{x:xS(t),y:M.top+iH+14,fill:col.faint,"font-size":9,"text-anchor":"middle","font-weight":700,"font-family":"ui-monospace,Menlo,monospace"}); tx.textContent = t>0?`D+${t}`:t<0?`R+${-t}`:"0"; svg.appendChild(tx); });
-  yT.forEach(t => { const tx = el("text",{x:M.left-6,y:yS(t)+3,fill:col.faint,"font-size":9,"text-anchor":"end","font-weight":700,"font-family":"ui-monospace,Menlo,monospace"}); tx.textContent = t>0?`D+${t}`:t<0?`R+${-t}`:"0"; svg.appendChild(tx); });
+  xT.forEach(t => { const tx = el("text",{x:xS(t),y:M.top+iH+14,fill:col.muted,"font-size":9,"text-anchor":"middle","font-weight":600,"font-family":col.face}); tx.textContent = t>0?`D+${t}`:t<0?`R+${-t}`:"0"; svg.appendChild(tx); });
+  yT.forEach(t => { const tx = el("text",{x:M.left-6,y:yS(t)+3,fill:col.muted,"font-size":9,"text-anchor":"end","font-weight":600,"font-family":col.face}); tx.textContent = t>0?`D+${t}`:t<0?`R+${-t}`:"0"; svg.appendChild(tx); });
 
-  const xLab = el("text",{x:M.left+iW/2,y:H-8,fill:col.muted,"font-size":10,"text-anchor":"middle","font-weight":800,"letter-spacing":"0.06em","font-family":"ui-monospace,Menlo,monospace"});
-  xLab.textContent = `RAW ${year} MARGIN →`; svg.appendChild(xLab);
-  const yLab = el("text",{x:12,y:M.top+iH/2,fill:col.muted,"font-size":10,"text-anchor":"middle","font-weight":800,"letter-spacing":"0.06em","font-family":"ui-monospace,Menlo,monospace",transform:`rotate(-90, 12, ${M.top+iH/2})`});
-  yLab.textContent = `↑ ADJUSTED MARGIN (×${presYear()} PRES RATIO)`; svg.appendChild(yLab);
+  const xLab = el("text",{x:M.left+iW/2,y:H-8,fill:col.muted,"font-size":10,"text-anchor":"middle","font-weight":700,"font-family":col.face});
+  xLab.textContent = `raw ${year} margin →`; svg.appendChild(xLab);
+  const yLab = el("text",{x:12,y:M.top+iH/2,fill:col.muted,"font-size":10,"text-anchor":"middle","font-weight":700,"font-family":col.face,transform:`rotate(-90, 12, ${M.top+iH/2})`});
+  yLab.textContent = `↑ margin against the ${presYear()} presidential baseline`; svg.appendChild(yLab);
 
   // outlier labels: top 4 most positive a and top 4 most negative a, plus any pinned
   const sorted = [...filtered].sort((a,b)=>b.a-a.a);
@@ -307,10 +341,15 @@ function renderChart(){
   if (pinned) toLabel.add(pinned);
 
   // points
+  // [6.12] One race, one hollow ring. They were filled discs at alpha .55
+  // and .9, and four hundred and thirty-nine of them overlapping made the
+  // middle of the plot a solid block whose colour was in no palette. A
+  // house race is drawn a step smaller than a statewide one, which is the
+  // same nesting rule the polls charts use for two series at once.
   filtered.forEach(d => {
     const isHouse = d.t==="House";
-    const r = isHouse ? 2.8 : 5;
-    const c = el("circle",{cx:xS(d.r),cy:yS(d.a),r:r,fill:gc(d.t),stroke:col.ink,"stroke-width":isHouse?0.5:1,opacity:isHouse?0.55:0.9,"data-g":d.g,"data-t":d.t,style:"cursor:pointer"});
+    const r = isHouse ? col.ringR : col.ringR + 2;
+    const c = el("circle",{cx:xS(d.r),cy:yS(d.a),r:r,fill:"none",stroke:gc(d.t),"stroke-width":col.ringW,"data-g":d.g,"data-t":d.t,style:"cursor:pointer"});
     c.addEventListener("mousemove", e => showTip(e,d,c));
     c.addEventListener("mouseleave", () => hideTip(c,d));
     c.addEventListener("click", e => { e.stopPropagation(); pinned = (pinned === d.g+"|"+d.t) ? null : (d.g+"|"+d.t); renderChart(); });
@@ -325,21 +364,23 @@ function renderChart(){
     // choose side based on position
     const right = cx < M.left + iW*0.7;
     const lx = cx + (right?8:-8), ly = cy + 3;
-    const txt = el("text",{x:lx,y:ly,fill:col.ink,"font-size":9.5,"font-weight":800,"font-family":"ui-monospace,Menlo,monospace","text-anchor":right?"start":"end"});
+    const txt = el("text",{x:lx,y:ly,fill:col.ink,"font-size":9.5,"font-weight":700,"font-family":col.face,"text-anchor":right?"start":"end"});
     txt.textContent = d.g;
     // halo / backdrop for readability
-    const halo = el("text",{x:lx,y:ly,fill:col.card,"font-size":9.5,"font-weight":800,"font-family":"ui-monospace,Menlo,monospace","text-anchor":right?"start":"end","stroke":col.card,"stroke-width":3});
+    const halo = el("text",{x:lx,y:ly,fill:col.card,"font-size":9.5,"font-weight":700,"font-family":col.face,"text-anchor":right?"start":"end","stroke":col.card,"stroke-width":3});
     halo.textContent = d.g;
     svg.appendChild(halo); svg.appendChild(txt);
   });
 
   // update header stats
+  // [5.6] The figure carries the colour; the display number is ink, and
+  // its own text already says which side it leans to.
   document.getElementById("statMed").textContent = fmt(med);
-  document.getElementById("statMed").style.color = medC;
   const mn = mean(vals);
   document.getElementById("statMean").textContent = fmt(mn);
-  document.getElementById("statMean").style.color = mc(mn);
   document.getElementById("statN").textContent = filtered.length;
+  setFinding(med, filtered.length);
+  announce(document.getElementById("chartTitle").textContent);
 
   renderHisto(vals);
   renderLeaders(filtered);
@@ -369,20 +410,22 @@ function renderHisto(vals){
     const y = pad.t + inH - h;
     const x = pad.l + i*bw;
     const fill = (b.lo+step/2) >= 0 ? col.blue : col.red;
-    svg.appendChild(el("rect",{x:x+0.5,y:y,width:bw-1,height:h,fill:fill,stroke:col.ink,"stroke-width":0.75,opacity:0.85}));
+    // No alpha on a data mark, and no contour: a bar's edge against the
+    // next bar is the gap, not an ink line.
+    svg.appendChild(el("rect",{x:x+0.5,y:y,width:bw-1,height:h,fill:fill}));
   });
   // zero line
   const zx = pad.l + ((0-bmin)/(bmax-bmin))*inW;
-  svg.appendChild(el("line",{x1:zx,y1:pad.t,x2:zx,y2:pad.t+inH,stroke:col.ink,"stroke-width":1}));
+  svg.appendChild(el("line",{x1:zx,y1:pad.t,x2:zx,y2:pad.t+inH,stroke:col.ink,"stroke-width":col.ruleW}));
   // axis ticks
   [-40,-20,0,20,40].forEach(t => {
     const x = pad.l + ((t-bmin)/(bmax-bmin))*inW;
-    svg.appendChild(el("line",{x1:x,y1:pad.t+inH,x2:x,y2:pad.t+inH+3,stroke:col.ink,"stroke-width":0.75}));
-    const tx = el("text",{x:x,y:pad.t+inH+12,"font-size":8,"text-anchor":"middle","font-weight":700,fill:col.faint,"font-family":"ui-monospace,Menlo,monospace"});
+    svg.appendChild(el("line",{x1:x,y1:pad.t+inH,x2:x,y2:pad.t+inH+3,stroke:col.rule,"stroke-width":col.hairW}));
+    const tx = el("text",{x:x,y:pad.t+inH+12,"font-size":8,"text-anchor":"middle","font-weight":600,fill:col.muted,"font-family":col.face});
     tx.textContent = t>0?`D+${t}`:t<0?`R+${-t}`:"0"; svg.appendChild(tx);
   });
   // baseline
-  svg.appendChild(el("line",{x1:pad.l,y1:pad.t+inH,x2:pad.l+inW,y2:pad.t+inH,stroke:col.ink,"stroke-width":1}));
+  svg.appendChild(el("line",{x1:pad.l,y1:pad.t+inH,x2:pad.l+inW,y2:pad.t+inH,stroke:col.ink,"stroke-width":col.hairW}));
 }
 
 function renderLeaders(filtered){
@@ -402,8 +445,11 @@ function renderLeaders(filtered){
     div.innerHTML = `<span class="dot" style="background:${gc(d.t)}"></span>`
       + `<span class="geo">${d.g}</span>`
       + `<span class="typ">${d.t.replace("Senate","Sen").replace("Governor","Gov").replace("House","")}</span>`
-      + `<span class="bar"><span class="fill" style="background:${mc(d.a)};width:${pct}%;${d.a<0?'right:0;':'left:0;'}opacity:0.85"></span></span>`
-      + `<span class="val" style="color:${mc(d.a)}">${fmt(d.a)}</span>`;
+      + `<span class="bar"><span class="fill" style="background:${mc(d.a)};width:${pct}%;${d.a<0?'right:0;':'left:0;'}"></span></span>`
+      // [5.6][10.5] The row already carries the colour twice — the series
+      // dot and the margin bar — so the number is ink. A data ink behind
+      // 11px bold on paper reads at 3.4:1.
+      + `<span class="val">${fmt(d.a)}</span>`;
     container.appendChild(div);
   }
   sortedD.forEach(d => row(d, topD));
@@ -422,7 +468,7 @@ function showTip(e, d, c){
     `<div class="tt-geo">${d.g}<span class="tt-type" style="color:${gc(d.t)}">${d.t}</span></div>`
   + `<div class="tt-row"><span class="k">${presYear()} Pres</span><span class="v" style="color:${mc(d.p)}">${fmt(d.p)}</span></div>`
   + `<div class="tt-row"><span class="k">Raw ${year}</span><span class="v" style="color:${mc(d.r)}">${fmt(d.r)}</span></div>`
-  + `<div class="tt-adj"><span>Adjusted</span><span style="color:${mc(d.a)}">${fmt(d.a)}</span></div>`;
+  + `<div class="tt-adj"><span>adjusted</span><span>${fmt(d.a)}</span></div>`;
   c.setAttribute("r", d.t==="House" ? 4.5 : 7);
   c.setAttribute("stroke-width", 1.5);
 }
@@ -465,17 +511,41 @@ function renderFilters(){
 }
 
 function setYear(y){ year = y; filter = "All"; pinned = null; renderFilters(); renderChart(); }
-function toggleTheme(){
-  dark = !dark;
-  document.documentElement.classList.toggle("dark", dark);
-  document.getElementById("themeBtn").textContent = dark ? "☀" : "☾";
-  renderChart();
+/* [11.16] The finding, computed from the figure's own data so the sentence
+   above it cannot go stale while the figure below it changes. */
+function setFinding(med, n){
+  const h = document.getElementById("chartTitle");
+  if (!h) return;
+  const scope = filter === "All" ? "race" :
+    filter === "Senate" ? "senate race" :
+    filter === "Governor" ? "governor's race" : "house race";
+  if (!n){ h.textContent = `No ${scope}s on record for ${year}`; return; }
+  if (Math.abs(med) < 0.5){
+    h.textContent = `The median ${year} ${scope} landed on its presidential baseline`;
+    return;
+  }
+  const who = med > 0 ? "Democrats" : "Republicans";
+  h.textContent = `The median ${year} ${scope} ran ${Math.abs(med).toFixed(1)} points ` +
+    `better for ${who} than its presidential baseline, across ${n} of them`;
+}
+
+/* [10.18] Say what the figure now shows, and only when it changed: a live
+   region that repeats itself is a live region people switch off. */
+let lastSaid = "";
+function announce(text){
+  const el = document.getElementById("announce");
+  if (!el || text === lastSaid) return;
+  lastSaid = text;
+  el.textContent = text;
 }
 
 // init
-document.getElementById("themeBtn").textContent = "☾";
 renderFilters();
 renderChart();
+
+/* [11.15] The ground switch repaints the figures. assets/ground.js calls
+   this after it moves the attribute. */
+window.__repaintFigures = function(){ try { renderChart(); } catch (e) {} };
 document.addEventListener("click", () => { if (pinned) { pinned = null; renderChart(); } });
 </script>
 </body>

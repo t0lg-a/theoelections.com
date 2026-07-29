@@ -10,14 +10,32 @@ this is a record to compare against, not a gate — a build box's timings are
 not a reader's.
 """
 
+import glob
 import json
+import os
 import pathlib
 import sys
 
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# The browser, wherever it is. This box keeps one at a pinned path; a
+# build box that ran `playwright install` keeps its own somewhere else, and
+# hardcoding this one meant every check in the harness failed on any
+# machine but this one. None hands the choice back to Playwright.
+def _chrome():
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    for pat in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")):
+        hits = sorted(glob.glob(pat))
+        if hits:
+            return hits[-1]
+    return None
+
+
+CHROME = _chrome()
 ORIGIN = "http://127.0.0.1:8899"
 ATLAS_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"
 ATLAS_LOCAL = ROOT / "prerender" / "fixtures" / "states-10m.json"

@@ -22,6 +22,8 @@ rasterises it. The card is templated below so its text lives in one place.
 Requires playwright and the repo's own fonts. Run from the repo root.
 """
 
+import glob
+import os
 import base64
 import pathlib
 import sys
@@ -29,7 +31,23 @@ import sys
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# The browser, wherever it is. This box keeps one at a pinned path; a
+# build box that ran `playwright install` keeps its own somewhere else, and
+# hardcoding this one meant every check in the harness failed on any
+# machine but this one. None hands the choice back to Playwright.
+def _chrome():
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    for pat in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")):
+        hits = sorted(glob.glob(pat))
+        if hits:
+            return hits[-1]
+    return None
+
+
+CHROME = _chrome()
 
 PAPER = "#E9E8E0"
 INK = "#16171A"

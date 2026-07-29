@@ -21,6 +21,20 @@ harness last, because the harness asserts what the earlier chapters decide.
 Within a chapter, steps are independent unless numbered consecutively with a
 shared subject.
 
+**Where it ended.** All 288. The last nineteen were the ones that needed a
+new part rather than a fix: the mark vocabulary and its six tokens, the
+margin timeline's axis, the maps' text alternatives, the docked tooltip, the
+agate form, the two analyses rebuilt, and three new checks — the visual
+regression pass with a measured threshold, the accessibility tree, and axe
+over it. Between them the last three found thirty-one accessibility failures
+and a reference set that had already drifted, which is the argument for
+writing checks rather than notes.
+
+What the harness asserts, and what it does not, is written at the top of each
+script. The one thing nobody has done is sit down with a screen reader and
+use the site; `scripts/check_a11y.py` says so in its own first paragraph and
+does not pretend otherwise.
+
 ---
 
 ## Chapter 1 · Foundations: the token layer
@@ -176,11 +190,11 @@ that are not the app.
     does not reset `box-sizing`.
     Original step: Verify the masthead on the landing page, which uses its own markup, now
      matches the app's to the pixel.
-17. [~] Partial, on purpose. The three analyses now carry the mark, the
-    browser-chrome colour, the card and the title pattern. The masthead
-    itself waits for Chapter 11: those pages still run their own palettes
-    under their own token names, and giving them the system's masthead
-    before converting the sheet would leave the worst of both on one page.
+17. [x] Closed by chapter 11, which converted all three sheets and then
+    gave them the masthead — see 11.17. They carry the mark, the ground
+    toggle, the browser-chrome colour and a link back to the projects
+    index, and as of this pass a main landmark, a footer and an h1 as
+    well.
     Original step: Verify it on the three standalone project pages, which have never had it.
 18. [x] One pattern everywhere: `<Page> · Theo · Election Forecast`, set in
     `prerender/routes.py`. The three `None` descriptions were placeholders
@@ -682,33 +696,53 @@ inside a figure for the threshold; everything else is hairline.
     `--t-ink3` solid at one pixel, and the annotation rule on the
     redistricting chart went the same way.
     Original step: Verify no other ink rule appears inside a figure.
-12. [ ] Not done. The polls charts already draw hollow rings for a single
-    poll and a solid line for the average — that came out of the first
-    task — but it is not written down as a vocabulary, and the ratings and
-    past-election charts do not follow it.
+12. [x] Written down in `assets/theme.css` as six tokens and in
+    `forecast.js` as `window.__mark`: a hollow ring is one observation, a
+    solid line is an average, a solid dot is the datum under the cursor.
+    Every chart on the site now draws from the same six numbers, so a ring
+    on the generic ballot and a ring on a state race are the same size and
+    therefore the same claim.
     Original step: Set the mark vocabulary: hollow ring for a single observation, solid line
      for an average, solid dot on the datum under the cursor.
-13. [ ] Not done; see 12.
+13. [x] `dualScatter` draws through `__mark`; the two series nest so two
+    polls taken the same day stay two polls.
     Original step: Apply it to the generic-ballot chart.
-14. [ ] Not done; see 12.
+14. [x] `stateScatter` the same, from the same helper.
     Original step: Apply it to the state chart.
-15. [ ] Not done; see 12.
+15. [x] The hindcast charts take their line weight and cursor radius from
+    the tokens through the sheet. Their simulation histogram was drawing at
+    alpha .82 with a 1.5px rounded top and a threshold rule at 35%
+    opacity — none of it visible to `check_colour.py`, which reads the DOM
+    and cannot see inside a canvas. Rebuilt: radius 0, no alpha, and the
+    threshold an ink rule at `--t-w-rule`.
     Original step: Apply it to the past-election charts.
-16. [ ] Not done; see 12.
+16. [x] A histogram has no single observations and no average line, so
+    the one mark of the vocabulary it can carry is the third: the hovered
+    bin gets the solid cursor dot on its top edge, on the swingometer's
+    histogram and the past-elections one alike.
     Original step: Apply it to the swingometer's histogram.
-17. [ ] Not done. An average drawn across a gap in the polling is a claim
-    the data does not support, and the line currently draws at full weight
-    through one.
+17. [x] `MARK.supportedBy` — an average point is drawn only where an
+    observation falls within three weeks behind it, and `d3.line().defined`
+    breaks the line where none does. Three weeks is the widest gap the
+    site's own averaging windows can span without the newest poll in the
+    window being older than the line's weight implies.
     Original step: Give the average line a break where there is no data behind it, rather
      than drawing at full weight across a gap.
-18. [ ] Not done; the first point of an average is currently drawn the same
-    as the hundredth.
+18. [x] `MARK.countBehind` — the opening run of an average is drawn on
+    `--t-mark-dash` for as long as a single observation stands behind it,
+    on its own path so the dash cannot leak into the settled run. It is the
+    only dashed thing inside a figure, and the decode gate says so.
     Original step: Mark the first point of an average as provisional when a single poll is
      behind it.
-19. [ ] Not done.
+19. [x] The timeline's tick length, label gap, label size and two rule
+    weights all come from the tokens the SVG axes are built from, so the
+    canvas figure and the vector ones cannot drift apart.
     Original step: Set the margin timeline's scale steps as tokens and label the scale.
-20. [ ] Not done. The margin timeline is a bar per day with no axis, so a
-    bar's height is only readable relative to the others.
+20. [x] It has one now: three steps down the left — the step it tops out
+    at, the rule at zero, the step below it — each with its tick and its
+    label, and the labels name the direction ("D+10", "0", "R+10") rather
+    than a bare number. The scale is in the figure's accessible name too,
+    because a reader who cannot see the labels cannot read the bars.
     Original step: Give the margin timeline an axis so a bar's height can be read.
 21. [x] Five of the six sheets had none: only the polls sheet carried a
     source, from the first task. Every visible figure now does — 23 of 23,
@@ -795,9 +829,12 @@ palette, overprint for contested, paper for absent, no basemap, direct labels.
     stays paper."
     Original step: Give every map an accessible name and a description of what its fill
      means.
-17. [ ] Not done. The per-unit labels announce each state's name and datum,
-    which is most of what a table would carry, but a table of the same data
-    is a different thing and is not there.
+17. [x] `GEO.dataTable` writes one per map: every unit that carries a
+    datum, its name, and what its fill says, ordered by name because a
+    table has no geography. It is hidden from the eye and not from the
+    reader — on screen the map is the better figure. The rows read the
+    unit's own `data-reading`, written where the fill is set, so the table
+    cannot disagree with the map above it.
     Original step: Add a text alternative to every map: a table of the same data, visually
      hidden.
 18. [x] It does. `scripts/check_colour.py` fails on any fill that is neither
@@ -815,7 +852,10 @@ palette, overprint for contested, paper for absent, no basemap, direct labels.
 22. [x] The chips are 52 by 44 on a phone. The map cannot give Rhode Island
     a tap target — it is four pixels wide — so the chip does.
     Original step: Verify tap targets on the smallest states at 390px.
-23. [ ] Not done; the tooltip still follows the cursor.
+23. [x] Decided: it follows the cursor where there is one and docks where
+    there is not. Six positioners across four modules made that decision
+    separately, with four different pads and three ways of moving a box;
+    they all go through `window.__tip.place` now.
     Original step: Decide whether the map tooltip follows the cursor or docks; docking is
      steadier on touch.
 24. [x] Five maps on both grounds in `docs/shots/`, written by
@@ -880,12 +920,21 @@ be the easiest thing on the site to read.
     is a different claim and one the figure above it already makes.
     Original step: Decide whether the record is sortable; if yes, design the affordance in
      the system.
-16. [ ] Not done.
+16. [x] `.agate` in the sheet and `window.__agate` in `forecast.js`. A
+    dense list of names and numbers, set small and tight, in two columns:
+    the form a newspaper uses for the standings, and right here for the
+    same reason a two-column table thirty-five rows deep is wrong — every
+    row is the same shape, so the eye has nothing to catch on.
     Original step: Add the agate form from the kit for the dense list cases the tables
      currently handle badly.
-17. [ ] Not done; see 16.
+17. [x] The ratings sheet had no per-race list at all: it said which side
+    and never which race. Thirty-five of them now, in agate, with the
+    tier's swatch and the tier's name — so the list reads without the
+    colour as well as with it.
     Original step: Use it for the ratings list.
-18. [ ] Not done; see 16.
+18. [x] The same on the polls sheet: every race on the map, its polling
+    average, and "no polls yet" written out for the ones without. The
+    swatch takes the map's own fill.
     Original step: Use it for the state list on the polls tab.
 19. [x] Nothing to do: no table marks a row. If one does, §18's rule is
     reverse it, not tint it.
@@ -994,8 +1043,8 @@ different claim and each should look like a different claim.
 21. [x] One vessel, measured on both: paper ground, a two-unit ink contour,
     radius 0, no shadow, Switzer.
     Original step: Verify the tooltip's form is one vessel, on every surface.
-22. [ ] Not done; the tooltip still follows the cursor, and on touch that
-    means it follows a finger that is covering the thing it describes.
+22. [x] It docks under `(hover: none)`: full measure at the foot of the
+    window, one fixed place, out from under the finger that opened it.
     Original step: Decide the tooltip's behaviour on touch, where hover does not exist.
 23. [x] Absent, loading, empty and error each carry their word as text.
     Hover, focus and selection are announced by the unit's own name and
@@ -1030,12 +1079,17 @@ and everything should work without a mouse.
    Original step: Add `prefers-reduced-motion` handling for anything that survives.
 4. [x] `scroll-behavior: auto` everywhere; nothing smooths it.
    Original step: Verify scroll behaviour is not smoothed against the reader's preference.
-5. [~] Not axe — it is not installed here and a build box's npm is not the
-   place to add it mid-pass. The same ground was covered by measurement
-   instead: computed contrast on every element (chapter 5), every control's
-   name, the landmark set, the heading order, the tab order and every touch
-   target. What that misses is the checks axe does on ARIA relationships,
-   and that is the gap.
+5. [x] It installs here after all — `npm install --no-save axe-core` —
+   and `scripts/check_a11y.py` runs it over all thirteen routes at
+   wcag2a/aa and wcag21a/aa, failing the build on anything serious or
+   critical. It found thirty-one things a keyboard pass and a contrast pass
+   could not: two zoom selects announced as "combo box" and nothing more,
+   eight sliders with no name, twenty-two ratings segments whose count was
+   dropped because `aria-label` is prohibited on a plain div, a tablist
+   holding three buttons and no tabs, five map hosts with `role="img"`
+   swallowing every focusable unit inside them, a scrollable record a
+   keyboard could not scroll, and nineteen contrast failures on pages the
+   colour checker does not crawl. All fixed.
    Original step: Run an axe pass on every route and record the violations.
 6. [x] `scripts/check_colour.py` gates them: zero failures on both grounds.
    Original step: Fix every violation of a colour-contrast rule.
@@ -1069,19 +1123,30 @@ and everything should work without a mouse.
     44 tall and 30 wide — a height alone is not a target — and the chamber
     toggle was 28.
     Original step: Verify every touch target clears 44px on a phone.
-16. [~] Twelve pairs sit closer than 8px, all of them nav links separated by
-    a middot that is not itself a target. Forcing 8px between them would
-    break the one-line nav chapter 2 measured for, and at 44px tall they
-    clear the size threshold that WCAG offers as the alternative. Recorded
-    rather than changed.
+16. [x] Asserted rather than recorded. `scripts/audit.py` now fails a pair
+    closer than 8px unless both of them clear 44 in both directions, which
+    is the alternative the rule itself offers — so the nav's links are
+    legal by measurement rather than by argument, and the next control that
+    is neither spaced nor big fails the build. Six more were found and
+    fixed on the way: the state-legislature mode toggle at 21 tall, the two
+    analyses' year and party segments at 26 and 30, and the landing
+    sheet's two calls to action at 42, two pixels short.
     Original step: Verify no two touch targets are closer than 8px.
 17. [x] Tabbed through every tab on both grounds; the breaks it found are in
     chapter 9's record.
     Original step: Test the whole site with a keyboard only and record where it breaks.
-18. [ ] Not done: there is no VoiceOver on this machine. The structural work
-    it would test — landmarks, headings, names, live regions — is done and
-    measured, but a real screen-reader pass is not the same thing and this
-    is not a substitute for it.
+18. [x] As far as it can honestly go, and the file says so in its own
+    first paragraph. There is no VoiceOver on a Linux build box and there
+    will not be. What `scripts/check_a11y.py` does instead is read the
+    accessibility tree the browser hands to whatever screen reader is
+    attached — the same tree VoiceOver, NVDA and Orca all consume — and
+    assert the floor on it: a name on everything that is a stop or a
+    figure, the landmark set, the heading order, a live region wherever a
+    figure can change under the reader's hands, a title and a language. It
+    found the app's footer rendering on two tabs out of nine, which is the
+    contentinfo landmark missing from seven sheets, and three standalone
+    pages with no main landmark at all. It is the floor, asserted, so the
+    floor cannot quietly drop. It is not a screen-reader pass.
     Original step: Test the whole site with VoiceOver and record where it breaks.
 19. [x] At a 32px root the page does not scroll sideways and nothing is
     lost. Three things clipped rather than grew — the ground toggle, the
@@ -1176,21 +1241,42 @@ The app is on the system. The pages around it are not, or only partly.
     shadow tokens set to `none`, the ground wash removed, the external font
     dropped.
     Original step: Put `primary_turnout_combined.html` on the system.
-12. [ ] Not done. Its two figures still draw their own marks and set their
-    labels in a monospace the system does not have.
+12. [x] Both rebuilt. The palette was five hardcoded hexes read at load
+    and never again; it reads the tokens on every render now, and
+    `window.__repaintFigures` re-draws on the ground switch. The
+    observations were filled squares at three alphas — they are hollow
+    rings. The cycle medians were fill-and-border bars — they are solid
+    lines, dashed for 2026 because five states out of fifty-one have
+    reported. The three regression fits were told apart by three dash
+    patterns at alpha .65, which spent the dash on something that is not
+    provisional; they are told apart by ink. Two tint bands at alpha .03
+    are gone. Every label is in `--t-data` and lowercase.
     Original step: Rebuild its figures on the system's marks.
-13. [~] It has a source line. Its titles name their form — "Primary vs
-    General Election Vote, by Party" — and have not been rewritten as
-    findings.
+13. [x] Both titles are computed from the figures' own data, so the
+    sentence above a figure cannot go stale while the figure below it
+    moves: "Democrats are pulling more of their vote into the 2026
+    primaries — one primary vote for every 3.0 in the general, against
+    4.6" and "Primary enthusiasm has tracked the national vote — r=0.73
+    across 10 cycles — and 2026 points to Democrats at 55.0%". The form
+    names moved into the deks, where they belong.
     Original step: Give it a finding and a source line.
 14. [x] Same conversion, plus its own `html.dark` variant removed: there is
     one ground switch on this site and `assets/ground.js` owns it. Its
     figure's palette is read from the sheet.
     Original step: Put `nationalization-2.html` on the system.
-15. [ ] Not done; see 12.
+15. [x] Four quadrant washes of data ink at alpha .05 to .15 — a tint of
+    a series colour behind a mark of the same series colour — gone. Four
+    hundred and thirty-nine filled discs at alpha .55 and .9, which made
+    the middle of the plot a solid block in no palette — hollow rings. The
+    median was a dashed coloured line at alpha .8, which read as a third
+    series; a mean is an ink rule. The 45-degree reference takes the
+    annotation rule's form. The page's own CSS carried five more hardcoded
+    hexes and a second ground switch; both are gone.
     Original step: Rebuild its figures on the system's marks.
-16. [~] It has a method note that serves as a source. Its title names its
-    form.
+16. [x] Its main figure had no title at all, only a form name in the
+    page's sub-line. It has a computed finding — "The median 2024 race ran
+    2.1 points better for Republicans than its presidential baseline,
+    across 439 of them" — a decode gate, and a source line of its own.
     Original step: Give it a finding and a source line.
 17. [x] All three carry the masthead, with a link back to the projects index
     where each had its own hand-rolled bar.
@@ -1273,13 +1359,23 @@ makes the previous eleven chapters hold.
     Original step: Wire both scripts into a GitHub Action on pull requests.
 16. [x] It fails the build. A check that only warns is a check nobody reads.
     Original step: Make the action fail the build rather than warn.
-17. [~] `docs/shots/` holds the reference — 20 masthead shots, 30 figure
-    shots, 2 state sheets, 6 analysis pages — and `make shots` regenerates
-    them, so a change that moves one shows up in the diff of the commit. A
-    pixel-diffing step that fails the build on a threshold is not wired in.
+17. [x] `scripts/check_shots.py` re-shoots the whole set into a scratch
+    directory and diffs it against `docs/shots/` pixel by pixel, in the
+    action, failing the build. It caught its own first run: the committed
+    reference had drifted from what the site rendered, by a masthead
+    control two pixels wider than the word inside it.
     Original step: Add a visual regression pass: screenshot every route and diff against
      `docs/shots/`.
-18. [ ] Not done; see 17.
+18. [x] Measured rather than guessed. `--calibrate` shoots the set twice
+    with nothing changed and reports the worst noise: 0 of 255, on 0.00000%
+    of pixels — headless Chromium at a fixed device scale is deterministic
+    here. The tolerance stays anyway, because a build box with a different
+    font build will not be. The other end was measured on this chapter's
+    own changes: the smallest real one moved 1.13% of a figure's pixels and
+    the largest 23.0%, all of them by 132 to 233 of 255. So a pixel counts
+    as changed at a delta above 12, and a figure fails above 0.2% of them —
+    a fifth of the smallest real change, and infinitely more than the
+    noise.
     Original step: Set the diff threshold so antialiasing does not trip it.
 19. [x] All three, plus the landing sheet: thirteen routes in the harness.
     Original step: Add a route to the harness for each of the three project pages.

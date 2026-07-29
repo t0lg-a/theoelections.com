@@ -252,7 +252,7 @@ function renderApproval(ui){
 
   const strict=!!GB_SRC.filterStrict;
   const polls=APP_RAW.filter(p=>isAllowedPollster(p.pollster,strict));
-  drawMarginTimeline(ui.hist, APP_SERIES.map(d=>({date:d.date,margin:d.a-d.b})), INK(), MUTED());
+  drawMarginTimeline(ui.hist, APP_SERIES.map(d=>({date:d.date,margin:d.a-d.b})), INK(), MUTED(), "app", "dis");
   dualScatter(ui.chart, polls.map(p=>({date:p.date,a:p.approve,b:p.disapprove})), APP_SERIES, "app","dis",INK(),MUTED());
   pollTable(ui.list, polls.sort((a,b)=>b.date-a.date).slice(0,100).map(p=>({date:p.date,ps:p.pollster,a:p.approve,b:p.disapprove})),"app","dis",INK(),MUTED());
 }
@@ -284,11 +284,19 @@ function greenPill(ui){
   const s=ui.dBig?.closest(".seatsSide"); if(s)s.style.color=APPROVE;
 }
 
-/* ======== MARGIN HISTOGRAM ======== */
-function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
+/* ======== THE MARGIN TIMELINE ======== */
+/* [6.19][6.20] A bar per day, off the even-vote rule.
+
+   It had no axis and no scale: a bar's height could only be read against
+   the bars beside it, so a series that was steadily D+8 looked exactly like
+   one that was steadily D+2. Now the vessel carries its scale on the left —
+   the step it tops out at, the rule at zero, and the step below it — and
+   every quantity in the furniture comes from the tokens the SVG axes are
+   built from, so the two cannot drift apart. */
+function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow,lAbove,lBelow){
   // rawPolls = [{date, margin}]. Group by day, average, then draw bar per day.
   if(!canvas)return;
-  const W=canvas.clientWidth||300, H=canvas.clientHeight||36;
+  const W=canvas.clientWidth||300, H=canvas.clientHeight||48;
   const dpr=devicePixelRatio||1;
   canvas.width=Math.round(W*dpr); canvas.height=Math.round(H*dpr);
   const ctx=canvas.getContext("2d");
@@ -308,7 +316,6 @@ function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
 
   const bl=cAbove||DEM_INK();
   const rd=cBelow||REP_INK();
-  const mid=H/2;
   // Extend to today
   const minD=days[0].date;
   const today=new Date(); today.setHours(0,0,0,0);
@@ -320,22 +327,45 @@ function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
   const peak=Math.max(...days.map(d=>Math.abs(d.margin)));
   const SCALES=[5,10,15,20,30,40];
   const maxAbs=SCALES.find(v=>peak<=v*0.92)||Math.ceil(peak/10)*10;
-  // Quarter-scale hairlines, so the height of a bar can be read off the vessel.
-  ctx.strokeStyle=HAIR(); ctx.lineWidth=1;
-  for(const frac of [0.5]){
-    for(const dir of [-1,1]){
-      const yy=Math.round(mid-dir*frac*(mid-2))+0.5;
-      ctx.beginPath(); ctx.moveTo(0,yy); ctx.lineTo(W,yy); ctx.stroke();
-    }
+
+  // [6.19] The scale's furniture: a tick's length, the gap to its label, the
+  // label's size and the two rule weights, all read from the tokens.
+  const AX=window.__axis;
+  const TICK=AX.tokenPx("--t-tick",5), GAP=AX.tokenPx("--t-tick-gap",4);
+  const FS=AX.tokenPx("--t-fs-1",11);
+  const HAIRW=AX.tokenPx("--t-w-hair",1), RULEW=AX.tokenPx("--t-w-rule",1.5);
+  const FAM=getComputedStyle(document.documentElement)
+    .getPropertyValue("--t-data").trim()||FONT;
+  ctx.font="600 "+FS+"px "+FAM;
+
+  // The scale is labelled in the direction it means, not in bare numbers: a
+  // bar reaching the top step is a ten point lead for somebody in particular.
+  const above=lAbove||"D", below=lBelow||"R";
+  const topLbl=above+"+"+maxAbs, botLbl=below+"+"+maxAbs;
+  const gutter=Math.ceil(Math.max(ctx.measureText(topLbl).width,
+                                  ctx.measureText(botLbl).width,
+                                  ctx.measureText("0").width))+TICK+GAP;
+  const pad=Math.ceil(FS/2)+1;              // room for the outer labels
+  const plotX=gutter, plotW=Math.max(10,W-gutter);
+  const mid=Math.round(H/2);
+  const half=Math.max(4,mid-pad);           // pixels per maxAbs points
+
+  // The half step, drawn across the vessel, so the eye has something to
+  // measure a bar against between the rule and the top of the scale.
+  ctx.strokeStyle=HAIR(); ctx.lineWidth=HAIRW;
+  for(const dir of [-1,1]){
+    const yy=Math.round(mid+dir*half*0.5)+0.5;
+    ctx.beginPath(); ctx.moveTo(plotX,yy); ctx.lineTo(W,yy); ctx.stroke();
   }
+
   // Each bar stretches from its date to the next day's date (no gaps)
   for(let i=0;i<days.length;i++){
     const d=days[i];
-    const x=((d.date-minD)/span)*W;
+    const x=plotX+((d.date-minD)/span)*plotW;
     const nextD=i<days.length-1?days[i+1].date:maxD;
-    const x2=((nextD-minD)/span)*W;
+    const x2=plotX+((nextD-minD)/span)*plotW;
     const bw=Math.max(2, x2-x);
-    const barH=Math.min(1,Math.abs(d.margin)/maxAbs)*(mid-2);
+    const barH=Math.min(1,Math.abs(d.margin)/maxAbs)*half;
     ctx.fillStyle=d.margin>=0?bl:rd;
     if(d.margin>=0){
       ctx.fillRect(x,mid-barH,bw-0.5,barH);
@@ -343,10 +373,30 @@ function drawMarginTimeline(canvas,rawPolls,cAbove,cBelow){
       ctx.fillRect(x,mid,bw-0.5,barH);
     }
   }
-  // The zero rule sits on top of the bars, never under them.
-  ctx.strokeStyle=INK(); ctx.lineWidth=1;
-  ctx.beginPath(); ctx.moveTo(0,Math.round(mid)+0.5); ctx.lineTo(W,Math.round(mid)+0.5); ctx.stroke();
+
+  // [6.20] The axis: three steps, each with its tick and its label.
+  ctx.textAlign="right"; ctx.textBaseline="middle";
+  ctx.strokeStyle=HAIR(); ctx.lineWidth=HAIRW;
+  ctx.fillStyle=MUTED();
+  for(const [yy,text] of [[mid-half,topLbl],[mid,"0"],[mid+half,botLbl]]){
+    const y=Math.round(yy)+0.5;
+    ctx.beginPath(); ctx.moveTo(plotX-TICK,y); ctx.lineTo(plotX,y); ctx.stroke();
+    ctx.fillText(text,plotX-TICK-GAP,yy);
+  }
+
+  // The zero rule sits on top of the bars, never under them, and it is an
+  // ink rule at the system's rule weight like every other threshold.
+  ctx.strokeStyle=INK(); ctx.lineWidth=RULEW;
+  ctx.beginPath(); ctx.moveTo(plotX,Math.round(mid)+0.5); ctx.lineTo(W,Math.round(mid)+0.5); ctx.stroke();
+
   canvas.setAttribute("data-scale",String(maxAbs));
+  // The figure's accessible name carries the scale too: a reader who cannot
+  // see the labels cannot read the bars without it.
+  const host=canvas.closest('[data-polls-host="hist"]');
+  const name="The daily margin off the even-vote rule, on a scale of "+
+    topLbl+" to "+botLbl;
+  canvas.setAttribute("aria-label",name);
+  if(host) host.setAttribute("aria-label",name);
 }
 
 /* ======== DUAL SCATTER ======== */
@@ -370,19 +420,27 @@ function dualScatter(el,polls,avg,lA,lB,cA,cB){
     svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
     svg.append("text").attr("class","thrLabel").attr("x",mg.l+iw).attr("y",y(50)-5).attr("text-anchor","end").text("50");
   }
-  // Hollow marks are the individual polls, the solid line is the average, so a
-  // pile-up of surveys never reads as a tint of the series colour.
-  svg.selectAll(".dA").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",2.6).attr("fill","none").attr("stroke",blue).attr("stroke-width",1.2);
-  svg.selectAll(".dB").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",2.6).attr("fill","none").attr("stroke",red).attr("stroke-width",1.2);
+  // [6.12][6.13] The mark vocabulary, from window.__mark: a hollow ring is
+  // one poll, the solid line is the average of them. A pile-up of surveys
+  // never reads as a tint of the series colour, and the two series nest so
+  // that two polls taken the same day stay two polls.
+  const MK=window.__mark;
+  MK.rings(svg,polls,{x:d=>x(d.date),y:d=>y(d.a),ink:blue,series:0,of:2});
+  MK.rings(svg,polls,{x:d=>x(d.date),y:d=>y(d.b),ink:red,series:1,of:2});
   if(avg.length>1){
-    const la=d3.line().x(d=>x(d.date)).y(d=>y(d.a)).curve(d3.curveMonotoneX);
-    const lb=d3.line().x(d=>x(d.date)).y(d=>y(d.b)).curve(d3.curveMonotoneX);
-    svg.append("path").datum(avg).attr("d",la).attr("fill","none").attr("stroke",blue).attr("stroke-width",2.5).attr("stroke-linejoin","round").attr("stroke-linecap","round");
-    svg.append("path").datum(avg).attr("d",lb).attr("fill","none").attr("stroke",red).attr("stroke-width",2.5).attr("stroke-linejoin","round").attr("stroke-linecap","round");
+    // [6.17][6.18] The average is computed per day and carries the last
+    // polls forward, so a month without polling would otherwise draw at
+    // full weight. It breaks there, and opens on the dash while a single
+    // poll is behind it.
+    const dates=polls.map(d=>d.date);
+    const sup=MK.supportedBy(dates), behind=MK.countBehind(dates);
+    const supported=d=>sup(d.date), provisional=d=>behind(d.date)<2;
+    MK.average(svg,avg,{x:d=>x(d.date),y:d=>y(d.a),ink:blue,supported,provisional});
+    MK.average(svg,avg,{x:d=>x(d.date),y:d=>y(d.b),ink:red,supported,provisional});
   }
   // hover
-  const dot=svg.append("circle").attr("r",3.5).attr("fill",blue).style("opacity",0);
-  const dot2=svg.append("circle").attr("r",3.5).attr("fill",red).style("opacity",0);
+  const dot=MK.cursor(svg,blue);
+  const dot2=MK.cursor(svg,red);
   const bis=d3.bisector(d=>d.date).left;
   const hd=avg.length>1?avg:polls;
   svg.append("rect").attr("x",mg.l).attr("y",mg.t).attr("width",iw).attr("height",ih).style("fill","transparent").style("cursor","crosshair")
@@ -554,14 +612,60 @@ function recolorMap(mk){
   m.g.selectAll("path.state").each(function(){
     const st=this.getAttribute("data-st");
     // Absent is absent, not zero: an unpolled state keeps the paper ground.
-    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=PAPER();return;}
+    // [7.17] And says so, in the map's text alternative.
+    if(!st||!DATA[mk]?.ratios[st]){this.style.fill=PAPER();this.setAttribute("data-reading","no race this year");return;}
     const pp=STATE_POLL_SRC.byModeState?.[mk]?.[st];
-    if(!pp||!pp.length){this.style.fill=PAPER();return;}
+    if(!pp||!pp.length){this.style.fill=PAPER();this.setAttribute("data-reading","no polls yet");return;}
     const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
     let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
-    this.style.fill=pollsFill((sR/w)-(sD/w));
+    const mg=(sR/w)-(sD/w);
+    this.style.fill=pollsFill(mg);
+    this.setAttribute("data-reading",
+      window.__geo.marginReading(mg)+" from "+pp.length+" poll"+(pp.length===1?"":"s"));
   });
   paintLabelContrast(mk);
+  renderStateAgate(mk);
+}
+
+/* [8.18] The state list, in agate.
+
+   The map holds the shape of the contest; only a list holds the numbers,
+   and until now the only way to read a state's average was to hover it. A
+   thirty-five row table would have run past the map it belongs to, so this
+   is the dense-list form: swatch, state, margin, two columns of them. The
+   swatch takes the map's own fill, so the list and the map cannot disagree,
+   and the margin is written out in words beside it so the list reads
+   without the colour as well as with it. */
+function renderStateAgate(mk){
+  const host=document.querySelector(
+    `.agateHost[data-polls-host="agate"][data-mode="${mk}"]`);
+  if(!host||typeof window.__agate!=="function")return;
+  const src=STATE_POLL_SRC.byModeState?.[mk]||{};
+  const rows=[];
+  for(const st of Object.keys(DATA[mk]?.ratios||{})){
+    const pp=src[st];
+    const name=USPS_TO_NAME[st]||st;
+    if(!pp||!pp.length){
+      // Absent is absent, not zero: an unpolled race is listed as unpolled
+      // rather than left out, because leaving it out is a different claim.
+      rows.push({name,value:"no polls yet",ink:null,lean:"none"});
+      continue;
+    }
+    const w=Math.min(STATE_POLL_SRC.window||6,pp.length);
+    let sD=0,sR=0;for(let i=pp.length-w;i<pp.length;i++){sD+=pp[i].D;sR+=pp[i].R;}
+    const m=(sR/w)-(sD/w);
+    rows.push({
+      name,
+      value:window.__geo.marginReading(m),
+      ink:pollsFill(m),
+      lean:!isFinite(m)?"none":Math.abs(m)<2?"contested":(m>0?"r":"d"),
+    });
+  }
+  rows.sort((a,b)=>a.name.localeCompare(b.name));
+  window.__agate(host,rows,{
+    caption:"Every race on the map above and where its polling average stands",
+    empty:"no polls yet",
+  });
 }
 
 /* ---- State Selection ---- */
@@ -640,19 +744,25 @@ function stateScatter(mk,usps){
   svg.append("g").attr("class","oddsAxis").attr("transform",`translate(${mg.l},0)`).call(window.__axis.value(y, ih, d=>`${d}%`));
   if(y.domain()[0]<=50&&y.domain()[1]>=50) svg.append("line").attr("x1",mg.l).attr("x2",mg.l+iw).attr("y1",y(50)).attr("y2",y(50)).attr("class","seatMajLine");
   const blue=DEM_INK(),red=REP_INK();
-  // Hollow rings at unequal radii, no alpha: two coincident polls nest instead
-  // of blending into a colour the palette does not contain.
-  svg.selectAll(".dD").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.a)).attr("r",3.4).attr("fill","none").attr("stroke",blue).attr("stroke-width",1.2);
-  svg.selectAll(".dR").data(polls).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.b)).attr("r",2.2).attr("fill","none").attr("stroke",red).attr("stroke-width",1.2);
+  // [6.12][6.14] The same vocabulary the generic ballot draws in, so a ring
+  // on this chart is the same claim as a ring on that one. The two series
+  // nest at unequal radii, no alpha: two coincident polls stay two polls
+  // instead of blending into a colour the palette does not contain.
+  const MK=window.__mark;
+  MK.rings(svg,polls,{x:d=>x(d.date),y:d=>y(d.a),ink:blue,series:0,of:2});
+  MK.rings(svg,polls,{x:d=>x(d.date),y:d=>y(d.b),ink:red,series:1,of:2});
   if(polls.length>=3){
     const wn=Math.min(6,polls.length),ag=[];
-    for(let i=0;i<polls.length;i++){const lo=Math.max(0,i-wn+1);let sA=0,sB=0;for(let j=lo;j<=i;j++){sA+=polls[j].a;sB+=polls[j].b;}const c=i-lo+1;ag.push({date:polls[i].date,a:sA/c,b:sB/c});}
-    const la=d3.line().x(d=>x(d.date)).y(d=>y(d.a)).curve(d3.curveMonotoneX);
-    const lb=d3.line().x(d=>x(d.date)).y(d=>y(d.b)).curve(d3.curveMonotoneX);
-    svg.append("path").datum(ag).attr("d",la).attr("fill","none").attr("stroke",blue).attr("stroke-width",2.5).attr("stroke-linejoin","round").attr("stroke-linecap","round");
-    svg.append("path").datum(ag).attr("d",lb).attr("fill","none").attr("stroke",red).attr("stroke-width",2.5).attr("stroke-linejoin","round").attr("stroke-linecap","round");
+    for(let i=0;i<polls.length;i++){const lo=Math.max(0,i-wn+1);let sA=0,sB=0;for(let j=lo;j<=i;j++){sA+=polls[j].a;sB+=polls[j].b;}const c=i-lo+1;ag.push({date:polls[i].date,a:sA/c,b:sB/c,n:c});}
+    // [6.17][6.18] State polling is sparse: a race polled in March and again
+    // in September is two observations, not a six-month trend.
+    const dates=polls.map(d=>d.date);
+    const sup=MK.supportedBy(dates);
+    const supported=d=>sup(d.date), provisional=d=>d.n<2;
+    MK.average(svg,ag,{x:d=>x(d.date),y:d=>y(d.a),ink:blue,supported,provisional});
+    MK.average(svg,ag,{x:d=>x(d.date),y:d=>y(d.b),ink:red,supported,provisional});
   }
-  const dot=svg.append("circle").attr("r",4).attr("fill",blue).style("opacity",0);
+  const dot=MK.cursor(svg,blue);
   const bis=d3.bisector(d=>d.date).left;
   svg.append("rect").attr("x",mg.l).attr("y",mg.t).attr("width",iw).attr("height",ih).style("fill","transparent").style("cursor","crosshair")
     .on("mousemove",ev=>{if(!polls.length)return;const[mx]=d3.pointer(ev);const xd=x.invert(mx);const i=clamp(bis(polls,xd),1,polls.length-1);const a=polls[i-1],b=polls[i];const d=(xd-a.date)>(b.date-xd)?b:a;dot.attr("cx",x(d.date)).attr("cy",y(d.a)).style("opacity",1);showSimTip(ev,`<div class="stDate">${ds(d.date)}${d.ps?` · ${escapeHtml(d.ps)}${d.partisan?` (${escapeHtml(d.partisan)})`:""}`:""}</div><div class="stRow"><span class="stDot" style="background:${blue}"></span><span class="stLbl">D</span><span class="stVal">${d.a.toFixed(1)}%</span></div><div class="stRow"><span class="stDot" style="background:${red}"></span><span class="stLbl">R</span><span class="stVal">${d.b.toFixed(1)}%</span></div>`);})

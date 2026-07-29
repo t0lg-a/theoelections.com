@@ -45,6 +45,8 @@ const GROUND_INDEPENDENT = new Set([
   "--t-d1", "--t-d2", "--t-d3", "--t-d4", "--t-d5", "--t-d6",
   "--t-data", "--t-prose", "--t-control-h",
   "--t-sheet", "--t-gutter", "--t-baseline", "--t-tick", "--t-tick-gap",
+  "--t-mark-r", "--t-mark-nest", "--t-mark-w", "--t-mark-avg",
+  "--t-mark-cursor", "--t-mark-dash",
   "--t-w-hair", "--t-w-rule", "--t-w-contour", "--t-w-slab",
   "--t-fs-1", "--t-fs-2", "--t-fs-3", "--t-fs-4",
   "--t-fs-5", "--t-fs-6", "--t-fs-7", "--t-fs-8",

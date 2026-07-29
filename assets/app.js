@@ -263,10 +263,10 @@ function USMap(_ref) {
   }, "\u2190 US"), /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    role: "img",
-    "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-mode": mode,
-    role: "img",
+    // A map holds focusable units, so it cannot take role="img": that role
+    // has presentational children and swallows every one of them.
+    role: "figure",
     "aria-label": "A map of " + (mode === "house" ? "congressional districts" : "states")
       + ". Each unit is filled by the party it leans to and darkened with the margin;"
       + " a race inside two points is overprinted, and a unit with no race stays paper.",
@@ -386,6 +386,9 @@ function CongressZoomRow(_ref4) {
     }
   }, "US"), /*#__PURE__*/React.createElement("select", {
     className: "zoomSelect",
+    // [10.5] A select whose only label is its first option is a select a
+    // screen reader announces as "combo box", and nothing else.
+    "aria-label": "Zoom the map to a state",
     defaultValue: "",
     onChange: function onChange(e) {
       var v = e.target.value;
@@ -412,6 +415,7 @@ function CongressZoomRow(_ref4) {
     }, m.label);
   }), /*#__PURE__*/React.createElement("select", {
     className: "zoomSelect zoomSelectMore",
+    "aria-label": "Zoom the map to one of the remaining states",
     defaultValue: "",
     onChange: function onChange(e) {
       var v = e.target.value;
@@ -565,7 +569,7 @@ function RatingMapHost(_ref6) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    role: "img",
+    role: "figure",
     "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-mode": mode,
     "data-rtg-host": "map",
@@ -642,6 +646,9 @@ function RatingsCongressZoomRow(_ref8) {
     }
   }, "US"), /*#__PURE__*/React.createElement("select", {
     className: "zoomSelect",
+    // [10.5] A select whose only label is its first option is a select a
+    // screen reader announces as "combo box", and nothing else.
+    "aria-label": "Zoom the map to a state",
     defaultValue: "",
     onChange: function onChange(e) {
       var v = e.target.value;
@@ -668,6 +675,7 @@ function RatingsCongressZoomRow(_ref8) {
     }, m.label);
   }), /*#__PURE__*/React.createElement("select", {
     className: "zoomSelect zoomSelectMore",
+    "aria-label": "Zoom the map to one of the remaining states",
     defaultValue: "",
     onChange: function onChange(e) {
       var v = e.target.value;
@@ -697,6 +705,10 @@ function RatingBar(_ref9) {
     return /*#__PURE__*/React.createElement("div", {
       key: cat,
       className: "rtgSeg rtg-" + RTG_KEY[cat],
+      // [10.5] aria-label is prohibited on a plain div: the name is
+      // dropped, and the count it carried goes with it. The segment is a
+      // picture of a share, so it says so.
+      role: "img",
       style: {
         width: n / total * 100 + "%"
       },
@@ -812,7 +824,20 @@ function RatingSection(_ref0) {
     className: "mapHint"
   }, !ready ? "loading the ratings" : isCongress ? "hover a district for details" : "hover a state for details"), isCongress ? /*#__PURE__*/React.createElement(RatingsCongressZoomRow, {
     ready: ready
-  }) : null), /*#__PURE__*/React.createElement("div", {
+  }) : null),
+  /* [8.17] The map says which side; it does not say which race. Thirty-five
+     races and their tiers, in agate, is the list the sheet was missing. */
+  /*#__PURE__*/React.createElement("div", {
+    className: "agateBlock"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "agateHead"
+  }, "every race, and where it is rated"), /*#__PURE__*/React.createElement("div", {
+    className: "agateHost",
+    "data-rtg-host": "agate",
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("agateHost", mode, "agate") }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "probBlock",
 
     role: "group"
@@ -965,7 +990,7 @@ function PastMapHost(_ref10) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    role: "img",
+    role: "figure",
     "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-past-host": "map",
     "data-mode": mode,
@@ -1320,7 +1345,7 @@ function SwingMapHost(_ref14) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    role: "img",
+    role: "figure",
     "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-swing-host": "map",
     "data-mode": mode,
@@ -1441,6 +1466,9 @@ function SwingSection(_ref16) {
   }, "D"), /*#__PURE__*/React.createElement("input", {
     type: "range",
     className: "swingRangeA d",
+    // [10.5] A range with no name is announced as "slider" and
+    // nothing more; the D beside it is a span, not a label.
+    "aria-label": "Democratic share of the national two-party vote",
     min: "30",
     max: "70",
     step: "0.1",
@@ -1457,6 +1485,9 @@ function SwingSection(_ref16) {
   }, "R"), /*#__PURE__*/React.createElement("input", {
     type: "range",
     className: "swingRangeA r",
+    // [10.5] A range with no name is announced as "slider" and
+    // nothing more; the D beside it is a span, not a label.
+    "aria-label": "Republican share of the national two-party vote",
     min: "30",
     max: "70",
     step: "0.1",
@@ -1856,7 +1887,7 @@ function PollsMapHost(_ref19) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mapHost",
     ref: hostRef,
-    role: "img",
+    role: "figure",
     "aria-label": "A map. Each unit is filled by the party it leans to and darkened with the margin; a race inside two points is overprinted, and an unpolled unit stays paper.",
     "data-polls-host": "map",
     "data-mode": mode,
@@ -1918,6 +1949,12 @@ function PollsListHost(_ref21) {
   return /*#__PURE__*/React.createElement("div", {
     className: "pollsListHost",
     ref: hostRef,
+    /* [10.5] The record scrolls inside a fixed height, and a scrollable box
+       with nothing focusable in it is a box a keyboard reader cannot
+       scroll: they can tab past it but never through it. */
+    tabIndex: 0,
+    role: "region",
+    "aria-label": "Every poll behind this average, most recent first",
     suppressHydrationWarning: true,
     dangerouslySetInnerHTML: { __html: _hostHtml("pollsListHost", "", "") }
   });
@@ -2007,7 +2044,7 @@ function PollsGBSection(_ref22) {
     ready: ready
   }), /*#__PURE__*/React.createElement("div", {
     className: "t-how"
-  }, /*#__PURE__*/React.createElement("b", null, "how to read"), isApproval ? " \xB7 hollow marks are single polls, the solid line is the average, the bar above is the daily margin off the rule." : " \xB7 hollow marks are single polls, the solid line is the average, the bar above is the daily margin off the rule.")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 a hollow ring is one poll, the solid line is their average, and the solid dot is the point under your cursor. The line breaks where no poll stands behind it and opens on a dash while only one does. The bar above is the daily margin off the even-vote rule, read against the scale at its left.")), /*#__PURE__*/React.createElement("div", {
     className: "pollsListWrap"
   }, /*#__PURE__*/React.createElement("div", {
     className: "pollsListHead"
@@ -2069,7 +2106,20 @@ function PollsRaceSection(_ref23) {
     className: "t-how"
   }, /*#__PURE__*/React.createElement("b", null, "how to read"), " \xB7 fill leans to the leading party and darkens with the margin, a race inside two points is overprinted, an unpolled state stays paper."), /*#__PURE__*/React.createElement("div", {
     className: "mapHint"
-  }, !ready ? "loading polls" : "click a state to read its polls")), /*#__PURE__*/React.createElement("div", {
+  }, !ready ? "loading polls" : "click a state to read its polls")),
+  /* [8.18] Every polled state and where its average stands, in agate. The
+     map holds the shape of it; only a list holds the numbers. */
+  /*#__PURE__*/React.createElement("div", {
+    className: "agateBlock"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "agateHead"
+  }, "every state with polling, and where it stands"), /*#__PURE__*/React.createElement("div", {
+    className: "agateHost",
+    "data-polls-host": "agate",
+    "data-mode": mode,
+    suppressHydrationWarning: true,
+    dangerouslySetInnerHTML: { __html: _hostHtml("agateHost", mode, "agate") }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "probBlock",
 
     role: "group"
@@ -2768,7 +2818,12 @@ function App() {
     role: "status",
     "aria-live": "polite",
     "aria-atomic": "true"
-  }), viewContent), (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("footer", {
+  }), viewContent),
+  /* [10.18] The footer is the sheet's contentinfo landmark — the thing a
+     screen-reader user jumps to for provenance — and it rendered on two
+     tabs out of nine. Its four numbers are true of the whole site, not of
+     the model sheet, so there was never a reason for it to be conditional. */
+  /*#__PURE__*/React.createElement("footer", {
     className: "foot"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Updated"), " \xA0", foot.updated), /*#__PURE__*/React.createElement("span", {
     className: "sep"

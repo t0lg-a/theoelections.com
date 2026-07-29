@@ -376,6 +376,198 @@ const AXIS = (function(){
 window.__axis = AXIS;
 
 /* ======================================================================
+   THE MARK VOCABULARY  (chapter 6)
+
+   [6.12] Three marks. Each one means exactly one thing, everywhere:
+
+     a hollow ring    one observation — a single poll, drawn once
+     a solid line     an average — a claim standing on many observations
+     a solid dot      the datum under the cursor, and nothing else
+
+   The polls charts arrived at rings-and-a-line on their own in the first
+   task; the ratings chart, the two hindcast charts and the odds charts did
+   not, and a filled dot meant "a poll" on one sheet and "where you are" on
+   another. Two marks that look alike are one mark, and one mark cannot
+   carry two meanings.
+
+   [6.17] An average also has to be able to say nothing. Every average on
+   this site is computed per day and carries the last N polls forward, so a
+   month with no polling in it draws at full weight — a line asserting a
+   value nobody measured. It breaks instead.
+
+   [6.18] And an average standing on one poll is not an average. Its
+   opening run is drawn on the dash until a second observation is behind
+   it, so the reader can see where the claim starts holding.
+   ====================================================================== */
+const MARK = (function(){
+  const px = (name, fallback) => AXIS.tokenPx(name, fallback);
+
+  function dash(){
+    const v = getComputedStyle(document.documentElement)
+      .getPropertyValue("--t-mark-dash").trim();
+    return v || "5 4";
+  }
+
+  /** Series `i` of `n` drawn together nests one step inside the last, so two
+   *  coincident polls read as two rings rather than as one thick one. */
+  function ringR(i, n){
+    const r = px("--t-mark-r", 2.2), nest = px("--t-mark-nest", 1.2);
+    return Math.round((r + Math.max(0, (n || 1) - 1 - (i || 0)) * nest) * 100) / 100;
+  }
+
+  /** One observation: a hollow ring, never a filled one, never with alpha. */
+  function rings(svg, data, opts){
+    const o = opts || {};
+    return svg.append("g").attr("class", "markObs")
+      .selectAll("circle").data(data).join("circle")
+      .attr("class", "markRing")
+      .attr("cx", o.x).attr("cy", o.y)
+      .attr("r", ringR(o.series, o.of))
+      .attr("fill", "none")
+      .attr("stroke", o.ink)
+      .attr("stroke-width", px("--t-mark-w", 1.2));
+  }
+
+  /** Past this many days with nothing behind it, an average is a line drawn
+   *  across a hole. Three weeks is the widest gap the site's own averaging
+   *  windows can span without the newest poll in the window being older
+   *  than the reader would assume from the line's weight. */
+  const GAP_DAYS = 21;
+
+  /** [6.17] A test for "is there an observation behind this day". `observed`
+   *  is the observation dates; the returned function answers for any day. */
+  function supportedBy(observed, gapDays){
+    const t = (observed || []).map(Number).filter(isFinite).sort((a, b) => a - b);
+    const gap = (isFinite(gapDays) ? gapDays : GAP_DAYS) * 86400000;
+    return function(when){
+      const w = +when;
+      let lo = 0, hi = t.length;
+      while (lo < hi){ const mid = (lo + hi) >> 1; if (t[mid] <= w) lo = mid + 1; else hi = mid; }
+      return lo > 0 && (w - t[lo - 1]) <= gap;
+    };
+  }
+
+  /** [6.18] How many observations stand behind a given day, within the same
+   *  reach. One is provisional; two is an average. */
+  function countBehind(observed, gapDays){
+    const t = (observed || []).map(Number).filter(isFinite).sort((a, b) => a - b);
+    const gap = (isFinite(gapDays) ? gapDays : GAP_DAYS) * 86400000;
+    return function(when){
+      const w = +when;
+      let n = 0;
+      for (let i = t.length - 1; i >= 0; i--){
+        if (t[i] > w) continue;
+        if (w - t[i] > gap) break;
+        n++;
+      }
+      return n;
+    };
+  }
+
+  /**
+   * The average. One solid line, broken wherever nothing stands behind it,
+   * opened on the dash for as long as a single observation does.
+   *
+   *   x, y          accessors
+   *   ink           the series' colour
+   *   supported     (d, i) => boolean, or omitted for a line with no gaps
+   *   provisional   (d, i) => boolean, true while one observation is behind it
+   */
+  function average(svg, data, opts){
+    const o = opts || {};
+    const gen = d3.line().x(o.x).y(o.y).curve(d3.curveMonotoneX);
+    if (typeof o.supported === "function") gen.defined(o.supported);
+    const w = px("--t-mark-avg", 2.5);
+    const g = svg.append("g").attr("class", "markAvg");
+    const draw = (datum, cls, dashed) => {
+      if (!datum || datum.length < 2) return;
+      const p = g.append("path").datum(datum).attr("class", cls)
+        .attr("d", gen).attr("fill", "none").attr("stroke", o.ink)
+        .attr("stroke-width", w)
+        .attr("stroke-linejoin", "round").attr("stroke-linecap", "round");
+      if (dashed) p.attr("stroke-dasharray", dash());
+      return p;
+    };
+    // The provisional opening is its own path: a dasharray set on the whole
+    // series would make every point of it provisional, which is a different
+    // and much larger claim.
+    let head = null, tail = data;
+    if (typeof o.provisional === "function"){
+      let n = 0;
+      while (n < data.length && o.provisional(data[n], n)) n++;
+      if (n > 1){ head = data.slice(0, n); tail = data.slice(n - 1); }
+    }
+    draw(head, "markAvgProvisional", true);
+    draw(tail, "markAvgLine", false);
+    return g;
+  }
+
+  /** The datum under the cursor: one solid dot, absent until there is one. */
+  function cursor(svg, ink){
+    return svg.append("circle").attr("class", "markCursor")
+      .attr("r", px("--t-mark-cursor", 4))
+      .attr("fill", ink).style("opacity", 0);
+  }
+
+  /** The same dot on a canvas figure, where there is no node to append to.
+   *  `scale` is the device pixel ratio the context is already drawn at. */
+  function cursorOnCanvas(ctx, cx, cy, ink, scale){
+    const r = px("--t-mark-cursor", 4) * (scale || 1);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = ink;
+    ctx.fill();
+    ctx.restore();
+  }
+
+  /** [6.12] The vocabulary in one sentence, for a figure's decode gate, so
+   *  the words a reader is given match the marks they are looking at. */
+  const DECODE = "A hollow ring is one poll, the solid line is the average " +
+    "of them, and the solid dot is the point under your cursor. The line " +
+    "breaks where no poll stands behind it and opens on a dash while only " +
+    "one does.";
+
+  return { ringR, rings, average, cursor, cursorOnCanvas,
+           supportedBy, countBehind, dash, GAP_DAYS, DECODE };
+})();
+window.__mark = MARK;
+
+/* ======================================================================
+   THE AGATE  (chapter 8)
+
+   [8.16] The dense-list form, filled from a module rather than written
+   inline. The sheet owns every quantity in it; this writes structure and
+   nothing else, the same division the record was put on in chapter 8.
+
+   rows  [{name, value, ink, lean}]
+   opts  {caption, empty}
+   ====================================================================== */
+window.__agate = function(host, rows, opts){
+  if (!host) return;
+  const o = opts || {};
+  const esc = v => String(v).replace(/[&<>"]/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  if (!rows || !rows.length){
+    // Absent is absent, not zero, and an empty list says so in words.
+    host.dataset.key = "";
+    host.innerHTML = '<div class="t-absent">' + esc(o.empty || "nothing to list") + "</div>";
+    return;
+  }
+  const key = rows.map(r => r.name + "\u0000" + r.value + "\u0000" + (r.ink || "")).join("|");
+  if (host.dataset.key === key) return;
+  host.dataset.key = key;
+  host.innerHTML =
+    '<ul class="agate" aria-label="' + esc(o.caption || "a list") + '">' +
+    rows.map(r =>
+      '<li class="agateRow"' + (r.lean ? ' data-lean="' + esc(r.lean) + '"' : "") + ">" +
+      '<i class="agateSw"' + (r.ink ? ' style="background:' + esc(r.ink) + '"' : "") + "></i>" +
+      '<span class="agateName" title="' + esc(r.name) + '">' + esc(r.name) + "</span>" +
+      '<span class="agateVal">' + esc(r.value) + "</span></li>").join("") +
+    "</ul>";
+};
+
+/* ======================================================================
    GEOGRAPHY AS A FIGURE  (chapter 7)
 
    [7.4][7.5][7.8][7.9][7.11][7.13][7.15][7.16] The polls maps got direct
@@ -467,6 +659,15 @@ const GEO = (function(){
     return sel;
   }
 
+  /** [7.17] What a fill says, in words. One phrasing for every map, so the
+   *  table under one reads like the table under the next. Positive is an R
+   *  lead, the same convention marginFill paints with. */
+  function marginReading(m){
+    if (!isFinite(m)) return "no datum";
+    if (Math.abs(m) < 2) return "inside two points";
+    return (m > 0 ? "R+" : "D+") + Math.abs(m).toFixed(1);
+  }
+
   /** [7.11] The hover mark, applied the same way everywhere. */
   function markHover(node, on){
     d3.select(node).classed("hovered", !!on)
@@ -503,18 +704,36 @@ const GEO = (function(){
     }
     if (svg.node().getBoundingClientRect().width < 60) return;
     const units = [...svg.node().querySelectorAll("path.state.active")];
-    // The chips hold exactly the units the map declined to label, by the
-    // same test and in the same units, so every state either has its name on
-    // the map or has a chip under it — never both, never neither.
+    // Two questions, asked in two different spaces, and a unit can pass one
+    // and fail the other.
+    //
+    // Can the map hold this unit's label? — measured in the projection's own
+    // units, because that is the space the label is drawn in. Every state
+    // either has its name on the map or has a chip under it.
+    //
+    // [7.22][10.16] Can a thumb hit it? — measured in CSS pixels, because
+    // that is the space the thumb is in. A state is the shape it is and no
+    // stylesheet can make Rhode Island 44 pixels wide, so below the phone
+    // breakpoint the chip is the target, and it has to exist for every unit
+    // the map cannot give one. scripts/audit.py asserts that it does.
+    const TARGET = 44;
+    const phone = window.innerWidth <= 760;
     const small = units.filter(u => {
       if (!u.getBBox) return false;
       let b; try { b = u.getBBox(); } catch (e) { return false; }
-      return b.width < MIN_W || b.height < MIN_H;
+      if (b.width < MIN_W || b.height < MIN_H) return true;
+      if (!phone) return false;
+      const r = u.getBoundingClientRect();
+      return r.width < TARGET || r.height < TARGET;
     });
     if (!small.length){ if (row) row.remove(); return; }
     if (!row){
       row = document.createElement("div");
       row.className = "mapInset";
+      // [10.5] A plain div cannot take a name: aria-label is prohibited on
+      // one and the browser drops it. The row is a group of controls, and
+      // saying so is what lets it keep the name.
+      row.setAttribute("role", "group");
       row.setAttribute("aria-label", "The states too small to hold a label on the map");
       host.appendChild(row);
     }
@@ -535,7 +754,16 @@ const GEO = (function(){
         sw.className = "mapChipSw";
         b.appendChild(sw);
         b.appendChild(document.createTextNode(st));
-        if (activate) b.addEventListener("click", () => activate(st));
+        // A chip acts through the unit it stands for rather than through a
+        // callback it was handed, so it cannot drift out of step with the
+        // map and the row can be rebuilt by anyone: whatever clicking the
+        // state does, clicking its chip does.
+        b.addEventListener("click", () => {
+          if (activate) return activate(st);
+          const root = b.closest(".mapBlock, .mapHostWrap, .mapHost");
+          const unit = root && root.querySelector(`svg path.state[data-st='${st}']`);
+          if (unit) unit.dispatchEvent(new MouseEvent("click", {bubbles: true, cancelable: true}));
+        });
         row.appendChild(b);
       }
     }
@@ -553,6 +781,69 @@ const GEO = (function(){
     }
   }
 
+  /** [7.17] The text alternative.
+
+   *  A map's fill is a value nobody can read aloud, and the direct labels
+   *  only name the units the map was big enough to hold — so the reader who
+   *  cannot see the map is left with a list of names and no numbers. This
+   *  writes the whole thing out as a table: every unit that carries a datum
+   *  and what the map says about it, in one place, ordered by name rather
+   *  than by geography because a table has no geography.
+   *
+   *  It is hidden from the eye, not from the reader: on screen the map is
+   *  the better figure, and a table of thirty-five rows under every map
+   *  would be the sheet saying everything twice. The rows are read off the
+   *  units themselves, so the table cannot disagree with the map above it —
+   *  the same reason the small-state chips read their fill from the paths. */
+  function dataTable(svg, opts){
+    if (!svg || !svg.node()) return;
+    const o = opts || {};
+    const node = svg.node();
+    const block = node.closest(".mapBlock") || node.closest(".mapHostWrap")
+               || node.closest(".mapHost");
+    if (!block) return;
+    const existing = block.querySelector(":scope > .figTable");
+    const units = [...node.querySelectorAll("path.state.active")];
+    if (!units.length){ if (existing) existing.remove(); return; }
+
+    const rows = units.map(u => {
+      const k = u.getAttribute("data-st") || "";
+      // The accessible name is already "<unit>, <what the map says>" on
+      // every map — chapter 7 put it there. The table wants those as two
+      // columns rather than as one sentence.
+      const said = String(u.getAttribute("aria-label") || "");
+      // The name is what the label opens with, up to whatever the map
+      // appended to it — a datum after a comma, an instruction after a dash.
+      const name = said.split(/[,\u2014]/)[0].trim();
+      // The value is the fill's own reading, written where the fill is set,
+      // so the row cannot disagree with the unit above it.
+      const said2 = o.reading ? o.reading(k, u) : u.getAttribute("data-reading");
+      return { name: name || k, value: String(said2 || "").trim() };
+    }).filter(r => r.name);
+    rows.sort((a, b) => a.name.localeCompare(b.name));
+    // A district map has units but no names to give them; an empty table is
+    // a promise of a text alternative that is not there.
+    if (!rows.length){ if (existing) existing.remove(); return; }
+
+    const key = rows.map(r => r.name + ":" + r.value).join("|");
+    let t = existing;
+    if (t && t.dataset.key === key) return;
+    if (!t){
+      t = document.createElement("table");
+      t.className = "figTable";
+      block.appendChild(t);
+    }
+    t.dataset.key = key;
+    const esc = v => String(v).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+    t.innerHTML =
+      "<caption>" + esc(o.caption || "Every unit on the map above, and what its fill says") + "</caption>" +
+      '<thead><tr><th scope="col">' + esc(o.unitHead || "unit") + "</th>" +
+      '<th scope="col">' + esc(o.valueHead || "what the map says") + "</th></tr></thead><tbody>" +
+      rows.map(r => '<tr><th scope="row">' + esc(r.name) + "</th><td>" +
+                    esc(r.value || "no datum") + "</td></tr>").join("") +
+      "</tbody>";
+  }
+
   /** [7.7] Every live map's chips, re-homed and repainted. The app calls
    *  this after it teleports a map out of its legacy stage, because the
    *  chips are built where the SVG was drawn, not where it ends up. */
@@ -565,9 +856,19 @@ const GEO = (function(){
     document.querySelectorAll(".mapHost svg").forEach(node => {
       if (node.getBoundingClientRect().width < 60) return;
       if (!node.querySelector("path.state.active")) return;
+      // [10.5] The host carries the map's name, and it is a figure rather
+      // than an image because it holds focusable units — which means the
+      // <svg> inside it is exposed on its own, as an image with no name.
+      // It is a group of named units, and saying so gives it the name.
+      const host = node.closest("[aria-label]");
+      if (host && !node.getAttribute("aria-label")){
+        node.setAttribute("role", "group");
+        node.setAttribute("aria-label", host.getAttribute("aria-label"));
+      }
       const sel = d3.select(node);
       paintLabelContrast(sel, "path.state");
       insetChips(null, sel, null);
+      dataTable(sel);
     });
     // A district map has no unit small enough to need a chip and no unit
     // big enough to label; it leaves an empty row behind on a tab switch.
@@ -577,7 +878,7 @@ const GEO = (function(){
   }
 
   return { isDarkFill, directLabels, paintLabelContrast, makeReachable, markHover,
-           insetChips, refreshInsets, MIN_W, MIN_H };
+           insetChips, dataTable, marginReading, refreshInsets, MIN_W, MIN_H };
 })();
 window.__geo = GEO;
 
@@ -1926,71 +2227,99 @@ function showTooltip(evt, modeKey, key, cachedIndNat){
   }
 }
 
+/* ======================================================================
+   THE TOOLTIP, ON TOUCH  (chapters 7 and 9)
+
+   [7.23][9.22] Decided: the card follows the cursor where there is one, and
+   docks where there is not.
+
+   A card that follows a finger is a card under the finger, and the finger
+   is on the very thing the card is describing — so on touch the reader
+   covers the state, reads about it, lifts, and the card leaves with them.
+   Docked, it sits at the foot of the window in one fixed place: the figure
+   stays visible, the card does not move, and the eye learns where to look.
+
+   Six positioners across four modules decided this separately before, with
+   four different pads and three different ways of moving a box. One rule
+   instead, and every card on the site is placed through it.
+   ====================================================================== */
+window.__tip = (function(){
+  function coarse(){
+    try { return window.matchMedia("(hover: none)").matches; }
+    catch (e) { return false; }
+  }
+
+  /**
+   * el      the card
+   * evt     the pointer event
+   * opts    prefer: "left" to sit left of the cursor first
+   *         bottomLimit: a floor the card must stay above
+   *         transform: move it with a transform rather than left/top
+   *         pad: the air between cursor and card
+   */
+  function place(el, evt, opts){
+    if (!el) return;
+    const o = opts || {};
+    if (coarse()){
+      el.classList.add("tipDocked");
+      el.style.left = ""; el.style.top = "";
+      el.style.transform = "translate(0,0)";
+      return;
+    }
+    el.classList.remove("tipDocked");
+    const pad = isFinite(o.pad) ? o.pad : 12;
+    // Measure before placing: a card that has just changed its words has
+    // not changed its box yet.
+    el.style.transform = "translate(0,0)";
+    if (!o.transform){ el.style.left = "0px"; el.style.top = "0px"; }
+    const w = el.offsetWidth, h = el.offsetHeight;
+    const floor = isFinite(o.bottomLimit) ? o.bottomLimit : window.innerHeight;
+    let x, y = evt.clientY + pad;
+    if (o.prefer === "left"){
+      x = evt.clientX - w - pad;
+      if (x < pad) x = evt.clientX + pad;
+    } else {
+      x = evt.clientX + pad;
+      if (x + w + pad > window.innerWidth) x = evt.clientX - w - pad;
+    }
+    if (y + h + pad > floor) y = evt.clientY - h - pad;
+    if (y < 0) y = pad;
+    if (o.transform){ el.style.transform = "translate(" + x + "px," + y + "px)"; }
+    else { el.style.left = x + "px"; el.style.top = y + "px"; }
+  }
+
+  /** Out of the way, docked or not. */
+  function hide(el){
+    if (!el) return;
+    el.classList.remove("tipDocked");
+    el.style.transform = "translate(-9999px,-9999px)";
+  }
+
+  return { place, hide, coarse };
+})();
+
 function positionTooltip(evt){
-  const pad = 14;
-  const w = tip.offsetWidth;
-  const h = tip.offsetHeight;
-
-  // Find the map card boundary if hovering within one
+  // The map card's floor, where there is one: a card that hangs below the
+  // map is a card over the next figure down.
   const mapCard = evt.target?.closest?.(".mapCard");
-  const bottomLimit = mapCard ? mapCard.getBoundingClientRect().bottom : window.innerHeight;
-
-  let x = evt.clientX + pad;
-  let y = evt.clientY + pad;
-
-  if (x + w + pad > window.innerWidth) x = evt.clientX - w - pad;
-  if (y + h > bottomLimit) y = evt.clientY - h - pad;
-  if (y < 0) y = pad;
-
-  tip.style.left = x + "px";
-  tip.style.top  = y + "px";
+  window.__tip.place(tip, evt, {
+    pad: 14,
+    bottomLimit: mapCard ? mapCard.getBoundingClientRect().bottom : undefined,
+  });
 }
 function positionTooltipLeft(evt){
-  const pad = 14;
-  const w = tip.offsetWidth;
-  const h = tip.offsetHeight;
-
-  // Prefer left side of cursor
-  let x = evt.clientX - w - pad;
-  let y = evt.clientY + pad;
-
-  // If off-screen left, flip to right
-  if (x < pad) x = evt.clientX + pad;
-  if (y + h + pad > window.innerHeight) y = evt.clientY - h - pad;
-
-  tip.style.left = x + "px";
-  tip.style.top  = y + "px";
+  window.__tip.place(tip, evt, { pad: 14, prefer: "left" });
 }
-function hideTooltip(){ tip.style.transform = "translate(-9999px,-9999px)"; }
+function hideTooltip(){ window.__tip.hide(tip); }
 
 /* ---------- Mini histogram hover ---------- */
 const simTip = document.getElementById("simTip");
 function showSimTip(evt, html){
   if (!simTip) return;
   simTip.innerHTML = html;
-  const pad = 12;
-
-  // Ensure size is measured
-  simTip.style.transform = "translate(0,0)";
-  simTip.style.left = "0px";
-  simTip.style.top  = "0px";
-
-  const w = simTip.offsetWidth;
-  const h = simTip.offsetHeight;
-
-  let x = evt.clientX + pad;
-  let y = evt.clientY + pad;
-
-  if (x + w + pad > window.innerWidth) x = evt.clientX - w - pad;
-  if (y + h + pad > window.innerHeight) y = evt.clientY - h - pad;
-
-  simTip.style.left = x + "px";
-  simTip.style.top  = y + "px";
+  window.__tip.place(simTip, evt);
 }
-function hideSimTip(){
-  if (!simTip) return;
-  simTip.style.transform = "translate(-9999px,-9999px)";
-}
+function hideSimTip(){ window.__tip.hide(simTip); }
 
 function binSeatRange(hist, idx){
   const span = (hist.max - hist.min) || 1;
@@ -2030,13 +2359,21 @@ function ensureSimHover(canvas){
 
     const seatLabel = (bs > 1) ? `${startSeat}–${endSeat}` : `${startSeat}`;
 
+    // [6.16] Redraw with the cursor mark on the bin the reader is over: the
+    // tooltip says which bar it is talking about, and now the figure does.
+    drawSeatSimMini(canvas, meta.hist, meta.threshold, idx);
+
     showSimTip(ev,
       `<div class="stDate">${seatLabel} D seats</div>` +
       `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stVal">${pct.toFixed(1)}%</span></div>`
     );
   });
 
-  canvas.addEventListener("mouseleave", hideSimTip);
+  canvas.addEventListener("mouseleave", ()=>{
+    hideSimTip();
+    const meta = canvas._simMeta;
+    if (meta && meta.hist) drawSeatSimMini(canvas, meta.hist, meta.threshold);
+  });
 }
 
 
@@ -2260,7 +2597,7 @@ function histogramFromProbDist(dist, base){
 }
 
 
-function drawSeatSimMini(canvas, hist, controlThreshold){
+function drawSeatSimMini(canvas, hist, controlThreshold, cursorIdx){
   if (!canvas || !hist || !hist.counts) return;
 
   const cssW = canvas.clientWidth || 0;
@@ -2328,6 +2665,23 @@ function drawSeatSimMini(canvas, hist, controlThreshold){
     ctx.moveTo(x + 0.5, 0);
     ctx.lineTo(x + 0.5, h);
     ctx.stroke();
+  }
+
+  // [6.12][6.16] The histogram has no single observations and no average
+  // line — every bar is already a count of many — so the one mark of the
+  // vocabulary it can carry is the third: a solid dot on the datum under
+  // the cursor. It sits on the bar's top edge, half of it on the ground, so
+  // it stays visible against the bar's own ink.
+  if (isFinite(cursorIdx) && cursorIdx >= 0 && cursorIdx < n){
+    const frac = counts[cursorIdx] / maxCount;
+    const bh = Math.max(1, Math.round(frac * availH));
+    const bw = Math.max(1, Math.ceil(barW - 1*dpr));
+    const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
+    const seatVal = (hist.min ?? 0) + cursorIdx*bs;
+    const ink = !isFinite(controlThreshold) ? neutral
+              : (seatVal >= controlThreshold ? blue : red);
+    MARK.cursorOnCanvas(ctx, Math.floor(cursorIdx * barW) + bw/2,
+                        h - padBot - bh, ink, dpr);
   }
 }
 
@@ -3186,6 +3540,8 @@ function recolorMapForMode(modeKey){
       this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
       this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
       this.setAttribute("data-lean", "none");
+      // [7.17] What the fill says, for the map's text alternative.
+      this.setAttribute("data-reading", "no race this year");
       this.classList.remove("active","filtered");
       return;
     }
@@ -3198,6 +3554,7 @@ function recolorMapForMode(modeKey){
       this.style.fill = getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper();
       this.setAttribute("fill", getComputedStyle(document.documentElement).getPropertyValue("--neutral-bg").trim() || PAL.paper());
       this.setAttribute("data-lean", "none");
+      this.setAttribute("data-reading", "no datum");
       this.classList.add("filtered");
       return;
     }
@@ -3213,6 +3570,8 @@ function recolorMapForMode(modeKey){
     // give it a second cue that is not colour.
     this.setAttribute("data-lean", !isFinite(mm) ? "none"
       : Math.abs(mm) < 2 ? "contested" : (mm > 0 ? "r" : "d"));
+    // [7.17] What the fill says, for the map's text alternative.
+    this.setAttribute("data-reading", GEO.marginReading(mm));
   });
 
   // [7.8] The labels are painted after the fills, not with them: a label

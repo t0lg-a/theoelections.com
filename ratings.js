@@ -520,6 +520,8 @@ function recolorRtgMap(modeKey, perRace){
       // [5.17][5.23] The lean, for the greyscale and forced-colours cue.
       this.setAttribute("data-lean", !info ? "none"
         : /D$/.test(info.rating) ? "d" : (/R$/.test(info.rating) ? "r" : "contested"));
+      // [7.17] What the fill says, for the map's text alternative.
+      this.setAttribute("data-reading", info ? info.rating : "no rating");
     });
   }
   // [7.8] Labels flip only once they know what they sit on.
@@ -528,6 +530,37 @@ function recolorRtgMap(modeKey, perRace){
     // [7.7] The states the map cannot hold get their chips.
     window.__geo.insetChips(m.svg.node() && m.svg.node().parentElement, m.svg, null);
   }
+  renderRtgAgate(modeKey, perRace);
+}
+
+/* [8.17] The agate list. The map says which side; only this says which
+   race, and a thirty-five row table would have run past the figure it
+   belongs to. The swatch carries the tier's ink, the name carries the
+   race, and the tier is written out in words beside it — so the list
+   reads without the colour as well as with it. */
+function renderRtgAgate(modeKey, perRace){
+  const host = document.querySelector(
+    `.agateHost[data-rtg-host="agate"][data-mode="${modeKey}"]`);
+  if (!host || typeof window.__agate !== "function") return;
+  const rows = Object.keys(perRace || {}).map(key => {
+    const info = perRace[key];
+    const rating = info && info.rating;
+    // A senate or governor race is named by its state; a house race is
+    // named by its district, the same phrasing its hover card uses.
+    const meta = modeKey === "house" ? (DATA.house.meta || {})[key] : null;
+    return {
+      name: meta ? houseDistrictName(meta.state, meta.cd)
+                 : (USPS_TO_NAME[key] || key),
+      value: rating || "unrated",
+      ink: rating ? RTG_COLORS[rating] : null,
+      lean: !rating ? "none"
+        : /D$/.test(rating) ? "d" : (/R$/.test(rating) ? "r" : "contested"),
+    };
+  }).sort((a, b) => a.name.localeCompare(b.name));
+  window.__agate(host, rows, {
+    caption: "Every race and the tier it is rated in",
+    empty: "no ratings yet",
+  });
 }
 
 /* --- Chart --- */
@@ -627,7 +660,11 @@ function renderRtgChart(modeKey, chartMode){
       .attr("class","rtgArea")
       .attr("d", area)
       .attr("fill", (d,i) => RTG_COLORS[RTG_ORDER[i]])
-      .attr("opacity", 0.85);
+      // [5.4][6.15] No alpha on a data mark. The bands of a stack do not
+      // overlap, so the .85 bought nothing and cost seven colours the
+      // palette does not contain — invisible to check_colour.py, which
+      // reads the alpha channel of a fill and not an element's opacity.
+      .attr("opacity", 1);
   }
 
   // Hover overlay for both chart modes
@@ -648,7 +685,7 @@ function renderRtgChart(modeKey, chartMode){
       const a = valid[i-1], b = valid[i];
       const d = (xd - a.date) > (b.date - xd) ? b : a;
 
-      vline.attr("x1",x(d.date)).attr("x2",x(d.date)).attr("opacity",0.4);
+      vline.attr("x1",x(d.date)).attr("x2",x(d.date)).attr("opacity",1);
 
       let html = `<div class="stDate">${ds(d.date)}</div>`;
       if (ui._chartMode === "faceoff"){
