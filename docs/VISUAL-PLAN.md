@@ -1019,32 +1019,115 @@ step 23.
 The system has almost no motion by design. What is left should be deliberate,
 and everything should work without a mouse.
 
-1. Verify no transition or animation survives outside a sanctioned case.
-2. Decide which cases are sanctioned; currently none are.
-3. Add `prefers-reduced-motion` handling for anything that survives.
-4. Verify scroll behaviour is not smoothed against the reader's preference.
-5. Run an axe pass on every route and record the violations.
-6. Fix every violation of a colour-contrast rule.
-7. Fix every violation of a name-role-value rule.
-8. Fix every violation of a landmark or heading-order rule.
-9. Add the landmark elements each page is missing: main, nav, contentinfo.
-10. Verify the heading order on every route is sequential.
-11. Add an accessible name to every control that is currently a glyph.
-12. Add live-region announcements for the figures that update on interaction.
-13. Verify the tab order on the polls sheet, which has three parallel columns.
-14. Verify the tab order on the model sheet.
-15. Verify every touch target clears 44px on a phone.
-16. Verify no two touch targets are closer than 8px.
-17. Test the whole site with a keyboard only and record where it breaks.
-18. Test the whole site with VoiceOver and record where it breaks.
-19. Verify text scales to 200% without loss of content or function.
-20. Verify the site works at 400% zoom on a phone-width viewport.
-21. Verify no information is conveyed by colour alone; the maps are the risk.
-22. Verify no control depends on hover to be discoverable.
-23. Add the reduced-data path: the 6MB district SVG should not load unless the
-    tab needs it.
-24. Measure and record the largest contentful paint per route before and
-    after.
+1. [x] None survives. Measured across all nine tabs at two widths: zero
+   elements with a transition duration and zero with an animation name.
+   Chapter 1's canon sweep took them all.
+   Original step: Verify no transition or animation survives outside a sanctioned case.
+2. [x] Decided: none are. A system whose structure comes from rules has
+   nothing that needs to move to be understood.
+   Original step: Decide which cases are sanctioned; currently none are.
+3. [x] Nothing survives, so there is nothing to reduce.
+   Original step: Add `prefers-reduced-motion` handling for anything that survives.
+4. [x] `scroll-behavior: auto` everywhere; nothing smooths it.
+   Original step: Verify scroll behaviour is not smoothed against the reader's preference.
+5. [~] Not axe — it is not installed here and a build box's npm is not the
+   place to add it mid-pass. The same ground was covered by measurement
+   instead: computed contrast on every element (chapter 5), every control's
+   name, the landmark set, the heading order, the tab order and every touch
+   target. What that misses is the checks axe does on ARIA relationships,
+   and that is the gap.
+   Original step: Run an axe pass on every route and record the violations.
+6. [x] `scripts/check_colour.py` gates them: zero failures on both grounds.
+   Original step: Fix every violation of a colour-contrast rule.
+7. [x] Zero controls without an accessible name, and zero focus stops
+   without one.
+   Original step: Fix every violation of a name-role-value rule.
+8. [x] Both, below.
+   Original step: Fix every violation of a landmark or heading-order rule.
+9. [x] `main` was added in chapter 2. The masthead is now a `header` and the
+   foot a `footer`; seven of the nine tabs had neither.
+   Original step: Add the landmark elements each page is missing: main, nav, contentinfo.
+10. [x] Seven of the nine tabs had no headings at all — the section titles
+    were divs, so a screen reader could not navigate by them. They are `h2`
+    now, under an `h1` naming each sheet that is read rather than seen.
+    Projects jumped h1 to h3; its section labels are the missing h2.
+    Original step: Verify the heading order on every route is sequential.
+11. [x] Done in chapter 2, when the sun and the crescent became a word.
+    Original step: Add an accessible name to every control that is currently a glyph.
+12. [x] There were none. The polls sheet redraws its state chart on a click
+    and the swingometer redraws three maps and a histogram on a drag, and
+    neither said anything — a reader who could not see the change had no way
+    to know one had happened. One polite region, one sentence, throttled so
+    a slider drag does not read out sixty times.
+    Original step: Add live-region announcements for the figures that update on interaction.
+13. [x] Sixteen stops in source order: skip link, nav, the ground toggle,
+    Donate, then each column's controls in the order the column reads.
+    Original step: Verify the tab order on the polls sheet, which has three parallel columns.
+14. [x] Same, and the map units are reachable now.
+    Original step: Verify the tab order on the model sheet.
+15. [x] They do now. The nav's links were 40px tall, the ground toggle was
+    44 tall and 30 wide — a height alone is not a target — and the chamber
+    toggle was 28.
+    Original step: Verify every touch target clears 44px on a phone.
+16. [~] Twelve pairs sit closer than 8px, all of them nav links separated by
+    a middot that is not itself a target. Forcing 8px between them would
+    break the one-line nav chapter 2 measured for, and at 44px tall they
+    clear the size threshold that WCAG offers as the alternative. Recorded
+    rather than changed.
+    Original step: Verify no two touch targets are closer than 8px.
+17. [x] Tabbed through every tab on both grounds; the breaks it found are in
+    chapter 9's record.
+    Original step: Test the whole site with a keyboard only and record where it breaks.
+18. [ ] Not done: there is no VoiceOver on this machine. The structural work
+    it would test — landmarks, headings, names, live regions — is done and
+    measured, but a real screen-reader pass is not the same thing and this
+    is not a substitute for it.
+    Original step: Test the whole site with VoiceOver and record where it breaks.
+19. [x] At a 32px root the page does not scroll sideways and nothing is
+    lost. Three things clipped rather than grew — the ground toggle, the
+    small-state chips and the display figures — because they were sized for
+    one word at one size.
+    Original step: Verify text scales to 200% without loss of content or function.
+20. [x] 320px at a 400% zoom: no sideways scroll, nothing clipped.
+    Original step: Verify the site works at 400% zoom on a phone-width viewport.
+21. [x] Chapter 5 settled it: the maps were the risk, and where hue is
+    unavailable the contour carries direction.
+    Original step: Verify no information is conveyed by colour alone; the maps are the risk.
+22. [x] None does: every control is visible at rest, and every map unit is
+    reachable by keyboard and named.
+    Original step: Verify no control depends on hover to be discoverable.
+23. [x] The largest single fix in this chapter, and it was three bugs at
+    once. The prerendered snapshots inlined the district shapes, so
+    `/ratings/` was a 14.5MB document before a byte of data. Three modules
+    each held their own check-then-fetch against one shared variable, so
+    when two ran in the same tick both fetched and the reader paid 12.3MB
+    for one 6.2MB file. And the request said `cache: no-store` on a static
+    asset that changes once a cycle.
+    Original step: Add the reduced-data path: the 6MB district SVG should not load unless the
+     tab needs it.
+24. [x] Measured on a cold cache at 1440, before and after:
+
+| route | LCP before | LCP after | bytes before | bytes after |
+|---|---|---|---|---|
+| model | 548ms | 244ms | 16.0MB | 10.0MB |
+| ratings | 716ms | 292ms | 29.1MB | 10.6MB |
+| florida | 420ms | 228ms | 19.0MB | 13.0MB |
+| polls | 396ms | 220ms | 16.0MB | 10.0MB |
+| swingometer | 620ms | 176ms | 22.4MB | 10.4MB |
+| past-elections | 344ms | 164ms | 16.0MB | 10.0MB |
+| state-legs | 832ms | 164ms | 28.8MB | 16.7MB |
+| projects | 196ms | 180ms | 8.9MB | 8.9MB |
+| methodology | 208ms | 148ms | 8.9MB | 8.9MB |
+
+    LCP roughly halved on every data route and the nine routes together
+    dropped from 165MB to 98MB. `scripts/measure_lcp.py` prints this rather
+    than asserting it: a build box's timings are not a reader's.
+    Original step: Measure and record the largest contentful paint per route before and
+     after.
+
+**Carried forward.** Step 18, the VoiceOver pass, which needs a machine this
+is not. Step 5's ARIA-relationship checks, and step 16's target spacing,
+which is recorded as a knowing exception.
 
 ---
 

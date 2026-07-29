@@ -137,6 +137,34 @@ _EXISTING_TWITTER_RE = re.compile(
 )
 
 
+# [10.23] The district shapes are 6.2MB of paths that the app fetches at
+# runtime from /svg/house.svg. Captured into the snapshot as well, they made
+# /ratings/ a 14.5MB document and /model/ and /polls/ 7.5MB each — before a
+# single byte of data. The placeholder stays so the teleport still has
+# something to fill.
+# The swingometer clones the same shapes under its own id and the state
+# legislature map draws 4,731 more into its own zoom layer, so match every
+# group whose contents the app regenerates rather than only the one the
+# ratings map happens to use. None of these has a nested group; each is a
+# flat run of paths, which is why a non-greedy match to the first close is
+# the right boundary.
+_REGENERATED_GROUPS = [
+    re.compile(r'(<g[^>]*\bid="[a-z-]*district-shapes"[^>]*>).*?(</g>)',
+               re.IGNORECASE | re.DOTALL),
+    re.compile(r'(<g[^>]*\bclass="sldlZoomLayer"[^>]*>).*?(</g>)',
+               re.IGNORECASE | re.DOTALL),
+]
+
+
+def _strip_inlined_shapes(rendered_html: str) -> tuple:
+    """Return (html, bytes_removed)."""
+    before = len(rendered_html)
+    out = rendered_html
+    for pattern in _REGENERATED_GROUPS:
+        out = pattern.sub(r"\1\2", out)
+    return out, before - len(out)
+
+
 def _inject_head(rendered_html: str, head_block: str) -> str:
     # Strip baseline.html's existing title / canonical / description / og so
     # we don't double up after injection.
@@ -182,6 +210,9 @@ def _prerender_route(page, base_url: str, route: dict, build_iso: str) -> Path:
         "() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))"
     )
     raw = page.content()
+    raw, dropped = _strip_inlined_shapes(raw)
+    if dropped:
+        print(f"    dropped {dropped // 1024}kB of inlined district shapes")
     out_html = _inject_head(raw, _head_injection(route, build_iso))
     return _write_route(route, out_html)
 

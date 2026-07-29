@@ -599,8 +599,11 @@ function pickState(mk,usps){
 
   const name=USPS_TO_NAME[usps]||usps;
   const n=pp?pp.length:0;
-  if(ui.stTitle)ui.stTitle.textContent=raceFinding(name,avgD,avgR,n);
+  const finding=raceFinding(name,avgD,avgR,n);
+  if(ui.stTitle)ui.stTitle.textContent=finding;
   stateScatter(mk,usps);
+  // [10.12] The chart under this just changed; say what it now shows.
+  if(window.__announce) window.__announce(finding);
 }
 
 /* A figure is titled with what it found, not with what it is. */

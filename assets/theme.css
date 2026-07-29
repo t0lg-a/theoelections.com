@@ -2146,3 +2146,74 @@ svg path:focus{outline:none;}
   font-weight:700;
   border-bottom-color:var(--t-ink);
 }
+
+/* ======================================================================
+   20 · ACCESS  (chapter 10)
+   ====================================================================== */
+
+/* [10.10] Each sheet's own heading. It is read, not seen: on screen the
+   section titles carry the findings, and a second title above them would be
+   the page saying its own name back to itself. */
+.sheetTitle{
+  position:absolute;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+/* [10.15] The nav's links were 40px tall on a phone, four short of the
+   target. The masthead's controls are already at 44 there; its links were
+   not. */
+@media (max-width:760px){
+  .nav a{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+  .skiplink{min-height:44px;display:inline-flex;align-items:center;}
+  /* A target is 44 in both directions. The ground toggle was 44 tall and 30
+     wide, because the word inside it is short — a height alone is not a
+     target. */
+  .iconbtn, .chip, .chipBtn, .zoomBtn, .mapCtrlBtn, .yearBtn, .yearBtnA{
+    min-width:44px;
+  }
+  /* The chamber toggle was 28 tall, which is a target for a mouse and not
+     for a thumb. */
+  .chamberBtn, .seg, .segmentedControl button, .gbToggle button{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+}
+
+/* [10.12] A figure that changes under the reader's hands announces the
+   change. The polls sheet redraws its state chart on a click and the
+   swingometer redraws three maps on a drag; neither said anything. */
+.t-announce{
+  position:absolute;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+/* [10.19] Text at 200%. The page does not scroll sideways at either 200%
+   text or 400% zoom, but three things clipped their own content rather than
+   growing with it: the ground toggle, the small-state chips and the display
+   figures. A control sized for one word is a control that loses the word
+   when the word gets bigger. */
+.iconbtn, .mapChip{
+  width:auto;
+  height:auto;
+  min-height:var(--t-control-h);
+  padding-top:var(--t-sp-1);
+  padding-bottom:var(--t-sp-1);
+}
+/* The display figures share a line until they cannot, and then they take
+   two. They were pinned to one row, so at 200% they ran into each other. */
+.seats, .seatsSide{flex-wrap:wrap;}
+.seats > *, .seatsSide > *{min-width:0;}
+.seats .num, .seatsSide .num{overflow:visible;}

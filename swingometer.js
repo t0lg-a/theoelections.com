@@ -272,10 +272,11 @@ async function initSwingHouseMap(ui){
   // Reuse cached SVG text from forecast.js, or load it
   if (!HOUSE_SVG_TEXT){
     try {
-      HOUSE_SVG_TEXT = await fetch("/svg/house.svg", {cache:"no-store"}).then(r=>{
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.text();
-      });
+      HOUSE_SVG_TEXT = await window.__once("house.svg", () =>
+        fetch("/svg/house.svg?v=2026", {cache:"force-cache"}).then(r=>{
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.text();
+        }));
     } catch(e){
       console.warn("Swingometer: svg/house.svg not loaded:", e);
       svg.append("text")
@@ -304,10 +305,17 @@ async function initSwingHouseMap(ui){
   requestAnimationFrame(() => {
     try {
       const bbox = imported.getBBox();
+      // A group that has not been laid out yet measures zero, and dividing
+      // by it produces translate(NaN,NaN) scale(Infinity) — which the
+      // console has been reporting on every load of this page. Wait for a
+      // measurable box rather than writing an unusable transform.
+      if (!(bbox.width > 0) || !(bbox.height > 0)) return;
       const pad = 18;
       const scale = Math.min((width - pad*2) / bbox.width, (height - pad*2) / bbox.height);
+      if (!isFinite(scale) || scale <= 0) return;
       const tx = (width - bbox.width * scale) / 2 - bbox.x * scale;
       const ty = (height - bbox.height * scale) / 2 - bbox.y * scale;
+      if (!isFinite(tx) || !isFinite(ty)) return;
       gRoot.attr("transform", `translate(${tx},${ty}) scale(${scale})`);
     } catch (e) { /* ignore */ }
   });

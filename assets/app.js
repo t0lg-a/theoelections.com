@@ -446,7 +446,7 @@ function ModelSection(_ref5) {
     className: "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, d.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -760,7 +760,7 @@ function RatingSection(_ref0) {
     className: "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -1075,7 +1075,7 @@ function PastSection(_ref13) {
       className: "col col-past col-past-hidden"
     }, /*#__PURE__*/React.createElement("div", {
       className: "secHead"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
       className: "secTitle"
     }, meta.title), /*#__PURE__*/React.createElement("div", {
       className: "secSub"
@@ -1090,7 +1090,7 @@ function PastSection(_ref13) {
     className: "col col-past"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -1404,7 +1404,7 @@ function SwingSection(_ref16) {
     className: "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -1953,7 +1953,7 @@ function PollsGBSection(_ref22) {
     className: isApproval ? "col isApproval" : "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -2031,7 +2031,7 @@ function PollsRaceSection(_ref23) {
     className: "col"
   }, /*#__PURE__*/React.createElement("div", {
     className: "secHead"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     className: "secTitle"
   }, meta.title), /*#__PURE__*/React.createElement("div", {
     className: "secSub"
@@ -2388,7 +2388,7 @@ function ProjectsView() {
     return /*#__PURE__*/React.createElement("section", {
       key: section.label,
       className: "projSectionA"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("h2", {
       className: "projSectionALabel"
     }, section.label), /*#__PURE__*/React.createElement("div", {
       className: "projGridA"
@@ -2402,6 +2402,20 @@ function ProjectsView() {
 }
 
 /* ========== TopBar ========== */
+/* [10.10] The name of each sheet, for the heading a screen reader starts
+   from. Seven of the nine tabs had no heading at all before this. */
+var SHEET_TITLES = {
+  "Model": "The 2026 forecast",
+  "Ratings": "Race ratings for 2026",
+  "Florida": "Florida's redistricting",
+  "Polls": "Polling for 2026",
+  "Swingometer": "The swingometer",
+  "Past Elections": "Past elections, hindcast",
+  "State Legs.": "State legislatures",
+  "Projects": "Projects",
+  "Methodology": "Methodology"
+};
+var SHEET_HAS_OWN_H1 = { "Projects": true, "Methodology": true };
 var TAB_SLUGS = {
   "Model": "model",
   "Ratings": "ratings",
@@ -2455,7 +2469,7 @@ function TopBar(_ref25) {
       requestAnimationFrame(function () { window.__repaintFigures(); });
     }
   }, [theme]);
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement("header", {
     className: "top"
   }, /*#__PURE__*/React.createElement("div", {
     className: "brand"
@@ -2744,7 +2758,17 @@ function App() {
   }), /*#__PURE__*/React.createElement("main", {
     id: "main",
     tabIndex: -1
-  }, viewContent), (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("div", {
+  }, /* [10.10] Projects and Methodology write their own h1 on the page, so
+        a second one here would give the sheet two. */
+  !SHEET_HAS_OWN_H1[activeTab] && /*#__PURE__*/React.createElement("h1", {
+    className: "sheetTitle"
+  }, SHEET_TITLES[activeTab] || activeTab), /*#__PURE__*/React.createElement("div", {
+    className: "t-announce",
+    id: "announce",
+    role: "status",
+    "aria-live": "polite",
+    "aria-atomic": "true"
+  }), viewContent), (activeTab === "Model" || activeTab === "Ratings") && /*#__PURE__*/React.createElement("footer", {
     className: "foot"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Updated"), " \xA0", foot.updated), /*#__PURE__*/React.createElement("span", {
     className: "sep"

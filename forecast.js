@@ -581,6 +581,23 @@ const GEO = (function(){
 })();
 window.__geo = GEO;
 
+/* [10.23] One fetch per asset, however many modules want it.
+
+   The district shapes are 6.2MB and three modules each held their own
+   check-then-fetch against a shared variable. When two of them run in the
+   same tick — which is what happens on the ratings sheet, where the state
+   map and the district map are drawn together — both see the variable empty
+   and both fetch, so the reader pays 12.3MB for one file. This memoises the
+   promise rather than the result, so the second caller waits on the first
+   request instead of starting a second. */
+window.__once = (function(){
+  const inflight = new Map();
+  return function(key, make){
+    if (!inflight.has(key)) inflight.set(key, Promise.resolve().then(make));
+    return inflight.get(key);
+  };
+})();
+
 /** Repaint every figure after the ground changes (light to night and back). */
 window.__repaintFigures = function(){
   try{ refreshAllViews(); }catch(e){}
@@ -2884,10 +2901,11 @@ async function initHouseMapForMode(ui){
   const gRoot = gZoom.append("g");
 
   if (!HOUSE_SVG_TEXT){
-    HOUSE_SVG_TEXT = await fetch("/svg/house.svg", {cache:"no-store"}).then(r=>{
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.text();
-    });
+    HOUSE_SVG_TEXT = await window.__once("house.svg", () =>
+      fetch("/svg/house.svg?v=2026", {cache:"force-cache"}).then(r=>{
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      }));
   }
 
   const doc = new DOMParser().parseFromString(HOUSE_SVG_TEXT, "image/svg+xml");
@@ -2902,9 +2920,14 @@ async function initHouseMapForMode(ui){
     try {
       const bbox = imported.getBBox();
       const pad = 18;
+      // A group that has not been laid out yet measures zero, and dividing
+      // by it produces translate(NaN,NaN) scale(Infinity).
+      if (!(bbox.width > 0) || !(bbox.height > 0)) return;
       const scale = Math.min((width - pad*2) / bbox.width, (height - pad*2) / bbox.height);
+      if (!isFinite(scale) || scale <= 0) return;
       const tx = (width - bbox.width * scale) / 2 - bbox.x * scale;
       const ty = (height - bbox.height * scale) / 2 - bbox.y * scale;
+      if (!isFinite(tx) || !isFinite(ty)) return;
       gRoot.attr("transform", `translate(${tx},${ty}) scale(${scale})`);
     } catch (e) { /* ignore */ }
   });
