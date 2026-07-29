@@ -1,0 +1,47 @@
+# [12.15][12.16] The harness, on every pull request. It fails the build; it
+# does not warn. A check that only warns is a check nobody reads.
+name: canon
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  canon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Playwright
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium
+
+      - name: The token contract
+        run: node scripts/check-tokens.mjs
+
+      - name: The ramp
+        run: python3 scripts/check_ramp.py
+
+      - name: Serve the site
+        run: |
+          python3 -m http.server 8899 >/dev/null 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf -o /dev/null http://127.0.0.1:8899/baseline.html && break
+            sleep 1
+          done
+
+      - name: The colour law
+        run: python3 scripts/check_colour.py
+
+      - name: The canon
+        run: python3 scripts/audit.py

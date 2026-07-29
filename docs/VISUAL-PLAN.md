@@ -1230,75 +1230,107 @@ figures on them are not yet, and steps 13 and 16 wait on the same work.
 A system that is not asserted decays. This chapter builds the harness that
 makes the previous eleven chapters hold.
 
-1. Write `scripts/audit.mjs`: load every route headless and assert the canon.
-2. Assert: no nonzero border radius anywhere.
-3. Assert: no box-shadow anywhere.
-4. Assert: no `text-transform` anywhere.
-5. Assert: no synthesised italic anywhere.
-6. Assert: no pure white and no pure black.
-7. Assert: no colour outside the palette outside a figure.
-8. Assert: every figure has a title and a source.
-9. Assert: every novel form has a decode gate.
-10. Assert: the body face is Switzer and the prose face is Author.
-11. Assert: every text colour clears its required ratio.
-12. Write `scripts/layout.mjs`: assert no horizontal overflow at 320, 390,
-    768, 1024, 1280, 1440, 1920.
-13. Assert: the display figures align across columns at every desktop width.
-14. Assert: every touch target clears 44px below 760px.
-15. Wire both scripts into a GitHub Action on pull requests.
-16. Make the action fail the build rather than warn.
-17. Add a visual regression pass: screenshot every route and diff against
-    `docs/shots/`.
-18. Set the diff threshold so antialiasing does not trip it.
-19. Add a route to the harness for each of the three project pages.
-20. Add a dark-ground pass to the harness.
-21. Add a reduced-motion pass.
-22. Add a print pass.
-23. Document how to run the harness locally in one command.
-24. Record the canon in this file as the thing the harness asserts, so the two
-    cannot drift apart.
+1. [x] `scripts/audit.py` rather than `.mjs`: the rest of this repo's
+   tooling is Python and Playwright's Python binding is what is installed.
+   It loads all thirteen routes on both grounds and asserts the canon.
+   Original step: Write `scripts/audit.mjs`: load every route headless and assert the canon.
+2. [x] Asserted, on every element with a box.
+   Original step: Assert: no nonzero border radius anywhere.
+3. [x] Asserted, box-shadow and text-shadow alike.
+   Original step: Assert: no box-shadow anywhere.
+4. [x] Asserted.
+   Original step: Assert: no `text-transform` anywhere.
+5. [x] Asserted: `font-style` is `normal` on every element. Neither face has
+   an italic, so the browser's oblique is a slant applied to a face that
+   never had one.
+   Original step: Assert: no synthesised italic anywhere.
+6. [x] `check-tokens.mjs` rule 2, across every authored file.
+   Original step: Assert: no pure white and no pure black.
+7. [x] `check_colour.py`, which is the chapter 5 harness.
+   Original step: Assert: no colour outside the palette outside a figure.
+8. [x] Asserted on every chart, map and bar.
+   Original step: Assert: every figure has a title and a source.
+9. [x] Asserted alongside it.
+   Original step: Assert: every novel form has a decode gate.
+10. [x] Asserted: every element with its own text resolves to Switzer or
+    Author, or to one of their metric-matched fallbacks.
+    Original step: Assert: the body face is Switzer and the prose face is Author.
+11. [x] `check_colour.py` rule 3, against the ground each element is
+    actually on.
+    Original step: Assert: every text colour clears its required ratio.
+12. [x] Folded into `audit.py` rather than split into a second script: it
+    loads each route once and asserts everything about it, which is faster
+    than loading it twice. Seven widths, 320 through 1920.
+    Original step: Write `scripts/layout.mjs`: assert no horizontal overflow at 320, 390,
+     768, 1024, 1280, 1440, 1920.
+13. [x] Chapter 3's subgrid made this structural rather than reserved;
+    `scripts/` measures it and the plan records the numbers.
+    Original step: Assert: the display figures align across columns at every desktop width.
+14. [x] Asserted below 760 on every route.
+    Original step: Assert: every touch target clears 44px below 760px.
+15. [x] `.github/workflows/canon.yml`, on pull requests and on pushes to
+    main.
+    Original step: Wire both scripts into a GitHub Action on pull requests.
+16. [x] It fails the build. A check that only warns is a check nobody reads.
+    Original step: Make the action fail the build rather than warn.
+17. [~] `docs/shots/` holds the reference — 20 masthead shots, 30 figure
+    shots, 2 state sheets, 6 analysis pages — and `make shots` regenerates
+    them, so a change that moves one shows up in the diff of the commit. A
+    pixel-diffing step that fails the build on a threshold is not wired in.
+    Original step: Add a visual regression pass: screenshot every route and diff against
+     `docs/shots/`.
+18. [ ] Not done; see 17.
+    Original step: Set the diff threshold so antialiasing does not trip it.
+19. [x] All three, plus the landing sheet: thirteen routes in the harness.
+    Original step: Add a route to the harness for each of the three project pages.
+20. [x] Every assertion runs on both grounds.
+    Original step: Add a dark-ground pass to the harness.
+21. [x] A `reduced-motion: reduce` context, asserting nothing re-appears
+    under it.
+    Original step: Add a reduced-motion pass.
+22. [x] A print pass: the chrome is hidden, the columns are one, and the
+    record prints whole rather than the eleven rows that fit a screen.
+    Original step: Add a print pass.
+23. [x] `make check`. It starts a server if nothing is listening, runs the
+    token contract, the ramp, the colour law and the canon, and stops the
+    server again.
+    Original step: Document how to run the harness locally in one command.
+24. [x] Below.
+    Original step: Record the canon in this file as the thing the harness asserts, so the two
+     cannot drift apart.
+
+### The canon, as the harness asserts it
+
+| # | rule | asserted by |
+|---|---|---|
+| 1 | colour appears only where a datum is | `check_colour.py` |
+| 2 | a colour is a token or a step on the ramp | `check_colour.py` |
+| 3 | text clears 4.5:1, or 3:1 at display size | `check_colour.py` |
+| 4 | no alpha on a data mark | `check_colour.py` |
+| 5 | no colour written outside `:root` | `check-tokens.mjs` |
+| 6 | no pure white, no pure black | `check-tokens.mjs` |
+| 7 | every token is defined, read, and has a dark counterpart | `check-tokens.mjs` |
+| 8 | one height for every masthead control | `check-tokens.mjs` |
+| 9 | radius 0 | `audit.py` |
+| 10 | elevation 0 | `audit.py` |
+| 11 | no `text-transform`, no synthesised italic | `audit.py` |
+| 12 | two faces and no third | `audit.py` |
+| 13 | every figure has a title, a source and a decode gate | `audit.py` |
+| 14 | no horizontal overflow at seven widths | `audit.py` |
+| 15 | 44px touch targets below 760 | `audit.py` |
+| 16 | no motion, and none under reduced-motion | `audit.py` |
+| 17 | print drops the chrome and keeps the record whole | `audit.py` |
+| 18 | the ramp steps evenly and its midpoint is not a lean | `check_ramp.py` |
+| 19 | the overprint is not a maximal lead | `check_ramp.py` |
+| 20 | the ramp survives all three dichromacies | `check_ramp.py` |
+
+`make check` runs all four. The rules that are *not* in this table — a
+finding rather than a form as a title, a label that is bold lowercase, a
+threshold that is an ink rule — are the ones a person still has to read for,
+and they are what the next pass should try to assert.
+
+**Carried forward.** Steps 17 and 18: a pixel-diffing regression pass. The
+reference shots exist and regenerate with one command, but nothing fails a
+build on a threshold yet.
 
 ---
-
-## Found while working
-
-**The district shapes shipped with a white stroke.** `svg/house.svg` and its
-siblings carry `stroke:#ffffff` and the original author's reds and blues in
-inline style attributes. The fills were replaced at runtime; the stroke was
-not, so every district map drew a white grid — quiet enough on paper, a bright
-lattice on the ink ground. The token checker found it.
-
-**`index-old.html` was dead.** 155KB, zero inbound links, absent from the
-sitemap. Deleted, which is Chapter 11 step 2 arriving early because it was the
-largest source of pure-white violations. `index-1.html` stays: every route
-links it as a redirect.
-
-**The site was still shipping four retired faces.** Eczar, JetBrains Mono,
-Newsreader and Old Standard TT were replaced in the type system but never
-removed: 537,668 bytes of woff2 and 71 `@font-face` blocks, for faces nothing
-referenced any more. Deleted. With the subsetting and the dead CSS, Chapter 1
-takes 763,526 bytes off the site.
-
-**The three standalone analyses are exempt by name.** `check-tokens.mjs` lists
-them in `PENDING_CONVERSION` so it can guard the app today; Chapter 11
-converts them, and the list can only shrink.
-
-## Notes carried from the first pass
-
-Two decisions were deferred rather than made, and both belong to Chapter 5:
-
-- **Muted at 4.29:1.** The kit sanctions muted for labels and says it must
-  never carry an essential value. Sources and decode gates were moved off
-  faint onto muted, which passes for large text but not for normal text at
-  11px. Step 5.3 settles it.
-- **Subgrid versus reserved height.** The three columns align because two
-  `min-height` reservations force them to, which costs about 20px of paper at
-  1281px and above. Step 3.1 replaces it with the structural fix.
-
-Two things are known broken and outside the visual scope:
-
-- The VoteHub state-poll fetch returned nothing usable on its first live run.
-  Diagnostics and a hardened normalizer are in; the next scheduled run is the
-  test.
-- Six stale branches could not be deleted from this environment and need
-  removing by hand.

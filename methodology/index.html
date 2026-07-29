@@ -1,18 +1,39 @@
 <!DOCTYPE html><html lang="en" data-theme="light" data-palette="almanac" data-density="default" data-bg="plain" data-view="methodology"><head>
 <base href="/">
-<title>Methodology | theoelections.com</title>
-<meta name="description" content="How the theoelections.com forecast works: signals, weighting, corrections, simulation, and the forecast-vs-nowcast distinction.">
+<title>Methodology · Theo · Election Forecast</title>
+<meta name="description" content="How the theoelections.com forecast works: the signals it reads, the weighting it applies, the corrections it makes, and how the simulation is run.">
 <link rel="canonical" href="https://theoelections.com/methodology/">
-<meta property="og:title" content="Methodology | theoelections.com">
-<meta property="og:description" content="How the theoelections.com forecast works: signals, weighting, corrections, simulation, and the forecast-vs-nowcast distinction.">
+<meta property="og:title" content="Methodology · Theo · Election Forecast">
+<meta property="og:description" content="How the theoelections.com forecast works: the signals it reads, the weighting it applies, the corrections it makes, and how the simulation is run.">
 <meta property="og:url" content="https://theoelections.com/methodology/">
 <meta property="og:type" content="website">
-<meta name="prerender-build" content="2026-07-28T16:46:04Z">
+<meta property="og:image" content="https://theoelections.com/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Theo, election forecast: two reads on the same cycle.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="prerender-build" content="2026-07-29T00:29:25Z">
 <script>window.__INITIAL_TAB="Methodology";</script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
+<meta name="theme-color" content="#E9E8E0" data-ground="">
+<!-- [2.19][2.20] The mark is drawn in the system: scripts/build_icons.py
+     rasterises assets/icon.svg for the sizes that cannot take an SVG. -->
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+
+
+<!-- [2.2] The ground is decided before the first paint, not in a React
+     effect: a reader who chose the ink ground used to get a paper flash on
+     every navigation. Blocking, and 2 kB, for that reason. -->
+<script src="assets/ground.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -3601,7 +3622,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 </style>
 <link rel="preload" href="assets/fonts/switzer-700.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="preload" href="assets/fonts/switzer-900.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="stylesheet" href="assets/theme.css?v=2">
+<link rel="stylesheet" href="assets/theme.css?v=3">
 <style id="sldlPanelStyles">
       #stateLegsPage.sldl-active{display:grid !important;}
       #stateLegsPage .mapStage{position:relative;}
@@ -3617,33 +3638,33 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       #stateLegsPage .sldlStatePanel .sldlModeToggle button{pointer-events:auto;}
       #stateLegsPage .sldlPanelHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
       #stateLegsPage .sldlModeToggle{display:inline-flex;border:1px solid var(--rule-soft);border-radius:0;overflow:hidden;pointer-events:auto;}
-      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;}
+      #stateLegsPage .sldlModeToggle button{padding:3px 9px;background:transparent;border:none;cursor:pointer;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);letter-spacing:0;text-transform:none;}
       #stateLegsPage .sldlModeToggle button.active{background:var(--ink);color:var(--paper);font-weight:600;}
       #stateLegsPage .sldlMmNote{
-        display:none;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--ink-dim);
+        display:none;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-ink2);
         background:var(--yellow-soft);border:1px solid var(--yellow);
-        border-radius:0;padding:4px 6px;margin:4px 0 8px;letter-spacing:0.04em;text-transform:uppercase;
+        border-radius:0;padding:4px 6px;margin:4px 0 8px;letter-spacing:0;text-transform:none;
       }
       #stateLegsPage .sldlMmNote.show{display:block;}
       #stateLegsPage .sldlOddsRow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-top:10px;}
       #stateLegsPage .sldlOddsRow .cell{background:transparent;border:1px solid var(--rule-soft);border-radius:0;padding:5px 6px;text-align:center;}
-      #stateLegsPage .sldlOddsRow .lbl{font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1px;}
-      #stateLegsPage .sldlOddsRow .val{font-family:var(--mono);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;}
+      #stateLegsPage .sldlOddsRow .lbl{font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);text-transform:none;letter-spacing:0;margin-bottom:1px;}
+      #stateLegsPage .sldlOddsRow .val{font-family:var(--t-data);font-size:var(--t-fs-3);font-weight:800;font-variant-numeric:tabular-nums;}
       #stateLegsPage .sldlOddsRow .val.d{color:var(--blue);}
       #stateLegsPage .sldlOddsRow .val.r{color:var(--red);}
-      #stateLegsPage .sldlOddsNone{font-family:var(--body);font-size:11px;color:var(--muted);text-align:center;padding:6px 0;font-style:italic;}
-      #stateLegsPage .sldlPanelTitle{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.2;}
-      #stateLegsPage .sldlPanelSub{font-family:var(--body);font-style:italic;font-size:12px;font-weight:400;color:var(--muted);}
+      #stateLegsPage .sldlOddsNone{font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:500;color:var(--t-muted);text-align:center;padding:6px 0;font-style:normal;}
+      #stateLegsPage .sldlPanelTitle{font-family:var(--t-data);font-size:var(--t-fs-5);font-weight:800;color:var(--t-ink);letter-spacing:-0.018em;line-height:1.22;}
+      #stateLegsPage .sldlPanelSub{font-family:var(--t-data);font-style:normal;font-size:var(--t-fs-2);font-weight:700;color:var(--t-muted);}
       #stateLegsPage .sldlSeatLine{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:6px 0 8px;}
-      #stateLegsPage .sldlSeatLine .dSide{color:var(--blue);font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;}
-      #stateLegsPage .sldlSeatLine .dSide b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;}
-      #stateLegsPage .sldlSeatLine .rSide{color:var(--red);font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.14em;}
-      #stateLegsPage .sldlSeatLine .rSide b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;}
-      #stateLegsPage .sldlSeatLine .sep{color:var(--rule-soft);font-family:var(--display);font-weight:400;}
+      #stateLegsPage .sldlSeatLine .dSide{color:var(--t-ink);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .dSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
+      #stateLegsPage .sldlSeatLine .rSide{color:var(--t-ink);font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;text-transform:none;letter-spacing:0;}
+      #stateLegsPage .sldlSeatLine .rSide b{font-family:var(--t-data);font-weight:900;font-size:var(--t-fs-6);letter-spacing:-0.03em;}
+      #stateLegsPage .sldlSeatLine .sep{color:var(--t-hair);font-family:var(--t-data);font-weight:500;}
       #stateLegsPage .sldlRatingBar{display:flex;height:18px;border-radius:0;overflow:hidden;border:1px solid var(--ink);}
-      #stateLegsPage .sldlRatingBar .seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;font-weight:500;color:var(--paper);min-width:0;}
+      #stateLegsPage .sldlRatingBar .seg{display:flex;align-items:center;justify-content:center;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-paper);min-width:0;}
       #stateLegsPage .sldlRatingBar .seg.light{color:var(--ink);}
-      #stateLegsPage .sldlRatingLabels{display:flex;font-family:var(--mono);font-size:9px;font-weight:500;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.04em;}
+      #stateLegsPage .sldlRatingLabels{display:flex;font-family:var(--t-data);font-size:var(--t-fs-1);font-weight:700;color:var(--t-muted);margin-top:3px;text-transform:none;letter-spacing:0;}
       #stateLegsPage .sldlRatingLabels .lbl{text-align:center;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
       #stateLegsPage .sldlPanelDivider{height:1px;background:var(--rule-soft);margin:10px -12px;}
       #stateLegsPage .sldlPanelDistrict{min-height:56px;}
@@ -3745,7 +3766,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </style></head>
 <body>
   
-  <div class="sheet"><div id="app"><div class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/">Model</a><span class="dot">·</span><a class="" href="/ratings/">Ratings</a><span class="dot">·</span><a class="" href="/florida/">Florida</a><span class="dot">·</span><a class="" href="/polls/">Polls</a><span class="dot">·</span><a class="" href="/swingometer/">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/">State Legs.</a><span class="dot">·</span><a class="" href="/projects/">Projects</a><span class="dot">·</span><a class="active" href="/methodology/">Methodology</a></nav><div class="actions"><button class="iconbtn" title="Dark mode">☾</button><button class="donate">Donate</button></div></div><div class="methAlmanac"><header class="methHero"><div class="methKicker">Documentation</div><h1 class="methTitle">Methodology</h1><p class="methLede">How the 2026 midterm forecast works.</p></header><section class="methCard"><p class="methBody">This forecast projects the outcome of every Senate, gubernatorial, and House race in the 2026 midterm elections. It combines national polling, state-level surveys, and historical voting patterns into a probabilistic model that runs thousands of election simulations daily.</p></section><section class="methCard"><h2 class="methH2">Inputs</h2><p class="methBody">The model ingests three main signals: a <strong>generic ballot</strong> average computed from a quality-filtered, weighted rolling window of national polls; <strong>state and district polls</strong> where available; and<strong> historical partisan ratios</strong> derived from recent election results. These are blended together with weights that reflect their relative informativeness — state polls carry the most influence where they exist, and the generic ballot fills in everywhere else.</p><p class="methBody">A <strong>national indicator</strong> is also computed by reverse-engineering the implied national environment from all available state polls, providing an additional cross-check on the generic ballot signal.</p></section><section class="methCard"><h2 class="methH2">Adjustments</h2><p class="methBody">The model applies several corrections to improve accuracy. A <strong>pollster quality filter</strong> screens polls by historical track record and weights them accordingly. A <strong>circuit breaker</strong> in non-competitive states prevents the national trend from overriding strong local polling. A <strong>Hispanic voter adjustment</strong>accounts for shifts in Hispanic voter preference relative to recent baselines, scaled by each district's demographic composition.</p></section><section class="methCard"><h2 class="methH2">Simulation</h2><p class="methBody">Individual race win probabilities are derived from projected margins using a normal distribution that accounts for polling uncertainty. Chamber-level outcomes are determined through <strong>Monte Carlo simulation</strong> — each run draws a correlated national swing and resolves every race, producing a full election map. The share of simulations in which each party reaches a majority determines the control probability.</p></section><section class="methCard"><h2 class="methH2">What the numbers cover</h2><p class="methBody">Every figure on this site is a <strong>nowcast</strong>: what would happen if the election were held today, given the polling in hand. The series ends on the last day with polling behind it.</p><p class="methBody">Nothing is projected forward to Election Day. Undecided voters are left undecided rather than allocated to either party, so a lead here reflects the surveys as they were published and nothing added on top of them.</p></section><section class="methCard"><h2 class="methH2">Ratings</h2><p class="methBody">Each race is classified on a seven-point scale from Safe D to Safe R based on its projected margin. The thresholds are calibrated to reflect meaningful differences in competitiveness.</p><div class="methTableWrap"><table class="methTableA"><thead><tr><th>rating</th><th>margin</th><th>description</th></tr></thead><tbody><tr><td><span class="methSwatch rtg-safeD"></span><span class="methRatingName">Safe D</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Democratic advantage</td></tr><tr><td><span class="methSwatch rtg-likelyD"></span><span class="methRatingName">Likely D</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Democratic lead</td></tr><tr><td><span class="methSwatch rtg-leanD"></span><span class="methRatingName">Lean D</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Democratic edge</td></tr><tr><td><span class="methSwatch rtg-tossup"></span><span class="methRatingName">Tossup</span></td><td class="methMono">&lt;2.5 pp</td><td class="methDesc">Either party could win</td></tr><tr><td><span class="methSwatch rtg-leanR"></span><span class="methRatingName">Lean R</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Republican edge</td></tr><tr><td><span class="methSwatch rtg-likelyR"></span><span class="methRatingName">Likely R</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Republican lead</td></tr><tr><td><span class="methSwatch rtg-safeR"></span><span class="methRatingName">Safe R</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Republican advantage</td></tr></tbody></table></div></section><section class="methCard"><h2 class="methH2">Data Sources</h2><p class="methBody">National and state polls are sourced from public polling databases and manually curated releases. Election baselines come from recent presidential and congressional results. Demographic adjustments use Census population estimates. Maps use US Census Bureau shapefiles.</p></section><footer class="methFoot">Built by <a href="https://x.com/The0_o7" target="_blank" rel="noreferrer">Theo</a> · 2026</footer></div></div>
+  <div class="sheet"><div id="app"><a class="skiplink" href="#main">Skip to the findings</a><header class="top"><div class="brand"><span class="name">Theo</span><span class="sep">·</span><span class="tag">Election Forecast '26</span></div><nav class="nav"><a class="" href="/model/" data-label="Model">Model</a><span class="dot">·</span><a class="" href="/ratings/" data-label="Ratings">Ratings</a><span class="dot">·</span><a class="" href="/florida/" data-label="Florida">Florida</a><span class="dot">·</span><a class="" href="/polls/" data-label="Polls">Polls</a><span class="dot">·</span><a class="" href="/swingometer/" data-label="Swingometer">Swingometer</a><span class="dot">·</span><a class="" href="/past-elections/" data-label="Past Elections">Past Elections</a><span class="dot">·</span><a class="" href="/state-legs/" data-label="State Legs.">State Legs.</a><span class="dot">·</span><a class="" href="/projects/" data-label="Projects">Projects</a><span class="dot">·</span><a class="active" href="/methodology/" data-label="Methodology" aria-current="page">Methodology</a></nav><div class="actions"><button class="iconbtn" type="button" aria-label="Switch to the dark ground" aria-pressed="false" title="Dark ground">dark</button><button class="donate" type="button">Donate</button></div></header><main id="main" tabindex="-1"><div class="t-announce" id="announce" role="status" aria-live="polite" aria-atomic="true"></div><div class="methAlmanac"><header class="methHero"><div class="methKicker">documentation</div><h1 class="methTitle">Methodology</h1><p class="methLede">How the 2026 midterm forecast works.</p></header><section class="methCard"><p class="methBody">This forecast projects the outcome of every Senate, gubernatorial, and House race in the 2026 midterm elections. It combines national polling, state-level surveys, and historical voting patterns into a probabilistic model that runs thousands of election simulations daily.</p></section><section class="methCard"><h2 class="methH2">Inputs</h2><p class="methBody">The model ingests three main signals: a <strong>generic ballot</strong> average computed from a quality-filtered, weighted rolling window of national polls; <strong>state and district polls</strong> where available; and<strong> historical partisan ratios</strong> derived from recent election results. These are blended together with weights that reflect their relative informativeness — state polls carry the most influence where they exist, and the generic ballot fills in everywhere else.</p><p class="methBody">A <strong>national indicator</strong> is also computed by reverse-engineering the implied national environment from all available state polls, providing an additional cross-check on the generic ballot signal.</p></section><section class="methCard"><h2 class="methH2">Adjustments</h2><p class="methBody">The model applies several corrections to improve accuracy. A <strong>pollster quality filter</strong> screens polls by historical track record and weights them accordingly. A <strong>circuit breaker</strong> in non-competitive states prevents the national trend from overriding strong local polling. A <strong>Hispanic voter adjustment</strong>accounts for shifts in Hispanic voter preference relative to recent baselines, scaled by each district's demographic composition.</p></section><section class="methCard"><h2 class="methH2">Simulation</h2><p class="methBody">Individual race win probabilities are derived from projected margins using a normal distribution that accounts for polling uncertainty. Chamber-level outcomes are determined through <strong>Monte Carlo simulation</strong> — each run draws a correlated national swing and resolves every race, producing a full election map. The share of simulations in which each party reaches a majority determines the control probability.</p></section><section class="methCard"><h2 class="methH2">What the numbers cover</h2><p class="methBody">Every figure on this site is a <strong>nowcast</strong>: what would happen if the election were held today, given the polling in hand. The series ends on the last day with polling behind it.</p><p class="methBody">Nothing is projected forward to Election Day. Undecided voters are left undecided rather than allocated to either party, so a lead here reflects the surveys as they were published and nothing added on top of them.</p></section><section class="methCard"><h2 class="methH2">Ratings</h2><p class="methBody">Each race is classified on a seven-point scale from Safe D to Safe R based on its projected margin. The thresholds are calibrated to reflect meaningful differences in competitiveness.</p><div class="methTableWrap"><table class="methTableA"><caption>The seven tiers, and the margin each one starts at</caption><thead><tr><th scope="col">rating</th><th scope="col">margin</th><th scope="col">description</th></tr></thead><tbody><tr><td><span class="methSwatch rtg-safeD"></span><span class="methRatingName">Safe D</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Democratic advantage</td></tr><tr><td><span class="methSwatch rtg-likelyD"></span><span class="methRatingName">Likely D</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Democratic lead</td></tr><tr><td><span class="methSwatch rtg-leanD"></span><span class="methRatingName">Lean D</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Democratic edge</td></tr><tr><td><span class="methSwatch rtg-tossup"></span><span class="methRatingName">Tossup</span></td><td class="methMono">&lt;2.5 pp</td><td class="methDesc">Either party could win</td></tr><tr><td><span class="methSwatch rtg-leanR"></span><span class="methRatingName">Lean R</span></td><td class="methMono">2.5–7.5 pp</td><td class="methDesc">Slight Republican edge</td></tr><tr><td><span class="methSwatch rtg-likelyR"></span><span class="methRatingName">Likely R</span></td><td class="methMono">7.5–15 pp</td><td class="methDesc">Clear Republican lead</td></tr><tr><td><span class="methSwatch rtg-safeR"></span><span class="methRatingName">Safe R</span></td><td class="methMono">&gt;15 pp</td><td class="methDesc">Strong Republican advantage</td></tr></tbody></table></div></section><section class="methCard"><h2 class="methH2">Data Sources</h2><p class="methBody">National and state polls are sourced from public polling databases and manually curated releases. Election baselines come from recent presidential and congressional results. Demographic adjustments use Census population estimates. Maps use US Census Bureau shapefiles.</p></section><footer class="methFoot">Built by <a href="https://x.com/The0_o7" target="_blank" rel="noreferrer">Theo</a> · 2026</footer></div></main></div>
   <!-- v13: offscreen DOM for forecast.js + ratings.js + past-elections.js + swingometer.js + state-legs.js + fl_redistricting.js + polls.js -->
   <div class="__legacy_offscreen" aria-hidden="true">
     <div class="wrap">
@@ -3808,7 +3829,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     <div class="mapControlBar" data-map-controls="">
       <button class="mapCtrlBtn" data-map-back="" style="display:none">← US</button>
-      <span class="mapCtrlLabel" data-map-label="">Click a state to zoom in</span>
+      <span class="mapCtrlLabel" data-map-label="">click a state to zoom in</span>
     </div>
 
     <section class="card oddsCard" aria-label="Senate model output">
@@ -3817,12 +3838,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="oddsTitle">Senate</div>
         </div>
         <div class="chartTabs">
-          <button class="chartTab active" data-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-chart-ylabel="">Win probability</div>
+        <div class="chartYLabel" data-chart-ylabel="">win probability</div>
         <svg class="comboSvg" data-combo-svg=""></svg>
         <div class="oddsStatus" data-odds-status=""></div>
       </div>
@@ -3875,7 +3896,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
 
     <div class="mapControlBar" data-map-controls="">
       <button class="mapCtrlBtn" data-map-back="" style="display:none">← US</button>
-      <span class="mapCtrlLabel" data-map-label="">Click a state to zoom in</span>
+      <span class="mapCtrlLabel" data-map-label="">click a state to zoom in</span>
     </div>
 
     <section class="card oddsCard" aria-label="Governor model output">
@@ -3884,12 +3905,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="oddsTitle">Governor</div>
         </div>
         <div class="chartTabs">
-          <button class="chartTab active" data-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-chart-ylabel="">Win probability</div>
+        <div class="chartYLabel" data-chart-ylabel="">win probability</div>
         <svg class="comboSvg" data-combo-svg=""></svg>
         <div class="oddsStatus" data-odds-status=""></div>
       </div>
@@ -3965,12 +3986,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="oddsTitle">Congress</div>
         </div>
         <div class="chartTabs">
-          <button class="chartTab active" data-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-chart-ylabel="">Win probability</div>
+        <div class="chartYLabel" data-chart-ylabel="">win probability</div>
         <svg class="comboSvg" data-combo-svg=""></svg>
         <div class="oddsStatus" data-odds-status=""></div>
       </div>
@@ -4006,12 +4027,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Senate</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-rtg-chart-tab="detailed">Detailed</button>
-          <button class="chartTab" data-rtg-chart-tab="faceoff">Face-off</button>
+          <button class="chartTab active" data-rtg-chart-tab="detailed">detailed</button>
+          <button class="chartTab" data-rtg-chart-tab="faceoff">face-off</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-rtg-ylabel="">Rating counts</div>
+        <div class="chartYLabel" data-rtg-ylabel="">rating counts</div>
         <svg class="comboSvg" data-rtg-chart=""></svg>
       </div>
     </section>
@@ -4040,12 +4061,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Governor</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-rtg-chart-tab="detailed">Detailed</button>
-          <button class="chartTab" data-rtg-chart-tab="faceoff">Face-off</button>
+          <button class="chartTab active" data-rtg-chart-tab="detailed">detailed</button>
+          <button class="chartTab" data-rtg-chart-tab="faceoff">face-off</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-rtg-ylabel="">Rating counts</div>
+        <div class="chartYLabel" data-rtg-ylabel="">rating counts</div>
         <svg class="comboSvg" data-rtg-chart=""></svg>
       </div>
     </section>
@@ -4095,12 +4116,12 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Congress</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-rtg-chart-tab="detailed">Detailed</button>
-          <button class="chartTab" data-rtg-chart-tab="faceoff">Face-off</button>
+          <button class="chartTab active" data-rtg-chart-tab="detailed">detailed</button>
+          <button class="chartTab" data-rtg-chart-tab="faceoff">face-off</button>
         </div>
       </div>
       <div class="oddsChartWrap">
-        <div class="chartYLabel" data-rtg-ylabel="">Rating counts</div>
+        <div class="chartYLabel" data-rtg-ylabel="">rating counts</div>
         <svg class="comboSvg" data-rtg-chart=""></svg>
       </div>
     </section>
@@ -4149,8 +4170,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">President</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-past-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-past-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-past-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-past-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
@@ -4198,8 +4219,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Senate</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-past-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-past-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-past-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-past-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
@@ -4247,8 +4268,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Governor</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-past-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-past-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-past-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-past-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
@@ -4296,8 +4317,8 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="oddsHead">
         <div><div class="oddsTitle">Congress</div></div>
         <div class="chartTabs">
-          <button class="chartTab active" data-past-chart-tab="prob">Win Prob</button>
-          <button class="chartTab" data-past-chart-tab="seats">Seats</button>
+          <button class="chartTab active" data-past-chart-tab="prob">prob.</button>
+          <button class="chartTab" data-past-chart-tab="seats">seats</button>
         </div>
       </div>
       <div class="oddsChartWrap">
@@ -4579,7 +4600,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r="">50.0</span></div>
         </div>
       </div>
-      <div class="flrSeats">
+      <div class="flrSeats" role="img" aria-label="The seat split these lines produce">
         <div class="flrSeatNums">
           <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d="">—</span>
           <span class="flrSeatDivider"></span>
@@ -4588,8 +4609,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         <canvas data-sim-canvas="" class="flrSimCanvas"></canvas>
       </div>
       <div class="flrMapWrap">
-        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg class="flrMap" role="img" aria-label="Florida's congressional districts, each filled by the party it leans to" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
+      <div class="t-how"><b>how to read</b> · each district is filled by the party it leans to at these inputs; the number above is the seat split those fills add up to.</div>
+      <div class="t-src">Source: the enacted district lines and this site's district baselines.</div>
     </section>
 
     <!-- ===== Card 2: New Forecast ===== -->
@@ -4604,7 +4627,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <div class="metricPill red"><span class="dot"></span><span class="val" data-pill-r="">50.0</span></div>
         </div>
       </div>
-      <div class="flrSeats">
+      <div class="flrSeats" role="img" aria-label="The seat split these lines produce">
         <div class="flrSeatNums">
           <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d="">—</span>
           <span class="flrSeatDivider"></span>
@@ -4613,8 +4636,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         <canvas data-sim-canvas="" class="flrSimCanvas"></canvas>
       </div>
       <div class="flrMapWrap">
-        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg class="flrMap" role="img" aria-label="Florida's congressional districts, each filled by the party it leans to" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
+      <div class="t-how"><b>how to read</b> · each district is filled by the party it leans to at these inputs; the number above is the seat split those fills add up to.</div>
+      <div class="t-src">Source: the enacted district lines and this site's district baselines.</div>
     </section>
 
     <!-- ===== Card 3: Old Swingometer ===== -->
@@ -4651,7 +4676,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <span class="flrSliderVal" data-val-hisp-r="">—</span>
         </div>
       </div>
-      <div class="flrSeats">
+      <div class="flrSeats" role="img" aria-label="The seat split these lines produce">
         <div class="flrSeatNums">
           <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d="">—</span>
           <span class="flrSeatDivider"></span>
@@ -4660,8 +4685,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         <canvas data-sim-canvas="" class="flrSimCanvas"></canvas>
       </div>
       <div class="flrMapWrap">
-        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg class="flrMap" role="img" aria-label="Florida's congressional districts, each filled by the party it leans to" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
+      <div class="t-how"><b>how to read</b> · each district is filled by the party it leans to at these inputs; the number above is the seat split those fills add up to.</div>
+      <div class="t-src">Source: the enacted district lines and this site's district baselines.</div>
     </section>
 
     <!-- ===== Card 4: New Swingometer ===== -->
@@ -4698,7 +4725,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
           <span class="flrSliderVal" data-val-hisp-r="">—</span>
         </div>
       </div>
-      <div class="flrSeats">
+      <div class="flrSeats" role="img" aria-label="The seat split these lines produce">
         <div class="flrSeatNums">
           <span class="flrSeatLabel d">D</span><span class="flrSeatNum d" data-seats-d="">—</span>
           <span class="flrSeatDivider"></span>
@@ -4707,8 +4734,10 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
         <canvas data-sim-canvas="" class="flrSimCanvas"></canvas>
       </div>
       <div class="flrMapWrap">
-        <svg class="flrMap" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg class="flrMap" role="img" aria-label="Florida's congressional districts, each filled by the party it leans to" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
+      <div class="t-how"><b>how to read</b> · each district is filled by the party it leans to at these inputs; the number above is the seat split those fills add up to.</div>
+      <div class="t-src">Source: the enacted district lines and this site's district baselines.</div>
     </section>
 
   </div>
@@ -5180,7 +5209,17 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       var btn = q(".__legacy_offscreen [data-ratings-mode='" + mode + "'] [data-rtg-chart-tab='" + tab + "']");
       if (btn) { btn.click(); return true; } return false;
     }
-    function triggerResize(){ try { window.dispatchEvent(new Event("resize")); } catch (e) {} }
+    function triggerResize(){
+      try { window.dispatchEvent(new Event("resize")); } catch (e) {}
+      // [7.7] The app calls this right after it teleports a map out of its
+      // legacy stage. The small-state chips are built where the SVG was
+      // drawn, so this is where they follow it and repaint.
+      try {
+        if (window.__geo && window.__geo.refreshInsets) {
+          requestAnimationFrame(function(){ window.__geo.refreshInsets(); });
+        }
+      } catch (e) {}
+    }
     function zoomHouseTo(target){
       if (!target) return false;
       try {

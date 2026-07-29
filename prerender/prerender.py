@@ -283,7 +283,20 @@ def main() -> int:
 
     with _local_server(REPO_ROOT) as base_url:
         with sync_playwright() as p:
-            browser = p.chromium.launch()
+            # A build box may ship its own Chromium rather than the one
+            # `playwright install` fetches. CHROMIUM_PATH points at it; without
+            # it Playwright looks for a headless shell that may not be there.
+            _exe = os.environ.get("CHROMIUM_PATH")
+            if not _exe:
+                for candidate in Path("/opt/pw-browsers").glob("chromium-*/chrome-linux/chrome"):
+                    _exe = str(candidate)
+                    break
+            browser = p.chromium.launch(
+                **({"executable_path": _exe} if _exe else {}),
+                args=["--no-sandbox"],
+            )
+            if _exe:
+                print(f"  [note] chromium: {_exe}")
             # ignore_https_errors=True: forecast.js fetches the US topo from
             # cdn.jsdelivr.net at runtime. Some build/CI environments lack a
             # complete CA bundle for chromium and reject the cert, which would
@@ -292,6 +305,20 @@ def main() -> int:
                 viewport={"width": 1280, "height": 900},
                 ignore_https_errors=True,
             )
+            # The US topology is fetched from a CDN at runtime, and a build box
+            # that cannot reach it renders every map empty — which is worse
+            # than a build that fails, because it ships. A vendored copy is
+            # served in its place when one is present.
+            atlas = REPO_ROOT / "prerender" / "fixtures" / "states-10m.json"
+            if atlas.exists():
+                body = atlas.read_text()
+                context.route(
+                    "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json",
+                    lambda r: r.fulfill(status=200,
+                                        content_type="application/json",
+                                        body=body),
+                )
+                print("  [note] serving the vendored us-atlas fixture")
             try:
                 for route in routes:
                     t0 = time.time()
