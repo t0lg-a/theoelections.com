@@ -402,6 +402,8 @@ function swingRecolorMap(mode, gb){
     // [5.17][5.23] The lean, for the greyscale and forced-colours cue.
     el.attr("data-lean", !isFinite(margin) ? "none"
       : Math.abs(margin) < 2 ? "contested" : (margin > 0 ? "r" : "d"));
+    // [7.17] What the fill says, for the map's text alternative.
+    el.attr("data-reading", window.__geo.marginReading(margin));
   });
 
   // [7.8] Labels flip only once they know what they sit on.

@@ -25,7 +25,13 @@ What it asserts, and why each one is here rather than left to review:
   7  a title and a source on every figure
   8  a decode gate on every novel form
   9  no horizontal overflow at seven widths
- 10  44px touch targets below 760
+ 10  44px touch targets below 760. Two exceptions, both earned rather than
+     assumed: a map unit, whose size is the shape of a state and not a
+     decision anybody made, is exempt only where an equivalent chip exists,
+     and this asserts the chip; a link inside a sentence is exempt only
+     where there is really a sentence around it. Two targets closer than
+     8px fail unless both clear 44 in both directions, which is the
+     alternative the rule itself offers.
  11  no motion, and none re-introduced under reduced-motion
  12  print: no chrome, one column, the record whole
 
@@ -33,7 +39,9 @@ Exit code 1 on any failure, so it can gate a build.
 """
 
 import argparse
+import glob
 import json
+import os
 import pathlib
 import sys
 
@@ -41,7 +49,23 @@ from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ORIGIN = "http://127.0.0.1:8899"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# The browser, wherever it is. This box keeps one at a pinned path; a
+# build box that ran `playwright install` keeps its own somewhere else, and
+# hardcoding this one meant every check in the harness failed on any
+# machine but this one. None hands the choice back to Playwright.
+def _chrome():
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    for pat in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")):
+        hits = sorted(glob.glob(pat))
+        if hits:
+            return hits[-1]
+    return None
+
+
+CHROME = _chrome()
 ATLAS_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"
 ATLAS_LOCAL = ROOT / "prerender" / "fixtures" / "states-10m.json"
 
@@ -129,14 +153,81 @@ CANON = r"""() => {
     overflow: document.body.scrollWidth > window.innerWidth + 1,
     scrollW: document.body.scrollWidth,
     innerW: window.innerWidth,
+    // A map unit is the one control on this site whose size is not a
+    // decision anybody made: a state is the shape it is, and no stylesheet
+    // makes Rhode Island 44 pixels wide. The target-size rule allows an
+    // equivalent control elsewhere, and this site's is the chip row — so the
+    // unit is exempted here and the chip is asserted below. An exemption
+    // that is not paid for is just a rule with a hole in it.
     small: [...document.querySelectorAll('button, a[href], [role=button]')]
-      .map(e => ({n: name(e), r: e.getBoundingClientRect()}))
-      .filter(x => x.r.width > 0 && x.r.height > 0 &&
+      .map(e => ({
+        n: name(e), tag: e.tagName.toLowerCase(), r: e.getBoundingClientRect(),
+        // A link inside a sentence is sized by the sentence: growing it to
+        // 44 would open a hole in the prose. The rule's own inline
+        // exception, and it is only earned when there really is text either
+        // side of the link rather than a row of links pretending to be one.
+        inline: e.tagName === 'A' && !!e.parentElement &&
+          [...e.parentElement.childNodes].some(
+            n => n.nodeType === 3 && n.textContent.trim()),
+      }))
+      .filter(x => x.tag !== 'path' && !x.inline &&
+                   x.r.width > 0 && x.r.height > 0 &&
                    x.r.left > -1000 &&
                    (x.r.width < 44 || x.r.height < 44))
       .map(x => x.n + ' ' + Math.round(x.r.width) + 'x' + Math.round(x.r.height))
       .filter((v, i, a) => a.indexOf(v) === i)
       .slice(0, 8),
+    // [10.16] Two targets closer than eight pixels apart is a mis-tap
+    // waiting to happen. WCAG offers size as the alternative to spacing —
+    // a target big enough does not need the gap — so this fails a pair
+    // only when they are both close AND at least one of them is small.
+    // The nav's links are the case this is written around: they sit two
+    // pixels apart either side of a middot, and they are 44 in both
+    // directions, so the alternative is met and the gap is not needed.
+    crowded: (() => {
+      const t = [...document.querySelectorAll('button, a[href], [role=button]')]
+        .filter(e => e.tagName.toLowerCase() !== 'path')
+        .map(e => ({n: name(e), r: e.getBoundingClientRect()}))
+        .filter(x => x.r.width > 0 && x.r.height > 0 && x.r.left > -1000);
+      const big = x => x.r.width >= 44 && x.r.height >= 44;
+      const gap = (a, b) => Math.max(
+        a.r.left - b.r.right, b.r.left - a.r.right,
+        a.r.top - b.r.bottom, b.r.top - a.r.bottom);
+      const out = [];
+      for (let i = 0; i < t.length; i++){
+        for (let j = i + 1; j < t.length; j++){
+          const g = gap(t[i], t[j]);
+          if (g >= 8) continue;
+          // Overlapping or nested targets are a different fault and the
+          // size rule above already speaks to them.
+          if (g < -1) continue;
+          if (big(t[i]) && big(t[j])) continue;
+          out.push(t[i].n + ' / ' + t[j].n + ' ' + Math.round(g) + 'px apart');
+        }
+      }
+      return [...new Set(out)].slice(0, 8);
+    })(),
+    // [7.22][10.16] Every map unit a thumb cannot hit, that has no chip
+    // standing in for it.
+    unchipped: (() => {
+      const out = [];
+      document.querySelectorAll('svg path.state.active[role=button]').forEach(u => {
+        const r = u.getBoundingClientRect();
+        if (r.width <= 0 || r.height <= 0) return;
+        if (r.width >= 44 && r.height >= 44) return;
+        // The offscreen stage the legacy modules draw into is not a surface
+        // anybody touches.
+        if (u.closest('.__legacy_offscreen')) return;
+        const st = u.getAttribute('data-st') || '?';
+        // Resolved outward in the same order GEO.insetChips homes the row,
+        // because .mapHost is the nearer ancestor and the row is not in it.
+        const block = u.closest('.mapBlock') || u.closest('.mapHostWrap') ||
+                      u.closest('.mapHost');
+        if (block && block.querySelector('.mapChip[data-st="' + st + '"]')) return;
+        out.push(st);
+      });
+      return [...new Set(out)].slice(0, 12);
+    })(),
   };
 }"""
 
@@ -193,6 +284,12 @@ def main() -> int:
                     # 10 · touch targets, on the phone widths only
                     if width <= 760 and r["small"]:
                         fail(where, "touch-target", ", ".join(r["small"]))
+                    if width <= 760 and r["crowded"]:
+                        fail(where, "target-spacing", ", ".join(r["crowded"]))
+                    if width <= 760 and r["unchipped"]:
+                        fail(where, "no-equivalent-target",
+                             "map units under 44px with no chip: %s"
+                             % ", ".join(r["unchipped"]))
                     ctx.close()
 
         # [12.21] Reduced motion, and [12.22] print, at one width each: the

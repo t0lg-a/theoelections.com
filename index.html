@@ -168,7 +168,9 @@
     font-family: var(--t-data);
     font-size: var(--t-fs-1);
     font-weight: 500;
-    color: var(--t-faint);
+    /* [10.5] Faint is for a rule, an edge, a disabled word — never for a
+       value, and a hostname is one. It read at 1.98:1. */
+    color: var(--t-muted);
   }
 
   .foot{

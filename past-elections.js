@@ -1041,7 +1041,7 @@ function prepareHist(mode, histData){
 }
 
 /* ---------- Simulation histogram (mirrors forecast.js drawSeatSimMini) ---------- */
-function renderPastSim(mode, histData, rule){
+function renderPastSim(mode, histData, rule, cursorIdx){
   const canvas = PAST_UI[mode]?.simCanvas;
   if (!canvas || !histData) return;
 
@@ -1071,18 +1071,21 @@ function renderPastSim(mode, histData, rule){
   const availH = Math.max(1, h - padTop - padBot);
   const barW = w / n;
 
-  const cs = getComputedStyle(document.documentElement);
-  const blue = cs.getPropertyValue("--blue").trim() || "#1E6FD9";
-  const red  = cs.getPropertyValue("--red").trim()  || "#D62828";
-  const lineCol = "rgba(31,41,55,0.35)";
+  // [6.15] The system's inks, read from the tokens like every other figure.
+  const PAL = window.__pal;
+  const blue = PAL.PAL.dem();
+  const red  = PAL.PAL.rep();
+  const lineCol = PAL.PAL.ink();
 
   const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
   const minBin = hist.min ?? 0;
   const thr = rule.majorityLine;
 
-  ctx.globalAlpha = 0.82;
-  const radius = Math.max(1, Math.round(1.5 * dpr));
-
+  // [5.x][6.15] This histogram drew its bars at alpha .82 with a 1.5px
+  // rounded top. Alpha manufactures a colour the palette does not contain
+  // wherever two bars meet a rule, and a rounded corner is a different
+  // system. Neither was visible to the colour checker, which reads the DOM
+  // and cannot see inside a canvas.
   for (let i = 0; i < n; i++){
     const frac = counts[i] / maxCount;
     const bh = Math.max(1, Math.round(frac * availH));
@@ -1092,37 +1095,36 @@ function renderPastSim(mode, histData, rule){
 
     const seatVal = minBin + i * bs;
     ctx.fillStyle = (isFinite(thr) && seatVal >= thr) ? blue : red;
-
-    // Rounded top corners
-    const r = Math.min(radius, bw/2, bh);
-    ctx.beginPath();
-    ctx.moveTo(x, y + bh);
-    ctx.lineTo(x, y + r);
-    ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.lineTo(x + bw - r, y);
-    ctx.quadraticCurveTo(x + bw, y, x + bw, y + r);
-    ctx.lineTo(x + bw, y + bh);
-    ctx.closePath();
-    ctx.fill();
+    ctx.fillRect(x, y, bw, bh);
   }
 
-  ctx.globalAlpha = 1;
-
-  // Control threshold line
+  // [6.10] A threshold is an ink rule, full weight and full opacity, and it
+  // sits on top of the bars rather than under them.
   if (isFinite(thr)){
     const boundary = (thr - minBin) / (bs * n);
     const x = Math.round(clamp(boundary, 0, 1) * w);
     ctx.strokeStyle = lineCol;
-    ctx.lineWidth = Math.max(1, Math.round(1*dpr));
+    ctx.lineWidth = Math.max(1, Math.round(
+      window.__axis.tokenPx("--t-w-rule", 1.5) * dpr));
     ctx.beginPath();
-    ctx.moveTo(x, padTop);
-    ctx.lineTo(x, h - padBot);
+    ctx.moveTo(x + 0.5, 0);
+    ctx.lineTo(x + 0.5, h);
     ctx.stroke();
+  }
+
+  // [6.12][6.16] The datum under the cursor, in the site's one cursor mark.
+  if (isFinite(cursorIdx) && cursorIdx >= 0 && cursorIdx < n){
+    const bh = Math.max(1, Math.round((counts[cursorIdx] / maxCount) * availH));
+    const bw = Math.max(1, Math.ceil(barW - 1*dpr));
+    const seatVal = minBin + cursorIdx * bs;
+    window.__mark.cursorOnCanvas(ctx,
+      Math.floor(cursorIdx * barW) + bw/2, h - padBot - bh,
+      (isFinite(thr) && seatVal >= thr) ? blue : red, dpr);
   }
 
   // Store transformed hist for hover
   const total = hist.total || counts.reduce((a,b)=>a+b,0) || 1;
-  canvas._simMeta = { hist, threshold: thr, total };
+  canvas._simMeta = { hist, threshold: thr, total, mode, histData, rule };
   ensurePastSimHover(canvas);
 }
 
@@ -1151,13 +1153,21 @@ function ensurePastSimHover(canvas){
     const endSeat = startSeat + (bs - 1);
     const seatLabel = (bs > 1) ? `${startSeat}–${endSeat}` : `${startSeat}`;
 
+    // [6.16] The tooltip says which bar it is talking about; now so does
+    // the figure.
+    if (meta.mode) renderPastSim(meta.mode, meta.histData, meta.rule, idx);
+
     showPastSimTip(ev,
       `<div class="stDate">${seatLabel} D seats</div>` +
       `<div class="stRow"><span class="stDot" style="background:var(--blue)"></span><span class="stVal">${pct.toFixed(1)}%</span></div>`
     );
   });
 
-  canvas.addEventListener("mouseleave", hidePastSimTip);
+  canvas.addEventListener("mouseleave", ()=>{
+    hidePastSimTip();
+    const meta = canvas._simMeta;
+    if (meta && meta.mode) renderPastSim(meta.mode, meta.histData, meta.rule);
+  });
 }
 
 /* ---------- Map ---------- */
@@ -1400,19 +1410,15 @@ function showPastTip(event, year, mode, st){
 }
 
 function positionPastTip(event){
-  const tip = document.getElementById("pastTip");
-  if (!tip) return;
-  const pad = 14;
-  let x = event.clientX + pad, y = event.clientY + pad;
-  const tr = tip.getBoundingClientRect();
-  if (x + tr.width > window.innerWidth - 8) x = event.clientX - tr.width - pad;
-  if (y + tr.height > window.innerHeight - 8) y = event.clientY - tr.height - pad;
-  tip.style.transform = `translate(${x}px,${y}px)`;
+  // [7.23][9.22] Through the one placer, so this card docks on touch like
+  // every other card on the site.
+  window.__tip.place(document.getElementById("pastTip"), event,
+                     { pad: 14, transform: true });
 }
 
 function hidePastTip(){
   const tip = document.getElementById("pastTip");
-  if (tip){ tip.style.transform = "translate(-9999px,-9999px)"; tip.style.opacity = "0"; }
+  if (tip){ window.__tip.hide(tip); tip.style.opacity = "0"; }
 }
 
 /* ---------- Combo chart (Win Prob / Seats — identical to forecast.js renderComboChart) ---------- */
@@ -1533,33 +1539,10 @@ function showPastSimTip(ev, html){
   const tip = document.getElementById("pastSimTip");
   if (!tip) return;
   tip.innerHTML = html;
-  const pad = 12;
-
-  // Measure size first
-  tip.style.transform = "translate(0,0)";
-  tip.style.left = "0px";
-  tip.style.top  = "0px";
-
-  const tw = tip.offsetWidth;
-  const th = tip.offsetHeight;
-
-  let x = ev.clientX + pad;
-  let y = ev.clientY + pad;
-
-  if (x + tw + pad > window.innerWidth) x = ev.clientX - tw - pad;
-  if (y + th + pad > window.innerHeight) y = ev.clientY - th - pad;
-
-  tip.style.left = x + "px";
-  tip.style.top  = y + "px";
-  tip.style.transform = "";
+  window.__tip.place(tip, ev);
 }
 function hidePastSimTip(){
-  const tip = document.getElementById("pastSimTip");
-  if (tip){
-    tip.style.transform = "translate(-9999px,-9999px)";
-    tip.style.left = "";
-    tip.style.top = "";
-  }
+  window.__tip.hide(document.getElementById("pastSimTip"));
 }
 
 /* ---------- Chart tab switching ---------- */

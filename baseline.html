@@ -3138,7 +3138,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
      Hosts for teleported elements. The histogram canvas, main chart SVG,
      senate/governor map SVGs, state-detail chart SVGs, and poll list div
      all keep visibility:visible while in the Almanac DOM. */
-  .pollsHistHost { width: 100%; height: 36px; margin: 6px 0 0; position: relative; }
+  .pollsHistHost { width: 100%; height: 48px; margin: 6px 0 0; position: relative; }
   .pollsHistHost > canvas {
     visibility: visible !important;
     width: 100% !important; height: 100% !important; display: block;
@@ -4198,13 +4198,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="swingSliderRow">
         <div class="swingDot blue"></div>
         <span class="swingPartyLbl blue">D</span>
-        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" data-swing-slider-d />
+        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" aria-label="Democratic share of the national two-party vote" data-swing-slider-d />
         <span class="swingSliderVal" data-swing-val-d>50.0</span>
       </div>
       <div class="swingSliderRow">
         <div class="swingDot red"></div>
         <span class="swingPartyLbl red">R</span>
-        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" data-swing-slider-r />
+        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" aria-label="Republican share of the national two-party vote" data-swing-slider-r />
         <span class="swingSliderVal" data-swing-val-r>50.0</span>
       </div>
       <div class="swingMarginRow">
@@ -4253,13 +4253,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="swingSliderRow">
         <div class="swingDot blue"></div>
         <span class="swingPartyLbl blue">D</span>
-        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" data-swing-slider-d />
+        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" aria-label="Democratic share of the national two-party vote" data-swing-slider-d />
         <span class="swingSliderVal" data-swing-val-d>50.0</span>
       </div>
       <div class="swingSliderRow">
         <div class="swingDot red"></div>
         <span class="swingPartyLbl red">R</span>
-        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" data-swing-slider-r />
+        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" aria-label="Republican share of the national two-party vote" data-swing-slider-r />
         <span class="swingSliderVal" data-swing-val-r>50.0</span>
       </div>
       <div class="swingMarginRow">
@@ -4308,13 +4308,13 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="swingSliderRow">
         <div class="swingDot blue"></div>
         <span class="swingPartyLbl blue">D</span>
-        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" data-swing-slider-d />
+        <input type="range" class="swingRange blue" min="30" max="70" step="0.1" value="50" aria-label="Democratic share of the national two-party vote" data-swing-slider-d />
         <span class="swingSliderVal" data-swing-val-d>50.0</span>
       </div>
       <div class="swingSliderRow">
         <div class="swingDot red"></div>
         <span class="swingPartyLbl red">R</span>
-        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" data-swing-slider-r />
+        <input type="range" class="swingRange red" min="30" max="70" step="0.1" value="50" aria-label="Republican share of the national two-party vote" data-swing-slider-r />
         <span class="swingSliderVal" data-swing-val-r>50.0</span>
       </div>
       <div class="swingMarginRow">
@@ -4389,7 +4389,7 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
     </section>
     <div class="mapControlBar" data-sldl-controls>
       <button class="zoomBtn active" data-sldl-zoom="us">US</button>
-      <select class="zoomSelect" data-sldl-zoom-select>
+      <select class="zoomSelect" aria-label="Zoom the map to a state" data-sldl-zoom-select>
         <option value="">State…</option>
       </select>
     </div>
@@ -4470,22 +4470,22 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="flrSliders">
         <div class="flrSliderRow">
           <span class="flrSliderLbl d">D</span>
-          <input type="range" min="30" max="70" step="0.1" data-slider-gb-d />
+          <input type="range" min="30" max="70" step="0.1" aria-label="Democratic share of the national two-party vote" data-slider-gb-d />
           <span class="flrSliderVal" data-val-gb-d>—</span>
         </div>
         <div class="flrSliderRow">
           <span class="flrSliderLbl r">R</span>
-          <input type="range" min="30" max="70" step="0.1" data-slider-gb-r />
+          <input type="range" min="30" max="70" step="0.1" aria-label="Republican share of the national two-party vote" data-slider-gb-r />
           <span class="flrSliderVal" data-val-gb-r>—</span>
         </div>
         <div class="flrSliderRow flrHispRow">
           <span class="flrSliderLbl d">Hisp&nbsp;D</span>
-          <input type="range" min="20" max="90" step="1" data-slider-hisp-d />
+          <input type="range" min="20" max="90" step="1" aria-label="Democratic share among Hispanic voters" data-slider-hisp-d />
           <span class="flrSliderVal" data-val-hisp-d>—</span>
         </div>
         <div class="flrSliderRow">
           <span class="flrSliderLbl r">Hisp&nbsp;R</span>
-          <input type="range" min="10" max="80" step="1" data-slider-hisp-r />
+          <input type="range" min="10" max="80" step="1" aria-label="Republican share among Hispanic voters" data-slider-hisp-r />
           <span class="flrSliderVal" data-val-hisp-r>—</span>
         </div>
       </div>
@@ -4519,22 +4519,22 @@ html[data-theme="dark"] .panelSub { color: var(--text-muted); }
       <div class="flrSliders">
         <div class="flrSliderRow">
           <span class="flrSliderLbl d">D</span>
-          <input type="range" min="30" max="70" step="0.1" data-slider-gb-d />
+          <input type="range" min="30" max="70" step="0.1" aria-label="Democratic share of the national two-party vote" data-slider-gb-d />
           <span class="flrSliderVal" data-val-gb-d>—</span>
         </div>
         <div class="flrSliderRow">
           <span class="flrSliderLbl r">R</span>
-          <input type="range" min="30" max="70" step="0.1" data-slider-gb-r />
+          <input type="range" min="30" max="70" step="0.1" aria-label="Republican share of the national two-party vote" data-slider-gb-r />
           <span class="flrSliderVal" data-val-gb-r>—</span>
         </div>
         <div class="flrSliderRow flrHispRow">
           <span class="flrSliderLbl d">Hisp&nbsp;D</span>
-          <input type="range" min="20" max="90" step="1" data-slider-hisp-d />
+          <input type="range" min="20" max="90" step="1" aria-label="Democratic share among Hispanic voters" data-slider-hisp-d />
           <span class="flrSliderVal" data-val-hisp-d>—</span>
         </div>
         <div class="flrSliderRow">
           <span class="flrSliderLbl r">Hisp&nbsp;R</span>
-          <input type="range" min="10" max="80" step="1" data-slider-hisp-r />
+          <input type="range" min="10" max="80" step="1" aria-label="Republican share among Hispanic voters" data-slider-hisp-r />
           <span class="flrSliderVal" data-val-hisp-r>—</span>
         </div>
       </div>

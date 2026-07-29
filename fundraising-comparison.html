@@ -209,11 +209,12 @@
     .source {
       font-size: 9px;
       font-weight: 700;
-      color: var(--ink);
+      /* [10.5] Quiet is a step down the ink ramp, never an opacity: at .6
+         this read under the floor and no token owned the colour it made. */
+      color: var(--t-muted);
       margin-top: 12px;
-      text-transform: uppercase;
       letter-spacing: 0.08em;
-      opacity: 0.6;
+      opacity: 1;
       line-height: 1.5;
     }
     @media (max-width: 540px) {
@@ -241,6 +242,9 @@
       </div>
     </header>
 
+    <!-- [10.18] A main landmark, so a screen reader can skip the masthead
+         and land on the sheet. -->
+    <main id="main" tabindex="-1">
     <div class="card">
 
       <div class="kicker">texas statewide · four Democratic challengers, real dollars</div>
@@ -260,11 +264,12 @@
         <div class="tip" id="tip"></div>
       </div>
 
-      <div class="source">
-        Source: FEC, Texas Ethics Commission, Texas Tribune, OpenSecrets, BLS · Cycle-midpoint deflation · Beto '22 Gov ran Nov 2021 – Nov 2022
-      </div>
-
     </div>
+    </main>
+
+    <footer class="source">
+      Source: FEC, Texas Ethics Commission, Texas Tribune, OpenSecrets, BLS · Cycle-midpoint deflation · Beto '22 Gov ran Nov 2021 – Nov 2022
+    </footer>
 
   </div>
 

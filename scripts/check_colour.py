@@ -24,7 +24,9 @@ colour of every element, and fails on:
 Exit code 1 on any violation, so it can gate a build.
 """
 
+import glob
 import json
+import os
 import pathlib
 import re
 import sys
@@ -33,7 +35,23 @@ from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ORIGIN = "http://127.0.0.1:8899"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# The browser, wherever it is. This box keeps one at a pinned path; a
+# build box that ran `playwright install` keeps its own somewhere else, and
+# hardcoding this one meant every check in the harness failed on any
+# machine but this one. None hands the choice back to Playwright.
+def _chrome():
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    for pat in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")):
+        hits = sorted(glob.glob(pat))
+        if hits:
+            return hits[-1]
+    return None
+
+
+CHROME = _chrome()
 ATLAS_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"
 ATLAS_LOCAL = ROOT / "prerender" / "fixtures" / "states-10m.json"
 
@@ -127,6 +145,8 @@ PROBE = r"""() => {
     '.methTable,.methTableA,.rtgLabels,.ratingLabels,.pollsHistLabels,' +
     '.simTip,#tip,.sldlCursorTip,.pollsListHost,.swingMarginVal,.histoCap,' +
     '.rtgBar,.rtgSeg,.rtgSummary,.rtgCountItem,.ratingsSummaryCard,.rtgFace,' +
+    // [8.16] The agate list is a figure: it is the map's data, in words.
+    '.agate,.agateBlock,' +
     '.oddsCard,.panelBody,.flrSimCanvas,.flrMapWrap,.gbMeta';
   const nums = s => { const m = String(s).match(/-?[\d.]+/g); return m ? m.map(Number) : null; };
   const rgb = s => { const m = nums(s); return m ? m.slice(0,3) : null; };

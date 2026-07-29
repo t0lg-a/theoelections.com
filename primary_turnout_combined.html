@@ -83,7 +83,8 @@ body { padding: 22px 16px 40px; }
 .display-mark {
   font-size: 34px; font-weight: 900; letter-spacing: -0.04em; line-height: 1;
 }
-.display-mark .sep { color: var(--red); }
+/* [5.x] A separator inside a wordmark is a rule, not a datum. */
+.display-mark .sep { color: var(--t-faint); }
 .title-meta { border-left: 1px solid var(--ink); padding-left: 14px; flex: 1; }
 .title-meta .lbl {
   font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
@@ -106,8 +107,19 @@ body { padding: 22px 16px 40px; }
   font-variant-numeric: tabular-nums;
 }
 .stat-rule { width: 1px; background: var(--ink); align-self: stretch; }
-.stat-blue .stat-val { color: var(--blue-dark); }
-.stat-red .stat-val { color: var(--red-dark); }
+/* [5.6][10.5] The colour goes on the swatch, never on the number. A data
+   ink behind a 20px figure on paper reads at 3.4:1, and the label above it
+   already says which party it is. */
+.stat-blue .stat-lbl::before, .stat-red .stat-lbl::before{
+  content:"";
+  display:inline-block;
+  width:8px;height:8px;
+  margin-right:5px;
+  vertical-align:baseline;
+  border:1px solid var(--t-ink);
+}
+.stat-blue .stat-lbl::before{ background: var(--t-d5); }
+.stat-red .stat-lbl::before{ background: var(--t-d1); }
 
 /* Section heading */
 h2.section {
@@ -212,12 +224,16 @@ svg.chart { width: 100%; height: auto; display: block; }
     </div>
   </header>
 
+  <!-- [10.18] A main landmark, so a screen reader can skip the masthead
+       and land on the sheet. This page had none. -->
+  <main id="main" tabindex="-1">
+
   <!-- TITLE ROW -->
   <div class="title-row">
     <div class="box title-left">
       <div class="display-mark">PV<span class="sep">/</span>26</div>
       <div class="title-meta">
-        <div class="lbl">Primary Turnout · National Analysis</div>
+        <h1 class="lbl">Primary Turnout · National Analysis</h1>
         <div class="sub">FEC + STATE SOS · 2000–2026 · 50 STATES + DC</div>
       </div>
     </div>
@@ -249,11 +265,15 @@ svg.chart { width: 100%; height: auto; display: block; }
 
   <!-- CHART 1: SCATTER -->
   <div class="box">
-    <h2 class="section">Primary vs General Election Vote, by Party</h2>
+    <!-- [11.13] The title states what the figure found; the dek states what
+         shape it is. It was the other way round. -->
+    <h2 class="section" id="scatterTitle">Primary turnout against the general, cycle by cycle</h2>
     <p class="section-sub">
-      Each dot is one state. Y = GE vote ÷ primary vote (same year for presidential cycles, prior
-      presidential cycle for midterms). Log scale. 2026 dots (ringed) cover TX, NC, IL, MS, AR.
-      Bars = state median per cycle.
+      A scatter, one ring per state per party. Y is general-election votes ÷ primary votes
+      (same year for presidential cycles, the prior presidential cycle for midterms), on a log
+      scale — so a <b>lower</b> ring means more of a party's general-election vote showed up in
+      its primary. The solid line is that cycle's state median; 2026 is drawn on the dash
+      because only TX, NC, IL, MS and AR have reported.
     </p>
     <div class="controls">
       <div class="seg" id="partySeg">
@@ -277,12 +297,13 @@ svg.chart { width: 100%; height: auto; display: block; }
 
   <!-- CHART 2: CORRELATION -->
   <div class="box">
-    <h2 class="section">Primary Enthusiasm Gap vs General Election Result</h2>
+    <h2 class="section" id="corrTitle">The enthusiasm gap against what the country then did</h2>
     <p class="section-sub">
-      X = ln(R median ratio / D median ratio). Positive X = Democrats had relatively higher primary
-      enthusiasm. Y = D two-party share of the relevant national popular vote (presidential popular
-      vote in pres years, House popular vote in midterms). 2026 projection from mean of three
-      regression lines.
+      A scatter of cycles, one ring each. X is ln(R median ratio ÷ D median ratio), so positive X
+      means Democrats had the relatively higher primary enthusiasm. Y is the Democratic share of
+      the two-party national vote — presidential in presidential years, House in midterms. The
+      three solid lines are least-squares fits; the 2026 mark is their mean, with a ±2.5 point
+      bar, and it is an estimate rather than an observation.
     </p>
     <div class="plate" id="corrPlate">
       <svg id="corr" class="chart" viewBox="0 0 760 540"></svg>
@@ -295,6 +316,18 @@ svg.chart { width: 100%; height: auto; display: block; }
 
   </div>
   <!-- /charts-row -->
+
+  </main>
+
+  <!-- [10.18] The figures redraw under the reader's hands when the party
+       filter or the midterm toggle moves, and said nothing. -->
+  <div class="t-announce" id="announce" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="foot">
+    <span><b>Data</b>&nbsp; FEC primary returns 2000–2024, state election offices for 2026</span>
+    <span class="sep">·</span>
+    <span><b>Method</b>&nbsp; state-level medians of general votes ÷ primary votes</span>
+  </footer>
 
 </div>
 
@@ -324,12 +357,41 @@ const CORR_DATA = [
 const POINT_2026 = { year: 2026, dMed: 3.0, rMed: 4.6, enth: 0.427, ge: null, pres: false };
 
 
-const COLORS = {
-  blue: '#2563eb', blueDark: '#1e40af',
-  red: '#dc2626', redDark: '#991b1b',
-  ink: '#111827', muted: '#6b7280', faint: '#9ca3af',
-  rule: 'var(--t-hair)', card: 'var(--t-paper)', purple: 'var(--t-d4)',
-};
+/* [11.12] The palette and the marks, read from the sheet.
+
+   This file carried five hardcoded hexes and drew its observations as
+   filled squares at three different alphas, in a monospace the system does
+   not have. None of it was visible to the checks: check-tokens reads
+   assets/theme.css and check_colour crawls the app's tabs, and this page is
+   neither. So it kept its own system while the rest of the site moved.
+
+   Everything below is the site's own vocabulary: a hollow ring is one
+   observation, a solid line is an average, and a dashed line is a claim
+   standing on partial data — here, the five states that have reported
+   2026 primaries so far. */
+const tok = (n, f) => getComputedStyle(document.documentElement)
+  .getPropertyValue(n).trim() || f;
+
+// Read fresh on every render: the ground can change under it.
+const C = () => ({
+  blue:   tok('--t-d5', '#1E6FD9'),
+  red:    tok('--t-d1', '#D62828'),
+  purple: tok('--t-d4', '#7B4B94'),
+  ink:    tok('--t-ink', '#16171A'),
+  muted:  tok('--t-muted', '#646257'),
+  faint:  tok('--t-faint', '#A9A69A'),
+  rule:   tok('--t-hair', '#CBC8BC'),
+  card:   tok('--t-paper', '#E9E8E0'),
+  face:   tok('--t-data', 'sans-serif'),
+  ringR:  parseFloat(tok('--t-mark-r', '2.2')) || 2.2,
+  ringW:  parseFloat(tok('--t-mark-w', '1.2')) || 1.2,
+  avgW:   parseFloat(tok('--t-mark-avg', '2.5')) || 2.5,
+  dash:   tok('--t-mark-dash', '5 4'),
+  hairW:  parseFloat(tok('--t-w-hair', '1')) || 1,
+  ruleW:  parseFloat(tok('--t-w-rule', '1.5')) || 1.5,
+  contW:  parseFloat(tok('--t-w-contour', '2')) || 2,
+});
+let COLORS = C();
 
 const fmt = n => n.toLocaleString();
 
@@ -375,10 +437,13 @@ function renderScatter() {
   };
 
   const visYears = YEARS.filter(y => SCATTER.showMidterms || y % 4 === 0);
-  const yearSpacing = plotW / (YEARS.length - 1);
+  // A cycle's column sits at the centre of its own band rather than on the
+  // edge of the plot: the first and last cycles used to have their rings
+  // clipped by the two axes.
+  const yearSpacing = plotW / YEARS.length;
   const xScale = (year, party) => {
     const idx = YEARS.indexOf(year);
-    const base = idx * yearSpacing;
+    const base = (idx + 0.5) * yearSpacing;
     const offset = party === 'D' ? -8 : 8;
     return base + offset;
   };
@@ -394,53 +459,56 @@ function renderScatter() {
     }
   }
 
+  COLORS = C();
   let html = '';
 
-  // White inner background
+  // The plot's own ground.
   html += `<rect x="${margin.left}" y="${margin.top}" width="${plotW}" height="${plotH}" fill="${COLORS.card}"/>`;
 
-  // Y gridlines + tick labels
+  // Y gridlines + tick labels. [6.10] The 1x line is a threshold — it is
+  // where the primary and the general drew the same number — so it is an
+  // ink rule at full weight and full opacity, and the rest are hairlines.
   for (const t of yTicks) {
     const y = margin.top + yScale(t);
     const isBase = (t === 1);
-    html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${y}" y2="${y}" stroke="${isBase ? COLORS.ink : COLORS.rule}" stroke-width="${isBase ? 1 : 0.6}" stroke-opacity="${isBase ? 0.4 : 1}"/>`;
-    html += `<text x="${margin.left-10}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.muted}">${t}×</text>`;
+    html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${y}" y2="${y}" stroke="${isBase ? COLORS.ink : COLORS.rule}" stroke-width="${isBase ? COLORS.ruleW : COLORS.hairW}"/>`;
+    html += `<text x="${margin.left-10}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" font-weight="600" font-family="${COLORS.face}" fill="${COLORS.muted}">${t}×</text>`;
   }
 
-  // X axis: year ticks
+  // X axis: year ticks. Labels are bold lowercase, like every label here.
   for (const y of visYears) {
     const x = margin.left + xScale(y, 'D') + 8;
     const isMid = y % 4 !== 0;
-    html += `<line x1="${x}" x2="${x}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.rule}" stroke-width="0.6" stroke-opacity="${isMid ? 0.5 : 1}"/>`;
-    html += `<text x="${x}" y="${margin.top+plotH+22}" text-anchor="middle" font-size="11" font-weight="${isMid ? 600 : 800}" fill="${isMid ? COLORS.muted : COLORS.ink}">${y}</text>`;
+    html += `<line x1="${x}" x2="${x}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.rule}" stroke-width="${COLORS.hairW}"/>`;
+    html += `<text x="${x}" y="${margin.top+plotH+22}" text-anchor="middle" font-size="11" font-weight="${isMid ? 600 : 800}" font-family="${COLORS.face}" fill="${isMid ? COLORS.muted : COLORS.ink}">${y}</text>`;
     if (isMid) {
-      html += `<text x="${x}" y="${margin.top+plotH+36}" text-anchor="middle" font-size="9" font-weight="700" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.faint}">MIDTERM</text>`;
+      html += `<text x="${x}" y="${margin.top+plotH+36}" text-anchor="middle" font-size="9" font-weight="700" font-family="${COLORS.face}" fill="${COLORS.muted}">midterm</text>`;
     }
     if (y === 2026) {
-      html += `<text x="${x}" y="${margin.top+plotH+50}" text-anchor="middle" font-size="9" font-weight="800" fill="${COLORS.red}" font-family="ui-monospace,Menlo,monospace">PARTIAL</text>`;
+      html += `<text x="${x}" y="${margin.top+plotH+50}" text-anchor="middle" font-size="9" font-weight="700" font-family="${COLORS.face}" fill="${COLORS.muted}">partial</text>`;
     }
   }
 
-  // X axis bottom border
-  html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${margin.top+plotH}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="2"/>`;
-  // Y axis left border
-  html += `<line x1="${margin.left}" x2="${margin.left}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="2"/>`;
+  // The two axes.
+  html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${margin.top+plotH}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
+  html += `<line x1="${margin.left}" x2="${margin.left}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
 
-  // Data points — square markers (riso style)
+  // [6.12] One observation, one hollow ring. They were filled squares at
+  // three alphas, which manufactured colours the palette does not contain
+  // wherever two of them crossed — and made a dense year look like a
+  // darker year rather than a busier one.
   filtered.forEach((d, i) => {
     const cx = margin.left + xScale(d.year, d.party);
     const cy = margin.top + yScale(d.ratio);
     const jitterX = ((i * 7 + d.state.charCodeAt(0) * 3) % 13) - 6;
     const color = d.party === 'D' ? COLORS.blue : COLORS.red;
-    const is2026 = d.year === 2026;
-    const sz = is2026 ? 6 : 4;
-    const opacity = is2026 ? 0.85 : (d.isMidterm ? 0.4 : 0.55);
-    const stroke = is2026 ? COLORS.ink : 'none';
-    const strokeW = is2026 ? 1 : 0;
-    html += `<rect class="dot" data-idx="${i}" x="${cx+jitterX-sz/2}" y="${cy-sz/2}" width="${sz}" height="${sz}" fill="${color}" fill-opacity="${opacity}" stroke="${stroke}" stroke-width="${strokeW}" style="cursor:pointer"/>`;
+    html += `<circle class="dot" data-idx="${i}" cx="${cx+jitterX}" cy="${cy}" r="${COLORS.ringR}" fill="none" stroke="${color}" stroke-width="${COLORS.ringW}" style="cursor:pointer"/>`;
   });
 
-  // Median bars — chunky riso markers, drawn ON TOP so they pop
+  // [6.12][6.18] A cycle median is an average, so it is a solid line — and
+  // 2026 is five states out of fifty-one, so its median is drawn on the
+  // dash, the same mark the polls charts use for an average standing on
+  // one poll.
   for (const y of visYears) {
     for (const p of ['D','R']) {
       if (SCATTER.filterParty !== 'both' && SCATTER.filterParty !== p) continue;
@@ -449,30 +517,30 @@ function renderScatter() {
       const cx = margin.left + xScale(y, p);
       const cy = margin.top + yScale(med);
       const color = p === 'D' ? COLORS.blue : COLORS.red;
-      // Outer ink shadow + fill bar + 1px ink border for full riso treatment
-      html += `<rect x="${cx-10}" y="${cy-4}" width="20" height="8" fill="${color}" stroke="${COLORS.ink}" stroke-width="1.5" pointer-events="none"/>`;
+      const partial = y === 2026;
+      html += `<line x1="${cx-11}" x2="${cx+11}" y1="${cy}" y2="${cy}" stroke="${color}" stroke-width="${COLORS.avgW}" stroke-linecap="butt"${partial ? ` stroke-dasharray="${COLORS.dash}"` : ''} pointer-events="none"/>`;
     }
   }
 
   // Y axis label
-  html += `<text x="18" y="${margin.top+plotH/2}" text-anchor="middle" font-size="12" font-weight="800" fill="${COLORS.ink}" transform="rotate(-90, 18, ${margin.top+plotH/2})">GE Votes ÷ Primary Votes (log scale)</text>`;
+  html += `<text x="18" y="${margin.top+plotH/2}" text-anchor="middle" font-size="12" font-weight="700" font-family="${COLORS.face}" fill="${COLORS.ink}" transform="rotate(-90, 18, ${margin.top+plotH/2})">general votes ÷ primary votes, log scale</text>`;
 
-  // Legend
+  // Legend. The swatch carries the colour, never the word.
   const lx = margin.left + 12, ly = margin.top + 12;
-  html += `<g>`;
-  html += `<rect x="${lx-6}" y="${ly-6}" width="200" height="60" fill="${COLORS.card}" stroke="${COLORS.ink}" stroke-width="1"/>`;
-  html += `<rect x="${lx}" y="${ly+4}" width="9" height="9" fill="${COLORS.blue}" fill-opacity="0.7" stroke="${COLORS.ink}" stroke-width="0.8"/>`;
-  html += `<text x="${lx+16}" y="${ly+8}" font-size="11" font-weight="700" dominant-baseline="middle" fill="${COLORS.ink}">Democratic primary</text>`;
-  html += `<rect x="${lx}" y="${ly+22}" width="9" height="9" fill="${COLORS.red}" fill-opacity="0.7" stroke="${COLORS.ink}" stroke-width="0.8"/>`;
-  html += `<text x="${lx+16}" y="${ly+26}" font-size="11" font-weight="700" dominant-baseline="middle" fill="${COLORS.ink}">Republican primary</text>`;
-  html += `<rect x="${lx-2}" y="${ly+38}" width="14" height="8" fill="${COLORS.ink}" stroke="${COLORS.ink}" stroke-width="1"/>`;
-  html += `<text x="${lx+16}" y="${ly+42}" font-size="10" font-weight="700" font-family="ui-monospace,Menlo,monospace" dominant-baseline="middle" fill="${COLORS.ink}">CYCLE MEDIAN</text>`;
+  html += `<g font-family="${COLORS.face}">`;
+  html += `<rect x="${lx-6}" y="${ly-6}" width="258" height="62" fill="${COLORS.card}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
+  html += `<circle cx="${lx+5}" cy="${ly+8}" r="${COLORS.ringR}" fill="none" stroke="${COLORS.blue}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${lx+18}" y="${ly+8}" font-size="11" font-weight="700" dominant-baseline="middle" fill="${COLORS.ink}">one democratic primary</text>`;
+  html += `<circle cx="${lx+5}" cy="${ly+26}" r="${COLORS.ringR}" fill="none" stroke="${COLORS.red}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${lx+18}" y="${ly+26}" font-size="11" font-weight="700" dominant-baseline="middle" fill="${COLORS.ink}">one republican primary</text>`;
+  html += `<line x1="${lx-2}" x2="${lx+12}" y1="${ly+44}" y2="${ly+44}" stroke="${COLORS.ink}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<text x="${lx+18}" y="${ly+44}" font-size="11" font-weight="700" dominant-baseline="middle" fill="${COLORS.ink}">cycle median · dashed where partial</text>`;
   html += `</g>`;
 
   svg.innerHTML = html;
 
   // Hover handlers
-  svg.querySelectorAll('rect.dot').forEach(rect => {
+  svg.querySelectorAll('circle.dot').forEach(rect => {
     rect.addEventListener('mouseenter', e => showScatterTip(e, parseInt(rect.dataset.idx)));
     rect.addEventListener('mouseleave', hideTip);
     rect.addEventListener('mousemove', e => moveTip(e));
@@ -523,58 +591,64 @@ function renderCorr() {
   const xTicks = [-0.6, -0.4, -0.2, 0, 0.2, 0.4];
   const yTicks = [46, 48, 50, 52, 54, 56, 58];
 
+  COLORS = C();
   let html = '';
 
-  // Inner bg
+  // The plot's own ground. The two tint bands that used to sit on it were
+  // drawn at alpha .03 — invisible, and alpha on a fill inside a figure.
+  // The zero rule already says which half is which.
   html += `<rect x="${margin.left}" y="${margin.top}" width="${plotW}" height="${plotH}" fill="${COLORS.card}"/>`;
 
-  // Faint zone shading
-  html += `<rect x="${margin.left}" y="${margin.top}" width="${xScale(0)}" height="${plotH}" fill="${COLORS.red}" opacity="0.03"/>`;
-  html += `<rect x="${margin.left+xScale(0)}" y="${margin.top}" width="${plotW-xScale(0)}" height="${plotH}" fill="${COLORS.blue}" opacity="0.03"/>`;
-
-  // Gridlines
+  // Gridlines. [6.10] Even shares and no enthusiasm gap are thresholds, so
+  // they are ink rules; everything else is a hairline.
   for (const t of yTicks) {
     const y = margin.top + yScale(t);
     const is50 = (t === 50);
-    html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${y}" y2="${y}" stroke="${is50 ? COLORS.ink : COLORS.rule}" stroke-width="${is50 ? 1 : 0.6}" stroke-opacity="${is50 ? 0.5 : 1}"/>`;
-    html += `<text x="${margin.left-10}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.muted}">${t}%</text>`;
+    html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${y}" y2="${y}" stroke="${is50 ? COLORS.ink : COLORS.rule}" stroke-width="${is50 ? COLORS.ruleW : COLORS.hairW}"/>`;
+    html += `<text x="${margin.left-10}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="11" font-weight="600" font-family="${COLORS.face}" fill="${COLORS.muted}">${t}%</text>`;
   }
   for (const t of xTicks) {
     const x = margin.left + xScale(t);
     const is0 = (t === 0);
-    html += `<line x1="${x}" x2="${x}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${is0 ? COLORS.ink : COLORS.rule}" stroke-width="${is0 ? 1 : 0.6}" stroke-opacity="${is0 ? 0.5 : 1}"/>`;
+    html += `<line x1="${x}" x2="${x}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${is0 ? COLORS.ink : COLORS.rule}" stroke-width="${is0 ? COLORS.ruleW : COLORS.hairW}"/>`;
     const lbl = (t > 0 ? '+' : '') + t.toFixed(1);
-    html += `<text x="${x}" y="${margin.top+plotH+18}" text-anchor="middle" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.muted}">${lbl}</text>`;
+    html += `<text x="${x}" y="${margin.top+plotH+18}" text-anchor="middle" font-size="11" font-weight="600" font-family="${COLORS.face}" fill="${COLORS.muted}">${lbl}</text>`;
   }
 
-  // Axes borders
-  html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${margin.top+plotH}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="2"/>`;
-  html += `<line x1="${margin.left}" x2="${margin.left}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="2"/>`;
+  // The two axes.
+  html += `<line x1="${margin.left}" x2="${margin.left+plotW}" y1="${margin.top+plotH}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
+  html += `<line x1="${margin.left}" x2="${margin.left}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
 
-  // Axis labels
-  html += `<text x="${margin.left+plotW/2}" y="${margin.top+plotH+50}" text-anchor="middle" font-size="11" font-weight="800" fill="${COLORS.ink}">← R primary enthusiasm  ·  D primary enthusiasm →</text>`;
-  html += `<text x="20" y="${margin.top+plotH/2}" text-anchor="middle" font-size="12" font-weight="800" fill="${COLORS.ink}" transform="rotate(-90, 20, ${margin.top+plotH/2})">D Two-Party Vote Share (%)</text>`;
+  // Axis labels, bold lowercase.
+  html += `<text x="${margin.left+plotW/2}" y="${margin.top+plotH+50}" text-anchor="middle" font-size="11" font-weight="700" font-family="${COLORS.face}" fill="${COLORS.ink}">← republican enthusiasm  ·  democratic enthusiasm →</text>`;
+  html += `<text x="20" y="${margin.top+plotH/2}" text-anchor="middle" font-size="12" font-weight="700" font-family="${COLORS.face}" fill="${COLORS.ink}" transform="rotate(-90, 20, ${margin.top+plotH/2})">democratic two-party vote share</text>`;
 
-  // Trend lines
+  // [6.12] A fit is an average of everything behind it, so it is a solid
+  // line at the system's one line weight. The three used to be told apart
+  // by three dash patterns at alpha .65, which spent the dash — the site's
+  // one mark for a provisional claim — on something that is not one. They
+  // are told apart by ink instead, and the legend carries the swatches.
   const lines = [
-    { reg: regMid, color: COLORS.red, label: 'Midterm', dash: 'none' },
-    { reg: regPres, color: COLORS.blue, label: 'Presidential', dash: '8,4' },
-    { reg: regAll, color: COLORS.ink, label: 'All', dash: '3,3' },
+    { reg: regMid, color: COLORS.red, label: 'midterm cycles' },
+    { reg: regPres, color: COLORS.blue, label: 'presidential cycles' },
+    { reg: regAll, color: COLORS.ink, label: 'all cycles' },
   ];
-  for (const {reg, color, dash} of lines) {
+  for (const {reg, color} of lines) {
     if (!reg) continue;
     const y1 = reg.slope * xMin + reg.intercept;
     const y2 = reg.slope * xMax + reg.intercept;
-    html += `<line x1="${margin.left+xScale(xMin)}" y1="${margin.top+yScale(y1)}" x2="${margin.left+xScale(xMax)}" y2="${margin.top+yScale(y2)}" stroke="${color}" stroke-width="2" stroke-dasharray="${dash === 'none' ? '' : dash}" opacity="0.65"/>`;
+    html += `<line x1="${margin.left+xScale(xMin)}" y1="${margin.top+yScale(y1)}" x2="${margin.left+xScale(xMax)}" y2="${margin.top+yScale(y2)}" stroke="${color}" stroke-width="${COLORS.avgW}" stroke-linecap="round"/>`;
   }
 
-  // Data points (square markers)
+  // [6.12] One cycle, one hollow ring — a ring wide enough to hold the two
+  // digits of the year beside it, which is the only reason it is drawn
+  // larger here than on the scatter.
   CORR_DATA.forEach((d, i) => {
     const cx = margin.left + xScale(d.enth);
     const cy = margin.top + yScale(d.ge);
     const color = d.pres ? COLORS.blue : COLORS.red;
-    html += `<rect class="cdot" data-idx="${i}" x="${cx-5}" y="${cy-5}" width="10" height="10" fill="${color}" stroke="${COLORS.ink}" stroke-width="1" style="cursor:pointer"/>`;
-    html += `<text x="${cx}" y="${cy-10}" text-anchor="middle" font-size="9" font-weight="800" fill="${COLORS.ink}" font-family="ui-monospace,Menlo,monospace" pointer-events="none">'${String(d.year).slice(2)}</text>`;
+    html += `<circle class="cdot" data-idx="${i}" cx="${cx}" cy="${cy}" r="${COLORS.ringR + 2}" fill="none" stroke="${color}" stroke-width="${COLORS.ringW}" style="cursor:pointer"/>`;
+    html += `<text x="${cx}" y="${cy-10}" text-anchor="middle" font-size="9" font-weight="700" fill="${COLORS.ink}" font-family="${COLORS.face}" pointer-events="none">'${String(d.year).slice(2)}</text>`;
   });
 
   // 2026 projection
@@ -586,36 +660,40 @@ function renderCorr() {
   const cyHi = margin.top + yScale(mean + se);
   const cyLo = margin.top + yScale(mean - se);
 
-  html += `<line x1="${cx}" x2="${cx}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.ink}" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>`;
-  html += `<line x1="${cx}" x2="${cx}" y1="${cyHi}" y2="${cyLo}" stroke="${COLORS.purple}" stroke-width="2" opacity="0.7"/>`;
-  html += `<line x1="${cx-6}" x2="${cx+6}" y1="${cyHi}" y2="${cyHi}" stroke="${COLORS.purple}" stroke-width="2"/>`;
-  html += `<line x1="${cx-6}" x2="${cx+6}" y1="${cyLo}" y2="${cyLo}" stroke="${COLORS.purple}" stroke-width="2"/>`;
-  html += `<rect x="${cx-5}" y="${cy-5}" width="10" height="10" fill="${COLORS.purple}" stroke="${COLORS.ink}" stroke-width="1"/>`;
-  html += `<text x="${cx}" y="${cyLo+18}" text-anchor="middle" font-size="10" font-weight="800" fill="${COLORS.purple}" font-family="ui-monospace,Menlo,monospace">'26 → ${mean.toFixed(1)}% ±${se}</text>`;
+  // [6.11] The guide to the 2026 reading is a cursor's rule, not a
+  // threshold: solid, one pixel, at the caption's step.
+  html += `<line x1="${cx}" x2="${cx}" y1="${margin.top}" y2="${margin.top+plotH}" stroke="${COLORS.rule}" stroke-width="${COLORS.hairW}"/>`;
+  // The interval is a solid bar with two caps; the estimate at its centre
+  // is a ring, because it is one reading and not an average of many.
+  html += `<line x1="${cx}" x2="${cx}" y1="${cyHi}" y2="${cyLo}" stroke="${COLORS.purple}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<line x1="${cx-6}" x2="${cx+6}" y1="${cyHi}" y2="${cyHi}" stroke="${COLORS.purple}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<line x1="${cx-6}" x2="${cx+6}" y1="${cyLo}" y2="${cyLo}" stroke="${COLORS.purple}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<circle cx="${cx}" cy="${cy}" r="${COLORS.ringR + 2}" fill="${COLORS.card}" stroke="${COLORS.purple}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${cx}" y="${cyLo+18}" text-anchor="middle" font-size="10" font-weight="700" fill="${COLORS.purple}" font-family="${COLORS.face}">'26 → ${mean.toFixed(1)}% ±${se}</text>`;
 
   // Legend (bottom-right)
-  const lx = margin.left + plotW - 188, ly = margin.top + plotH - 156;
-  html += `<g>`;
-  html += `<rect x="${lx}" y="${ly}" width="184" height="148" fill="${COLORS.card}" stroke="${COLORS.ink}" stroke-width="1"/>`;
-  html += `<text x="${lx+10}" y="${ly+16}" font-size="9" font-weight="800" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.muted}">DOTS</text>`;
-  html += `<rect x="${lx+10}" y="${ly+24}" width="9" height="9" fill="${COLORS.blue}" stroke="${COLORS.ink}" stroke-width="0.8"/>`;
-  html += `<text x="${lx+24}" y="${ly+28}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">Pres. popular vote</text>`;
-  html += `<rect x="${lx+10}" y="${ly+40}" width="9" height="9" fill="${COLORS.red}" stroke="${COLORS.ink}" stroke-width="0.8"/>`;
-  html += `<text x="${lx+24}" y="${ly+44}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">House popular vote</text>`;
-  html += `<rect x="${lx+10}" y="${ly+56}" width="9" height="9" fill="${COLORS.purple}" stroke="${COLORS.ink}" stroke-width="0.8"/>`;
-  html += `<text x="${lx+24}" y="${ly+60}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">2026 projection ±${se}</text>`;
-  html += `<text x="${lx+10}" y="${ly+82}" font-size="9" font-weight="800" font-family="ui-monospace,Menlo,monospace" fill="${COLORS.muted}">FITS</text>`;
-  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+96}" y2="${ly+96}" stroke="${COLORS.red}" stroke-width="2"/>`;
-  html += `<text x="${lx+40}" y="${ly+96}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">Midterm  r=${regMid.r.toFixed(2)}</text>`;
-  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+114}" y2="${ly+114}" stroke="${COLORS.blue}" stroke-width="2" stroke-dasharray="8,4"/>`;
-  html += `<text x="${lx+40}" y="${ly+114}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">Pres.  r=${regPres.r.toFixed(2)}</text>`;
-  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+132}" y2="${ly+132}" stroke="${COLORS.ink}" stroke-width="2" stroke-dasharray="3,3"/>`;
-  html += `<text x="${lx+40}" y="${ly+132}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">All  r=${regAll.r.toFixed(2)}</text>`;
+  const lx = margin.left + plotW - 192, ly = margin.top + plotH - 156;
+  html += `<g font-family="${COLORS.face}">`;
+  html += `<rect x="${lx}" y="${ly}" width="188" height="148" fill="${COLORS.card}" stroke="${COLORS.ink}" stroke-width="${COLORS.contW}"/>`;
+  html += `<text x="${lx+10}" y="${ly+16}" font-size="9" font-weight="700" fill="${COLORS.muted}">one cycle</text>`;
+  html += `<circle cx="${lx+15}" cy="${ly+28}" r="${COLORS.ringR + 2}" fill="none" stroke="${COLORS.blue}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${lx+28}" y="${ly+28}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">presidential popular vote</text>`;
+  html += `<circle cx="${lx+15}" cy="${ly+44}" r="${COLORS.ringR + 2}" fill="none" stroke="${COLORS.red}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${lx+28}" y="${ly+44}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">house popular vote</text>`;
+  html += `<circle cx="${lx+15}" cy="${ly+60}" r="${COLORS.ringR + 2}" fill="${COLORS.card}" stroke="${COLORS.purple}" stroke-width="${COLORS.ringW}"/>`;
+  html += `<text x="${lx+28}" y="${ly+60}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">2026 estimate ±${se}</text>`;
+  html += `<text x="${lx+10}" y="${ly+82}" font-size="9" font-weight="700" fill="${COLORS.muted}">the fits</text>`;
+  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+96}" y2="${ly+96}" stroke="${COLORS.red}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<text x="${lx+40}" y="${ly+96}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">midterms  r=${regMid.r.toFixed(2)}</text>`;
+  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+114}" y2="${ly+114}" stroke="${COLORS.blue}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<text x="${lx+40}" y="${ly+114}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">presidential  r=${regPres.r.toFixed(2)}</text>`;
+  html += `<line x1="${lx+10}" x2="${lx+34}" y1="${ly+132}" y2="${ly+132}" stroke="${COLORS.ink}" stroke-width="${COLORS.avgW}"/>`;
+  html += `<text x="${lx+40}" y="${ly+132}" font-size="11" font-weight="600" dominant-baseline="middle" fill="${COLORS.ink}">all cycles  r=${regAll.r.toFixed(2)}</text>`;
   html += `</g>`;
 
   svg.innerHTML = html;
 
-  svg.querySelectorAll('rect.cdot').forEach(rect => {
+  svg.querySelectorAll('circle.cdot').forEach(rect => {
     rect.addEventListener('mouseenter', e => showCorrTip(e, parseInt(rect.dataset.idx)));
     rect.addEventListener('mouseleave', hideTip);
     rect.addEventListener('mousemove', e => moveTip(e));
@@ -724,10 +802,87 @@ document.querySelectorAll('#partySeg button').forEach(btn => {
 document.getElementById('midtermToggle').addEventListener('change', e => {
   SCATTER.showMidterms = e.target.checked;
   renderScatter();
+  setFindings();
 });
+
+/* ============================================================
+ * [11.13] THE FINDINGS
+ *
+ * A figure is titled with what it found, not with what it is. Both of
+ * these are computed from the same data the charts draw, so the sentence
+ * above a figure cannot go stale while the figure below it moves.
+ * ============================================================ */
+
+function scatterFinding() {
+  const f = getFiltered();
+  const year = Math.max(...f.map(d => d.year));
+  const med = p => {
+    const v = f.filter(d => d.year === year && d.party === p).map(d => d.ratio);
+    return v.length ? median(v) : null;
+  };
+  const dm = med('D'), rm = med('R');
+  const partial = year === 2026 ? ', on the five states that have reported' : '';
+  if (dm && rm) {
+    // A lower ratio is a bigger primary relative to the general.
+    if (Math.abs(dm - rm) < 0.05) {
+      return `The two parties are pulling their voters into the ${year} primaries at the same rate${partial}`;
+    }
+    const lead = dm < rm ? 'Democrats' : 'Republicans';
+    const lo = Math.min(dm, rm), hi = Math.max(dm, rm);
+    return `${lead} are pulling more of their vote into the ${year} primaries — ` +
+      `one primary vote for every ${lo.toFixed(1)} in the general, against ${hi.toFixed(1)}${partial}`;
+  }
+  const only = dm || rm;
+  if (only) {
+    const who = dm ? 'Democrats' : 'Republicans';
+    return `${who} cast one ${year} primary vote for every ${only.toFixed(1)} in the general${partial}`;
+  }
+  return `No primary returns for ${year} yet`;
+}
+
+function corrFinding() {
+  const preds = [regMid, regPres, regAll]
+    .filter(Boolean)
+    .map(r => r.slope * POINT_2026.enth + r.intercept);
+  const mean = preds.reduce((s, v) => s + v, 0) / preds.length;
+  const r = regAll ? Math.abs(regAll.r) : 0;
+  const strength = r >= 0.6 ? 'has tracked' : r >= 0.35 ? 'has loosely tracked' : 'has barely tracked';
+  const side = mean > 50 ? 'Democrats' : 'Republicans';
+  const share = mean > 50 ? mean : 100 - mean;
+  return `Primary enthusiasm ${strength} the national vote — r=${(regAll ? regAll.r : 0).toFixed(2)} ` +
+    `across ${CORR_DATA.length} cycles — and 2026 points to ${side} at ${share.toFixed(1)}%`;
+}
+
+function setFindings() {
+  const a = document.getElementById('scatterTitle');
+  const b = document.getElementById('corrTitle');
+  if (a) a.textContent = scatterFinding();
+  if (b) b.textContent = corrFinding();
+  announce(scatterFinding());
+}
+
+/* [10.18] Say what the figure now shows. It only speaks when the reading
+   actually changed, because a live region that repeats itself is a live
+   region people switch off. */
+let lastSaid = "";
+function announce(text) {
+  const el = document.getElementById('announce');
+  if (!el || text === lastSaid) return;
+  lastSaid = text;
+  el.textContent = text;
+}
 
 renderScatter();
 renderCorr();
+setFindings();
+
+/* [11.12] The ground switch repaints the figures. assets/ground.js calls
+   this after it moves the attribute; on the app's own sheets forecast.js
+   defines it, and here this page does. Without it the charts keep the
+   inks they read at load and the night ground gets the day's palette. */
+window.__repaintFigures = function () {
+  try { renderScatter(); renderCorr(); setFindings(); } catch (e) {}
+};
 </script>
 </body>
 </html>

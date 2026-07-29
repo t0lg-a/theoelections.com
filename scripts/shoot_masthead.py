@@ -15,15 +15,36 @@ nav's row count and its centring, one height across the controls — so a
 regression shows up as a number and not only as a picture.
 """
 
+import glob
 import json
+import os
 import pathlib
 import sys
 
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SHOTS = ROOT / "docs" / "shots"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+# scripts/check_shots.py points this at a scratch directory so it can
+# re-shoot the whole set and diff it against the reference without
+# overwriting the reference first.
+SHOTS = pathlib.Path(os.environ.get("SHOTS_DIR") or (ROOT / "docs" / "shots"))
+# The browser, wherever it is. This box keeps one at a pinned path; a
+# build box that ran `playwright install` keeps its own somewhere else, and
+# hardcoding this one meant every check in the harness failed on any
+# machine but this one. None hands the choice back to Playwright.
+def _chrome():
+    env = os.environ.get("CHROMIUM_PATH")
+    if env and os.path.exists(env):
+        return env
+    for pat in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")):
+        hits = sorted(glob.glob(pat))
+        if hits:
+            return hits[-1]
+    return None
+
+
+CHROME = _chrome()
 ORIGIN = "http://127.0.0.1:8899"
 WIDTHS = (390, 768, 1024, 1440, 1920)
 

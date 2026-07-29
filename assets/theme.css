@@ -153,6 +153,29 @@
   --t-tick:5px;
   --t-tick-gap:4px;
 
+  /* ---- the mark vocabulary ---------------------------------------------
+     [6.12] Three marks, and each one means exactly one thing:
+
+       a hollow ring   one observation — a single poll, drawn once
+       a solid line    an average — a claim standing on many observations
+       a solid dot     the datum under the cursor, and nothing else
+
+     Every chart on the site draws from these six numbers, so a ring on
+     the generic ballot and a ring on a state race are the same size and
+     therefore the same claim. --t-mark-nest is what separates two series
+     drawn at the same instant: their rings nest rather than overlap, so
+     two coincident polls stay two polls instead of blending into a colour
+     the palette does not contain. */
+  --t-mark-r:2.2px;      /* a hollow ring's radius */
+  --t-mark-nest:1.2px;   /* how far apart two series' rings sit */
+  --t-mark-w:1.2px;      /* a hollow ring's contour */
+  --t-mark-avg:2.5px;    /* the average line */
+  --t-mark-cursor:4px;   /* the solid dot under the cursor */
+  /* An average with a single poll behind it is drawn on this dash: it is a
+     line the data cannot yet hold up, and the reader is told so by the
+     mark rather than by a footnote. */
+  --t-mark-dash:5 4;
+
   /* ---- control height -------------------------------------------------- */
   /* [2.12] Every control in the masthead is this tall, and nothing in the
      masthead sets a height any other way. scripts/check-tokens.mjs asserts
@@ -589,6 +612,33 @@ svg text, .axis text, .oddsAxis text, .probAxis text, .seatAxis text,
   font-size:10px;font-weight:700;
   fill:var(--t-ink);
 }
+
+/* [6.12][6.13][6.14][6.15] The mark vocabulary, in the sheet.
+
+   window.__mark draws the polls charts; the hindcast and odds charts get
+   their marks from here, and both read the same tokens. Before this
+   an average was 2.5px on one sheet and 2px on another, and a cursor dot
+   was 3.5px, 4px, or whatever the module felt like — which is how "solid
+   dot" stopped meaning one thing. */
+.markAvgLine, .markAvgProvisional,
+.seatsLine, .seatsLineR, .oddsLine, .lineDem, .lineRep{
+  fill:none;
+  stroke-width:var(--t-mark-avg);
+  stroke-linejoin:round;
+  stroke-linecap:round;
+  stroke-dasharray:none;
+}
+/* [6.18] An average with one observation behind it is drawn on the dash
+   until a second one arrives. It is the only dashed thing in a figure. */
+.markAvgProvisional{stroke-dasharray:var(--t-mark-dash);}
+/* [6.12] One observation. Hollow, so a pile-up of them stays countable. */
+.markRing{fill:none;stroke-width:var(--t-mark-w);}
+/* [6.12] The datum under the cursor, at one radius on every chart. */
+.markCursor, .dotDem, .dotRep, .seatsDot, .oddsDot{r:var(--t-mark-cursor);}
+/* The legacy dots carried a paper ring to lift them off a card that no
+   longer exists; on the sheet a hollow ring means one observation, so a
+   ringed cursor dot is two marks arguing with each other. */
+.seatsDot, .oddsDot{stroke:none;}
 .map path, .mapSvg path.state, svg path.state{
   stroke:var(--t-hair);
   stroke-width:.75;
@@ -621,6 +671,22 @@ svg path.state.selected{
   border:var(--t-w-contour) solid var(--t-ink) !important;
   font-size:var(--t-fs-1);
   padding:7px 9px;
+}
+/* [7.23][9.22] Where there is no hover there is no cursor to follow, so the
+   card docks: one place at the foot of the window, out of the way of the
+   figure and out from under the finger that opened it. Full measure, because
+   at 390 a card sized to its words wastes the room it has. */
+#tip.tipDocked, #simTip.tipDocked, #pastTip.tipDocked,
+#pastSimTip.tipDocked, #sldlCursorTip.tipDocked, .tooltipBox.tipDocked{
+  position:fixed !important;
+  left:var(--t-gutter) !important;
+  right:var(--t-gutter) !important;
+  top:auto !important;
+  bottom:var(--t-gutter) !important;
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  z-index:9999;
 }
 #simTip .stDate, .tipHeader, .tipTitle{font-weight:700;color:var(--t-ink);}
 #simTip .stLbl, .tipMeta, .tipSub{font-weight:700;color:var(--t-muted);}
@@ -920,7 +986,9 @@ table{font-family:var(--t-data);font-variant-numeric:tabular-nums;}
 
 /* ---- the margin timeline ------------------------------------------------- */
 .pollsView .pollsHistHost{
-  height:40px;
+  /* [6.20] Six baseline units. It was five, which held the bars but left
+     the scale's outer labels nothing to sit in. */
+  height:calc(var(--t-baseline) * 6);
   margin:12px 0 0;
   border:var(--t-w-contour) solid var(--t-ink);
   background:var(--t-paper);
@@ -1158,7 +1226,13 @@ svg path.state:focus-visible{
 .swingMarginLabel, .swingPartyLabel{color:var(--t-muted);font-weight:700;}
 
 /* Past elections: an empty year is absent, and says so plainly. */
+/* [10.5] The placeholder column for a chamber with no race this cycle. It
+   was set at opacity .35, which put every word in it — its heading
+   included — under the contrast floor. Absent is absent: it says so in
+   muted ink, at full opacity, like every other absent state on the site. */
 .raceEmpty, .col-past-hidden{color:var(--t-muted);}
+.col-past-hidden{opacity:1;}
+.col-past-hidden .secTitle, .col-past-hidden .secSub{color:var(--t-muted);}
 
 /* Florida: cards to grade 1 like everything else. */
 .flrCard{background:transparent;}
@@ -2004,6 +2078,85 @@ svg path.district.selected{
   .pollsListHost td.recName{max-width:18ch;}
 }
 
+/* ---- the agate form  [8.16][8.17][8.18] ---------------------------------
+
+   A dense list of names and numbers, set small and tight, in as many
+   columns as the measure will hold.
+
+   The record above is a table because a poll has five things to say about
+   itself and they line up in columns. A list of races has two, and a
+   two-column table thirty-five rows deep is a table nobody reads to the
+   bottom of: every row is the same shape, so the eye has nothing to catch
+   on, and the column it sits in grows past the figure it belongs to.
+
+   Agate is the newspaper's answer to exactly this — the standings, the box
+   scores, the returns on election night — and it works here for the same
+   reason. Three things per line, one line per unit, two columns of them,
+   and the whole list is a block you scan rather than a page you read.
+
+   The swatch carries the colour, never the name: a state's name on a
+   saturated data ink is the lesson from chapter 5 and from the map chips. */
+.agate{
+  list-style:none;
+  margin:0;
+  padding:0;
+  columns:2;
+  column-gap:var(--t-sp-4);
+  column-rule:var(--t-w-hair) solid var(--t-hair);
+  font-family:var(--t-data);
+  font-size:var(--t-fs-1);
+}
+/* One column below the point where two of them stop being scannable and
+   start being two lists. */
+@media (max-width:600px){
+  .agate{columns:1;column-rule:none;}
+}
+.agateRow{
+  display:flex;
+  align-items:baseline;
+  gap:var(--t-sp-1);
+  line-height:calc(var(--t-baseline) * 2);
+  break-inside:avoid;
+}
+.agateSw{
+  flex:0 0 auto;
+  width:var(--t-sp-2);
+  height:var(--t-sp-2);
+  align-self:center;
+  border:var(--t-w-hair) solid var(--t-ink);
+  background:var(--t-paper);
+}
+/* [8.10][8.11] Truncated by measure, never by a character count, and it
+   keeps its full name for anyone who wants it. */
+.agateName{
+  flex:1 1 auto;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--t-ink);
+  font-weight:600;
+}
+.agateVal{
+  flex:0 0 auto;
+  color:var(--t-ink);
+  font-weight:700;
+  font-variant-numeric:tabular-nums;
+}
+/* The block opens like every other figure block on the sheet. */
+.agateBlock{
+  margin-top:calc(var(--t-baseline) * 2);
+  padding-top:calc(var(--t-baseline) * 2);
+  border-top:var(--t-w-hair) solid var(--t-hair);
+}
+.agateHead{
+  font-family:var(--t-data);
+  font-size:var(--t-fs-2);
+  font-weight:700;
+  color:var(--t-ink);
+  margin-bottom:var(--t-sp-2);
+}
+
 /* ======================================================================
    19 · THE STATES OF A THING  (chapter 9)
 
@@ -2193,6 +2346,32 @@ svg path:focus{outline:none;}
     display:inline-flex;
     align-items:center;
   }
+  /* [10.16] And the rest of them, found by measurement rather than by
+     reading the markup: the segmented controls' buttons rather than their
+     containers, the state-legislature mode toggle at 21 tall, the two
+     analyses' year and party segments at 26 and 30, and the landing sheet's
+     two calls to action at 42 — two pixels short, which is the kind of miss
+     that only a number catches. */
+  .seg button, .yearseg button, .sldlModeToggle button, .toggles .tbtn,
+  .colCta a, .footLinks a{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .toggles .tbtn{min-width:44px;}
+}
+
+/* [7.17] A map's text alternative. Read, not seen: on screen the map is the
+   better figure, and the same thirty-five rows printed under it would be the
+   sheet saying everything twice. */
+.figTable{
+  position:absolute;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap;
 }
 
 /* [10.12] A figure that changes under the reader's hands announces the
