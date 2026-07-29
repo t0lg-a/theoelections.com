@@ -35,19 +35,15 @@ const SKIP_DIRS = new Set([
   "model", "ratings", "florida", "polls", "swingometer",
   "past-elections", "state-legs", "projects", "methodology",
 ]);
-// The three standalone analyses predate the system and carry their own
-// palettes. Chapter 11 of docs/VISUAL-PLAN.md converts them; until then they
-// are exempt by name, so the checker can guard the app today and this list
-// can only shrink.
-const PENDING_CONVERSION = new Set([
-  "nationalization-2.html",
-  "primary_turnout_combined.html",
-  "fundraising-comparison.html",
-]);
+// [11.8][11.11][11.14] The three standalone analyses predated the system
+// and carried their own palettes. Chapter 11 converted them and the list is
+// empty: they are guarded like everything else now, and it can only shrink.
+const PENDING_CONVERSION = new Set();
 
 // Tokens that are the same on either ground, by design.
 const GROUND_INDEPENDENT = new Set([
-  "--t-d1", "--t-d2", "--t-d5", "--t-data", "--t-prose", "--t-control-h",
+  "--t-d1", "--t-d2", "--t-d3", "--t-d4", "--t-d5", "--t-d6",
+  "--t-data", "--t-prose", "--t-control-h",
   "--t-sheet", "--t-gutter", "--t-baseline", "--t-tick", "--t-tick-gap",
   "--t-w-hair", "--t-w-rule", "--t-w-contour", "--t-w-slab",
   "--t-fs-1", "--t-fs-2", "--t-fs-3", "--t-fs-4",
@@ -108,12 +104,15 @@ for (const file of walk(".")) {
   const text = readFileSync(file, "utf8");
   // A module may read a token through a helper rather than by name at the
   // call site — window.__axis does — so a quoted token in a script counts as
-  // a read.
+  // a read. Half this site's scripts are inline in HTML, so both extensions
+  // get the pattern.
   const patterns = [/var\(\s*(--t-[a-z0-9-]+)/g,
                     /getPropertyValue\(\s*['"](--t-[a-z0-9-]+)/g,
                     /\btk\(\s*"(--t-[a-z0-9-]+)"/g,
                     /\btok\(\s*"(--t-[a-z0-9-]+)"/g];
-  if (extname(file) === ".js") patterns.push(/['"](--t-[a-z0-9-]+)['"]/g);
+  if ([".js", ".html"].includes(extname(file))) {
+    patterns.push(/['"](--t-[a-z0-9-]+)['"]/g);
+  }
   for (const re of patterns) {
     for (const m of text.matchAll(re)) read.add(m[1]);
   }

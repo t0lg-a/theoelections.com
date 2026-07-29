@@ -1135,34 +1135,93 @@ which is recorded as a knowing exception.
 
 The app is on the system. The pages around it are not, or only partly.
 
-1. Inventory every HTML file in the repo and mark each as app, landing,
-   project, or dead.
-2. Delete the dead ones: `index-1.html` and `index-old.html` if nothing links
-   them.
-3. Verify the landing page's masthead matches the app's exactly.
-4. Verify the landing page's type scale reads from the same tokens.
-5. Set the landing hero's measure and check the widow at every width.
-6. Decide the landing page's one reversed element; currently the second CTA.
-7. Verify the landing page at 320px.
-8. Put `fundraising-comparison.html` on the system: link the stylesheet, remove
-   its own palette.
-9. Rebuild its chart on the system's marks and ramp.
-10. Give it a finding as its title and a source line.
-11. Put `primary_turnout_combined.html` on the system.
-12. Rebuild its figures on the system's marks.
-13. Give it a finding and a source line.
-14. Put `nationalization-2.html` on the system.
-15. Rebuild its figures on the system's marks.
-16. Give it a finding and a source line.
-17. Give all three the masthead and the footer so they stop feeling orphaned.
-18. Verify all three at the five reference widths.
-19. Verify all three in dark.
-20. Add each to the sitemap with a real description.
-21. Verify the projects index links every one of them and nothing that is
-    gone.
-22. Set the projects index's card treatment to grade 1 and remove any box.
-23. Replace the arrow glyph with the guillemet on every card.
-24. Screenshot all three into `docs/shots/`.
+1. [x] Six: `baseline.html` (app), `index.html` (landing), three analyses,
+   and `index-1.html` (dead).
+   Original step: Inventory every HTML file in the repo and mark each as app, landing,
+    project, or dead.
+2. [x] `index-old.html` went in chapter 1; `index-1.html` goes here. Nothing
+   linked it — the only two mentions were comments in `baseline.html`
+   marking where its CSS was pasted in.
+   Original step: Delete the dead ones: `index-1.html` and `index-old.html` if nothing links
+    them.
+3. [x] Chapter 2 did it and measured it: 53px at 1440 and 1920, 65px at 390,
+   same rule and same tokens.
+   Original step: Verify the landing page's masthead matches the app's exactly.
+4. [x] It reads `assets/theme.css` and holds no scale of its own.
+   Original step: Verify the landing page's type scale reads from the same tokens.
+5. [x] 18ch on the hero, and `text-wrap: balance` from chapter 3 covers the
+   widow.
+   Original step: Set the landing hero's measure and check the widow at every width.
+6. [x] Confirmed: the second CTA. The first is a keyline, and nothing else
+   on the page reverses.
+   Original step: Decide the landing page's one reversed element; currently the second CTA.
+7. [x] No sideways scroll at 320, 390, 768, 1024, 1440 or 1920.
+   Original step: Verify the landing page at 320px.
+8. [x] It reads the sheet now: its palette, its two faces and its ground are
+   the system's, and the Google Fonts link is gone. Its `.card` was a
+   keylined box with a 6px offset shadow — two vessels around one figure and
+   an elevation the canon does not have — and is a rule now.
+   Original step: Put `fundraising-comparison.html` on the system: link the stylesheet, remove
+    its own palette.
+9. [x] Its four series read `--t-d1`, `--t-d2`, `--t-d5` and `--t-d6` from
+   the sheet, so they follow the ground rather than being fixed at build
+   time. This is the case §1 reserved the other three of the six for: a
+   multi-series figure re-opens the palette deliberately.
+   Original step: Rebuild its chart on the system's marks and ramp.
+10. [x] "Talarico is leading the pack — for now" was already a finding; its
+    source line was already there. Its kicker was a tracked, uppercase label
+    in a data ink and is a label now.
+    Original step: Give it a finding as its title and a source line.
+11. [x] Same conversion: one `:root` block mapped onto the tokens, the two
+    shadow tokens set to `none`, the ground wash removed, the external font
+    dropped.
+    Original step: Put `primary_turnout_combined.html` on the system.
+12. [ ] Not done. Its two figures still draw their own marks and set their
+    labels in a monospace the system does not have.
+    Original step: Rebuild its figures on the system's marks.
+13. [~] It has a source line. Its titles name their form — "Primary vs
+    General Election Vote, by Party" — and have not been rewritten as
+    findings.
+    Original step: Give it a finding and a source line.
+14. [x] Same conversion, plus its own `html.dark` variant removed: there is
+    one ground switch on this site and `assets/ground.js` owns it. Its
+    figure's palette is read from the sheet.
+    Original step: Put `nationalization-2.html` on the system.
+15. [ ] Not done; see 12.
+    Original step: Rebuild its figures on the system's marks.
+16. [~] It has a method note that serves as a source. Its title names its
+    form.
+    Original step: Give it a finding and a source line.
+17. [x] All three carry the masthead, with a link back to the projects index
+    where each had its own hand-rolled bar.
+    Original step: Give all three the masthead and the footer so they stop feeling orphaned.
+18. [x] No sideways scroll on any of the three at 320, 390, 768, 1024, 1440
+    or 1920.
+    Original step: Verify all three at the five reference widths.
+19. [x] All three, and two of them had no dark ground at all before this.
+    Original step: Verify all three in dark.
+20. [x] Already in `STATIC_ROUTES`; chapter 2 gave each a title on the
+    site's pattern.
+    Original step: Add each to the sitemap with a real description.
+21. [x] The projects index links all three and nothing that is gone.
+    Original step: Verify the projects index links every one of them and nothing that is
+     gone.
+22. [x] The fundraising card is grade 1. The other two lost their shadows;
+    their inner boxes keep a keyline.
+    Original step: Set the projects index's card treatment to grade 1 and remove any box.
+23. [x] Nothing to do: the cards carry no arrow, and the landing's two CTAs
+    already use the guillemet.
+    Original step: Replace the arrow glyph with the guillemet on every card.
+24. [x] `docs/shots/page-*.png`, all three on both grounds.
+    Original step: Screenshot all three into `docs/shots/`.
+
+**The checker's exemption list is empty.** The three analyses were named in
+`PENDING_CONVERSION` so the token contract could guard the app without them.
+They are guarded like everything else now.
+
+**Carried forward.** Steps 12 and 15: the figures inside the two dense
+analyses still draw their own marks. The pages are on the system; the
+figures on them are not yet, and steps 13 and 16 wait on the same work.
 
 ---
 

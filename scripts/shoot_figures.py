@@ -42,6 +42,14 @@ FORMS = [
     ("map-districts", "Ratings", ".col:nth-child(5) .mapHost"),
 ]
 
+# [11.24] The three standalone analyses, which are pages rather than figures
+# and so are shot whole.
+PAGES = [
+    ("fundraising", "/fundraising-comparison.html"),
+    ("primary-turnout", "/primary_turnout_combined.html"),
+    ("nationalization", "/nationalization-2.html"),
+]
+
 
 def main() -> int:
     SHOTS.mkdir(parents=True, exist_ok=True)
@@ -78,6 +86,20 @@ def main() -> int:
                 box = el.bounding_box()
                 print("   %-24s %4dx%-4d %s" % (out.name, box["width"], box["height"], sel))
             ctx.close()
+        for ground in ("light", "dark"):
+            for name, path in PAGES:
+                ctx = browser.new_context(viewport={"width": 1200, "height": 1000},
+                                          device_scale_factor=1)
+                page = ctx.new_page()
+                page.add_init_script(
+                    'try{localStorage.setItem("theo-theme",%s)}catch(e){}' % json.dumps(ground))
+                page.goto(ORIGIN + path, wait_until="load")
+                page.wait_for_timeout(2200)
+                suffix = "" if ground == "light" else "-dark"
+                out = SHOTS / ("page-%s%s.png" % (name, suffix))
+                page.screenshot(path=str(out), full_page=False)
+                print("   %-24s %s" % (out.name, path))
+                ctx.close()
         browser.close()
     if missing:
         print("\nmissing:", ", ".join(missing))

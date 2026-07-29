@@ -93,6 +93,13 @@
   --t-d2:#FFC300;          /* series 2 · the third position  · figures only */
   --t-d5:#1E6FD9;          /* series 5 · Democratic          · figures only */
   --t-overprint:#191122;   /* d1 over d5 · the contested unit · figures only */
+  /* [11.9] The other three of the six. The site's own figures draw two-way
+     contests and never reach for these; the standalone analyses draw four
+     series each, which is the case §1 reserved them for — a multi-series
+     figure re-opens the palette deliberately rather than by accident. */
+  --t-d3:#00A6A6;          /* series 3 · turquoise           · figures only */
+  --t-d4:#7B4B94;          /* series 4 · purple              · figures only */
+  --t-d6:#1B7F4B;          /* series 6 · green               · figures only */
   --t-d1-soft:#F0C0C0;     /* the pale step of the R ramp    · figures only */
   --t-d5-soft:#C3D5F2;     /* the pale step of the D ramp    · figures only */
   --t-d2-soft:#F3E0A8;     /* the pale step of series 2      · figures only */
