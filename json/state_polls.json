@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-29T13:10:50.453Z",
+  "updatedAt": "2026-07-30T12:56:02.919Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 143
+    "governor": 145
   },
   "states": {
     "senate": 16,
@@ -1415,6 +1415,23 @@
     },
     {
       "mode": "governor",
+      "state": "NY",
+      "date": "2026-07-12",
+      "D": 47,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "Red Oak Strategic",
+      "sampleSize": 2000,
+      "population": "rv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://nypost.com/2026/07/28/us-news/ny-gop-governor-candidate-bruce-blakeman-trails-hochul-by-just-4-points-in-shocking-new-poll/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202red8c5fcf3a"
+    },
+    {
+      "mode": "governor",
       "state": "OH",
       "date": "2025-08-19",
       "D": 39.4,
@@ -1816,6 +1833,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202fra194b6a64"
+    },
+    {
+      "mode": "governor",
+      "state": "PA",
+      "date": "2026-07-24",
+      "D": 53,
+      "R": 28,
+      "sigma": 3,
+      "pollster": "Bravo Group",
+      "sampleSize": 630,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.pennlive.com/politics/2026/07/trump-fetterman-in-trouble-with-pa-voters-morning-scrapple-poll.html",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202bra253133dd"
     },
     {
       "mode": "governor",
@@ -3571,7 +3605,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 285
+      "governor": 287
     },
     "dropped": {
       "senate": 0,
@@ -3674,12 +3708,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 95,
+      "governor": 96,
       "generic-ballot": 149,
-      "approval": 206,
+      "approval": 205,
       "favorability": 121
     },
-    "fromApi": 127,
+    "fromApi": 129,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
