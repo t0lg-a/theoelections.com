@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-30T12:57:33.386Z",
+  "updatedAt": "2026-07-31T13:09:16.077Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 145
+    "governor": 149
   },
   "states": {
     "senate": 16,
@@ -2158,6 +2158,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-07-27",
+      "D": 49,
+      "R": 50,
+      "sigma": 3,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sampleSize": 1006,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.foxnews.com/politics/fox-news-poll-gop-divisions-shape-texas-senate-race",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202bea12dfc963"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -2460,6 +2477,57 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202marf8010a9d"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-07-24",
+      "D": 44,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "RMG Research",
+      "sampleSize": 800,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://reforminggovernment.org/irg-poll-inflation-still-rules-free-markets-still-win-race-still-open/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202rmg094af3ba"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-07-24",
+      "D": 46,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "RMG Research",
+      "sampleSize": 800,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://reforminggovernment.org/irg-poll-inflation-still-rules-free-markets-still-win-race-still-open/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202rmg47f9f31c"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-07-24",
+      "D": 47,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "RMG Research",
+      "sampleSize": 800,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://reforminggovernment.org/irg-poll-inflation-still-rules-free-markets-still-win-race-still-open/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202rmg75d397b8"
     },
     {
       "mode": "senate",
@@ -3605,7 +3673,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 287
+      "governor": 291
     },
     "dropped": {
       "senate": 0,
@@ -3708,12 +3776,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 96,
+      "governor": 100,
       "generic-ballot": 149,
       "approval": 205,
       "favorability": 121
     },
-    "fromApi": 129,
+    "fromApi": 133,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
