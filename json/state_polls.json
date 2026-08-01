@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T13:09:16.077Z",
+  "updatedAt": "2026-08-01T12:14:56.177Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -3673,17 +3673,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 291
+      "governor": 292
     },
     "dropped": {
       "senate": 0,
-      "governor": 149
+      "governor": 150
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 94,
-        "matchup": 55
+        "matchup": 56
       }
     },
     "shape": {
@@ -3776,15 +3776,18 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 100,
+      "governor": 101,
       "generic-ballot": 149,
-      "approval": 205,
-      "favorability": 121
+      "approval": 203,
+      "favorability": 119
     },
     "fromApi": 133,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
+      "Alan Wilson": [
+        "2026 South Carolina"
+      ],
       "Ally Richards": [
         "2026 Vermont"
       ],
@@ -3838,6 +3841,9 @@
       ],
       "JB Pritzker": [
         "2026 Illinois"
+      ],
+      "Jermaine Johnson": [
+        "2026 South Carolina"
       ],
       "Jerri Green": [
         "2026 Tennessee"
