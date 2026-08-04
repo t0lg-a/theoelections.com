@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-03T13:55:31.963Z",
+  "updatedAt": "2026-08-04T13:12:28.833Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 149
+    "governor": 150
   },
   "states": {
     "senate": 16,
@@ -2175,6 +2175,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-07-31",
+      "D": 44,
+      "R": 50,
+      "sigma": 3,
+      "pollster": "Wedgewood Polls",
+      "sampleSize": 800,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://drive.google.com/file/u/1/d/1t2mC4MFActxiBdx4ef_5crisXjD9xH7a/view",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202wedaa8a5561"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -3673,17 +3690,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 293
+      "governor": 297
     },
     "dropped": {
       "senate": 0,
-      "governor": 151
+      "governor": 154
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 94,
-        "matchup": 57
+        "matchup": 60
       }
     },
     "shape": {
@@ -3776,12 +3793,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 101,
-      "generic-ballot": 148,
+      "governor": 105,
+      "generic-ballot": 147,
       "approval": 200,
-      "favorability": 116
+      "favorability": 114
     },
-    "fromApi": 133,
+    "fromApi": 134,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
