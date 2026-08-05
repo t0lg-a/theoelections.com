@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-04T13:12:28.833Z",
+  "updatedAt": "2026-08-05T13:04:17.714Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 150
+    "governor": 151
   },
   "states": {
     "senate": 16,
@@ -2176,6 +2176,23 @@
     {
       "mode": "governor",
       "state": "TX",
+      "date": "2026-07-30",
+      "D": 43,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Texas Southern University Barbara Jordan Public Policy Research and Survey Center",
+      "sampleSize": 1200,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://static1.squarespace.com/static/67aa7aa3e284b002cd6a420e/t/6a713767d4ed824b91ea090d/1785804647961/Texas+Statewide+August2026.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202tex0c7a001f"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
       "date": "2026-07-31",
       "D": 44,
       "R": 50,
@@ -3690,17 +3707,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 297
+      "governor": 299
     },
     "dropped": {
       "senate": 0,
-      "governor": 154
+      "governor": 155
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 94,
-        "matchup": 60
+        "matchup": 61
       }
     },
     "shape": {
@@ -3793,12 +3810,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 105,
-      "generic-ballot": 147,
-      "approval": 200,
-      "favorability": 114
+      "governor": 107,
+      "generic-ballot": 144,
+      "approval": 197,
+      "favorability": 111
     },
-    "fromApi": 134,
+    "fromApi": 135,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
