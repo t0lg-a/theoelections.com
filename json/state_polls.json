@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-05T13:07:18.056Z",
+  "updatedAt": "2026-08-06T13:04:14.600Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 151
+    "governor": 152
   },
   "states": {
     "senate": 16,
@@ -1850,6 +1850,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202bra253133dd"
+    },
+    {
+      "mode": "governor",
+      "state": "PA",
+      "date": "2026-07-30",
+      "D": 50,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "National Public Affairs",
+      "sampleSize": 600,
+      "population": "lv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://backend.natpublicaffairs.com/media/PA_Statewide_Topline_08042026%20-Public_Release-v2.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202nat6e2ff71c"
     },
     {
       "mode": "governor",
@@ -3707,7 +3724,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 299
+      "governor": 300
     },
     "dropped": {
       "senate": 0,
@@ -3811,11 +3828,11 @@
     "skippedDays": [],
     "probe": {
       "governor": 107,
-      "generic-ballot": 144,
-      "approval": 197,
-      "favorability": 111
+      "generic-ballot": 143,
+      "approval": 195,
+      "favorability": 108
     },
-    "fromApi": 135,
+    "fromApi": 136,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
