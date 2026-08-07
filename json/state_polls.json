@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-06T13:06:52.516Z",
+  "updatedAt": "2026-08-07T12:00:42.118Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 152
+    "governor": 155
   },
   "states": {
     "senate": 16,
@@ -555,6 +555,40 @@
     },
     {
       "mode": "governor",
+      "state": "FL",
+      "date": "2026-07-26",
+      "D": 38,
+      "R": 45,
+      "sigma": 3,
+      "pollster": "Targoz Market Research",
+      "sampleSize": 1026,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://jmipoll.com/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202tar97975ec6"
+    },
+    {
+      "mode": "governor",
+      "state": "FL",
+      "date": "2026-07-26",
+      "D": 39,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Targoz Market Research",
+      "sampleSize": 1027,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://jmipoll.com/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202tarebf93c64"
+    },
+    {
+      "mode": "governor",
       "state": "IA",
       "date": "2025-10-13",
       "D": 45,
@@ -670,6 +704,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202bea7aa62909"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-08-04",
+      "D": 48,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "Emerson College",
+      "sampleSize": 712,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://emersoncollegepolling.com/iowa-2026-poll/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202emeebb78070"
     },
     {
       "mode": "governor",
@@ -3724,7 +3775,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 300
+      "governor": 303
     },
     "dropped": {
       "senate": 0,
@@ -3827,12 +3878,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 107,
+      "governor": 110,
       "generic-ballot": 143,
-      "approval": 195,
+      "approval": 194,
       "favorability": 108
     },
-    "fromApi": 136,
+    "fromApi": 139,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
