@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-07T12:02:51.571Z",
+  "updatedAt": "2026-08-08T11:48:00.687Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 155
+    "governor": 157
   },
   "states": {
     "senate": 16,
@@ -229,6 +229,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202nobc86b9c74"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-07-28",
+      "D": 52,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Fabrizio, Lee & Associates/Impact Research",
+      "sampleSize": 913,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.aarp.org/content/dam/aarp/research/topics/voter-opinion-research/politics/2026-midterm-election-poll-arizona.doi.10.26419-2fres.01065.007.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202fab5f0bab16"
     },
     {
       "mode": "governor",
@@ -2261,6 +2278,23 @@
     {
       "mode": "governor",
       "state": "TX",
+      "date": "2026-07-30",
+      "D": 45,
+      "R": 46,
+      "sigma": 3,
+      "pollster": "ReconMR/Siena University",
+      "sampleSize": 619,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://reconmr.com/wp-content/uploads/2026/08/Texas-Pulse-August-Release-August-7-2026-Final.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202recd12239ff"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
       "date": "2026-07-31",
       "D": 44,
       "R": 50,
@@ -3775,7 +3809,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 303
+      "governor": 305
     },
     "dropped": {
       "senate": 0,
@@ -3878,12 +3912,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 110,
-      "generic-ballot": 143,
-      "approval": 194,
+      "governor": 102,
+      "generic-ballot": 139,
+      "approval": 191,
       "favorability": 108
     },
-    "fromApi": 139,
+    "fromApi": 141,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
