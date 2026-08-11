@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T12:04:12.149Z",
+  "updatedAt": "2026-08-11T12:01:00.426Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -3809,16 +3809,16 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 305
+      "governor": 304
     },
     "dropped": {
       "senate": 0,
-      "governor": 155
+      "governor": 154
     },
     "dropReasons": {
       "senate": {},
       "governor": {
-        "cycle": 94,
+        "cycle": 93,
         "matchup": 61
       }
     },
@@ -3848,25 +3848,6 @@
         "stages": [],
         "stateExamples": [],
         "sample": [
-          {
-            "id": "govvirres3u1v5zll",
-            "poll_type": "governor",
-            "seat_name": null,
-            "subject": "2025 Virginia",
-            "start_date": "2024-09-03",
-            "end_date": "2024-09-09",
-            "pollster": "Research America",
-            "answers": [
-              {
-                "choice": "Abigail Spanberger",
-                "pct": 39
-              },
-              {
-                "choice": "Winsome Earle-Sears",
-                "pct": 39
-              }
-            ]
-          },
           {
             "id": "gov202co/6d724bce",
             "poll_type": "governor",
@@ -3904,6 +3885,25 @@
                 "pct": 44
               }
             ]
+          },
+          {
+            "id": "govvireme0psa4323",
+            "poll_type": "governor",
+            "seat_name": null,
+            "subject": "2025 Virginia",
+            "start_date": "2025-01-06",
+            "end_date": "2025-01-08",
+            "pollster": "Emerson College",
+            "answers": [
+              {
+                "choice": "Abigail Spanberger",
+                "pct": 41.8
+              },
+              {
+                "choice": "Winsome Earle-Sears",
+                "pct": 41
+              }
+            ]
           }
         ]
       }
@@ -3913,7 +3913,7 @@
     "skippedDays": [],
     "probe": {
       "governor": 102,
-      "generic-ballot": 139,
+      "generic-ballot": 138,
       "approval": 190,
       "favorability": 108
     },
