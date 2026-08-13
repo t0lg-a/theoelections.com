@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-12T12:03:48.902Z",
+  "updatedAt": "2026-08-13T12:02:40.917Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 157
+    "governor": 159
   },
   "states": {
     "senate": 16,
@@ -1500,6 +1500,23 @@
     },
     {
       "mode": "governor",
+      "state": "NY",
+      "date": "2026-08-06",
+      "D": 49,
+      "R": 39,
+      "sigma": 3,
+      "pollster": "Siena University",
+      "sampleSize": 811,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://sri.siena.edu/2026/08/12/siena-poll-of-likely-new-york-state-voters-hochul-49-blakeman-39/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202sie040ecd95"
+    },
+    {
+      "mode": "governor",
       "state": "OH",
       "date": "2025-08-19",
       "D": 39.4,
@@ -1656,14 +1673,14 @@
       "R": 44.9,
       "sigma": 3,
       "pollster": "Quantus Insights",
-      "sampleSize": 925,
+      "sampleSize": 809,
       "population": "lv",
       "partisan": null,
       "internal": false,
-      "url": "https://docs.google.com/spreadsheets/d/1ybme6RFR0Gz0WDhEeTLTeIQkeWU6vyqB/edit?gid=1788821253#gid=1788821253",
+      "url": "https://docs.google.com/spreadsheets/d/1ybme6RFR0Gz0WDhEeTLTeIQkeWU6vyqB/edit?rtpof=true&sd=true",
       "seat": null,
       "source": "votehub",
-      "id": "gov202qua0aaac9ff"
+      "id": "gov202qua7858d8a7"
     },
     {
       "mode": "governor",
@@ -1697,7 +1714,7 @@
       "url": "https://scholarworks.bgsu.edu/cgi/viewcontent.cgi?article=1021&context=depo",
       "seat": null,
       "source": "votehub",
-      "id": "gov202bow0c9404fa"
+      "id": "gov202bow85a71f73"
     },
     {
       "mode": "governor",
@@ -2308,6 +2325,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202wedaa8a5561"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
+      "date": "2026-07-31",
+      "D": 46,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Cygnal",
+      "sampleSize": 800,
+      "population": "lv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://www.cygn.al/wp-content/uploads/2026/08/Abbott-Data-Center-Plan-Memo.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202cygc8150f78"
     },
     {
       "mode": "governor",
@@ -3809,17 +3843,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 305
+      "governor": 304
     },
     "dropped": {
       "senate": 0,
-      "governor": 155
+      "governor": 156
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 62
+        "matchup": 63
       }
     },
     "shape": {
@@ -3912,12 +3946,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 102,
-      "generic-ballot": 135,
-      "approval": 185,
+      "governor": 103,
+      "generic-ballot": 133,
+      "approval": 183,
       "favorability": 106
     },
-    "fromApi": 141,
+    "fromApi": 143,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -3953,6 +3987,9 @@
       ],
       "Click Bishop": [
         "2026 Alaska"
+      ],
+      "Dan Cox": [
+        "2026 Maryland"
       ],
       "Dan McKee": [
         "2026 Rhode Island"
@@ -4058,6 +4095,9 @@
       ],
       "Tommy Tuberville": [
         "2026 Alabama"
+      ],
+      "Wes Moore": [
+        "2026 Maryland"
       ],
       "Xavier Becerra": [
         "2026 California"
