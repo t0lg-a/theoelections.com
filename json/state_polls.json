@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-13T12:04:12.621Z",
+  "updatedAt": "2026-08-14T12:00:33.744Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 159
+    "governor": 161
   },
   "states": {
     "senate": 16,
@@ -2345,6 +2345,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-08-10",
+      "D": 45,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Emerson College",
+      "sampleSize": 1000,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://emersoncollegepolling.com/texas-2026-poll-paxton-and-talarico/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202emebe4786e2"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -2698,6 +2715,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202rmg75d397b8"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-03",
+      "D": 47,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "GBAO Strategies",
+      "sampleSize": 800,
+      "population": "lv",
+      "partisan": "D",
+      "internal": false,
+      "url": "https://www.politico.com/newsletters/playbook-pm/2026/08/12/trumps-cost-of-living-crunch-01035189",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202gbaf1f6f960"
     },
     {
       "mode": "senate",
@@ -3843,17 +3877,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 304
+      "governor": 308
     },
     "dropped": {
       "senate": 0,
-      "governor": 156
+      "governor": 158
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 63
+        "matchup": 65
       }
     },
     "shape": {
@@ -3946,12 +3980,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 103,
-      "generic-ballot": 133,
-      "approval": 183,
-      "favorability": 106
+      "governor": 107,
+      "generic-ballot": 131,
+      "approval": 179,
+      "favorability": 105
     },
-    "fromApi": 143,
+    "fromApi": 145,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
