@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T12:02:09.346Z",
+  "updatedAt": "2026-08-15T11:37:42.888Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -12083,7 +12083,6 @@
     "failedSlices": 0,
     "skippedDays": [],
     "gbDroppedPollsters": [
-      "A2 Insights",
       "Bedrock Polling",
       "Big Data Poll",
       "Bowling Green State University/YouGov",
@@ -12135,7 +12134,6 @@
       "YouGov Blue"
     ],
     "approvalDroppedPollsters": [
-      "A2 Insights",
       "ActiVote",
       "Angus Reid Global",
       "Big Data Poll",

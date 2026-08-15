@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-14T12:02:16.959Z",
+  "updatedAt": "2026-08-15T11:37:53.603Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 161
+    "governor": 162
   },
   "states": {
     "senate": 16,
@@ -1766,6 +1766,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202thead47ff93"
+    },
+    {
+      "mode": "governor",
+      "state": "OH",
+      "date": "2026-08-10",
+      "D": 48,
+      "R": 50,
+      "sigma": 3,
+      "pollster": "Beacon Research/Shaw & Co. Research",
+      "sampleSize": 1008,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.foxnews.com/politics/fox-news-poll-economic-anxiety-candidate-concerns-define-ohio-senate-race",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202beabaf570dd"
     },
     {
       "mode": "governor",
@@ -3877,17 +3894,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 308
+      "governor": 310
     },
     "dropped": {
       "senate": 0,
-      "governor": 158
+      "governor": 159
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 65
+        "matchup": 66
       }
     },
     "shape": {
@@ -3980,12 +3997,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 107,
-      "generic-ballot": 131,
-      "approval": 179,
-      "favorability": 105
+      "governor": 109,
+      "generic-ballot": 128,
+      "approval": 175,
+      "favorability": 102
     },
-    "fromApi": 145,
+    "fromApi": 146,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
