@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-15T11:39:16.362Z",
+  "updatedAt": "2026-08-16T11:38:55.827Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 162
+    "governor": 164
   },
   "states": {
     "senate": 16,
@@ -246,6 +246,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202fab5f0bab16"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-07-30",
+      "D": 52,
+      "R": 48,
+      "sigma": 3,
+      "pollster": "The Tarrance Group",
+      "sampleSize": 600,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.democracydefensefoundation.org/news/az/new-poll-arizona-voters-remain-concerned-about-election-integrity-headed-into-general-election",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202the8bf98233"
     },
     {
       "mode": "governor",
@@ -1783,6 +1800,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202beabaf570dd"
+    },
+    {
+      "mode": "governor",
+      "state": "OH",
+      "date": "2026-08-13",
+      "D": 47,
+      "R": 46,
+      "sigma": 3,
+      "pollster": "Wedgewood Polls",
+      "sampleSize": 800,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://drive.google.com/file/u/1/d/1rP-26-yqNx9jy_gRqoLDmgJgzm5X8a4O/view",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202wed2f55b36e"
     },
     {
       "mode": "governor",
@@ -3894,7 +3928,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 310
+      "governor": 312
     },
     "dropped": {
       "senate": 0,
@@ -3997,12 +4031,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 109,
+      "governor": 111,
       "generic-ballot": 128,
       "approval": 175,
-      "favorability": 102
+      "favorability": 101
     },
-    "fromApi": 146,
+    "fromApi": 148,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
