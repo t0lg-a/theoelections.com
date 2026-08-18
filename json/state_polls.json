@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-17T11:45:33.857Z",
+  "updatedAt": "2026-08-18T11:44:57.826Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 164
+    "governor": 166
   },
   "states": {
     "senate": 16,
@@ -263,6 +263,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202the8bf98233"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-13",
+      "D": 43,
+      "R": 38,
+      "sigma": 3,
+      "pollster": "Stealth Analytics",
+      "sampleSize": 530,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.stealth-analytics.com/dispatches/az-general-lv-statewide-august-2026",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202ste25bcebfb"
     },
     {
       "mode": "governor",
@@ -2785,6 +2802,23 @@
       "id": "gov202gbaf1f6f960"
     },
     {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-13",
+      "D": 48,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Platform Communications",
+      "sampleSize": 500,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.wpr.org/wp-content/uploads/2026/08/Badger-Battleground-Poll-Memo-August-2026-Final.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202plab53c0b38"
+    },
+    {
       "mode": "senate",
       "state": "AK",
       "date": "2025-03-15",
@@ -3928,7 +3962,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 312
+      "governor": 314
     },
     "dropped": {
       "senate": 0,
@@ -4031,12 +4065,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 111,
-      "generic-ballot": 127,
-      "approval": 174,
+      "governor": 109,
+      "generic-ballot": 124,
+      "approval": 170,
       "favorability": 101
     },
-    "fromApi": 148,
+    "fromApi": 150,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
