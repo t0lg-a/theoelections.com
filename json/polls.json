@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T11:45:49.241Z",
+  "updatedAt": "2026-08-19T11:44:03.349Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -9554,114 +9554,6 @@
         {
           "choice": "Disapprove",
           "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyou6v4sb2rd",
-      "poll_type": "approval",
-      "sample_size": 1680,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_fFL8Pon.pdf",
-      "created_at": "2025-07-16",
-      "start_date": "2025-07-11",
-      "end_date": "2025-07-14",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyoukqd80nb9",
-      "poll_type": "approval",
-      "sample_size": 1506,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_fFL8Pon.pdf",
-      "created_at": "2025-07-16",
-      "start_date": "2025-07-11",
-      "end_date": "2025-07-14",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonquiry9rm6o9",
-      "poll_type": "approval",
-      "sample_size": 1290,
-      "population": "rv",
-      "url": "https://poll.qu.edu/images/polling/us/us07162025_ugxj29.pdf",
-      "created_at": "2025-07-16",
-      "start_date": "2025-07-10",
-      "end_date": "2025-07-14",
-      "pollster": "Quinnipiac University",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 40
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonap-5vuuroeb",
-      "poll_type": "approval",
-      "sample_size": 1437,
-      "population": "a",
-      "url": "https://apnorc.org/wp-content/uploads/2025/07/July-W1-Topline-Trump.pdf",
-      "created_at": "2025-07-17",
-      "start_date": "2025-07-10",
-      "end_date": "2025-07-14",
-      "pollster": "AP-NORC",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 40
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 58
         }
       ],
       "seat_name": null,
