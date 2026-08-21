@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-20T11:47:58.966Z",
+  "updatedAt": "2026-08-21T11:46:32.625Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 166
+    "governor": 167
   },
   "states": {
     "senate": 16,
@@ -280,6 +280,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202ste25bcebfb"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-13",
+      "D": 48,
+      "R": 35,
+      "sigma": 3,
+      "pollster": "Noble Predictive Insights",
+      "sampleSize": 923,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.noblepredictiveinsights.com/post/katie-hobbs-leads-andy-biggs-in-the-grand-canyon-state",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202nobb8fa340d"
     },
     {
       "mode": "governor",
@@ -3962,17 +3979,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 314
+      "governor": 319
     },
     "dropped": {
       "senate": 0,
-      "governor": 159
+      "governor": 163
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 66
+        "matchup": 70
       }
     },
     "shape": {
@@ -4065,12 +4082,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 103,
+      "governor": 108,
       "generic-ballot": 115,
       "approval": 158,
       "favorability": 88
     },
-    "fromApi": 150,
+    "fromApi": 151,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4158,6 +4175,9 @@
       "Ken Block": [
         "2026 Rhode Island"
       ],
+      "Lisa Demuth": [
+        "2026 Minnesota"
+      ],
       "Lynne Walz": [
         "2026 Nebraska"
       ],
@@ -4205,6 +4225,9 @@
       ],
       "Steve Hilton": [
         "2026 California"
+      ],
+      "Steven Young": [
+        "2026 Minnesota"
       ],
       "Tina Kotek": [
         "2026 Oregon"
