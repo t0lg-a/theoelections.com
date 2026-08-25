@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T11:48:30.936Z",
+  "updatedAt": "2026-08-25T11:47:56.618Z",
   "approval": [
     {
       "id": "appdonyou319bfe49",
@@ -9347,58 +9347,6 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonamek0askdtl",
-      "poll_type": "approval",
-      "sample_size": 1006,
-      "population": "rv",
-      "url": "https://americanresearchgroup.com/economy/#07-20-2025",
-      "created_at": "2025-07-22",
-      "start_date": "2025-07-17",
-      "end_date": "2025-07-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 38
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdoname2aci3ti5",
-      "poll_type": "approval",
-      "sample_size": 1100,
-      "population": "a",
-      "url": "https://americanresearchgroup.com/economy/#07-20-2025",
-      "created_at": "2025-07-22",
-      "start_date": "2025-07-17",
-      "end_date": "2025-07-20",
-      "pollster": "American Research Group",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 38
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 59
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
@@ -11717,7 +11665,6 @@
       "Echelon Insights",
       "Echelon Insights/GBAO",
       "Fabrizio, Lee & Associates",
-      "Fabrizio, Lee & Associates/Impact Research",
       "Focaldata",
       "GBAO Strategies",
       "Grayhouse",
@@ -11766,7 +11713,6 @@
       "Data for Progress",
       "Echelon Insights",
       "Echelon Insights/GBAO",
-      "Fabrizio, Lee & Associates/Impact Research",
       "Focaldata",
       "GBAO Strategies",
       "Global Strategy Group",
