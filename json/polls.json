@@ -1,6 +1,118 @@
 {
-  "updatedAt": "2026-08-25T11:49:08.826Z",
+  "updatedAt": "2026-08-26T11:49:21.547Z",
   "approval": [
+    {
+      "id": "appdonips081c616d",
+      "poll_type": "approval",
+      "sample_size": 951,
+      "population": "rv",
+      "url": "https://www.ipsos.com/en-us/americans-continue-expect-extended-us-military-involvement-iran",
+      "created_at": "2026-08-26",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-24",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 37
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 63
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonipseea3e8cc",
+      "poll_type": "approval",
+      "sample_size": 1215,
+      "population": "a",
+      "url": "https://www.ipsos.com/en-us/americans-continue-expect-extended-us-military-involvement-iran",
+      "created_at": "2026-08-26",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-24",
+      "pollster": "Ipsos",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 33
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 65
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "Reuters"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyou5d559444",
+      "poll_type": "approval",
+      "sample_size": 1379,
+      "population": "rv",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_v7iliA1.pdf#page=31",
+      "created_at": "2026-08-26",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-24",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 40
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 57
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
+    {
+      "id": "appdonyou4ecf53a0",
+      "poll_type": "approval",
+      "sample_size": 1536,
+      "population": "a",
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_v7iliA1.pdf#page=31",
+      "created_at": "2026-08-26",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-24",
+      "pollster": "YouGov",
+      "answers": [
+        {
+          "choice": "Approve",
+          "pct": 36
+        },
+        {
+          "choice": "Disapprove",
+          "pct": 57
+        }
+      ],
+      "seat_name": null,
+      "sponsors": [
+        "The Economist"
+      ],
+      "internal": false,
+      "partisan": null,
+      "subject": "Donald Trump"
+    },
     {
       "id": "appdonyou319bfe49",
       "poll_type": "approval",
@@ -9205,144 +9317,6 @@
       "seat_name": null,
       "sponsors": [
         "Nexstar"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyou46ps9hg2",
-      "poll_type": "approval",
-      "sample_size": 1729,
-      "population": "a",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_QYo5riR.pdf",
-      "created_at": "2025-07-22",
-      "start_date": "2025-07-18",
-      "end_date": "2025-07-21",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 41
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyouuos3ve73",
-      "poll_type": "approval",
-      "sample_size": 1551,
-      "population": "rv",
-      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/econTabReport_QYo5riR.pdf",
-      "created_at": "2025-07-22",
-      "start_date": "2025-07-18",
-      "end_date": "2025-07-21",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 56
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Economist"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonbea1brjpdue",
-      "poll_type": "approval",
-      "sample_size": 1000,
-      "population": "rv",
-      "url": "https://static.foxnews.com/foxnews.com/content/uploads/2025/07/fox_july-18-21-2025_national_topline_july-23-release.pdf",
-      "created_at": "2025-07-24",
-      "start_date": "2025-07-18",
-      "end_date": "2025-07-21",
-      "pollster": "Beacon Research/Shaw & Co. Research",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 46
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 54
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "Fox News"
-      ],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdongal3o1n38nf",
-      "poll_type": "approval",
-      "sample_size": 1002,
-      "population": "a",
-      "url": "https://news.gallup.com/file/poll/692885/2025_07_24%20Trump%20Approval%20Topline%20and%20Tabs.pdf",
-      "created_at": "2025-07-24",
-      "start_date": "2025-07-07",
-      "end_date": "2025-07-21",
-      "pollster": "Gallup",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 37
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 58
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonyousbq498fk",
-      "poll_type": "approval",
-      "sample_size": 1470,
-      "population": "a",
-      "url": "https://www.thetimes.com/us/american-politics/article/trump-polls-approval-rating-200-days-nxdl2szkr",
-      "created_at": "2025-07-31",
-      "start_date": "2025-07-18",
-      "end_date": "2025-07-21",
-      "pollster": "YouGov",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 39
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 56
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [
-        "The Times of London"
       ],
       "internal": false,
       "partisan": null,

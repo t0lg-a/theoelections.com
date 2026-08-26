@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-25T11:49:20.109Z",
+  "updatedAt": "2026-08-26T11:49:33.685Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 167
+    "governor": 177
   },
   "states": {
     "senate": 16,
@@ -297,6 +297,74 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202nobb8fa340d"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-16",
+      "D": 45,
+      "R": 40,
+      "sigma": 3,
+      "pollster": "Kreate Strategies",
+      "sampleSize": 900,
+      "population": "lv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://x.com/AmericanEncore/status/2090601186273731039",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202kreeebd121f"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-17",
+      "D": 49,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "Quantus Insights",
+      "sampleSize": 780,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://drive.google.com/file/d/1BykPOxoJ1OPnMi2maevjUosmYs8faa8Q/view?usp=sharing",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202quaca60018a"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-18",
+      "D": 50,
+      "R": 34,
+      "sigma": 3,
+      "pollster": "HighGround",
+      "sampleSize": 400,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://azhighground.com/hobbs-builds-double-digit-lead-in-arizona",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202hig20c1b034"
+    },
+    {
+      "mode": "governor",
+      "state": "AZ",
+      "date": "2026-08-19",
+      "D": 39,
+      "R": 38,
+      "sigma": 3,
+      "pollster": "NextGen Polling",
+      "sampleSize": 1627,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://nxtgenp.com/post/new-blog-post-6092",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202nexd1d1735a"
     },
     {
       "mode": "governor",
@@ -1160,6 +1228,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202sai22d68e5a"
+    },
+    {
+      "mode": "governor",
+      "state": "NH",
+      "date": "2026-08-18",
+      "D": 38,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Saint Anselm College Survey Center",
+      "sampleSize": 1411,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.anselm.edu/about/anselmian-hub/news/new-saint-anselm-college-poll-finds-republicans-facing-midterm-headwinds-democratic-lead-widens",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202saib7044af6"
     },
     {
       "mode": "governor",
@@ -2040,6 +2125,40 @@
     },
     {
       "mode": "governor",
+      "state": "PA",
+      "date": "2026-08-21",
+      "D": 55,
+      "R": 39,
+      "sigma": 3,
+      "pollster": "The New York Times/Siena University",
+      "sampleSize": 760,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.nytimes.com/interactive/2026/08/25/polls/times-inquirer-siena-pa-poll-lv-crosstabs.html",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202the8ae2c7ef"
+    },
+    {
+      "mode": "governor",
+      "state": "PA",
+      "date": "2026-08-21",
+      "D": 54,
+      "R": 37,
+      "sigma": 3,
+      "pollster": "The New York Times/Siena University",
+      "sampleSize": 760,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.nytimes.com/interactive/2026/08/25/polls/times-inquirer-siena-pa-poll-lv-crosstabs.html",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202thefa80fdf0"
+    },
+    {
+      "mode": "governor",
       "state": "TX",
       "date": "2025-08-29",
       "D": 43,
@@ -2447,6 +2566,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-08-13",
+      "D": 40,
+      "R": 45,
+      "sigma": 3,
+      "pollster": "The Texas Politics Project at the University of Texas at Austin/YouGov",
+      "sampleSize": 1218,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://texaspolitics.utexas.edu/blog/new-ut-texas-politics-project-poll-finds-talarico-leading-paxton-abbott-leading-hinojosa-continued-resistance-to-data-centers-2",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202the7762f5c1"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -2834,6 +2970,40 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202plab53c0b38"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-18",
+      "D": 47,
+      "R": 43,
+      "sigma": 3,
+      "pollster": "TIPP Insights",
+      "sampleSize": 1119,
+      "population": "lv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://tippinsights.com/league-of-american-workers-survey-wisconsin-4",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202tip3799a38e"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-18",
+      "D": 43,
+      "R": 41,
+      "sigma": 3,
+      "pollster": "TIPP Insights",
+      "sampleSize": 1434,
+      "population": "rv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://tippinsights.com/league-of-american-workers-survey-wisconsin-4",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202tip71a0dd14"
     },
     {
       "mode": "senate",
@@ -3979,17 +4149,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 319
+      "governor": 330
     },
     "dropped": {
       "senate": 0,
-      "governor": 163
+      "governor": 164
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 70
+        "matchup": 71
       }
     },
     "shape": {
@@ -4082,12 +4252,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 108,
-      "generic-ballot": 108,
+      "governor": 116,
+      "generic-ballot": 110,
       "approval": 148,
-      "favorability": 81
+      "favorability": 79
     },
-    "fromApi": 151,
+    "fromApi": 161,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4139,8 +4309,14 @@
       "Dean Roy": [
         "2026 Vermont"
       ],
+      "Deb Haaland": [
+        "2026 New Mexico"
+      ],
       "Doug Jones": [
         "2026 Alabama"
+      ],
+      "Greg Hull": [
+        "2026 New Mexico"
       ],
       "Hannah Pingree": [
         "2026 Maine"
