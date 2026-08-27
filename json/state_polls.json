@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-26T11:51:13.444Z",
+  "updatedAt": "2026-08-27T21:03:32.340Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 177
+    "governor": 182
   },
   "states": {
     "senate": 16,
@@ -857,6 +857,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202emeebb78070"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-08-23",
+      "D": 47.8,
+      "R": 43.6,
+      "sigma": 3,
+      "pollster": "Suffolk University",
+      "sampleSize": 500,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.suffolk.edu/academics/research-at-suffolk/political-research-center/polls/other-states#collapse-August-26-2026-Iowa-Governor-and-US-Senate-General-Election",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202sufbade674c"
     },
     {
       "mode": "governor",
@@ -2159,6 +2176,23 @@
     },
     {
       "mode": "governor",
+      "state": "PA",
+      "date": "2026-08-23",
+      "D": 50,
+      "R": 25,
+      "sigma": 3,
+      "pollster": "Franklin & Marshall College",
+      "sampleSize": 501,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.fandmpoll.org/franklin-marshall-college-poll-release-august-2026/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202frafedd304c"
+    },
+    {
+      "mode": "governor",
       "state": "TX",
       "date": "2025-08-29",
       "D": 43,
@@ -2583,6 +2617,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-08-24",
+      "D": 42,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Slingshot Strategies",
+      "sampleSize": 1000,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://texaspublicopinionresearch.substack.com/p/new-poll-in-texas-general-election",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202sli33eb9fcb"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -3004,6 +3055,40 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202tip71a0dd14"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-20",
+      "D": 49,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Marquette University Law School",
+      "sampleSize": 738,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://law.marquette.edu/poll/2026/08/26/detailed-results-of-the-marquette-law-school-wisconsin-poll-august-12-20-2026/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202mare9ac6d63"
+    },
+    {
+      "mode": "governor",
+      "state": "WI",
+      "date": "2026-08-20",
+      "D": 44,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Marquette University Law School",
+      "sampleSize": 891,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://law.marquette.edu/poll/2026/08/26/detailed-results-of-the-marquette-law-school-wisconsin-poll-august-12-20-2026/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202mar91835a0d"
     },
     {
       "mode": "senate",
@@ -4149,7 +4234,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 330
+      "governor": 335
     },
     "dropped": {
       "senate": 0,
@@ -4252,12 +4337,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 116,
-      "generic-ballot": 110,
-      "approval": 148,
-      "favorability": 79
+      "governor": 121,
+      "generic-ballot": 107,
+      "approval": 142,
+      "favorability": 77
     },
-    "fromApi": 161,
+    "fromApi": 166,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
