@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-28T21:27:04.178Z",
+  "updatedAt": "2026-08-29T15:40:14.053Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 182
+    "governor": 184
   },
   "states": {
     "senate": 16,
@@ -1265,6 +1265,23 @@
     },
     {
       "mode": "governor",
+      "state": "NH",
+      "date": "2026-08-24",
+      "D": 39,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "University of New Hampshire",
+      "sampleSize": 1878,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://scholars.unh.edu/survey_center_polls/991/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202uni9b4ef0cd"
+    },
+    {
+      "mode": "governor",
       "state": "NV",
       "date": "2025-10-13",
       "D": 37,
@@ -2173,6 +2190,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202thefa80fdf0"
+    },
+    {
+      "mode": "governor",
+      "state": "PA",
+      "date": "2026-08-22",
+      "D": 56,
+      "R": 25,
+      "sigma": 3,
+      "pollster": "Bravo Group",
+      "sampleSize": 711,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.pennlive.com/politics/2026/08/fettermans-problems-with-pa-democrats-just-keep-getting-worse-morning-scrapple-poll.html",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202brac0fcbe4a"
     },
     {
       "mode": "governor",
@@ -4234,17 +4268,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 335
+      "governor": 340
     },
     "dropped": {
       "senate": 0,
-      "governor": 164
+      "governor": 167
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 71
+        "matchup": 74
       }
     },
     "shape": {
@@ -4337,12 +4371,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 121,
-      "generic-ballot": 107,
-      "approval": 142,
+      "governor": 125,
+      "generic-ballot": 106,
+      "approval": 138,
       "favorability": 77
     },
-    "fromApi": 166,
+    "fromApi": 168,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4373,6 +4407,9 @@
       "Burt Jones": [
         "2026 Georgia"
       ],
+      "CD Reynolds": [
+        "2026 Rhode Island"
+      ],
       "Christine Drazan": [
         "2026 Oregon"
       ],
@@ -4400,6 +4437,9 @@
       "Doug Jones": [
         "2026 Alabama"
       ],
+      "Elaine Pelino": [
+        "2026 Rhode Island"
+      ],
       "Greg Hull": [
         "2026 New Mexico"
       ],
@@ -4411,6 +4451,9 @@
       ],
       "JB Pritzker": [
         "2026 Illinois"
+      ],
+      "Jasjit Gotra": [
+        "2026 Rhode Island"
       ],
       "Jermaine Johnson": [
         "2026 South Carolina"
