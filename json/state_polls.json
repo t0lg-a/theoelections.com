@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-30T15:23:08.251Z",
+  "updatedAt": "2026-08-31T18:02:10.591Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 184
+    "governor": 185
   },
   "states": {
     "senate": 16,
@@ -874,6 +874,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202sufbade674c"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-08-29",
+      "D": 51,
+      "R": 46,
+      "sigma": 3,
+      "pollster": "Wedgewood Polls",
+      "sampleSize": 600,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://drive.google.com/file/d/1db0gbhfCa_aNzU7yfM3dufl601cW1FbY/view",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202wedc80e1999"
     },
     {
       "mode": "governor",
@@ -4268,7 +4285,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 341
+      "governor": 342
     },
     "dropped": {
       "senate": 0,
@@ -4371,12 +4388,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 126,
+      "governor": 127,
       "generic-ballot": 106,
       "approval": 137,
       "favorability": 77
     },
-    "fromApi": 168,
+    "fromApi": 169,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
