@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T15:08:26.446Z",
+  "updatedAt": "2026-09-03T15:02:18.939Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -4389,9 +4389,9 @@
     "skippedDays": [],
     "probe": {
       "governor": 129,
-      "generic-ballot": 101,
-      "approval": 132,
-      "favorability": 77
+      "generic-ballot": 96,
+      "approval": 127,
+      "favorability": 69
     },
     "fromApi": 169,
     "fromCsv": 87,
