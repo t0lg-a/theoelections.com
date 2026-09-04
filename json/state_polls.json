@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-03T15:03:18.203Z",
+  "updatedAt": "2026-09-04T15:00:00.191Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 185
+    "governor": 187
   },
   "states": {
     "senate": 16,
@@ -894,6 +894,23 @@
     },
     {
       "mode": "governor",
+      "state": "IA",
+      "date": "2026-09-01",
+      "D": 49,
+      "R": 46,
+      "sigma": 3,
+      "pollster": "Emerson College",
+      "sampleSize": 750,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://emersoncollegepolling.com/iowa-2026-poll-hinson-leads-turek/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202emed6f735ab"
+    },
+    {
+      "mode": "governor",
       "state": "MN",
       "date": "2026-01-27",
       "D": 50,
@@ -1701,6 +1718,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202sie040ecd95"
+    },
+    {
+      "mode": "governor",
+      "state": "NY",
+      "date": "2026-08-21",
+      "D": 50,
+      "R": 34,
+      "sigma": 3,
+      "pollster": "Concord Public Opinion Partners",
+      "sampleSize": 505,
+      "population": "lv",
+      "partisan": "D",
+      "internal": false,
+      "url": "https://www.politico.com/newsletters/new-york-playbook/2026/09/03/mamdani-has-already-endorsed-aoc-for-president-sort-of-01062556",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202conb6a8d324"
     },
     {
       "mode": "governor",
@@ -4285,17 +4319,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 344
+      "governor": 347
     },
     "dropped": {
       "senate": 0,
-      "governor": 170
+      "governor": 171
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 77
+        "matchup": 78
       }
     },
     "shape": {
@@ -4388,12 +4422,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 129,
-      "generic-ballot": 96,
-      "approval": 127,
-      "favorability": 69
+      "governor": 131,
+      "generic-ballot": 94,
+      "approval": 125,
+      "favorability": 66
     },
-    "fromApi": 169,
+    "fromApi": 171,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4465,6 +4499,9 @@
       ],
       "Helena Foulkes": [
         "2026 Rhode Island"
+      ],
+      "Independent": [
+        "2026 Tennessee"
       ],
       "JB Pritzker": [
         "2026 Illinois"
