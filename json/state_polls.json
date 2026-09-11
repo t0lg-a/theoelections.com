@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-10T15:03:02.899Z",
+  "updatedAt": "2026-09-11T15:04:27.951Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 187
+    "governor": 191
   },
   "states": {
     "senate": 16,
@@ -725,6 +725,23 @@
     },
     {
       "mode": "governor",
+      "state": "FL",
+      "date": "2026-09-09",
+      "D": 47,
+      "R": 44,
+      "sigma": 3,
+      "pollster": "Change Research",
+      "sampleSize": 1107,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://changeresearch.com/research/2026/2026-09-10-an-emerging-florida-blue-wave",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202cha6fdf31d1"
+    },
+    {
+      "mode": "governor",
       "state": "IA",
       "date": "2025-10-13",
       "D": 45,
@@ -1397,6 +1414,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202nob02972028"
+    },
+    {
+      "mode": "governor",
+      "state": "NV",
+      "date": "2026-09-08",
+      "D": 44.2,
+      "R": 42,
+      "sigma": 3,
+      "pollster": "Emerson College",
+      "sampleSize": 680,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://emersoncollegepolling.com/nevada-2026-poll-ford-and-lombardo/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202emead385734"
     },
     {
       "mode": "governor",
@@ -2716,6 +2750,40 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202sli33eb9fcb"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-01",
+      "D": 46,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Fabrizio Ward/Impact Research",
+      "sampleSize": 895,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.aarp.org/pri/topics/voter-research/politics/2026-midterm-election-poll-texas",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202fab3ce59a7d"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-04",
+      "D": 47,
+      "R": 47,
+      "sigma": 3,
+      "pollster": "YouGov",
+      "sampleSize": 1000,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.univision.com/noticias/politica/poll-univision-texas-2026",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202youd945dff6"
     },
     {
       "mode": "governor",
@@ -4319,17 +4387,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 347
+      "governor": 352
     },
     "dropped": {
       "senate": 0,
-      "governor": 171
+      "governor": 172
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 78
+        "matchup": 79
       }
     },
     "shape": {
@@ -4422,12 +4490,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 129,
+      "governor": 134,
       "generic-ballot": 88,
       "approval": 120,
       "favorability": 58
     },
-    "fromApi": 171,
+    "fromApi": 175,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
