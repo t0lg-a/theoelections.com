@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-11T15:04:27.951Z",
+  "updatedAt": "2026-09-11T15:05:42.057Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 191
+    "governor": 193
   },
   "states": {
     "senate": 16,
@@ -925,6 +925,40 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202emed6f735ab"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-09-08",
+      "D": 51,
+      "R": 41,
+      "sigma": 3,
+      "pollster": "YouGov",
+      "sampleSize": 2041,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/iowa_election_20260903.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202you30403394"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-09-08",
+      "D": 50,
+      "R": 39,
+      "sigma": 3,
+      "pollster": "YouGov",
+      "sampleSize": 2167,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/iowa_election_20260903.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202you89addccd"
     },
     {
       "mode": "governor",
@@ -4387,7 +4421,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 352
+      "governor": 354
     },
     "dropped": {
       "senate": 0,
@@ -4490,12 +4524,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 134,
+      "governor": 136,
       "generic-ballot": 88,
       "approval": 120,
       "favorability": 58
     },
-    "fromApi": 175,
+    "fromApi": 177,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
