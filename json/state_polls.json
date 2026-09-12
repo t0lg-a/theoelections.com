@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T15:05:42.057Z",
+  "updatedAt": "2026-09-12T14:13:25.707Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -735,7 +735,7 @@
       "population": "lv",
       "partisan": null,
       "internal": false,
-      "url": "https://changeresearch.com/research/2026/2026-09-10-an-emerging-florida-blue-wave",
+      "url": "[null]",
       "seat": null,
       "source": "votehub",
       "id": "gov202cha6fdf31d1"
@@ -4526,7 +4526,7 @@
     "probe": {
       "governor": 136,
       "generic-ballot": 88,
-      "approval": 120,
+      "approval": 119,
       "favorability": 58
     },
     "fromApi": 177,
