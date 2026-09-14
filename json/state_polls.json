@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-13T14:56:26.075Z",
+  "updatedAt": "2026-09-14T16:58:52.442Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 193
+    "governor": 192
   },
   "states": {
     "senate": 16,
@@ -1146,23 +1146,6 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202masc517bd85"
-    },
-    {
-      "mode": "governor",
-      "state": "NH",
-      "date": "2024-10-13",
-      "D": 40,
-      "R": 43,
-      "sigma": 3,
-      "pollster": "co/efficient",
-      "sampleSize": 1034,
-      "population": "lv",
-      "partisan": null,
-      "internal": false,
-      "url": "https://coefficient.org/our-work/new-hampshire-us-senate-oct-2025/",
-      "seat": null,
-      "source": "votehub",
-      "id": "gov202co/6d724bce"
     },
     {
       "mode": "governor",
@@ -4421,7 +4404,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 354
+      "governor": 353
     },
     "dropped": {
       "senate": 0,
@@ -4461,25 +4444,6 @@
         "stateExamples": [],
         "sample": [
           {
-            "id": "gov202co/6d724bce",
-            "poll_type": "governor",
-            "seat_name": null,
-            "subject": "2026 New Hampshire",
-            "start_date": "2025-10-09",
-            "end_date": "2024-10-13",
-            "pollster": "co/efficient",
-            "answers": [
-              {
-                "choice": "Kelly Ayotte",
-                "pct": 43
-              },
-              {
-                "choice": "Dem",
-                "pct": 40
-              }
-            ]
-          },
-          {
             "id": "govvirmaslveo0i3n",
             "poll_type": "governor",
             "seat_name": null,
@@ -4516,6 +4480,25 @@
                 "pct": 41
               }
             ]
+          },
+          {
+            "id": "govvirchrbtbdj2xb",
+            "poll_type": "governor",
+            "seat_name": null,
+            "subject": "2025 Virginia",
+            "start_date": "2025-01-06",
+            "end_date": "2025-01-13",
+            "pollster": "Christopher Newport University",
+            "answers": [
+              {
+                "choice": "Abigail Spanberger",
+                "pct": 44
+              },
+              {
+                "choice": "Winsome Earle-Sears",
+                "pct": 39
+              }
+            ]
           }
         ]
       }
@@ -4524,12 +4507,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 132,
+      "governor": 130,
       "generic-ballot": 86,
       "approval": 117,
       "favorability": 58
     },
-    "fromApi": 177,
+    "fromApi": 176,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
