@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-14T16:58:52.442Z",
+  "updatedAt": "2026-09-15T15:35:57.268Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 192
+    "governor": 193
   },
   "states": {
     "senate": 16,
@@ -1347,6 +1347,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202uni9b4ef0cd"
+    },
+    {
+      "mode": "governor",
+      "state": "NH",
+      "date": "2026-09-11",
+      "D": 34,
+      "R": 55,
+      "sigma": 3,
+      "pollster": "co/efficient",
+      "sampleSize": 958,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://battlegrounds.coefficient.org/nh/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202co/fb4b800b"
     },
     {
       "mode": "governor",
@@ -4404,7 +4421,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 353
+      "governor": 354
     },
     "dropped": {
       "senate": 0,
@@ -4507,12 +4524,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 130,
-      "generic-ballot": 86,
-      "approval": 117,
+      "governor": 131,
+      "generic-ballot": 84,
+      "approval": 116,
       "favorability": 58
     },
-    "fromApi": 176,
+    "fromApi": 177,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
