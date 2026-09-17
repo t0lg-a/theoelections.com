@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-16T15:26:28.557Z",
+  "updatedAt": "2026-09-17T15:34:03.410Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 193
+    "governor": 196
   },
   "states": {
     "senate": 16,
@@ -959,6 +959,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202you89addccd"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-09-16",
+      "D": 46,
+      "R": 42,
+      "sigma": 3,
+      "pollster": "co/efficient",
+      "sampleSize": 831,
+      "population": "lv",
+      "partisan": "R",
+      "internal": false,
+      "url": "https://battlegrounds.coefficient.org/ia/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202co/562ad972"
     },
     {
       "mode": "governor",
@@ -2821,6 +2838,40 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-11",
+      "D": 49,
+      "R": 45,
+      "sigma": 3,
+      "pollster": "ReconMR/Siena University",
+      "sampleSize": 614,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://sri.siena.edu/2026/09/17/hinojosa-now-leads-abbott-by-4-points-talarico-widens-lead-to-6-points/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202rece076214c"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-14",
+      "D": 46,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Emerson College",
+      "sampleSize": 1000,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://emersoncollegepolling.com/texas-2026-poll-talarico-and-paxton-in-dead-heat-abbott-maintains-edge/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202eme6536e559"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -4421,17 +4472,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 354
+      "governor": 361
     },
     "dropped": {
       "senate": 0,
-      "governor": 172
+      "governor": 176
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 79
+        "matchup": 83
       }
     },
     "shape": {
@@ -4524,12 +4575,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 131,
-      "generic-ballot": 72,
-      "approval": 101,
+      "governor": 138,
+      "generic-ballot": 70,
+      "approval": 99,
       "favorability": 50
     },
-    "fromApi": 177,
+    "fromApi": 180,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4544,6 +4595,9 @@
       ],
       "Amanda Janoo": [
         "2026 Vermont"
+      ],
+      "Anthony Hudson": [
+        "2026 Michigan"
       ],
       "Bernadette Wilson": [
         "2026 Alaska"
@@ -4587,8 +4641,14 @@
       "Deb Haaland": [
         "2026 New Mexico"
       ],
+      "Donna Brandenburg": [
+        "2026 Michigan"
+      ],
       "Doug Jones": [
         "2026 Alabama"
+      ],
+      "Douglas Campbell": [
+        "2026 Michigan"
       ],
       "Elaine Pelino": [
         "2026 Rhode Island"
