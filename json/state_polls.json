@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:34:36.196Z",
+  "updatedAt": "2026-09-18T15:02:17.053Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -4472,17 +4472,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 361
+      "governor": 362
     },
     "dropped": {
       "senate": 0,
-      "governor": 176
+      "governor": 177
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 83
+        "matchup": 84
       }
     },
     "shape": {
@@ -4575,9 +4575,9 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 138,
-      "generic-ballot": 70,
-      "approval": 99,
+      "governor": 139,
+      "generic-ballot": 68,
+      "approval": 96,
       "favorability": 50
     },
     "fromApi": 180,
@@ -4686,6 +4686,9 @@
       "John James": [
         "2026 Michigan"
       ],
+      "Jonathan Kreiss-Tomkins": [
+        "2026 Alaska"
+      ],
       "June Goodband": [
         "2026 Vermont"
       ],
@@ -4760,9 +4763,6 @@
       ],
       "Wes Moore": [
         "2026 Maryland"
-      ],
-      "Xavier Becerra": [
-        "2026 California"
       ]
     }
   }
