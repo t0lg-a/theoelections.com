@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-18T15:02:17.053Z",
+  "updatedAt": "2026-09-19T14:30:40.695Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 196
+    "governor": 197
   },
   "states": {
     "senate": 16,
@@ -739,6 +739,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202cha6fdf31d1"
+    },
+    {
+      "mode": "governor",
+      "state": "FL",
+      "date": "2026-09-17",
+      "D": 43.4,
+      "R": 43.5,
+      "sigma": 3,
+      "pollster": "St. Pete Polls",
+      "sampleSize": 913,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://floridapolitics.com/archives/820638-poll-byron-donalds-44-david-jolly-43-in-dead-heat-race-for-florida-governor/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202st.6ddeb57c"
     },
     {
       "mode": "governor",
@@ -4472,17 +4489,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 362
+      "governor": 365
     },
     "dropped": {
       "senate": 0,
-      "governor": 177
+      "governor": 179
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 84
+        "matchup": 86
       }
     },
     "shape": {
@@ -4575,12 +4592,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 139,
+      "governor": 142,
       "generic-ballot": 68,
-      "approval": 96,
+      "approval": 95,
       "favorability": 50
     },
-    "fromApi": 180,
+    "fromApi": 181,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4620,6 +4637,9 @@
       "Christine Drazan": [
         "2026 Oregon"
       ],
+      "Cindy Holscher": [
+        "2026 Kansas"
+      ],
       "Click Bishop": [
         "2026 Alaska"
       ],
@@ -4634,6 +4654,9 @@
       ],
       "Dave Bronson": [
         "2026 Alaska"
+      ],
+      "David Hatley": [
+        "2026 Tennessee"
       ],
       "Dean Roy": [
         "2026 Vermont"
@@ -4698,6 +4721,9 @@
       "Ken Block": [
         "2026 Rhode Island"
       ],
+      "Lauren Pinkston": [
+        "2026 Tennessee"
+      ],
       "Lisa Demuth": [
         "2026 Minnesota"
       ],
@@ -4754,15 +4780,6 @@
       ],
       "Tina Kotek": [
         "2026 Oregon"
-      ],
-      "Tom Begich": [
-        "2026 Alaska"
-      ],
-      "Tommy Tuberville": [
-        "2026 Alabama"
-      ],
-      "Wes Moore": [
-        "2026 Maryland"
       ]
     }
   }
