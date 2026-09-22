@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T17:06:25.250Z",
+  "updatedAt": "2026-09-22T15:32:20.340Z",
   "approval": [
     {
       "id": "us-dontip0ec7e1c5",
@@ -8908,61 +8908,9 @@
       "internal": false,
       "partisan": null,
       "subject": "Donald Trump"
-    },
-    {
-      "id": "appdonverwbrd9uf3",
-      "poll_type": "approval",
-      "sample_size": 1562,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/when-americans-bite-their-tongues",
-      "created_at": "2025-08-28",
-      "start_date": "2025-08-08",
-      "end_date": "2025-08-17",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Approve",
-          "pct": 43
-        },
-        {
-          "choice": "Disapprove",
-          "pct": 55
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "Donald Trump"
     }
   ],
   "genericBallot": [
-    {
-      "id": "gen202ver7h9q7ohb",
-      "poll_type": "generic-ballot",
-      "sample_size": 1562,
-      "population": "rv",
-      "url": "https://www.theargumentmag.com/p/when-americans-bite-their-tongues",
-      "created_at": "2025-08-28",
-      "start_date": "2025-08-08",
-      "end_date": "2025-08-17",
-      "pollster": "The Argument/Verasight",
-      "answers": [
-        {
-          "choice": "Dem",
-          "pct": 50.7
-        },
-        {
-          "choice": "Rep",
-          "pct": 49.3
-        }
-      ],
-      "seat_name": null,
-      "sponsors": [],
-      "internal": false,
-      "partisan": null,
-      "subject": "2026"
-    },
     {
       "id": "gen202emecljgqucw",
       "poll_type": "generic-ballot",

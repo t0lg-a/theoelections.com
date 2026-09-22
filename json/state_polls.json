@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-21T17:06:34.527Z",
+  "updatedAt": "2026-09-22T15:32:29.371Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 197
+    "governor": 199
   },
   "states": {
     "senate": 16,
@@ -993,6 +993,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202co/562ad972"
+    },
+    {
+      "mode": "governor",
+      "state": "IA",
+      "date": "2026-09-20",
+      "D": 54,
+      "R": 42,
+      "sigma": 3,
+      "pollster": "Marist University",
+      "sampleSize": 1050,
+      "population": "rv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://maristpoll.marist.edu/polls/2026-midterm-elections-in-iowa-september-2026/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202marf9ae66ed"
     },
     {
       "mode": "governor",
@@ -2889,6 +2906,23 @@
     },
     {
       "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-19",
+      "D": 45,
+      "R": 49,
+      "sigma": 3,
+      "pollster": "Texas Southern University Barbara Jordan Public Policy Research and Survey Center",
+      "sampleSize": 1800,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.jordanresearchcenter.org/publications/tsusept2026-txsenate-governor-statewideraces",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202texdb645b2d"
+    },
+    {
+      "mode": "governor",
       "state": "WI",
       "date": "2025-10-08",
       "D": 50,
@@ -4489,17 +4523,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 365
+      "governor": 369
     },
     "dropped": {
       "senate": 0,
-      "governor": 179
+      "governor": 181
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 86
+        "matchup": 88
       }
     },
     "shape": {
@@ -4592,12 +4626,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 139,
-      "generic-ballot": 67,
+      "governor": 142,
+      "generic-ballot": 65,
       "approval": 94,
-      "favorability": 50
+      "favorability": 48
     },
-    "fromApi": 181,
+    "fromApi": 183,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
