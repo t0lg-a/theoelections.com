@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T15:32:29.371Z",
+  "updatedAt": "2026-09-23T15:28:15.374Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -663,14 +663,14 @@
       "R": 42,
       "sigma": 3,
       "pollster": "Change Research",
-      "sampleSize": 2070,
+      "sampleSize": 1593,
       "population": "lv",
       "partisan": null,
       "internal": false,
-      "url": "https://changeresearch.com/florida-governors-race-may-2026/",
+      "url": "https://changeresearch.com/wp-content/uploads/2026/05/Deep-Dive-into-Florida-1.pdf",
       "seat": null,
       "source": "votehub",
-      "id": "gov202cha94b41d04"
+      "id": "gov202cha3feaa4b2"
     },
     {
       "mode": "governor",
@@ -4523,7 +4523,7 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 369
+      "governor": 368
     },
     "dropped": {
       "senate": 0,
@@ -4627,8 +4627,8 @@
     "skippedDays": [],
     "probe": {
       "governor": 142,
-      "generic-ballot": 65,
-      "approval": 94,
+      "generic-ballot": 64,
+      "approval": 93,
       "favorability": 48
     },
     "fromApi": 183,
