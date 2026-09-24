@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-23T15:28:15.374Z",
+  "updatedAt": "2026-09-24T15:50:39.776Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 199
+    "governor": 201
   },
   "states": {
     "senate": 16,
@@ -1857,6 +1857,23 @@
     },
     {
       "mode": "governor",
+      "state": "NY",
+      "date": "2026-09-20",
+      "D": 58,
+      "R": 39,
+      "sigma": 3,
+      "pollster": "Quinnipiac University",
+      "sampleSize": 1026,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://poll.qu.edu/poll-release?releaseid=3967",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202quie0227b77"
+    },
+    {
+      "mode": "governor",
       "state": "OH",
       "date": "2025-08-19",
       "D": 39.4,
@@ -2394,6 +2411,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202frafedd304c"
+    },
+    {
+      "mode": "governor",
+      "state": "PA",
+      "date": "2026-09-22",
+      "D": 58,
+      "R": 38,
+      "sigma": 3,
+      "pollster": "The New York Times/Siena University",
+      "sampleSize": 615,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://sri.siena.edu/2026/09/24/nytimes-philadelphia-inquirer-siena-poll-of-likely-pennsylvania-voters/",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202the361d1d72"
     },
     {
       "mode": "governor",
@@ -4523,17 +4557,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 368
+      "governor": 372
     },
     "dropped": {
       "senate": 0,
-      "governor": 181
+      "governor": 183
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 88
+        "matchup": 90
       }
     },
     "shape": {
@@ -4626,12 +4660,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 142,
-      "generic-ballot": 64,
-      "approval": 93,
-      "favorability": 48
+      "governor": 146,
+      "generic-ballot": 58,
+      "approval": 82,
+      "favorability": 42
     },
-    "fromApi": 183,
+    "fromApi": 185,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
