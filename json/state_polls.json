@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T15:50:39.776Z",
+  "updatedAt": "2026-09-25T15:50:58.433Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
@@ -4557,17 +4557,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 372
+      "governor": 373
     },
     "dropped": {
       "senate": 0,
-      "governor": 183
+      "governor": 184
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 90
+        "matchup": 91
       }
     },
     "shape": {
@@ -4660,9 +4660,9 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 146,
-      "generic-ballot": 58,
-      "approval": 82,
+      "governor": 147,
+      "generic-ballot": 56,
+      "approval": 80,
       "favorability": 42
     },
     "fromApi": 185,
