@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-25T15:50:58.433Z",
+  "updatedAt": "2026-09-26T14:59:52.788Z",
   "source": "https://api.votehub.com/polls",
   "degraded": false,
   "window": 6,
   "counts": {
     "senate": 71,
-    "governor": 201
+    "governor": 204
   },
   "states": {
     "senate": 16,
@@ -759,6 +759,23 @@
     },
     {
       "mode": "governor",
+      "state": "FL",
+      "date": "2026-09-21",
+      "D": 39,
+      "R": 51,
+      "sigma": 3,
+      "pollster": "Stetson University Center for Public Opinion Research",
+      "sampleSize": 830,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.stetson.edu/artsci/cpor/media/cpor-sept.-2026-poll-final.pdf",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202steb5a21bdb"
+    },
+    {
+      "mode": "governor",
       "state": "IA",
       "date": "2025-10-13",
       "D": 45,
@@ -1415,6 +1432,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202co/fb4b800b"
+    },
+    {
+      "mode": "governor",
+      "state": "NH",
+      "date": "2026-09-22",
+      "D": 41,
+      "R": 52,
+      "sigma": 3,
+      "pollster": "The New York Times/Siena University",
+      "sampleSize": 613,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://www.nytimes.com/interactive/2026/09/25/polls/times-siena-poll-nh-crosstabs.html",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202the5a3a4173"
     },
     {
       "mode": "governor",
@@ -2954,6 +2988,23 @@
       "seat": null,
       "source": "votehub",
       "id": "gov202texdb645b2d"
+    },
+    {
+      "mode": "governor",
+      "state": "TX",
+      "date": "2026-09-22",
+      "D": 46,
+      "R": 50,
+      "sigma": 3,
+      "pollster": "Slingshot Strategies",
+      "sampleSize": 1007,
+      "population": "lv",
+      "partisan": null,
+      "internal": false,
+      "url": "https://texaspublicopinionresearch.substack.com/p/new-poll-in-texas-general-election-662",
+      "seat": null,
+      "source": "votehub",
+      "id": "gov202slieae997f0"
     },
     {
       "mode": "governor",
@@ -4557,17 +4608,17 @@
     },
     "fetched": {
       "senate": 0,
-      "governor": 373
+      "governor": 384
     },
     "dropped": {
       "senate": 0,
-      "governor": 184
+      "governor": 192
     },
     "dropReasons": {
       "senate": {},
       "governor": {
         "cycle": 93,
-        "matchup": 91
+        "matchup": 99
       }
     },
     "shape": {
@@ -4660,12 +4711,12 @@
     "failedSlices": 0,
     "skippedDays": [],
     "probe": {
-      "governor": 147,
-      "generic-ballot": 56,
-      "approval": 80,
-      "favorability": 42
+      "governor": 157,
+      "generic-ballot": 55,
+      "approval": 79,
+      "favorability": 41
     },
-    "fromApi": 185,
+    "fromApi": 188,
     "fromCsv": 87,
     "degraded": false,
     "unresolvedCandidates": {
@@ -4693,6 +4744,9 @@
       "Brad Raffensperger": [
         "2026 Georgia"
       ],
+      "Brian Judd": [
+        "2026 Vermont"
+      ],
       "Brian Shortsleeve": [
         "2026 Massachusetts"
       ],
@@ -4704,6 +4758,9 @@
       ],
       "Christine Drazan": [
         "2026 Oregon"
+      ],
+      "Cinde Warmington": [
+        "2026 New Hampshire"
       ],
       "Cindy Holscher": [
         "2026 Kansas"
@@ -4840,14 +4897,8 @@
       "Ryan Fazio": [
         "2026 Connecticut"
       ],
-      "Steve Hilton": [
-        "2026 California"
-      ],
-      "Steven Young": [
-        "2026 Minnesota"
-      ],
-      "Tina Kotek": [
-        "2026 Oregon"
+      "Stephen Villee": [
+        "2026 New Hampshire"
       ]
     }
   }
